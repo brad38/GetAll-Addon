@@ -1,29 +1,29 @@
-# GetAll-Addon — Cobertura do catalogo (87 jogos / 119 projetos)
+# GetAll-Addon — Cobertura do catalogo (91 jogos / 124 projetos)
 
-**Main atual apos PR #11:** 92 receitas (70 v3, 17 v5, 1 v6, 3 v7, 1 v8; 1 validated, 91 experimental), commit dd820c008034a8e7598da5fb80ab17ca5951e81b. **Branches propostas e ainda sem merge:** Rodada 12 +1 Picori, Rodada 13 +1 Turbocharged, total **94 receitas** (70 v3, 18 v5, 1 v6, 4 v7, 1 v8; 1 validated, 93 experimental). Turbocharged exige a integracao local do provedor restrito de artefatos GitHub Actions antes de ficar acessivel no app; o artefato expira em 2027-01-04. Sem a integracao, nao contar como instalavel no aplicativo publicado.
+**Main confirmada:** 92 receitas dos 124 projetos (1 validated, 91 experimental), commit `dd820c008034a8e7598da5fb80ab17ca5951e81b` no GetAll. **Branch proposta Rodada 14** (encadeia Rodadas 12 e 13): **96 receitas**, sendo 70 v3, 20 v5, 1 v6, 4 v7, 1 v8; 1 validated e 95 experimental. **28 projetos sem receita**. Nenhum merge/release foi realizado. A preparação parcial por motor e hash da fonte não equivalem a boot real homologado. O catálogo 124 projetos está na main do AllFix-Repo; as correções de origem Picori, Team Forever e Leonida estão em PRs independentes.
 
 ## Resumo de cobertura
 
-| Indicador | Main confirmada | Proposta Rodada 13 |
+| Indicador | Main | Proposta Rodada 14 |
 |---|---:|---:|
-| Jogos no catalogo | 87 | 87 |
-| Projetos no catalogo | 119 | 119 |
-| Projetos com receita | 92 | 94 |
+| Jogos no catálogo | 91 | 91 |
+| Projetos no catálogo | 124 | 124 |
+| Projetos com receita | 92 | 96 |
 | Receitas v3 | 70 | 70 |
-| Receitas v5 | 17 | 18 |
+| Receitas v5 | 17 | 20 |
 | Receitas v6 | 1 | 1 |
 | Receitas v7 | 3 | 4 |
 | Receitas v8 | 1 | 1 |
 | Receitas validated | 1 | 1 |
-| Receitas experimental | 91 | 93 |
-| Projetos sem receita | 27 | 25 |
-| Boots comerciais homologados novos | 0 | 0 |
+| Receitas experimental | 91 | 95 |
+| Projetos sem receita | 32 | 28 |
+| Novos boots comerciais homologados | 0 | 0 |
 
-**Nova receita Severed Chains:** schema v8 experimental, Java25, classe legend.game.MainWindows e 96 JARs declarados. O motor prepara a distribuicao oficial; os discos originais NTSC-U e a fase de preparo do jogo continuam manuais. A evidência de staging parcial pertence ao SDK 11A; nesta rodada o parser v1.4.1 e o classpath de 96 JARs foram validados estaticamente e pelo motor nativo, sem boot. A matriz preserva os 119 IDs, evidencias historicas e bloqueios anteriores.
+**Nova receita Severed Chains:** schema v8 experimental, Java25, classe legend.game.MainWindows e 96 JARs declarados. O motor prepara a distribuicao oficial; os discos originais NTSC-U e a fase de preparo do jogo continuam manuais. A evidência de staging parcial pertence ao SDK 11A; nesta rodada o parser v1.4.1 e o classpath de 96 JARs foram validados estaticamente e pelo motor nativo, sem boot. A matriz preserva os 119 IDs anteriores e acrescenta os cinco projetos atuais, com evidencias por status.
 
 Consulte [relatorio Rodada 11B](RODADA-11B-SDK141-2026-11-23.md), [checkpoint](CHECKPOINT.md), [especificacao Codex](ESPECIFICACAO-CODEX-SDK.md) e [homologacao](HOMOLOGACAO-MIDIA-NECESSARIA.md).
 
-## Matriz completa (119 projetos)
+## Matriz completa (124 projetos)
 
 | # | Jogo (`game_id`) | Projeto (`project_id`) | Classe | Receita | Integrada na `main`? | Motor `AllFix.dll` | Inicialização real | Estado consolidado | Evidência / Bloqueio | Próxima ação necessária |
 |---:|---|---|---:|---|---|---|---|---|---|---|
@@ -146,6 +146,12 @@ Consulte [relatorio Rodada 11B](RODADA-11B-SDK141-2026-11-23.md), [checkpoint](C
 | 117 | `dead-rising-2-case-zero-case-west` | `dead-rising-2-case-west-xenon-recomp` | **B** | `recipes/dead-rising-2-case-zero-case-west/dead-rising-2-case-west-xenon-recomp/v1.1.2.json` (`experimental`, inputs=`False`, manual=`True`) | Sim (`origin/main` `experimental`) | Sim (`extracted_awaiting_manual_media`, `Status=PartiallyCompleted`, req=`4/4`) | Não (sem mídia legítima local) | Experimental publicada + Instalação testada no motor | ZIP `CaseWestRecomp-windows-x86_64.zip` (`24923332` B, SHA-256 `be45510874c5...`), `launch_file_exists=True` | Fornecer mídia original no launcher/extrator e testar boot real (Prioridade 3) |
 | 118 | `dead-or-alive-xtreme-beach-volleyball` | `doaxvb-re` | **B** | Receita ausente | Não | N/A (bloqueada) | Não | Bloqueio técnico comprovado | DOAXBV-0.8.0.zip (109.788.899 bytes, 10.233 arquivos) baixado e inspecionado: Não distribui executável pré-compilado do jogo (DOAXBV.exe); fornece kit de compilação local (BuildGame.cmd, Launcher.cmd, CMake/Git/Python/extract-xiso.exe) que compila na máquina do usuário a partir da ISO | Aguardar suporte seguro do SDK a pipelines locais de build ou release Windows com binário pré-compilado |
 | 119 | `3-on-3-nhl-arcade` | `3on3nhl-recomp` | **B** | `recipes/3-on-3-nhl-arcade/3on3nhl-recomp/v0.1.1.json` (`experimental`, inputs=`False`, manual=`True`) | Sim (`origin/main` `experimental`) | Sim (`extracted_awaiting_manual_media`, `Status=PartiallyCompleted`, req=`4/4`) | Não (sem mídia legítima local) | Experimental publicada + Instalação testada no motor | ZIP `3on3NHL-recomp-v0.1.1-win64.zip` (`91897254` B, SHA-256 `e6231d538a88...`), `launch_file_exists=True` | Fornecer mídia original no launcher/extrator e testar boot real (Prioridade 3) |
+
+| 120 | `the-legend-of-zelda-ocarina-of-time` | `hookshot-zelda-oot-port` | **D** | Receita ausente | Não | N/A (bloqueada) | Não | Não há binário completo de port no ZIP Windows | Release oficial v3.0.2: `Hookshot-v3.0.2-Windows-x64.zip` 122.359 B, SHA-256 `7ce0fb9d05b9cfed3d023805aee6a2c25f1d4f5cb3bf2c2018926e06cfe0f8e8`; ZIP contém apenas `HookshotBuilder.exe` e `recomplauncher.json` | Aguardar pacote Windows contendo port compilado ou perfil restrito de build local sem comandos arbitrários |
+| 121 | `grand-theft-auto-vi` | `leonida` | **D** | Receita ausente | Não | N/A (bloqueada) | Não | Sem release instalável | Repositório `ItsNotRexed/Leonida` movido pelo GitHub para `ProjectLeonida/Leonida`, mesma identidade 1465855400; API Releases retorna 0. PR #6 AllFix-Repo corrige a origem | Aguardar release oficial Windows completa; não tratar fontes como executável |
+| 122 | `shadow-of-the-colossus` | `shadow-of-the-colossus-pc` | **B** | `recipes/shadow-of-the-colossus/shadow-of-the-colossus-pc/v0.77.json` (`experimental`) | Não (PR Rodada 14) | Staging real `PartiallyCompleted` via motor AllFix.dll 1.4.1, executável presente | Não, sem dump PS4 local | Experimental criada + instalação parcial testada | Release oficial `SotC-PC.zip` v0.77, 155.228.419 B, SHA-256 `79f6f4be4a6829b7141c8f1e8047863114c105603d5ed167d4c5e87bd520e7c1`; 1.279 entradas inspecionadas, zero symlinks/traversal/duplicatas | Fornecer dump PS4 legítimo CUSA08809/CUSA08034 e comprovar primeiro boot para homologação |
+| 123 | `the-legend-of-zelda-breath-of-the-wild` | `savagewindrecomp` | **B** | `recipes/the-legend-of-zelda-breath-of-the-wild/savagewindrecomp/v0.6.0-alpha.6.json` (`experimental`) | Não (PR Rodada 14) | Staging real `PartiallyCompleted` via motor AllFix.dll 1.4.1, executável presente | Não, sem dump Switch local | Experimental criada + instalação parcial testada | Release oficial ZIP v0.6.0-alpha.6, 125.936.779 B, SHA-256 `9bfc05217ed7e69001e02dee7ae9a6070a23b68cfbf946f23727f0767d4c28f8`; 158 entradas inspecionadas e compilador Zig incluído | Fornecer dump Switch legítimo v1.9.0 com exefs/ e romfs/, executar primeiro build/boot por usuário |
+| 124 | `the-legend-of-zelda-tears-of-the-kingdom` | `totk-pc-recomp` | **D** | Receita ausente | Não | N/A (bloqueada) | Não | Pacote de instalador/construtor; não é port portátil pronto | ZIP v0.5.0 `TotK-Setup-0.5.0-windows.zip`, 168.127.049 B, SHA-256 `201b08348ffb72c70570eba8f92f67d31bc611b5aff4b0de09756259e0c95a7d`, 6.940 entradas; contém `TotK-Setup.exe` e toolchains, mas não `totk.exe` compilado. Instalação depende de executar setup e do dump original | Criar perfil de installer/build estritamente auditado, sem shell ou código remoto não verificado, antes de receita |
 
 ## Rodada 10 — observacoes
 
