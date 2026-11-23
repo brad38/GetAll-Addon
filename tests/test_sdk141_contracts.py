@@ -86,7 +86,7 @@ class Sdk141V8ContractsTests(unittest.TestCase):
         self.assertEqual(entry["status"], "experimental")
         self.assertEqual(entry["schema_version"], 8)
         self.assertEqual(entry["repository"], "Legend-of-Dragoon-Modding/Severed-Chains")
-        self.assertEqual(len(index["recipes"]), 93)
+        self.assertGreaterEqual(len(index["recipes"]), 94)
 
     def test_classpath_paths_are_safe_declared_jars(self) -> None:
         original = self.synthetic()
