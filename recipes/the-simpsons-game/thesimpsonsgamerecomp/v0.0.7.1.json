@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "thesimpsonsgamerecomp",
+  "tag": "v0.0.7.1",
+  "source_url": "https://github.com/YesterMester/TheSimpsonsGameRecomp/releases/tag/v0.0.7.1",
+  "operations": [],
+  "required_files": [
+    "simpsons-launcher.exe",
+    "simpsons.exe",
+    "rexruntimerd.dll",
+    "extract-xiso.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial The Simpsons Game Recompiled (v0.0.7.1) foi extraido. Execute simpsons-launcher.exe, abra a aba Install, selecione sua imagem .iso original de The Simpsons Game (Xbox 360) e clique em Play apos a extracao. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "simpsons-launcher.exe"
+}

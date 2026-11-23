@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "project_id": "silent-hill-native-pc-port",
+  "tag": "crossplatform-beta",
+  "source_url": "https://github.com/SlickAmogus/silent-hill-decomp/releases/tag/crossplatform-beta",
+  "operations": [],
+  "required_files": [
+    "SilentHillPC_Launcher.exe",
+    "SilentHillPC.exe",
+    "SDL2.dll",
+    "libopenal-1.dll",
+    "avcodec-62.dll",
+    "avformat-62.dll",
+    "avutil-60.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Silent Hill Native PC Port (crossplatform-beta, SHPC_beta-2026.10.12.1.zip) foi extraido. Execute SilentHillPC_Launcher.exe e selecione sua imagem de disco original de Silent Hill (PS1 USA, PAL ou NTSC-J) para carregar os dados do jogo. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "SilentHillPC_Launcher.exe"
+}

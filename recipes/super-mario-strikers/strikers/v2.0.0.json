@@ -1,0 +1,18 @@
+{
+  "schema_version": 3,
+  "project_id": "strikers",
+  "tag": "v2.0.0",
+  "source_url": "https://github.com/new-coke/strikers/releases/tag/v2.0.0",
+  "operations": [],
+  "required_files": [
+    "strikers.exe",
+    "strikers-settings.exe",
+    "SDL3.dll",
+    "Qt6Core.dll",
+    "dxcompiler.dll",
+    "dxil.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Strikers (v2.0.0) foi extraido. Execute strikers.exe (ou strikers-settings.exe para configuracoes) e aponte sua imagem de disco original de Super Mario Strikers (.iso, .gcm, .ciso ou .gcz). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "strikers.exe"
+}

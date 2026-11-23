@@ -1,0 +1,17 @@
+{
+  "schema_version": 3,
+  "project_id": "nookery-ex-acgc-pc-port",
+  "tag": "v1.0.0",
+  "source_url": "https://github.com/flyngmt/Nookery/releases/tag/v1.0.0",
+  "operations": [],
+  "required_files": [
+    "Nookery.exe",
+    "SDL3.dll",
+    "dxcompiler.dll",
+    "dxil.dll",
+    "nod.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Nookery (v1.0.0) foi extraido. Execute Nookery.exe e selecione sua imagem de disco legitima de Animal Crossing (GameCube USA GAFE01 rev 0 em .rvz, .iso, .ciso ou .gcm). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "Nookery.exe"
+}

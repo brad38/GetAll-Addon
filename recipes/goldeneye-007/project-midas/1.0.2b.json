@@ -1,0 +1,35 @@
+{
+  "schema_version": 3,
+  "project_id": "project-midas",
+  "tag": "1.0.2b",
+  "source_url": "https://github.com/murkantor/Project-Midas/releases/tag/1.0.2b",
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-us-rom",
+      "scope": "installation",
+      "target": "ProjectMidas-v1.0.2b-windows/Data/baserom.u.z64"
+    }
+  ],
+  "required_files": [
+    "ProjectMidas-v1.0.2b-windows/ProjectMidas.exe",
+    "ProjectMidas-v1.0.2b-windows/SDL2.dll",
+    "ProjectMidas-v1.0.2b-windows/Data/shaders_base.txt"
+  ],
+  "inputs": [
+    {
+      "id": "original-us-rom",
+      "kind": "file",
+      "name": "ROM original GoldenEye 007 (US, NTSC-U)",
+      "description": "Selecione somente sua copia original e legitima de GoldenEye 007 (USA) em formato big-endian .z64 (12 MiB). O All-Fix validara tamanho, assinatura e SHA-1 oficial antes de importar ProjectMidas-v1.0.2b-windows/Data/baserom.u.z64.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 12582912,
+      "magic_hex": "80371240",
+      "sha1": "abe01e4aeb033b6c0836819f549c791b26cfde83"
+    }
+  ],
+  "launch_file": "ProjectMidas-v1.0.2b-windows/ProjectMidas.exe"
+}

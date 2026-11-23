@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "project8recomp",
+  "tag": "v0.3.0",
+  "source_url": "https://github.com/theokyr/Project8Recomp/releases/tag/v0.3.0",
+  "operations": [],
+  "required_files": [
+    "Project8Recomp-v0.3.0-windows-x86_64/Project8Recomp.exe",
+    "Project8Recomp-v0.3.0-windows-x86_64/thps_p8.exe",
+    "Project8Recomp-v0.3.0-windows-x86_64/thps_p8_gui.exe",
+    "Project8Recomp-v0.3.0-windows-x86_64/SDL3.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Project8Recomp (v0.3.0) foi extraido. Execute Project8Recomp.exe em Project8Recomp-v0.3.0-windows-x86_64/ e aponte sua imagem .iso original de Tony Hawk's Project 8 (Xbox 360). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "Project8Recomp-v0.3.0-windows-x86_64/Project8Recomp.exe"
+}

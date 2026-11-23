@@ -1,0 +1,17 @@
+{
+  "schema_version": 3,
+  "project_id": "bluewake",
+  "tag": "v0.12.0",
+  "source_url": "https://github.com/chrissotraidis/bluewake/releases/tag/v0.12.0",
+  "operations": [],
+  "required_files": [
+    "BlueWake/BlueWake.exe",
+    "BlueWake/SDL3.dll",
+    "BlueWake/gGZLE01_recomp.dll",
+    "BlueWake/dxcompiler.dll",
+    "BlueWake/dxil.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial BlueWake (v0.12.0) foi extraido. Ao iniciar BlueWake.exe pela primeira vez, selecione sua imagem de disco legitima de The Legend of Zelda: The Wind Waker (GameCube, versao USA GZLE01 rev 0, em formato .iso ou .gcm; arquivos .rvz devem ser convertidos antes no Dolphin). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "BlueWake/BlueWake.exe"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 3,
+  "project_id": "the-darkness-recomp",
+  "tag": "v0.1.10",
+  "source_url": "https://github.com/portingpete/The-Darkness-Recomp/releases/tag/v0.1.10",
+  "operations": [],
+  "required_files": [
+    "build_native/Release/DarkRecomp.exe",
+    "build_native/Release/DarkRecompPreview.exe",
+    "build_native/Release/avcodec-darkxma-62.dll",
+    "build_native/Release/avutil-darkxma-60.dll",
+    "Launch.cmd"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial The Darkness Recomp (v0.1.10) foi extraido. Antes de iniciar, copie todos os arquivos e pastas extraidos do seu dump original de The Darkness (Xbox 360), incluindo default.xex, Content e System, diretamente para a subpasta Darkness/ (nao use um arquivo .iso diretamente). Voce tambem pode usar Launch.cmd ou LaunchWithSettings.cmd na raiz instalada. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "build_native/Release/DarkRecomp.exe"
+}

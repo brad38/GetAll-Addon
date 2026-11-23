@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "open-nectar",
+  "tag": "1.3",
+  "source_url": "https://github.com/SSunnKing/Open-Nectar---Pikmin-Native-PC-Mobile-Port/releases/tag/1.3",
+  "operations": [],
+  "required_files": [
+    "nectar-windows/nectar-launcher.exe",
+    "nectar-windows/nectar.exe",
+    "nectar-windows/pikmin2_pc.exe",
+    "nectar-windows/manifest.json"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Open Nectar (1.3) foi extraido. Execute nectar-launcher.exe na pasta nectar-windows/ e clique em Install para apontar suas imagens originais de Pikmin e/ou Pikmin 2 (.iso). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "nectar-windows/nectar-launcher.exe"
+}

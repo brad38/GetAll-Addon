@@ -405,6 +405,19 @@ def validate_recipe_semantics(
                     errors.append(
                         f"{label}: {loc}.source '{src}' does not reference a declared input"
                     )
+                else:
+                    ref_inp = input_map[src]
+                    has_strong_hash = (
+                        isinstance(ref_inp.get("sha256"), str)
+                        and bool(RE_SHA256.match(ref_inp["sha256"]))
+                    ) or (
+                        isinstance(ref_inp.get("sha1"), str)
+                        and bool(RE_SHA1.match(ref_inp["sha1"]))
+                    )
+                    if not has_strong_hash:
+                        errors.append(
+                            f"{label}: {loc}.source '{src}' requires sha256 or sha1 on referenced input for import_input"
+                        )
                 scope = op.get("scope")
                 if scope == "roaming_app_data":
                     folders = op.get("profile_folders")

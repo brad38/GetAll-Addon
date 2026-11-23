@@ -1,0 +1,17 @@
+{
+  "schema_version": 3,
+  "project_id": "shadow-of-rome-recompiled",
+  "tag": "v2.9.5",
+  "source_url": "https://github.com/Korvonordico/shadow-of-rome-recompiled/releases/tag/v2.9.5",
+  "operations": [],
+  "required_files": [
+    "ShadowOfRome-2.9.5-windows/ShadowOfRome.exe",
+    "ShadowOfRome-2.9.5-windows/sor.exe",
+    "ShadowOfRome-2.9.5-windows/sor-usa.exe",
+    "ShadowOfRome-2.9.5-windows/dxcompiler.dll",
+    "ShadowOfRome-2.9.5-windows/lz4.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Shadow of Rome Recompiled (v2.9.5) foi extraido. Execute ShadowOfRome.exe em ShadowOfRome-2.9.5-windows/, clique em Play e selecione sua imagem .iso original de Shadow of Rome (PAL SLES-52950 ou NTSC-U SLUS-20902). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "ShadowOfRome-2.9.5-windows/ShadowOfRome.exe"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "earthworm-jim-hd-recompiled",
+  "tag": "v0.9.6",
+  "source_url": "https://github.com/TekRantGaming/earthworm-jim-hd-recompiled/releases/tag/v0.9.6",
+  "operations": [],
+  "required_files": [
+    "EarthwormJimHD/earthworm_jim_hd.exe",
+    "EarthwormJimHD/rexgpu-xenos.dll",
+    "EarthwormJimHD/rexruntime.dll",
+    "EarthwormJimHD/README.txt"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Earthworm Jim HD Recompiled (v0.9.6) foi extraido. Execute earthworm_jim_hd.exe em EarthwormJimHD/, clique em Install from package... e aponte seu pacote XBLA legitimo (Title ID 584109E2/000D0000/, com default.xex SHA-1 62d9d28a3bce42843607c26ab4b200e91cb31203). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "EarthwormJimHD/earthworm_jim_hd.exe"
+}
