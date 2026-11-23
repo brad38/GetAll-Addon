@@ -1,0 +1,15 @@
+{
+  "schema_version": 3,
+  "project_id": "opengoal",
+  "tag": "v0.3.9",
+  "source_url": "https://github.com/open-goal/jak-project/releases/tag/v0.3.9",
+  "operations": [],
+  "required_files": [
+    "gk.exe",
+    "goalc.exe",
+    "extractor.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Jak and Daxter (v0.3.9) foi extraido. Para jogar, abra o inicializador/extrator oficial e indique os arquivos extraidos da sua ISO original de Jak and Daxter. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "launch_file": "gk.exe"
+}
