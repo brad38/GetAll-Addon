@@ -1116,6 +1116,18 @@
       "status": "experimental",
       "has_inputs": true,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "crash-team-racing",
+      "project_id": "crash-team-racing-turbocharged",
+      "repository": "CameronRedmore/Crash-Team-Racing-Turbocharged",
+      "tag": "ci-07d0c49",
+      "schema_version": 5,
+      "path": "recipes/crash-team-racing/crash-team-racing-turbocharged/ci-07d0c49.json",
+      "sha256": "943f43da0758ee982b0f4373d25e3f74a5a8718eb066822f41200543e84b9b18",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }
