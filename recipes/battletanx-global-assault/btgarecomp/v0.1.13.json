@@ -1,0 +1,37 @@
+{
+  "schema_version": 3,
+  "project_id": "btgarecomp",
+  "tag": "v0.1.13",
+  "source_url": "https://github.com/wootbeer/btgarecomp/releases/tag/v0.1.13",
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-rom",
+      "scope": "installation",
+      "target": "BattleTanxGA.us.z64"
+    }
+  ],
+  "required_files": [
+    "BattleTanxGARecompiled.exe",
+    "SDL2.dll",
+    "dxcompiler.dll",
+    "dxil.dll"
+  ],
+  "inputs": [
+    {
+      "id": "original-rom",
+      "kind": "file",
+      "name": "ROM original BattleTanx: Global Assault (USA)",
+      "description": "Selecione sua copia legitima americana (USA) de BattleTanx: Global Assault em formato .z64 (8 MiB). O All-Fix validara tamanho, cabecalho e SHA-1 oficial antes de importar BattleTanxGA.us.z64.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 8388608,
+      "magic_hex": "80371240",
+      "sha1": "08a9037488c47d1e26ce6f709955639e9f0f0bb8"
+    }
+  ],
+  "manual_steps": "O pacote oficial BattleTanxGA Recompiled e sua ROM verificada BattleTanxGA.us.z64 foram instalados. Abra BattleTanxGARecompiled.exe e selecione BattleTanxGA.us.z64 na primeira execucao.",
+  "launch_file": "BattleTanxGARecompiled.exe"
+}

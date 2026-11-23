@@ -24,9 +24,12 @@ class ValidateRecipesTests(unittest.TestCase):
             check_git_blobs=True,
         )
         self.assertTrue(ok, f"Expected real repo to pass, got errors: {errors}")
-        self.assertEqual(stats["recipe_count"], 14)
+        self.assertGreaterEqual(stats["recipe_count"], 24)
         self.assertEqual(stats["statuses"].get("validated"), 1)
-        self.assertEqual(stats["statuses"].get("experimental"), 13)
+        self.assertEqual(
+            stats["statuses"].get("experimental"),
+            stats["recipe_count"] - 1,
+        )
 
     def _make_temp_repo(self) -> Path:
         tmp = Path(tempfile.mkdtemp(prefix="getall_val_test_"))

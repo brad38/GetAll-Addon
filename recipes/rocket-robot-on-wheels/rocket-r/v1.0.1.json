@@ -1,0 +1,37 @@
+{
+  "schema_version": 3,
+  "project_id": "rocket-r",
+  "tag": "v.1.0.1",
+  "source_url": "https://github.com/thatguymcd/rocket-r/releases/tag/v.1.0.1",
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-rom",
+      "scope": "installation",
+      "target": "rocket-r.us.z64"
+    }
+  ],
+  "required_files": [
+    "Rocket-R.exe",
+    "SDL2.dll",
+    "dxcompiler.dll",
+    "dxil.dll"
+  ],
+  "inputs": [
+    {
+      "id": "original-rom",
+      "kind": "file",
+      "name": "ROM original Rocket: Robot on Wheels (US)",
+      "description": "Selecione sua ROM legitima americana (US, game code NSUE) de Rocket: Robot on Wheels no formato .z64 (12 MiB). O All-Fix validara tamanho, cabecalho e SHA-1 oficial antes de importar rocket-r.us.z64.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 12582912,
+      "magic_hex": "80371240",
+      "sha1": "622d71a44da0b81ea68092cac9198c66154a4f4a"
+    }
+  ],
+  "manual_steps": "O pacote oficial Rocket-R e sua ROM verificada rocket-r.us.z64 foram instalados. Abra Rocket-R.exe na pasta do jogo e selecione rocket-r.us.z64 no menu inicial.",
+  "launch_file": "Rocket-R.exe"
+}

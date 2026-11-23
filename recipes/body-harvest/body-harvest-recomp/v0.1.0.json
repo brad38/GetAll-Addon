@@ -1,0 +1,37 @@
+{
+  "schema_version": 3,
+  "project_id": "body-harvest-recomp",
+  "tag": "v0.1.0",
+  "source_url": "https://github.com/danielgomesvieira2000/body-harvest-recomp/releases/tag/v0.1.0",
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-rom",
+      "scope": "installation",
+      "target": "body-harvest.us.z64"
+    }
+  ],
+  "required_files": [
+    "body-harvest-recomp.exe",
+    "SDL2.dll",
+    "dxcompiler.dll",
+    "dxil.dll"
+  ],
+  "inputs": [
+    {
+      "id": "original-rom",
+      "kind": "file",
+      "name": "ROM original Body Harvest (USA)",
+      "description": "Selecione sua copia legitima americana (USA, NBHE Rev 0) de Body Harvest em formato .z64 (12 MiB). O All-Fix validara tamanho, cabecalho e SHA-1 oficial antes de importar body-harvest.us.z64.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 12582912,
+      "magic_hex": "80371240",
+      "sha1": "bbb6666f5014a473747ee4145f036d9fb25d7348"
+    }
+  ],
+  "manual_steps": "O pacote oficial Body Harvest Recompiled e sua ROM verificada body-harvest.us.z64 foram instalados. Execute body-harvest-recomp.exe e aponte para body-harvest.us.z64 no launcher.",
+  "launch_file": "body-harvest-recomp.exe"
+}

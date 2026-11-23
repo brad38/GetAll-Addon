@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "project_id": "wwfwrestlemania2000recomp",
+  "tag": "v0.3.2",
+  "source_url": "https://github.com/jessetbh/WWFWrestleMania2000Recomp/releases/tag/v0.3.2",
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-rom",
+      "scope": "installation",
+      "target": "wm2k.z64"
+    }
+  ],
+  "required_files": [
+    "Wm2kRecompiled.exe",
+    "SDL2.dll",
+    "dxcompiler.dll",
+    "dxil.dll",
+    "librashader.dll",
+    "msvcp140.dll",
+    "msvcp140_atomic_wait.dll",
+    "vcruntime140.dll",
+    "vcruntime140_1.dll"
+  ],
+  "inputs": [
+    {
+      "id": "original-rom",
+      "kind": "file",
+      "name": "ROM original WWF WrestleMania 2000 (USA)",
+      "description": "Selecione sua copia legitima americana (USA) de WWF WrestleMania 2000 em formato .z64 (32 MiB). O All-Fix validara tamanho, cabecalho e SHA-1 oficial antes de importar wm2k.z64 para a pasta do jogo.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 33554432,
+      "magic_hex": "80371240",
+      "sha1": "442d417a52ed672ca1a47e7261a5414debb1e27a"
+    }
+  ],
+  "manual_steps": "O pacote oficial e sua ROM verificada wm2k.z64 foram instalados. Abra Wm2kRecompiled.exe na pasta do jogo e escolha wm2k.z64 no botao Load ROM na primeira execucao.",
+  "launch_file": "Wm2kRecompiled.exe"
+}

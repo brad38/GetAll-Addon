@@ -32,9 +32,9 @@
       "tag": "3.0.0",
       "schema_version": 3,
       "path": "recipes/super-mario-64/ghostship/3.0.0.json",
-      "sha256": "9c8a4c723bfe23a9e4e2ce7ae9b7533177027f7ed418e20a2148a3be4fa4c2dd",
+      "sha256": "e83c27672a4d1d478172199dcdf2629ec8c89b39943132d8c1a6c15088af41f4",
       "status": "experimental",
-      "has_inputs": false,
+      "has_inputs": true,
       "has_manual_steps": true
     },
     {
@@ -140,9 +140,9 @@
       "tag": "v1.0.1",
       "schema_version": 3,
       "path": "recipes/banjo-tooie/banjo-tooie-recompiled/v1.0.1.json",
-      "sha256": "76b764dbeb75f34e8fa146379e399642520528f9f02ab7c9843c432f50e5cef3",
+      "sha256": "4e611d6f6b383197134b5ce6927e393de94fcc615202ad4f297819c7e5a5834a",
       "status": "experimental",
-      "has_inputs": false,
+      "has_inputs": true,
       "has_manual_steps": true
     },
     {
@@ -152,9 +152,9 @@
       "tag": "v0.2.5",
       "schema_version": 3,
       "path": "recipes/battletanx-global-assault/battletanx-global-assault-pc-port/v0.2.5.json",
-      "sha256": "ae87f278ffa57c35d5cfe6d660a6ad67969939db051d3956d310fc28a7640daf",
+      "sha256": "32452ac1ea4d0aa7e08103bf50370916cb00e0a1aa819923ef030289286e877f",
       "status": "experimental",
-      "has_inputs": false,
+      "has_inputs": true,
       "has_manual_steps": true
     },
     {
@@ -167,6 +167,126 @@
       "sha256": "05ff078cdf7f59a1f37d0b0829b7c3ac8dd007372de9470fe743cf304b7b82c3",
       "status": "experimental",
       "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "pokemon-snap",
+      "project_id": "snap64-recomp",
+      "repository": "JackandBeans/Snap64Recomp",
+      "tag": "v1.1.8",
+      "schema_version": 3,
+      "path": "recipes/pokemon-snap/snap64-recomp/v1.1.8.json",
+      "sha256": "7ca437b9608719f2758be433483ea672157fe95da68181576343f0f1e812cbfc",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "super-smash-bros",
+      "project_id": "battleship",
+      "repository": "JRickey/BattleShip",
+      "tag": "v1.6",
+      "schema_version": 3,
+      "path": "recipes/super-smash-bros/battleship/v1.6.json",
+      "sha256": "dbcf3c579a2ae5201826f5337ed8b5a0c34da659a639cc999a302ea8f150f95d",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "rocket-robot-on-wheels",
+      "project_id": "rocket-r",
+      "repository": "thatguymcd/rocket-r",
+      "tag": "v.1.0.1",
+      "schema_version": 3,
+      "path": "recipes/rocket-robot-on-wheels/rocket-r/v1.0.1.json",
+      "sha256": "d5f081a03d9323b2466bf27b12df36907823dbeda4ce7eac130a3c722e404ec7",
+      "status": "experimental",
+      "has_inputs": true,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "battletanx-global-assault",
+      "project_id": "btgarecomp",
+      "repository": "wootbeer/btgarecomp",
+      "tag": "v0.1.13",
+      "schema_version": 3,
+      "path": "recipes/battletanx-global-assault/btgarecomp/v0.1.13.json",
+      "sha256": "47c3ee70949769c3c3a6b6c82ab30af80cfcd8d228dca9f3e5fe63ccf9c999b0",
+      "status": "experimental",
+      "has_inputs": true,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "body-harvest",
+      "project_id": "body-harvest-recomp",
+      "repository": "danielgomesvieira2000/body-harvest-recomp",
+      "tag": "v0.1.0",
+      "schema_version": 3,
+      "path": "recipes/body-harvest/body-harvest-recomp/v0.1.0.json",
+      "sha256": "8cf6479a63d3e366f654e516e48168c51df30b9decd403f9bcacd58c7ee088c2",
+      "status": "experimental",
+      "has_inputs": true,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "wcw-vs-nwo-world-tour",
+      "project_id": "wcwvsnwoworldtourrecomp",
+      "repository": "jessetbh/WCWvsNWOWorldTourRecomp",
+      "tag": "v0.3.2",
+      "schema_version": 3,
+      "path": "recipes/wcw-vs-nwo-world-tour/wcwvsnwoworldtourrecomp/v0.3.2.json",
+      "sha256": "4681c431f7585734ada0023e2d76d56c39c3389a0c542111230778463b1868de",
+      "status": "experimental",
+      "has_inputs": true,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "wcw-nwo-revenge",
+      "project_id": "wcwnworevengerecomp",
+      "repository": "jessetbh/WCWnWoRevengeRecomp",
+      "tag": "v0.3.2",
+      "schema_version": 3,
+      "path": "recipes/wcw-nwo-revenge/wcwnworevengerecomp/v0.3.2.json",
+      "sha256": "f3f82c89b486c7df32dce6282f8b9346ddddabb8ab20df0276ec7bdbdc78436f",
+      "status": "experimental",
+      "has_inputs": true,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "wwf-wrestlemania-2000",
+      "project_id": "wwfwrestlemania2000recomp",
+      "repository": "jessetbh/WWFWrestleMania2000Recomp",
+      "tag": "v0.3.2",
+      "schema_version": 3,
+      "path": "recipes/wwf-wrestlemania-2000/wwfwrestlemania2000recomp/v0.3.2.json",
+      "sha256": "5ee2833bdca8cffbea2c950add83ea08d7776357ff297d0a8106ab9a065427f7",
+      "status": "experimental",
+      "has_inputs": true,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "virtual-pro-wrestling-64",
+      "project_id": "vpw64recomp",
+      "repository": "jessetbh/VPW64Recomp",
+      "tag": "v0.3.2",
+      "schema_version": 3,
+      "path": "recipes/virtual-pro-wrestling-64/vpw64recomp/v0.3.2.json",
+      "sha256": "e244917b75dfbfa58ec4fd1f485b01d426c3f9954ea2492a880f4ff8b8179d72",
+      "status": "experimental",
+      "has_inputs": true,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "wwf-no-mercy",
+      "project_id": "wwfnomercyrecomp",
+      "repository": "jessetbh/WWFNoMercyRecomp",
+      "tag": "v0.3.2",
+      "schema_version": 3,
+      "path": "recipes/wwf-no-mercy/wwfnomercyrecomp/v0.3.2.json",
+      "sha256": "c9988d8cf9aacbea55e406158594b8ade2c8ac541a884ed020cdd6d46dc298d9",
+      "status": "experimental",
+      "has_inputs": true,
       "has_manual_steps": true
     }
   ]

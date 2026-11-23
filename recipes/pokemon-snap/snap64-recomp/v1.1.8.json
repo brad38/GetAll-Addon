@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "snap64-recomp",
+  "tag": "v1.1.8",
+  "source_url": "https://github.com/JackandBeans/Snap64Recomp/releases/tag/v1.1.8",
+  "operations": [],
+  "required_files": [
+    "Snap64Recomp-1.1.8-win64/Snap64Recomp.exe",
+    "Snap64Recomp-1.1.8-win64/SDL2.dll",
+    "Snap64Recomp-1.1.8-win64/dxcompiler.dll",
+    "Snap64Recomp-1.1.8-win64/dxil.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Snap64 Recomp foi extraido em Snap64Recomp-1.1.8-win64/. Copie sua ROM legitima de Pokemon Snap (US, SHA-1 edc7c49cc568c045fe48be0d18011c30f393cbaf) como pokemonsnap.z64 ao lado de Snap64Recomp.exe, ou abra o executavel para seleciona-la uma unica vez.",
+  "launch_file": "Snap64Recomp-1.1.8-win64/Snap64Recomp.exe"
+}

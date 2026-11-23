@@ -39,26 +39,25 @@ class UpstreamWatchTests(unittest.TestCase):
         raw = zip_path.read_bytes()
         return zip_path, len(raw), hashlib.sha256(raw).hexdigest()
 
-    def test_stages_compatible_experimental_update_and_preserves_all_14_recipes(self) -> None:
+    def test_stages_compatible_experimental_update_and_preserves_existing_recipes(self) -> None:
         tmp = self._make_temp_repo()
-        zip_path, zsize, zsha = self._build_mock_zip(
-            ["Ghostship.exe", "ghostship.o2r", "shaderc_shared.dll", "tcc.dll"]
-        )
+        initial_count = len(json.loads((tmp / "index.json").read_text(encoding="utf-8"))["recipes"])
+        zip_path, zsize, zsha = self._build_mock_zip(["soh.exe", "soh.o2r"])
 
         mock_catalog = {"games": []}
 
         def mock_releases(repo: str) -> list[dict]:
-            if repo == "HarbourMasters/Ghostship":
+            if repo == "HarbourMasters/Shipwright":
                 return [
                     {
-                        "tag_name": "3.1.0",
+                        "tag_name": "9.4.0",
                         "draft": False,
                         "prerelease": False,
-                        "html_url": "https://github.com/HarbourMasters/Ghostship/releases/tag/3.1.0",
+                        "html_url": "https://github.com/HarbourMasters/Shipwright/releases/tag/9.4.0",
                         "assets": [
                             {
-                                "name": "Ghostship-3.1.0-Win64.zip",
-                                "browser_download_url": "https://github.com/HarbourMasters/Ghostship/releases/download/3.1.0/Ghostship-3.1.0-Win64.zip",
+                                "name": "SoH-Test-Win64.zip",
+                                "browser_download_url": "https://github.com/HarbourMasters/Shipwright/releases/download/9.4.0/SoH-Test-Win64.zip",
                                 "size": zsize,
                             }
                         ],
@@ -87,14 +86,14 @@ class UpstreamWatchTests(unittest.TestCase):
 
         self.assertTrue(res["has_actionable_changes"])
         self.assertEqual(len(res["updated_recipes"]), 1)
-        self.assertEqual(res["updated_recipes"][0]["new_tag"], "3.1.0")
+        self.assertEqual(res["updated_recipes"][0]["new_tag"], "9.4.0")
         self.assertEqual(res["updated_recipes"][0]["zip_sha256"], zsha)
 
-        # Ensure index now has 15 entries (all 14 preserved + new experimental 3.1.0)
+        # Ensure index now preserves all previous entries + adds new experimental 9.4.0
         idx = json.loads((tmp / "index.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(idx["recipes"]), 15)
+        self.assertEqual(len(idx["recipes"]), initial_count + 1)
         self.assertEqual(
-            [e["status"] for e in idx["recipes"] if e["project_id"] == "ghostship"],
+            [e["status"] for e in idx["recipes"] if e["project_id"] == "ship-of-harkinian-soh"],
             ["experimental", "experimental"],
         )
 
@@ -103,9 +102,10 @@ class UpstreamWatchTests(unittest.TestCase):
 
     def test_never_auto_updates_validated_recipe_and_blocks_incompatible_zip(self) -> None:
         tmp = self._make_temp_repo()
-        # Missing Ghostship.exe and has space in name -> must NOT create recipe
+        initial_count = len(json.loads((tmp / "index.json").read_text(encoding="utf-8"))["recipes"])
+        # Missing soh.exe and has space in name -> must NOT create recipe
         bad_zip_path, bad_size, bad_sha = self._build_mock_zip(
-            ["Ghostship App.exe", "ghostship.o2r"]
+            ["Ship App.exe", "soh.o2r"]
         )
         ok_zip_path, ok_size, ok_sha = self._build_mock_zip(
             ["sm64coopdx.exe", "coopdx_updater.exe", "discord_game_sdk.dll", "coop.map"]
@@ -147,17 +147,17 @@ class UpstreamWatchTests(unittest.TestCase):
                         ],
                     }
                 ]
-            if repo == "HarbourMasters/Ghostship":
+            if repo == "HarbourMasters/Shipwright":
                 return [
                     {
-                        "tag_name": "3.2.0",
+                        "tag_name": "9.5.0",
                         "draft": False,
                         "prerelease": False,
-                        "html_url": "https://github.com/HarbourMasters/Ghostship/releases/tag/3.2.0",
+                        "html_url": "https://github.com/HarbourMasters/Shipwright/releases/tag/9.5.0",
                         "assets": [
                             {
-                                "name": "Ghostship-Win64.zip",
-                                "browser_download_url": "https://github.com/HarbourMasters/Ghostship/releases/download/3.2.0/Ghostship-Win64.zip",
+                                "name": "SoH-Win64.zip",
+                                "browser_download_url": "https://github.com/HarbourMasters/Shipwright/releases/download/9.5.0/SoH-Win64.zip",
                                 "size": bad_size,
                             }
                         ],
@@ -189,7 +189,7 @@ class UpstreamWatchTests(unittest.TestCase):
         self.assertEqual(len(res["new_catalog_projects"]), 1)
         self.assertEqual(len(res["pending_reviews"]), 2)
         idx = json.loads((tmp / "index.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(idx["recipes"]), 14)
+        self.assertEqual(len(idx["recipes"]), initial_count)
 
     def test_selects_stable_release_over_prerelease(self) -> None:
         releases = [

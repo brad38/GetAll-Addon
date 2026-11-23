@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "project_id": "wcwnworevengerecomp",
+  "tag": "v0.3.2",
+  "source_url": "https://github.com/jessetbh/WCWnWoRevengeRecomp/releases/tag/v0.3.2",
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-rom",
+      "scope": "installation",
+      "target": "revenge.z64"
+    }
+  ],
+  "required_files": [
+    "RevengeRecompiled.exe",
+    "SDL2.dll",
+    "dxcompiler.dll",
+    "dxil.dll",
+    "librashader.dll",
+    "msvcp140.dll",
+    "msvcp140_atomic_wait.dll",
+    "vcruntime140.dll",
+    "vcruntime140_1.dll"
+  ],
+  "inputs": [
+    {
+      "id": "original-rom",
+      "kind": "file",
+      "name": "ROM original WCW/nWo Revenge (USA)",
+      "description": "Selecione sua copia legitima americana (USA) de WCW/nWo Revenge em formato .z64 (16 MiB). O All-Fix validara tamanho, cabecalho e SHA-1 oficial antes de importar revenge.z64 para a pasta do jogo.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 16777216,
+      "magic_hex": "80371240",
+      "sha1": "e1711a2511394b9357b5f1ac8ca5cc17bd674836"
+    }
+  ],
+  "manual_steps": "O pacote oficial e sua ROM verificada revenge.z64 foram instalados. Abra RevengeRecompiled.exe na pasta do jogo e escolha revenge.z64 no botao Load ROM na primeira execucao.",
+  "launch_file": "RevengeRecompiled.exe"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 3,
+  "project_id": "battleship",
+  "tag": "v1.6",
+  "source_url": "https://github.com/JRickey/BattleShip/releases/tag/v1.6",
+  "operations": [],
+  "required_files": [
+    "BattleShip.exe",
+    "torch.exe",
+    "f3d.o2r"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial BattleShip (US) foi extraido. Execute BattleShip.exe na pasta instalada e forneca sua ROM legitima de Super Smash Bros. NTSC-U v1.0 (SHA-1 e2929e10fccc0aa84e5776227e798abc07cedabf) no assistente inicial para gerar BattleShip.o2r localmente.",
+  "launch_file": "BattleShip.exe"
+}
