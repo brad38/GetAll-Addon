@@ -1,22 +1,22 @@
 # GetAll-Addon — Cobertura do catalogo (87 jogos / 119 projetos)
 
-**Main confirmada apos merge do PR #11:** 92 receitas (70 v3, 17 v5, 1 v6, 3 v7, 1 v8; 1 validated, 91 experimental), commit dd820c008034a8e7598da5fb80ab17ca5951e81b. **Proposta Rodada 12 em branch:** 93 receitas (70 v3, 17 v5, 1 v6, 4 v7, 1 v8; 1 validated, 92 experimental). A candidata Project Picori NAO esta na main ate revisao e merge do PR GetAll, e depende da correcao de origem no PR #1 do AllFix-Repo.
+**Main atual apos PR #11:** 92 receitas (70 v3, 17 v5, 1 v6, 3 v7, 1 v8; 1 validated, 91 experimental), commit dd820c008034a8e7598da5fb80ab17ca5951e81b. **Branches propostas e ainda sem merge:** Rodada 12 +1 Picori, Rodada 13 +1 Turbocharged, total **94 receitas** (70 v3, 18 v5, 1 v6, 4 v7, 1 v8; 1 validated, 93 experimental). Turbocharged exige a integracao local do provedor restrito de artefatos GitHub Actions antes de ficar acessivel no app; o artefato expira em 2027-01-04. Sem a integracao, nao contar como instalavel no aplicativo publicado.
 
 ## Resumo de cobertura
 
-| Indicador | Main apos PR #11 | Proposta Rodada 12 |
+| Indicador | Main confirmada | Proposta Rodada 13 |
 |---|---:|---:|
 | Jogos no catalogo | 87 | 87 |
 | Projetos no catalogo | 119 | 119 |
-| Projetos com receita | 92 | 93 |
+| Projetos com receita | 92 | 94 |
 | Receitas v3 | 70 | 70 |
-| Receitas v5 | 17 | 17 |
+| Receitas v5 | 17 | 18 |
 | Receitas v6 | 1 | 1 |
 | Receitas v7 | 3 | 4 |
 | Receitas v8 | 1 | 1 |
 | Receitas validated | 1 | 1 |
-| Receitas experimental | 91 | 92 |
-| Projetos sem receita | 27 | 26 |
+| Receitas experimental | 91 | 93 |
+| Projetos sem receita | 27 | 25 |
 | Boots comerciais homologados novos | 0 | 0 |
 
 **Nova receita Severed Chains:** schema v8 experimental, Java25, classe legend.game.MainWindows e 96 JARs declarados. O motor prepara a distribuicao oficial; os discos originais NTSC-U e a fase de preparo do jogo continuam manuais. A evidência de staging parcial pertence ao SDK 11A; nesta rodada o parser v1.4.1 e o classpath de 96 JARs foram validados estaticamente e pelo motor nativo, sem boot. A matriz preserva os 119 IDs, evidencias historicas e bloqueios anteriores.
@@ -108,7 +108,7 @@ Consulte [relatorio Rodada 11B](RODADA-11B-SDK141-2026-11-23.md), [checkpoint](C
 | 79 | `shadow-of-rome` | `shadow-of-rome-recompiled` | **C** | `recipes/shadow-of-rome/shadow-of-rome-recompiled/v2.9.5.json` (`experimental`, inputs=`False`, manual=`True`) | Sim (`origin/main` `experimental`) | Sim (`extracted_awaiting_manual_media`, `Status=PartiallyCompleted`, req=`5/5`) | Não (sem mídia legítima local) | Experimental publicada + Instalação testada no motor | ZIP `ShadowOfRome-2.9.5-windows.zip` (`58027163` B, SHA-256 `a416fcf346bb...`), `launch_file_exists=True` | Fornecer mídia original no launcher/extrator e testar boot real (Prioridade 3) |
 | 80 | `castlevania-symphony-of-the-night` | `symphonyrecomp` | **C** | `recipes/castlevania-symphony-of-the-night/symphonyrecomp/v1.2.0p.json` (`experimental`, inputs=`False`, manual=`True`) | Sim (PR #7 integrado à main) | Sim (`extracted_awaiting_manual_media`, `Status=PartiallyCompleted`, req=`5/5`) | Não (sem mídia legítima local) | Experimental publicada + Instalação testada no motor | ZIP `SymphonyRecomp-v1.2.0p-windows-x64.zip` (`63884901` B, SHA-256 `3d3e5f0a4689...`), `launch_file_exists=True` | Fornecer mídia original no launcher/extrator e testar boot real (Prioridade 3) |
 | 81 | `crash-team-racing` | `crash-team-racing-high-octane` | **B** | `recipes/crash-team-racing/crash-team-racing-high-octane/v.1.5.json` (`experimental`, inputs=`True`, manual=`False`) | Sim (receita anterior na main; melhoria proposta no PR da Rodada 9) | Historico do motor antes da Rodada 9: Sim (`extracted_awaiting_manual_media`, `Status=PartiallyCompleted`, req=`2/2`); novo import_input aceito no parser SDK 1.3.0, sem midia legitima | Não (sem mídia legítima local) | Experimental publicada; melhoria de importacao verificada na branch; boot real pendente | ZIP `ctr-high-octane-x64.win.zip` (`2403121` B, SHA-256 `005924af516a...`), `launch_file_exists=True`; Rodada 9: `import_input` para `assets/ctr-u.bin`; SHA-256 de CTR NTSC-U 926 publicado pelo projeto-base CTR Native, 605698800 bytes; ROM original nao inclusa | Homologar com midia legitima: importacao pelo host, primeiro boot e registro em docs/validations (Prioridade 1) |
-| 82 | `crash-team-racing` | `crash-team-racing-turbocharged` | **C** | Receita ausente | Não | N/A (bloqueada) | Não | Bloqueio técnico comprovado | Compilação x86 e ferramentas de decompilação externas | Ver especificação em [ESPECIFICACAO-CODEX-SDK.md](ESPECIFICACAO-CODEX-SDK.md) |
+| 82 | `crash-team-racing` | `crash-team-racing-turbocharged` | **B** | `recipes/crash-team-racing/crash-team-racing-turbocharged/ci-07d0c49.json` (`experimental`, inputs=`False`, manual=`True`) | Nao (PR Rodada 13, dependente de R12) | Parser 1.4.1: 94/94; ZIP oficial instalado em staging parcial sem ROM | Nao (ROM comercial nao fornecida) | Candidata CI dependente de integracao no host | GitHub Actions run 37521206289, artefato 11439483665, 6.569.952 B, SHA-256 `dcba6c0a0c71211a568b8760f0c44fb159724f5f90b87cbbe25328e68786a30f`, expiry 2027-01-04; pacote extraido e executavel presente, sem boot | Integrar provedor restrito do CI no Desktop 3.0.0 sem release/merge, validar origem, homologar boot com BIN legitima NTSC-U; renovar distribuicao quando CI expirar |
 | 83 | `crash-team-racing` | `ctr-native` | **B** | `recipes/crash-team-racing/ctr-native/beta-7.1.json` (`experimental`, inputs=`True`, manual=`False`) | Sim (PR #8 merged; receita v5 na main) | Historico v3: Sim (`extracted_awaiting_manual_media`, `Status=PartiallyCompleted`, req=`1/1`) | Não (sem mídia legítima local) | Experimental publicada v5; importacao verificada no parser, boot real pendente | ZIP `ctr-native-beta-7_1-windows-x86.zip` (`8746455` B, SHA-256 `af0d23c7b419...`), `launch_file_exists=True`; v5: import_input de NTSC-U 926 com 605698800 B e SHA-256 oficial f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0| Testar selecao da imagem BIN legitima, instalacao com verificacao de hash e primeiro boot real |
 | 84 | `wipeout` | `wipeout-phantom-edition` | **B** | `recipes/wipeout/wipeout-phantom-edition/v1.2.256.json` (`experimental`, inputs=`False`, manual=`True`) | Sim (PR #7 integrado à main) | Sim (`extracted_awaiting_manual_media`, `Status=PartiallyCompleted`, req=`7/7`) | Não (sem mídia legítima local) | Experimental publicada + Instalação testada no motor | ZIP `wipeout-x64-release.zip` (`3619822` B, SHA-256 `f63eca6d14ca...`), `launch_file_exists=True` | Fornecer mídia original no launcher/extrator e testar boot real (Prioridade 3) |
 | 85 | `wipeout` | `wipeout-rewrite` | **C** | Receita ausente | Não | N/A (bloqueada) | Não | Bloqueio técnico comprovado | Exige extração múltipla de dados PS1/PC e estrutura externa; sem release Windows homologada | Ver especificação em [ESPECIFICACAO-CODEX-SDK.md](ESPECIFICACAO-CODEX-SDK.md) |
