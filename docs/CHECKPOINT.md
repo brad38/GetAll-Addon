@@ -11,14 +11,14 @@
 | **#5** | `feat/round-4-full-catalog-coverage` | `main` | `merged` | Cobertura completa SDK 1.2.0 |
 | **#6** | `feat/round-6-functional-homologation` | `main` | `merged` | Testes no motor `AllFix.dll`, cobertura e specs Codex (`76` receitas) |
 | **#7** | `feat/round-7-sdk13-v5-recipes` | `main` | **merged** (47d8e45f2e80b17b98c80864b6d485c8962f4f5b) | Integração **SDK 1.3.0** (`schemas` v5, validador e **14 novas receitas `v5`**) |
-| **#8 (proposta)** | `feat/round-8-sdk13-perfect-dark` | `main` | **Aguardando PR/revisão (sem merge)** | Migração Perfect Dark e Automobili Lamborghini para importação automática verificada v5 |
+| **#8 (proposta)** | `feat/round-8-sdk13-perfect-dark` | `main` | **Aguardando PR/revisão (sem merge)** | Migração Perfect Dark, Automobili Lamborghini e CTR Native para importação automática verificada v5 |
 
 **Regra de integração:** PR #7 já foi mesclado na main. A Rodada 8 prepara uma branch e um novo PR; não realizar merge sem aprovação do proprietário.
 
 ## 2. Estado Real da Cobertura (119 projetos / 87 jogos)
 
 - **Homologada (`validated`) com boot real comprovado:** `1` (`sm64coopdx-super-mario-64-coop-deluxe` `v1.5.1`)
-- **Receitas `experimental` no `index.json`:** `89` (as 89 publicadas na main após o PR #7; na proposta da Rodada 8: **73 v3 experimentais + 16 v5 experimentais**, mais 1 v3 validated; **90 / 119** indexadas)
+- **Receitas `experimental` no `index.json`:** `89` (as 89 publicadas na main após o PR #7; na proposta da Rodada 8: **72 v3 experimentais + 17 v5 experimentais**, mais 1 v3 validated; **90 / 119** indexadas)
 - **Instalação testada no motor oficial `AllFix.dll` 1.3.0 (`GameInstallationService.Run` sobre pacotes oficiais reais):**
   - `89 / 89` receitas experimentais verificadas (`75 / 75` v3 da Rodada 6 + `14 / 14` v5 novas na Rodada 7; nenhum erro de infraestrutura; verificações de mídia pendentes).
   - Entre as **14 novas receitas `v5`**:
@@ -37,7 +37,7 @@
 ## 4. Próximos Passos Exatos
 
 1. **Revisar o PR da Rodada 8** (`feat/round-8-sdk13-perfect-dark` → `main`); o PR #7 foi mesclado anteriormente. Não mesclar automaticamente.
-2. **Homologação real (`experimental` → `validated`):** executar instalação e boot real no `AllFix.exe` fornecendo as mídias originais descritas em [HOMOLOGACAO-MIDIA-NECESSARIA.md](HOMOLOGACAO-MIDIA-NECESSARIA.md), começando pelos **5 alvos de importação automática na proposta (`Prioridade 1`)** (os 3 já publicados e as migrações `perfect-dark-pc-port-perfect-dark` e `automobililamborghini-recomp`), e depois validar em ambiente real com mídias/runtimes `vandalhearts-pcport` (`Prioridade 2`), `symphonyrecomp` (`.NET 10` + `OpenAL` + multi-track), `wipeout-phantom-edition` e `redriver2` (`Java 21`).
+2. **Homologação real (`experimental` → `validated`):** executar instalação e boot real no `AllFix.exe` fornecendo as mídias originais descritas em [HOMOLOGACAO-MIDIA-NECESSARIA.md](HOMOLOGACAO-MIDIA-NECESSARIA.md), começando pelos **6 alvos de importação automática na proposta (`Prioridade 1`)** (os 3 já publicados e as migrações `perfect-dark-pc-port-perfect-dark`, `automobililamborghini-recomp` e `ctr-native`), e depois validar em ambiente real com mídias/runtimes `vandalhearts-pcport` (`Prioridade 2`), `symphonyrecomp` (`.NET 10` + `OpenAL` + multi-track), `wipeout-phantom-edition` e `redriver2` (`Java 21`).
 3. **Encaminhar ao Codex** os itens pendentes documentados em [ESPECIFICACAO-CODEX-SDK.md](ESPECIFICACAO-CODEX-SDK.md) (suporte a `.sfc`/`.smc`/`.gba` no destino de `import_input`, executáveis avulsos/instaladores/multi-parte, launchers `.bat`/Java sem `.exe`, e `profile_folder` multinível em `first_run_files`).
 
 
@@ -45,9 +45,10 @@
 
 - **Base exata da main antes das alterações:** 47d8e45f2e80b17b98c80864b6d485c8962f4f5b. PRs #1–#7 já merged.
 - **Projetos sem receita reavaliados:** 29 (26 repositórios GitHub, 3 fontes externas/do catálogo). Ainda sem receita v5 compatível e segura; dependências no relatório [Rodada 8](RODADA-8-SDK13-2026-11-23.md).
-- **Receitas melhoradas, mas não homologadas:** Perfect Dark PC Port ci-dev-build com MD5, 33554432 bytes, magic 80371240 e import_input para data/pd.ntsc-final.z64; Automobili Lamborghini v0.11.1 com SHA-256 da ROM USA, 4194304 bytes, magic 80371240, import_input para nome canônico ao lado do EXE. Ambas v3 → v5, permanecem experimental e dependem de ROM própria legítima.
-- **Arquivos oficiais:** ZIPs dessas duas releases rebaixados e inspecionados estaticamente, hashes conferidos com registros da Rodada 6; ROMs não fornecidas.
-- **Testes concluídos:** validação integral das 90 receitas pelo schema, hashes e catálogo; suite de 15 testes unitários; parser real da AllFix.dll 1.3.0 aceitou as 90 receitas; harness independente verificou 24 assertivas com entradas artificiais, incluindo rejeição de MD5/SHA-256 adulterados.
+- **Receitas melhoradas, mas não homologadas:** Perfect Dark PC Port ci-dev-build com MD5, 33554432 bytes, magic 80371240 e import_input para data/pd.ntsc-final.z64; Automobili Lamborghini v0.11.1 com SHA-256 da ROM USA, 4194304 bytes, magic 80371240, import_input para nome canônico ao lado do EXE. As três v3 → v5, permanecem experimental e dependem de ROM própria legítima.
+- - **CTR Native beta-7.1:** o README oficial carrega assets/ctr-u.bin e o perfil metadata/retail/ntsc-u-926/matching.json fixa tamanho 605698800 bytes e SHA-256 f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0 (ver nota abaixo).
+- **Arquivos oficiais:** ZIPs dessas três releases rebaixados e inspecionados estaticamente, hashes conferidos com registros da Rodada 6; ROMs não fornecidas.
+- **Testes concluídos:** validação integral das 90 receitas pelo schema, hashes e catálogo; suite de 16 testes unitários; parser real da AllFix.dll 1.3.0 aceitou as 90 receitas; harness independente verificou 31 assertivas com entradas artificiais, incluindo rejeição de MD5/SHA-256 adulterados.
 - **Sem boot real novo / sem mudança de validated:** uma validada; 89 experimentais; cobertura continua 90/119.
 - **Pendências de SDK/catálogo:** suporte seguro a instaladores .exe e downloads multipartes, launchers JAR/JRE, build auditado, extensões adicionais import_input, verificadores de perfis multinível, .tar.gz para projeto 999sian/tmc após ajuste de identidade do catálogo.
-- **Próximas ações:** revisão do PR #8 e merge somente mediante autorização; teste funcional das duas mídias legítimas e outras prioritárias; Codex tratar contratos pendentes independentemente.
+- **Próximas ações:** revisão do PR #8 e merge somente mediante autorização; teste funcional das três mídias legítimas e outras prioritárias; Codex tratar contratos pendentes independentemente.

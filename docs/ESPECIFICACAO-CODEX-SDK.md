@@ -107,6 +107,6 @@ Estes **7 projetos** dependem de correção de metadados no catálogo `brad38/Al
 
 ### 8. Melhorias funcionais obtidas sem novas operações do SDK
 
-O suporte v5 a MD5/size/magic e SHA-256/size/magic ja permite importar as ROMs canônicas de perfect-dark-pc-port-perfect-dark e automobililamborghini-recomp. Ambas as receitas foram migradas experimentalmente v3→v5, mantidos repositório, tag, executável, arquivos do ZIP e estado experimental. O parser real 1.3.0 aceitou ambas. **Nao pedir nova capacidade ao Codex para estes dois casos**; resta somente teste ponta a ponta com copia legitima e inicializacao real.
+O suporte v5 a MD5/size/magic e SHA-256/size/magic ja permite importar as ROMs canônicas de perfect-dark-pc-port-perfect-dark e automobililamborghini-recomp, além da imagem BIN canônica de ctr-native. As tres receitas foram migradas experimentalmente v3→v5, mantidos repositório, tag, executável, arquivos do ZIP e estado experimental. O parser real 1.3.0 aceitou as três. **Nao pedir nova capacidade ao Codex para estes tres casos**; resta somente teste ponta a ponta com copia legitima e inicializacao real.
 
 [Registro individual da Rodada 8](RODADA-8-SDK13-2026-11-23.md).

@@ -522,12 +522,12 @@
       "project_id": "ctr-native",
       "repository": "CTR-tools/ctr-native",
       "tag": "beta-7.1",
-      "schema_version": 3,
+      "schema_version": 5,
       "path": "recipes/crash-team-racing/ctr-native/beta-7.1.json",
-      "sha256": "94824ae8673ca22fbc3b631ef71c9b0b9e3a9af7f500fd3f84112e60187e0a77",
+      "sha256": "7d3093961d8c99243efa1cd9f69ebc056d141706d69a219f29a4c9707b952245",
       "status": "experimental",
-      "has_inputs": false,
-      "has_manual_steps": true
+      "has_inputs": true,
+      "has_manual_steps": false
     },
     {
       "game_id": "bloody-roar-ii",

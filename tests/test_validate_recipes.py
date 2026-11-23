@@ -422,6 +422,42 @@ class ValidateRecipesTests(unittest.TestCase):
         self.assertFalse(ok)
         self.assertTrue(any("unsafe" in e.lower() or "../" in e for e in errors), errors)
 
+    def test_ctr_native_verified_disc_import_v5(self) -> None:
+        """Import only the canonical, cryptographically verified NTSC-U CTR BIN."""
+        rel = "recipes/crash-team-racing/ctr-native/beta-7.1.json"
+        recipe = json.loads((REPO_ROOT / rel).read_text(encoding="utf-8"))
+        self.assertEqual(recipe["schema_version"], 5)
+        self.assertNotIn("manual_steps", recipe)
+        self.assertEqual(
+            recipe["operations"][-1],
+            {
+                "kind": "import_input",
+                "scope": "installation",
+                "source": "original-us-disc",
+                "target": "ctr-native-beta-7_1-windows-x86/assets/ctr-u.bin",
+            },
+        )
+        disc = recipe["inputs"][0]
+        self.assertEqual(disc["size"], 605698800)
+        self.assertEqual(disc["sha256"], "f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0")
+        self.assertEqual(disc["extensions"], [".bin"])
+        self.assertEqual(recipe["launch_file"], "ctr-native-beta-7_1-windows-x86/ctr_native.exe")
+
+        tmp = self._make_temp_repo()
+        altered = tmp / rel
+        modified = json.loads(altered.read_text(encoding="utf-8"))
+        modified["inputs"][0]["sha256"] = "broken"
+        raw = (json.dumps(modified, indent=2) + "\n").encode("utf-8")
+        altered.write_bytes(raw)
+        index_file = tmp / "index.json"
+        index = json.loads(index_file.read_text(encoding="utf-8"))
+        entry = next(e for e in index["recipes"] if e["project_id"] == recipe["project_id"])
+        entry["sha256"] = hashlib.sha256(raw).hexdigest()
+        index_file.write_bytes((json.dumps(index, indent=2) + "\n").encode("utf-8"))
+        ok, errors, _ = validate_recipes.validate_repository(tmp, strict_lf=True, require_jsonschema=True)
+        self.assertFalse(ok)
+        self.assertTrue(any("sha256" in e.lower() or "sha-256" in e.lower() for e in errors), errors)
+
     def test_rejects_invalid_v5_contracts(self) -> None:
         self.assertTrue(
             validate_recipes.is_safe_relative_path(
