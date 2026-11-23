@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com ROM original legítim
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial de Mystical Ninja Starring Goemon (v0.2.0-dev) foi extraido. Execute Goemon64Recompiled.exe na pasta instalada e Forneca sua ROM original de Mystical Ninja Starring Goemon (US) no menu inicial. Nenhuma ROM e fornecida pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:16:57Z`
+- **Pacote baixado e conferido:** `Goemon64Recompiled-Windows-RelWithDebInfo.zip` (`25007915` bytes, SHA-256 `f74041842f059e65be3cc2ba3d51a82c543a3b16406189afe45951cb40ac5896`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

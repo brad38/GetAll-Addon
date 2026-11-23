@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial Earthworm Jim HD Recompiled (v0.9.6) foi extraido. Execute earthworm_jim_hd.exe em EarthwormJimHD/, clique em Install from package... e aponte seu pacote XBLA legitimo (Title ID 584109E2/000D0000/, com default.xex SHA-1 62d9d28a3bce42843607c26ab4b200e91cb31203). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:18:38Z`
+- **Pacote baixado e conferido:** `EarthwormJimHD-v0.9.6-windows-x64.zip` (`32436439` bytes, SHA-256 `2c940956830f735b9c9ff31e2e590eb955ad4776ba20606ba1aa3beec8383bc7`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

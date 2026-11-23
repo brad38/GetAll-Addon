@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Correção pós-teste no AllFix.dll: o motor C# rejeitou import_input sem sha1/sha256 ('Operação incompatível'); como o projeto oficial publica apenas MD5, ajustado para manual_steps e registrado pedido de suporte a md5 em inputs para o Codex.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:17:21Z`
+- **Pacote baixado e conferido:** `pd-x86_64-windows.zip` (`25739820` bytes, SHA-256 `56e6a2f8bad36bd90f0d396c1d525b953adcc1a20157f594b90a7530d58258d3`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `7/7` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 7/7 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

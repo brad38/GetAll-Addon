@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial de Sonic 3 & Knuckles (v26.03.28.0-stable) foi extraido. Para jogar, execute Sonic3AIR.exe e indique sua ROM legitima de Sonic 3 & Knuckles (ex.: versao Steam) no assistente inicial. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:17:55Z`
+- **Pacote baixado e conferido:** `sonic3air_game_64bit.zip` (`17100662` bytes, SHA-256 `857f8608cf9ad930280dcd0ffd3ebd02a937180a37c78901c9adad882eaefbf7`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `3/3` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 3/3 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

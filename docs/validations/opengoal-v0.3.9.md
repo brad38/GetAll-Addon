@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial de Jak and Daxter (v0.3.9) foi extraido. Para jogar, abra o inicializador/extrator oficial e indique os arquivos extraidos da sua ISO original de Jak and Daxter. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:17:25Z`
+- **Pacote baixado e conferido:** `opengoal-windows-v0.3.9.zip` (`42598650` bytes, SHA-256 `d2000d4d934313541ac38cb1a801838dac1447b623b4fae58638fd319864a162`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `3/3` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 3/3 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

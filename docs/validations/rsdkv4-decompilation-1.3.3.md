@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial de Sonic 1 & 2 (2013) (1.3.3) foi extraido. Para jogar, coloque o arquivo Data.rsdk original da sua copia oficial de Sonic 1 ou Sonic 2 (2013) ao lado de RSDKv4.exe antes de iniciar. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:17:55Z`
+- **Pacote baixado e conferido:** `v4-windows-x64.zip` (`1350673` bytes, SHA-256 `e491bb9556b48bdb1fd656801a5bd7ce19dc0b7a31693bff754f619a9a8fa814`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `1/1` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 1/1 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

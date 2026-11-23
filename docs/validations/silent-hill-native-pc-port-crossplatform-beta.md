@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial Silent Hill Native PC Port (crossplatform-beta, SHPC_beta-2026.10.12.1.zip) foi extraido. Execute SilentHillPC_Launcher.exe e selecione sua imagem de disco original de Silent Hill (PS1 USA, PAL ou NTSC-J) para carregar os dados do jogo. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:19:10Z`
+- **Pacote baixado e conferido:** `SHPC_beta-2026.10.12.1.zip` (`83061493` bytes, SHA-256 `b22a1c93e5a9537bfa9c676071a2d7f1c8df6069fc44f7419fb73379d8cec81d`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `7/7` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 7/7 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial Project8Recomp (v0.3.0) foi extraido. Execute Project8Recomp.exe em Project8Recomp-v0.3.0-windows-x86_64/ e aponte sua imagem .iso original de Tony Hawk's Project 8 (Xbox 360). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:18:24Z`
+- **Pacote baixado e conferido:** `Project8Recomp-v0.3.0-windows-x86_64.zip` (`21674894` bytes, SHA-256 `f255842b916a98c8188259fa3da5931bcea639b6c656e82d26f8b274b69be436`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

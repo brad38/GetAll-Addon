@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial de Bloody Roar II (v0.7.1) foi extraido. Para jogar, abra BloodyRoar2_Recompiled.exe na pasta BloodyRoar2/ e indique sua imagem .bin/.cue ou .iso/.chd original no assistente inicial. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:17:34Z`
+- **Pacote baixado e conferido:** `BloodyRoar2-v0.7.1.zip` (`20650840` bytes, SHA-256 `745c2ae512a37b6a02087b418710ba92833c900393b133293fde54269aefd779`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `1/1` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 1/1 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

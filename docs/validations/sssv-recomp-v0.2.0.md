@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com ROM original legítim
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial de Space Station Silicon Valley (v0.2.0) foi extraido. Execute SSSVRecompiled.exe na pasta instalada e Forneca sua ROM original de Space Station Silicon Valley no menu inicial. Nenhuma ROM e fornecida pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:17:08Z`
+- **Pacote baixado e conferido:** `SSSVRecompiled_v0.2.0_Windows.zip` (`46548721` bytes, SHA-256 `c5111d552c8440746a846d634d36c1249e250c0b4e06912aeb6248c7001d35f2`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial Zelda3 (v0.3) foi extraido. Conforme as notas da release oficial, copie sua ROM USA original de The Legend of Zelda: A Link to the Past nomeada exatamente como zelda3.sfc para a pasta raiz instalada (ao lado de zelda3.exe e zelda3_assets.bps) e inicie zelda3.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:19:09Z`
+- **Pacote baixado e conferido:** `zelda3_v0.3.zip` (`1847661` bytes, SHA-256 `0d8709a4a2731920f44f1ea662d665c8c5c223c40f18865692bd6b1602250fb6`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

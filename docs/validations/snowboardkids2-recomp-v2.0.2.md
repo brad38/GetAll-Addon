@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com ROM original legítim
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial de Snowboard Kids 2 (v2.0.2) foi extraido. Execute SnowboardKids2Recompiled.exe na pasta instalada e Forneca sua ROM original de Snowboard Kids 2 (US) no menu inicial. Nenhuma ROM e fornecida pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:17:15Z`
+- **Pacote baixado e conferido:** `SnowboardKids2Recompiled-Windows.zip` (`20071009` bytes, SHA-256 `51b0c78e758d334eeab2f6aab0eec94daf75d30f7a430375d8bea5f5c26e2414`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

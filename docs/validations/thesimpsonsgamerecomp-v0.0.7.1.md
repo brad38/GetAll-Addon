@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial The Simpsons Game Recompiled (v0.0.7.1) foi extraido. Execute simpsons-launcher.exe, abra a aba Install, selecione sua imagem .iso original de The Simpsons Game (Xbox 360) e clique em Play apos a extracao. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:18:40Z`
+- **Pacote baixado e conferido:** `TheSimpsonsGame-Recompiled-Windows-x64.zip` (`396944553` bytes, SHA-256 `a12e59644fa9ce95573215d694d625bc2e938b9e6df002b33bc121b1d3ca9b99`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

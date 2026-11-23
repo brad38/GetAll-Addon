@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial Unleashed Recompiled (v1.0.3) foi extraido. Execute UnleashedRecomp.exe para abrir o assistente oficial de instalacao e forneca os arquivos ou conteineres da sua copia original de Sonic Unleashed (Xbox 360 US ou EU, com Title Update obrigatorio e DLCs opcionais). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:18:13Z`
+- **Pacote baixado e conferido:** `UnleashedRecomp-Windows.zip` (`53386467` bytes, SHA-256 `65793fbf3bfa392703275d3a1759bea20bc3d62f3bb39b066b85e5e7fb2d5d32`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

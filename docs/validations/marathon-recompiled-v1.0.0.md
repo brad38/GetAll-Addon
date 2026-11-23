@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial Marathon Recompiled (v1.0.0) foi extraido. Execute MarathonRecomp.exe e siga o assistente integrado para selecionar seus arquivos ou imagem original de Sonic the Hedgehog (2006) para Xbox 360. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:18:15Z`
+- **Pacote baixado e conferido:** `MarathonRecomp-Windows-x64.zip` (`37884609` bytes, SHA-256 `e6ec48456fc9708af90bb9a227bcb7e28d0923c77633751381178a8340ceaa4d`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

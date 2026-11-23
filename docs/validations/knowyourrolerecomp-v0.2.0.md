@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial de WWF SmackDown! 2: Know Your Role (v0.2.0) foi extraido. Para jogar, abra KnowYourRole.exe em KnowYourRole-v0.2.0-win-x64/ e selecione o arquivo .cue/.bin da sua copia NTSC-U SLUS-01234. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:17:35Z`
+- **Pacote baixado e conferido:** `KnowYourRole-win-x64.zip` (`127898385` bytes, SHA-256 `5771e291f13c621537301922bb63fbb8e3b9645ec30a7c3bc8359fe978da4e2a`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `2/2` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 2/2 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

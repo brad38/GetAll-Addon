@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Entrada automatizada configurada: `original-us-rom` (`size=12582912`, `magic_hex=80371240`, `sha1=abe01e4aeb033b6c0836819f549c791b26cfde83` -> `ProjectMidas-v1.0.2b-windows/Data/baserom.u.z64`).
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:19:06Z`
+- **Pacote baixado e conferido:** `ProjectMidas-v1.0.2b-windows.zip` (`7208857` bytes, SHA-256 `447b95c7f4947ad692fee9f4072509ecb055fc3cbe9862c7b5ca7a3ba555e16f`)
+- **Resultado (`GameInstallationService.Run`):** `extraction_ok_awaiting_media` (`Status=Failed`)
+- **Verificação de arquivos:** `3/3` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Execução interrompida na seleção de mídia obrigatória com retorno esperado `Status=Failed` (`A dependência obrigatória não foi selecionada.`) pois não há ROM/ISO comercial local; estrutura do ZIP oficial conferida integralmente (3/3 `required_files` e `launch_file` presentes).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.
