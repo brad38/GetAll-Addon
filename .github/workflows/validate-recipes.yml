@@ -2,8 +2,6 @@ name: Validate GetAll-Addon Recipes
 
 on:
   pull_request:
-    branches:
-      - main
   push:
     branches:
       - main
