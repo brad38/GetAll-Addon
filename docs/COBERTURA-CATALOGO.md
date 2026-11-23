@@ -1,22 +1,22 @@
 # GetAll-Addon — Cobertura do catalogo (87 jogos / 119 projetos)
 
-**Main confirmada apos merge PR #10:** 91 receitas (70 v3, 17 v5, 1 v6, 3 v7; 1 validated, 90 experimental), commit 6cded08c2742ecc19882ea2ef1938bf040753897. **Proposta Rodada 11B em branch:** 92 receitas (70 v3, 17 v5, 1 v6, 3 v7, 1 v8; 1 validated, 91 experimental). Os numeros novos NAO estao na main ate revisao e merge de PR.
+**Main confirmada apos merge do PR #11:** 92 receitas (70 v3, 17 v5, 1 v6, 3 v7, 1 v8; 1 validated, 91 experimental), commit dd820c008034a8e7598da5fb80ab17ca5951e81b. **Proposta Rodada 12 em branch:** 93 receitas (70 v3, 17 v5, 1 v6, 4 v7, 1 v8; 1 validated, 92 experimental). A candidata Project Picori NAO esta na main ate revisao e merge do PR GetAll, e depende da correcao de origem no PR #1 do AllFix-Repo.
 
 ## Resumo de cobertura
 
-| Indicador | Main apos PR #10 | Proposta Rodada 11B |
+| Indicador | Main apos PR #11 | Proposta Rodada 12 |
 |---|---:|---:|
 | Jogos no catalogo | 87 | 87 |
 | Projetos no catalogo | 119 | 119 |
-| Projetos com receita | 91 | 92 |
+| Projetos com receita | 92 | 93 |
 | Receitas v3 | 70 | 70 |
 | Receitas v5 | 17 | 17 |
 | Receitas v6 | 1 | 1 |
-| Receitas v7 | 3 | 3 |
-| Receitas v8 | 0 | 1 |
+| Receitas v7 | 3 | 4 |
+| Receitas v8 | 1 | 1 |
 | Receitas validated | 1 | 1 |
-| Receitas experimental | 90 | 91 |
-| Projetos sem receita | 28 | 27 |
+| Receitas experimental | 91 | 92 |
+| Projetos sem receita | 27 | 26 |
 | Boots comerciais homologados novos | 0 | 0 |
 
 **Nova receita Severed Chains:** schema v8 experimental, Java25, classe legend.game.MainWindows e 96 JARs declarados. O motor prepara a distribuicao oficial; os discos originais NTSC-U e a fase de preparo do jogo continuam manuais. A evidência de staging parcial pertence ao SDK 11A; nesta rodada o parser v1.4.1 e o classpath de 96 JARs foram validados estaticamente e pelo motor nativo, sem boot. A matriz preserva os 119 IDs, evidencias historicas e bloqueios anteriores.
@@ -100,7 +100,7 @@ Consulte [relatorio Rodada 11B](RODADA-11B-SDK141-2026-11-23.md), [checkpoint](C
 | 71 | `super-mario-world` | `smw` | **B** | `recipes/super-mario-world/smw/v0.1.json` (`experimental`, v7, inputs=`True`, manual=`False`) | Sim: main apos merge do PR #10 (experimental) | Parser AllFix.dll SDK 1.4.0 aceitou receita; instalacao com dados comerciais nao testada. Historico anterior preservado em validacoes. | Nao (sem midia legitima) | Receita experimental publicada na main, sem boot real | SDK14: ROM USA SMW por SHA-1 oficial 6b47bb75d16514b6a476aa0c73a683a2a4c18765, import_input em smw.sfc; pacote oficial inspecionado | Teste posterior com arquivos legitimos, primeiro boot e evidencia em docs/validations; nao promover a validated sem testes |
 | 72 | `earthbound-mother-2` | `phase-distorter` | **B** | `recipes/earthbound-mother-2/phase-distorter/0.5.json` (`experimental`, inputs=`False`, manual=`True`) | Sim (PR #7 integrado à main) | Sim (`extracted_awaiting_manual_media`, `Status=PartiallyCompleted`, req=`3/3`) | Não (sem mídia legítima local) | Experimental publicada + Instalação testada no motor | ZIP `Phase-Distorter-0.5-windows-x86_64.zip` (`14353099` B, SHA-256 `195d8b2fa4a0...`), `launch_file_exists=True` | Fornecer mídia original no launcher/extrator e testar boot real (Prioridade 3) |
 | 73 | `the-legend-of-zelda-the-minish-cap` | `autotmc-auto-tmc` | **B** | `recipes/the-legend-of-zelda-the-minish-cap/autotmc-auto-tmc/1.0.2.json` (`experimental`, v6, inputs=`False`, manual=`True`) | Sim: main apos merge do PR #10 (experimental) | Parser AllFix.dll SDK 1.4.0 aceitou receita; instalacao com dados comerciais nao testada. Historico anterior preservado em validacoes. | Nao (sem midia legitima) | Receita experimental publicada na main, sem boot real | AutoTMC PyInstaller --onefile x64 portatil, asset release 1.0.2 (25.408.138 B, SHA-256 2abbda2825e8e87ae1787ceda868a2db3ae4a414092d33a6218adcbf3aae3d66); instala somente launcher, nao jogo TMC | Teste posterior com arquivos legitimos, primeiro boot e evidencia em docs/validations; nao promover a validated sem testes |
-| 74 | `the-legend-of-zelda-the-minish-cap` | `project-picori-999sian-tmc` | **D** | Receita ausente | Não | N/A (bloqueada) | Não | Bloqueio técnico comprovado | Catálogo aponta perfil GitHub, não o repositório específico 999sian/tmc; requer correção da origem no catálogo | Ver especificação em [ESPECIFICACAO-CODEX-SDK.md](ESPECIFICACAO-CODEX-SDK.md) |
+| 74 | `the-legend-of-zelda-the-minish-cap` | `project-picori-999sian-tmc` | **B** | `recipes/the-legend-of-zelda-the-minish-cap/project-picori-999sian-tmc/v0.9.6.json` (`experimental`, inputs=`True`, manual=`True`) | Nao (PR Rodada 12) | Parser SDK 1.4.1: 93/93 OK; instalacao real nao testada | Nao (sem ROM original autorizada) | Candidata experimental verificada em branch | Release oficial v0.9.6: Windows x64 TAR.GZ de 26.500.874 B, SHA-256 `5e30fc0068b827a5fe526f744438ec729c297d9315b1c4254d8db79ba7197498`; importacao USA SHA-1 oficial, arquivos tmc_pc.exe + voxel_shapes.json + assets/rando/default.logic verificados; catalogo PR #1 pendente | Homologar instalacao e primeiro boot com ROM USA legitima; integrar PR de catalogo, revisar CI e fazer merge somente com autorizacao |
 | 75 | `the-legend-of-zelda-the-minish-cap` | `tmc-decompilacao-base` | **C** | Receita ausente | Não | N/A (bloqueada) | Não | Bloqueio técnico comprovado | Repositório de decompilação, não pacote independente pronto para o motor | Ver especificação em [ESPECIFICACAO-CODEX-SDK.md](ESPECIFICACAO-CODEX-SDK.md) |
 | 76 | `golden-sun-golden-sun-the-lost-age` | `gsrecomp` | **B** | `recipes/golden-sun-golden-sun-the-lost-age/gsrecomp/0.8.4.json` (`experimental`, inputs=`False`, manual=`True`) | Sim (PR #7 integrado à main) | Sim (`extracted_awaiting_manual_media`, `Status=PartiallyCompleted`, req=`4/4`) | Não (sem mídia legítima local) | Experimental publicada + Instalação testada no motor | ZIP `GoldenSunRecompiled-0.8.4-windows.zip` (`63779736` B, SHA-256 `602ea651285a...`), `launch_file_exists=True` | Fornecer mídia original no launcher/extrator e testar boot real (Prioridade 3) |
 | 77 | `jak-and-daxter-1-2-e-3` | `opengoal` | **B** | `recipes/jak-and-daxter-1-2-e-3/opengoal/v0.3.9.json` (`experimental`, inputs=`False`, manual=`True`) | Sim (`origin/main` `experimental`) | Sim (`extracted_awaiting_manual_media`, `Status=PartiallyCompleted`, req=`3/3`) | Não (sem mídia legítima local) | Experimental publicada + Instalação testada no motor | ZIP `opengoal-windows-v0.3.9.zip` (`42598650` B, SHA-256 `d2000d4d9343...`), `launch_file_exists=True` | Fornecer mídia original no launcher/extrator e testar boot real (Prioridade 3) |
