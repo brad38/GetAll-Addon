@@ -8,6 +8,18 @@ Repositório público de **receitas declarativas** para o motor nativo do AllFix
 - `addons/allfix.install.universal/`: documentos do addon declarativo universal.
 - `docs/`: política de confiança, atualização, migração e rollback.
 
+## GetAll-Addon v1.0.0 — instalar e usar
+
+**Download oficial:** [GetAll-Addon.zip (Release v1.0.0)](https://github.com/brad38/GetAll-Addon/releases/tag/v1.0.0)
+
+- **Instalação:** baixe o arquivo original `GetAll-Addon.zip`, abra o AllFix e entre em **Loja de Jogos → Complementos → Adicionar complemento**. Selecione o ZIP e confira o hash apresentado antes de confirmar.
+- **Ativação:** abra **Gerenciar** no card do complemento `allfix.install.universal` e ative-o. O host consulta o índice de receitas remotas automaticamente quando necessário.
+- **Atualização do complemento:** baixe o ZIP de uma nova Release, mantenha o ID `allfix.install.universal` e importe a versão superior pelo mesmo gerenciador. O AllFix confere a integridade e mantém a ativação, quando aplicável. **Novas receitas** podem ser publicadas no índice sem atualizar o complemento.
+- **Reversão:** para suspender as receitas remotas, desative o complemento no gerenciador. Caso também use o addon antigo `allfix.install.sm64coopdx`, reative-o para usar sua receita local; receitas locais válidas têm precedência sobre remotas. Não é necessário remover jogos nem dados do usuário.
+- **Integridade do pacote original v1.0.0 (SHA-256):** `3D99BAF35515DE6E2DB6DE16CD6A3D4AF071508F5201DC95DD75BBD7CF6DB0C4`. O ZIP não contém DLLs, executáveis nem ROMs.
+
+As versões de SDK e protocolo são independentes: o addon v1.0.0 utiliza a API declarativa `1.0` e a capacidade `installation.recipe.remote` do SDK `1.1`.
+
 ## Adicionar uma nova receita
 
 1. Confirme `game_id`, `project_id` e `repository` no catálogo oficial [AllFix-Repo](https://github.com/brad38/AllFix-Repo/blob/main/catalog.json).
