@@ -42,3 +42,13 @@ A versão inicial do host aceita somente a origem fixa `https://raw.githubuserco
 Addons locais existentes mantêm precedência sobre receitas remotas para a mesma release. Para testar a fonte remota do SM64 Coop Deluxe v1.5.1, desative temporariamente `allfix.install.sm64coopdx` e ative `allfix.install.universal`. Para voltar, reative o addon local e desative o universal. Nenhum arquivo do addon antigo precisa ser removido.
 
 O addon universal é declarativo, sem DLL, executável ou runtime.
+
+## Cobertura do catálogo — auditoria de novembro de 2026
+
+A análise integral de [87 jogos e 119 projetos](docs/AUDITORIA-CATALOGO-2026-11-22.md) classifica o suporte como **A (compatível estruturalmente), B (parcial), C (fora do SDK atual) ou D (informações insuficientes)**. A classificação A não substitui o teste funcional.
+
+- [Matriz completa dos projetos e Releases](docs/AUDITORIA-CATALOGO-2026-11-22.md)
+- [Capacidades genéricas pendentes para o Codex](docs/CAPACIDADES-PENDENTES-2026-11-22.md)
+- [GoldenEye 007 PC Port v0.5.0 — validação estática e pendências](docs/GOLDENEYE-V0.5.0-VALIDACAO.md)
+
+**Receitas atuais:** SM64 Coop Deluxe v1.5.1 permanece `validated`; GoldenEye 007 v0.5.0 está publicado apenas como `experimental` e **não aparece como suporte instalado/compatível** até a homologação com ROM original. O complemento universal v1.0.0 e o ZIP oficial não foram modificados.
