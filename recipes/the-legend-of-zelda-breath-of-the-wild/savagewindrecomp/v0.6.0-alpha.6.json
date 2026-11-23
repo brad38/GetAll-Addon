@@ -1,0 +1,18 @@
+{
+  "schema_version": 5,
+  "project_id": "savagewindrecomp",
+  "tag": "v0.6.0-alpha.6",
+  "source_url": "https://github.com/revivedx/savagewindrecomp/releases/tag/v0.6.0-alpha.6",
+  "operations": [],
+  "required_files": [
+    "Savage Wind/savagewind.exe",
+    "Savage Wind/Savage Wind Configuration.exe",
+    "Savage Wind/SDL3.dll",
+    "Savage Wind/libshaderc_shared.dll",
+    "Savage Wind/recomplauncher.json",
+    "Savage Wind/zig/zig.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "Distribuicao Windows oficial Savage Wind Recomp v0.6.0-alpha.6. O ZIP inclui o port e as ferramentas de recompilacao, mas NAO inclui dados ou codigo comercial do jogo. Na primeira utilizacao, forneca uma copia sua, legalmente obtida e extraida, de Breath of the Wild para Switch na versao exata 1.9.0 com diretorios exefs/ e romfs/. Inicie Savage Wind Configuration e siga a opcao Set up game files; a recompilacao local pode demorar e nao e executada automaticamente pelo GetAll. Requer Windows 10+, Vulkan 1.3 e aproximadamente 20 GB de armazenamento. Esta receita apenas prepara os binarios oficiais sem midia, e o primeiro boot real nao foi homologado.",
+  "launch_file": "Savage Wind/savagewind.exe"
+}
