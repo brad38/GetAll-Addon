@@ -16,3 +16,5 @@ Não testado: instalação ponta a ponta, importação da ROM/disco original, in
 Status: experimental (instalação parcial com manual_steps).
 
 Procedimento manual da receita: O pacote oficial PaperBoat foi extraido. Para concluir a primeira inicializacao, abra Paperboat.exe na pasta do jogo e forneca sua ROM legitima e compativel de Paper Mario USA quando solicitada. O projeto faz a importacao de recursos no proprio aplicativo. Nenhuma ROM e distribuida.
+
+Evolução Rodada 2: tamanho 41943040 bytes (0x2800000) confirmado em pmret/papermario/ver/us/splat.yaml; adicionados inputs verificados + import_input para baserom.us.z64.

@@ -3,13 +3,34 @@
   "project_id": "battleship",
   "tag": "v1.6",
   "source_url": "https://github.com/JRickey/BattleShip/releases/tag/v1.6",
-  "operations": [],
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-rom",
+      "scope": "installation",
+      "target": "baserom.us.z64"
+    }
+  ],
   "required_files": [
     "BattleShip.exe",
     "torch.exe",
     "f3d.o2r"
   ],
-  "inputs": [],
-  "manual_steps": "O pacote oficial BattleShip (US) foi extraido. Execute BattleShip.exe na pasta instalada e forneca sua ROM legitima de Super Smash Bros. NTSC-U v1.0 (SHA-1 e2929e10fccc0aa84e5776227e798abc07cedabf) no assistente inicial para gerar BattleShip.o2r localmente.",
+  "inputs": [
+    {
+      "id": "original-rom",
+      "kind": "file",
+      "name": "ROM original Super Smash Bros. (US v1.0)",
+      "description": "Selecione sua ROM original americana (US NTSC-U v1.0) de Super Smash Bros. no formato .z64 (16 MiB). O All-Fix validara tamanho, assinatura e SHA-1 oficial antes de importar baserom.us.z64.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 16777216,
+      "magic_hex": "80371240",
+      "sha1": "e2929e10fccc0aa84e5776227e798abc07cedabf"
+    }
+  ],
+  "manual_steps": "O pacote oficial BattleShip e sua ROM verificada baserom.us.z64 foram instalados. Abra BattleShip.exe na pasta do jogo para concluir a extracao inicial de BattleShip.o2r na primeira execucao.",
   "launch_file": "BattleShip.exe"
 }

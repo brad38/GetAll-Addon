@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "ggarecomp",
+  "tag": "v0.3.0",
+  "source_url": "https://github.com/DreaXer/GGARecomp/releases/tag/v0.3.0",
+  "operations": [],
+  "required_files": [
+    "GGARecompiled.exe",
+    "SDL2.dll",
+    "dxcompiler.dll",
+    "dxil.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Goemon's Great Adventure (v0.3.0) foi extraido. Execute GGARecompiled.exe na pasta instalada e Forneca sua ROM original de Goemon's Great Adventure (US SHA-1 9f9e860816f9e2a68bb5f4f56086e0c7450c64d7) no launcher. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "launch_file": "GGARecompiled.exe"
+}

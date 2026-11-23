@@ -1,0 +1,18 @@
+{
+  "schema_version": 3,
+  "project_id": "donkey-kong-64-recompiled-dk64-rekongpiled",
+  "tag": "v1.0.3",
+  "source_url": "https://github.com/Rainchus/Donkey-Kong-64-Recompiled/releases/tag/v1.0.3",
+  "operations": [],
+  "required_files": [
+    "DK64Recompiled.exe",
+    "SDL2.dll",
+    "dxcompiler.dll",
+    "dxil.dll",
+    "libcurl.dll",
+    "zlib1.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Donkey Kong 64 (v1.0.3) foi extraido. Execute DK64Recompiled.exe na pasta instalada e Escolha sua ROM original de Donkey Kong 64 (US) no menu inicial. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "launch_file": "DK64Recompiled.exe"
+}
