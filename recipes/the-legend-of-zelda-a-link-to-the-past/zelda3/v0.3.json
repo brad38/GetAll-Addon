@@ -1,16 +1,35 @@
 {
-  "schema_version": 3,
+  "schema_version": 7,
   "project_id": "zelda3",
   "tag": "v0.3",
   "source_url": "https://github.com/snesrev/zelda3/releases/tag/v0.3",
-  "operations": [],
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-zelda3-us",
+      "target": "zelda3.sfc",
+      "scope": "installation"
+    }
+  ],
   "required_files": [
     "zelda3.exe",
     "SDL2.dll",
     "zelda3.ini",
-    "zelda3_assets.bps"
+    "zelda3_assets.bps",
+    "zelda3.sfc"
   ],
-  "inputs": [],
-  "manual_steps": "O pacote oficial Zelda3 (v0.3) foi extraido. Conforme as notas da release oficial, copie sua ROM USA original de The Legend of Zelda: A Link to the Past nomeada exatamente como zelda3.sfc para a pasta raiz instalada (ao lado de zelda3.exe e zelda3_assets.bps) e inicie zelda3.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "inputs": [
+    {
+      "id": "original-zelda3-us",
+      "kind": "file",
+      "name": "ROM original americana para zelda3",
+      "description": "Selecione sua ROM legitima americana, sem cabecalho de copia. A identidade e conferida pelo hash publicado pelo desenvolvedor upstream. O arquivo sera importado com o nome exato exigido pelo executavel do projeto; nenhum conteudo comercial acompanha o addon.",
+      "extensions": [
+        ".sfc"
+      ],
+      "required": true,
+      "sha256": "66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb"
+    }
+  ],
   "launch_file": "zelda3.exe"
 }

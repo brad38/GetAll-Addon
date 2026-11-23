@@ -1,0 +1,22 @@
+{
+  "schema_version": 6,
+  "project_id": "autotmc-auto-tmc",
+  "tag": "1.0.2",
+  "source_url": "https://github.com/StonedModder/auto-tmc/releases/tag/1.0.2",
+  "operations": [],
+  "required_files": [
+    "AutoTMC-Windows.exe"
+  ],
+  "inputs": [],
+  "assets": [
+    {
+      "name": "AutoTMC-Windows.exe",
+      "target": "AutoTMC-Windows.exe",
+      "size": 25408138,
+      "sha256": "2abbda2825e8e87ae1787ceda868a2db3ae4a414092d33a6218adcbf3aae3d66",
+      "kind": "portable_executable"
+    }
+  ],
+  "launch_file": "AutoTMC-Windows.exe",
+  "manual_steps": "O All-Fix instala somente o aplicativo portatil AutoTMC v1.0.2, nao o jogo The Minish Cap. Abra AutoTMC-Windows.exe e siga o assistente oficial para obter uma release do projeto TMC e fornecer a sua ROM legitima quando exigida; Python/ambiente e acesso a rede podem ser necessarios conforme a documentacao oficial. Nenhuma ROM ou instalacao funcional do jogo foi homologada."
+}

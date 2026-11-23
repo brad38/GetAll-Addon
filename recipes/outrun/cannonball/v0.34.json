@@ -1,16 +1,218 @@
 {
-  "schema_version": 5,
+  "schema_version": 7,
   "project_id": "cannonball",
   "tag": "v0.34",
   "source_url": "https://github.com/djyt/cannonball/releases/tag/v0.34",
-  "operations": [],
+  "operations": [
+    {
+      "kind": "import_input_set",
+      "source": "original-outrun-revb",
+      "target": "roms",
+      "scope": "installation"
+    }
+  ],
   "required_files": [
     "cannonball.exe",
     "SDL2.dll",
     "config.xml",
-    "roms/roms.txt"
+    "roms/roms.txt",
+    "roms/epr-10380b.133",
+    "roms/epr-10382b.118",
+    "roms/epr-10381b.132",
+    "roms/epr-10383b.117",
+    "roms/epr-10327a.76",
+    "roms/epr-10329a.58",
+    "roms/epr-10328a.75",
+    "roms/epr-10330a.57",
+    "roms/opr-10268.99",
+    "roms/opr-10232.102",
+    "roms/opr-10267.100",
+    "roms/opr-10231.103",
+    "roms/opr-10266.101",
+    "roms/opr-10230.104",
+    "roms/opr-10185.11",
+    "roms/opr-10186.47",
+    "roms/mpr-10371.9",
+    "roms/mpr-10373.10",
+    "roms/mpr-10375.11",
+    "roms/mpr-10377.12",
+    "roms/mpr-10372.13",
+    "roms/mpr-10374.14",
+    "roms/mpr-10376.15",
+    "roms/mpr-10378.16",
+    "roms/epr-10187.88",
+    "roms/opr-10193.66",
+    "roms/opr-10192.67",
+    "roms/opr-10191.68",
+    "roms/opr-10190.69",
+    "roms/opr-10189.70",
+    "roms/opr-10188.71"
   ],
-  "inputs": [],
-  "manual_steps": "O pacote oficial Cannonball (v0.34) foi extraido. Copie os 31 arquivos originais do romset OutRun Revision B listados em roms/roms.txt (epr-10187.88 a opr-10268.99 e, opcionalmente, os arquivos alternativos da versao japonesa) para a pasta roms/ antes de iniciar cannonball.exe. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "inputs": [
+    {
+      "id": "original-outrun-revb",
+      "kind": "arcade_romset",
+      "name": "Romset original OutRun Revision B (31 arquivos)",
+      "description": "Selecione a pasta do seu romset legitimo OutRun Revision B. Os 31 arquivos obrigatorios serao conferidos por tamanho e CRC32 do loader oficial Cannonball v0.34, incluindo epr-10381b.132 exigido no codigo, que difere da lista roms.txt desatualizada. Arquivos japoneses opcionais nao serao importados.",
+      "required": true,
+      "files": [
+        {
+          "path": "epr-10380b.133",
+          "size": 65536,
+          "crc32": "1F6CADAD"
+        },
+        {
+          "path": "epr-10382b.118",
+          "size": 65536,
+          "crc32": "C4C3FA1A"
+        },
+        {
+          "path": "epr-10381b.132",
+          "size": 65536,
+          "crc32": "BE8C412B"
+        },
+        {
+          "path": "epr-10383b.117",
+          "size": 65536,
+          "crc32": "10A2014A"
+        },
+        {
+          "path": "epr-10327a.76",
+          "size": 65536,
+          "crc32": "E28A5BAF"
+        },
+        {
+          "path": "epr-10329a.58",
+          "size": 65536,
+          "crc32": "DA131C81"
+        },
+        {
+          "path": "epr-10328a.75",
+          "size": 65536,
+          "crc32": "D5EC5E5D"
+        },
+        {
+          "path": "epr-10330a.57",
+          "size": 65536,
+          "crc32": "BA9EC82A"
+        },
+        {
+          "path": "opr-10268.99",
+          "size": 32768,
+          "crc32": "95344B04"
+        },
+        {
+          "path": "opr-10232.102",
+          "size": 32768,
+          "crc32": "776BA1EB"
+        },
+        {
+          "path": "opr-10267.100",
+          "size": 32768,
+          "crc32": "A85BB823"
+        },
+        {
+          "path": "opr-10231.103",
+          "size": 32768,
+          "crc32": "8908BCBF"
+        },
+        {
+          "path": "opr-10266.101",
+          "size": 32768,
+          "crc32": "9F6F1A74"
+        },
+        {
+          "path": "opr-10230.104",
+          "size": 32768,
+          "crc32": "686F5E50"
+        },
+        {
+          "path": "opr-10185.11",
+          "size": 32768,
+          "crc32": "22794426"
+        },
+        {
+          "path": "opr-10186.47",
+          "size": 32768,
+          "crc32": "22794426"
+        },
+        {
+          "path": "mpr-10371.9",
+          "size": 131072,
+          "crc32": "7CC86208"
+        },
+        {
+          "path": "mpr-10373.10",
+          "size": 131072,
+          "crc32": "B0D26AC9"
+        },
+        {
+          "path": "mpr-10375.11",
+          "size": 131072,
+          "crc32": "59B60BD7"
+        },
+        {
+          "path": "mpr-10377.12",
+          "size": 131072,
+          "crc32": "17A1B04A"
+        },
+        {
+          "path": "mpr-10372.13",
+          "size": 131072,
+          "crc32": "B557078C"
+        },
+        {
+          "path": "mpr-10374.14",
+          "size": 131072,
+          "crc32": "8051E517"
+        },
+        {
+          "path": "mpr-10376.15",
+          "size": 131072,
+          "crc32": "F3B8F318"
+        },
+        {
+          "path": "mpr-10378.16",
+          "size": 131072,
+          "crc32": "A1062984"
+        },
+        {
+          "path": "epr-10187.88",
+          "size": 32768,
+          "crc32": "A10ABAA9"
+        },
+        {
+          "path": "opr-10193.66",
+          "size": 32768,
+          "crc32": "BCD10DDE"
+        },
+        {
+          "path": "opr-10192.67",
+          "size": 32768,
+          "crc32": "770F1270"
+        },
+        {
+          "path": "opr-10191.68",
+          "size": 32768,
+          "crc32": "20A284AB"
+        },
+        {
+          "path": "opr-10190.69",
+          "size": 32768,
+          "crc32": "7CAB70E2"
+        },
+        {
+          "path": "opr-10189.70",
+          "size": 32768,
+          "crc32": "01366B54"
+        },
+        {
+          "path": "opr-10188.71",
+          "size": 32768,
+          "crc32": "BAD30AD9"
+        }
+      ]
+    }
+  ],
   "launch_file": "cannonball.exe"
 }

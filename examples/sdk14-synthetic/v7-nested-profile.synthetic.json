@@ -1,0 +1,33 @@
+{
+  "schema_version": 7,
+  "project_id": "synthetic-profile",
+  "tag": "v0.0-test",
+  "source_url": "https://github.com/example/profile",
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "rom",
+      "target": "data/game.sfc",
+      "scope": "local_app_data",
+      "profile_folders": [
+        "Vendor/Game/Storage"
+      ]
+    }
+  ],
+  "required_files": [
+    "game.exe"
+  ],
+  "inputs": [
+    {
+      "id": "rom",
+      "kind": "file",
+      "name": "Synthetic original file",
+      "sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "size": 1024,
+      "extensions": [
+        ".sfc"
+      ]
+    }
+  ],
+  "launch_file": "game.exe"
+}

@@ -1,12 +1,12 @@
 # Mídia Original Necessária para Homologação Real (`validated`)
 
-Na Rodada 7, as **89 receitas experimentais** (75 v3 + 14 v5) tiveram os pacotes Windows exercitados pelo motor `GameInstallationService.Run` da `AllFix.dll` 1.3.0, com verificação de arquivos conforme os contratos então vigentes. O PR #8 foi integrado à main, com três migrações (estado publicado: 72 experimentais v3 + 17 experimentais v5). Na **proposta da Rodada 9**, mais uma receita v3 passa a v5 e uma já v5 passa a importar dados; resultam **71 experimentais v3 + 18 experimentais v5**, mais a única v3 validated. Essas duas alterações passaram no parser e em testes sintéticos, mas continuam sem teste real com as mídias legítimas.
+A main apos PR #9 registra 90 receitas (72 v3, 18 v5, 1 validated e 89 experimental). A branch da Rodada 10 propoe 91 receitas (70 v3, 17 v5, 1 v6, 3 v7, sendo 1 validated e 90 experimental); sem boot real novo. Os numeros propostos dependem do merge do PR da Rodada 10.
 
 > **Importante:** Nenhuma receita experimental foi promovida para `validated` porque não há ROMs, ISOs ou pacotes comerciais proprietários disponíveis neste ambiente para testar a importação de mídia e a inicialização real do jogo. Ao fornecer suas cópias originais legítimas no `AllFix.exe`, siga a ordem de prioridade abaixo e registre o resultado em `docs/validations/<project_id>-<tag>.md`.
 
 ---
 
-## Prioridade 1 — Automação pura (`inputs: true`, `manual_steps: false` — 7 projetos)
+## Prioridade 1 — Automação pura (`inputs: true`, `manual_steps: false` — 10 projetos)
 
 Basta selecionar o arquivo original pedido pelo All-Fix; a verificação criptográfica e a cópia para o destino ocorrem automaticamente antes do lançamento:
 
@@ -19,6 +19,9 @@ Basta selecionar o arquivo original pedido pelo All-Fix; a verificação criptog
 | 5 | `automobili-lamborghini` | `automobililamborghini-recomp` (`v0.11.1`) | ROM original Automobili Lamborghini (USA) | `.z64` | `4194304` | `80371240` | SHA-256: `cab2467684a58bc19c787423d704a961aa497629763367d9fe691172de58591c` | `Automobili Lamborghini (USA).z64` |
 | 6 | `crash-team-racing` | `ctr-native` (`beta-7.1`) | Disco original Crash Team Racing NTSC-U 926 (MODE2/2352) | `.bin` | `605698800` | SHA-256 identifica os bytes | SHA-256: `f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0` | `ctr-native-beta-7_1-windows-x86/assets/ctr-u.bin` |
 | 7 | `crash-team-racing` | `crash-team-racing-high-octane` (`v.1.5`) | BIN original Crash Team Racing NTSC-U 926, MODE2/2352 | `.bin` | `605698800` | SHA-256 valida a imagem inteira | SHA-256: `f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0` | `assets/ctr-u.bin` |
+| 8 | `outrun` | `cannonball` (`v0.34`) | Pasta de ROMs originais OutRun Revision B (31 arquivos) | Sufixos numericos .88, .133 etc. | 2.064.384 bytes totais | CRC32/tamanho por membro | CRC32 do loader oficial src/main/roms.cpp v0.34 | `roms/` |
+| 9 | `the-legend-of-zelda-a-link-to-the-past` | `zelda3` (`v0.3`) | ROM original Zelda3 USA | `.sfc` | Identidade por hash | — | SHA-256: `66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb` | `zelda3.sfc` |
+| 10 | `super-mario-world` | `smw` (`v0.1`) | ROM original Super Mario World USA | `.sfc` | Identidade por hash | — | SHA-1: `6b47bb75d16514b6a476aa0c73a683a2a4c18765` | `smw.sfc` |
 
 ---
 
@@ -47,7 +50,7 @@ O All-Fix valida tamanho, cabeçalho (`magic_hex`) e hash oficial antes de copia
 
 ---
 
-## Prioridade 3 — Guia de mídia / seletor oficial (`inputs: false`, `manual_steps: true` — 66 projetos)
+## Prioridade 3 — Guia de mídia / seletor oficial (`inputs: false`, `manual_steps: true` — 64 projetos)
 
 Estes ports possuem assistente próprio de disco/ROM/XBLA, múltiplas regiões suportadas ou aguardam suporte adicional do SDK (como extensões `.sfc`/`.smc` em `import_input`, seleção multi-track ou builds externos):
 
@@ -104,18 +107,23 @@ Estes ports possuem assistente próprio de disco/ROM/XBLA, múltiplas regiões s
 | 49 | `dead-rising-2-case-zero-case-west` | `dead-rising-2-case-west-xenon-recomp` (`v1.1.2`) | `CaseWestRecomp/cw_runtime.exe` | O pacote oficial Dead Rising 2: Case West (v1.1.2) foi extraido. Copie seu pacote XBLA legitimo (Content/0000000000000000/58410B00/000D0000/) para CaseWestRecomp/assets/package/ (ou arraste-o para a janela inicial) e execute CaseWestRecomp/cw_runtime.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon. |
 | 50 | `3-on-3-nhl-arcade` | `3on3nhl-recomp` (`v0.1.1`) | `nhl3on3/nhl3on3.exe` | O pacote oficial 3 on 3 NHL Arcade PC Port (v0.1.1) foi extraido. Na configuracao inicial, abra 'NHL 3on3 Launcher.exe' dentro da pasta nhl3on3/, informe seu pacote XBLA legitimo (58410975/000D0000/) e clique em Set up game. Apos a extracao, o jogo inicia diretamente por nhl3on3/nhl3on3.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon. |
 | 51 | `shadow-of-rome` | `shadow-of-rome-recompiled` (`v2.9.5`) | `ShadowOfRome-2.9.5-windows/ShadowOfRome.exe` | O pacote oficial Shadow of Rome Recompiled (v2.9.5) foi extraido. Execute ShadowOfRome.exe em ShadowOfRome-2.9.5-windows/, clique em Play e selecione sua imagem .iso original de Shadow of Rome (PAL SLES-52950 ou NTSC-U SLUS-20902). Nenhum arquivo comercial e distribuido pelo GetAll-Addon. |
-| 52 | `the-legend-of-zelda-a-link-to-the-past` | `zelda3` (`v0.3`) | `zelda3.exe` | O pacote oficial Zelda3 (v0.3) foi extraido. Conforme as notas da release oficial, copie sua ROM USA original de The Legend of Zelda: A Link to the Past nomeada exatamente como zelda3.sfc para a pasta raiz instalada (ao lado de zelda3.exe e zelda3_assets.bps) e inicie zelda3.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon. |
-| 53 | `super-mario-world` | `smw` (`v0.1`) | `smw.exe` | O pacote oficial smw (v0.1) foi extraido. Copie sua ROM USA original de Super Mario World nomeada exatamente como smw.sfc para a pasta raiz instalada (ao lado de smw.exe e smw_assets.bps) e inicie smw.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon. |
-| 54 | `silent-hill` | `silent-hill-native-pc-port` (`crossplatform-beta`) | `SilentHillPC_Launcher.exe` | O pacote oficial Silent Hill Native PC Port (crossplatform-beta, SHPC_beta-2026.10.12.1.zip) foi extraido. Execute SilentHillPC_Launcher.exe e selecione sua imagem de disco original de Silent Hill (PS1 USA, PAL ou NTSC-J) para carregar os dados do jogo. Nenhum arquivo comercial e distribuido pelo GetAll-Addon. |
-| 55 | `super-mario-64` | `sm64plus` (`LauncherMirror`) | `Super Mario 64 Plus.exe` | Abra `Super Mario 64 Plus.exe` e selecione sua ROM legitima de Super Mario 64 (US, `.z64`) para extrair os ativos e gerar a build local. |
-| 56 | `dr-mario-64` | `drmario64-recomp-plus` (`1.0.0`) | `Dr. Mario 64 Recompiled x64-Release/drmario64_recomp.exe` | Execute `drmario64_recomp.exe` e forneca sua ROM original americana (US) de Dr. Mario 64 no menu inicial. |
-| 57 | `the-legend-of-zelda-a-link-to-the-past` | `zelda-3-launcher` (`v1.3.7.0`) | `Zelda 3 Launcher.exe` | Execute `Zelda 3 Launcher.exe`, clique em Download e selecione sua ROM original US (`SHA-256 66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb`, ou copie como `zelda3.sfc`). |
-| 58 | `super-metroid` | `super-metroid-launcher` (`v1.0.1`) | `Super Metroid Launcher.exe` | Execute `Super Metroid Launcher.exe`, clique em Download e selecione sua ROM original US (`SHA-256 12b77c4bc9c1832cee8881244659065ee1d84c70c3d29e6eaf92e6798cc2ca72`, ou copie como `sm.sfc`). |
-| 59 | `earthbound-mother-2` | `phase-distorter` (`0.5`) | `Phase-Distorter-0.5-windows-x86_64/Phase Distorter.exe` | Execute `Phase Distorter.exe` e importe sua ROM legitima de EarthBound (US) ou Mother 2 (JP) no assistente inicial (`%APPDATA%/ebsrc/EarthBoundCpp/`). |
-| 60 | `golden-sun-golden-sun-the-lost-age` | `gsrecomp` (`0.8.4`) | `Golden Sun Recompiled/GoldenSunLauncher.exe` | Execute `GoldenSunLauncher.exe`, selecione The Broken Seal ou The Lost Age e informe sua ROM GBA original para compilacao via MinGW embutido. |
-| 61 | `the-legend-of-zelda-the-wind-waker-hd` | `zeldawwhdrecomp` (`v0.5.1`) | `WindWakerHD-v0.5.1-windows-x86_64/Wind Waker HD.exe` | Extraia os ativos da sua copia legitima Wii U (USA ou EUR) via assistente ou `tools/bin/wwhd-extract.exe` antes de jogar `Wind Waker HD.exe`. |
-| 62 | `extreme-g` | `extremegrecomp` (`v1.0.0`) | `ExtremeGRecompiled.exe` | Execute `ExtremeGRecompiled.exe` e forneca sua copia original NTSC-U 1.0 de Extreme-G no menu inicial. |
-| 63 | `wipeout` | `wipeout-phantom-edition` (`v1.2.256`) | `wipeout/wipeout.exe` | Copie as 9 faixas `.bin` (faixa 1 `MODE2/2352`, faixas 2–9 `AUDIO`) + `.cue` da edicao PS1 USA para `wipeout/diskimages/` antes de iniciar `wipeout/wipeout.exe`. |
-| 64 | `outrun` | `cannonball` (`v0.34`) | `cannonball.exe` | Copie os 31 arquivos originais do romset OutRun Revision B listados em `roms/roms.txt` para `roms/` antes de iniciar `cannonball.exe`. |
-| 65 | `castlevania-symphony-of-the-night` | `symphonyrecomp` (`v1.2.0p`) | `sotn.exe` | Instale `.NET 10 Desktop Runtime x64` e `OpenAL` (`prerequisites` declarados) e copie as faixas NTSC-U (`Track 1.bin`, `Track 2.bin`, `.cue` ou `.chd`) para `disc/` antes de iniciar `sotn.exe`. |
-| 66 | `driver-2` | `redriver2` (`7.4-rc2`) | `Launcher.exe` | Com Java 21 instalado (`prerequisites: ["java-21"]`), execute `Launcher.exe`, conclua o `Setup wizard` com os discos CD1 e CD2 originais de Driver 2 (`.bin/.cue` ou `.iso`) e clique em `Launch game`. |
+| 52 | `silent-hill` | `silent-hill-native-pc-port` (`crossplatform-beta`) | `SilentHillPC_Launcher.exe` | O pacote oficial Silent Hill Native PC Port (crossplatform-beta, SHPC_beta-2026.10.12.1.zip) foi extraido. Execute SilentHillPC_Launcher.exe e selecione sua imagem de disco original de Silent Hill (PS1 USA, PAL ou NTSC-J) para carregar os dados do jogo. Nenhum arquivo comercial e distribuido pelo GetAll-Addon. |
+| 53 | `super-mario-64` | `sm64plus` (`LauncherMirror`) | `Super Mario 64 Plus.exe` | Abra `Super Mario 64 Plus.exe` e selecione sua ROM legitima de Super Mario 64 (US, `.z64`) para extrair os ativos e gerar a build local. |
+| 54 | `dr-mario-64` | `drmario64-recomp-plus` (`1.0.0`) | `Dr. Mario 64 Recompiled x64-Release/drmario64_recomp.exe` | Execute `drmario64_recomp.exe` e forneca sua ROM original americana (US) de Dr. Mario 64 no menu inicial. |
+| 55 | `the-legend-of-zelda-a-link-to-the-past` | `zelda-3-launcher` (`v1.3.7.0`) | `Zelda 3 Launcher.exe` | Execute `Zelda 3 Launcher.exe`, clique em Download e selecione sua ROM original US (`SHA-256 66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb`, ou copie como `zelda3.sfc`). |
+| 56 | `super-metroid` | `super-metroid-launcher` (`v1.0.1`) | `Super Metroid Launcher.exe` | Execute `Super Metroid Launcher.exe`, clique em Download e selecione sua ROM original US (`SHA-256 12b77c4bc9c1832cee8881244659065ee1d84c70c3d29e6eaf92e6798cc2ca72`, ou copie como `sm.sfc`). |
+| 57 | `earthbound-mother-2` | `phase-distorter` (`0.5`) | `Phase-Distorter-0.5-windows-x86_64/Phase Distorter.exe` | Execute `Phase Distorter.exe` e importe sua ROM legitima de EarthBound (US) ou Mother 2 (JP) no assistente inicial (`%APPDATA%/ebsrc/EarthBoundCpp/`). |
+| 58 | `golden-sun-golden-sun-the-lost-age` | `gsrecomp` (`0.8.4`) | `Golden Sun Recompiled/GoldenSunLauncher.exe` | Execute `GoldenSunLauncher.exe`, selecione The Broken Seal ou The Lost Age e informe sua ROM GBA original para compilacao via MinGW embutido. |
+| 59 | `the-legend-of-zelda-the-wind-waker-hd` | `zeldawwhdrecomp` (`v0.5.1`) | `WindWakerHD-v0.5.1-windows-x86_64/Wind Waker HD.exe` | Extraia os ativos da sua copia legitima Wii U (USA ou EUR) via assistente ou `tools/bin/wwhd-extract.exe` antes de jogar `Wind Waker HD.exe`. |
+| 60 | `extreme-g` | `extremegrecomp` (`v1.0.0`) | `ExtremeGRecompiled.exe` | Execute `ExtremeGRecompiled.exe` e forneca sua copia original NTSC-U 1.0 de Extreme-G no menu inicial. |
+| 61 | `wipeout` | `wipeout-phantom-edition` (`v1.2.256`) | `wipeout/wipeout.exe` | Copie as 9 faixas `.bin` (faixa 1 `MODE2/2352`, faixas 2–9 `AUDIO`) + `.cue` da edicao PS1 USA para `wipeout/diskimages/` antes de iniciar `wipeout/wipeout.exe`. |
+| 62 | `castlevania-symphony-of-the-night` | `symphonyrecomp` (`v1.2.0p`) | `sotn.exe` | Instale `.NET 10 Desktop Runtime x64` e `OpenAL` (`prerequisites` declarados) e copie as faixas NTSC-U (`Track 1.bin`, `Track 2.bin`, `.cue` ou `.chd`) para `disc/` antes de iniciar `sotn.exe`. |
+| 63 | `driver-2` | `redriver2` (`7.4-rc2`) | `Launcher.exe` | Com Java 21 instalado (`prerequisites: ["java-21"]`), execute `Launcher.exe`, conclua o `Setup wizard` com os discos CD1 e CD2 originais de Driver 2 (`.bin/.cue` ou `.iso`) e clique em `Launch game`. |
+| 64 | `the-legend-of-zelda-the-minish-cap` | `autotmc-auto-tmc` (`1.0.2`) | `AutoTMC-Windows.exe` | Instala apenas o aplicativo portatil AutoTMC. Abra o launcher e siga as instrucoes para instalar o TMC a partir de fontes oficiais e fornecer sua ROM legitima; isso NAO significa que o jogo foi instalado ou homologado. |
+
+### Notas da Rodada 10
+
+- As linhas 8–10 da prioridade 1 sao **candidatas**, nao homologacoes. O usuario deve fornecer seus arquivos originais legais para testar a importacao, geracao de recursos e primeiro boot.
+- Cannonball: ha diferenca documentada entre roms/roms.txt (epr-10381a.132) e o loader binario v0.34 (epr-10381b.132). A receita usa a assinatura do loader em tempo de execucao; testar com o romset legitimo adequado e manter experimental se nao corresponder.
+- AutoTMC: o EXE portatil contem o aplicativo gerenciador, nao as midias/jogo Minish Cap. O status final continua pendente do primeiro uso e homologacao.
+- WipeOut Phantom Edition e Phase Distorter continuam com etapas manuais e nao devem ser anunciados como importacao completa.

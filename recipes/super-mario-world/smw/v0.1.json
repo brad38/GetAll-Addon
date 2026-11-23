@@ -1,16 +1,35 @@
 {
-  "schema_version": 3,
+  "schema_version": 7,
   "project_id": "smw",
   "tag": "v0.1",
   "source_url": "https://github.com/snesrev/smw/releases/tag/v0.1",
-  "operations": [],
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-smw-us",
+      "target": "smw.sfc",
+      "scope": "installation"
+    }
+  ],
   "required_files": [
     "smw.exe",
     "SDL2.dll",
     "smw.ini",
-    "smw_assets.bps"
+    "smw_assets.bps",
+    "smw.sfc"
   ],
-  "inputs": [],
-  "manual_steps": "O pacote oficial smw (v0.1) foi extraido. Copie sua ROM USA original de Super Mario World nomeada exatamente como smw.sfc para a pasta raiz instalada (ao lado de smw.exe e smw_assets.bps) e inicie smw.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "inputs": [
+    {
+      "id": "original-smw-us",
+      "kind": "file",
+      "name": "ROM original americana para smw",
+      "description": "Selecione sua ROM legitima americana, sem cabecalho de copia. A identidade e conferida pelo hash publicado pelo desenvolvedor upstream. O arquivo sera importado com o nome exato exigido pelo executavel do projeto; nenhum conteudo comercial acompanha o addon.",
+      "extensions": [
+        ".sfc"
+      ],
+      "required": true,
+      "sha1": "6b47bb75d16514b6a476aa0c73a683a2a4c18765"
+    }
+  ],
   "launch_file": "smw.exe"
 }

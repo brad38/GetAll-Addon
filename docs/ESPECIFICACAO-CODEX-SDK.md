@@ -173,3 +173,26 @@ Os 17 projetos classificados como kit/código-fonte, incluindo Render96ex, sm64e
 Ambos permaneceram experimental; o parser SDK 1.3.0 aceitou as 90 receitas, e nenhum jogo foi iniciado com mídia original no ambiente desta rodada. **Não solicitar ao Codex uma operação que o SDK já oferece para estes dois casos.**
 
 [Relatório e matriz de 29 projetos da Rodada 9](RODADA-9-SDK13-2026-11-23.md).
+
+---
+
+## Rodada 10 — SDK 1.4.0: capacidades realizadas e bloqueio Java25
+
+**Implementado na DLL de validação SDK 1.4.0, ainda não em release pública:** portáteis PE por assets v6 e SHA256, Java launcher restrito com java-21/-jar, tar.gz seguro, romset arcade com CRC32/tamanho/extensão numérica, import_input de .sfc/.smc/.gba, suporte a CUE multitrack e perfis multinível. Preservar v3/v5. Execução de installer_profile e build_profile segue bloqueada sem perfis auditados; não contornar via comandos shell.
+
+### Nova capacidade realmente ausente — java_classpath_launcher de Java 25
+
+**Caso concreto:** Severed Chains release-3.0.0, ZIP oficial Severed_Chains_Windows.zip (131.446.655 B, SHA-256 164716cba1899cadf834506636de8da56721d695457c3b53c93c533999ef9bb4). O JAR de jogo tem Main-Class, mas bytecode major version 69 (Java25); launch.bat oficial invoca JDK25 com -cp para dezenas de JARs externos e diversas opções JVM. O java_launcher v7 atual somente usa java-21 e -jar. O updater.jar não é entrypoint de jogo verificado; sem equivalência, não criar receita.
+
+**Contrato genérico sugerido ao Codex:** launcher Java com runtime mínimo 25+ identificado/verificado; classpath como lista fechada de caminhos relativos vinculados ao ZIP oficial e checksums; allowlist de opções JVM, nunca scripts/comandos livres; Main-Class declarado e verificado; isolamento de diretório, consentimento, timeout, cancelamento, logs e verificação de execução. Negativas: runtime antigo; JAR/lib faltante; hash errado; path traversal; opções shell; updater confundido com jogo; falha de boot e rollback.
+
+### Pendências mantidas
+
+- Project Picori: corrigir endereço no AllFix-Repo antes de usar .tar.gz do upstream real; nunca inventar identidade.
+- WipeOut Phantom Edition: 9 BIN e CUE sem checksums/tamanhos oficiais por faixa. Verificar CUE não basta para validar conteúdo comercial.
+- Phase Distorter: geração de earthbound.ebpak/mother2.ebpak exige fluxo importador do port. V7 profile_folder multinível não executa extração, e first_run_files não expressa alternativa OR regional segura.
+- Demais executáveis instaladores e compilações seguem proibidos sem perfis locais aprovados e sandbox auditado.
+
+**Já resolvido pelo SDK sem pedir novas operações:** AutoTMC portable_executable (v6), Cannonball arcade_romset 31 ROMs com CRC32 (v7), Zelda3 e SMW .sfc com hash (v7). A integridade estática, parser e testes sintéticos não homologam boots.
+
+[Relatório técnico completo da Rodada 10](RODADA-10-SDK14-2026-11-23.md).

@@ -1,0 +1,41 @@
+{
+  "schema_version": 7,
+  "project_id": "synthetic-disc",
+  "tag": "v0.0-test",
+  "source_url": "https://github.com/example/disc",
+  "operations": [
+    {
+      "kind": "import_input_set",
+      "source": "tracks",
+      "target": "disc",
+      "scope": "installation"
+    }
+  ],
+  "required_files": [
+    "game.exe",
+    "disc/disc.cue",
+    "disc/track01.bin"
+  ],
+  "inputs": [
+    {
+      "id": "tracks",
+      "kind": "directory",
+      "name": "Disc tracks",
+      "required": true,
+      "validate_cue_references": true,
+      "files": [
+        {
+          "path": "disc.cue",
+          "size": 128,
+          "sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "path": "track01.bin",
+          "size": 2352,
+          "sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        }
+      ]
+    }
+  ],
+  "launch_file": "game.exe"
+}

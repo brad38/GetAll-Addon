@@ -25,3 +25,11 @@ Procedimento manual da receita: O pacote oficial Zelda3 (v0.3) foi extraido. Con
 - **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
 - **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
 - **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.
+
+## Rodada 10 — importação .sfc por hash oficial (v7)
+
+- v3 para v7; import_input no escopo installation para zelda3.sfc na raiz do jogo.
+- ROM US com SHA-256 66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb, publicado pelo autor em BUILDING.md. Notas da release v0.3 exigem zelda3.sfc junto ao EXE.
+- ZIP oficial zelda3_v0.3.zip: 1.847.661 B, SHA-256 0d8709a4a2731920f44f1ea662d665c8c5c223c40f18865692bd6b1602250fb6, arquivos obrigatórios conferidos, sem ROM.
+- Testes: schema v7/índice e parser AllFix.dll 1.4.0. Sem ROM comercial e sem teste de boot ou preparo; permanece experimental.
+- Fonte: https://github.com/snesrev/zelda3/blob/main/BUILDING.md
