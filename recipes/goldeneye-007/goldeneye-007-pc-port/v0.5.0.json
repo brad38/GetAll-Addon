@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "project_id": "goldeneye-007-pc-port",
+  "tag": "v0.5.0",
+  "source_url": "https://github.com/jkdansereau/goldeneye-pc-port/releases/tag/v0.5.0",
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-us-rom",
+      "target": "goldeneye-pc-port-0.5.0-win64/data/ge007.ntsc-final.z64",
+      "scope": "installation"
+    }
+  ],
+  "required_files": [
+    "goldeneye-pc-port-0.5.0-win64/ge007.x86_64.exe",
+    "goldeneye-pc-port-0.5.0-win64/libgcc_s_seh-1.dll",
+    "goldeneye-pc-port-0.5.0-win64/libwinpthread-1.dll",
+    "goldeneye-pc-port-0.5.0-win64/SDL2.dll",
+    "goldeneye-pc-port-0.5.0-win64/zlib1.dll",
+    "goldeneye-pc-port-0.5.0-win64/prepare-assets/ge007-convert.exe"
+  ],
+  "inputs": [
+    {
+      "id": "original-us-rom",
+      "kind": "file",
+      "name": "ROM original GoldenEye 007 (US, NTSC-U)",
+      "description": "Selecione somente sua copia original e legitima de GoldenEye 007 (USA) em formato big-endian .z64. O AllFix validara tamanho, assinatura e SHA-1 antes de importar o arquivo para a pasta do jogo. Nenhuma ROM e distribuida.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 12582912,
+      "magic_hex": "80371240",
+      "sha1": "abe01e4aeb033b6c0836819f549c791b26cfde83"
+    }
+  ],
+  "launch_file": "goldeneye-pc-port-0.5.0-win64/ge007.x86_64.exe"
+}
