@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "All-Fix Installation Recipe v2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "tag",
+    "source_url",
+    "operations",
+    "required_files",
+    "inputs"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tag": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_url": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "operations": {
+      "$ref": "installation-recipe-v1.schema.json#/properties/operations"
+    },
+    "required_files": {
+      "$ref": "installation-recipe-v1.schema.json#/properties/required_files"
+    },
+    "manual_steps": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "inputs": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "kind": {
+            "enum": [
+              "file",
+              "directory"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[A-Fa-f0-9]{64}$"
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 68719476736
+          },
+          "magic_hex": {
+            "type": "string",
+            "pattern": "^(?:[A-Fa-f0-9]{2}){2,32}$"
+          },
+          "verify_file": {
+            "$ref": "installation-recipe-v1.schema.json#/$defs/path"
+          },
+          "extensions": {
+            "type": "array",
+            "maxItems": 10,
+            "items": {
+              "type": "string",
+              "pattern": "^\\.[A-Za-z0-9]{1,12}$"
+            }
+          },
+          "required": {
+            "type": "boolean",
+            "default": true
+          },
+          "sha1": {
+            "type": "string",
+            "pattern": "^[A-Fa-f0-9]{40}$"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "required": [
+                "kind"
+              ]
+            },
+            "then": {
+              "required": [
+                "name"
+              ],
+              "anyOf": [
+                {
+                  "required": [
+                    "sha256"
+                  ]
+                },
+                {
+                  "required": [
+                    "size",
+                    "magic_hex"
+                  ]
+                }
+              ]
+            },
+            "else": {
+              "required": [
+                "sha256"
+              ]
+            }
+          },
+          {
+            "if": {
+              "required": [
+                "kind"
+              ],
+              "properties": {
+                "kind": {
+                  "const": "directory"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "verify_file"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

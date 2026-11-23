@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "All-Fix Installation Recipe v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "tag",
+    "source_url",
+    "operations",
+    "required_files",
+    "inputs"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tag": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_url": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "manual_steps": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "operations": {
+      "type": "array",
+      "maxItems": 256,
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "target"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "create_directory",
+              "copy",
+              "move",
+              "copy_input"
+            ]
+          },
+          "target": {
+            "$ref": "#/$defs/path"
+          },
+          "source": {
+            "type": "string"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "create_directory"
+                }
+              }
+            },
+            "then": {
+              "not": {
+                "required": [
+                  "source"
+                ]
+              }
+            },
+            "else": {
+              "required": [
+                "source"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "copy",
+                    "move"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "source": {
+                  "$ref": "#/$defs/path"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "required_files": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 256,
+      "items": {
+        "$ref": "#/$defs/path"
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "sha256"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9A-Fa-f]{64}$"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "path": {
+      "type": "string",
+      "maxLength": 240,
+      "pattern": "^[a-zA-Z0-9_][a-zA-Z0-9_.-]*(/[a-zA-Z0-9_][a-zA-Z0-9_.-]*)*$"
+    }
+  }
+}

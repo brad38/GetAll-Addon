@@ -1,0 +1,13 @@
+{
+  "manifest_version": 1,
+  "id": "allfix.install.universal",
+  "name": "Receitas oficiais GetAll",
+  "version": "1.0.0",
+  "api_version": "1.0",
+  "entrypoint": "responses.json",
+  "capabilities": [
+    "installation.recipe.remote"
+  ],
+  "permissions": [],
+  "priority": 0
+}

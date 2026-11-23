@@ -1,0 +1,13 @@
+{
+  "responses": [
+    {
+      "capability": "installation.recipe.remote",
+      "match": {},
+      "result": {
+        "repository": "brad38/GetAll-Addon",
+        "ref": "main",
+        "index_path": "index.json"
+      }
+    }
+  ]
+}

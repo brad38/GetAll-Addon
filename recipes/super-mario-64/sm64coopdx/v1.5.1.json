@@ -1,0 +1,40 @@
+{
+  "schema_version": 3,
+  "project_id": "sm64coopdx-super-mario-64-coop-deluxe",
+  "tag": "v1.5.1",
+  "source_url": "https://github.com/coop-deluxe/sm64coopdx/releases/tag/v1.5.1",
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-rom",
+      "scope": "roaming_app_data",
+      "profile_folders": [
+        "sm64coopdx",
+        "sm64ex-coop"
+      ],
+      "target": "baserom.us.z64"
+    }
+  ],
+  "required_files": [
+    "sm64coopdx.exe",
+    "coopdx_updater.exe",
+    "discord_game_sdk.dll",
+    "coop.map"
+  ],
+  "inputs": [
+    {
+      "id": "original-rom",
+      "name": "ROM original de Super Mario 64 (US)",
+      "description": "Selecione sua ROM original americana (US) de Super Mario 64 no formato .z64. O All-Fix validara o arquivo e solicitara sua autorizacao para importar uma copia para a pasta de dados utilizada pelo jogo.",
+      "kind": "file",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 8388608,
+      "magic_hex": "80371240",
+      "sha1": "9bef1128717f958171a4afac3ed78ee2bb4e86ce"
+    }
+  ],
+  "launch_file": "sm64coopdx.exe"
+}

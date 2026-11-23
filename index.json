@@ -1,0 +1,17 @@
+{
+  "index_format_version": 1,
+  "recipes": [
+    {
+      "game_id": "super-mario-64",
+      "project_id": "sm64coopdx-super-mario-64-coop-deluxe",
+      "repository": "coop-deluxe/sm64coopdx",
+      "tag": "v1.5.1",
+      "schema_version": 3,
+      "path": "recipes/super-mario-64/sm64coopdx/v1.5.1.json",
+      "sha256": "54fb8ac09863fc500b532244070e9cbe5bc4a81aaff66530b4e711b97fb2a2f3",
+      "status": "validated",
+      "has_inputs": true,
+      "has_manual_steps": false
+    }
+  ]
+}

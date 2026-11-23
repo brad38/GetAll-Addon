@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GetAll-Addon Remote Recipe Index v1",
+  "type": "object",
+  "required": [
+    "index_format_version",
+    "recipes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "index_format_version": {
+      "const": 1
+    },
+    "recipes": {
+      "type": "array",
+      "maxItems": 256,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "game_id",
+        "project_id",
+        "repository",
+        "tag",
+        "schema_version",
+        "path",
+        "sha256",
+        "status",
+        "has_inputs",
+        "has_manual_steps"
+      ],
+      "properties": {
+        "game_id": {
+          "$ref": "#/$defs/id"
+        },
+        "project_id": {
+          "$ref": "#/$defs/id"
+        },
+        "repository": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9-]+/[A-Za-z0-9_.-]+$",
+          "maxLength": 160
+        },
+        "tag": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+        },
+        "schema_version": {
+          "type": "integer",
+          "enum": [
+            1,
+            2,
+            3
+          ]
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^recipes/[a-z0-9-]+/[a-z0-9-]+/[A-Za-z0-9][A-Za-z0-9._-]*\\.json$",
+          "maxLength": 240
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        },
+        "status": {
+          "enum": [
+            "validated",
+            "draft",
+            "disabled"
+          ]
+        },
+        "has_inputs": {
+          "type": "boolean"
+        },
+        "has_manual_steps": {
+          "type": "boolean"
+        }
+      }
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*$"
+    }
+  }
+}
