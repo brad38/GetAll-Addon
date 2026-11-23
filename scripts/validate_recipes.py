@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static and semantic validator for GetAll-Addon index, schemas, and recipes (SDK 1.4.0, v1-v7)."""
+"""Static and semantic validator for GetAll-Addon index, schemas, and recipes (SDK 1.4.1, v1-v8)."""
 
 from __future__ import annotations
 
@@ -66,11 +66,23 @@ WINDOWS_RESERVED_NAMES = {
 }
 
 RE_CRC32 = re.compile(r"^[a-fA-F0-9]{8}$")
+RE_JAVA_MAIN_CLASS_V8 = re.compile(
+    r"^[A-Za-z_$][A-Za-z0-9_$]*(\.[A-Za-z_$][A-Za-z0-9_$]*)+$"
+)
+ALLOWED_JVM_OPTIONS_V8 = {
+    "joml-fastmath", "joml-sin-lookup", "joml-fma",
+    "open-java-util", "export-jdk-internal-misc", "enable-native-access",
+}
+SEVERED_CHAINS_JVM_OPTIONS = [
+    "joml-fastmath", "joml-sin-lookup", "joml-fma",
+    "open-java-util", "export-jdk-internal-misc", "enable-native-access",
+]
+SEVERED_CHAINS_SOURCE = "https://github.com/Legend-of-Dragoon-Modding/Severed-Chains"
 RE_NUMERIC_ROM_EXT = re.compile(r"\.[0-9]{1,3}$")
 RE_DATA_EXT_V7 = re.compile(r"\.(?:sfc|smc|gba)$", re.IGNORECASE)
 RE_BLOCKED_EXEC_ASSET = re.compile(r"\.(?:exe|msi|cmd|bat|ps1|vbs|wsf|scr|pif|com)$", re.IGNORECASE)
 VALID_STATUSES = {"validated", "disabled", "draft", "experimental"}
-VALID_SCHEMA_VERSIONS = {1, 2, 3, 4, 5, 6, 7}
+VALID_SCHEMA_VERSIONS = {1, 2, 3, 4, 5, 6, 7, 8}
 VALID_PROFILE_SCOPES_V5 = {"installation", "roaming_app_data", "local_app_data"}
 VALID_PREREQUISITES = {
     "dotnet-desktop-10-x64",
@@ -137,6 +149,7 @@ def load_schema_registry(schemas_dir: Path) -> tuple[dict[str, dict[str, Any]], 
         5: "installation-recipe-v5.schema.json",
         6: "installation-recipe-v6.schema.json",
         7: "installation-recipe-v7.schema.json",
+        8: "installation-recipe-v8.schema.json",
     }
     schemas: dict[Any, dict[str, Any]] = {}
     for key, filename in schema_files.items():
@@ -355,12 +368,102 @@ def validate_verified_data_files(
     return errors
 
 
+def validate_java_launcher_v8(
+    recipe: dict[str, Any],
+    required_files: set[str],
+    label: str,
+) -> list[str]:
+    """Exact static counterpart of SDK 1.4.1 Java v8 parser allowlists.
+
+    This deliberately does not claim to check actual JAR bytecode, external Java
+    runtime availability or a playable game: those checks belong to the host.
+    """
+    errors: list[str] = []
+    java = recipe.get("java_launcher")
+    if not isinstance(java, dict):
+        return [f"{label}: java_launcher must be an object"]
+    allowed = {
+        "jar", "runtime", "working_directory", "main_class", "classpath",
+        "jvm_options", "program_arguments_profile",
+    }
+    for key in java:
+        if key not in allowed:
+            errors.append(f"{label}: java_launcher.{key} is not allowed")
+    req_lower = {f.casefold() for f in required_files}
+
+    def is_declared_jar(path: Any) -> bool:
+        return (
+            isinstance(path, str) and path.lower().endswith(".jar")
+            and is_safe_relative_path(path, allow_v5_chars=True)[0]
+            and path.casefold() in req_lower
+        )
+
+    jar = java.get("jar")
+    if not is_declared_jar(jar):
+        errors.append(f"{label}: java_launcher.jar must be a safe declared local JAR")
+    runtime = java.get("runtime")
+    if runtime not in ("java-21", "java-25"):
+        errors.append(f"{label}: java_launcher.runtime requires java-21 or java-25")
+    if runtime not in (recipe.get("prerequisites") or []):
+        errors.append(f"{label}: java_launcher requires matching runtime prerequisite")
+    if "working_directory" in java and not is_safe_relative_path(
+        java["working_directory"], allow_v5_chars=True
+    )[0]:
+        errors.append(f"{label}: java_launcher.working_directory is unsafe")
+
+    has_class = "main_class" in java
+    if has_class:
+        main_class = java["main_class"]
+        if not isinstance(main_class, str) or len(main_class) > 180 or not RE_JAVA_MAIN_CLASS_V8.fullmatch(main_class):
+            errors.append(f"{label}: java_launcher.main_class is invalid")
+        cp = java.get("classpath")
+        if not isinstance(cp, list) or not 1 <= len(cp) <= 128:
+            errors.append(f"{label}: java_launcher.classpath needs 1..128 JAR paths")
+        else:
+            if len({v.casefold() for v in cp if isinstance(v, str)}) != len(cp):
+                errors.append(f"{label}: java_launcher.classpath has case-insensitive duplicates")
+            if not isinstance(jar, str) or jar.casefold() not in {
+                v.casefold() for v in cp if isinstance(v, str)
+            }:
+                errors.append(f"{label}: java_launcher.jar must be in classpath")
+            for i, path in enumerate(cp):
+                if not is_declared_jar(path):
+                    errors.append(f"{label}: java_launcher.classpath[{i}] must be safe .jar in required_files")
+        if "jvm_options" in java:
+            opts = java["jvm_options"]
+            if (
+                not isinstance(opts, list) or len(opts) > 12
+                or not all(isinstance(o, str) and o in ALLOWED_JVM_OPTIONS_V8 for o in opts)
+                or len(set(o for o in opts if isinstance(o, str))) != len(opts)
+            ):
+                errors.append(f"{label}: java_launcher.jvm_options must use the SDK allowlist without duplicates")
+        profile = java.get("program_arguments_profile")
+        if profile is not None and profile != "severed-chains-3":
+            errors.append(f"{label}: java_launcher.program_arguments_profile is not approved")
+        if profile == "severed-chains-3" and (
+            recipe.get("project_id") != "severed-chains"
+            or recipe.get("source_url") != SEVERED_CHAINS_SOURCE
+            or runtime != "java-25"
+            or main_class != "legend.game.MainWindows"
+            or java.get("jvm_options") != SEVERED_CHAINS_JVM_OPTIONS
+        ):
+            errors.append(f"{label}: severed-chains-3 requires exact official identity, runtime, main_class and ordered JVM options")
+    else:
+        for field in ("classpath", "jvm_options", "program_arguments_profile"):
+            if field in java:
+                errors.append(f"{label}: java_launcher.{field} requires main_class in schema v8")
+
+    if "launch_file" in recipe:
+        errors.append(f"{label}: java_launcher cannot coexist with launch_file")
+    return errors
+
+
 def validate_recipe_semantics(
     recipe: Any,
     entry: dict[str, Any],
     label: str,
 ) -> list[str]:
-    """Validate semantic and cross-field SDK 1.2.0–1.4.0 contracts for v1-v7 recipes."""
+    """Validate semantic and cross-field SDK 1.2.0–1.4.1 contracts for v1-v8 recipes."""
     errors: list[str] = []
     if not isinstance(recipe, dict):
         return [f"{label}: root must be a JSON object"]
@@ -382,6 +485,19 @@ def validate_recipe_semantics(
     if schema_version not in VALID_SCHEMA_VERSIONS:
         errors.append(f"{label}: unsupported schema_version '{schema_version}'")
         return errors
+
+    # SDK 1.4.1 parser does not provide shell commands or arbitrary root scripts.
+    # Reject unknown v8 members rather than silently treating them as launch steps.
+    if schema_version >= 8:
+        allowed_root = {
+            "schema_version", "project_id", "tag", "source_url", "operations",
+            "required_files", "manual_steps", "inputs", "launch_file",
+            "first_run_files", "prerequisites", "assets", "java_launcher",
+            "installer_profile", "build_profile",
+        }
+        for key in recipe:
+            if key not in allowed_root:
+                errors.append(f"{label}: unknown v8 recipe field '{key}'")
 
     allow_v5 = schema_version >= 5
 
@@ -408,7 +524,9 @@ def validate_recipe_semantics(
         expected_prefix = f"https://github.com/{repo}/"
     if not isinstance(source_url, str) or not source_url.startswith("https://"):
         errors.append(f"{label}: source_url must start with https://")
-    elif not source_url.startswith(expected_prefix):
+    elif not (source_url.startswith(expected_prefix) or (
+        schema_version >= 8 and source_url == expected_prefix[:-1]
+    )):
         errors.append(
             f"{label}: source_url '{source_url}' does not match repository '{repo}'"
         )
@@ -457,7 +575,11 @@ def validate_recipe_semantics(
             not isinstance(prereqs, list)
             or len(prereqs) > 4
             or len(set(prereqs)) != len(prereqs)
-            or not all(isinstance(p, str) and p in VALID_PREREQUISITES for p in prereqs)
+            or not all(
+                isinstance(p, str) and p in (VALID_PREREQUISITES | (
+                    {"java-25"} if schema_version >= 8 else set()
+                )) for p in prereqs
+            )
         ):
             errors.append(f"{label}: prerequisites must contain up to 4 unique valid runtime IDs")
 
@@ -757,24 +879,26 @@ def validate_recipe_semantics(
                     errors.append(f"{label}: {loc}.kind invalid")
             if total > MAX_TOTAL_DATA_BYTES:
                 errors.append(f"{label}: sum of assets exceeds 64 GiB")
-    if "java_launcher" in recipe:
-        if schema_version < 7:
-            errors.append(f"{label}: java_launcher requires v7")
-        launcher = recipe["java_launcher"]
-        if not isinstance(launcher, dict) or set(launcher) - {"jar", "runtime", "working_directory"}:
-            errors.append(f"{label}: invalid java_launcher structure")
-        else:
-            jar = launcher.get("jar")
-            if not isinstance(jar, str) or not jar.lower().endswith(".jar") or not is_safe_relative_path(jar, allow_v5_chars=True)[0]:
-                errors.append(f"{label}: java_launcher.jar must be safe .jar path")
-            if jar not in req_file_set:
-                errors.append(f"{label}: java_launcher.jar must be in required_files")
-            if launcher.get("runtime") != "java-21" or "java-21" not in (recipe.get("prerequisites") or []):
-                errors.append(f"{label}: java_launcher requires runtime/prerequisite java-21")
-            if "working_directory" in launcher and not is_safe_relative_path(launcher["working_directory"], allow_v5_chars=True)[0]:
-                errors.append(f"{label}: java_launcher.working_directory unsafe")
-        if launch_file is not None:
-            errors.append(f"{label}: java_launcher cannot coexist with launch_file")
+    if "java_launcher" in recipe and schema_version >= 8:
+        errors.extend(validate_java_launcher_v8(recipe, req_file_set, label))
+    elif "java_launcher" in recipe:
+            if schema_version < 7:
+                errors.append(f"{label}: java_launcher requires v7")
+            launcher = recipe["java_launcher"]
+            if not isinstance(launcher, dict) or set(launcher) - {"jar", "runtime", "working_directory"}:
+                errors.append(f"{label}: invalid java_launcher structure")
+            else:
+                jar = launcher.get("jar")
+                if not isinstance(jar, str) or not jar.lower().endswith(".jar") or not is_safe_relative_path(jar, allow_v5_chars=True)[0]:
+                    errors.append(f"{label}: java_launcher.jar must be safe .jar path")
+                if jar not in req_file_set:
+                    errors.append(f"{label}: java_launcher.jar must be in required_files")
+                if launcher.get("runtime") != "java-21" or "java-21" not in (recipe.get("prerequisites") or []):
+                    errors.append(f"{label}: java_launcher requires runtime/prerequisite java-21")
+                if "working_directory" in launcher and not is_safe_relative_path(launcher["working_directory"], allow_v5_chars=True)[0]:
+                    errors.append(f"{label}: java_launcher.working_directory unsafe")
+            if launch_file is not None:
+                errors.append(f"{label}: java_launcher cannot coexist with launch_file")
     for blocked in ("installer_profile", "build_profile"):
         if blocked in recipe:
             errors.append(f"{label}: {blocked} is disabled without approved execution profile")

@@ -1,0 +1,31 @@
+{
+  "schema_version": 8,
+  "project_id": "synthetic-classpath",
+  "tag": "v0.0-test",
+  "source_url": "https://github.com/example/synthetic",
+  "operations": [],
+  "required_files": [
+    "app/game.jar",
+    "app/libs/core.jar",
+    "app/libs/video.jar"
+  ],
+  "inputs": [],
+  "prerequisites": [
+    "java-25"
+  ],
+  "java_launcher": {
+    "jar": "app/game.jar",
+    "runtime": "java-25",
+    "main_class": "synthetic.game.Main",
+    "working_directory": "app",
+    "classpath": [
+      "app/game.jar",
+      "app/libs/core.jar",
+      "app/libs/video.jar"
+    ],
+    "jvm_options": [
+      "joml-fastmath",
+      "enable-native-access"
+    ]
+  }
+}
