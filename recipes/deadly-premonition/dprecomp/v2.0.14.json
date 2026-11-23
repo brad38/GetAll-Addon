@@ -1,0 +1,17 @@
+{
+  "schema_version": 3,
+  "project_id": "dprecomp",
+  "tag": "v2.0.14",
+  "source_url": "https://github.com/LittleBitUA/DPRecomp/releases/tag/v2.0.14",
+  "operations": [],
+  "required_files": [
+    "DPRecomp-2.0.14-win64/PlayDeadlyPremonition.exe",
+    "DPRecomp-2.0.14-win64/deadlyprem.exe",
+    "DPRecomp-2.0.14-win64/deadlyprem_usa.exe",
+    "DPRecomp-2.0.14-win64/rexruntimerd.dll",
+    "DPRecomp-2.0.14-win64/deadlyprem.toml"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Deadly Premonition Recompilation (v2.0.14) foi extraido. Execute PlayDeadlyPremonition.exe em DPRecomp-2.0.14-win64/ e selecione sua imagem .iso original (PAL ou USA Xbox 360) no instalador inicial (ou copie seu dump com default.xex para assets/). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "DPRecomp-2.0.14-win64/PlayDeadlyPremonition.exe"
+}

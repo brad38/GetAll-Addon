@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "dead-rising-2-case-west-xenon-recomp",
+  "tag": "v1.1.2",
+  "source_url": "https://github.com/wivi514/Dead_Rising_2_Case_West_Xenon_Recomp/releases/tag/v1.1.2",
+  "operations": [],
+  "required_files": [
+    "CaseWestRecomp/cw_runtime.exe",
+    "CaseWestRecomp/SDL2.dll",
+    "CaseWestRecomp/dxcompiler.dll",
+    "CaseWestRecomp/cw_defaults.env"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Dead Rising 2: Case West (v1.1.2) foi extraido. Copie seu pacote XBLA legitimo (Content/0000000000000000/58410B00/000D0000/) para CaseWestRecomp/assets/package/ (ou arraste-o para a janela inicial) e execute CaseWestRecomp/cw_runtime.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "CaseWestRecomp/cw_runtime.exe"
+}

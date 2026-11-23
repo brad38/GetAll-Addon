@@ -180,6 +180,65 @@ class ValidateRecipesTests(unittest.TestCase):
             errors2,
         )
 
+    def test_rejects_import_input_without_sha1_or_sha256(self) -> None:
+        tmp = self._make_temp_repo()
+        rec_rel = "recipes/super-mario-64/v3-no-hash/1.0.0.json"
+        rec_path = tmp / rec_rel
+        rec_path.parent.mkdir(parents=True, exist_ok=True)
+        v3_doc = {
+            "schema_version": 3,
+            "project_id": "v3-no-hash",
+            "tag": "1.0.0",
+            "source_url": "https://github.com/example/v3-no-hash/releases/tag/1.0.0",
+            "operations": [
+                {
+                    "kind": "import_input",
+                    "scope": "installation",
+                    "source": "orig-rom",
+                    "target": "rom.z64",
+                }
+            ],
+            "required_files": ["game.exe"],
+            "inputs": [
+                {
+                    "id": "orig-rom",
+                    "kind": "file",
+                    "name": "Original ROM",
+                    "required": True,
+                    "size": 8388608,
+                    "magic_hex": "80371240",
+                }
+            ],
+            "launch_file": "game.exe",
+        }
+        rec_bytes = (json.dumps(v3_doc, indent=2) + "\n").encode("utf-8")
+        rec_path.write_bytes(rec_bytes)
+
+        idx_path = tmp / "index.json"
+        idx = json.loads(idx_path.read_text(encoding="utf-8"))
+        idx["recipes"].append(
+            {
+                "game_id": "super-mario-64",
+                "project_id": "v3-no-hash",
+                "repository": "example/v3-no-hash",
+                "tag": "1.0.0",
+                "schema_version": 3,
+                "path": rec_rel,
+                "sha256": hashlib.sha256(rec_bytes).hexdigest(),
+                "status": "experimental",
+                "has_inputs": True,
+                "has_manual_steps": False,
+            }
+        )
+        idx_path.write_bytes((json.dumps(idx, indent=2) + "\n").encode("utf-8"))
+
+        ok, errors, _ = validate_recipes.validate_repository(tmp, strict_lf=True)
+        self.assertFalse(ok)
+        self.assertTrue(
+            any("requires sha256 or sha1" in e and "import_input" in e for e in errors),
+            errors,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

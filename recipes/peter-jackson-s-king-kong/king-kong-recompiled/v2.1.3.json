@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "king-kong-recompiled",
+  "tag": "v2.1.3",
+  "source_url": "https://github.com/TekRantGaming/king-kong-recompiled/releases/tag/v2.1.3",
+  "operations": [],
+  "required_files": [
+    "KingKong/king_kong.exe",
+    "KingKong/amd_fidelityfx_dx12.dll",
+    "KingKong/dxcompiler.dll",
+    "KingKong/kk-files.txt"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial King Kong Recompiled (v2.1.3) foi extraido. Execute king_kong.exe em KingKong/, clique em Select disc image e selecione sua imagem de disco original de Peter Jackson's King Kong (Xbox 360, .iso de 7.834.892.288 bytes / SHA-1 oficial 075f43709e9c9a095e099ab5056cc04b768288d1). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "KingKong/king_kong.exe"
+}

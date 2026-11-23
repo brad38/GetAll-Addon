@@ -1,0 +1,17 @@
+{
+  "schema_version": 3,
+  "project_id": "dusklight-ex-dusk",
+  "tag": "v2.0.3",
+  "source_url": "https://github.com/TwilitRealm/dusklight/releases/tag/v2.0.3",
+  "operations": [],
+  "required_files": [
+    "dusklight.exe",
+    "SDL3.dll",
+    "dxcompiler.dll",
+    "dxil.dll",
+    "nod.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Dusklight (v2.0.3) foi extraido. Execute dusklight.exe e informe sua imagem de disco original de The Legend of Zelda: Twilight Princess (.iso ou .rvz) no assistente inicial. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "dusklight.exe"
+}

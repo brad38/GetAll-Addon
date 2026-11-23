@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "3on3nhl-recomp",
+  "tag": "v0.1.1",
+  "source_url": "https://github.com/Wndwsqrrl/3on3NHL-recomp/releases/tag/v0.1.1",
+  "operations": [],
+  "required_files": [
+    "nhl3on3/nhl3on3.exe",
+    "nhl3on3/rexgpu-xenos.dll",
+    "nhl3on3/rexruntime.dll",
+    "nhl3on3/nhl3on3.toml"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial 3 on 3 NHL Arcade PC Port (v0.1.1) foi extraido. Na configuracao inicial, abra 'NHL 3on3 Launcher.exe' dentro da pasta nhl3on3/, informe seu pacote XBLA legitimo (58410975/000D0000/) e clique em Set up game. Apos a extracao, o jogo inicia diretamente por nhl3on3/nhl3on3.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "nhl3on3/nhl3on3.exe"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "unleashedrecomp",
+  "tag": "v1.0.3",
+  "source_url": "https://github.com/hedge-dev/UnleashedRecomp/releases/tag/v1.0.3",
+  "operations": [],
+  "required_files": [
+    "UnleashedRecomp.exe",
+    "D3D12/D3D12Core.dll",
+    "dxcompiler.dll",
+    "dxil.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Unleashed Recompiled (v1.0.3) foi extraido. Execute UnleashedRecomp.exe para abrir o assistente oficial de instalacao e forneca os arquivos ou conteineres da sua copia original de Sonic Unleashed (Xbox 360 US ou EU, com Title Update obrigatorio e DLCs opcionais). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "UnleashedRecomp.exe"
+}

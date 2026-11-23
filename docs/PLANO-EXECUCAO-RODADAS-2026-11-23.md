@@ -85,3 +85,33 @@ Para promover receitas de `experimental` para `validated`, é necessário teste 
 1. **`goldeneye-007-pc-port` (`v0.5.0`):** já estruturada como Classe A (`has_inputs: true`, `has_manual_steps: false`); falta apenas validar importação da ROM US (`abe01e4aeb033b6c0836819f549c791b26cfde83`) e lançamento do jogo.
 2. **`snap64-recomp` (`v1.1.8`):** já lê `Snap64Recomp-1.1.8-win64/pokemonsnap.z64` automaticamente sem diálogo; assim que confirmado o `size` / `sha256` oficial de `pokemonsnap.z64` com uma ROM legítima e testado o boot, passa direto a Classe A `validated`.
 3. **As 11 receitas experimentais com `import_input` (`ghostship`, `battletanx-global-assault-pc-port`, `banjo-tooie-recompiled`, `rocket-r`, `btgarecomp`, `body-harvest-recomp`, e os 5 jogos AKI):** testar importação da ROM pelo All-Fix, comportamento no primeiro lançamento e eventual adoção de `first_run_files` (SDK v4) onde houver arquivo determinístico gerado na pasta instalada.
+
+---
+
+## 6. Encerramento das Rodadas 1–5 (cobertura total dos 119 projetos)
+
+Após a execução contínua das Rodadas 2, 3, 4 e revisão de projetos Classe C/D (Rodada 5), todos os **119 projetos** dos **87 jogos** do catálogo `AllFix-Repo` foram auditados e classificados em [COBERTURA-CATALOGO.md](COBERTURA-CATALOGO.md):
+
+| Métrica | Antes das Rodadas | Após Rodada 1 | Após Rodadas 2–3 | Após Rodadas 4–5 (Final) |
+|---|---:|---:|---:|---:|
+| Receitas no `index.json` | 14 | 24 | 52 | **76** |
+| Homologadas (`validated`) | 1 | 1 | 1 | **1** |
+| Implementadas aguardando homologação (`experimental`) | 13 | 23 | 51 | **75** |
+| — Pure-auto (`has_inputs: true`, `has_manual_steps: false`) | 1 | 1 | 2 | **3** (`goldeneye-007-pc-port`, `snap64-recomp`, `project-midas`) |
+| — Mista (`has_inputs: true`, `has_manual_steps: true`) | 0 | 11 | 14 | **14** |
+| — Guia de mídia / launcher (`has_inputs: false`, `has_manual_steps: true`) | 12 | 11 | 35 | **58** |
+| Projetos **Bloqueados** com evidência documentada | — | — | 46 | **43** |
+| Projetos **Pendentes** | 105 | 95 | 21 | **0** |
+
+### Descobertas técnicas chave das Rodadas 2–5
+
+- **Comportamento real de espaços em ZIPs na `AllFix.dll`:** teste sintético ponta a ponta em `GameInstallationService.Run` comprovou que o extrator tolera arquivos não referenciados contendo espaços dentro do ZIP, aplicando `IsSafeRelativePath` apenas aos caminhos declarados em `recipe.json` (`ParseRecipe`). Isso viabilizou receitas funcionais para `strikers`, `dprecomp` e `3on3nhl-recomp` (lançado por `nhl3on3/nhl3on3.exe`, mantendo instrução inicial do launcher no ZIP).
+- **Regra de `import_input` na `AllFix.dll`:** `StoreAddonProviders.ParseRecipe` rejeita com `InvalidDataException` qualquer operação `import_input` cuja entrada em `inputs` não possua `sha1` ou `sha256` (mesmo quando válida pelo JSON Schema v3 via `size` + `magic_hex`). O validador `scripts/validate_recipes.py` foi endurecido e coberto por teste unitário para barrar esse erro ainda no CI.
+- **Projetos anteriormente Classe C/D desbloqueados na Rodada 5 (5 novas receitas):**
+  - `project-midas` (`1.0.2b`): pacote Windows portátil pré-compilado (`ProjectMidas.exe`), sem espaços, com importação automática completa da ROM US de GoldenEye 007 (`baserom.u.z64`, 12 MiB, SHA-1 `abe01e4aeb033b6c0836819f549c791b26cfde83`, `has_manual_steps: false`).
+  - `shadow-of-rome-recompiled` (`v2.9.5`), `zelda3` (`v0.3`), `smw` (`v0.1`) e `silent-hill-native-pc-port` (`crossplatform-beta`, `SHPC_beta-2026.10.12.1.zip`): atualmente oferecem releases Windows portáteis pré-compiladas em `.zip` compatíveis com o contrato v3.
+
+### Critério honesto de homologação (`validated`)
+
+Nenhuma receita experimental foi promovida para `validated` porque não há ROMs, ISOs ou pacotes comerciais proprietários neste ambiente de manutenção para executar boot real com mídia legítima do usuário. Todas as 76 receitas passaram na validação de schema JSON Draft 2020-12, hashes SHA-256 no `index.json`, integridade Git `LF` e no parser oficial `StoreAddonProviders.ParseRecipe` da `AllFix.dll`, restando apenas o teste funcional com mídia legítima no `AllFix.exe`.
+

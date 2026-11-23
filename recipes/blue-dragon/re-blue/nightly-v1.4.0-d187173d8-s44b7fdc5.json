@@ -1,0 +1,17 @@
+{
+  "schema_version": 3,
+  "project_id": "re-blue",
+  "tag": "nightly-v1.4.0-d187173d8-s44b7fdc5",
+  "source_url": "https://github.com/zolaware/reblue/releases/tag/nightly-v1.4.0-d187173d8-s44b7fdc5",
+  "operations": [],
+  "required_files": [
+    "reblue.exe",
+    "reblue_vk.exe",
+    "SDL3.dll",
+    "rexapp.dll",
+    "D3D12/D3D12Core.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial re:Blue (nightly-v1.4.0-d187173d8-s44b7fdc5) foi extraido. Execute reblue.exe (ou reblue_vk.exe para Vulkan) e selecione as 3 imagens .iso originais de Blue Dragon (Xbox 360) no assistente inicial. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "reblue.exe"
+}
