@@ -1,0 +1,14 @@
+{
+  "schema_version": 3,
+  "project_id": "knowyourrolerecomp",
+  "tag": "v0.2.0",
+  "source_url": "https://github.com/Comfubar/KnowYourRoleRecomp/releases/tag/v0.2.0",
+  "operations": [],
+  "required_files": [
+    "KnowYourRole-v0.2.0-win-x64/KnowYourRole.exe",
+    "KnowYourRole-v0.2.0-win-x64/KnowYourRole-files/runtime/KnowYourRole.Game.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de WWF SmackDown! 2: Know Your Role (v0.2.0) foi extraido. Para jogar, abra KnowYourRole.exe em KnowYourRole-v0.2.0-win-x64/ e selecione o arquivo .cue/.bin da sua copia NTSC-U SLUS-01234. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "launch_file": "KnowYourRole-v0.2.0-win-x64/KnowYourRole.exe"
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 3,
+  "project_id": "ctr-native",
+  "tag": "beta-7.1",
+  "source_url": "https://github.com/CTR-tools/ctr-native/releases/tag/beta-7.1",
+  "operations": [],
+  "required_files": [
+    "ctr-native-beta-7_1-windows-x86/ctr_native.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Crash Team Racing (beta-7.1) foi extraido. Para jogar, copie sua imagem BIN NTSC-U bruta (MODE2/2352) como assets/ctr-u.bin dentro de ctr-native-beta-7_1-windows-x86/ antes de iniciar ctr_native.exe. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "launch_file": "ctr-native-beta-7_1-windows-x86/ctr_native.exe"
+}

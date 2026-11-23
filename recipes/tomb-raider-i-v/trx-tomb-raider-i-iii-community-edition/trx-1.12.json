@@ -1,0 +1,13 @@
+{
+  "schema_version": 3,
+  "project_id": "trx-tomb-raider-i-iii-community-edition",
+  "tag": "trx-1.12",
+  "source_url": "https://github.com/LostArtefacts/TRX/releases/tag/trx-1.12",
+  "operations": [],
+  "required_files": [
+    "TRX.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Tomb Raider I-III (trx-1.12) foi extraido. Para jogar, copie os arquivos de dados originais do seu Tomb Raider I, II ou III para a pasta instalada do TRX conforme docs/trx/INSTALLING.md antes de executar TRX.exe. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "launch_file": "TRX.exe"
+}

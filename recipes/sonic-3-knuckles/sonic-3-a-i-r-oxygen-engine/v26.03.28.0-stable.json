@@ -1,0 +1,15 @@
+{
+  "schema_version": 3,
+  "project_id": "sonic-3-a-i-r-oxygen-engine",
+  "tag": "v26.03.28.0-stable",
+  "source_url": "https://github.com/Eukaryot/sonic3air/releases/tag/v26.03.28.0-stable",
+  "operations": [],
+  "required_files": [
+    "sonic3air_game/Sonic3AIR.exe",
+    "sonic3air_game/discord_game_sdk.dll",
+    "sonic3air_game/config.json"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Sonic 3 & Knuckles (v26.03.28.0-stable) foi extraido. Para jogar, execute Sonic3AIR.exe e indique sua ROM legitima de Sonic 3 & Knuckles (ex.: versao Steam) no assistente inicial. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "launch_file": "sonic3air_game/Sonic3AIR.exe"
+}

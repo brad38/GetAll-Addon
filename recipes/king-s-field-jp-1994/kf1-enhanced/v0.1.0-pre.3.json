@@ -1,0 +1,14 @@
+{
+  "schema_version": 3,
+  "project_id": "kf1-enhanced",
+  "tag": "v0.1.0-pre.3",
+  "source_url": "https://github.com/Acranon/kf1-enhanced/releases/tag/v0.1.0-pre.3",
+  "operations": [],
+  "required_files": [
+    "KingsFieldEnhanced-v0.1.0-pre.3-windows/kings-field.exe",
+    "KingsFieldEnhanced-v0.1.0-pre.3-windows/SDL3.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de King's Field (JP, 1994) (v0.1.0-pre.3) foi extraido. Para jogar, execute kings-field.exe e selecione sua imagem .cue+.bin ou .iso japonesa original para gerar a pasta data/. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "launch_file": "KingsFieldEnhanced-v0.1.0-pre.3-windows/kings-field.exe"
+}

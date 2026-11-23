@@ -1,0 +1,13 @@
+{
+  "schema_version": 3,
+  "project_id": "bloodyroar2recomp",
+  "tag": "v0.7.1",
+  "source_url": "https://github.com/novapowers0/BloodyRoar2Recomp/releases/tag/v0.7.1",
+  "operations": [],
+  "required_files": [
+    "BloodyRoar2/BloodyRoar2_Recompiled.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Bloody Roar II (v0.7.1) foi extraido. Para jogar, abra BloodyRoar2_Recompiled.exe na pasta BloodyRoar2/ e indique sua imagem .bin/.cue ou .iso/.chd original no assistente inicial. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "launch_file": "BloodyRoar2/BloodyRoar2_Recompiled.exe"
+}

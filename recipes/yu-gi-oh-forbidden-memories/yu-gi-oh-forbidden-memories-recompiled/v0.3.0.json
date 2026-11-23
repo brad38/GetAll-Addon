@@ -1,0 +1,14 @@
+{
+  "schema_version": 3,
+  "project_id": "yu-gi-oh-forbidden-memories-recompiled",
+  "tag": "v0.3.0",
+  "source_url": "https://github.com/krystalgamer/Yu-Gi-Oh-Forbidden-Memories-Recompiled/releases/tag/v0.3.0",
+  "operations": [],
+  "required_files": [
+    "yfm-redecomp-v0.3.0/memories-pc.exe",
+    "yfm-redecomp-v0.3.0/SDL3.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Yu-Gi-Oh! Forbidden Memories (v0.3.0) foi extraido. Para jogar, execute memories-pc.exe em yfm-redecomp-v0.3.0/ e selecione a imagem .bin do seu disco USA na primeira execucao. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "launch_file": "yfm-redecomp-v0.3.0/memories-pc.exe"
+}

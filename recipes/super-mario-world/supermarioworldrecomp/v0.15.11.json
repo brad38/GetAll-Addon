@@ -1,0 +1,15 @@
+{
+  "schema_version": 3,
+  "project_id": "supermarioworldrecomp",
+  "tag": "v0.15.11",
+  "source_url": "https://github.com/mstan/SuperMarioWorldRecomp/releases/tag/v0.15.11",
+  "operations": [],
+  "required_files": [
+    "SuperMarioWorldSNESRecomp.exe",
+    "SDL3.dll",
+    "libiconv-2.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Super Mario World (v0.15.11) foi extraido. Para jogar, selecione sua ROM original de Super Mario World (USA, .sfc/.smc) no assistente inicial. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "launch_file": "SuperMarioWorldSNESRecomp.exe"
+}

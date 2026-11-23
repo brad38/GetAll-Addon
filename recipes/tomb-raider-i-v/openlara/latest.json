@@ -1,0 +1,13 @@
+{
+  "schema_version": 3,
+  "project_id": "openlara",
+  "tag": "latest",
+  "source_url": "https://github.com/XProger/OpenLara/releases/tag/latest",
+  "operations": [],
+  "required_files": [
+    "OpenLara.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Tomb Raider I (latest) foi extraido. Para jogar, copie os arquivos de nivel/audio da sua copia original de Tomb Raider para a mesma pasta de OpenLara.exe antes de jogar. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "launch_file": "OpenLara.exe"
+}
