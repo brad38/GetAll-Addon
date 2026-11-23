@@ -192,5 +192,34 @@ class SDK14ContractsTests(unittest.TestCase):
 
 
 
+    def test_savagewind_official_windows_zip_is_declared_without_commercial_content(self):
+        index = json.loads((ROOT / "index.json").read_text(encoding="utf-8"))
+        entry = next(e for e in index["recipes"] if e["project_id"] == "savagewindrecomp")
+        self.assertEqual(entry["game_id"], "the-legend-of-zelda-breath-of-the-wild")
+        self.assertEqual(entry["repository"], "revivedx/savagewindrecomp")
+        self.assertEqual(entry["tag"], "v0.6.0-alpha.6")
+        self.assertEqual(entry["schema_version"], 5)
+        self.assertEqual(entry["status"], "experimental")
+        self.assertEqual(entry["sha256"], "9bb7a992123432ac587eb4cd711d64170f59b0d897d3bd238c2cf0b1559c7374")
+        doc = json.loads((ROOT / entry["path"]).read_text(encoding="utf-8"))
+        self.assertEqual(self.errors(doc), [])
+        self.assertEqual(doc["operations"], [])
+        self.assertEqual(doc["inputs"], [])
+        self.assertEqual(doc["launch_file"], "Savage Wind/savagewind.exe")
+        self.assertIn("Savage Wind/zig/zig.exe", doc["required_files"])
+        self.assertIn("1.9.0", doc["manual_steps"])
+        self.assertIn("exefs/", doc["manual_steps"])
+        self.assertIn("romfs/", doc["manual_steps"])
+        for mutate in [
+            lambda d: d.update(source_url="https://attacker.invalid/download.zip"),
+            lambda d: d.update(launch_file="../../bad.exe"),
+            lambda d: d["required_files"].remove(d["launch_file"]),
+            lambda d: d.update(installer_profile="run-any-exe"),
+        ]:
+            candidate = copy.deepcopy(doc)
+            mutate(candidate)
+            self.assertTrue(self.errors(candidate))
+
+
 if __name__=="__main__":
     unittest.main()
