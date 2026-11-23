@@ -1,6 +1,6 @@
 # Mídia Original Necessária para Homologação Real (`validated`)
 
-A main apos PR #9 registra 90 receitas (72 v3, 18 v5, 1 validated e 89 experimental). A branch da Rodada 10 propoe 91 receitas (70 v3, 17 v5, 1 v6, 3 v7, sendo 1 validated e 90 experimental); sem boot real novo. Os numeros propostos dependem do merge do PR da Rodada 10.
+A main apos PR #10 registra 91 receitas (70 v3, 17 v5, 1 v6, 3 v7, 1 validated e 90 experimental). A branch da Rodada 11B propoe 92 receitas com Severed Chains v8 experimental; 1 validated, 91 experimental, sem boot comercial novo. Os dados de branch NAO representam release ou merge.
 
 > **Importante:** Nenhuma receita experimental foi promovida para `validated` porque não há ROMs, ISOs ou pacotes comerciais proprietários disponíveis neste ambiente para testar a importação de mídia e a inicialização real do jogo. Ao fornecer suas cópias originais legítimas no `AllFix.exe`, siga a ordem de prioridade abaixo e registre o resultado em `docs/validations/<project_id>-<tag>.md`.
 
@@ -50,7 +50,7 @@ O All-Fix valida tamanho, cabeçalho (`magic_hex`) e hash oficial antes de copia
 
 ---
 
-## Prioridade 3 — Guia de mídia / seletor oficial (`inputs: false`, `manual_steps: true` — 64 projetos)
+## Prioridade 3 — Guia de mídia / seletor oficial (`inputs: false`, `manual_steps: true` — 65 projetos)
 
 Estes ports possuem assistente próprio de disco/ROM/XBLA, múltiplas regiões suportadas ou aguardam suporte adicional do SDK (como extensões `.sfc`/`.smc` em `import_input`, seleção multi-track ou builds externos):
 
@@ -121,9 +121,15 @@ Estes ports possuem assistente próprio de disco/ROM/XBLA, múltiplas regiões s
 | 63 | `driver-2` | `redriver2` (`7.4-rc2`) | `Launcher.exe` | Com Java 21 instalado (`prerequisites: ["java-21"]`), execute `Launcher.exe`, conclua o `Setup wizard` com os discos CD1 e CD2 originais de Driver 2 (`.bin/.cue` ou `.iso`) e clique em `Launch game`. |
 | 64 | `the-legend-of-zelda-the-minish-cap` | `autotmc-auto-tmc` (`1.0.2`) | `AutoTMC-Windows.exe` | Instala apenas o aplicativo portatil AutoTMC. Abra o launcher e siga as instrucoes para instalar o TMC a partir de fontes oficiais e fornecer sua ROM legitima; isso NAO significa que o jogo foi instalado ou homologado. |
 
+| 65 | `the-legend-of-dragoon` | `severed-chains` (`release-3.0.0`) | Java 25 e classpath com 96 JARs verificados | Apenas a distribuicao oficial e preparada pelo GetAll. Configure JAVA_HOME para JDK25+, forneca suas imagens legitimas NTSC-U e siga o guia do projeto para preparar isos/. Nenhum disco eh importado/verificado automaticamente; status de instalacao parcialmente concluida, sem primeiro boot real. |
+
 ### Notas da Rodada 10
 
 - As linhas 8–10 da prioridade 1 sao **candidatas**, nao homologacoes. O usuario deve fornecer seus arquivos originais legais para testar a importacao, geracao de recursos e primeiro boot.
 - Cannonball: ha diferenca documentada entre roms/roms.txt (epr-10381a.132) e o loader binario v0.34 (epr-10381b.132). A receita usa a assinatura do loader em tempo de execucao; testar com o romset legitimo adequado e manter experimental se nao corresponder.
 - AutoTMC: o EXE portatil contem o aplicativo gerenciador, nao as midias/jogo Minish Cap. O status final continua pendente do primeiro uso e homologacao.
 - WipeOut Phantom Edition e Phase Distorter continuam com etapas manuais e nao devem ser anunciados como importacao completa.
+
+### Rodada 11B — Severed Chains e homologacao
+
+A importacao manual dos discos originais de The Legend of Dragoon e a preparacao dos dados em isos/ continuam fora das operacoes v8. A presenca dos 96 JARs e a validacao Java25 comprovam a estrutura da distribuicao, nao que ela seja jogavel. Para promover a validated, testar no aplicativo com JDK25 local, quatro discos legitimos NTSC-U, importacao/preparo, primeiro boot e registrar hashes e evidencias de forma segura; nao publicar as imagens dos discos nem arquivos derivados comerciais.

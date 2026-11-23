@@ -53,3 +53,14 @@ A análise integral de [87 jogos e 119 projetos](docs/AUDITORIA-CATALOGO-2026-11
 - [Rodada SDK 1.2.0: contratos v4, testes integrados e bloqueios concretos](docs/RODADA-SDK-1.2.0-2026-11-23.md)
 
 **Índice atual:** 14 receitas — SM64 Coop Deluxe v1.5.1 segue `validated` e as outras 13 permanecem `experimental` (não descobertas automaticamente pelo host). Com o SDK 1.2.0, a receita experimental GoldenEye v0.5.0 passou a exigir também `libstdc++-6.dll`; ainda não foi homologada com ROM legítima. O ZIP universal v1.0.0 foi preservado.
+
+## Rodada 11B — integracao SDK 1.4.1 (proposta em PR)
+
+A branch feat/round-11b-sdk141-severed-chains propoe **92 receitas para 119 projetos** (70 v3, 17 v5, 1 v6, 3 v7 e 1 v8), mantendo **1 validated e 91 experimental**. Na main apos PR #10 permanecem 91 receitas; nenhuma release ou merge ocorre automaticamente.
+
+A nova receita experimental de Severed Chains release-3.0.0 declara Java25, classe principal legend.game.MainWindows e 96 JARs locais oficiais com perfil fechado de opcoes JVM. Os arquivos dos discos originais nao sao fornecidos; o preparo de isos/ continua manual e nao ha primeiro boot comprovado. O SDK 1.4.1 usado para validacao e local, nao e release publica.
+
+- [Relatorio e evidencias SDK 1.4.1](docs/RODADA-11B-SDK141-2026-11-23.md)
+- [Contrato v8](docs/sdk141-instalacao-v8.md)
+- [Checkpoint](docs/CHECKPOINT.md)
+- [Limpeza](docs/LIMPEZA-RODADA-11B.md)

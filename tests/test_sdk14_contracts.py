@@ -119,7 +119,7 @@ class SDK14ContractsTests(unittest.TestCase):
     def test_real_v6_v7_recipes_strong_sources(self):
         index=json.loads((ROOT/"index.json").read_text(encoding="utf-8"))
         entries={e["project_id"]:e for e in index["recipes"]}
-        self.assertEqual(len(index["recipes"]), 91)
+        self.assertEqual(len(index["recipes"]), 92)  # New v8 project in Round 11B
         self.assertEqual(entries["autotmc-auto-tmc"]["schema_version"],6)
         self.assertEqual(entries["cannonball"]["schema_version"],7)
         for name in ("cannonball","zelda3","smw","autotmc-auto-tmc"):

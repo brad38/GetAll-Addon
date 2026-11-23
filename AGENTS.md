@@ -62,3 +62,12 @@ Mantenha [docs/COBERTURA-CATALOGO.md](docs/COBERTURA-CATALOGO.md) atualizado a c
 - v7: java_launcher só admite java-21 e -jar sem comandos livres; arcade_romset exige lista fechada de arquivos com tamanho/CRC32 e sufixos numéricos apenas nessa modalidade; .sfc/.smc/.gba e perfis multinível são suportados por import_input.
 - installer_profile/build_profile bloqueados até perfil local auditado; não contornar via copy, move ou shell.
 - Não marcar validated sem instalação e primeiro boot com mídia legítima, evidência em docs/validations. Respeitar branch dedicada, CI e PR sem merge automático.
+
+## Adendo SDK 1.4.1 / Rodada 11B
+
+- O schema v8 amplia o SDK 1.4.0 com Java 25 e classpath declarativo. Preservar v1-v7 sem relaxar seus contratos. A versao SDK de validacao nao e release publica nem deve substituir a DLL instalada.
+- java_launcher v8 aceita jar/runtime/working_directory e modo main_class (nome Java qualificado) + classpath de 1..128 arquivos .jar locais seguros, unicos case-insensitive, todos declarados em required_files. Runtime de java-21 ou java-25 depende de prerequisites correspondente.
+- jvm_options so aceita os seis identificadores documentados em docs/sdk141-instalacao-v8.md, sem argumentos textuais livres. program_arguments_profile so pode ser severed-chains-3 e exige ID severed-chains, fonte HTTPS exata oficial, Java25, legend.game.MainWindows e seis opcoes JVM na ordem do upstream.
+- Proibir scripts, comandos remotos, shell, jar URL/wildcard, caminhos absolutos, traversal, flags arbitrarias, installer_profile e build_profile nao aprovados.
+- O sucesso de parser, hash ou preparo de 96 JARs de Severed Chains nao comprova jogo funcional; imagens NTSC-U e preparo de isos/ sao etapa manual a homologar. Manter experimental ate primeiro boot real com midia legitima e registro de evidencias.
+- Utilizar temporario dedicado, remover scripts/artefatos descartaveis e documentar arquivos preservados em docs/LIMPEZA-RODADA-11B.md. PR para revisao, sem merge/release.

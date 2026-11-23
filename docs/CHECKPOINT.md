@@ -1,39 +1,53 @@
-# Checkpoint — GetAll-Addon Rodada 10 (2026-11-23)
+# Checkpoint — GetAll-Addon Rodada 11B, SDK 1.4.1 (2026-11-23)
 
-**Base:** main 6f3c9cb1cd6403b521a9b6c2229272cc6661a6d7 (PR #9 merged).
-**Branch:** feat/round-10-sdk14-recipes, derivada da main; nenhum merge automático.
-**Repositório modificado:** somente brad38/GetAll-Addon. Nenhuma DLL, AllFix.exe, SDK, catálogo AllFix-Repo nem ZIP universal foi alterado.
+## Base e entrega
 
-## Estado verificável
+- Main confirmada em 6cded08c2742ecc19882ea2ef1938bf040753897 (PR #10 integrado).
+- Branch: feat/round-11b-sdk141-severed-chains, criada a partir dessa main.
+- Somente brad38/GetAll-Addon foi modificado; nenhuma DLL instalada foi substituida, nenhum aplicativo principal, SDK, catalogo ou release foi alterado. PR somente para revisao, sem merge automatico.
+- Pacote de integracao GetAll-Rodada11A-SDK141-Integration.zip SHA-256 calculado **87abe60e00634749a4d3aaa5a2ce71b72e252953bf5bd43c1baa435af94cc4c4**; 41 arquivos. Contrato de SDK 1.4.1 de desenvolvimento, nao release.
 
-| Indicador | Main após PR #9 | Proposta Rodada 10 |
+## Cobertura
+
+| Indicador | Main PR #10 | Branch Rodada 11B |
 |---|---:|---:|
 | Jogos / projetos | 87 / 119 | 87 / 119 |
-| Receitas indexadas | 90 | 91 |
-| v3 / v5 / v6 / v7 | 72 / 18 / 0 / 0 | 70 / 17 / 1 / 3 |
-| validated / experimental | 1 / 89 | 1 / 90 |
-| Projetos ausentes | 29 | 28 |
-| Novos boots reais | 0 | 0 |
+| Receitas | 91 | **92** |
+| v3 / v5 / v6 / v7 / v8 | 70 / 17 / 1 / 3 / 0 | **70 / 17 / 1 / 3 / 1** |
+| validated | 1 | **1** |
+| experimental | 90 | **91** |
+| Projetos sem receita | 28 | **27** |
+| Novos boots de jogos comerciais | 0 | **0** |
 
-**Pacote de integração SDK 1.4.0:** SHA-256 calculado e confirmado 01a5d0aa63969b17319e99b7c40b6b4be90cad2e7eab84b42e8ba8851bb5a5a9. Seus binários são para validação, NÃO são release pública e não foram distribuídos.
+## Mudanca concreta
 
-## Entregas da Rodada 10
+**Severed Chains release-3.0.0 experimental v8**, caminho recipes/the-legend-of-dragoon/severed-chains/release-3.0.0.json.
+- ZIP oficial 131446655 B, SHA-256 164716cba1899cadf834506636de8da56721d695457c3b53c93c533999ef9bb4; 769 entradas.
+- Classe legend.game.MainWindows, major bytecode 69 (Java25).
+- 96 JARs locais em classpath exatamente conforme launch.bat oficial; 6 jvm_options da whitelist e programa perfil fechado severed-chains-3; nenhuma execucao de BAT, instalador ou shell.
+- Dados originais NTSC-U para isos/ permanecem manuais. A evidencia anterior do SDK 11A registra staging PartiallyCompleted e ausencia de boot; nenhuma instalacao jogavel foi homologada.
 
-1. **AutoTMC 1.0.2 (novo v6):** EXE portátil PyInstaller --onefile, 25.408.138 B e SHA-256 2abbda2825e8e87ae1787ceda868a2db3ae4a414092d33a6218adcbf3aae3d66. Instala somente o gerenciador, não o jogo TMC. Status experimental.
-2. **Cannonball v0.34 (v5 → v7):** import_input_set de 31 ROMs OutRun Revision B por tamanho e CRC32 do loader oficial; 2.064.384 B. Mismatch do upstream roms/roms.txt (epr-10381a.132) versus código que carrega epr-10381b.132. Status experimental.
-3. **Zelda3 v0.3 (v3 → v7):** import_input de ROM US .sfc, SHA-256 oficial 66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb. Status experimental.
-4. **SMW v0.1 (v3 → v7):** import_input de ROM US .sfc, SHA-1 oficial 6b47bb75d16514b6a476aa0c73a683a2a4c18765. Status experimental.
+**SDK v8:** schema oficial importado, docs e exemplo sintetico, validador Python com allowlist e verificacoes cruzadas por versao (v1-v7 preservados), testes positivos e negativos. Nao migrar outras 91 receitas.
 
-**Infraestrutura:** schemas 6/7 acrescentados aos anteriores, validador ampliado sem afrouxar v3/v5, 5 exemplos sintéticos e 7 novos testes com casos negativos. Testes da main 18/18 mantidos (total 25/25). Parser real do host SDK 1.4.0: 91/91, harness 70/70, incluindo CRC32 sintético e adulteração rejeitada. Testes com mídias originais e primeiro boot: NENHUM.
+## Testes executados
 
-## Bloqueios, documentação e próximas tarefas
+- Hash SHA-256 do pacote de integracao e ZIP original; bytecode e 96 ZIPs JAR inspecionados estaticamente.
+- JSON Schema 2020-12, semantica e indices: **92/92 PASS** com checks Git blobs, LF e catalogo.
+- Unit tests Python: **34/34 PASS** (25 mantidos e 9 novos).
+- Parser nativo AllFix.dll SDK 1.4.1: **92/92 receitas**; harness **92/92 assertions**.
+- JavaJarLauncher.ValidateClasspath: **96 JARs oficiais aceitos** e testes negativos de classe inexistente, bytecode Java25 com runtime Java21 e JAR faltante rejeitados. Nenhum jogo executado.
+- GitHub Actions sera conferido no PR. Resultado funcional final com midia legitima permanece pendente.
 
-- Severed Chains exige Java25 (bytecode major 69), classpath com dependências externas e opções JVM; SDK v7 só oferece java-21 e -jar. Não há receita v7 segura equivalente.
-- Project Picori exige correção de repositório no catálogo; tar.gz já é suportado no SDK, mas ID de origem está incorreto.
-- WipeOut Phantom Edition: validação CUE/BIN exigiria hashes/tamanhos reproduzíveis por faixa indisponíveis.
-- Phase Distorter: precisa extrair assets pelo importador oficial; cópia de ROM no perfil não equivale à preparação.
-- Instaladores sem perfil aprovado, builds não isolados e releases ausentes continuam bloqueados.
+## Bloqueios mantidos (27)
 
-Detalhes: [Rodada 10](RODADA-10-SDK14-2026-11-23.md), [119 projetos](COBERTURA-CATALOGO.md), [Spec Codex](ESPECIFICACAO-CODEX-SDK.md), [Guia de mídias](HOMOLOGACAO-MIDIA-NECESSARIA.md).
+- 3 instaladores/EXEs nao portateis sem perfil aprovado.
+- 3 kits dependentes de build nativo/isolamento.
+- 14 bases de codigo sem release utilizavel.
+- 7 problemas de fonte, origem no catalogo ou release sem assets.
+- Project Picori tem tar.gz Windows oficial v0.9.6, mas seu catalogo aponta perfil GitHub, nao repo; **nao corrigir AllFix-Repo nesta rodada**.
 
-**Ações finais:** confirmar hashes/arquivos publicados, executar validações completas e CI, abrir PR para revisão sem merge.
+Documentacao: [Rodada 11B](RODADA-11B-SDK141-2026-11-23.md), [Matriz 119](COBERTURA-CATALOGO.md), [validacao Severed Chains](validations/severed-chains-release-3.0.0.md), [guia de homologacao](HOMOLOGACAO-MIDIA-NECESSARIA.md), [spec Codex](ESPECIFICACAO-CODEX-SDK.md), [limpeza](LIMPEZA-RODADA-11B.md).
+
+## Proximos passos
+
+Revisar o PR, verificar CI e homologar Severed Chains apenas com Java25 configurado e copia legitima dos discos do usuario. Para automacao futura, solicitar ao Codex importacao/verificacao segura de midia e pos-condicoes; nenhuma hipotese de ROM hash deve ser inventada. Nao fazer merge nem publicar release.

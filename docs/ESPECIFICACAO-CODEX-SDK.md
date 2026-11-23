@@ -1,5 +1,7 @@
 # Especificação Técnica para o Codex — Evolução do All-Fix SDK e Motor (`AllFix.dll`)
 
+**Atualizacao Rodada 11B (2026-11-23):** o SDK 1.4.1 (schema v8) **ja implementou** Java25 e classpath declarativo seguro. Severed Chains agora possui candidata experimental v8 com 96 JARs oficiais. O bloqueio restante e a **preparacao/verificacao das imagens originais de disco** sem scripts arbitrarios. Ha 27 projetos ainda sem receita; as contagens 29/28 e pedidos Java25 nas secoes anteriores abaixo sao historicos. Veja [relatorio atualizado](RODADA-11B-SDK141-2026-11-23.md).
+
 Este documento consolida as capacidades já entregues pelo Codex no **All-Fix SDK 1.3.0** (`schema_version: 5`) e as limitações reais ainda pendentes para desbloquear os **29 projetos restantes** e ampliar a automação dos **90 projetos** com receita no catálogo `AllFix-Repo`. Nenhum arquivo do All-Fix, SDK ou `AllFix-Repo` é modificado neste repositório.
 
 ---

@@ -1092,6 +1092,18 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "the-legend-of-dragoon",
+      "project_id": "severed-chains",
+      "repository": "Legend-of-Dragoon-Modding/Severed-Chains",
+      "tag": "release-3.0.0",
+      "schema_version": 8,
+      "path": "recipes/the-legend-of-dragoon/severed-chains/release-3.0.0.json",
+      "sha256": "864baf44f4e21b00c1a4094282e511e5612f2f79007f8a184ac610df47896813",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }
