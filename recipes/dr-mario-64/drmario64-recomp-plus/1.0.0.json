@@ -1,0 +1,16 @@
+{
+  "schema_version": 5,
+  "project_id": "drmario64-recomp-plus",
+  "tag": "1.0.0",
+  "source_url": "https://github.com/theboy181/drmario64_recomp_plus/releases/tag/1.0.0",
+  "operations": [],
+  "required_files": [
+    "Dr. Mario 64 Recompiled x64-Release/drmario64_recomp.exe",
+    "Dr. Mario 64 Recompiled x64-Release/SDL2.dll",
+    "Dr. Mario 64 Recompiled x64-Release/dxcompiler.dll",
+    "Dr. Mario 64 Recompiled x64-Release/dxil.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Dr. Mario 64 Recompiled Plus (1.0.0) foi extraido em 'Dr. Mario 64 Recompiled x64-Release/'. Execute 'drmario64_recomp.exe' e forneca sua ROM original americana (US) de Dr. Mario 64 no menu inicial. Nenhuma ROM ou ativo comercial e distribuido pelo GetAll-Addon.",
+  "launch_file": "Dr. Mario 64 Recompiled x64-Release/drmario64_recomp.exe"
+}

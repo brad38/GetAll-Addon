@@ -15,12 +15,13 @@ Manter e expandir o **GetAll-Addon** até alcançar a maior cobertura **funciona
 - **Zero pirataria e zero execução insegura:** nunca distribua ROMs, ISOs, pacotes XBLA ou ativos comerciais; nunca execute binários baixados de releases de terceiros (utilize apenas inspeção estática via `zipfile` e o serviço oficial de instalação da `AllFix.dll` quando aplicável).
 - **Proibido inventar dados:** jamais invente hashes (`sha256`, `sha1`), tamanhos em bytes, caminhos internos de ZIP ou resultados de testes. Toda receita deve refletir exatamente os arquivos e assinaturas verificados nos pacotes e repositórios oficiais.
 
-## 3. Contratos do SDK 1.2.0 e Regras de Receitas
+## 3. Contratos do SDK 1.3.0 e Regras de Receitas
 
-- Utilize apenas contratos suportados pelo All-Fix SDK 1.2.0 (`schemas/installation-recipe-v1.schema.json` a `v4.schema.json` e `schemas/remote-recipe-index-v1.schema.json`).
-- Observe os contratos reais verificados na `AllFix.dll`:
-  - `StoreAddonProviders.ParseRecipe` exige `sha256` ou `sha1` em toda entrada de `inputs` referenciada por `import_input` (além da regra `sha256` ou `size + magic_hex` do JSON Schema v3).
-  - `IsSafeRelativePath` proíbe espaços e caracteres fora de `[a-zA-Z0-9_.+-]` nos caminhos declarados em `recipe.json` (`required_files`, `launch_file`, `operations[].target`, `inputs[].verify_file`), enquanto o extrator `GameInstallationService` extrai normalmente arquivos auxiliares não declarados do ZIP que contenham espaços.
+- Utilize apenas contratos suportados pelo All-Fix SDK 1.2.0 / 1.3.0 (`schemas/installation-recipe-v1.schema.json` a `v5.schema.json` e `schemas/remote-recipe-index-v1.schema.json`).
+- Observe os contratos reais verificados na `AllFix.dll` 1.3.0:
+  - Em receitas `v1`–`v4`, `StoreAddonProviders.ParseRecipe` exige `sha256` ou `sha1` em toda entrada de `inputs` referenciada por `import_input`, e `IsSafeRelativePath` restringe caminhos a `[a-zA-Z0-9_.+-]` sem espaços nem parênteses (enquanto o extrator `GameInstallationService` extrai normalmente arquivos auxiliares não declarados do ZIP que contenham espaços).
+  - Em receitas `v5` (SDK 1.3.0), caminhos relativos aceitam espaços ASCII internos, `()` e `+`; `inputs[]` tipadas aceitam `sha256`, `sha1` isolado, `md5 + size + magic_hex`, ou `magic_hex + size/min_size` (incluindo `LIVE`/`PIRS` XBLA sem extensão na raiz); `import_input` suporta `local_app_data`; `prerequisites` aceita `dotnet-desktop-10-x64`, `java-21`, `openal-x64`, `openal-x86`; e `index.json` aceita repositórios `gitlab:<grupo>/<projeto>`.
+  - Em `import_input` no escopo `installation`, `AllFix.dll` 1.3.0 ainda rejeita extensões de console não cadastradas como `.sfc` (`InvalidDataException: O destino da importação precisa ser um arquivo de dados.`).
 - Todos os arquivos versionados (JSON, Markdown, Python, YAML) devem usar **UTF-8 sem BOM** e quebra de linha **`LF`** (`\n`), conforme [.gitattributes](.gitattributes).
 
 ## 4. Separação Rigorosa entre `experimental` e `validated`

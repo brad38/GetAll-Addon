@@ -1,6 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "GetAll-Addon Remote Recipe Index v1 (SDK 1.1)",
   "type": "object",
   "required": [
     "index_format_version",
@@ -36,7 +35,7 @@
           },
           "repository": {
             "type": "string",
-            "pattern": "^[A-Za-z0-9-]+/[A-Za-z0-9_.-]+$",
+            "pattern": "^(?:[A-Za-z0-9-]+/[A-Za-z0-9_.-]+|gitlab:[A-Za-z0-9][A-Za-z0-9_.-]*(?:/[A-Za-z0-9][A-Za-z0-9_.-]*){1,7})$",
             "maxLength": 200
           },
           "tag": {

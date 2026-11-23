@@ -1,8 +1,8 @@
 # Mídia Original Necessária para Homologação Real (`validated`)
 
-Todas as **75 receitas experimentais** já tiveram o pacote oficial Windows validado pelo motor `GameInstallationService.Run` da `AllFix.dll` (download, SHA-256, extração e presença de `required_files`/`launch_file`).
+Todas as **89 receitas experimentais** (`75` v3 + `14` v5 da Rodada 7 / SDK 1.3.0) já tiveram o pacote oficial Windows validado pelo motor `GameInstallationService.Run` da `AllFix.dll` 1.3.0 (download, SHA-256, extração, operações e presença de `required_files`/`launch_file`).
 
-> **Importante:** Nenhuma receita foi promovida para `validated` porque não há ROMs, ISOs ou pacotes comerciais proprietários disponíveis neste ambiente para testar a importação de mídia e a inicialização real do jogo. Ao fornecer suas cópias originais legítimas no `AllFix.exe`, siga a ordem de prioridade abaixo e registre o resultado em `docs/validations/<project_id>-<tag>.md`.
+> **Importante:** Nenhuma receita experimental foi promovida para `validated` porque não há ROMs, ISOs ou pacotes comerciais proprietários disponíveis neste ambiente para testar a importação de mídia e a inicialização real do jogo. Ao fornecer suas cópias originais legítimas no `AllFix.exe`, siga a ordem de prioridade abaixo e registre o resultado em `docs/validations/<project_id>-<tag>.md`.
 
 ---
 
@@ -18,11 +18,11 @@ Basta selecionar o arquivo original pedido pelo All-Fix; a verificação criptog
 
 ---
 
-## Prioridade 2 — Importação verificada + assistência inicial (`inputs: true`, `manual_steps: true` — 14 projetos)
+## Prioridade 2 — Importação verificada + assistência inicial (`inputs: true`, `manual_steps: true` — 15 projetos)
 
-O All-Fix valida tamanho, cabeçalho e hash oficial antes de copiar a ROM; após extrair, conclua o primeiro lançamento conforme as instruções da receita:
+O All-Fix valida tamanho, cabeçalho (`magic_hex`) e hash oficial antes de copiar a ROM ou disco; após extrair, conclua o primeiro lançamento conforme as instruções da receita:
 
-| # | Jogo (`game_id`) | Projeto (`project_id` / `tag`) | Entrada requerida | Extensões | Tamanho (bytes) | `magic_hex` | SHA-1 / SHA-256 oficial | Destino importado | Passos iniciais resumidos |
+| # | Jogo (`game_id`) | Projeto (`project_id` / `tag`) | Entrada requerida | Extensões | Tamanho (bytes) | `magic_hex` | SHA-1 / SHA-256 / Faixa | Destino importado | Passos iniciais resumidos |
 |---:|---|---|---|---|---:|---|---|---|---|
 | 1 | `super-mario-64` | `ghostship` (`3.0.0`) | ROM original de Super Mario 64 (US) | `.z64` | `8388608` | `80371240` | `9bef1128717f958171a4afac3ed78ee2bb4e86ce` | `baserom.us.z64` | O pacote oficial do Ghostship e sua ROM verificada baserom.us.z64 foram instalados. Abra Ghostship.exe na pasta do jogo para concluir a geracao local de recursos na primeira execucao. |
 | 2 | `paper-mario` | `paperboat` (`1.0.3`) | ROM original Paper Mario (US) | `.z64` | `41943040` | `80371240` | `3837f44cda784b466c9a2d99df70d77c322b97a0` | `baserom.us.z64` | O pacote oficial PaperBoat e sua ROM verificada baserom.us.z64 foram instalados. Execute Paperboat.exe na pasta do jogo para concluir a geracao local dos recursos na primeira execucao. |
@@ -38,12 +38,13 @@ O All-Fix valida tamanho, cabeçalho e hash oficial antes de copiar a ROM; após
 | 12 | `virtual-pro-wrestling-64` | `vpw64recomp` (`v0.3.2`) | ROM original Virtual Pro Wrestling 64 (Japan) | `.z64` | `16777216` | `80371240` | `f9e9fa2ed819c3a39db5cb6afeca186f021db5ed` | `vpw64.z64` | O pacote oficial e sua ROM verificada vpw64.z64 foram instalados. Abra Vpw64Recompiled.exe na pasta do jogo e escolha vpw64.z64 no botao Load ROM na primeira execucao. |
 | 13 | `wwf-no-mercy` | `wwfnomercyrecomp` (`v0.3.2`) | ROM original WWF No Mercy (USA Rev 1) | `.z64` | `33554432` | `80371240` | `91cee3d096f4a76644d8b35b9aead6448909abd1` | `nomercy.z64` | O pacote oficial e sua ROM verificada nomercy.z64 foram instalados. Abra NoMercyRecompiled.exe na pasta do jogo e escolha nomercy.z64 no botao Load ROM na primeira execucao. |
 | 14 | `body-harvest` | `adam-s-ant-farm` (`v0.11.14`) | ROM original Body Harvest (USA) | `.z64` | `12582912` | `80371240` | `bbb6666f5014a473747ee4145f036d9fb25d7348` | `adams-ant-farm-windows-x86_64-v0.11.14/body-harvest.us.z64` | O pacote oficial Adam's Ant Farm e sua ROM verificada body-harvest.us.z64 foram instalados em adams-ant-farm-windows-x86_64-v0.11.14/. Execute bh-launcher.exe e selecione essa ROM no primeiro uso. |
+| 15 | `vandal-hearts` | `vandalhearts-pcport` (`v2.1.0`) | Imagem BIN PS1 bruta (USA SLUS-00447, Asia SCPS-45183 ou Japan SLPM-86007; Europe SLES-00204 nao suportada) | `.bin` | `104857600`–`734003200` | `00FFFFFFFFFFFFFFFFFFFF00` | Validação estrutural v5 (`min_size`/`max_size` + `magic_hex`) | `game/vandalhearts.bin` | O pacote oficial de Vandal Hearts PC Port (v2.1.0) e sua imagem .bin foram preparados em game/vandalhearts.bin. Inicie vandalhearts_pc.exe para verificar o disco e jogar. |
 
 ---
 
-## Prioridade 3 — Guia de mídia / seletor oficial (`inputs: false`, `manual_steps: true` — 58 projetos)
+## Prioridade 3 — Guia de mídia / seletor oficial (`inputs: false`, `manual_steps: true` — 71 projetos)
 
-Estes ports possuem assistente próprio de disco/ROM/XBLA, múltiplas regiões suportadas ou aguardam suporte do SDK a `sha1` isolado / `md5` / seletores de diretório:
+Estes ports possuem assistente próprio de disco/ROM/XBLA, múltiplas regiões suportadas ou aguardam suporte adicional do SDK (como extensões `.sfc`/`.smc` em `import_input`, seleção multi-track ou builds externos):
 
 | # | Jogo (`game_id`) | Projeto (`project_id` / `tag`) | Executável (`launch_file`) | Mídia legítima / procedimento oficial |
 |---:|---|---|---|---|
@@ -105,3 +106,16 @@ Estes ports possuem assistente próprio de disco/ROM/XBLA, múltiplas regiões s
 | 56 | `the-legend-of-zelda-a-link-to-the-past` | `zelda3` (`v0.3`) | `zelda3.exe` | O pacote oficial Zelda3 (v0.3) foi extraido. Conforme as notas da release oficial, copie sua ROM USA original de The Legend of Zelda: A Link to the Past nomeada exatamente como zelda3.sfc para a pasta raiz instalada (ao lado de zelda3.exe e zelda3_assets.bps) e inicie zelda3.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon. |
 | 57 | `super-mario-world` | `smw` (`v0.1`) | `smw.exe` | O pacote oficial smw (v0.1) foi extraido. Copie sua ROM USA original de Super Mario World nomeada exatamente como smw.sfc para a pasta raiz instalada (ao lado de smw.exe e smw_assets.bps) e inicie smw.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon. |
 | 58 | `silent-hill` | `silent-hill-native-pc-port` (`crossplatform-beta`) | `SilentHillPC_Launcher.exe` | O pacote oficial Silent Hill Native PC Port (crossplatform-beta, SHPC_beta-2026.10.12.1.zip) foi extraido. Execute SilentHillPC_Launcher.exe e selecione sua imagem de disco original de Silent Hill (PS1 USA, PAL ou NTSC-J) para carregar os dados do jogo. Nenhum arquivo comercial e distribuido pelo GetAll-Addon. |
+| 59 | `super-mario-64` | `sm64plus` (`LauncherMirror`) | `Super Mario 64 Plus.exe` | Abra `Super Mario 64 Plus.exe` e selecione sua ROM legitima de Super Mario 64 (US, `.z64`) para extrair os ativos e gerar a build local. |
+| 60 | `dr-mario-64` | `drmario64-recomp-plus` (`1.0.0`) | `Dr. Mario 64 Recompiled x64-Release/drmario64_recomp.exe` | Execute `drmario64_recomp.exe` e forneca sua ROM original americana (US) de Dr. Mario 64 no menu inicial. |
+| 61 | `the-legend-of-zelda-a-link-to-the-past` | `zelda-3-launcher` (`v1.3.7.0`) | `Zelda 3 Launcher.exe` | Execute `Zelda 3 Launcher.exe`, clique em Download e selecione sua ROM original US (`SHA-256 66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb`, ou copie como `zelda3.sfc`). |
+| 62 | `super-metroid` | `super-metroid-launcher` (`v1.0.1`) | `Super Metroid Launcher.exe` | Execute `Super Metroid Launcher.exe`, clique em Download e selecione sua ROM original US (`SHA-256 12b77c4bc9c1832cee8881244659065ee1d84c70c3d29e6eaf92e6798cc2ca72`, ou copie como `sm.sfc`). |
+| 63 | `earthbound-mother-2` | `phase-distorter` (`0.5`) | `Phase-Distorter-0.5-windows-x86_64/Phase Distorter.exe` | Execute `Phase Distorter.exe` e importe sua ROM legitima de EarthBound (US) ou Mother 2 (JP) no assistente inicial (`%APPDATA%/ebsrc/EarthBoundCpp/`). |
+| 64 | `golden-sun-golden-sun-the-lost-age` | `gsrecomp` (`0.8.4`) | `Golden Sun Recompiled/GoldenSunLauncher.exe` | Execute `GoldenSunLauncher.exe`, selecione The Broken Seal ou The Lost Age e informe sua ROM GBA original para compilacao via MinGW embutido. |
+| 65 | `crash-team-racing` | `crash-team-racing-high-octane` (`v.1.5`) | `Crash Team Racing - High Octane.exe` | Copie o `.bin` da sua copia PS1 NTSC-U original renomeado como `assets/ctr-u.bin` antes de iniciar `Crash Team Racing - High Octane.exe`. |
+| 66 | `the-legend-of-zelda-the-wind-waker-hd` | `zeldawwhdrecomp` (`v0.5.1`) | `WindWakerHD-v0.5.1-windows-x86_64/Wind Waker HD.exe` | Extraia os ativos da sua copia legitima Wii U (USA ou EUR) via assistente ou `tools/bin/wwhd-extract.exe` antes de jogar `Wind Waker HD.exe`. |
+| 67 | `extreme-g` | `extremegrecomp` (`v1.0.0`) | `ExtremeGRecompiled.exe` | Execute `ExtremeGRecompiled.exe` e forneca sua copia original NTSC-U 1.0 de Extreme-G no menu inicial. |
+| 68 | `wipeout` | `wipeout-phantom-edition` (`v1.2.256`) | `wipeout/wipeout.exe` | Copie as 9 faixas `.bin` (faixa 1 `MODE2/2352`, faixas 2–9 `AUDIO`) + `.cue` da edicao PS1 USA para `wipeout/diskimages/` antes de iniciar `wipeout/wipeout.exe`. |
+| 69 | `outrun` | `cannonball` (`v0.34`) | `cannonball.exe` | Copie os 31 arquivos originais do romset OutRun Revision B listados em `roms/roms.txt` para `roms/` antes de iniciar `cannonball.exe`. |
+| 70 | `castlevania-symphony-of-the-night` | `symphonyrecomp` (`v1.2.0p`) | `sotn.exe` | Instale `.NET 10 Desktop Runtime x64` e `OpenAL` (`prerequisites` declarados) e copie as faixas NTSC-U (`Track 1.bin`, `Track 2.bin`, `.cue` ou `.chd`) para `disc/` antes de iniciar `sotn.exe`. |
+| 71 | `driver-2` | `redriver2` (`7.4-rc2`) | `Launcher.exe` | Com Java 21 instalado (`prerequisites: ["java-21"]`), execute `Launcher.exe`, conclua o `Setup wizard` com os discos CD1 e CD2 originais de Driver 2 (`.bin/.cue` ou `.iso`) e clique em `Launch game`. |

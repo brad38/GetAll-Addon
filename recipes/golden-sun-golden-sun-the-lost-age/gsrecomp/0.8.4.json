@@ -1,0 +1,16 @@
+{
+  "schema_version": 5,
+  "project_id": "gsrecomp",
+  "tag": "0.8.4",
+  "source_url": "https://github.com/Shmargus/GSRecomp/releases/tag/0.8.4",
+  "operations": [],
+  "required_files": [
+    "Golden Sun Recompiled/GoldenSunLauncher.exe",
+    "Golden Sun Recompiled/SDL2.dll",
+    "Golden Sun Recompiled/games/The Broken Seal/GoldenSunRecomp.exe",
+    "Golden Sun Recompiled/games/The Lost Age/TLARecomp.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Golden Sun Recompiled (0.8.4) foi extraido em 'Golden Sun Recompiled/'. Execute 'GoldenSunLauncher.exe', escolha The Broken Seal ou The Lost Age e selecione sua ROM GBA original; na primeira inicializacao o launcher compila o codigo usando o MinGW embutido no pacote. Nenhuma ROM e fornecida.",
+  "launch_file": "Golden Sun Recompiled/GoldenSunLauncher.exe"
+}
