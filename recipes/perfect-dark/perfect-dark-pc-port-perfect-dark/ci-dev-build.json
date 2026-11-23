@@ -1,9 +1,20 @@
 {
-  "schema_version": 3,
+  "schema_version": 5,
   "project_id": "perfect-dark-pc-port-perfect-dark",
   "tag": "ci-dev-build",
   "source_url": "https://github.com/perfect-dark-pc-port/perfect_dark/releases/tag/ci-dev-build",
-  "operations": [],
+  "operations": [
+    {
+      "kind": "create_directory",
+      "target": "pd-x86_64-windows/data"
+    },
+    {
+      "kind": "import_input",
+      "scope": "installation",
+      "source": "original-us-rom",
+      "target": "pd-x86_64-windows/data/pd.ntsc-final.z64"
+    }
+  ],
   "required_files": [
     "pd-x86_64-windows/pd.x86_64.exe",
     "pd-x86_64-windows/pd.pal.x86_64.exe",
@@ -13,7 +24,20 @@
     "pd-x86_64-windows/libwinpthread-1.dll",
     "pd-x86_64-windows/zlib1.dll"
   ],
-  "inputs": [],
-  "launch_file": "pd-x86_64-windows/pd.x86_64.exe",
-  "manual_steps": "O pacote oficial Perfect Dark PC Port foi extraido em pd-x86_64-windows/. Crie a pasta pd-x86_64-windows/data/ e copie sua ROM original de Perfect Dark (USA NTSC-U v1.1, 33554432 bytes, MD5 e03b088b6ac9e0080440efed07c1e40f) como pd.ntsc-final.z64 antes de executar pd.x86_64.exe. Nenhuma ROM e distribuida pelo GetAll-Addon."
+  "inputs": [
+    {
+      "id": "original-us-rom",
+      "kind": "file",
+      "name": "ROM original Perfect Dark (USA NTSC Rev 1)",
+      "description": "Selecione sua propria ROM legitima de Perfect Dark US v1.1 em formato .z64, sem patches. O All-Fix verifica tamanho, cabecalho N64 e MD5 publicado pelo projeto antes de importar para data/pd.ntsc-final.z64. Nenhuma ROM e distribuida.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 33554432,
+      "magic_hex": "80371240",
+      "md5": "e03b088b6ac9e0080440efed07c1e40f"
+    }
+  ],
+  "launch_file": "pd-x86_64-windows/pd.x86_64.exe"
 }

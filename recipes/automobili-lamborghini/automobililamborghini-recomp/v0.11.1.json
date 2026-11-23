@@ -1,9 +1,16 @@
 {
-  "schema_version": 3,
+  "schema_version": 5,
   "project_id": "automobililamborghini-recomp",
   "tag": "v0.11.1",
   "source_url": "https://github.com/alondero/automobililamborghini-recomp/releases/tag/v0.11.1",
-  "operations": [],
+  "operations": [
+    {
+      "kind": "import_input",
+      "scope": "installation",
+      "source": "usa-cart",
+      "target": "Automobili Lamborghini (USA).z64"
+    }
+  ],
   "required_files": [
     "lamborghini_modern.exe",
     "SDL2.dll",
@@ -11,7 +18,20 @@
     "dxil.dll",
     "freetype.dll"
   ],
-  "inputs": [],
-  "manual_steps": "O pacote oficial de Automobili Lamborghini (v0.11.1) foi extraido. Execute lamborghini_modern.exe na pasta instalada e Forneca sua ROM original de Automobili Lamborghini (USA) pelo seletor ou renomeada na pasta do executavel. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "inputs": [
+    {
+      "id": "usa-cart",
+      "kind": "file",
+      "name": "ROM original Automobili Lamborghini (USA)",
+      "description": "Escolha sua copia original legitima de Automobili Lamborghini (USA) em formato big-endian .z64. O All-Fix verifica SHA-256, 4 MiB e assinatura N64 antes de importar o arquivo com o nome exato reconhecido automaticamente pelo executavel. Nenhuma ROM e distribuida.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 4194304,
+      "magic_hex": "80371240",
+      "sha256": "cab2467684a58bc19c787423d704a961aa497629763367d9fe691172de58591c"
+    }
+  ],
   "launch_file": "lamborghini_modern.exe"
 }
