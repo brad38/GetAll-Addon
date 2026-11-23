@@ -221,5 +221,31 @@ class SDK14ContractsTests(unittest.TestCase):
             self.assertTrue(self.errors(candidate))
 
 
+    def test_sotc_pc_official_zip_requires_personal_ps4_dump(self):
+        index = json.loads((ROOT / "index.json").read_text(encoding="utf-8"))
+        entry = next(e for e in index["recipes"] if e["project_id"] == "shadow-of-the-colossus-pc")
+        self.assertEqual(entry["game_id"], "shadow-of-the-colossus")
+        self.assertEqual(entry["repository"], "AjncSystem/ShadowOfTheColossus-PC")
+        self.assertEqual(entry["status"], "experimental")
+        self.assertEqual(entry["tag"], "v0.77")
+        self.assertEqual(entry["sha256"], "7231a748c329592e0bdaa9345a4e0cdb1ada9c72f656b7857720e77ea0bbd286")
+        doc = json.loads((ROOT / entry["path"]).read_text(encoding="utf-8"))
+        self.assertEqual(self.errors(doc), [])
+        self.assertEqual(doc["operations"], [])
+        self.assertEqual(doc["inputs"], [])
+        self.assertEqual(doc["launch_file"], "SotC-PC/SotC.exe")
+        self.assertIn("CUSA08809", doc["manual_steps"])
+        self.assertIn("CUSA08034", doc["manual_steps"])
+        for mutate in [
+            lambda d: d.update(source_url="https://untrusted.invalid/SotC-PC.zip"),
+            lambda d: d.update(launch_file="../evil.exe"),
+            lambda d: d["required_files"].remove(d["launch_file"]),
+            lambda d: d.update(installer_profile="cmd-shell"),
+        ]:
+            candidate = copy.deepcopy(doc)
+            mutate(candidate)
+            self.assertTrue(self.errors(candidate))
+
+
 if __name__=="__main__":
     unittest.main()
