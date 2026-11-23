@@ -1128,6 +1128,18 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "the-legend-of-zelda-breath-of-the-wild",
+      "project_id": "savagewindrecomp",
+      "repository": "revivedx/savagewindrecomp",
+      "tag": "v0.6.0-alpha.6",
+      "schema_version": 5,
+      "path": "recipes/the-legend-of-zelda-breath-of-the-wild/savagewindrecomp/v0.6.0-alpha.6.json",
+      "sha256": "9bb7a992123432ac587eb4cd711d64170f59b0d897d3bd238c2cf0b1559c7374",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }
