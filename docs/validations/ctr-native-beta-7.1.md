@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial de Crash Team Racing (beta-7.1) foi extraido. Para jogar, copie sua imagem BIN NTSC-U bruta (MODE2/2352) como assets/ctr-u.bin dentro de ctr-native-beta-7_1-windows-x86/ antes de iniciar ctr_native.exe. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:17:33Z`
+- **Pacote baixado e conferido:** `ctr-native-beta-7_1-windows-x86.zip` (`8746455` bytes, SHA-256 `af0d23c7b41925917b5eaf6fc292bd172368efc1c68918755de527a664049dad`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `1/1` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 1/1 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

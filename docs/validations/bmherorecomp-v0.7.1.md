@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com ROM original legítim
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial de Bomberman Hero (v0.7.1) foi extraido. Execute BMHeroRecompiled.exe na pasta instalada e Forneca sua ROM original de Bomberman Hero (US) no menu inicial. Nenhuma ROM e fornecida pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:16:56Z`
+- **Pacote baixado e conferido:** `BMHeroRecompiled-Windows-RelWithDebInfo.zip` (`18577511` bytes, SHA-256 `d6a865b4e1adb17860ccc6faf15306ce4a7c885b4dc16b0989e01e1c7bbcb58d`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

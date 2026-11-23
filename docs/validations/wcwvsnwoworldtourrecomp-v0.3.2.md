@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com ROM original legítim
 Status: experimental (aguarda homologação funcional com mídia legítima antes de promoção para validated).
 
 Procedimento manual da receita: O pacote oficial e sua ROM verificada wcw.z64 foram instalados. Abra WCWRecompiled.exe na pasta do jogo e escolha wcw.z64 no botao Load ROM na primeira execucao.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:16:42Z`
+- **Pacote baixado e conferido:** `WCWRecompiled-v0.3.2-Windows.zip` (`22857035` bytes, SHA-256 `69bc8d0bc6e288bafde838c4dcbf43543fa5c1850308aba605008523b282f284`)
+- **Resultado (`GameInstallationService.Run`):** `extraction_ok_awaiting_media` (`Status=Failed`)
+- **Verificação de arquivos:** `9/9` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Execução interrompida na seleção de mídia obrigatória com retorno esperado `Status=Failed` (`A dependência obrigatória não foi selecionada.`) pois não há ROM/ISO comercial local; estrutura do ZIP oficial conferida integralmente (9/9 `required_files` e `launch_file` presentes).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

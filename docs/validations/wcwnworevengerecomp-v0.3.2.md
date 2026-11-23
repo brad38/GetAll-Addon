@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com ROM original legítim
 Status: experimental (aguarda homologação funcional com mídia legítima antes de promoção para validated).
 
 Procedimento manual da receita: O pacote oficial e sua ROM verificada revenge.z64 foram instalados. Abra RevengeRecompiled.exe na pasta do jogo e escolha revenge.z64 no botao Load ROM na primeira execucao.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:16:45Z`
+- **Pacote baixado e conferido:** `RevengeRecompiled-v0.3.2-Windows.zip` (`23037156` bytes, SHA-256 `75f5b21e9c348b17d321c39ce2bffe6ea7f19aad7d17d0ce08c0ebb03e7f4c30`)
+- **Resultado (`GameInstallationService.Run`):** `extraction_ok_awaiting_media` (`Status=Failed`)
+- **Verificação de arquivos:** `9/9` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Execução interrompida na seleção de mídia obrigatória com retorno esperado `Status=Failed` (`A dependência obrigatória não foi selecionada.`) pois não há ROM/ISO comercial local; estrutura do ZIP oficial conferida integralmente (9/9 `required_files` e `launch_file` presentes).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

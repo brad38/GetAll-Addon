@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial BlueWake (v0.12.0) foi extraido. Ao iniciar BlueWake.exe pela primeira vez, selecione sua imagem de disco legitima de The Legend of Zelda: The Wind Waker (GameCube, versao USA GZLE01 rev 0, em formato .iso ou .gcm; arquivos .rvz devem ser convertidos antes no Dolphin). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:17:59Z`
+- **Pacote baixado e conferido:** `BlueWake-v0.12.0-windows-x64.zip` (`212667573` bytes, SHA-256 `3ff3915f5c893539a0ce9f1052d769d8c984826b140c907a61166508e6dc58b9`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `5/5` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 5/5 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

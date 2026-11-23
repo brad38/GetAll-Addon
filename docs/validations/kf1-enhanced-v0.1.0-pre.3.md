@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial de King's Field (JP, 1994) (v0.1.0-pre.3) foi extraido. Para jogar, execute kings-field.exe e selecione sua imagem .cue+.bin ou .iso japonesa original para gerar a pasta data/. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:17:42Z`
+- **Pacote baixado e conferido:** `KingsFieldEnhanced-v0.1.0-pre.3-windows.zip` (`3511950` bytes, SHA-256 `400bffc15e2f95d0f5770c9f898c0bbe23e2fdcfeeb98942b8b1d1c8844249ff`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `2/2` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 2/2 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial Dead Rising 2: Case West (v1.1.2) foi extraido. Copie seu pacote XBLA legitimo (Content/0000000000000000/58410B00/000D0000/) para CaseWestRecomp/assets/package/ (ou arraste-o para a janela inicial) e execute CaseWestRecomp/cw_runtime.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:19:02Z`
+- **Pacote baixado e conferido:** `CaseWestRecomp-windows-x86_64.zip` (`24923332` bytes, SHA-256 `be45510874c596d5f14908d176e088c196d9676181e511ef5ed91d6a9b0d1c60`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

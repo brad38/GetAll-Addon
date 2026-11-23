@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial de Yu-Gi-Oh! Forbidden Memories (v0.3.0) foi extraido. Para jogar, execute memories-pc.exe em yfm-redecomp-v0.3.0/ e selecione a imagem .bin do seu disco USA na primeira execucao. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:17:43Z`
+- **Pacote baixado e conferido:** `yfm-redecomp-v0.3.0-windows.zip` (`7829947` bytes, SHA-256 `40f1fedd363c0db193f8d67dff48c49ebc375f5aa903279fd70d7c622ccb63a6`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `2/2` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 2/2 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial smw (v0.1) foi extraido. Copie sua ROM USA original de Super Mario World nomeada exatamente como smw.sfc para a pasta raiz instalada (ao lado de smw.exe e smw_assets.bps) e inicie smw.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:19:09Z`
+- **Pacote baixado e conferido:** `smw_0.1.zip` (`1742607` bytes, SHA-256 `f2086306d1e93617569ffca4fe010d43578ab41625dab456c3d63b2492b30db3`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.

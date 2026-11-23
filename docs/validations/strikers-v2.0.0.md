@@ -16,3 +16,12 @@ Não testado: instalação ponta a ponta no AllFix.exe com mídia original legí
 Status: experimental (aguarda homologação funcional com mídia legítima).
 
 Procedimento manual da receita: O pacote oficial Strikers (v2.0.0) foi extraido. Execute strikers.exe (ou strikers-settings.exe para configuracoes) e aponte sua imagem de disco original de Super Mario Strikers (.iso, .gcm, .ciso ou .gcz). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.
+
+## Teste de instalação no motor `AllFix.dll`
+
+- **Data (UTC):** `2026-11-23T05:18:11Z`
+- **Pacote baixado e conferido:** `strikers-windows-x86_64.zip` (`30176733` bytes, SHA-256 `14888779c899d592358e6d54a392c7ce863d3ec476416f8af7c72602bc7a26c7`)
+- **Resultado (`GameInstallationService.Run`):** `extracted_awaiting_manual_media` (`Status=PartiallyCompleted`)
+- **Verificação de arquivos:** `6/6` `required_files` presentes; `launch_file_exists=True`
+- **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 6/6 `required_files` e `launch_file` presentes em `Destination`).
+- **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.
