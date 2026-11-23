@@ -3,13 +3,34 @@
   "project_id": "paperboat",
   "tag": "1.0.3",
   "source_url": "https://github.com/HarbourMasters/PaperBoat/releases/tag/1.0.3",
-  "operations": [],
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-rom",
+      "scope": "installation",
+      "target": "baserom.us.z64"
+    }
+  ],
   "required_files": [
     "Paperboat.exe",
     "paperboat.o2r",
     "shaderc_shared.dll"
   ],
-  "inputs": [],
-  "manual_steps": "O pacote oficial PaperBoat foi extraido. Para concluir a primeira inicializacao, abra Paperboat.exe na pasta do jogo e forneca sua ROM legitima e compativel de Paper Mario USA quando solicitada. O projeto faz a importacao de recursos no proprio aplicativo. Nenhuma ROM e distribuida.",
+  "inputs": [
+    {
+      "id": "original-rom",
+      "kind": "file",
+      "name": "ROM original Paper Mario (US)",
+      "description": "Selecione sua ROM original americana (US) de Paper Mario no formato .z64 (40 MiB). O All-Fix validara tamanho, assinatura e SHA-1 oficial antes de importar baserom.us.z64.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 41943040,
+      "magic_hex": "80371240",
+      "sha1": "3837f44cda784b466c9a2d99df70d77c322b97a0"
+    }
+  ],
+  "manual_steps": "O pacote oficial PaperBoat e sua ROM verificada baserom.us.z64 foram instalados. Execute Paperboat.exe na pasta do jogo para concluir a geracao local dos recursos na primeira execucao.",
   "launch_file": "Paperboat.exe"
 }

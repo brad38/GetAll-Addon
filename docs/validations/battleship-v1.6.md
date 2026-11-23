@@ -16,3 +16,5 @@ Não testado: instalação ponta a ponta no AllFix.exe com ROM original legítim
 Status: experimental (aguarda homologação funcional com mídia legítima antes de promoção para validated).
 
 Procedimento manual da receita: O pacote oficial BattleShip (US) foi extraido. Execute BattleShip.exe na pasta instalada e forneca sua ROM legitima de Super Smash Bros. NTSC-U v1.0 (SHA-1 e2929e10fccc0aa84e5776227e798abc07cedabf) no assistente inicial para gerar BattleShip.o2r localmente.
+
+Evolução Rodada 2: tamanho 16777216 bytes (0x1000000) confirmado em VetriTheRetri/ssb-decomp-re/smashbrothers.us.yaml; adicionados inputs verificados + import_input para baserom.us.z64.

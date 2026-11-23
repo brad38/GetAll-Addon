@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "megaman64recompiled",
+  "tag": "v0.9.1",
+  "source_url": "https://github.com/MegaMan64Recomp/MegaMan64Recompiled/releases/tag/v0.9.1",
+  "operations": [],
+  "required_files": [
+    "MegaMan64Recompiled.exe",
+    "SDL2.dll",
+    "dxcompiler.dll",
+    "dxil.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Mega Man 64 (v0.9.1) foi extraido. Execute MegaMan64Recompiled.exe na pasta instalada e Forneca sua ROM original de Mega Man 64 (US) no menu inicial. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "launch_file": "MegaMan64Recompiled.exe"
+}

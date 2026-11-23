@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "chameleontwist1-jp-recomp",
+  "tag": "v0.1",
+  "source_url": "https://github.com/Rainchus/ChameleonTwist1-JP-Recomp/releases/tag/v0.1",
+  "operations": [],
+  "required_files": [
+    "ChameleonTwistJPRecompiled.exe",
+    "SDL2.dll",
+    "dxcompiler.dll",
+    "dxil.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Chameleon Twist (v0.1) foi extraido. Execute ChameleonTwistJPRecompiled.exe na pasta instalada e Forneca sua ROM original de Chameleon Twist (JP) no menu inicial. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "launch_file": "ChameleonTwistJPRecompiled.exe"
+}

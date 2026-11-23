@@ -16,3 +16,5 @@ Não testado: instalação ponta a ponta no AllFix.exe com ROM original legítim
 Status: experimental (aguarda homologação funcional com mídia legítima antes de promoção para validated).
 
 Procedimento manual da receita: O pacote oficial Snap64 Recomp foi extraido em Snap64Recomp-1.1.8-win64/. Copie sua ROM legitima de Pokemon Snap (US, SHA-1 edc7c49cc568c045fe48be0d18011c30f393cbaf) como pokemonsnap.z64 ao lado de Snap64Recomp.exe, ou abra o executavel para seleciona-la uma unica vez.
+
+Evolução Rodada 2 (Classe A estrutural): tamanho 16777216 bytes (0x1000000) confirmado em ethteck/pokemonsnap/splat.yaml + SHA-1 oficial; import_input direto para Snap64Recomp-1.1.8-win64/pokemonsnap.z64 sem manual_steps.
