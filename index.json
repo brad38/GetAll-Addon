@@ -1140,6 +1140,18 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "shadow-of-the-colossus",
+      "project_id": "shadow-of-the-colossus-pc",
+      "repository": "AjncSystem/ShadowOfTheColossus-PC",
+      "tag": "v0.77",
+      "schema_version": 5,
+      "path": "recipes/shadow-of-the-colossus/shadow-of-the-colossus-pc/v0.77.json",
+      "sha256": "7231a748c329592e0bdaa9345a4e0cdb1ada9c72f656b7857720e77ea0bbd286",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }
