@@ -1104,6 +1104,54 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "the-legend-of-zelda-the-minish-cap",
+      "project_id": "project-picori-999sian-tmc",
+      "repository": "999sian/tmc",
+      "tag": "v0.9.6",
+      "schema_version": 7,
+      "path": "recipes/the-legend-of-zelda-the-minish-cap/project-picori-999sian-tmc/v0.9.6.json",
+      "sha256": "766e067433093424f974c787cc4db844826af416cf5413fa6e8566c195648618",
+      "status": "experimental",
+      "has_inputs": true,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "crash-team-racing",
+      "project_id": "crash-team-racing-turbocharged",
+      "repository": "CameronRedmore/Crash-Team-Racing-Turbocharged",
+      "tag": "ci-07d0c49",
+      "schema_version": 5,
+      "path": "recipes/crash-team-racing/crash-team-racing-turbocharged/ci-07d0c49.json",
+      "sha256": "943f43da0758ee982b0f4373d25e3f74a5a8718eb066822f41200543e84b9b18",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "the-legend-of-zelda-breath-of-the-wild",
+      "project_id": "savagewindrecomp",
+      "repository": "revivedx/savagewindrecomp",
+      "tag": "v0.6.0-alpha.6",
+      "schema_version": 5,
+      "path": "recipes/the-legend-of-zelda-breath-of-the-wild/savagewindrecomp/v0.6.0-alpha.6.json",
+      "sha256": "9bb7a992123432ac587eb4cd711d64170f59b0d897d3bd238c2cf0b1559c7374",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "shadow-of-the-colossus",
+      "project_id": "shadow-of-the-colossus-pc",
+      "repository": "AjncSystem/ShadowOfTheColossus-PC",
+      "tag": "v0.77",
+      "schema_version": 5,
+      "path": "recipes/shadow-of-the-colossus/shadow-of-the-colossus-pc/v0.77.json",
+      "sha256": "7231a748c329592e0bdaa9345a4e0cdb1ada9c72f656b7857720e77ea0bbd286",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }
