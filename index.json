@@ -1104,6 +1104,18 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "the-legend-of-zelda-the-minish-cap",
+      "project_id": "project-picori-999sian-tmc",
+      "repository": "999sian/tmc",
+      "tag": "v0.9.6",
+      "schema_version": 7,
+      "path": "recipes/the-legend-of-zelda-the-minish-cap/project-picori-999sian-tmc/v0.9.6.json",
+      "sha256": "766e067433093424f974c787cc4db844826af416cf5413fa6e8566c195648618",
+      "status": "experimental",
+      "has_inputs": true,
+      "has_manual_steps": true
     }
   ]
 }
