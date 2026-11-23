@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static and semantic validator for GetAll-Addon index, schemas, and recipes (SDK 1.3.0, v1-v5)."""
+"""Static and semantic validator for GetAll-Addon index, schemas, and recipes (SDK 1.4.0, v1-v7)."""
 
 from __future__ import annotations
 
@@ -50,6 +50,7 @@ RE_DATA_TARGET_EXT = re.compile(
     r"\.(?:z64|n64|v64|rom|bin|dat|pak|wad)$",
     re.IGNORECASE,
 )
+RE_DATA_TARGET_EXT_V7 = re.compile(r"\.(?:z64|n64|v64|rom|bin|dat|pak|wad|sfc|smc|gba)$", re.IGNORECASE)
 RE_V4_DATA_EXT = re.compile(
     r"\.(?:bin|cue|iso|img|dat|pak|wad|rom|z64|n64|v64|o2r|otr|wav|raw|chd|gdi|vpk|wma|mp3|ogg)$",
     re.IGNORECASE,
@@ -64,8 +65,12 @@ WINDOWS_RESERVED_NAMES = {
     *(f"LPT{i}" for i in range(1, 10)),
 }
 
+RE_CRC32 = re.compile(r"^[a-fA-F0-9]{8}$")
+RE_NUMERIC_ROM_EXT = re.compile(r"\.[0-9]{1,3}$")
+RE_DATA_EXT_V7 = re.compile(r"\.(?:sfc|smc|gba)$", re.IGNORECASE)
+RE_BLOCKED_EXEC_ASSET = re.compile(r"\.(?:exe|msi|cmd|bat|ps1|vbs|wsf|scr|pif|com)$", re.IGNORECASE)
 VALID_STATUSES = {"validated", "disabled", "draft", "experimental"}
-VALID_SCHEMA_VERSIONS = {1, 2, 3, 4, 5}
+VALID_SCHEMA_VERSIONS = {1, 2, 3, 4, 5, 6, 7}
 VALID_PROFILE_SCOPES_V5 = {"installation", "roaming_app_data", "local_app_data"}
 VALID_PREREQUISITES = {
     "dotnet-desktop-10-x64",
@@ -130,6 +135,8 @@ def load_schema_registry(schemas_dir: Path) -> tuple[dict[str, dict[str, Any]], 
         3: "installation-recipe-v3.schema.json",
         4: "installation-recipe-v4.schema.json",
         5: "installation-recipe-v5.schema.json",
+        6: "installation-recipe-v6.schema.json",
+        7: "installation-recipe-v7.schema.json",
     }
     schemas: dict[Any, dict[str, Any]] = {}
     for key, filename in schema_files.items():
@@ -231,6 +238,7 @@ def validate_verified_data_files(
     schema_version: int = 4,
     is_import_set: bool = False,
     is_first_run: bool = False,
+    is_arcade: bool = False,
 ) -> list[str]:
     """Validate SDK v4/v5 verifiedDataFiles / importFiles / firstRunFiles array semantics."""
     errors: list[str] = []
@@ -250,10 +258,12 @@ def validate_verified_data_files(
         if not ok:
             errors.append(f"{label}: {item_loc}.path {reason}")
         else:
-            if not RE_V4_DATA_EXT.search(p):
-                errors.append(
-                    f"{label}: {item_loc}.path '{p}' has disallowed data file extension"
-                )
+            regular = RE_V4_DATA_EXT.search(p) or (
+                schema_version >= 7 and RE_DATA_EXT_V7.search(p)
+            )
+            arcade_numeric = is_arcade and schema_version >= 7 and RE_NUMERIC_ROM_EXT.search(p)
+            if not (regular or arcade_numeric):
+                errors.append(f"{label}: {item_loc}.path '{p}' has disallowed data file extension")
 
         if schema_version < 5:
             size = item.get("size")
@@ -273,12 +283,28 @@ def validate_verified_data_files(
                 seen_keys.add(norm_key)
         else:
             _validate_size_fields(item, label, item_loc, errors)
+            if is_arcade:
+                if schema_version < 7:
+                    errors.append(f"{label}: {item_loc} arcade_romset requires v7")
+                if not isinstance(item.get("size"), int) or isinstance(item.get("size"), bool) or not 1 <= item["size"] <= MAX_TOTAL_DATA_BYTES:
+                    errors.append(f"{label}: {item_loc}.size is required for arcade ROM")
+                if "crc32" in item and (not isinstance(item["crc32"], str) or not RE_CRC32.fullmatch(item["crc32"])):
+                    errors.append(f"{label}: {item_loc}.crc32 must be 8 hex characters")
+                if not (
+                    isinstance(item.get("crc32"), str) and bool(RE_CRC32.fullmatch(item["crc32"]))
+                    or isinstance(item.get("sha256"), str) and bool(RE_SHA256.fullmatch(item["sha256"]))
+                    or isinstance(item.get("sha1"), str) and bool(RE_SHA1.fullmatch(item["sha1"]))
+                ):
+                    errors.append(f"{label}: {item_loc} requires CRC32, SHA256 or SHA1")
             if is_import_set and "size" not in item and "max_size" not in item:
                 errors.append(f"{label}: {item_loc} in import_input_set requires size or max_size")
-            if not _has_v5_file_verification(item):
-                errors.append(
-                    f"{label}: {item_loc} requires sha256, sha1, (size + magic_hex), or (min_size + magic_hex)"
-                )
+            if not _has_v5_file_verification(item) and not (
+                is_arcade and schema_version >= 7
+                and isinstance(item.get("crc32"), str)
+                and bool(RE_CRC32.fullmatch(item["crc32"]))
+                and isinstance(item.get("size"), int) and not isinstance(item.get("size"), bool)
+            ):
+                errors.append(f"{label}: {item_loc} requires verified checksum and size/magic")
             if "sha256" in item and (not isinstance(item["sha256"], str) or not RE_SHA256.match(item["sha256"])):
                 errors.append(f"{label}: {item_loc}.sha256 must be 64 hex chars")
             if "sha1" in item and (not isinstance(item["sha1"], str) or not RE_SHA1.match(item["sha1"])):
@@ -302,7 +328,14 @@ def validate_verified_data_files(
                         scope = scope_val
                 if scope in {"local_app_data", "roaming_app_data"}:
                     pf = item.get("profile_folder")
-                    if not _validate_single_segment_v5(pf, allow_v5_chars=True, max_length=80):
+                    if schema_version >= 7:
+                        valid_pf = isinstance(pf, str) and len(pf) <= 160 and all(
+                            _validate_single_segment_v5(seg, allow_v5_chars=True, max_length=80)
+                            for seg in pf.split("/")
+                        ) and len(pf.split("/")) <= 4
+                    else:
+                        valid_pf = _validate_single_segment_v5(pf, allow_v5_chars=True, max_length=80)
+                    if not valid_pf:
                         errors.append(f"{label}: {item_loc}.profile_folder invalid or missing for scope '{scope}'")
                     else:
                         profile_folder = pf
@@ -327,7 +360,7 @@ def validate_recipe_semantics(
     entry: dict[str, Any],
     label: str,
 ) -> list[str]:
-    """Validate semantic and cross-field SDK 1.2.0 / 1.3.0 contracts for v1-v5 recipes."""
+    """Validate semantic and cross-field SDK 1.2.0–1.4.0 contracts for v1-v7 recipes."""
     errors: list[str] = []
     if not isinstance(recipe, dict):
         return [f"{label}: root must be a JSON object"]
@@ -461,8 +494,8 @@ def validate_recipe_semantics(
                 if "files" in inp:
                     if schema_version < 4:
                         errors.append(f"{label}: {loc}.files requires schema_version 4 or 5")
-                    if kind != "directory":
-                        errors.append(f"{label}: {loc}.files requires kind == 'directory'")
+                    if kind != "directory" and not (schema_version >= 7 and kind == "arcade_romset"):
+                        errors.append(f"{label}: {loc}.files requires directory or v7 arcade_romset")
                     if not isinstance(inp.get("name"), str) or not inp["name"]:
                         errors.append(f"{label}: {loc}.name is required")
                     errors.extend(
@@ -472,6 +505,7 @@ def validate_recipe_semantics(
                             f"{loc}.files",
                             schema_version=schema_version,
                             is_import_set=True,
+                            is_arcade=kind == "arcade_romset",
                         )
                     )
                 elif kind is not None:
@@ -606,20 +640,26 @@ def validate_recipe_semantics(
                     errors.append(f"{label}: {loc}.scope invalid '{scope}'")
                 elif scope in {"roaming_app_data", "local_app_data"}:
                     folders = op.get("profile_folders")
-                    if (
-                        not isinstance(folders, list)
-                        or not (1 <= len(folders) <= 4)
-                        or not all(
+                    if schema_version >= 7:
+                        valid_folders = isinstance(folders, list) and 1 <= len(folders) <= 4 and all(
+                            isinstance(f, str) and len(f) <= 160 and 1 <= len(f.split("/")) <= 4
+                            and all(_validate_single_segment_v5(seg, allow_v5_chars=True, max_length=80)
+                                    for seg in f.split("/"))
+                            for f in folders
+                        )
+                    else:
+                        valid_folders = isinstance(folders, list) and 1 <= len(folders) <= 4 and all(
                             _validate_single_segment_v5(f, allow_v5_chars=allow_v5, max_length=80)
                             for f in folders
                         )
-                    ):
+                    if not valid_folders:
                         errors.append(f"{label}: {loc}.profile_folders invalid for {scope}")
                     target = op.get("target")
                     if allow_v5:
                         valid_target = (
-                            _validate_single_segment_v5(target, allow_v5_chars=True, max_length=240)
-                            and bool(RE_DATA_TARGET_EXT.search(target))
+                            (is_safe_relative_path(target, allow_v5_chars=True)[0] if schema_version >= 7
+                             else _validate_single_segment_v5(target, allow_v5_chars=True, max_length=240))
+                            and bool((RE_DATA_TARGET_EXT_V7 if schema_version >= 7 else RE_DATA_TARGET_EXT).search(target))
                         )
                     else:
                         valid_target = isinstance(target, str) and bool(RE_ROAMING_TARGET.match(target))
@@ -639,7 +679,7 @@ def validate_recipe_semantics(
                     errors.append(f"{label}: {loc}.scope must be 'installation'")
                 src = op.get("source")
                 inp = input_map.get(src) if isinstance(src, str) else None
-                if not inp or inp.get("kind") != "directory" or "files" not in inp:
+                if not inp or inp.get("kind") not in ({"directory", "arcade_romset"} if schema_version >= 7 else {"directory"}) or "files" not in inp:
                     errors.append(
                         f"{label}: {loc}.source '{src}' must reference a directory input with 'files'"
                     )
@@ -663,6 +703,93 @@ def validate_recipe_semantics(
                 is_first_run=True,
             )
         )
+
+    # SDK 1.4.0 versioned contracts: do not relax v3/v5 semantic rules.
+    assets = recipe.get("assets")
+    if assets is not None:
+        if schema_version < 6:
+            errors.append(f"{label}: assets requires schema version 6+")
+        if not isinstance(assets, list) or not 1 <= len(assets) <= 16:
+            errors.append(f"{label}: assets must contain 1..16 files")
+        else:
+            asset_targets: set[str] = set()
+            asset_names: set[str] = set()
+            total = 0
+            for n, asset in enumerate(assets):
+                loc = f"assets[{n}]"
+                if not isinstance(asset, dict):
+                    errors.append(f"{label}: {loc} must be object")
+                    continue
+                if set(asset) != {"name", "target", "size", "sha256", "kind"}:
+                    errors.append(f"{label}: {loc} unexpected/missing asset fields")
+                target = asset.get("target")
+                name = asset.get("name")
+                if not isinstance(name, str) or not name or any(x in name for x in ("/", "\\", ":")):
+                    errors.append(f"{label}: {loc}.name invalid")
+                if isinstance(name, str) and name.lower() in asset_names:
+                    errors.append(f"{label}: duplicate asset name {name}")
+                elif isinstance(name, str):
+                    asset_names.add(name.lower())
+                ok, reason = is_safe_relative_path(target, allow_v5_chars=True)
+                if not ok:
+                    errors.append(f"{label}: {loc}.target {reason}")
+                elif target.lower() in asset_targets:
+                    errors.append(f"{label}: duplicate asset target '{target}'")
+                else:
+                    asset_targets.add(target.lower())
+                size = asset.get("size")
+                if not isinstance(size, int) or isinstance(size, bool) or not 1 <= size <= MAX_TOTAL_DATA_BYTES:
+                    errors.append(f"{label}: {loc}.size invalid")
+                else:
+                    total += size
+                if not isinstance(asset.get("sha256"), str) or not RE_SHA256.fullmatch(asset["sha256"]):
+                    errors.append(f"{label}: {loc}.sha256 invalid")
+                kind = asset.get("kind")
+                if kind == "portable_executable":
+                    if not isinstance(target, str) or not target.lower().endswith(".exe"):
+                        errors.append(f"{label}: {loc} portable_executable target must end .exe")
+                    if target != launch_file or target not in req_file_set:
+                        errors.append(f"{label}: {loc} portable_executable target must match launch_file and required_files")
+                elif kind == "payload":
+                    if not isinstance(target, str) or RE_BLOCKED_EXEC_ASSET.search(target):
+                        errors.append(f"{label}: {loc} payload cannot be executable or script")
+                else:
+                    errors.append(f"{label}: {loc}.kind invalid")
+            if total > MAX_TOTAL_DATA_BYTES:
+                errors.append(f"{label}: sum of assets exceeds 64 GiB")
+    if "java_launcher" in recipe:
+        if schema_version < 7:
+            errors.append(f"{label}: java_launcher requires v7")
+        launcher = recipe["java_launcher"]
+        if not isinstance(launcher, dict) or set(launcher) - {"jar", "runtime", "working_directory"}:
+            errors.append(f"{label}: invalid java_launcher structure")
+        else:
+            jar = launcher.get("jar")
+            if not isinstance(jar, str) or not jar.lower().endswith(".jar") or not is_safe_relative_path(jar, allow_v5_chars=True)[0]:
+                errors.append(f"{label}: java_launcher.jar must be safe .jar path")
+            if jar not in req_file_set:
+                errors.append(f"{label}: java_launcher.jar must be in required_files")
+            if launcher.get("runtime") != "java-21" or "java-21" not in (recipe.get("prerequisites") or []):
+                errors.append(f"{label}: java_launcher requires runtime/prerequisite java-21")
+            if "working_directory" in launcher and not is_safe_relative_path(launcher["working_directory"], allow_v5_chars=True)[0]:
+                errors.append(f"{label}: java_launcher.working_directory unsafe")
+        if launch_file is not None:
+            errors.append(f"{label}: java_launcher cannot coexist with launch_file")
+    for blocked in ("installer_profile", "build_profile"):
+        if blocked in recipe:
+            errors.append(f"{label}: {blocked} is disabled without approved execution profile")
+    if schema_version >= 7 and isinstance(inputs, list):
+        for n, inp in enumerate(inputs):
+            if not isinstance(inp, dict):
+                continue
+            if inp.get("kind") == "arcade_romset" and "files" not in inp:
+                errors.append(f"{label}: inputs[{n}] arcade_romset requires file manifest")
+            if inp.get("validate_cue_references"):
+                files = inp.get("files") or []
+                cues = [f for f in files if isinstance(f, dict) and isinstance(f.get("path"), str) and f["path"].lower().endswith(".cue")]
+                bins = [f for f in files if isinstance(f, dict) and isinstance(f.get("path"), str) and f["path"].lower().endswith(".bin")]
+                if inp.get("kind") != "directory" or not cues or not bins:
+                    errors.append(f"{label}: inputs[{n}] validate_cue_references requires declared CUE and BIN files")
 
     return errors
 

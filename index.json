@@ -882,24 +882,24 @@
       "project_id": "zelda3",
       "repository": "snesrev/zelda3",
       "tag": "v0.3",
-      "schema_version": 3,
+      "schema_version": 7,
       "path": "recipes/the-legend-of-zelda-a-link-to-the-past/zelda3/v0.3.json",
-      "sha256": "6d6de1369e8ed04aed730dff721412c31301a565fe6e788384f73047ae5ada2f",
+      "sha256": "1a316a1e65c0c5bd8cb161786763c91571dce5d2aba5ca42e0bb4fac66e97218",
       "status": "experimental",
-      "has_inputs": false,
-      "has_manual_steps": true
+      "has_inputs": true,
+      "has_manual_steps": false
     },
     {
       "game_id": "super-mario-world",
       "project_id": "smw",
       "repository": "snesrev/smw",
       "tag": "v0.1",
-      "schema_version": 3,
+      "schema_version": 7,
       "path": "recipes/super-mario-world/smw/v0.1.json",
-      "sha256": "ad1f83f54dc1e731ae35f289fa24f7f4a191064ee19162573b4da8cea5df6d70",
+      "sha256": "f13cde47bf88e869f233e5bd26bdebba4bb868a7d120bc1947af260396fa321a",
       "status": "experimental",
-      "has_inputs": false,
-      "has_manual_steps": true
+      "has_inputs": true,
+      "has_manual_steps": false
     },
     {
       "game_id": "silent-hill",
@@ -1050,12 +1050,12 @@
       "project_id": "cannonball",
       "repository": "djyt/cannonball",
       "tag": "v0.34",
-      "schema_version": 5,
+      "schema_version": 7,
       "path": "recipes/outrun/cannonball/v0.34.json",
-      "sha256": "5189e3e0592c65a40595f27c1e7d919c4b84a7bee8b316f491b6c1d744ba390a",
+      "sha256": "61d96befd0cd0a7b4befaecbb753fcab1591cfbcdb753a5a18f4f5b278569911",
       "status": "experimental",
-      "has_inputs": false,
-      "has_manual_steps": true
+      "has_inputs": true,
+      "has_manual_steps": false
     },
     {
       "game_id": "castlevania-symphony-of-the-night",
@@ -1077,6 +1077,18 @@
       "schema_version": 5,
       "path": "recipes/driver-2/redriver2/7.4-rc2.json",
       "sha256": "3da5666da79c5ba9a20f3d7a2089b64c82d15e08c8f003cc485095f4d93d75c8",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "the-legend-of-zelda-the-minish-cap",
+      "project_id": "autotmc-auto-tmc",
+      "repository": "StonedModder/auto-tmc",
+      "tag": "1.0.2",
+      "schema_version": 6,
+      "path": "recipes/the-legend-of-zelda-the-minish-cap/autotmc-auto-tmc/1.0.2.json",
+      "sha256": "cb110fe24ed3679cdc1e8320cb7e98e2b8c7807dad09472518e7a63c07c36fbb",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

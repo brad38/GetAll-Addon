@@ -1,41 +1,39 @@
-# Checkpoint de manutenção — GetAll-Addon | Rodada 9 (2026-11-23)
+# Checkpoint — GetAll-Addon Rodada 10 (2026-11-23)
 
-## Estado confirmado do repositório
+**Base:** main 6f3c9cb1cd6403b521a9b6c2229272cc6661a6d7 (PR #9 merged).
+**Branch:** feat/round-10-sdk14-recipes, derivada da main; nenhum merge automático.
+**Repositório modificado:** somente brad38/GetAll-Addon. Nenhuma DLL, AllFix.exe, SDK, catálogo AllFix-Repo nem ZIP universal foi alterado.
 
-- **Repositório de escrita:** brad38/GetAll-Addon. Catálogo brad38/AllFix-Repo, AllFix.exe, AllFix.dll e SDK 1.3.0 foram consultados apenas em leitura.
-- **Base da branch:** a main contém o merge do PR #8, commit 4960e2a2f375fa8b929cf12f54770d65f183c1c9. PRs #1 a #8 integrados. O PR #8 não deve ser reaberto nem mesclado novamente.
-- **Branch exclusiva:** feat/round-9-sdk13-coverage, derivada desse commit. **Integração:** proposta para revisão, sem merge automático.
-- **Catálogo oficial:** 87 jogos / 119 projetos. **main após PR #8:** 90 receitas (73 v3, 17 v5), sendo 1 validated e 89 experimental. **Proposta da Rodada 9:** 90 receitas (72 v3, 18 v5), 1 validated, 89 experimental e 29 projetos sem receita.
-- **Limite de evidência:** aprovações de schema, parser e testes com arquivos sintéticos não constituem homologação funcional. A única receita validated permanece sm64coopdx v1.5.1.
+## Estado verificável
 
-## Entregas da Rodada 9
+| Indicador | Main após PR #9 | Proposta Rodada 10 |
+|---|---:|---:|
+| Jogos / projetos | 87 / 119 | 87 / 119 |
+| Receitas indexadas | 90 | 91 |
+| v3 / v5 / v6 / v7 | 72 / 18 / 0 / 0 | 70 / 17 / 1 / 3 |
+| validated / experimental | 1 / 89 | 1 / 90 |
+| Projetos ausentes | 29 | 28 |
+| Novos boots reais | 0 | 0 |
 
-| Projeto | Situação anterior | Alteração | Estado de publicação |
-|---|---|---|---|
-| crash-team-racing-high-octane (v.1.5) | v5 experimental, ROM exigia cópia manual | import_input (installation) de BIN NTSC-U 926, SHA-256 f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0 e 605698800 bytes; destino assets/ctr-u.bin | experimental, aguarda PR / boot real |
-| ggarecomp (v0.3.0) | v3 experimental, seleção manual da ROM | Migração para v5: import_input local_app_data/GGARecompiled/gga.us.z64, SHA-1 9f9e860816f9e2a68bb5f4f56086e0c7450c64d7, magic 80371240; manual_steps de configuração preservado | experimental, aguarda PR / boot real |
+**Pacote de integração SDK 1.4.0:** SHA-256 calculado e confirmado 01a5d0aa63969b17319e99b7c40b6b4be90cad2e7eab84b42e8ba8851bb5a5a9. Seus binários são para validação, NÃO são release pública e não foram distribuídos.
 
-Nenhum novo projeto foi adicionado: 29 ausentes permanecem bloqueados após consulta às releases dos 26 repositórios GitHub e reexame das 3 fontes externas. A matriz individual e os critérios estão em [RODADA-9-SDK13-2026-11-23.md](RODADA-9-SDK13-2026-11-23.md).
+## Entregas da Rodada 10
 
-## Evidências técnicas reproduzíveis
+1. **AutoTMC 1.0.2 (novo v6):** EXE portátil PyInstaller --onefile, 25.408.138 B e SHA-256 2abbda2825e8e87ae1787ceda868a2db3ae4a414092d33a6218adcbf3aae3d66. Instala somente o gerenciador, não o jogo TMC. Status experimental.
+2. **Cannonball v0.34 (v5 → v7):** import_input_set de 31 ROMs OutRun Revision B por tamanho e CRC32 do loader oficial; 2.064.384 B. Mismatch do upstream roms/roms.txt (epr-10381a.132) versus código que carrega epr-10381b.132. Status experimental.
+3. **Zelda3 v0.3 (v3 → v7):** import_input de ROM US .sfc, SHA-256 oficial 66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb. Status experimental.
+4. **SMW v0.1 (v3 → v7):** import_input de ROM US .sfc, SHA-1 oficial 6b47bb75d16514b6a476aa0c73a683a2a4c18765. Status experimental.
 
-- **High Octane:** ZIP oficial ctr-high-octane-x64.win.zip, 2403121 bytes, SHA-256 005924af516a3cb2bcdc19269422e2de77719600656e5b00df45424fe081693e; apenas o EXE e assets/dualshock.png. README oficial especifica assets/ctr-u.bin; CTR Native (base upstream) publica perfil NTSC-U 926 e SHA-256 do BIN.
-- **GGARecomp:** ZIP oficial GGARecompiled-v0.3.0-windows.zip, 40258542 bytes, SHA-256 19c8e7fd7a009e48675742a6af453a8e7e8934adac4a4d7f0fa41bb084241e3c; 4/4 required_files presentes, sem ROM. README oficial informa %LOCALAPPDATA%/GGARecompiled, fonte oficial comenta nome gga.us.z64.
-- **Validação JSON/índice:** scripts/validate_recipes.py --strict-lf --require-jsonschema --check-git-blobs --check-catalog passou em 90/90.
-- **Regressão Python:** python -m unittest discover -s tests -v, 18/18 testes aprovados (16 anteriores, 2 novos).
-- **Parser real SDK 1.3.0:** AllFix.dll compilada: RemoteRecipeCatalog.ParseIndex e StoreAddonProviders.ParseRecipe aceitaram 90/90; harness independente 48/48 assertivas, incluindo SHA-1/SHA-256, cabeçalho, comprimento e rejeição de alterações em arquivos sintéticos.
-- **Não realizados:** execução dos jogos com cópias comerciais legítimas, first boot, instalação funcional com ROM real; nenhuma nova promoção a validated.
-- **GitHub Actions:** verificar o resultado da execução associada ao commit final do PR da Rodada 9 antes de qualquer decisão de merge.
+**Infraestrutura:** schemas 6/7 acrescentados aos anteriores, validador ampliado sem afrouxar v3/v5, 5 exemplos sintéticos e 7 novos testes com casos negativos. Testes da main 18/18 mantidos (total 25/25). Parser real do host SDK 1.4.0: 91/91, harness 70/70, incluindo CRC32 sintético e adulteração rejeitada. Testes com mídias originais e primeiro boot: NENHUM.
 
-## Bloqueios e prioridades de próxima rodada
+## Bloqueios, documentação e próximas tarefas
 
-1. **Pacotes instaladores, executáveis avulsos e múltiplos assets:** exigir modelo de artefato explícito, hashes, pós-condições e rollback. Um instalador copiado não é um jogo instalado.
-2. **Launchers Java/JAR de Severed Chains:** comando restrito, JRE declarado e boot auditável sem aceitar .bat arbitrário.
-3. **Arquivos tar.gz:** extração segura e correção da identidade de Project Picori no catálogo oficial (aqui, apenas documentação).
-4. **17 projetos sem binário Windows final:** aguardar release oficial pronta, ou especificar pipeline de compilação estritamente controlado para o Codex; não executar scripts de terceiros via addon.
-5. **ROMs arcade Cannonball:** import_input_set atualmente rejeita extensões numéricas oficiais (.88, .76, etc.) e não suporta os CRC32 publicados no código; demanda contrato de arquivos verificáveis e nomes exatos.
-6. **Novos destinos de import_input (.sfc/.smc/.gba) e validação de first_run_files em perfis multinível**.
+- Severed Chains exige Java25 (bytecode major 69), classpath com dependências externas e opções JVM; SDK v7 só oferece java-21 e -jar. Não há receita v7 segura equivalente.
+- Project Picori exige correção de repositório no catálogo; tar.gz já é suportado no SDK, mas ID de origem está incorreto.
+- WipeOut Phantom Edition: validação CUE/BIN exigiria hashes/tamanhos reproduzíveis por faixa indisponíveis.
+- Phase Distorter: precisa extrair assets pelo importador oficial; cópia de ROM no perfil não equivale à preparação.
+- Instaladores sem perfil aprovado, builds não isolados e releases ausentes continuam bloqueados.
 
-Detalhes de contratos e testes de regressão estão em [ESPECIFICACAO-CODEX-SDK.md](ESPECIFICACAO-CODEX-SDK.md). O guia de seleção de mídias foi atualizado em [HOMOLOGACAO-MIDIA-NECESSARIA.md](HOMOLOGACAO-MIDIA-NECESSARIA.md) (prioridades propostas: 7 + 16 + 66).
+Detalhes: [Rodada 10](RODADA-10-SDK14-2026-11-23.md), [119 projetos](COBERTURA-CATALOGO.md), [Spec Codex](ESPECIFICACAO-CODEX-SDK.md), [Guia de mídias](HOMOLOGACAO-MIDIA-NECESSARIA.md).
 
-**Próxima ação:** revisão do PR da Rodada 9 e homologação posterior com mídias legítimas pelo proprietário; nunca fazer merge automático.
+**Ações finais:** confirmar hashes/arquivos publicados, executar validações completas e CI, abrir PR para revisão sem merge.

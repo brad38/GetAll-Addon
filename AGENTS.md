@@ -54,3 +54,11 @@ Mantenha [docs/COBERTURA-CATALOGO.md](docs/COBERTURA-CATALOGO.md) atualizado a c
   - `python -m unittest discover -s tests -v`
   - Verificação no parser/motor oficial `AllFix.dll` e validação no GitHub Actions (`.github/workflows/validate-recipes.yml`).
 - **Reavaliação contínua de bloqueios e SDK:** sempre que uma nova versão do SDK/All-Fix for disponibilizada, reavalie imediatamente os projetos em [docs/ESPECIFICACAO-CODEX-SDK.md](docs/ESPECIFICACAO-CODEX-SDK.md) ligados às novas capacidades e converta os desbloqueados em receitas funcionais.
+
+## Adendo SDK 1.4.0 / Rodada 10
+
+- Preservar versões anteriores e validar v6/v7 conforme docs/sdk14-instalacao-v6.md e docs/sdk14-instalacao-v7.md. Protocolo público permanece 1.0.
+- v6 assets: nome, target, size, sha256, kind em lista fechada; EXE portátil deve ser PE verificável e corresponder a launch_file e required_files. Payload nunca pode ser script/instalador executável.
+- v7: java_launcher só admite java-21 e -jar sem comandos livres; arcade_romset exige lista fechada de arquivos com tamanho/CRC32 e sufixos numéricos apenas nessa modalidade; .sfc/.smc/.gba e perfis multinível são suportados por import_input.
+- installer_profile/build_profile bloqueados até perfil local auditado; não contornar via copy, move ou shell.
+- Não marcar validated sem instalação e primeiro boot com mídia legítima, evidência em docs/validations. Respeitar branch dedicada, CI e PR sem merge automático.

@@ -1,0 +1,29 @@
+{
+  "schema_version": 6,
+  "project_id": "synthetic-portable",
+  "tag": "v0.0-test",
+  "source_url": "https://github.com/example/portable",
+  "operations": [],
+  "required_files": [
+    "portable.exe",
+    "data/resources.dat"
+  ],
+  "inputs": [],
+  "launch_file": "portable.exe",
+  "assets": [
+    {
+      "name": "portable.exe",
+      "target": "portable.exe",
+      "size": 4096,
+      "sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "kind": "portable_executable"
+    },
+    {
+      "name": "resources.dat",
+      "target": "data/resources.dat",
+      "size": 512,
+      "sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+      "kind": "payload"
+    }
+  ]
+}

@@ -25,3 +25,11 @@ Procedimento manual da receita: O pacote oficial smw (v0.1) foi extraido. Copie 
 - **Verificação de arquivos:** `4/4` `required_files` presentes; `launch_file_exists=True`
 - **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 4/4 `required_files` e `launch_file` presentes em `Destination`).
 - **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.
+
+## Rodada 10 — importação .sfc por hash oficial (v7)
+
+- v3 para v7; import_input no escopo installation para smw.sfc na raiz do jogo.
+- ROM USA com SHA-1 6b47bb75d16514b6a476aa0c73a683a2a4c18765, constante SMW_SHA1_US em snesrev/smw/assets/util.py tag v0.1.
+- ZIP oficial smw_0.1.zip: 1.742.607 B, SHA-256 f2086306d1e93617569ffca4fe010d43578ab41625dab456c3d63b2492b30db3, arquivos obrigatórios presentes, sem ROM.
+- Testes: schema v7/índice e parser real SDK14. Sem ROM comercial nem boot real; permanece experimental.
+- Fonte: https://github.com/snesrev/smw/blob/v0.1/assets/util.py
