@@ -458,6 +458,64 @@ class ValidateRecipesTests(unittest.TestCase):
         self.assertFalse(ok)
         self.assertTrue(any("sha256" in e.lower() or "sha-256" in e.lower() for e in errors), errors)
 
+    def test_high_octane_ctr_native_canonical_disc_v5(self) -> None:
+        """The common upstream CTR NTSC-U 926 image can be imported in High Octane."""
+        rel = "recipes/crash-team-racing/crash-team-racing-high-octane/v.1.5.json"
+        recipe = json.loads((REPO_ROOT / rel).read_text(encoding="utf-8"))
+        self.assertEqual(recipe["schema_version"], 5)
+        self.assertEqual(recipe["operations"], [
+            {"kind": "import_input", "scope": "installation",
+             "source": "original-ctr-us-bin", "target": "assets/ctr-u.bin"}
+        ])
+        self.assertNotIn("manual_steps", recipe)
+        original = recipe["inputs"][0]
+        self.assertEqual(original["size"], 605698800)
+        self.assertEqual(original["sha256"], "f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0")
+        self.assertEqual(original["extensions"], [".bin"])
+        self.assertEqual(recipe["launch_file"], "Crash Team Racing - High Octane.exe")
+        tmp = self._make_temp_repo()
+        rec_path = tmp / rel
+        broken = json.loads(rec_path.read_text(encoding="utf-8"))
+        broken["operations"][0]["target"] = "../out-of-bounds.bin"
+        raw = (json.dumps(broken, indent=2) + "\n").encode("utf-8")
+        rec_path.write_bytes(raw)
+        idxpath = tmp / "index.json"
+        idx = json.loads(idxpath.read_text(encoding="utf-8"))
+        next(e for e in idx["recipes"] if e["project_id"] == recipe["project_id"])["sha256"] = hashlib.sha256(raw).hexdigest()
+        idxpath.write_bytes((json.dumps(idx, indent=2) + "\n").encode("utf-8"))
+        ok, errors, _ = validate_recipes.validate_repository(tmp, strict_lf=True, require_jsonschema=True)
+        self.assertFalse(ok)
+        self.assertTrue(any("unsafe" in e.lower() or "../" in e for e in errors), errors)
+
+    def test_ggarecomp_sha1_local_app_data_import_v5(self) -> None:
+        """The verified original US Goemon ROM is imported under LocalAppData."""
+        rel = "recipes/goemon-s-great-adventure/ggarecomp/v0.3.0.json"
+        recipe = json.loads((REPO_ROOT / rel).read_text(encoding="utf-8"))
+        self.assertEqual(recipe["schema_version"], 5)
+        self.assertEqual(recipe["operations"], [
+            {"kind": "import_input", "scope": "local_app_data",
+             "profile_folders": ["GGARecompiled"], "source": "gga-us-original",
+             "target": "gga.us.z64"}
+        ])
+        self.assertIn("configure", recipe["manual_steps"])
+        original = recipe["inputs"][0]
+        self.assertEqual(original["sha1"], "9f9e860816f9e2a68bb5f4f56086e0c7450c64d7")
+        self.assertEqual(original["magic_hex"], "80371240")
+        self.assertEqual(original["extensions"], [".z64"])
+        tmp = self._make_temp_repo()
+        rec_path = tmp / rel
+        broken = json.loads(rec_path.read_text(encoding="utf-8"))
+        broken["operations"][0]["profile_folders"] = ["GGARecompiled/../../escape"]
+        raw = (json.dumps(broken, indent=2) + "\n").encode("utf-8")
+        rec_path.write_bytes(raw)
+        idxpath = tmp / "index.json"
+        idx = json.loads(idxpath.read_text(encoding="utf-8"))
+        next(e for e in idx["recipes"] if e["project_id"] == recipe["project_id"])["sha256"] = hashlib.sha256(raw).hexdigest()
+        idxpath.write_bytes((json.dumps(idx, indent=2) + "\n").encode("utf-8"))
+        ok, errors, _ = validate_recipes.validate_repository(tmp, strict_lf=True, require_jsonschema=True)
+        self.assertFalse(ok)
+        self.assertTrue(any("profile_folders" in e or "unsafe" in e.lower() for e in errors), errors)
+
     def test_rejects_invalid_v5_contracts(self) -> None:
         self.assertTrue(
             validate_recipes.is_safe_relative_path(

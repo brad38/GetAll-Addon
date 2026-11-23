@@ -110,3 +110,66 @@ Estes **7 projetos** dependem de correção de metadados no catálogo `brad38/Al
 O suporte v5 a MD5/size/magic e SHA-256/size/magic ja permite importar as ROMs canônicas de perfect-dark-pc-port-perfect-dark e automobililamborghini-recomp, além da imagem BIN canônica de ctr-native. As tres receitas foram migradas experimentalmente v3→v5, mantidos repositório, tag, executável, arquivos do ZIP e estado experimental. O parser real 1.3.0 aceitou as três. **Nao pedir nova capacidade ao Codex para estes tres casos**; resta somente teste ponta a ponta com copia legitima e inicializacao real.
 
 [Registro individual da Rodada 8](RODADA-8-SDK13-2026-11-23.md).
+
+---
+
+## Priorização após a Rodada 9 — contratos faltantes no SDK 1.3.0
+
+**Escopo deste documento:** especificação para o Codex, **sem modificação do All-Fix principal, DLL, SDK ou AllFix-Repo**. Estado da main confirmado em 4960e2a2f375fa8b929cf12f54770d65f183c1c9, PR #8 merged. Entre 119 IDs, 29 permanecem sem receita e as 90 existentes ainda exigem mídia legítima para homologação funcional, exceto sm64coopdx.
+
+### P0. Instalação explícita de executáveis e instaladores, com múltiplos assets
+
+**Motivo:** StonedModder/auto-tmc (AutoTMC-Windows.exe), Drakfix/MML_Modernization-Project (MML-Setup.exe), sonicfreak1337/SARecomp (instalador Windows de release anterior) e GenryTheFox0/Project-2099 (Setup.exe, Payload.zip e partes de expansão). StoreDownloadService.ValidateFileName aceita extensão .exe e .msi para o arquivo baixado, mas GameInstallationService.Prepare **copia o executável e retorna estado não instalável**; não há contrato de instalação de executáveis arbitrários e tal cópia nunca equivale a um jogo pronto.
+
+**Contrato proposto:**
+- Distinguir no manifesto do provedor, com lista fechada, **portable_executable**, **verified_installer** e **multi_asset_payload**, sem reaproveitar import_input, copy ou move para executar instaladores.
+- Fonte vinculada a repo/tag/asset oficiais; hash SHA-256 e tamanho por parte; identificação de arquivos exigidos e versão de cada asset; rejeição de downgrade ou mismatch de manifesto; download de todos os assets com validação antes de qualquer etapa irreversível.
+- Para portáteis, verificar se o EXE é de fato o jogo/launcher autocontido e não um programa de configuração; declarar launch_file, required_files e diretório de trabalho, verificando o estado final. Não promover ferramentas auxiliares a jogo instalado.
+- Para instaladores, provedor separado auditado por projeto e explicitamente aprovado pelo usuário, com validação de assinatura quando aplicável, sem UAC automático, sem execuções arbitrárias de shell declaradas por JSON remoto; pós-condições auditáveis da instalação, cancelamento/rollback e isolamento de efeitos no sistema.
+- Para multipartes, limitar número, tamanho e expansão, rejeitar redirecionamentos/arquivos duplicados/traversal, manter instalação atômica e somente marcar completa depois da verificação de todos os required_files e do executável final.
+
+**Regressões mínimas:** EXE genuinamente portátil; EXE instalador indevidamente tratado como portátil; instalação sem modo silencioso; assinatura/hashes/tamanhos incorretos; falta de uma das partes; arquivo de destino fora da raiz; cancelamento; repetição sem duplicar efeitos; atualização e rollback; não executar arquivo apenas porque foi baixado.
+
+### P0. Runtime Java/JAR com launcher fixo, sem scripts arbitrários
+
+**Projeto demonstrativo:** Legend-of-Dragoon-Modding/Severed-Chains (Severed_Chains_Windows.zip, 131.446.655 B; inclui launcher .bat/JAR e runtime Java). O SDK 1.3.0 apenas declara java-21 como prerequisite passivo, mas StoreAddonProviders.ParseRecipe exige launch_file .exe.
+
+**Contrato:** launch_kind=java_jar com entrypoint JAR relativo e caminhos confinados, versão mínima/máxima de Java, diretório de trabalho verificado, argumentos por lista estrita de tokens sem metacaracteres/expansão shell, timeout, verificações de required_files e first-run. NUNCA permitir executar launch.bat ou comandos dinâmicos fornecidos pelo repositório por simples receita JSON.
+
+**Regressões:** JAR válido, JAR ausente, Java indisponível/versão errada, classpath fora da pasta, argumentos de injeção, link simbólico, cancelamento e erro de boot verificado.
+
+### P1. Extração segura tar.gz para release oficial e origem de catálogo correta
+
+**Caso:** Project Picori. Catálogo aponta somente para https://github.com/999sian; o repositório 999sian/tmc distribui Windows x86_64 v0.9.6 em tmc-multi-windows-x86_64-v0.9.6.tar.gz (26.500.874 B). Não assumir que perfil equivale automaticamente ao repo. A correção do AllFix-Repo tem de ser autorizada e feita fora deste repositório.
+
+**Contrato:** aceita somente release/asset oficial com repo declarado e hash; interpreta gzip/tar com limites de expansão de arquivos, bytes, profundidade e tempo; rejeita entradas duplicadas case-insensitive, symlink/hardlink, reparse points, dispositivo especial, path absoluto, drive letter, UNC, segmentos '..', diretórios reservados Windows, decompression bombs. Extrai em staging, verifica required_files, publica de forma atômica.
+
+**Regressões:** tar.gz verdadeiro, extensão falsa, link para fora, tar path com traversal, entrada repetida, extrato inválido/truncado e limites de recursos. Sem o ajuste de identidade, não criar receita Project Picori.
+
+### P1. Importação de romsets arcade com nomes oficiais não convencionais (Cannonball)
+
+O projeto djyt/cannonball v0.34 possui ZIP Windows válido e executável, mas o usuário ainda precisa copiar manualmente **31 ROMs de OutRun Revision B** para roms/. As 31 entradas obrigatórias estão em roms/roms.txt e o código oficial src/main/roms.cpp declara por arquivo **nome, tamanho e CRC32** em operações LOAD. Exemplo: epr-10187.88 e opr-10268.99. Os caminhos de import_input_set / verifiedDataFiles v5 aceitam somente extensões de dados pré-listadas; sufixos '.88', '.76', '.99' não passam. O schema não oferece crc32 por arquivo.
+
+**Contrato:** uma operação import_input_set_arcade com lista fechada de nomes relativos fornecida pelo upstream oficial, formato de tamanho exato e checksum CRC32 + opção SHA-256 por item; validação de todos os arquivos antes de copiar; rejeição de nomes extras, links, diretórios aninhados não previstos, colisões no Windows, arquivo truncado e CRC divergente. Não permitir extensões numéricas globais sem whitelist associada ao romset oficial; confirmar sobrescrita e aplicar rollback do conjunto completo.
+
+**Regressões:** conjunto sintético completo (31/31) com checksums corretos, uma ROM ausente, sufixo numérico errado, adulteração sem mudar tamanho, duplicatas case-insensitive, symlink para fora, ZIP de romset dentro de diretório não especificado e rollback transacional. Não importar ROMs de outro jogo.
+
+### P2. Compilação controlada e requisitos de assets legítimos
+
+Os 17 projetos classificados como kit/código-fonte, incluindo Render96ex, sm64ex, sm64rt, projetos MKDD, Super Metroid e DOAXBV, requerem build/recompilação, extração de dados e dependências externas. Não implementar uma operação genérica de shell/cmd/powershell. Preferir distribuição binária oficial verificada. Se Codex decidir suportar builds: pipelines versionadas **no host**, com toolchains oficiais e hashes fixos, regras de leitura da mídia, sandbox, limites de CPU/tempo/disco, diagnóstico, cancelamento, artefato final auditado e testes de regressão por plataforma. A receita remota seleciona apenas um pipeline aprovado pelo host, sem fornecer comandos ou URLs executáveis.
+
+### P2. Outros contratos já documentados nas rodadas anteriores
+
+- Destinos extras de import_input (.sfc/.smc/.gba) com lista fechada segura, extensões e magia reais, sem cópia de arquivos executáveis.
+- first_run_files em LocalAppData/RoamingAppData com 2–3 subpastas seguras e verificações alternativas explicitamente declaradas (ex.: Phase Distorter).
+- Mídias multi-track PS1 com nomes diversos e BIN/CUE, exigindo correspondência entre CUE e track names, validação de conteúdo sem hashes inventados e cancelamento; WipeOut Phantom Edition não pode ser considerado automatizado apenas por criar diskimages/.
+- Recuperação de fonte/repo correto no AllFix-Repo para Metaforce, Wind Waker Recomp, Project Picori, Twilight Princess, Sonic Forever, Foxhollow e StrikersRecomp (ou publicação de assets pelo upstream).
+
+## Melhorias já possíveis sem nova funcionalidade SDK (Rodada 9)
+
+- **Crash Team Racing: High Octane v.1.5:** import_input verificado do BIN original NTSC-U 926 para assets/ctr-u.bin. Contrato v5 já existente, sem novo schema.
+- **GGARecomp v0.3.0:** input original US verificado por SHA-1/magic, import_input para local_app_data/GGARecompiled/gga.us.z64. Usa suporte v5 existente. A configuração dos controles/launcher continua declarada e requer teste real de primeira inicialização.
+
+Ambos permaneceram experimental; o parser SDK 1.3.0 aceitou as 90 receitas, e nenhum jogo foi iniciado com mídia original no ambiente desta rodada. **Não solicitar ao Codex uma operação que o SDK já oferece para estes dois casos.**
+
+[Relatório e matriz de 29 projetos da Rodada 9](RODADA-9-SDK13-2026-11-23.md).

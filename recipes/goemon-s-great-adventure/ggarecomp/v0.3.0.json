@@ -1,16 +1,39 @@
 {
-  "schema_version": 3,
+  "schema_version": 5,
   "project_id": "ggarecomp",
   "tag": "v0.3.0",
   "source_url": "https://github.com/DreaXer/GGARecomp/releases/tag/v0.3.0",
-  "operations": [],
+  "operations": [
+    {
+      "kind": "import_input",
+      "scope": "local_app_data",
+      "profile_folders": [
+        "GGARecompiled"
+      ],
+      "source": "gga-us-original",
+      "target": "gga.us.z64"
+    }
+  ],
   "required_files": [
     "GGARecompiled.exe",
     "SDL2.dll",
     "dxcompiler.dll",
     "dxil.dll"
   ],
-  "inputs": [],
-  "manual_steps": "O pacote oficial de Goemon's Great Adventure (v0.3.0) foi extraido. Execute GGARecompiled.exe na pasta instalada e Forneca sua ROM original de Goemon's Great Adventure (US SHA-1 9f9e860816f9e2a68bb5f4f56086e0c7450c64d7) no launcher. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "inputs": [
+    {
+      "id": "gga-us-original",
+      "kind": "file",
+      "name": "ROM original Goemon's Great Adventure (US)",
+      "description": "Selecione sua ROM legitima americana US, big-endian .z64. O All-Fix verifica o SHA-1 publicado pelo projeto e copia para LOCALAPPDATA/GGARecompiled/gga.us.z64 (local registrado pelo launcher). Nenhuma ROM e distribuida.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "magic_hex": "80371240",
+      "sha1": "9f9e860816f9e2a68bb5f4f56086e0c7450c64d7"
+    }
+  ],
+  "manual_steps": "ROM americana US verificada e importada para LOCALAPPDATA/GGARecompiled/gga.us.z64. Abra GGARecompiled.exe e configure os controles; confirme a ROM no launcher apenas se ele ainda solicitar. Nao distribua nem substitua sua copia legitima. Nenhum boot com ROM real foi homologado.",
   "launch_file": "GGARecompiled.exe"
 }

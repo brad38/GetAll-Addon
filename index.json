@@ -366,11 +366,11 @@
       "project_id": "ggarecomp",
       "repository": "DreaXer/GGARecomp",
       "tag": "v0.3.0",
-      "schema_version": 3,
+      "schema_version": 5,
       "path": "recipes/goemon-s-great-adventure/ggarecomp/v0.3.0.json",
-      "sha256": "a3702490bcf73f6aa88fd95d42833178548e6db9fa23d5c8a93057e5c85f132d",
+      "sha256": "612cba52dddea78305ade4b19bc9dea76ed5f17010af6e4498f9c460e0365c4f",
       "status": "experimental",
-      "has_inputs": false,
+      "has_inputs": true,
       "has_manual_steps": true
     },
     {
@@ -992,10 +992,10 @@
       "tag": "v.1.5",
       "schema_version": 5,
       "path": "recipes/crash-team-racing/crash-team-racing-high-octane/v.1.5.json",
-      "sha256": "aba288d1793572bf7c207c095498e3c25537178743858f6c153411af3c0e7d18",
+      "sha256": "003e6702874d6dcf54a538ff8e628dcb8338ba85f42e049ce9c93355c686b9a7",
       "status": "experimental",
-      "has_inputs": false,
-      "has_manual_steps": true
+      "has_inputs": true,
+      "has_manual_steps": false
     },
     {
       "game_id": "the-legend-of-zelda-the-wind-waker-hd",

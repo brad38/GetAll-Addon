@@ -3,12 +3,31 @@
   "project_id": "crash-team-racing-high-octane",
   "tag": "v.1.5",
   "source_url": "https://github.com/Rinnegatamante/Crash-Team-Racing-High-Octane/releases/tag/v.1.5",
-  "operations": [],
+  "operations": [
+    {
+      "kind": "import_input",
+      "scope": "installation",
+      "source": "original-ctr-us-bin",
+      "target": "assets/ctr-u.bin"
+    }
+  ],
   "required_files": [
     "Crash Team Racing - High Octane.exe",
     "assets/dualshock.png"
   ],
-  "inputs": [],
-  "manual_steps": "O pacote oficial de Crash Team Racing: High Octane (v.1.5) foi extraido. Para jogar, copie o arquivo .bin da sua copia PS1 NTSC-U original renomeado exatamente como assets/ctr-u.bin na pasta instalada antes de iniciar 'Crash Team Racing - High Octane.exe'. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "inputs": [
+    {
+      "id": "original-ctr-us-bin",
+      "kind": "file",
+      "name": "Imagem original Crash Team Racing NTSC-U 926",
+      "description": "Selecione o BIN bruto MODE2/2352 da sua propria copia legitima de Crash Team Racing USA NTSC-U 926. O All-Fix valida o tamanho e o SHA-256 documentados no projeto CTR Native, do qual High Octane e derivado, antes de importar para assets/ctr-u.bin. Nenhum arquivo comercial e distribuido.",
+      "extensions": [
+        ".bin"
+      ],
+      "required": true,
+      "size": 605698800,
+      "sha256": "f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0"
+    }
+  ],
   "launch_file": "Crash Team Racing - High Octane.exe"
 }

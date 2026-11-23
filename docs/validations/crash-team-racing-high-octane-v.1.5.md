@@ -27,3 +27,12 @@ Procedimento manual da receita: O pacote oficial de Crash Team Racing: High Octa
 - **Verificação de arquivos:** `2/2` `required_files` presentes; `launch_file_exists=True`
 - **Observação:** Extração e operações declaradas concluídas pelo motor oficial `AllFix.dll` 1.3.0 (`Status=PartiallyCompleted`, `2/2` `required_files` e `launch_file` presentes em `Destination`).
 - **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.
+
+## Rodada 9 — importacao automatica verificada (mantida a receita v5)
+
+- **Mudanca:** a receita ja era v5, mas foi substituida a etapa manual de copiar assets/ctr-u.bin por import_input (installation) com validacao de hash e tamanho antes da escrita.
+- **Fonte upstream:** README oficial de Crash Team Racing: High Octane confirma que o jogo, derivado de CTR Native, carrega o BIN US em assets/ctr-u.bin. O projeto-base CTR Native publica em metadata/retail/ntsc-u-926/matching.json o perfil original NTSC-U 926: 605.698.800 bytes, SHA-256 f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0.
+- **ZIP oficial rebaixado/inspecionado:** ctr-high-octane-x64.win.zip, 2.403.121 bytes, SHA-256 005924af516a3cb2bcdc19269422e2de77719600656e5b00df45424fe081693e; contem Crash Team Racing - High Octane.exe e assets/dualshock.png, nenhum disco original.
+- **Teste:** schema v5, index SHA-256, parser real AllFix.dll 1.3.0 e regressao sintetica para rejeicao de destino inseguro. Nao houve execucao do jogo, importacao com disco real nem boot.
+- **Estado:** permanece experimental ate homologacao com disco legitimo e primeira inicializacao.
+- **Fontes:** https://github.com/Rinnegatamante/Crash-Team-Racing-High-Octane/blob/vita/README.md ; https://github.com/CTR-tools/ctr-native/blob/master/metadata/retail/ntsc-u-926/matching.json
