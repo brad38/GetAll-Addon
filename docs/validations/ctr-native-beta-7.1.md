@@ -25,3 +25,12 @@ Procedimento manual da receita: O pacote oficial de Crash Team Racing (beta-7.1)
 - **Verificação de arquivos:** `1/1` `required_files` presentes; `launch_file_exists=True`
 - **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 1/1 `required_files` e `launch_file` presentes em `Destination`).
 - **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.
+
+
+## Rodada 8 — upgrade experimental SDK 1.3.0
+
+- **Receita migrada:** v3 para v5, mantendo projeto, tag beta-7.1, ZIP e executavel oficial. A copia manual de assets/ctr-u.bin passou a ser import_input (scope installation) e create_directory.
+- **Dados originais:** disc raw NTSC-U 926 conforme metadata/retail/ntsc-u-926/matching.json oficial do CTR Native: 605.698.800 bytes, SHA-256 f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0. Destino: ctr-native-beta-7_1-windows-x86/assets/ctr-u.bin.
+- **ZIP da Release beta-7.1 revalidado:** 8.746.455 bytes e SHA-256 af0d23c7b41925917b5eaf6fc292bd172368efc1c68918755de527a664049dad, contem ctr_native.exe; nao inclui o disco comercial.
+- **Testes da rodada:** schema v5, parser da AllFix.dll 1.3.0, caso de importacao sintetica por SHA-256/tamanho e rejeicao de alteracao do hash. Teste integrado com disco original real e inicializacao ainda **nao executados**.
+- **Estado:** experimental; so promover a validated depois de instalar com a imagem legitima da edicao correta e iniciar o jogo com sucesso.

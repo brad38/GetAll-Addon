@@ -1,13 +1,36 @@
 {
-  "schema_version": 3,
+  "schema_version": 5,
   "project_id": "ctr-native",
   "tag": "beta-7.1",
   "source_url": "https://github.com/CTR-tools/ctr-native/releases/tag/beta-7.1",
-  "operations": [],
+  "operations": [
+    {
+      "kind": "create_directory",
+      "target": "ctr-native-beta-7_1-windows-x86/assets"
+    },
+    {
+      "kind": "import_input",
+      "scope": "installation",
+      "source": "original-us-disc",
+      "target": "ctr-native-beta-7_1-windows-x86/assets/ctr-u.bin"
+    }
+  ],
   "required_files": [
     "ctr-native-beta-7_1-windows-x86/ctr_native.exe"
   ],
-  "inputs": [],
-  "manual_steps": "O pacote oficial de Crash Team Racing (beta-7.1) foi extraido. Para jogar, copie sua imagem BIN NTSC-U bruta (MODE2/2352) como assets/ctr-u.bin dentro de ctr-native-beta-7_1-windows-x86/ antes de iniciar ctr_native.exe. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "inputs": [
+    {
+      "id": "original-us-disc",
+      "kind": "file",
+      "name": "Disco original Crash Team Racing (NTSC-U 926)",
+      "description": "Selecione apenas seu dump legitimo e completo do disco NTSC-U 926 de Crash Team Racing em BIN bruto MODE2/2352, com a mesma edicao/hash da referencia oficial CTR Native. O All-Fix valida SHA-256 e tamanho (605.698.800 bytes) e importa para assets/ctr-u.bin. Outras edicoes de disco nao correspondem a este perfil; nenhuma imagem e distribuida.",
+      "extensions": [
+        ".bin"
+      ],
+      "required": true,
+      "size": 605698800,
+      "sha256": "f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0"
+    }
+  ],
   "launch_file": "ctr-native-beta-7_1-windows-x86/ctr_native.exe"
 }

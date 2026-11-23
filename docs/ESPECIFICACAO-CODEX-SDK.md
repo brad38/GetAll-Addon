@@ -82,3 +82,31 @@ Estes **7 projetos** dependem de correção de metadados no catálogo `brad38/Al
 5. `sonic-1-forever-sonic-2-absolute` (`sonic-the-hedgehog-1-2-2013`): distribuição externa em `teamforeveronline.wixsite.com` sem `github_repository`.
 6. `foxhollow` (`star-fox-adventures`): tag `v1.0.30` sem assets anexados na release.
 7. `strikersrecomp` (`super-mario-strikers`): tag `v0.1.0` sem assets anexados na release.
+
+
+---
+
+## Evidencias adicionais — Rodada 8 (SDK 1.3.0, 2026-11-23)
+
+**Nenhuma alteração do motor é feita aqui.** A API GitHub de 26 origens cadastradas dos 29 projetos sem receita foi reconsultada e os bloqueios foram confrontados com o schema v5 e a DLL compilada. Nao houve um novo binario portatil instalavel, verificavel e autonomo para nenhum desses 29 IDs.
+
+### 6. Extracao auditada de tar.gz na origem correta
+
+- Projeto condicionado: project-picori-999sian-tmc, origem cadastrada somente como perfil GitHub https://github.com/999sian.
+- Evidencia upstream: repositorio https://github.com/999sian/tmc publica release v0.9.6 com tmc-multi-windows-x86_64-v0.9.6.tar.gz (26.500.874 B). O host atual aceita .zip, .rar e .7z em GameInstallationService.Prepare e nao descompacta .tar.gz.
+- Contrato proposto: suporte ao formato .tar.gz **somente para assets ligados a release oficial e repositorio coincidente com catalogo**, validacao do content-type, nomes e extensao, streaming com limites de bytes/entradas, rejeicao de symlinks/hardlinks, traversal, paths Windows reservados, duplicatas case-insensitive, tamanho/CRC quando aplicavel, rollback e staging atomico.
+- **Dependencia independente obrigatoria:** correcao da identidade da fonte no AllFix-Repo pelo mantenedor do catalogo; nao substituir URL de perfil por outro repositorio na receita sem autorizacao.
+- Regressao: pacote tar.gz valido com run.exe no subdiretorio; nome normalizado e SHA-256 reconhecido; rejeicao de caminhos ../ e symlink, excesso de arquivos/descompactacao bomb e pacote falso com extensao tar.gz.
+
+### 7. Distinguir arquivo .exe baixado de instalador de jogo concluido
+
+- StoreDownloadService.ValidateFileName permite arquivos .exe/.msi nos downloads; GameInstallationService.Prepare para esses formatos copia artefatos e **nao** instala o jogo nem executa instaladores.
+- Projetos: autotmc-auto-tmc, mega-man-legends-modernization-project, sarecomp-sonic-adventure-recompiled e project-2099, com payloads externos separados neste ultimo.
+- Contrato proposto: declaracao asset_kind=portable_exe vinculada a tag/asset SHA-256 e executavel autocontido; instaladores somente por provedor restrito confiavel com verificacao de assinatura, sem elevacao administrativa automatica, escrita confinada, confirmacao do usuario e pos-condicoes; suporte multi-assets com digests independentes e rollback.
+- Regressao: binario avulso portatil, instalador sem modo silencioso, payload ausente/hash corrompido, cancelamento e escrita fora do destino devem ter resultados seguros, sem executar comandos declarados por terceiros.
+
+### 8. Melhorias funcionais obtidas sem novas operações do SDK
+
+O suporte v5 a MD5/size/magic e SHA-256/size/magic ja permite importar as ROMs canônicas de perfect-dark-pc-port-perfect-dark e automobililamborghini-recomp, além da imagem BIN canônica de ctr-native. As tres receitas foram migradas experimentalmente v3→v5, mantidos repositório, tag, executável, arquivos do ZIP e estado experimental. O parser real 1.3.0 aceitou as três. **Nao pedir nova capacidade ao Codex para estes tres casos**; resta somente teste ponta a ponta com copia legitima e inicializacao real.
+
+[Registro individual da Rodada 8](RODADA-8-SDK13-2026-11-23.md).

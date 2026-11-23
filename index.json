@@ -474,24 +474,24 @@
       "project_id": "automobililamborghini-recomp",
       "repository": "alondero/automobililamborghini-recomp",
       "tag": "v0.11.1",
-      "schema_version": 3,
+      "schema_version": 5,
       "path": "recipes/automobili-lamborghini/automobililamborghini-recomp/v0.11.1.json",
-      "sha256": "1cd9834dc4f136e0f9206d7a5c8d89c68cb47d29528ead9fd01ea6fe7ee3c50b",
+      "sha256": "47592d5246784cf593a52f9e2ea1d1ff49b761df70076fb35469fb5157a6503c",
       "status": "experimental",
-      "has_inputs": false,
-      "has_manual_steps": true
+      "has_inputs": true,
+      "has_manual_steps": false
     },
     {
       "game_id": "perfect-dark",
       "project_id": "perfect-dark-pc-port-perfect-dark",
       "repository": "perfect-dark-pc-port/perfect_dark",
       "tag": "ci-dev-build",
-      "schema_version": 3,
+      "schema_version": 5,
       "path": "recipes/perfect-dark/perfect-dark-pc-port-perfect-dark/ci-dev-build.json",
-      "sha256": "87291576af2bbe80e9f8bd1c893503dea3073a45e4e4e31d09e9f2a2580f1933",
+      "sha256": "fa0159466b1271e59dcf414fca104d8c8a177b3b73fbafa56adab97b55574381",
       "status": "experimental",
-      "has_inputs": false,
-      "has_manual_steps": true
+      "has_inputs": true,
+      "has_manual_steps": false
     },
     {
       "game_id": "super-mario-world",
@@ -522,12 +522,12 @@
       "project_id": "ctr-native",
       "repository": "CTR-tools/ctr-native",
       "tag": "beta-7.1",
-      "schema_version": 3,
+      "schema_version": 5,
       "path": "recipes/crash-team-racing/ctr-native/beta-7.1.json",
-      "sha256": "94824ae8673ca22fbc3b631ef71c9b0b9e3a9af7f500fd3f84112e60187e0a77",
+      "sha256": "7d3093961d8c99243efa1cd9f69ebc056d141706d69a219f29a4c9707b952245",
       "status": "experimental",
-      "has_inputs": false,
-      "has_manual_steps": true
+      "has_inputs": true,
+      "has_manual_steps": false
     },
     {
       "game_id": "bloody-roar-ii",

@@ -343,6 +343,121 @@ class ValidateRecipesTests(unittest.TestCase):
         )
         self.assertTrue(ok, f"Expected valid v5 recipe to pass, got: {errors}")
 
+    def test_perfect_dark_verified_md5_import_v5(self) -> None:
+        """Upgrading a manual US ROM copy must preserve exact MD5, size and path."""
+        rel = "recipes/perfect-dark/perfect-dark-pc-port-perfect-dark/ci-dev-build.json"
+        recipe = json.loads((REPO_ROOT / rel).read_text(encoding="utf-8"))
+        self.assertEqual(recipe["schema_version"], 5)
+        self.assertNotIn("manual_steps", recipe)
+        self.assertEqual(
+            recipe["operations"][-1],
+            {
+                "kind": "import_input",
+                "scope": "installation",
+                "source": "original-us-rom",
+                "target": "pd-x86_64-windows/data/pd.ntsc-final.z64",
+            },
+        )
+        input_file = recipe["inputs"][0]
+        self.assertEqual(input_file["md5"], "e03b088b6ac9e0080440efed07c1e40f")
+        self.assertEqual(input_file["size"], 33554432)
+        self.assertEqual(input_file["magic_hex"], "80371240")
+        self.assertEqual(input_file["extensions"], [".z64"])
+
+        tmp = self._make_temp_repo()
+        altered = tmp / rel
+        broken = json.loads(altered.read_text(encoding="utf-8"))
+        broken["inputs"][0]["md5"] = "not-a-md5"
+        raw = (json.dumps(broken, indent=2) + "\n").encode("utf-8")
+        altered.write_bytes(raw)
+        idx_path = tmp / "index.json"
+        idx = json.loads(idx_path.read_text(encoding="utf-8"))
+        match = next(e for e in idx["recipes"] if e["project_id"] == recipe["project_id"])
+        match["sha256"] = hashlib.sha256(raw).hexdigest()
+        idx_path.write_bytes((json.dumps(idx, indent=2) + "\n").encode("utf-8"))
+        ok, errors, _ = validate_recipes.validate_repository(
+            tmp, strict_lf=True, require_jsonschema=True
+        )
+        self.assertFalse(ok)
+        self.assertTrue(any("md5" in e.lower() for e in errors), errors)
+
+    def test_lamborghini_verified_sha256_import_v5(self) -> None:
+        """A canonical USA cart is verified and copied to the filename the port loads."""
+        rel = "recipes/automobili-lamborghini/automobililamborghini-recomp/v0.11.1.json"
+        recipe = json.loads((REPO_ROOT / rel).read_text(encoding="utf-8"))
+        self.assertEqual(recipe["schema_version"], 5)
+        self.assertNotIn("manual_steps", recipe)
+        self.assertEqual(
+            recipe["operations"],
+            [
+                {
+                    "kind": "import_input",
+                    "scope": "installation",
+                    "source": "usa-cart",
+                    "target": "Automobili Lamborghini (USA).z64",
+                }
+            ],
+        )
+        original = recipe["inputs"][0]
+        self.assertEqual(original["size"], 4194304)
+        self.assertEqual(original["sha256"], "cab2467684a58bc19c787423d704a961aa497629763367d9fe691172de58591c")
+        self.assertEqual(original["magic_hex"], "80371240")
+        self.assertEqual(original["extensions"], [".z64"])
+
+        tmp = self._make_temp_repo()
+        altered = tmp / rel
+        broken = json.loads(altered.read_text(encoding="utf-8"))
+        broken["operations"][0]["target"] = "../outside.z64"
+        raw = (json.dumps(broken, indent=2) + "\n").encode("utf-8")
+        altered.write_bytes(raw)
+        index_file = tmp / "index.json"
+        index = json.loads(index_file.read_text(encoding="utf-8"))
+        next(e for e in index["recipes"] if e["project_id"] == recipe["project_id"])["sha256"] = (
+            hashlib.sha256(raw).hexdigest()
+        )
+        index_file.write_bytes((json.dumps(index, indent=2) + "\n").encode("utf-8"))
+        ok, errors, _ = validate_recipes.validate_repository(
+            tmp, strict_lf=True, require_jsonschema=True
+        )
+        self.assertFalse(ok)
+        self.assertTrue(any("unsafe" in e.lower() or "../" in e for e in errors), errors)
+
+    def test_ctr_native_verified_disc_import_v5(self) -> None:
+        """Import only the canonical, cryptographically verified NTSC-U CTR BIN."""
+        rel = "recipes/crash-team-racing/ctr-native/beta-7.1.json"
+        recipe = json.loads((REPO_ROOT / rel).read_text(encoding="utf-8"))
+        self.assertEqual(recipe["schema_version"], 5)
+        self.assertNotIn("manual_steps", recipe)
+        self.assertEqual(
+            recipe["operations"][-1],
+            {
+                "kind": "import_input",
+                "scope": "installation",
+                "source": "original-us-disc",
+                "target": "ctr-native-beta-7_1-windows-x86/assets/ctr-u.bin",
+            },
+        )
+        disc = recipe["inputs"][0]
+        self.assertEqual(disc["size"], 605698800)
+        self.assertEqual(disc["sha256"], "f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0")
+        self.assertEqual(disc["extensions"], [".bin"])
+        self.assertEqual(recipe["launch_file"], "ctr-native-beta-7_1-windows-x86/ctr_native.exe")
+
+        tmp = self._make_temp_repo()
+        altered = tmp / rel
+        modified = json.loads(altered.read_text(encoding="utf-8"))
+        modified["inputs"][0]["sha256"] = "broken"
+        raw = (json.dumps(modified, indent=2) + "\n").encode("utf-8")
+        altered.write_bytes(raw)
+        index_file = tmp / "index.json"
+        index = json.loads(index_file.read_text(encoding="utf-8"))
+        entry = next(e for e in index["recipes"] if e["project_id"] == recipe["project_id"])
+        entry["sha256"] = hashlib.sha256(raw).hexdigest()
+        index_file.write_bytes((json.dumps(index, indent=2) + "\n").encode("utf-8"))
+        ok, errors, _ = validate_recipes.validate_repository(tmp, strict_lf=True, require_jsonschema=True)
+        self.assertFalse(ok)
+        self.assertTrue(any("sha256" in e.lower() or "sha-256" in e.lower() for e in errors), errors)
+
     def test_rejects_invalid_v5_contracts(self) -> None:
         self.assertTrue(
             validate_recipes.is_safe_relative_path(
