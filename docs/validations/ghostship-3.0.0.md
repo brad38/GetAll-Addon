@@ -16,3 +16,5 @@ Não testado: instalação ponta a ponta, importação da ROM/disco original, in
 Status: experimental (instalação parcial com manual_steps).
 
 Procedimento manual da receita: O pacote oficial do Ghostship foi extraido. Para jogar, abra Ghostship.exe a partir da pasta do jogo e selecione sua propria ROM legitima de Super Mario 64 US ou JP, formato .z64. O jogo valida a ROM e gera os recursos localmente. Nenhuma ROM e fornecida pelo GetAll-Addon.
+
+Evolução Rodada 1: adicionados inputs verificados (size 8388608, magic_hex 80371240, SHA-1 oficial) com import_input para baserom.us.z64 (detectado automaticamente pelo GameExtractor).

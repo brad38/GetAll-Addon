@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "project_id": "wcwvsnwoworldtourrecomp",
+  "tag": "v0.3.2",
+  "source_url": "https://github.com/jessetbh/WCWvsNWOWorldTourRecomp/releases/tag/v0.3.2",
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-rom",
+      "scope": "installation",
+      "target": "wcw.z64"
+    }
+  ],
+  "required_files": [
+    "WCWRecompiled.exe",
+    "SDL2.dll",
+    "dxcompiler.dll",
+    "dxil.dll",
+    "librashader.dll",
+    "msvcp140.dll",
+    "msvcp140_atomic_wait.dll",
+    "vcruntime140.dll",
+    "vcruntime140_1.dll"
+  ],
+  "inputs": [
+    {
+      "id": "original-rom",
+      "kind": "file",
+      "name": "ROM original WCW vs. nWo: World Tour (USA)",
+      "description": "Selecione sua copia legitima americana (USA) de WCW vs. nWo: World Tour em formato .z64 (12 MiB). O All-Fix validara tamanho, cabecalho e SHA-1 oficial antes de importar wcw.z64 para a pasta do jogo.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 12582912,
+      "magic_hex": "80371240",
+      "sha1": "5ad2d8359058c8bb71f08e3d3433b7a50d3bb645"
+    }
+  ],
+  "manual_steps": "O pacote oficial e sua ROM verificada wcw.z64 foram instalados. Abra WCWRecompiled.exe na pasta do jogo e escolha wcw.z64 no botao Load ROM na primeira execucao.",
+  "launch_file": "WCWRecompiled.exe"
+}

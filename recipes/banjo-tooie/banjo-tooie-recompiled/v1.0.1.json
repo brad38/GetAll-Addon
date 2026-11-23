@@ -3,7 +3,14 @@
   "project_id": "banjo-tooie-recompiled",
   "tag": "v1.0.1",
   "source_url": "https://github.com/Vidanox/BanjoTooieRecompiled/releases/tag/v1.0.1",
-  "operations": [],
+  "operations": [
+    {
+      "kind": "import_input",
+      "source": "original-rom",
+      "scope": "installation",
+      "target": "banjo-tooie.us.z64"
+    }
+  ],
   "required_files": [
     "BanjoTooieRecompiled.exe",
     "dxcompiler.dll",
@@ -11,7 +18,21 @@
     "SDL2.dll",
     "assets/LatoLatin-Regular.ttf"
   ],
-  "inputs": [],
-  "manual_steps": "O pacote oficial Banjo-Tooie Recompiled foi extraido. Execute BanjoTooieRecompiled.exe a partir da pasta instalada, que contem assets/, e escolha Select ROM no primeiro uso. Use sua ROM original USA .z64 de 33554432 bytes (SHA-1 AF1A89E12B638B8D82CC4C085C8E01D4CBA03FB3). O jogo le a ROM sem copia-la; nenhuma ROM e distribuida.",
+  "inputs": [
+    {
+      "id": "original-rom",
+      "kind": "file",
+      "name": "ROM original Banjo-Tooie (USA)",
+      "description": "Selecione sua copia original americana (USA) de Banjo-Tooie em formato big-endian .z64 (32 MiB). O All-Fix validara tamanho, assinatura e SHA-1 oficial antes de importar uma copia para a pasta do jogo.",
+      "extensions": [
+        ".z64"
+      ],
+      "required": true,
+      "size": 33554432,
+      "magic_hex": "80371240",
+      "sha1": "af1a89e12b638b8d82cc4c085c8e01d4cba03fb3"
+    }
+  ],
+  "manual_steps": "O pacote oficial Banjo-Tooie Recompiled e sua ROM verificada banjo-tooie.us.z64 foram instalados. Execute BanjoTooieRecompiled.exe a partir da pasta que contem assets/ e escolha Select ROM indicando banjo-tooie.us.z64 na propria pasta instalada.",
   "launch_file": "BanjoTooieRecompiled.exe"
 }

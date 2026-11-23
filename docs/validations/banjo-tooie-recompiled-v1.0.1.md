@@ -16,3 +16,5 @@ Não testado: instalação ponta a ponta, importação da ROM/disco original, in
 Status: experimental (instalação parcial com manual_steps).
 
 Procedimento manual da receita: O pacote oficial Banjo-Tooie Recompiled foi extraido. Execute BanjoTooieRecompiled.exe a partir da pasta instalada, que contem assets/, e escolha Select ROM no primeiro uso. Use sua ROM original USA .z64 de 33554432 bytes (SHA-1 AF1A89E12B638B8D82CC4C085C8E01D4CBA03FB3). O jogo le a ROM sem copia-la; nenhuma ROM e distribuida.
+
+Evolução Rodada 1: adicionados inputs verificados (size 33554432, magic_hex 80371240, SHA-1 oficial do README) com import_input para banjo-tooie.us.z64.
