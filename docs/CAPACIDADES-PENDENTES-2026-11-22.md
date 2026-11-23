@@ -32,3 +32,7 @@ Projetos: Render96ex, sm64ex/sm64rt, projetos decompilação SNES/N64, mkdd, Sym
 - O controle de destino de instalação permanece responsabilidade do AllFix; `import_input` `scope=installation` respeita a pasta selecionada.
 - O README e listas de Releases GitHub foram examinados, mas não todos os binários foram inspecionados: oito ZIPs tiveram conteúdo conferido diretamente.
 - O addon `allfix.install.universal` versão 1.0.0 não requer atualização, e receitas estáticas não devem receber status `validated` sem teste funcional.
+
+## 7. Compatibilidade da gramática de caminhos com arquivos reais
+
+**GoldenEye 007 PC Port v0.5.0:** a Release oficial inclui `libstdc++-6.dll`, mas o schema público de `required_files` (SDK 1.1, `installation-recipe-v1.schema.json#/$defs/path`) não admite o caractere `+` em caminhos de arquivos. A receita experimental exige os demais arquivos verificáveis; a DLL permanece no ZIP original e precisa estar presente para execução. Recomenda-se ampliar o validador de nomes de arquivo do host e o schema **de maneira genérica, restrita e compatível**, permitindo nomes comuns de dependências sem autorizar traversal, device names ou caminhos absolutos. O jogo **não foi testado com ROM original** nesta etapa.
