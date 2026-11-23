@@ -14,6 +14,7 @@
   "required_files": [
     "goldeneye-pc-port-0.5.0-win64/ge007.x86_64.exe",
     "goldeneye-pc-port-0.5.0-win64/libgcc_s_seh-1.dll",
+    "goldeneye-pc-port-0.5.0-win64/libstdc++-6.dll",
     "goldeneye-pc-port-0.5.0-win64/libwinpthread-1.dll",
     "goldeneye-pc-port-0.5.0-win64/SDL2.dll",
     "goldeneye-pc-port-0.5.0-win64/zlib1.dll",

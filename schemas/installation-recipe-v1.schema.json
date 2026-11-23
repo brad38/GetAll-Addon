@@ -135,7 +135,7 @@
     "path": {
       "type": "string",
       "maxLength": 240,
-      "pattern": "^[a-zA-Z0-9_][a-zA-Z0-9_.-]*(/[a-zA-Z0-9_][a-zA-Z0-9_.-]*)*$"
+      "pattern": "^[a-zA-Z0-9_][a-zA-Z0-9_.+-]*(/[a-zA-Z0-9_][a-zA-Z0-9_.+-]*)*$"
     }
   }
 }

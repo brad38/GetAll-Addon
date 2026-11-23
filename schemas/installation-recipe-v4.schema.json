@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "All-Fix Installation Recipe v4",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "tag",
+    "source_url",
+    "operations",
+    "required_files",
+    "inputs"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 4
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tag": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_url": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "operations": {
+      "type": "array",
+      "maxItems": 256,
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "installation-recipe-v1.schema.json#/properties/operations/items"
+          },
+          {
+            "type": "object",
+            "required": [
+              "kind",
+              "source",
+              "target",
+              "scope"
+            ],
+            "properties": {
+              "kind": {
+                "const": "import_input"
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1
+              },
+              "target": {
+                "$ref": "installation-recipe-v1.schema.json#/$defs/path"
+              },
+              "scope": {
+                "enum": [
+                  "installation",
+                  "roaming_app_data"
+                ]
+              },
+              "profile_folders": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 4,
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_][A-Za-z0-9_.-]{0,79}$"
+                }
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "scope": {
+                      "const": "roaming_app_data"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "profile_folders"
+                  ],
+                  "properties": {
+                    "target": {
+                      "pattern": "^[A-Za-z0-9_][A-Za-z0-9_.-]*\\.(z64|n64|v64|rom|bin|dat|pak|wad)$"
+                    }
+                  }
+                },
+                "else": {
+                  "not": {
+                    "required": [
+                      "profile_folders"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "object",
+            "required": [
+              "kind",
+              "scope",
+              "source",
+              "target"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "const": "import_input_set"
+              },
+              "scope": {
+                "const": "installation"
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "target": {
+                "$ref": "installation-recipe-v1.schema.json#/$defs/path"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "required_files": {
+      "$ref": "installation-recipe-v1.schema.json#/properties/required_files"
+    },
+    "manual_steps": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "inputs": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "oneOf": [
+          {
+            "allOf": [
+              {
+                "$ref": "installation-recipe-v3.schema.json#/properties/inputs/items"
+              },
+              {
+                "not": {
+                  "required": [
+                    "files"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "object",
+            "required": [
+              "id",
+              "kind",
+              "name",
+              "files"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "kind": {
+                "const": "directory"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "description": {
+                "type": "string",
+                "maxLength": 2000
+              },
+              "required": {
+                "const": true
+              },
+              "files": {
+                "$ref": "#/$defs/verifiedDataFiles"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "launch_file": {
+      "$ref": "installation-recipe-v1.schema.json#/$defs/path"
+    },
+    "first_run_files": {
+      "$ref": "#/$defs/verifiedDataFiles"
+    }
+  },
+  "$defs": {
+    "verifiedDataFiles": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "size",
+          "sha256"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "allOf": [
+              {
+                "$ref": "installation-recipe-v1.schema.json#/$defs/path"
+              },
+              {
+                "pattern": "\\.(?:[bB][iI][nN]|[cC][uU][eE]|[iI][sS][oO]|[iI][mM][gG]|[dD][aA][tT]|[pP][aA][kK]|[wW][aA][dD]|[rR][oO][mM]|[zZ]64|[nN]64|[vV]64|[oO]2[rR]|[oO][tT][rR]|[wW][aA][vV]|[rR][aA][wW]|[cC][hH][dD]|[gG][dD][iI]|[vV][pP][kK]|[wW][mM][aA]|[mM][pP]3|[oO][gG][gG])$"
+              }
+            ]
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 68719476736
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[A-Fa-f0-9]{64}$"
+          }
+        }
+      }
+    }
+  },
+  "dependentRequired": {
+    "first_run_files": [
+      "manual_steps",
+      "launch_file"
+    ]
+  }
+}

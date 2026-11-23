@@ -18,7 +18,7 @@ Repositório público de **receitas declarativas** para o motor nativo do AllFix
 - **Reversão:** para suspender as receitas remotas, desative o complemento no gerenciador. Caso também use o addon antigo `allfix.install.sm64coopdx`, reative-o para usar sua receita local; receitas locais válidas têm precedência sobre remotas. Não é necessário remover jogos nem dados do usuário.
 - **Integridade do pacote original v1.0.0 (SHA-256):** `3D99BAF35515DE6E2DB6DE16CD6A3D4AF071508F5201DC95DD75BBD7CF6DB0C4`. O ZIP não contém DLLs, executáveis nem ROMs.
 
-As versões de SDK e protocolo são independentes: o addon v1.0.0 utiliza a API declarativa `1.0` e a capacidade `installation.recipe.remote` do SDK `1.1`.
+As versões de SDK e protocolo são independentes: o addon v1.0.0 utiliza a API declarativa `1.0` e a capacidade `installation.recipe.remote`, disponível desde o SDK `1.1`. O SDK `1.2.0` acrescenta o contrato de receitas v4 sem exigir alteração do ZIP universal.
 
 ## Adicionar uma nova receita
 
@@ -50,5 +50,6 @@ A análise integral de [87 jogos e 119 projetos](docs/AUDITORIA-CATALOGO-2026-11
 - [Matriz completa dos projetos e Releases](docs/AUDITORIA-CATALOGO-2026-11-22.md)
 - [Capacidades genéricas pendentes para o Codex](docs/CAPACIDADES-PENDENTES-2026-11-22.md)
 - [GoldenEye 007 PC Port v0.5.0 — validação estática e pendências](docs/GOLDENEYE-V0.5.0-VALIDACAO.md)
+- [Rodada SDK 1.2.0: contratos v4, testes integrados e bloqueios concretos](docs/RODADA-SDK-1.2.0-2026-11-23.md)
 
-**Receitas atuais:** SM64 Coop Deluxe v1.5.1 permanece `validated`; GoldenEye 007 v0.5.0 está publicado apenas como `experimental` e **não aparece como suporte instalado/compatível** até a homologação com ROM original. O complemento universal v1.0.0 e o ZIP oficial não foram modificados.
+**Índice atual:** 14 receitas — SM64 Coop Deluxe v1.5.1 segue `validated` e as outras 13 permanecem `experimental` (não descobertas automaticamente pelo host). Com o SDK 1.2.0, a receita experimental GoldenEye v0.5.0 passou a exigir também `libstdc++-6.dll`; ainda não foi homologada com ROM legítima. O ZIP universal v1.0.0 foi preservado.

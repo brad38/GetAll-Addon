@@ -20,7 +20,7 @@
       "tag": "v0.5.0",
       "schema_version": 3,
       "path": "recipes/goldeneye-007/goldeneye-007-pc-port/v0.5.0.json",
-      "sha256": "9f7a669c9dca4bf19246ac281192132832ad6d5fc2db5f53a0687b3dea47c1b9",
+      "sha256": "9e0adef9cb292cf915f244cdf8d030b8b537b7aa68d0cb2ecbfe548d1eb91d05",
       "status": "experimental",
       "has_inputs": true,
       "has_manual_steps": false
