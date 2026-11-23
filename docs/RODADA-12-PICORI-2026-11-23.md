@@ -34,11 +34,11 @@ O README exige ROM original legitima e descreve selecao por SHA-1. A receita `re
 | `dotnet build AllFixDesktop.sln -c Debug --no-restore` | **PASS**, 0 errors/0 warnings |
 | `dotnet run --project Tests/AddonInfrastructure/AddonInfrastructure.csproj -c Debug --no-restore` | **PASS** em casos sinteticos, inclusive extracao TAR.GZ, rejeicao de symlinks/traversal/duplicatas, rollback/cancelamento e importacao sem ROM comercial |
 
-As provas de hash e parser nao demonstram homologacao funcional do Picori; testes de integridade, regressao e seguranca sao sinteticos. GitHub Actions do PR deve ser conferido separadamente.
+As provas de hash e parser nao demonstram homologacao funcional do Picori; testes de integridade, regressao e seguranca sao sinteticos. GitHub Actions do PR #12: workflow `Validate GetAll-Addon Recipes`, run `45265676061`, status `completed` e conclusão `success`, verificado após os commits de documentação (commit `57f948caf83afea8f5c37f94ec28abb59f666eff`).
 
 ## Matriz dos 26 projetos ainda sem receita
 
-As evidencias das linhas abaixo foram extraidas da auditoria oficial da Rodada 11B (realizada em 2026-11-23); **nenhum desses 26 foi declarado agora revalidado mediante novo download de binario**. Esta rodada revalidou diretamente Picori. Prioridades sao de planejamento, nao garantias de desbloqueio. O projeto de origem deve ter correspondencia exata de identidade; somente instaladores autorizados/documentados, builds isolados reproduziveis e assets oficiais verificaveis poderao gerar novas receitas.
+Os bloqueios iniciais vieram da auditoria Rodada 11B (2026-11-23). Esta rodada **reconsultou a API de releases de todos os 24 repositórios GitHub** do grupo; duas origens externas (Team Forever e Courage Reborn) foram investigadas por documentação pública. Os resultados das releases continuam compatíveis com os bloqueios registrados; nenhuma distribuição pronta e segura adicional foi comprovada. Não houve download ou execução dos binários desses 26 projetos. Prioridades são de planejamento, não garantias de desbloqueio. O projeto de origem deve ter correspondencia exata de identidade; somente instaladores autorizados/documentados, builds isolados reproduziveis e assets oficiais verificaveis poderao gerar novas receitas.
 
 | Projeto | Origem documentada | Classe | Bloqueio documentado | Proxima acao/prioridade |
 |---|---|---|---|---|
@@ -70,6 +70,13 @@ As evidencias das linhas abaixo foram extraidas da auditoria oficial da Rodada 1
 | `wind-waker-recomp` | [elliotttate/Wind-Waker-Recomp](https://github.com/elliotttate/Wind-Waker-Recomp) | Origem ou release | elliotttate/Wind-Waker-Recomp: 0 Releases; BlueWake e outra identidade com receita propria | P2: identificar fonte oficial e release verificavel |
 
 Soma por classe: **3** instaladores EXE, **3** kits/build, **14** sem binarios, **6** origem/release; **26** bloqueados. Nao converter para receitas `experimental` artificiais. A atualizacao do catalogo Picori e um PR separado porque `AllFix-Repo` nao pertence ao mesmo controle de versao do GetAll.
+
+## Pesquisa complementar de fontes dos 26 bloqueios
+
+- **24/24 origens GitHub**: listagens de releases consultadas novamente em 2026-11-23. Três instaladores continuam sem perfil confiável aprovado (MML, Project 2099, SARecomp); três kits não incluem o jogo final pronto (DOAXVB, God of War, Pinyon Shift). Os 14 repositórios classificados como somente código-fonte retornaram zero releases via API. FoxHollow v1.0.30 e StrikersRecomp v0.1.0 têm zero assets; Wind-Waker-Recomp retornou zero releases; AxioDL/metaforce retornou HTTP 404.
+- **Team Forever:** além do site Wix de distribuição, foram localizados os repositórios públicos [TeamForeverDev/Sonic1Forever](https://github.com/TeamForeverDev/Sonic1Forever) e [TeamForeverDev/Sonic2Absolute](https://github.com/TeamForeverDev/Sonic2Absolute). Ambas as APIs de releases retornaram lista vazia. O ID do catálogo refere-se a dois jogos; não substituir sua origem por apenas um projeto nem executar scripts oficiais não auditados.
+- **Courage Reborn:** a [documentação específica do projeto](https://docs.couragereborn.com/) descreve compilação, inclusive Docker e CMake, porém não foi comprovada release binária pública confiável com proveniência e hash. O repositório referenciado na documentação (linifadomra/Courage-Reborn) não ficou acessível via API GitHub nesta checagem. A notícia cadastrada no catálogo não demonstra distribuição instalável. Não associar Dusklight como se fosse Courage Reborn.
+- **Outras distribuições:** ausência de releases GitHub não prova ausência de qualquer distribuição; nova pesquisa em fontes oficiais pode desbloquear um caso futuro. Sem binários oficiais ou isolamento adequado, manter bloqueios.
 
 ## SDK, compatibilidade e autorizacoes
 
