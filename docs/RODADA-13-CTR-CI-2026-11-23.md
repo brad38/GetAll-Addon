@@ -31,7 +31,7 @@ O jogo **nao inclui o disco comercial**. Seu README orienta fornecer uma copia l
 
 `recipes/crash-team-racing/crash-team-racing-turbocharged/ci-07d0c49.json`, schema v5, tag `ci-07d0c49`, indice com `status=experimental`; caminho do EXE com espacos, operacoes vazias, `manual_steps` para a imagem comercial. Hash SHA-256 exato dos bytes da receita: `943f43da0758ee982b0f4373d25e3f74a5a8718eb066822f41200543e84b9b18`.
 
-Esta candidata **nao funciona no All-Fix Desktop 3.0.0 publicado sem o provedor CI**. O frontend tradicional filtra URLs que nao sejam `github.com/.../releases/download` e a API antiga busca somente Releases. Para nao incluir uma receita artificial, foi desenvolvida, em copia isolada da arvore local recente do Desktop, uma adaptacao restrita de origem CI, ainda nao substituindo DLL ou executavel instalados.
+Esta candidata **nao funciona no All-Fix Desktop 3.0.0 publicado sem o provedor CI**. O frontend anterior filtra URLs que nao sejam `github.com/.../releases/download` e a API antiga busca somente Releases. Foi desenvolvida e testada em copia isolada da arvore local recente do Desktop uma adaptacao restrita de origem CI. **Depois de criar backups**, a adaptacao foi aplicada cirurgicamente ao codigo-fonte local principal em `C:\Users\bradg\Downloads\AllFixDesktop`; compilacao, staging, parser, rede real e harness passaram. Nenhum executavel/DLL instalado foi substituido, nem houve release.
 
 ## Adaptacao restrita do Desktop (sem schema v9)
 
@@ -55,15 +55,25 @@ Nada permite `cmd`, `powershell`, script upstream, instalador desconhecido, coma
 | Python unit tests | 36/36 PASS |
 | Parser C# 1.4.1: todas as receitas | 94/94 PASS |
 | Build do Desktop em copia isolada | PASS sem erros/avisos |
+| Build do Desktop principal atualizado com backup dos arquivos anteriores | PASS sem erros/avisos; versao 3.0.0 preservada |
+| `ResolveAsync` + `DownloadAsync` com rede real (Desktop principal compilado) | PASS; 6.569.952 bytes, SHA-256 exato |
+| Suite C# completa no Desktop principal com casos negativos do CI | PASS; sem instalador externo ou jogo executado |
 | Validacao de URL, expiração e redirect host (harness C#) | PASS |
 | Teste de staging no GameInstallationService com ZIP real | **PASS**, status `PartiallyCompleted`, EXE presente, BIN comercial ausente |
 | Primeiro boot real / jogo `validated` | NAO executado |
 
 ## Estado e dependencia de merge
 
-Main atual: **92/119**. Branch da Rodada 12: **93/119** (Project Picori). Branch da Rodada 13: **94/119 propostas**, 93 `experimental` e uma `validated`. Projetos ainda sem receita: **25**. A nova receita requer incorporacao do provedor CI ao projeto local recente do Desktop antes de ficar instalavel na UI. Depois, ainda exige mídia comercial legítima e homologação do primeiro boot para promocao a `validated`.
+Main atual: **92/119**. Branch da Rodada 12: **93/119** (Project Picori). Branch da Rodada 13: **94/119 propostas**, 93 `experimental` e uma `validated`. Projetos ainda sem receita: **25**. O provedor CI ja esta implementado no **codigo-fonte local mais recente**, com backups em `C:\Users\bradg\Downloads\AllFixDesktop-CI-Integration-R13\originals` e fontes finais em `...\patched`, mas ainda precisa de revisao e publicacao autorizadas para ficar disponivel no aplicativo instalado. Depois, ainda exige mídia comercial legítima e homologação do primeiro boot para promocao a `validated`.
 
 Sem autorizacao do usuario, nao fazer merge, instalar DLL, alterar versao 3.0.0 nem publicar release. Nenhuma prova de homologacao comercial foi inventada.
+
+## Revisao complementar das origens externas
+
+- **Team Forever**: o antigo site Wix foi substituido por [novo portal oficial](https://teamforeverdev.github.io/projects.html), que contem Sonic 1 Forever e Sonic 2 Absolute. O fluxo oficial atual em [S1F](https://teamforeverdev.github.io/s1f.html) e [S2A](https://teamforeverdev.github.io/s2a.html) pede execucao do **Team Forever Installer**, fornecendo APK/RSDK original pelo usuario. O item catalogado representa os dois projetos; nao e valido declarar ambos instalados com apenas uma copia parcial. O catalogue update esta em [AllFix-Repo PR #3](https://github.com/brad38/AllFix-Repo/pull/3) e mantem `installation_enabled=false`. **Sem perfil confiavel de instalador no SDK 1.4.1, permanece bloqueado.**
+- **FoxHollow**: o [README oficial](https://github.com/JackPriceBurns/foxhollow) orienta [foxhollow.dev](https://foxhollow.dev) para o launcher multiplataforma, em vez de GitHub Releases vazias. O site disponibiliza `https://cdn.foxhollow.dev/launcher/latest/Foxhollow-x64.exe` para Windows (via JS oficial do site); esse EXE instala/atualiza jogo e pede disco original. Nao confundir entrega de launcher com jogo funcional. Dependencia de perfil de instalador seguro e assinatura/integridade comprovadas. **Nao foi criado recipe.**
+- **Metaforce**: [axiodl.com](https://axiodl.com/) ainda referencia distribuicoes externas em `releases.axiodl.com`, mas `/continuous/` e `/dev/` responderam 404 no acesso nesta rodada, e o GitHub `AxioDL/metaforce` continua 404 pela API. Sem payload completo verificavel, fica bloqueado.
+- **GitHub CI vs releases**: rechecadas workflows dos restantes sem Github Releases. `doldecomp/mkdd` publica apenas relatórios MAP/progresso, nao um jogo Windows pronto; os demais ainda nao tinham payload oficial apropriado para receita verificada. Nao confundir codigo-fonte, utilitarios de build, launcher auxiliar ou pacote de dados ausentes com jogo compilado.
 
 ## Limpeza
 
