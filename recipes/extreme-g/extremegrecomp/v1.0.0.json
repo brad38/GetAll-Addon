@@ -1,0 +1,16 @@
+{
+  "schema_version": 5,
+  "project_id": "extremegrecomp",
+  "tag": "v1.0.0",
+  "source_url": "https://gitlab.com/sonicdcer/ExtremeGRecomp/-/releases/v1.0.0",
+  "operations": [],
+  "required_files": [
+    "ExtremeGRecompiled.exe",
+    "SDL2.dll",
+    "dxcompiler.dll",
+    "dxil.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial de Extreme-G: Recompiled (v1.0.0) foi extraido. Execute ExtremeGRecompiled.exe na pasta instalada e forneca sua copia original norte-americana (NTSC-U 1.0) de Extreme-G no menu inicial. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "launch_file": "ExtremeGRecompiled.exe"
+}

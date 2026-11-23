@@ -1,0 +1,24 @@
+{
+  "schema_version": 5,
+  "project_id": "wipeout-phantom-edition",
+  "tag": "v1.2.256",
+  "source_url": "https://github.com/wipeout-phantom-edition/wipeout-phantom-edition/releases/tag/v1.2.256",
+  "operations": [
+    {
+      "kind": "create_directory",
+      "target": "wipeout/diskimages"
+    }
+  ],
+  "required_files": [
+    "wipeout/wipeout.exe",
+    "wipeout/sdl2.dll",
+    "wipeout/OpenAL32.dll",
+    "wipeout/lua51.dll",
+    "wipeout/sndfile.dll",
+    "wipeout/defaultinput.cfg",
+    "wipeout/phantom/gamedatamanifest"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial WipeOut Phantom Edition (v1.2.256) foi extraido e a pasta wipeout/diskimages foi criada. Copie sua imagem multi-faixa PS1 da regiao USA composta por 9 arquivos .bin (faixa 1 em MODE2/2352 e faixas 2 a 9 em AUDIO) mais o arquivo .cue para wipeout/diskimages/ antes de iniciar wipeout/wipeout.exe. Na primeira execucao o port extrai os dados e faixas musicais automaticamente. Nenhuma midia e fornecida.",
+  "launch_file": "wipeout/wipeout.exe"
+}

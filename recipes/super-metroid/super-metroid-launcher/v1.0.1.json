@@ -1,0 +1,16 @@
+{
+  "schema_version": 5,
+  "project_id": "super-metroid-launcher",
+  "tag": "v1.0.1",
+  "source_url": "https://github.com/RadzPrower/Super-Metroid-Launcher/releases/tag/v1.0.1",
+  "operations": [],
+  "required_files": [
+    "Super Metroid Launcher.exe",
+    "Super Metroid Launcher.dll",
+    "SDL2.dll",
+    "git2-b7bad55.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O Super Metroid Launcher (v1.0.1) foi extraido. Execute 'Super Metroid Launcher.exe', clique em Download e selecione sua ROM original norte-americana (US) de Super Metroid (SHA-256 oficial 12b77c4bc9c1832cee8881244659065ee1d84c70c3d29e6eaf92e6798cc2ca72) no seletor do launcher (ou copie-a como sm.sfc ao lado do executavel) para concluir a compilacao local. Nenhuma ROM e fornecida.",
+  "launch_file": "Super Metroid Launcher.exe"
+}

@@ -239,6 +239,180 @@ class ValidateRecipesTests(unittest.TestCase):
             errors,
         )
 
+    def test_accepts_valid_v5_recipe_features(self) -> None:
+        tmp = self._make_temp_repo()
+        rec_rel = "recipes/extreme-g/v5-sample/v1.0.0.json"
+        rec_path = tmp / rec_rel
+        rec_path.parent.mkdir(parents=True, exist_ok=True)
+        v5_doc = {
+            "schema_version": 5,
+            "project_id": "v5-sample",
+            "tag": "v1.0.0",
+            "source_url": "https://gitlab.com/example/group/v5-sample/-/releases/v1.0.0",
+            "operations": [
+                {
+                    "kind": "import_input",
+                    "scope": "local_app_data",
+                    "profile_folders": ["Port (v5) Profile"],
+                    "source": "orig-rom",
+                    "target": "Original (USA).z64",
+                },
+                {
+                    "kind": "import_input",
+                    "scope": "installation",
+                    "source": "orig-disc",
+                    "target": "game/disc.bin",
+                },
+                {
+                    "kind": "import_input_set",
+                    "scope": "installation",
+                    "source": "track-set",
+                    "target": "Disc Files",
+                },
+            ],
+            "required_files": [
+                "Binarios (x64)/Port de Exemplo.exe",
+                "Disc Files/Disc (Track 1).bin",
+            ],
+            "inputs": [
+                {
+                    "id": "orig-rom",
+                    "kind": "file",
+                    "name": "Original ROM",
+                    "sha1": "a" * 40,
+                },
+                {
+                    "id": "orig-disc",
+                    "kind": "file",
+                    "name": "Original Disc BIN",
+                    "magic_hex": "00FFFFFFFFFFFFFFFFFFFF00",
+                    "min_size": 1048576,
+                    "max_size": 734003200,
+                    "extensions": [".bin"],
+                },
+                {
+                    "id": "track-set",
+                    "kind": "directory",
+                    "name": "Track Set",
+                    "files": [
+                        {
+                            "path": "Disc (Track 1).bin",
+                            "min_size": 4,
+                            "max_size": 65536,
+                            "magic_hex": "00010203",
+                        }
+                    ],
+                },
+            ],
+            "manual_steps": "Launch Port de Exemplo.exe once to prepare resources.",
+            "launch_file": "Binarios (x64)/Port de Exemplo.exe",
+            "first_run_files": [
+                {
+                    "scope": "local_app_data",
+                    "profile_folder": "Port (v5) Profile",
+                    "path": "resource.o2r",
+                    "min_size": 128,
+                    "magic_hex": "504B0304",
+                }
+            ],
+            "prerequisites": ["dotnet-desktop-10-x64", "openal-x64"],
+        }
+        rec_bytes = (json.dumps(v5_doc, indent=2) + "\n").encode("utf-8")
+        rec_path.write_bytes(rec_bytes)
+
+        idx_path = tmp / "index.json"
+        idx = json.loads(idx_path.read_text(encoding="utf-8"))
+        idx["recipes"].append(
+            {
+                "game_id": "extreme-g",
+                "project_id": "v5-sample",
+                "repository": "gitlab:example/group/v5-sample",
+                "tag": "v1.0.0",
+                "schema_version": 5,
+                "path": rec_rel,
+                "sha256": hashlib.sha256(rec_bytes).hexdigest(),
+                "status": "experimental",
+                "has_inputs": True,
+                "has_manual_steps": True,
+            }
+        )
+        idx_path.write_bytes((json.dumps(idx, indent=2) + "\n").encode("utf-8"))
+
+        ok, errors, _ = validate_recipes.validate_repository(
+            tmp, strict_lf=True, require_jsonschema=True
+        )
+        self.assertTrue(ok, f"Expected valid v5 recipe to pass, got: {errors}")
+
+    def test_rejects_invalid_v5_contracts(self) -> None:
+        self.assertTrue(
+            validate_recipes.is_safe_relative_path(
+                "Golden Sun Recompiled/games/The Broken Seal/GoldenSunRecomp.exe",
+                allow_v5_chars=True,
+            )[0]
+        )
+        self.assertFalse(
+            validate_recipes.is_safe_relative_path(
+                "dir/Trailing Space ", allow_v5_chars=True
+            )[0]
+        )
+        self.assertFalse(
+            validate_recipes.is_safe_relative_path("CON .exe", allow_v5_chars=True)[0]
+        )
+
+        tmp = self._make_temp_repo()
+        rec_rel = "recipes/extreme-g/v5-bad/v1.0.0.json"
+        rec_path = tmp / rec_rel
+        rec_path.parent.mkdir(parents=True, exist_ok=True)
+        bad_v5 = {
+            "schema_version": 5,
+            "project_id": "v5-bad",
+            "tag": "v1.0.0",
+            "source_url": "https://github.com/example/v5-bad/releases/tag/v1.0.0",
+            "operations": [],
+            "required_files": ["run.bat"],
+            "inputs": [],
+            "manual_steps": "Run batch.",
+            "launch_file": "run.bat",
+            "first_run_files": [
+                {
+                    "scope": "local_app_data",
+                    "path": "cache.o2r",
+                    "min_size": 128,
+                    "magic_hex": "504B0304",
+                }
+            ],
+            "prerequisites": ["python-3.12"],
+        }
+        rec_bytes = (json.dumps(bad_v5, indent=2) + "\n").encode("utf-8")
+        rec_path.write_bytes(rec_bytes)
+
+        idx_path = tmp / "index.json"
+        idx = json.loads(idx_path.read_text(encoding="utf-8"))
+        idx["recipes"].append(
+            {
+                "game_id": "extreme-g",
+                "project_id": "v5-bad",
+                "repository": "example/v5-bad",
+                "tag": "v1.0.0",
+                "schema_version": 5,
+                "path": rec_rel,
+                "sha256": hashlib.sha256(rec_bytes).hexdigest(),
+                "status": "experimental",
+                "has_inputs": False,
+                "has_manual_steps": True,
+            }
+        )
+        idx_path.write_bytes((json.dumps(idx, indent=2) + "\n").encode("utf-8"))
+
+        ok, errors, _ = validate_recipes.validate_repository(
+            tmp, strict_lf=True, require_jsonschema=True
+        )
+        self.assertFalse(ok)
+        joined = "\n".join(errors)
+        self.assertIn(".exe", joined)
+        self.assertIn("profile_folder", joined)
+        self.assertIn("prerequisites", joined)
+
 
 if __name__ == "__main__":
     unittest.main()

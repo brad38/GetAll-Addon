@@ -1,0 +1,16 @@
+{
+  "schema_version": 5,
+  "project_id": "cannonball",
+  "tag": "v0.34",
+  "source_url": "https://github.com/djyt/cannonball/releases/tag/v0.34",
+  "operations": [],
+  "required_files": [
+    "cannonball.exe",
+    "SDL2.dll",
+    "config.xml",
+    "roms/roms.txt"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Cannonball (v0.34) foi extraido. Copie os 31 arquivos originais do romset OutRun Revision B listados em roms/roms.txt (epr-10187.88 a opr-10268.99 e, opcionalmente, os arquivos alternativos da versao japonesa) para a pasta roms/ antes de iniciar cannonball.exe. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "launch_file": "cannonball.exe"
+}

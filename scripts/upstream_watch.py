@@ -470,6 +470,9 @@ def run_upstream_watch(
     repos_to_check: dict[str, list[dict[str, Any]]] = {}
     for pid, entries in indexed_by_project.items():
         repo = entries[0]["repository"]
+        if repo.startswith("gitlab:"):
+            # GitHub release watcher does not query gitlab: repositories
+            continue
         repos_to_check.setdefault(repo, []).append(
             {"kind": "indexed", "project_id": pid, "entries": entries}
         )

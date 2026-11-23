@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static and semantic validator for GetAll-Addon index, schemas, and recipes (SDK 1.2.0, v1-v4)."""
+"""Static and semantic validator for GetAll-Addon index, schemas, and recipes (SDK 1.3.0, v1-v5)."""
 
 from __future__ import annotations
 
@@ -22,23 +22,33 @@ try:
 except ImportError:  # pragma: no cover - optional fallback for minimal local Python
     HAS_JSONSCHEMA = False
 
-MAX_TOTAL_DATA_BYTES = 68_719_476_736  # 64 GiB per SDK 1.2.0
+MAX_TOTAL_DATA_BYTES = 68_719_476_736  # 64 GiB per SDK 1.2.0 / 1.3.0
 
 RE_INDEX_ID = re.compile(r"^[a-z0-9][a-z0-9-]{0,160}$")
-RE_REPOSITORY = re.compile(r"^[A-Za-z0-9-]+/[A-Za-z0-9_.-]+$")
+RE_REPOSITORY = re.compile(
+    r"^(?:[A-Za-z0-9-]+/[A-Za-z0-9_.-]+|gitlab:[A-Za-z0-9][A-Za-z0-9_.-]*(?:/[A-Za-z0-9][A-Za-z0-9_.-]*){1,7})$"
+)
 RE_INDEX_PATH = re.compile(
     r"^[A-Za-z0-9_][A-Za-z0-9_.-]*(/[A-Za-z0-9_][A-Za-z0-9_.-]*)*\.json$"
 )
 RE_RECIPE_PATH = re.compile(
     r"^[a-zA-Z0-9_][a-zA-Z0-9_.+-]*(/[a-zA-Z0-9_][a-zA-Z0-9_.+-]*)*$"
 )
+RE_RECIPE_PATH_V5 = re.compile(
+    r"^(?![Cc][Oo][Nn] *(?:[./]|$)|[Pp][Rr][Nn] *(?:[./]|$)|[Aa][Uu][Xx] *(?:[./]|$)|[Nn][Uu][Ll] *(?:[./]|$)|(?:[Cc][Oo][Mm]|[Ll][Pp][Tt])[0-9\u00b9\u00b2\u00b3] *(?:[./]|$))[A-Za-z0-9_(](?:[A-Za-z0-9_.+() -]*[A-Za-z0-9_+()-])?(?:/(?![Cc][Oo][Nn] *(?:[./]|$)|[Pp][Rr][Nn] *(?:[./]|$)|[Aa][Uu][Xx] *(?:[./]|$)|[Nn][Uu][Ll] *(?:[./]|$)|(?:[Cc][Oo][Mm]|[Ll][Pp][Tt])[0-9\u00b9\u00b2\u00b3] *(?:[./]|$))[A-Za-z0-9_(](?:[A-Za-z0-9_.+() -]*[A-Za-z0-9_+()-])?)*$"
+)
 RE_SHA256 = re.compile(r"^[0-9A-Fa-f]{64}$")
 RE_SHA1 = re.compile(r"^[0-9A-Fa-f]{40}$")
+RE_MD5 = re.compile(r"^[0-9A-Fa-f]{32}$")
 RE_MAGIC_HEX = re.compile(r"^(?:[A-Fa-f0-9]{2}){2,32}$")
 RE_EXT = re.compile(r"^\.[A-Za-z0-9]{1,12}$")
 RE_PROFILE_FOLDER = re.compile(r"^[A-Za-z0-9_][A-Za-z0-9_.-]{0,79}$")
 RE_ROAMING_TARGET = re.compile(
     r"^[A-Za-z0-9_][A-Za-z0-9_.-]*\.(z64|n64|v64|rom|bin|dat|pak|wad)$"
+)
+RE_DATA_TARGET_EXT = re.compile(
+    r"\.(?:z64|n64|v64|rom|bin|dat|pak|wad)$",
+    re.IGNORECASE,
 )
 RE_V4_DATA_EXT = re.compile(
     r"\.(?:bin|cue|iso|img|dat|pak|wad|rom|z64|n64|v64|o2r|otr|wav|raw|chd|gdi|vpk|wma|mp3|ogg)$",
@@ -55,26 +65,38 @@ WINDOWS_RESERVED_NAMES = {
 }
 
 VALID_STATUSES = {"validated", "disabled", "draft", "experimental"}
-VALID_SCHEMA_VERSIONS = {1, 2, 3, 4}
+VALID_SCHEMA_VERSIONS = {1, 2, 3, 4, 5}
+VALID_PROFILE_SCOPES_V5 = {"installation", "roaming_app_data", "local_app_data"}
+VALID_PREREQUISITES = {
+    "dotnet-desktop-10-x64",
+    "java-21",
+    "openal-x64",
+    "openal-x86",
+}
 DEFAULT_CATALOG_URL = (
     "https://raw.githubusercontent.com/brad38/AllFix-Repo/main/catalog.json"
 )
 
 
-def is_safe_relative_path(value: Any) -> tuple[bool, str]:
-    """Validate a relative recipe path according to SDK 1.2.0 and Windows safety rules."""
+def is_safe_relative_path(
+    value: Any,
+    *,
+    allow_v5_chars: bool = False,
+) -> tuple[bool, str]:
+    """Validate a relative recipe path according to SDK 1.2.0 / 1.3.0 and Windows safety rules."""
     if not isinstance(value, str) or not value:
         return False, "must be a non-empty string"
     if len(value) > 240:
         return False, "exceeds maxLength 240"
     if "\\" in value or value.startswith("/"):
         return False, "must be a forward-slash relative path"
-    if not RE_RECIPE_PATH.match(value):
+    pattern = RE_RECIPE_PATH_V5 if allow_v5_chars else RE_RECIPE_PATH
+    if not pattern.match(value):
         return False, "fails SDK path grammar (spaces or disallowed characters)"
     for segment in value.split("/"):
-        if segment in {".", ".."}:
+        if segment in {".", ".."} or ".." in segment.split("."):
             return False, f"disallowed traversal segment '{segment}'"
-        stem = segment.split(".", 1)[0].upper()
+        stem = segment.split(".", 1)[0].rstrip(" ").upper()
         if stem in WINDOWS_RESERVED_NAMES:
             return False, f"disallowed Windows reserved device name '{segment}'"
     return True, ""
@@ -107,6 +129,7 @@ def load_schema_registry(schemas_dir: Path) -> tuple[dict[str, dict[str, Any]], 
         2: "installation-recipe-v2.schema.json",
         3: "installation-recipe-v3.schema.json",
         4: "installation-recipe-v4.schema.json",
+        5: "installation-recipe-v5.schema.json",
     }
     schemas: dict[Any, dict[str, Any]] = {}
     for key, filename in schema_files.items():
@@ -118,11 +141,11 @@ def load_schema_registry(schemas_dir: Path) -> tuple[dict[str, dict[str, Any]], 
     registry = None
     if HAS_JSONSCHEMA:
         resources = []
-        for filename in schema_files.values():
-            doc = json.loads((schemas_dir / filename).read_text(encoding="utf-8"))
+        for jf in sorted(schemas_dir.glob("*.json")):
+            doc = json.loads(jf.read_text(encoding="utf-8"))
             resource = Resource.from_contents(doc)
-            resources.append((filename, resource))
-            resources.append(((schemas_dir / filename).resolve().as_uri(), resource))
+            resources.append((jf.name, resource))
+            resources.append((jf.resolve().as_uri(), resource))
         registry = Registry().with_resources(resources)
     return schemas, registry
 
@@ -144,17 +167,78 @@ def validate_with_jsonschema(
     return errors
 
 
+def _validate_size_fields(
+    item: dict[str, Any],
+    label: str,
+    item_loc: str,
+    errors: list[str],
+) -> None:
+    """Validate optional integer size/min_size/max_size fields within 1..MAX_TOTAL_DATA_BYTES."""
+    for field in ("size", "min_size", "max_size"):
+        if field in item:
+            val = item[field]
+            if isinstance(val, bool) or not isinstance(val, int) or not (1 <= val <= MAX_TOTAL_DATA_BYTES):
+                errors.append(
+                    f"{label}: {item_loc}.{field} must be integer in 1..{MAX_TOTAL_DATA_BYTES}"
+                )
+    if (
+        isinstance(item.get("min_size"), int)
+        and not isinstance(item.get("min_size"), bool)
+        and isinstance(item.get("max_size"), int)
+        and not isinstance(item.get("max_size"), bool)
+        and item["min_size"] > item["max_size"]
+    ):
+        errors.append(f"{label}: {item_loc}.min_size exceeds max_size")
+
+
+def _has_v5_file_verification(item: dict[str, Any]) -> bool:
+    """Check whether item satisfies one of the four SDK v5 verification contracts."""
+    has_sha256 = isinstance(item.get("sha256"), str) and bool(RE_SHA256.match(item["sha256"]))
+    has_sha1 = isinstance(item.get("sha1"), str) and bool(RE_SHA1.match(item["sha1"]))
+    has_magic = isinstance(item.get("magic_hex"), str) and bool(RE_MAGIC_HEX.match(item["magic_hex"]))
+    has_size = (
+        isinstance(item.get("size"), int)
+        and not isinstance(item.get("size"), bool)
+        and item["size"] >= 1
+    )
+    has_min_size = (
+        isinstance(item.get("min_size"), int)
+        and not isinstance(item.get("min_size"), bool)
+        and item["min_size"] >= 1
+    )
+    return has_sha256 or has_sha1 or (has_size and has_magic) or (has_min_size and has_magic)
+
+
+def _validate_single_segment_v5(
+    value: Any,
+    *,
+    allow_v5_chars: bool,
+    max_length: int = 80,
+) -> bool:
+    """Validate a single folder name segment (no '/')."""
+    if not isinstance(value, str) or not value or len(value) > max_length or "/" in value:
+        return False
+    if not allow_v5_chars:
+        return bool(RE_PROFILE_FOLDER.match(value))
+    return is_safe_relative_path(value, allow_v5_chars=True)[0]
+
+
 def validate_verified_data_files(
     files: Any,
     label: str,
     prefix: str,
+    *,
+    schema_version: int = 4,
+    is_import_set: bool = False,
+    is_first_run: bool = False,
 ) -> list[str]:
-    """Validate SDK v4 verifiedDataFiles array semantics."""
+    """Validate SDK v4/v5 verifiedDataFiles / importFiles / firstRunFiles array semantics."""
     errors: list[str] = []
     if not isinstance(files, list) or not (1 <= len(files) <= 64):
         return [f"{label}: {prefix} must be an array with 1..64 items"]
 
-    seen_paths: set[str] = set()
+    allow_v5 = schema_version >= 5
+    seen_keys: set[tuple[str, str, str]] = set()
     total_size = 0
     for idx, item in enumerate(files):
         item_loc = f"{prefix}[{idx}]"
@@ -162,7 +246,7 @@ def validate_verified_data_files(
             errors.append(f"{label}: {item_loc} must be an object")
             continue
         p = item.get("path")
-        ok, reason = is_safe_relative_path(p)
+        ok, reason = is_safe_relative_path(p, allow_v5_chars=allow_v5)
         if not ok:
             errors.append(f"{label}: {item_loc}.path {reason}")
         else:
@@ -170,20 +254,66 @@ def validate_verified_data_files(
                 errors.append(
                     f"{label}: {item_loc}.path '{p}' has disallowed data file extension"
                 )
-            norm = p.lower()
-            if norm in seen_paths:
-                errors.append(f"{label}: duplicate case-insensitive path '{p}' in {prefix}")
-            seen_paths.add(norm)
 
-        size = item.get("size")
-        if not isinstance(size, int) or isinstance(size, bool) or not (1 <= size <= MAX_TOTAL_DATA_BYTES):
-            errors.append(f"{label}: {item_loc}.size must be integer in 1..{MAX_TOTAL_DATA_BYTES}")
+        if schema_version < 5:
+            size = item.get("size")
+            if not isinstance(size, int) or isinstance(size, bool) or not (1 <= size <= MAX_TOTAL_DATA_BYTES):
+                errors.append(f"{label}: {item_loc}.size must be integer in 1..{MAX_TOTAL_DATA_BYTES}")
+            else:
+                total_size += size
+
+            sha256 = item.get("sha256")
+            if not isinstance(sha256, str) or not RE_SHA256.match(sha256):
+                errors.append(f"{label}: {item_loc}.sha256 must be 64 hex chars")
+
+            if isinstance(p, str):
+                norm_key = ("installation", "", p.lower())
+                if norm_key in seen_keys:
+                    errors.append(f"{label}: duplicate case-insensitive path '{p}' in {prefix}")
+                seen_keys.add(norm_key)
         else:
-            total_size += size
+            _validate_size_fields(item, label, item_loc, errors)
+            if is_import_set and "size" not in item and "max_size" not in item:
+                errors.append(f"{label}: {item_loc} in import_input_set requires size or max_size")
+            if not _has_v5_file_verification(item):
+                errors.append(
+                    f"{label}: {item_loc} requires sha256, sha1, (size + magic_hex), or (min_size + magic_hex)"
+                )
+            if "sha256" in item and (not isinstance(item["sha256"], str) or not RE_SHA256.match(item["sha256"])):
+                errors.append(f"{label}: {item_loc}.sha256 must be 64 hex chars")
+            if "sha1" in item and (not isinstance(item["sha1"], str) or not RE_SHA1.match(item["sha1"])):
+                errors.append(f"{label}: {item_loc}.sha1 must be 40 hex chars")
+            if "magic_hex" in item and (not isinstance(item["magic_hex"], str) or not RE_MAGIC_HEX.match(item["magic_hex"])):
+                errors.append(f"{label}: {item_loc}.magic_hex must be 4..64 hex chars")
 
-        sha256 = item.get("sha256")
-        if not isinstance(sha256, str) or not RE_SHA256.match(sha256):
-            errors.append(f"{label}: {item_loc}.sha256 must be 64 hex chars")
+            quota_size = item.get("size") if isinstance(item.get("size"), int) and not isinstance(item.get("size"), bool) else (
+                item.get("max_size") if isinstance(item.get("max_size"), int) and not isinstance(item.get("max_size"), bool) else 0
+            )
+            total_size += max(0, quota_size)
+
+            scope = "installation"
+            profile_folder = ""
+            if is_first_run:
+                if "scope" in item:
+                    scope_val = item["scope"]
+                    if scope_val not in VALID_PROFILE_SCOPES_V5:
+                        errors.append(f"{label}: {item_loc}.scope invalid '{scope_val}'")
+                    else:
+                        scope = scope_val
+                if scope in {"local_app_data", "roaming_app_data"}:
+                    pf = item.get("profile_folder")
+                    if not _validate_single_segment_v5(pf, allow_v5_chars=True, max_length=80):
+                        errors.append(f"{label}: {item_loc}.profile_folder invalid or missing for scope '{scope}'")
+                    else:
+                        profile_folder = pf
+                elif "profile_folder" in item:
+                    errors.append(f"{label}: {item_loc}.profile_folder is forbidden when scope == 'installation'")
+
+            if isinstance(p, str):
+                norm_key = (scope, profile_folder.lower(), p.lower())
+                if norm_key in seen_keys:
+                    errors.append(f"{label}: duplicate case-insensitive path '{p}' in {prefix}")
+                seen_keys.add(norm_key)
 
     if total_size > MAX_TOTAL_DATA_BYTES:
         errors.append(
@@ -197,7 +327,7 @@ def validate_recipe_semantics(
     entry: dict[str, Any],
     label: str,
 ) -> list[str]:
-    """Validate semantic and cross-field SDK 1.2.0 contracts for v1-v4 recipes."""
+    """Validate semantic and cross-field SDK 1.2.0 / 1.3.0 contracts for v1-v5 recipes."""
     errors: list[str] = []
     if not isinstance(recipe, dict):
         return [f"{label}: root must be a JSON object"]
@@ -220,6 +350,8 @@ def validate_recipe_semantics(
         errors.append(f"{label}: unsupported schema_version '{schema_version}'")
         return errors
 
+    allow_v5 = schema_version >= 5
+
     if schema_version != entry.get("schema_version"):
         errors.append(
             f"{label}: schema_version ({schema_version}) != index entry ({entry.get('schema_version')})"
@@ -236,12 +368,16 @@ def validate_recipe_semantics(
         )
 
     source_url = recipe.get("source_url")
-    expected_prefix = f"https://github.com/{entry.get('repository')}/"
+    repo = entry.get("repository", "")
+    if isinstance(repo, str) and repo.startswith("gitlab:"):
+        expected_prefix = f"https://gitlab.com/{repo[len('gitlab:'):]}/"
+    else:
+        expected_prefix = f"https://github.com/{repo}/"
     if not isinstance(source_url, str) or not source_url.startswith("https://"):
         errors.append(f"{label}: source_url must start with https://")
     elif not source_url.startswith(expected_prefix):
         errors.append(
-            f"{label}: source_url '{source_url}' does not match repository '{entry.get('repository')}'"
+            f"{label}: source_url '{source_url}' does not match repository '{repo}'"
         )
 
     # Validate required_files
@@ -252,7 +388,7 @@ def validate_recipe_semantics(
         errors.append(f"{label}: required_files must have 1..256 items")
     else:
         for idx, rf in enumerate(required_files):
-            ok, reason = is_safe_relative_path(rf)
+            ok, reason = is_safe_relative_path(rf, allow_v5_chars=allow_v5)
             if not ok:
                 errors.append(f"{label}: required_files[{idx}] {reason}")
             else:
@@ -266,13 +402,31 @@ def validate_recipe_semantics(
     if launch_file is not None:
         if schema_version < 3:
             errors.append(f"{label}: launch_file is only supported in schema_version >= 3")
-        ok, reason = is_safe_relative_path(launch_file)
+        ok, reason = is_safe_relative_path(launch_file, allow_v5_chars=allow_v5)
         if not ok:
             errors.append(f"{label}: launch_file {reason}")
-        elif launch_file not in req_file_set:
-            errors.append(
-                f"{label}: launch_file '{launch_file}' must be present in required_files"
-            )
+        else:
+            if launch_file not in req_file_set:
+                errors.append(
+                    f"{label}: launch_file '{launch_file}' must be present in required_files"
+                )
+            if allow_v5 and not launch_file.lower().endswith(".exe"):
+                errors.append(
+                    f"{label}: launch_file '{launch_file}' must point to an .exe file in schema_version >= 5"
+                )
+
+    # Validate prerequisites (v5+)
+    if "prerequisites" in recipe:
+        if schema_version < 5:
+            errors.append(f"{label}: prerequisites requires schema_version >= 5")
+        prereqs = recipe["prerequisites"]
+        if (
+            not isinstance(prereqs, list)
+            or len(prereqs) > 4
+            or len(set(prereqs)) != len(prereqs)
+            or not all(isinstance(p, str) and p in VALID_PREREQUISITES for p in prereqs)
+        ):
+            errors.append(f"{label}: prerequisites must contain up to 4 unique valid runtime IDs")
 
     # Validate manual_steps and index flags
     manual_steps = recipe.get("manual_steps")
@@ -306,35 +460,53 @@ def validate_recipe_semantics(
                 kind = inp.get("kind")
                 if "files" in inp:
                     if schema_version < 4:
-                        errors.append(f"{label}: {loc}.files requires schema_version 4")
+                        errors.append(f"{label}: {loc}.files requires schema_version 4 or 5")
                     if kind != "directory":
                         errors.append(f"{label}: {loc}.files requires kind == 'directory'")
                     if not isinstance(inp.get("name"), str) or not inp["name"]:
                         errors.append(f"{label}: {loc}.name is required")
                     errors.extend(
-                        validate_verified_data_files(inp["files"], label, f"{loc}.files")
+                        validate_verified_data_files(
+                            inp["files"],
+                            label,
+                            f"{loc}.files",
+                            schema_version=schema_version,
+                            is_import_set=True,
+                        )
                     )
                 elif kind is not None:
                     if kind not in {"file", "directory"}:
                         errors.append(f"{label}: {loc}.kind invalid '{kind}'")
                     if not isinstance(inp.get("name"), str) or not inp["name"]:
                         errors.append(f"{label}: {loc}.name is required when kind is set")
-                    has_sha256 = isinstance(inp.get("sha256"), str) and RE_SHA256.match(
-                        inp["sha256"]
-                    )
-                    has_size_magic = (
-                        isinstance(inp.get("size"), int)
-                        and not isinstance(inp.get("size"), bool)
-                        and inp["size"] >= 1
-                        and isinstance(inp.get("magic_hex"), str)
-                        and RE_MAGIC_HEX.match(inp["magic_hex"])
-                    )
-                    if not (has_sha256 or has_size_magic):
-                        errors.append(
-                            f"{label}: {loc} requires sha256 or (size + magic_hex)"
+                    if allow_v5:
+                        _validate_size_fields(inp, label, loc, errors)
+                        if not _has_v5_file_verification(inp):
+                            errors.append(
+                                f"{label}: {loc} requires sha256, sha1, (size + magic_hex), or (min_size + magic_hex)"
+                            )
+                        if "md5" in inp:
+                            if not isinstance(inp["md5"], str) or not RE_MD5.match(inp["md5"]):
+                                errors.append(f"{label}: {loc}.md5 must be 32 hex chars")
+                    else:
+                        has_sha256 = isinstance(inp.get("sha256"), str) and RE_SHA256.match(
+                            inp["sha256"]
                         )
+                        has_size_magic = (
+                            isinstance(inp.get("size"), int)
+                            and not isinstance(inp.get("size"), bool)
+                            and inp["size"] >= 1
+                            and isinstance(inp.get("magic_hex"), str)
+                            and RE_MAGIC_HEX.match(inp["magic_hex"])
+                        )
+                        if not (has_sha256 or has_size_magic):
+                            errors.append(
+                                f"{label}: {loc} requires sha256 or (size + magic_hex)"
+                            )
                     if kind == "directory":
-                        ok, reason = is_safe_relative_path(inp.get("verify_file"))
+                        ok, reason = is_safe_relative_path(
+                            inp.get("verify_file"), allow_v5_chars=allow_v5
+                        )
                         if not ok:
                             errors.append(
                                 f"{label}: {loc}.verify_file {reason} (required for directory)"
@@ -380,7 +552,9 @@ def validate_recipe_semantics(
                 errors.append(f"{label}: {loc} must be an object")
                 continue
             kind = op.get("kind")
-            ok_target, reason_target = is_safe_relative_path(op.get("target"))
+            ok_target, reason_target = is_safe_relative_path(
+                op.get("target"), allow_v5_chars=allow_v5
+            )
             if not ok_target:
                 errors.append(f"{label}: {loc}.target {reason_target}")
 
@@ -388,7 +562,9 @@ def validate_recipe_semantics(
                 if "source" in op:
                     errors.append(f"{label}: {loc} create_directory must not have source")
             elif kind in {"copy", "move"}:
-                ok_src, reason_src = is_safe_relative_path(op.get("source"))
+                ok_src, reason_src = is_safe_relative_path(
+                    op.get("source"), allow_v5_chars=allow_v5
+                )
                 if not ok_src:
                     errors.append(f"{label}: {loc}.source {reason_src}")
             elif kind == "copy_input":
@@ -407,40 +583,57 @@ def validate_recipe_semantics(
                     )
                 else:
                     ref_inp = input_map[src]
-                    has_strong_hash = (
-                        isinstance(ref_inp.get("sha256"), str)
-                        and bool(RE_SHA256.match(ref_inp["sha256"]))
-                    ) or (
-                        isinstance(ref_inp.get("sha1"), str)
-                        and bool(RE_SHA1.match(ref_inp["sha1"]))
-                    )
-                    if not has_strong_hash:
-                        errors.append(
-                            f"{label}: {loc}.source '{src}' requires sha256 or sha1 on referenced input for import_input"
+                    if allow_v5:
+                        if ref_inp.get("kind") is not None and not _has_v5_file_verification(ref_inp):
+                            errors.append(
+                                f"{label}: {loc}.source '{src}' fails v5 verification rules for import_input"
+                            )
+                    else:
+                        has_strong_hash = (
+                            isinstance(ref_inp.get("sha256"), str)
+                            and bool(RE_SHA256.match(ref_inp["sha256"]))
+                        ) or (
+                            isinstance(ref_inp.get("sha1"), str)
+                            and bool(RE_SHA1.match(ref_inp["sha1"]))
                         )
+                        if not has_strong_hash:
+                            errors.append(
+                                f"{label}: {loc}.source '{src}' requires sha256 or sha1 on referenced input for import_input"
+                            )
                 scope = op.get("scope")
-                if scope == "roaming_app_data":
+                allowed_scopes = VALID_PROFILE_SCOPES_V5 if allow_v5 else {"installation", "roaming_app_data"}
+                if scope not in allowed_scopes:
+                    errors.append(f"{label}: {loc}.scope invalid '{scope}'")
+                elif scope in {"roaming_app_data", "local_app_data"}:
                     folders = op.get("profile_folders")
                     if (
                         not isinstance(folders, list)
                         or not (1 <= len(folders) <= 4)
-                        or not all(isinstance(f, str) and RE_PROFILE_FOLDER.match(f) for f in folders)
+                        or not all(
+                            _validate_single_segment_v5(f, allow_v5_chars=allow_v5, max_length=80)
+                            for f in folders
+                        )
                     ):
-                        errors.append(f"{label}: {loc}.profile_folders invalid for roaming_app_data")
+                        errors.append(f"{label}: {loc}.profile_folders invalid for {scope}")
                     target = op.get("target")
-                    if not isinstance(target, str) or not RE_ROAMING_TARGET.match(target):
-                        errors.append(f"{label}: {loc}.target invalid for roaming_app_data")
+                    if allow_v5:
+                        valid_target = (
+                            _validate_single_segment_v5(target, allow_v5_chars=True, max_length=240)
+                            and bool(RE_DATA_TARGET_EXT.search(target))
+                        )
+                    else:
+                        valid_target = isinstance(target, str) and bool(RE_ROAMING_TARGET.match(target))
+                    if not valid_target:
+                        errors.append(f"{label}: {loc}.target invalid for {scope}")
                 elif scope == "installation":
                     if "profile_folders" in op:
                         errors.append(
                             f"{label}: {loc}.profile_folders is forbidden when scope == 'installation'"
                         )
-                else:
-                    errors.append(f"{label}: {loc}.scope invalid '{scope}'")
             elif kind == "import_input_set":
                 if schema_version < 4:
                     errors.append(
-                        f"{label}: {loc} import_input_set requires schema_version 4"
+                        f"{label}: {loc} import_input_set requires schema_version 4 or 5"
                     )
                 if op.get("scope") != "installation":
                     errors.append(f"{label}: {loc}.scope must be 'installation'")
@@ -448,22 +641,26 @@ def validate_recipe_semantics(
                 inp = input_map.get(src) if isinstance(src, str) else None
                 if not inp or inp.get("kind") != "directory" or "files" not in inp:
                     errors.append(
-                        f"{label}: {loc}.source '{src}' must reference a v4 directory input with 'files'"
+                        f"{label}: {loc}.source '{src}' must reference a directory input with 'files'"
                     )
             else:
                 errors.append(f"{label}: {loc}.kind unknown '{kind}'")
 
-    # Validate v4 first_run_files
+    # Validate v4/v5 first_run_files
     if "first_run_files" in recipe:
         if schema_version < 4:
-            errors.append(f"{label}: first_run_files requires schema_version 4")
+            errors.append(f"{label}: first_run_files requires schema_version 4 or 5")
         if not (isinstance(manual_steps, str) and manual_steps.strip()):
             errors.append(f"{label}: first_run_files requires non-empty manual_steps")
         if not launch_file:
             errors.append(f"{label}: first_run_files requires launch_file")
         errors.extend(
             validate_verified_data_files(
-                recipe["first_run_files"], label, "first_run_files"
+                recipe["first_run_files"],
+                label,
+                "first_run_files",
+                schema_version=schema_version,
+                is_first_run=True,
             )
         )
 
@@ -471,7 +668,7 @@ def validate_recipe_semantics(
 
 
 def load_catalog_lookup(catalog_source: str) -> dict[tuple[str, str], str]:
-    """Load (game_id, project_id) -> github_repository from local path or HTTPS URL."""
+    """Load (game_id, project_id) -> repository (GitHub owner/repo or gitlab:group/project) from local path or HTTPS URL."""
     if catalog_source.startswith("https://"):
         req = urllib.request.Request(
             catalog_source,
@@ -489,6 +686,12 @@ def load_catalog_lookup(catalog_source: str) -> dict[tuple[str, str], str]:
             proj_id = proj.get("id")
             src = proj.get("source") or {}
             repo = src.get("github_repository") or ""
+            if not repo and src.get("provider") == "gitlab":
+                url = src.get("url") or ""
+                if url.startswith("https://gitlab.com/"):
+                    gitlab_path = url[len("https://gitlab.com/"):].split("/-/", 1)[0].strip("/")
+                    if gitlab_path:
+                        repo = f"gitlab:{gitlab_path}"
             if game_id and proj_id:
                 lookup[(game_id, proj_id)] = repo
     return lookup

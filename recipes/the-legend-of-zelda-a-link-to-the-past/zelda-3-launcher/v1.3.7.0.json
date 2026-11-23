@@ -1,0 +1,16 @@
+{
+  "schema_version": 5,
+  "project_id": "zelda-3-launcher",
+  "tag": "v1.3.7.0",
+  "source_url": "https://github.com/RadzPrower/Zelda-3-Launcher/releases/tag/v1.3.7.0",
+  "operations": [],
+  "required_files": [
+    "Zelda 3 Launcher.exe",
+    "Zelda 3 Launcher.dll",
+    "SDL2.dll",
+    "LibGit2Sharp.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O Zelda 3 Launcher (v1.3.7.0) foi extraido. Execute 'Zelda 3 Launcher.exe', clique em Download e selecione sua ROM original norte-americana (US) de The Legend of Zelda: A Link to the Past (SHA-256 oficial 66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb) no seletor do launcher (ou copie-a como zelda3.sfc ao lado do executavel) para baixar e compilar localmente. Nenhuma ROM e fornecida.",
+  "launch_file": "Zelda 3 Launcher.exe"
+}

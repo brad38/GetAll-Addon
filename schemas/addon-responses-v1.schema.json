@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "responses"
+  ],
+  "properties": {
+    "responses": {
+      "type": "array",
+      "maxItems": 256,
+      "items": {
+        "type": "object",
+        "required": [
+          "capability",
+          "match",
+          "result"
+        ],
+        "properties": {
+          "capability": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$",
+            "maxLength": 100
+          },
+          "match": {
+            "type": "object"
+          },
+          "result": {
+            "type": "object"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "installation.recipe.remote"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "match": {
+                  "maxProperties": 0
+                },
+                "result": {
+                  "type": "object",
+                  "required": [
+                    "index_path"
+                  ],
+                  "properties": {
+                    "repository": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9-]+/[A-Za-z0-9_.-]+$",
+                      "maxLength": 200
+                    },
+                    "ref": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9_.-]{1,100}$"
+                    },
+                    "base_url": {
+                      "type": "string",
+                      "pattern": "^https://.+/$",
+                      "maxLength": 512
+                    },
+                    "index_path": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 240,
+                      "pattern": "^[A-Za-z0-9_][A-Za-z0-9_.-]*(/[A-Za-z0-9_][A-Za-z0-9_.-]*)*\\.json$"
+                    }
+                  },
+                  "oneOf": [
+                    {
+                      "required": [
+                        "repository",
+                        "ref"
+                      ],
+                      "not": {
+                        "required": [
+                          "base_url"
+                        ]
+                      }
+                    },
+                    {
+                      "required": [
+                        "base_url"
+                      ],
+                      "not": {
+                        "anyOf": [
+                          {
+                            "required": [
+                              "repository"
+                            ]
+                          },
+                          {
+                            "required": [
+                              "ref"
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

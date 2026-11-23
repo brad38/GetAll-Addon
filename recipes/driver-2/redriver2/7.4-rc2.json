@@ -1,0 +1,21 @@
+{
+  "schema_version": 5,
+  "project_id": "redriver2",
+  "tag": "7.4-rc2",
+  "source_url": "https://github.com/OpenDriver2/REDRIVER2/releases/tag/7.4-rc2",
+  "operations": [],
+  "required_files": [
+    "Launcher.exe",
+    "REDRIVER2.exe",
+    "SDL2.dll",
+    "OpenAL32.dll",
+    "config.ini",
+    "install/jpsxdec.jar"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial REDRIVER2 (7.4-rc2) foi extraido. Com Java instalado (jpsxdec), execute Launcher.exe, abra 'Setup wizard', selecione as imagens originais dos dois discos PS1 (CD1 e CD2 de Driver 2, formato .bin/.cue ou .iso) e conclua a extracao antes de clicar em 'Launch game'. Nenhuma imagem de disco e fornecida pelo GetAll-Addon.",
+  "launch_file": "Launcher.exe",
+  "prerequisites": [
+    "java-21"
+  ]
+}

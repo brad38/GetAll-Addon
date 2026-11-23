@@ -1,0 +1,41 @@
+{
+  "schema_version": 5,
+  "project_id": "vandalhearts-pcport",
+  "tag": "v2.1.0",
+  "source_url": "https://github.com/HalmyLyseas/VandalHearts-PcPort/releases/tag/v2.1.0",
+  "operations": [
+    {
+      "kind": "create_directory",
+      "target": "game"
+    },
+    {
+      "kind": "import_input",
+      "scope": "installation",
+      "source": "disc-bin",
+      "target": "game/vandalhearts.bin"
+    }
+  ],
+  "required_files": [
+    "vandalhearts_pc.exe",
+    "SDL2.dll",
+    "OpenAL32.dll",
+    "vandalhearts.ini"
+  ],
+  "inputs": [
+    {
+      "id": "disc-bin",
+      "kind": "file",
+      "name": "Imagem BIN PS1 de Vandal Hearts (USA SLUS-00447, Asia SCPS-45183 ou Japan SLPM-86007)",
+      "description": "Selecione o dump bruto MODE2/2352 (.bin) do disco de Vandal Hearts (USA, Asia ou Japan; a edicao europeia SLES-00204 nao e suportada). Sera importado para game/vandalhearts.bin.",
+      "extensions": [
+        ".bin"
+      ],
+      "required": true,
+      "min_size": 104857600,
+      "max_size": 734003200,
+      "magic_hex": "00FFFFFFFFFFFFFFFFFFFF00"
+    }
+  ],
+  "manual_steps": "O pacote oficial de Vandal Hearts PC Port (v2.1.0) e sua imagem .bin foram preparados em game/vandalhearts.bin (compativel apenas com USA SLUS-00447, Asia SCPS-45183 ou Japan SLPM-86007; Europe SLES-00204 nao e suportada). Inicie vandalhearts_pc.exe para verificar o disco e jogar.",
+  "launch_file": "vandalhearts_pc.exe"
+}
