@@ -1,0 +1,14 @@
+{
+  "schema_version": 3,
+  "project_id": "lighthouse",
+  "tag": "1.2.2",
+  "source_url": "https://github.com/HarbourMasters/Lighthouse/releases/tag/1.2.2",
+  "operations": [],
+  "required_files": [
+    "Lighthouse.exe",
+    "lighthouse.o2r"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Lighthouse foi extraido. Abra Lighthouse.exe na pasta instalada e selecione sua ROM legitima e compativel de Banjo-Kazooie no formato .z64 (US v1.0/v1.1, JP ou PAL, segundo o README). O jogo gera os recursos localmente. Nenhuma ROM e fornecida.",
+  "launch_file": "Lighthouse.exe"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "banjo-recompiled",
+  "tag": "v1.0.2",
+  "source_url": "https://github.com/BanjoRecomp/BanjoRecomp/releases/tag/v1.0.2",
+  "operations": [],
+  "required_files": [
+    "BanjoRecompiled.exe",
+    "dxil.dll",
+    "dxcompiler.dll",
+    "SDL2.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Banjo Recompiled foi extraido. Abra BanjoRecompiled.exe na pasta instalada e forneca sua ROM original de Banjo-Kazooie USA v1.0 no menu inicial. O jogo carrega os recursos dessa copia; a ROM nao esta incluida.",
+  "launch_file": "BanjoRecompiled.exe"
+}

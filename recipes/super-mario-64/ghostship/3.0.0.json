@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "ghostship",
+  "tag": "3.0.0",
+  "source_url": "https://github.com/HarbourMasters/Ghostship/releases/tag/3.0.0",
+  "operations": [],
+  "required_files": [
+    "Ghostship.exe",
+    "ghostship.o2r",
+    "shaderc_shared.dll",
+    "tcc.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial do Ghostship foi extraido. Para jogar, abra Ghostship.exe a partir da pasta do jogo e selecione sua propria ROM legitima de Super Mario 64 US ou JP, formato .z64. O jogo valida a ROM e gera os recursos localmente. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "launch_file": "Ghostship.exe"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 3,
+  "project_id": "2-ship-2-harkinian-2s2h",
+  "tag": "5.0.1",
+  "source_url": "https://github.com/2ship2harkinian/2ship2harkinian/releases/tag/5.0.1",
+  "operations": [],
+  "required_files": [
+    "2ship.exe",
+    "2ship.o2r"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial 2 Ship 2 Harkinian foi extraido. Abra 2ship.exe na pasta instalada e forneca sua ROM legitima e compativel de Zelda Majora's Mask quando o aplicativo solicitar. Consulte 2ship.equipment para verificar a compatibilidade. Nenhuma ROM e fornecida.",
+  "launch_file": "2ship.exe"
+}

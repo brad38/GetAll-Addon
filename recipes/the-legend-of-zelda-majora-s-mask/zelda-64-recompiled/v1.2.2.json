@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "zelda-64-recompiled",
+  "tag": "v1.2.2",
+  "source_url": "https://github.com/Zelda64Recomp/Zelda64Recomp/releases/tag/v1.2.2",
+  "operations": [],
+  "required_files": [
+    "Zelda64Recompiled.exe",
+    "dxcompiler.dll",
+    "dxil.dll",
+    "SDL2.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Zelda64 Recompiled foi extraido. No primeiro uso, abra Zelda64Recompiled.exe na pasta instalada e forneca sua copia legitima norte-americana de Zelda Majora's Mask no menu do jogo. O projeto carrega os recursos da ROM selecionada e nao fornece o jogo original.",
+  "launch_file": "Zelda64Recompiled.exe"
+}

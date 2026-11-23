@@ -1,0 +1,17 @@
+{
+  "schema_version": 3,
+  "project_id": "recharged",
+  "tag": "v1.1.7",
+  "source_url": "https://github.com/previouslevelgames/recharged/releases/tag/v1.1.7",
+  "operations": [],
+  "required_files": [
+    "recharged.exe",
+    "d3dcompiler_47.dll",
+    "dxcompiler.dll",
+    "dxil.dll",
+    "recharged_game_us.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Recharged foi extraido. Execute recharged.exe na pasta instalada e, no launcher, adicione a pasta que contem a imagem legitima do disco Mario Strikers Charged (ISO, RVZ ou WBFS de regiao suportada). Clique em Play no launcher. A imagem do disco nao e distribuida nem importada pelo GetAll-Addon.",
+  "launch_file": "recharged.exe"
+}

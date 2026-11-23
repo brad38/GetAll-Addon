@@ -1,0 +1,17 @@
+{
+  "schema_version": 3,
+  "project_id": "banjo-tooie-recompiled",
+  "tag": "v1.0.1",
+  "source_url": "https://github.com/Vidanox/BanjoTooieRecompiled/releases/tag/v1.0.1",
+  "operations": [],
+  "required_files": [
+    "BanjoTooieRecompiled.exe",
+    "dxcompiler.dll",
+    "dxil.dll",
+    "SDL2.dll",
+    "assets/LatoLatin-Regular.ttf"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Banjo-Tooie Recompiled foi extraido. Execute BanjoTooieRecompiled.exe a partir da pasta instalada, que contem assets/, e escolha Select ROM no primeiro uso. Use sua ROM original USA .z64 de 33554432 bytes (SHA-1 AF1A89E12B638B8D82CC4C085C8E01D4CBA03FB3). O jogo le a ROM sem copia-la; nenhuma ROM e distribuida.",
+  "launch_file": "BanjoTooieRecompiled.exe"
+}

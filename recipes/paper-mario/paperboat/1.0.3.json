@@ -1,0 +1,15 @@
+{
+  "schema_version": 3,
+  "project_id": "paperboat",
+  "tag": "1.0.3",
+  "source_url": "https://github.com/HarbourMasters/PaperBoat/releases/tag/1.0.3",
+  "operations": [],
+  "required_files": [
+    "Paperboat.exe",
+    "paperboat.o2r",
+    "shaderc_shared.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial PaperBoat foi extraido. Para concluir a primeira inicializacao, abra Paperboat.exe na pasta do jogo e forneca sua ROM legitima e compativel de Paper Mario USA quando solicitada. O projeto faz a importacao de recursos no proprio aplicativo. Nenhuma ROM e distribuida.",
+  "launch_file": "Paperboat.exe"
+}

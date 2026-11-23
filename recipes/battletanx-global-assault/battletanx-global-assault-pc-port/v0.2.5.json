@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "project_id": "battletanx-global-assault-pc-port",
+  "tag": "v0.2.5",
+  "source_url": "https://github.com/TheGh0stShip/BattleTanx-Global-Assault-PC-Port/releases/tag/v0.2.5",
+  "operations": [],
+  "required_files": [
+    "BattleTanxGA-0.2.5-windows-x64-portable/BattleTanxGA.exe",
+    "BattleTanxGA-0.2.5-windows-x64-portable/SDL2.dll",
+    "BattleTanxGA-0.2.5-windows-x64-portable/dxcompiler.dll",
+    "BattleTanxGA-0.2.5-windows-x64-portable/dxil.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial BattleTanx Global Assault PC Port foi extraido. Abra BattleTanxGA.exe a partir da subpasta original da Release, selecione sua ROM legitima BattleTanx Global Assault USA Rev 0 .z64 no primeiro uso e conclua a verificacao realizada pelo proprio jogo. O programa usa diretamente o caminho da ROM. Nenhuma ROM e incluida.",
+  "launch_file": "BattleTanxGA-0.2.5-windows-x64-portable/BattleTanxGA.exe"
+}

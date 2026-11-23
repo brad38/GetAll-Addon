@@ -1,0 +1,14 @@
+{
+  "schema_version": 3,
+  "project_id": "starship",
+  "tag": "v2.0.0",
+  "source_url": "https://github.com/HarbourMasters/Starship/releases/tag/v2.0.0",
+  "operations": [],
+  "required_files": [
+    "Starship.exe",
+    "starship.o2r"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Starship foi extraido. Para jogar, abra Starship.exe na pasta instalada e selecione sua ROM original de Star Fox 64 USA v1.0 ou v1.1 em formato .z64; o projeto cria os recursos localmente. ROMs JP/EU nao sao aceitas como base. Nenhuma ROM e fornecida.",
+  "launch_file": "Starship.exe"
+}
