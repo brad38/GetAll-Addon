@@ -1,3 +1,9 @@
+# Rodada 18 — missão contínua de conclusão (24/11/2026)
+
+SDK 1.5.9 / Desktop 3.0.0. Privado ce3edac8dea0b1d73e2568293a914358bb2d451f; receitas 714cec7f6bfa176ae69986be77c1b8aa23c175f8. 130/145 projetos, 131 receitas, 15 sem receita. SSX/Pinyon/GTA Stories/DOAX: pipelines integrados, preflights reais aprovados. GT5 ISO9660 legível e packs Render96 integrados. 395 PASS C#, parser 131/131, JS PASS e Release x64 limpo. Sem novos builds integrais, instalações jogáveis ou boots homologados. Executável publish-r18-continued/AllFix.exe; hash e pendências executáveis em [RODADA-18.md](RODADA-18.md). Retomar God of War, RyGT, SpartanPort, Odyssey, MKW e restantes viáveis, sem nova rodada.
+
+---
+
 # Rodada 18 — checkpoint contínuo de 24/11/2026 (11:33 BRT)
 
 SDK 1.5.9 / Desktop 3.0.0. Receitas fixadas: 714cec7f6bfa176ae69986be77c1b8aa23c175f8. Desktop privado: 051e32c57052bac012184446b8212f8e4e56b316. Cobertura nominal permanece 130/145 (89,66%), 131 receitas, 15 sem receita e 15 kits v9. SSX, Pinyon Shift, GTA Stories e ISO9660 PS3 legível integrados nos commits posteriores a LAS; testes negativos oficiais e fixtures, não jogos completos. Render96ex: packs opcionais oficiais fixados e importados em teste real (121 modelos, 2360 texturas), integração local após build, sem redistribuição. 392 PASS C#, parser 131/131, JS PASS, Release x64 self-contained de árvore limpa. Windows CI #11 aprovado; #12 iniciado para 051e32c. Novo candidato local: C:\Users\bradg\Downloads\GetAll-R18\publish-r18-combined\AllFix.exe, 77585251 bytes, SHA256 f24cf8801c739a4e685209da97c63aaa16a66118fcdb679164e1ca11af994f4a. Nenhum jogo integral, instalação completa, boot ou homologação novos. Retomar diretamente DOAX/God of War, RyGT/SpartanPort, Odyssey/MKW, receitas restantes, GT5 SELF/PUP, SM64 Windows limpo, Bananza retomada positiva e UI WPF. [Detalhes](RODADA-18.md) e [matriz](COBERTURA-R18.md). Sem merge, release, DownloadAll ou alteração do EXE instalado.
