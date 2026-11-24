@@ -1476,6 +1476,18 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "super-metroid",
+      "project_id": "sm",
+      "repository": "snesrev/sm",
+      "tag": "build-578f90b",
+      "schema_version": 5,
+      "path": "recipes/super-metroid/sm/build-578f90b.json",
+      "sha256": "b9b867fb4c6e9375b92066488e27917c4d16dc435b4dafc276876ed87621ee8e",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "schema_version": 5,
+  "project_id": "sm",
+  "tag": "build-578f90b",
+  "source_url": "https://github.com/snesrev/sm/commit/578f90b3cc49557bb70060ad033bb90b8cf8ac50",
+  "operations": [],
+  "required_files": [
+    "sm.exe",
+    "SDL2.dll",
+    "sm.ini",
+    "LICENSE.txt",
+    "README.md"
+  ],
+  "inputs": [],
+  "launch_file": "sm.exe",
+  "manual_steps": "Compilacao local do port MIT. Requer Visual Studio 2022 Build Tools C++ e Windows SDK. Use Retomar e selecione sua propria ROM Super Metroid sem cabecalho, SHA-1 da957f0d63d14cb441d215462904c4fa8519c613. Nenhuma ROM incluida."
+}
