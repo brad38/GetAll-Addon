@@ -1,0 +1,13 @@
+{
+  "schema_version": 5,
+  "project_id": "render96ex",
+  "tag": "build-48da5c4",
+  "source_url": "https://github.com/Render96/Render96ex/commit/48da5c491c8abfb2f5192b59278c1c269411e533",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Compilacao experimental local. Requer Docker Desktop com toolchain All-Fix SM64 aprovada. Use Retomar e selecione sua ROM original USA big-endian (.z64). Nenhuma ROM incluida. O renderer e os argumentos sao fixados pelo Desktop."
+}

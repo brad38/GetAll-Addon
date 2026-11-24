@@ -9,6 +9,9 @@
     "index_format_version": {
       "const": 1
     },
+    "channel": {
+      "enum": ["public", "preview"]
+    },
     "recipes": {
       "type": "array",
       "maxItems": 2048,
@@ -46,6 +49,11 @@
           "schema_version": {
             "type": "integer",
             "minimum": 1
+          },
+          "min_sdk_version": {
+            "type": "string",
+            "maxLength": 32,
+            "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
           },
           "path": {
             "allOf": [

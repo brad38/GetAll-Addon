@@ -1,5 +1,6 @@
 {
   "index_format_version": 1,
+  "channel": "preview",
   "recipes": [
     {
       "game_id": "super-mario-64",
@@ -1175,7 +1176,8 @@
       "sha256": "a0e9724ae96d74b6252e4d060ccdb3fd70f5bf2e0ca77e0ed5c4c732b21ccd2a",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
     },
     {
       "game_id": "the-legend-of-zelda-tears-of-the-kingdom",
@@ -1187,7 +1189,8 @@
       "sha256": "173da52fe07d90ae1b688e06d6ba5a79d51d08ae86bf2dbf6bb4095ebf1255b9",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
     },
     {
       "game_id": "forza-horizon",
@@ -1199,7 +1202,8 @@
       "sha256": "8bc5fcbcbb921cb2dc0cdd49c2f3da85cf398991bf6f302bd6df8a0b73921b11",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
     },
     {
       "game_id": "dead-or-alive-xtreme-beach-volleyball",
@@ -1211,7 +1215,8 @@
       "sha256": "681d3726bef9bf3316b811abc7bc7a96c961ca94d38c49fc00898d5231727d1f",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
     },
     {
       "game_id": "gran-turismo-4",
@@ -1271,7 +1276,8 @@
       "sha256": "dec9f31797a7eea6aeee0761011588d4151c26322e0686c388deb67f5c5a128a",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
     },
     {
       "game_id": "the-legend-of-zelda-link-s-awakening",
@@ -1283,7 +1289,8 @@
       "sha256": "c7ed6f5da7528145a3e08ccb1386b60fc363ca445e8eb3f0e27ca136a44e8473",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
     },
     {
       "game_id": "gears-of-war-2",
@@ -1307,7 +1314,8 @@
       "sha256": "c09b0c408a73c7feeca4e6a1a2901751bc54403c4a15cba97ed890b2fae1105d",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
     },
     {
       "game_id": "gran-turismo-7",
@@ -1319,7 +1327,8 @@
       "sha256": "f5ec373c1e6fea79ae91ee20b82b8095e993778dbbcaf0574224baff2538b5c0",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
     },
     {
       "game_id": "god-of-war-iii-remastered",
@@ -1331,7 +1340,8 @@
       "sha256": "7baf7be97b1b68174999f097c5b82014ee6dd17c3dde4eb5bdae67e7a478a18a",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
     },
     {
       "game_id": "the-last-guardian",
@@ -1391,7 +1401,8 @@
       "sha256": "85ec43bf3879c990ebd756ba5183b0f788526aaf12ff57379179a39e85941355",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
     },
     {
       "game_id": "donkey-kong-bananza",
@@ -1403,7 +1414,8 @@
       "sha256": "c1dc79e23d7bd50ba3cfc287bf7a4bd54778912f2e1d8a6b6f9a92d9590a03f2",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
     },
     {
       "game_id": "mario-kart-world",
@@ -1415,7 +1427,8 @@
       "sha256": "10fcf81a125218c068c2a8a50b764a61e87da977fab75222ffc4ddd819cf42d6",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
     },
     {
       "game_id": "pt",
@@ -1437,6 +1450,265 @@
       "schema_version": 9,
       "path": "recipes/sonic-adventure/sarecomp-sonic-adventure-recompiled/v0.52.0.json",
       "sha256": "a9ca6e1a48098d1abcd395fefe66a43b20364c6558543adeafe5ae6db000e883",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
+    },
+    {
+      "game_id": "forza-horizon",
+      "project_id": "fh1-reimagined",
+      "repository": "FH1-ReImagined/ForzaHorizon1-ReImagined",
+      "tag": "v0.3.9",
+      "schema_version": 9,
+      "path": "recipes/forza-horizon/fh1-reimagined/v0.3.9.json",
+      "sha256": "2b7de0011cfbf6c41d90db177cb8363cd5ac88f13e0608c91eacae466b921bb9",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
+    },
+    {
+      "game_id": "mega-man-legends-rockman-dash",
+      "project_id": "mega-man-legends-modernization-project",
+      "repository": "Drakfix/MML_Modernization-Project",
+      "tag": "v0.9.6-beta",
+      "schema_version": 9,
+      "path": "recipes/mega-man-legends-rockman-dash/mega-man-legends-modernization-project/v0.9.6-beta.json",
+      "sha256": "9063ad95b688d2c73f2876a620592b17b19c3f1c8122e803da805a5d2387e999",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.10"
+    },
+    {
+      "game_id": "crash-team-racing",
+      "project_id": "crash-team-racing-turbocharged",
+      "repository": "CameronRedmore/Crash-Team-Racing-Turbocharged",
+      "tag": "build-07d0c49",
+      "schema_version": 5,
+      "path": "recipes/crash-team-racing/crash-team-racing-turbocharged/build-07d0c49.json",
+      "sha256": "7968a649b008f329b266e431ef7c9f899967b6f2eb47c7401457d65a48c97c4b",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "super-metroid",
+      "project_id": "sm",
+      "repository": "snesrev/sm",
+      "tag": "build-578f90b",
+      "schema_version": 5,
+      "path": "recipes/super-metroid/sm/build-578f90b.json",
+      "sha256": "b9b867fb4c6e9375b92066488e27917c4d16dc435b4dafc276876ed87621ee8e",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "super-metroid",
+      "project_id": "sm-rewrite",
+      "repository": "testyourmine/sm_rewrite",
+      "tag": "build-5237873",
+      "schema_version": 5,
+      "path": "recipes/super-metroid/sm-rewrite/build-5237873.json",
+      "sha256": "3e1a8728b6d7b7ef4fe9731f860077e79cecc9d442cb56e19520958744baee0f",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "mario-kart-double-dash",
+      "project_id": "mariokartdd-recomp",
+      "repository": "ethannicholas/mariokartdd-recomp",
+      "tag": "build-bd36eb9",
+      "schema_version": 5,
+      "path": "recipes/mario-kart-double-dash/mariokartdd-recomp/build-bd36eb9.json",
+      "sha256": "d684e4ce5bab210d6fd4712ebdb475a2384dc9f262e09bad56d56ebafa9a12c3",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "super-mario-64",
+      "project_id": "sm64ex",
+      "repository": "sm64pc/sm64ex",
+      "tag": "build-d7ca2c0",
+      "schema_version": 5,
+      "path": "recipes/super-mario-64/sm64ex/build-d7ca2c0.json",
+      "sha256": "119029a6223a585df320481c7a5c947af883d4e1c6a694a7d427558fb1bef38d",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "super-mario-64",
+      "project_id": "render96ex",
+      "repository": "Render96/Render96ex",
+      "tag": "build-48da5c4",
+      "schema_version": 5,
+      "path": "recipes/super-mario-64/render96ex/build-48da5c4.json",
+      "sha256": "a42fb7b94f9aeb316e4ab10bd6e5e30d4dd68738fa5341a9766971d058d555a0",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "super-mario-64",
+      "project_id": "sm64rt",
+      "repository": "DarioSamo/sm64rt",
+      "tag": "build-20e618b",
+      "schema_version": 5,
+      "path": "recipes/super-mario-64/sm64rt/build-20e618b.json",
+      "sha256": "92a254a2bf45e12c4004a1668755efc6edd0651c5ef4ff302315b204cd73147b",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "burnout-3-takedown",
+      "project_id": "burnout3-recomp",
+      "repository": "sp00nznet/burnout3",
+      "tag": "build-3c85ed7",
+      "schema_version": 5,
+      "path": "recipes/burnout-3-takedown/burnout3-recomp/build-3c85ed7.json",
+      "sha256": "c9b6fefb5fe6b80fe95bc7efd803b61f26e5cf62802df3a18bdd5c2d5bcd53b7",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "gran-turismo-5",
+      "project_id": "gt5-recomp",
+      "repository": "MormonFTP-hub/gt5-recomp",
+      "tag": "build-64ca169",
+      "schema_version": 5,
+      "path": "recipes/gran-turismo-5/gt5-recomp/build-64ca169.json",
+      "sha256": "cf42aafcefda951c1e482d330d44b4b4fa9d87403f3f8179bffba800beb76331",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "god-of-war-2005",
+      "project_id": "god-of-war-recomp",
+      "repository": "KIexster/god-of-war-recomp",
+      "tag": "build-d1d11ec",
+      "schema_version": 5,
+      "path": "recipes/god-of-war-2005/god-of-war-recomp/build-d1d11ec.json",
+      "sha256": "e161384f6524544dee63a85b4faeb0b5fa96563c9ad1bc0bf3252c48050babd9",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "mario-strikers-charged",
+      "project_id": "strikers-wiicompiled",
+      "repository": "BlackAndBlue95/Strikers-WiiCompiled",
+      "tag": "build-451e06b",
+      "schema_version": 5,
+      "path": "recipes/mario-strikers-charged/strikers-wiicompiled/build-451e06b.json",
+      "sha256": "af64b4cc65732aa5efec7a8461732248a363067dd54a284dbce4f08d5d0ae43e",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "super-mario-strikers",
+      "project_id": "strikersrecomp",
+      "repository": "aharonahdoot/StrikersRecomp",
+      "tag": "build-cd88f71",
+      "schema_version": 5,
+      "path": "recipes/super-mario-strikers/strikersrecomp/build-cd88f71.json",
+      "sha256": "6a69efa0322729df3ca2d4126f292d09c64cd16ae8100745b521d2eda4dca75b",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "mario-kart-double-dash",
+      "project_id": "mkdd-recomp",
+      "repository": "LeftInWalmart/MKDD-Recomp",
+      "tag": "build-e173ce4",
+      "schema_version": 5,
+      "path": "recipes/mario-kart-double-dash/mkdd-recomp/build-e173ce4.json",
+      "sha256": "113a82e515fae56573570abb1c61694fb6ff2d886e7ae21baee5bd0b7f10493e",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "wipeout",
+      "project_id": "wipeout-rewrite",
+      "repository": "phoboslab/wipeout-rewrite",
+      "tag": "build-b425ecb",
+      "schema_version": 5,
+      "path": "recipes/wipeout/wipeout-rewrite/build-b425ecb.json",
+      "sha256": "82abe250b027b9f9d6883f4a650cc85e3ebcea41d1672534889e36494acef00c",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "the-legend-of-zelda-ocarina-of-time",
+      "project_id": "hookshot-zelda-oot-port",
+      "repository": "ZuanCrisp/Zelda-OOT-Port",
+      "tag": "v3.0.2",
+      "schema_version": 9,
+      "path": "recipes/the-legend-of-zelda-ocarina-of-time/hookshot-zelda-oot-port/v3.0.2.json",
+      "sha256": "21d6b90471e08177bbb49bd4d70e21036e12c6a4cd05ca3a230e35530b2ee088",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.11"
+    },
+    {
+      "game_id": "sonic-the-hedgehog-1-2-2013",
+      "project_id": "sonic-1-forever-sonic-2-absolute",
+      "repository": "TeamForeverDev/Sonic1Forever",
+      "tag": "v1.5.2-v1.2.2",
+      "schema_version": 9,
+      "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-1-forever-sonic-2-absolute/v1.5.2-v1.2.2.json",
+      "sha256": "c3b2317522899e5e570b7c3509e417818204d81085ccdfa7a355d0de1733c67d",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.11"
+    },
+    {
+      "game_id": "sonic-the-hedgehog-1-2-2013",
+      "project_id": "sonic-1-forever",
+      "repository": "TeamForeverDev/Sonic1Forever",
+      "tag": "v1.5.2",
+      "schema_version": 9,
+      "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-1-forever/v1.5.2.json",
+      "sha256": "6561526792ca7d71039eaf9672835339ee982c1cc2e57281e007ad1ae7dd847f",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.11"
+    },
+    {
+      "game_id": "sonic-the-hedgehog-1-2-2013",
+      "project_id": "sonic-2-absolute",
+      "repository": "TeamForeverDev/Sonic2Absolute",
+      "tag": "v1.2.2",
+      "schema_version": 9,
+      "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-2-absolute/v1.2.2.json",
+      "sha256": "92e3a744b5b73539c97c69d899c1328b6a2d79ecf90c16b2dd26d2c808ca9a82",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.11"
+    },
+    {
+      "game_id": "spider-man-edge-of-time",
+      "project_id": "edge-of-time-recomp",
+      "repository": "goliathret/EdgeOfTimeRecomp",
+      "tag": "v1.1",
+      "schema_version": 5,
+      "path": "recipes/spider-man-edge-of-time/edge-of-time-recomp/v1.1.json",
+      "sha256": "a556ae37c23c220d622faccdcc06e5ffef4f884945b8cdf113651ff387a607ed",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

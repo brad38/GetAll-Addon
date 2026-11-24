@@ -392,6 +392,176 @@
           }
         ]
       }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "fh1-reimagined",
+        "tag": "v0.3.9",
+        "source_url": "https://github.com/FH1-ReImagined/ForzaHorizon1-ReImagined/releases/tag/v0.3.9",
+        "operations": [],
+        "required_files": [
+          "forza-launcher.exe",
+          "README.txt",
+          "windows-build-manifest.json",
+          "project/forza-recomp/CMakeLists.txt",
+          "project/forza-recomp/forza_manifest.toml",
+          "licenses/ForzaHorizon1-ReImagined.txt"
+        ],
+        "inputs": [],
+        "manual_steps": "Kit oficial do Forza extraido offline e verificado integralmente. O jogo ainda nao foi compilado. Forneca sua propria copia Xbox 360 (ISO, Games on Demand ou pasta extraida), conforme README.txt. O All-Fix nao executa o launcher, instalador ou compiladores automaticamente.",
+        "build_profile": "fh1-0.3.9-inno-prepare",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "Xbox 360 original; alternativa: Games on Demand ou pasta extraida"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "mega-man-legends-modernization-project",
+        "tag": "v0.9.6-beta",
+        "source_url": "https://github.com/Drakfix/MML_Modernization-Project/releases/tag/v0.9.6-beta",
+        "operations": [],
+        "required_files": [
+          "mml_run64.exe",
+          "mml.dll",
+          "mml.ini",
+          "ddraw.dll",
+          "SDL3.dll",
+          "x64/SDL3.dll",
+          "THIRD-PARTY-NOTICES.txt"
+        ],
+        "inputs": [],
+        "manual_steps": "Runtime oficial extraido offline e verificado. Use sua propria instalacao de Mega Man Legends PC (MEGAMAN.EXE US) ou Rockman DASH PC (ROCKMAN.EXE JP). A importacao, patch e primeiro boot ainda precisam ser homologados. O All-Fix nao executa o instalador ou o jogo automaticamente.",
+        "build_profile": "mml-0.9.6-beta-pyinstaller-prepare",
+        "preparation_media": [
+          {
+            "id": "original-game",
+            "kind": "directory",
+            "extensions": [],
+            "version": "PC CD-ROM US ou JP; pasta com executavel original"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "hookshot-zelda-oot-port",
+        "tag": "v3.0.2",
+        "source_url": "https://github.com/ZuanCrisp/Zelda-OOT-Port/releases/tag/v3.0.2",
+        "operations": [],
+        "required_files": [
+          "HookshotBuilder.exe",
+          "recomplauncher.json"
+        ],
+        "inputs": [],
+        "manual_steps": "Kit oficial preparado. Use Retomar e selecione sua propria copia de Ocarina of Time Nintendo Switch 2 (.nup/.nx v131072 e0f3ccfa ou pasta com exefs e romfs). O All-Fix verifica os componentes oficiais por SHA-256 e compila localmente.",
+        "build_profile": "hookshot-3.0.2-prepare",
+        "preparation_media": [
+          {
+            "id": "original-game",
+            "kind": "file_or_directory",
+            "extensions": [
+              ".nup",
+              ".nx"
+            ],
+            "version": "Switch 2 v131072 build e0f3ccfa (.nup/.nx ou pasta ExeFS/RomFS)"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "sonic-1-forever-sonic-2-absolute",
+        "tag": "v1.5.2-v1.2.2",
+        "source_url": "https://github.com/TeamForeverDev/Sonic1Forever/commit/6e59292dc7be1914c3ad3fcbaf9ae304cceee441",
+        "operations": [],
+        "required_files": [
+          "Sonic1Forever/SonicForever.exe",
+          "Sonic1Forever/discord_game_sdk.dll",
+          "Sonic1Forever/Mods/modconfig.ini"
+        ],
+        "inputs": [],
+        "manual_steps": "Kit oficial Team Forever (Sonic 1 Forever v1.5.2) preparado. Use Retomar para escolher Sonic 1 Forever e/ou Sonic 2 Absolute v1.2.2 e indicar seu arquivo Data.rsdk ou .apk oficial.",
+        "build_profile": "teamforever-1.5.2-1.2.2-prepare",
+        "preparation_media": [
+          {
+            "id": "sonic1-rsdk",
+            "kind": "file",
+            "extensions": [
+              ".rsdk",
+              ".apk"
+            ],
+            "version": "Sonic 1 (2013) oficial: Data.rsdk ou .apk contendo assets/Data.rsdk"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "sonic-1-forever",
+        "tag": "v1.5.2",
+        "source_url": "https://github.com/TeamForeverDev/Sonic1Forever/commit/6e59292dc7be1914c3ad3fcbaf9ae304cceee441",
+        "operations": [],
+        "required_files": [
+          "Sonic1Forever/SonicForever.exe",
+          "Sonic1Forever/discord_game_sdk.dll",
+          "Sonic1Forever/Mods/modconfig.ini"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione os dados originais de Sonic 1 (2013) para concluir a instalação.",
+        "build_profile": "teamforever-sonic1-1.5.2",
+        "preparation_media": [
+          {
+            "id": "sonic1-rsdk",
+            "kind": "file",
+            "extensions": [
+              ".rsdk",
+              ".apk"
+            ],
+            "version": "Sonic 1 (2013) oficial: Data.rsdk ou .apk contendo assets/Data.rsdk"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "sonic-2-absolute",
+        "tag": "v1.2.2",
+        "source_url": "https://github.com/TeamForeverDev/Sonic2Absolute/commit/04cef6e0fa8269b9c42c16542f0f3d15528554c7",
+        "operations": [],
+        "required_files": [
+          "Sonic2Absolute/Sonic2Absolute.exe",
+          "Sonic2Absolute/discord_game_sdk.dll",
+          "Sonic2Absolute/Mods/modconfig.ini"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione os dados originais de Sonic 2 (2013) para concluir a instalação.",
+        "build_profile": "teamforever-sonic2-1.2.2",
+        "preparation_media": [
+          {
+            "id": "sonic2-rsdk",
+            "kind": "file",
+            "extensions": [
+              ".rsdk",
+              ".apk"
+            ],
+            "version": "Sonic 2 (2013) oficial: Data.rsdk ou .apk contendo assets/Data.rsdk"
+          }
+        ]
+      }
     }
   ]
 }

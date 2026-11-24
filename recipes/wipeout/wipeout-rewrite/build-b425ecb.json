@@ -1,0 +1,13 @@
+{
+  "schema_version": 5,
+  "project_id": "wipeout-rewrite",
+  "tag": "build-b425ecb",
+  "source_url": "https://github.com/phoboslab/wipeout-rewrite/commit/b425ecb3b3250e4fdcb4462b72c3fb9679a1eb59",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Compilacao experimental local de WipEout Rewrite (SDL2 + GLEW + clang-cl). Use Retomar e selecione sua pasta wipeout/ (textures/ e common/) ou imagem ISO original de WipEout. Nenhum jogo incluido."
+}

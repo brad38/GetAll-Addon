@@ -1,0 +1,13 @@
+{
+  "schema_version": 5,
+  "project_id": "strikersrecomp",
+  "tag": "build-cd88f71",
+  "source_url": "https://github.com/aharonahdoot/StrikersRecomp/commit/cd88f71f5a836c103484c038454b4143000d883c",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Compilacao experimental local de StrikersRecomp (DolRecomp + GXRuntime + Aurora). Use Retomar e selecione sua ISO GameCube USA de Super Mario Strikers (G4QE01) ou main.dol. Nenhum jogo incluido."
+}

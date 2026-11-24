@@ -20,6 +20,18 @@ Repositório público de **receitas declarativas** para o motor nativo do AllFix
 
 As versões de SDK e protocolo são independentes: o addon v1.0.0 utiliza a API declarativa `1.0` e a capacidade `installation.recipe.remote`, disponível desde o SDK `1.1`. O SDK `1.2.0` acrescenta o contrato de receitas v4 sem exigir alteração do ZIP universal.
 
+## Canal de desenvolvimento
+
+O ZIP público continua apontando para a `main`. Para testar um índice marcado como `preview`, gere um complemento separado com o SDK 1.5.11 ou superior:
+
+```text
+python scripts/package_preview.py <commit-getall> <commit-catalogo> <versao-do-addon> <saida.zip>
+```
+
+Use commits publicados de `GetAll-Addon` e `AllFix-Repo` com SHAs completos. Valide o índice contra o mesmo catálogo antes de gerar o ZIP. A instalação do complemento não ativa o canal automaticamente. Ao ativá-lo em **Gerenciar**, a Loja usa os três documentos do SHA curado e identifica as receitas de desenvolvimento. Ao desativá-lo, volta a consultar a `main`. Para atualizar o complemento, aumente a versão e use novos SHAs. O índice pode exigir `min_sdk_version` por receita. O All-Fix mostra o requisito e bloqueia a receita quando o SDK é mais antigo.
+
+Os commits de desenvolvimento usam `channel: "preview"`. Um índice destinado à produção usa `channel: "public"` ou omite o campo no formato legado. A origem pública rejeita um índice marcado como preview.
+
 ## Adicionar uma nova receita
 
 1. Confirme `game_id`, `project_id` e `repository` no catálogo oficial [AllFix-Repo](https://github.com/brad38/AllFix-Repo/blob/main/catalog.json).

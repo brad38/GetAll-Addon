@@ -1,0 +1,13 @@
+{
+  "schema_version": 5,
+  "project_id": "sm64rt",
+  "tag": "build-20e618b",
+  "source_url": "https://github.com/DarioSamo/sm64rt/commit/20e618b75ae4a6810bd92ac6a937cb167517aac5",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Compilacao experimental local. Requer Docker Desktop com toolchain All-Fix SM64 aprovada. Use Retomar e selecione sua ROM original USA big-endian (.z64). Nenhuma ROM incluida. O renderer e os argumentos sao fixados pelo Desktop."
+}

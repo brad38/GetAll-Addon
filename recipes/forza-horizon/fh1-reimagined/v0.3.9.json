@@ -1,0 +1,28 @@
+{
+  "schema_version": 9,
+  "project_id": "fh1-reimagined",
+  "tag": "v0.3.9",
+  "source_url": "https://github.com/FH1-ReImagined/ForzaHorizon1-ReImagined/releases/tag/v0.3.9",
+  "operations": [],
+  "required_files": [
+    "forza-launcher.exe",
+    "README.txt",
+    "windows-build-manifest.json",
+    "project/forza-recomp/CMakeLists.txt",
+    "project/forza-recomp/forza_manifest.toml",
+    "licenses/ForzaHorizon1-ReImagined.txt"
+  ],
+  "inputs": [],
+  "manual_steps": "Kit oficial do Forza extraido offline e verificado integralmente. O jogo ainda nao foi compilado. Forneca sua propria copia Xbox 360 (ISO, Games on Demand ou pasta extraida), conforme README.txt. O All-Fix nao executa o launcher, instalador ou compiladores automaticamente.",
+  "build_profile": "fh1-0.3.9-inno-prepare",
+  "preparation_media": [
+    {
+      "id": "original-disc",
+      "kind": "file",
+      "extensions": [
+        ".iso"
+      ],
+      "version": "Xbox 360 original; alternativa: Games on Demand ou pasta extraida"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 5,
+  "project_id": "mkdd-recomp",
+  "tag": "build-e173ce4",
+  "source_url": "https://github.com/LeftInWalmart/MKDD-Recomp/commit/e173ce40a70eab4830f98ccd9dfdf1ac0d683657",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Compilacao experimental local de MKDD-Recomp (LeftInWalmart / CISO + Rust). Use Retomar e selecione sua ISO ou CISO GameCube USA (GM4E01) com main.dol SHA-1 oficial. Requer toolchain Rust instalada localmente. Nenhum jogo incluido."
+}

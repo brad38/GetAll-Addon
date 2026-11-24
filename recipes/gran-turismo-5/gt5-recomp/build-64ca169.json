@@ -1,0 +1,13 @@
+{
+  "schema_version": 5,
+  "project_id": "gt5-recomp",
+  "tag": "build-64ca169",
+  "source_url": "https://github.com/MormonFTP-hub/gt5-recomp/commit/64ca1697c5f9bb513bfe0414d9a36c10dafd0a37",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Compilacao experimental local de GT5 para Direct3D 12. Use Retomar e selecione PS3_GAME original BCES00569 ou BCUS98114 v01.00, EBOOT.elf original ja extraido e firmware dev_flash licito. Requer Visual Studio Build Tools e Windows SDK licenciados. Nenhum jogo ou firmware incluido."
+}
