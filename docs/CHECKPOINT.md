@@ -1,3 +1,9 @@
+# Rodada 17 — checkpoint parcial (23/11/2026)
+
+120/146 projetos em desenvolvimento; 92 na main (base R16); 26 sem receita; 13 kits v9, 1 validated histórico, 119 experimental. SDK 1.5.1 / aplicativo 3.0.0. Sem alterações nas receitas ou publicação. Refatoração local da extração NSIS e apresentação estruturada de mídia original; 201 verificações C#, 120/120 parser, regressão real SARecomp e Release x64 concluída. Workspace Bradsson: `C:\Users\bradg\Downloads\GetAll-R17-20261123\desktop`; prévia `C:\Users\bradg\Downloads\GetAll-R17-20261123\publish-final\AllFix.exe`. Artefatos, impedimentos e evidências em [RODADA-17-2026-11-23.md](RODADA-17-2026-11-23.md). Próximo: Inno Setup/Forza, build isolado e payloads multipart; nenhum merge ou release autorizado. Rodada 17 ainda não concluída.
+
+---
+
 ## Rodada 16 (23/11/2026)
 
 120/146 projetos em desenvolvimento, 92 na main, 26 pendentes, 13 kits v9, SDK 1.5.1. Consulte [matriz completa](COBERTURA-R16-2026-11-23.md) e [relatorio](RODADA-16-2026-11-23.md). Historico anterior preservado abaixo.
