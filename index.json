@@ -1488,6 +1488,30 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "super-metroid",
+      "project_id": "sm-rewrite",
+      "repository": "testyourmine/sm_rewrite",
+      "tag": "build-5237873",
+      "schema_version": 5,
+      "path": "recipes/super-metroid/sm-rewrite/build-5237873.json",
+      "sha256": "3e1a8728b6d7b7ef4fe9731f860077e79cecc9d442cb56e19520958744baee0f",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "mario-kart-double-dash",
+      "project_id": "mariokartdd-recomp",
+      "repository": "ethannicholas/mariokartdd-recomp",
+      "tag": "build-bd36eb9",
+      "schema_version": 5,
+      "path": "recipes/mario-kart-double-dash/mariokartdd-recomp/build-bd36eb9.json",
+      "sha256": "d684e4ce5bab210d6fd4712ebdb475a2384dc9f262e09bad56d56ebafa9a12c3",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }
