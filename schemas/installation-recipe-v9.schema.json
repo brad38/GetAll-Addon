@@ -15,7 +15,7 @@
           "recomplauncher.json"
         ],
         "inputs": [],
-        "manual_steps": "Selecione a m\u00eddia original de SSX EA-2413. Para incluir a atualiza\u00e7\u00e3o 0.0.3.2, forne\u00e7a o pacote STFS completo com default.xexp e patch0.big.",
+        "manual_steps": "Selecione a mídia original de SSX EA-2413. Para incluir a atualização 0.0.3.2, forneça o pacote STFS completo com default.xexp e patch0.big.",
         "build_profile": "ssx-2.0.0-prepare",
         "preparation_media": [
           {
@@ -45,7 +45,7 @@
           "EdgeOfTimeRecomp-dis/rexruntime.dll"
         ],
         "inputs": [],
-        "manual_steps": "Forne\u00e7a a ISO e o Title Update da mesma edi\u00e7\u00e3o para instalar Edge of Time.",
+        "manual_steps": "Forneça a ISO e o Title Update da mesma edição para instalar Edge of Time.",
         "build_profile": "edge-of-time-1.1-xbox-import",
         "preparation_media": [
           {
@@ -64,7 +64,7 @@
               ".stfs",
               ".tu"
             ],
-            "version": "Title Update STFS da mesma edi\u00e7\u00e3o da ISO. O arquivo pode n\u00e3o ter extens\u00e3o."
+            "version": "Title Update STFS da mesma edição da ISO. O arquivo pode não ter extensão."
           }
         ]
       }
@@ -83,7 +83,7 @@
           "dxil.dll"
         ],
         "inputs": [],
-        "manual_steps": "Forne\u00e7a a m\u00eddia original compat\u00edvel para o All-Fix verificar e importar os arquivos do jogo.",
+        "manual_steps": "Forneça a mídia original compatível para o All-Fix verificar e importar os arquivos do jogo.",
         "build_profile": "marathon-1.0.0-xbox-import",
         "preparation_media": [
           {
@@ -92,7 +92,7 @@
             "extensions": [
               ".iso"
             ],
-            "version": "Xbox 360: ISO XDVDFS ou pasta extra\u00edda original de Sonic the Hedgehog (2006)."
+            "version": "Xbox 360: ISO XDVDFS ou pasta extraída original de Sonic the Hedgehog (2006)."
           }
         ]
       }
@@ -653,6 +653,32 @@
               ".apk"
             ],
             "version": "Sonic 2 (2013) oficial: Data.rsdk ou .apk contendo assets/Data.rsdk"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "pinyon-shift",
+        "tag": "v0.9.5",
+        "source_url": "https://github.com/arcanite24/pinyon-shift/releases/tag/v0.9.5",
+        "operations": [],
+        "required_files": [
+          "PinyonShiftLauncher.exe",
+          "pinyon-shift-source.zip"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione a mídia original de Forza Horizon USA MS-2505. A variante v4 opcional exige o Title Update STFS original verificado; a compilação é local e separada da versão base.",
+        "build_profile": "pinyon-0.9.5-prepare",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "Xbox 360 USA MS-2505 / 4D5309C9"
           }
         ]
       }

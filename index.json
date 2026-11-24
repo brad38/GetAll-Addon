@@ -1200,11 +1200,11 @@
       "tag": "v0.9.5",
       "schema_version": 9,
       "path": "recipes/forza-horizon/pinyon-shift/v0.9.5.json",
-      "sha256": "8bc5fcbcbb921cb2dc0cdd49c2f3da85cf398991bf6f302bd6df8a0b73921b11",
+      "sha256": "25c3058e09e3f2fe85ecb05d3a72290b1333df7c0d6d5e2a1b585a776e20439d",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.10"
+      "min_sdk_version": "1.5.15"
     },
     {
       "game_id": "dead-or-alive-xtreme-beach-volleyball",

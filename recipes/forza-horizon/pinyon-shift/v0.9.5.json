@@ -9,7 +9,7 @@
     "pinyon-shift-source.zip"
   ],
   "inputs": [],
-  "manual_steps": "Kit oficial preparado. O jogo ainda nao foi compilado. Use sua propria midia Xbox 360 USA MS-2505 (4D5309C9). O launcher oficial obtem ferramentas e compila localmente. O All-Fix nao executa o launcher nem scripts automaticamente. Consulte as instrucoes oficiais.",
+  "manual_steps": "Selecione a mídia original de Forza Horizon USA MS-2505. A variante v4 opcional exige o Title Update STFS original verificado; a compilação é local e separada da versão base.",
   "build_profile": "pinyon-0.9.5-prepare",
   "preparation_media": [
     {
