@@ -1,3 +1,9 @@
+# Rodada 17C - estado atual (23/11/2026)
+
+122/146 projetos com receita (83,56%); 92 main, 24 sem receita, 15 v9, 1 validated historico. SDK 1.5.3 / Desktop 3.0.0. Retomada transacional MML condicionada a midia genuina; Forza XDVDFS/XEX; Sonic GDI e verificacoes estruturais Switch/PS4. Oito binarios de componentes upstream compilados em cinco projetos, zero novos jogos completos ou homologados. 277 PASS C#, 122 parser, 44 Python, JS e regressao offline tripla aprovados. [Matriz](COBERTURA-R17C-2026-11-23.md) | [Relatorio](RODADA-17C-2026-11-23.md). PR #18 draft, sem merge/release. Historico preservado.
+
+---
+
 # Rodada 17B — estado atual (23/11/2026)
 
 122/146 projetos com receita em desenvolvimento (83,56%), 92 na main, 24 sem receita, 15 kits v9 de preparação, 121 experimental e 1 validated histórico. SDK 1.5.2; Desktop 3.0.0. Forza Inno e MML PyInstaller preparados pelo motor real; patch local US/JP, retomada sem redownload e grupos multipart testados. Build Docker Windows x64 com fixture sintético aprovado, sem autorização de build real de jogo. Nenhuma nova instalação completa ou homologação. [Matriz R17B](COBERTURA-R17B-2026-11-23.md) | [Relatório R17B](RODADA-17B-2026-11-23.md). Histórico anterior preservado.
