@@ -1,3 +1,9 @@
+# Rodada 15 — situação atual (2026-11-23)
+
+**105 receitas propostas (1 validated histórico, 104 experimental); 4 apenas preparação v9.** Escopo original 101/124; catálogo atualizado por outro agente 105/146, 111 jogos. Main GetAll permanece 92. 23 IDs do escopo inicial e 18 novos ainda sem receita. [Relatório R15: evidências individuais, implementação, testes e prévia](RODADA-15-2026-11-23.md). SDK 1.5.0 / app 3.0.0. Sem merge, release ou publicação. A matriz abaixo registra o estado histórico R14, não a cobertura atual.
+
+---
+
 # GetAll-Addon — Cobertura do catalogo (91 jogos / 124 projetos)
 
 **Main confirmada:** 92 receitas dos 124 projetos (1 validated, 91 experimental), commit `dd820c008034a8e7598da5fb80ab17ca5951e81b` no GetAll. **Branch proposta Rodada 14** (encadeia Rodadas 12 e 13): **96 receitas**, sendo 70 v3, 20 v5, 1 v6, 4 v7, 1 v8; 1 validated e 95 experimental. **28 projetos sem receita**. Nenhum merge/release foi realizado. A preparação parcial por motor e hash da fonte não equivalem a boot real homologado. O catálogo 124 projetos está na main do AllFix-Repo; as correções de origem Picori, Team Forever e Leonida estão em PRs independentes.
