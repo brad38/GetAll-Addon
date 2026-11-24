@@ -1,3 +1,9 @@
+# Rodada 15 — situação atual (2026-11-23)
+
+**105 receitas propostas (1 validated histórico, 104 experimental); 4 apenas preparação v9.** Escopo original 101/124; catálogo atualizado por outro agente 105/146, 111 jogos. Main GetAll permanece 92. 23 IDs do escopo inicial e 18 novos ainda sem receita. [Relatório R15: evidências individuais, implementação, testes e prévia](RODADA-15-2026-11-23.md). SDK 1.5.0 / app 3.0.0. Sem merge, release ou publicação. A matriz abaixo registra o estado histórico R14, não a cobertura atual.
+
+---
+
 # Checkpoint atual — Rodada 14 / 124 projetos (2026-11-23)
 
 ## Estado ao encerrar a execução
