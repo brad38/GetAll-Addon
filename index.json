@@ -1548,6 +1548,30 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "burnout-3-takedown",
+      "project_id": "burnout3-recomp",
+      "repository": "sp00nznet/burnout3",
+      "tag": "build-3c85ed7",
+      "schema_version": 5,
+      "path": "recipes/burnout-3-takedown/burnout3-recomp/build-3c85ed7.json",
+      "sha256": "c9b6fefb5fe6b80fe95bc7efd803b61f26e5cf62802df3a18bdd5c2d5bcd53b7",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "gran-turismo-5",
+      "project_id": "gt5-recomp",
+      "repository": "MormonFTP-hub/gt5-recomp",
+      "tag": "build-64ca169",
+      "schema_version": 5,
+      "path": "recipes/gran-turismo-5/gt5-recomp/build-64ca169.json",
+      "sha256": "cf42aafcefda951c1e482d330d44b4b4fa9d87403f3f8179bffba800beb76331",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }

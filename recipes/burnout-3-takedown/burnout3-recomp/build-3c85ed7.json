@@ -1,0 +1,13 @@
+{
+  "schema_version": 5,
+  "project_id": "burnout3-recomp",
+  "tag": "build-3c85ed7",
+  "source_url": "https://github.com/sp00nznet/burnout3/commit/3c85ed7777886f4a8f805cb243b123b1b82cf375",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Compilacao experimental local de Burnout 3. Use Retomar e selecione seu disco Xbox norte-americano original (ISO ou pasta extraida). Requer Visual Studio Build Tools e Windows SDK licenciados. Nenhum jogo incluido."
+}
