@@ -1,0 +1,28 @@
+{
+  "schema_version": 9,
+  "project_id": "gta-stories-recompiled",
+  "tag": "v0.3.2",
+  "source_url": "https://github.com/batinium/gta-stories-recompiled/releases/tag/v0.3.2",
+  "operations": [],
+  "required_files": [
+    "GTA-Stories-Recompiled-0.3.2-windows/GTAStoriesLauncher.exe",
+    "GTA-Stories-Recompiled-0.3.2-windows/README.md",
+    "GTA-Stories-Recompiled-0.3.2-windows/CMakeLists.txt",
+    "GTA-Stories-Recompiled-0.3.2-windows/tools/build.py",
+    "GTA-Stories-Recompiled-0.3.2-windows/python/python.exe",
+    "GTA-Stories-Recompiled-0.3.2-windows/deps/manifest.json"
+  ],
+  "inputs": [],
+  "manual_steps": "Preparação apenas. Forneça seu disco original PS2 USA de Liberty City Stories (SLUS-21423) ou Vice City Stories (SLUS-21590); ambos para o modo combinado. Faça a compilação pelo launcher oficial manualmente. Não inclui mídia.",
+  "build_profile": "gta-stories-0.3.2-prepare",
+  "preparation_media": [
+    {
+      "id": "original-disc",
+      "kind": "file",
+      "extensions": [
+        ".iso"
+      ],
+      "version": "PS2 USA SLUS-21423 ou SLUS-21590; ambos para modo combinado"
+    }
+  ]
+}

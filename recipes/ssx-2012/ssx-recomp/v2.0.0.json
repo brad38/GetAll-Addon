@@ -1,0 +1,24 @@
+{
+  "schema_version": 9,
+  "project_id": "ssx-recomp",
+  "tag": "v2.0.0",
+  "source_url": "https://github.com/AmarilloNL/ssx-recomp/releases/tag/v2.0.0",
+  "operations": [],
+  "required_files": [
+    "ssx-recomp.exe",
+    "recomplauncher.json"
+  ],
+  "inputs": [],
+  "manual_steps": "Kit oficial preparado. O jogo ainda nao foi compilado. Use sua propria ISO Xbox 360 EA-2413 (USA, Europa ou Australia), ou pasta extraida com default.xex. O launcher necessita de Visual Studio Build Tools e pode baixar ferramentas; o All-Fix nao executa nem instala essas dependencias automaticamente. Consulte as instrucoes oficiais.",
+  "build_profile": "ssx-2.0.0-prepare",
+  "preparation_media": [
+    {
+      "id": "original-disc",
+      "kind": "file",
+      "extensions": [
+        ".iso"
+      ],
+      "version": "Xbox 360 EA-2413 USA/Europe/Australia"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 9,
+  "project_id": "rygt-gt7",
+  "tag": "rygt-2026-11-23",
+  "source_url": "https://github.com/RyGT-Team/RyGT/releases/tag/rygt-2026-11-23",
+  "operations": [],
+  "required_files": [
+    "RyGT-ci-889c5a7e/RyGTLauncher.exe",
+    "RyGT-ci-889c5a7e/converter/ryty.exe",
+    "RyGT-ci-889c5a7e/README.txt",
+    "RyGT-ci-889c5a7e/BUILD_INFO.txt",
+    "RyGT-ci-889c5a7e/SHA256SUMS.txt"
+  ],
+  "inputs": [],
+  "manual_steps": "Preparação apenas. Use seu próprio dump PS4 Gran Turismo 7 CUSA24769 e módulos de firmware obtidos legitimamente. A conversão e configuração ficam a cargo do usuário no launcher oficial; não execute automaticamente nem instale patches ou serviços.",
+  "build_profile": "rygt-2026-11-23-prepare",
+  "preparation_media": [
+    {
+      "id": "original-game",
+      "kind": "directory",
+      "extensions": [],
+      "version": "PS4 CUSA24769"
+    }
+  ]
+}

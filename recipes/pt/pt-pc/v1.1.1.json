@@ -1,0 +1,18 @@
+{
+  "schema_version": 5,
+  "project_id": "pt-pc",
+  "tag": "v1.1.1",
+  "source_url": "https://github.com/LoreanXavier/pt-pc/releases/tag/v1.1.1",
+  "operations": [],
+  "required_files": [
+    "pt-port-20261122-41edcc76/pt.exe",
+    "pt-port-20261122-41edcc76/README.md",
+    "pt-port-20261122-41edcc76/pt-files.json",
+    "pt-port-20261122-41edcc76/upscalers-build.json",
+    "pt-port-20261122-41edcc76/extras.pak",
+    "pt-port-20261122-41edcc76/extractor/PT.PkgExtract.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "Use sua própria cópia legítima de P.T. PS4 CUSA01127, com os dados originais solicitados pelo port. Siga o README oficial para importação manual. O pacote portátil não contém a pasta de dados original. Não execute instaladores ou atualizadores automaticamente.",
+  "launch_file": "pt-port-20261122-41edcc76/pt.exe"
+}

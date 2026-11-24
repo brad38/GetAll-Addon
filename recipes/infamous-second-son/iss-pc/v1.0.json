@@ -1,0 +1,17 @@
+{
+  "schema_version": 5,
+  "project_id": "iss-pc",
+  "tag": "v1.0",
+  "source_url": "https://github.com/hayatog/iss_pc/releases/tag/v1.0",
+  "operations": [],
+  "required_files": [
+    "infamous-windows-x86_64/inFAMOUS Second Son.exe",
+    "infamous-windows-x86_64/README-player.md",
+    "infamous-windows-x86_64/package-files.json",
+    "infamous-windows-x86_64/out/tlg-probe-v2.exe",
+    "infamous-windows-x86_64/out/tlg-probe.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "Use sua própria cópia PS4 CUSA00223 EUA base 1.00 com update 1.07 aplicado na mesma pasta, eboot.bin e demais arquivos originais. Selecione a pasta no launcher. Requer Vulkan 1.3; não inclui mídia.",
+  "launch_file": "infamous-windows-x86_64/inFAMOUS Second Son.exe"
+}

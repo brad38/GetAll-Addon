@@ -1,0 +1,29 @@
+{
+  "schema_version": 9,
+  "project_id": "dkb-pc-recomp",
+  "tag": "v0.5.1",
+  "source_url": "https://github.com/Lucas-blip-png/dkb-pc-recomp/releases/tag/v0.5.1",
+  "operations": [],
+  "required_files": [
+    "DKB-Setup/DKB-Setup.exe",
+    "DKB-Setup/recomplauncher.json",
+    "DKB-Setup/VERSION",
+    "DKB-Setup/bin/ninja.exe",
+    "DKB-Setup/bin/totk_xlate.exe",
+    "DKB-Setup/python/python.exe",
+    "DKB-Setup/llvm/bin/clang.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "Kit oficial preparado. Forneca sua propria copia Switch 2 de Donkey Kong Bananza 1.0.0 ou com update 3.2.0: arquivo .nup, ou pasta contendo exefs e romfs. O setup oficial compila o jogo localmente. O All-Fix nao executa o setup nem ferramentas automaticamente.",
+  "build_profile": "dkb-0.5.1-44ba6b1-prepare",
+  "preparation_media": [
+    {
+      "id": "original-game",
+      "kind": "file",
+      "extensions": [
+        ".nup"
+      ],
+      "version": "Switch 2 1.0.0 ou 3.2.0; alternativa: pasta ExeFS/RomFS"
+    }
+  ]
+}

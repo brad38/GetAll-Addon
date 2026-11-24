@@ -1,0 +1,26 @@
+{
+  "schema_version": 9,
+  "project_id": "super-odyssey-pc-recomp",
+  "tag": "v1.0.0",
+  "source_url": "https://github.com/Simon3Sarkis/super-odyssey-pc-recomp/releases/tag/v1.0.0",
+  "operations": [],
+  "required_files": [
+    "Super Odyssey PC Recomp/SuperOdysseyRecomp.exe",
+    "Super Odyssey PC Recomp/README.md",
+    "Super Odyssey PC Recomp/recomplauncher.json",
+    "Super Odyssey PC Recomp/SDL3.dll",
+    "Super Odyssey PC Recomp/zig/zig.exe",
+    "Super Odyssey PC Recomp/odysseygen/python.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "Preparação apenas. Forneça sua própria cópia Nintendo Switch de Super Mario Odyssey 1.0.0 ou 1.4.1 com update aplicado, pastas exefs e romfs. O instalador oficial compila o jogo localmente. Nenhuma execução automática.",
+  "build_profile": "odyssey-1.0.0-prepare",
+  "preparation_media": [
+    {
+      "id": "original-game",
+      "kind": "directory",
+      "extensions": [],
+      "version": "Switch 1.0.0 ou 1.4.1 (ExeFS/RomFS)"
+    }
+  ]
+}
