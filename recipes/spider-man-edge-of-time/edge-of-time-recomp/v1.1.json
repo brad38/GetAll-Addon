@@ -1,0 +1,17 @@
+{
+  "schema_version": 5,
+  "project_id": "edge-of-time-recomp",
+  "tag": "v1.1",
+  "source_url": "https://github.com/goliathret/EdgeOfTimeRecomp/releases/tag/v1.1",
+  "operations": [],
+  "required_files": [
+    "EdgeOfTimeRecomp-dis/EdgeOfTimeRecomp.exe",
+    "EdgeOfTimeRecomp-dis/dxcompiler.dll",
+    "EdgeOfTimeRecomp-dis/dxil.dll",
+    "EdgeOfTimeRecomp-dis/gamecontrollerdb.txt",
+    "EdgeOfTimeRecomp-dis/reeot_GameLogic.dll",
+    "EdgeOfTimeRecomp-dis/rexruntime.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O ZIP oficial do port foi preparado. Abra EdgeOfTimeRecomp.exe na pasta EdgeOfTimeRecomp-dis e use o assistente do projeto para selecionar os contêineres da sua cópia americana do Xbox 360 e do Title Update. O DLC é opcional. O assistente valida os arquivos e cria a instalação. A preparação pelo All-Fix termina antes dessa etapa."
+}

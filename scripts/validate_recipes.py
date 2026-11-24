@@ -1079,6 +1079,8 @@ def validate_repository(
 
     if index_data.get("index_format_version") != 1:
         errors.append("index.json: index_format_version must be 1")
+    if "channel" in index_data and index_data["channel"] not in ("public", "preview"):
+        errors.append("index.json: invalid channel")
 
     entries = index_data.get("recipes")
     if not isinstance(entries, list) or not entries:
@@ -1127,6 +1129,11 @@ def validate_repository(
         rel_path = entry.get("path", "")
         expected_sha = entry.get("sha256", "")
         status = entry.get("status", "")
+        min_sdk = entry.get("min_sdk_version")
+        if "min_sdk_version" in entry and (not isinstance(min_sdk, str) or len(min_sdk) > 32
+                or re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", min_sdk) is None
+                or any(int(part) > 2147483647 for part in min_sdk.split("."))):
+            errors.append(f"{loc}: invalid min_sdk_version")
 
         if not isinstance(game_id, str) or not RE_INDEX_ID.match(game_id):
             errors.append(f"{loc}: invalid game_id '{game_id}'")

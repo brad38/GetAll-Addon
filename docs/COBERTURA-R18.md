@@ -162,3 +162,12 @@ Catálogo de desenvolvimento curado em `098d847`: 110 jogos, 148 projetos, 139 p
 O avanço desta integração não promove nenhuma receita a `validated`. O estado da matriz anterior continua sendo a referência para as evidências individuais de preparação e compilação.
 
 A matriz registra 135 projetos com preparação verificada no checkpoint anterior. Os dois projetos separados do Team Forever foram verificados nesta integração. A identidade combinada tem receita legada preservada e deve ser contada separadamente somente quando o caminho combinado for validado. Os três builds de jogo documentados no checkpoint são Super Metroid, Super Metroid Rewrite e Crash Team Racing Turbocharged. Testes de ferramentas auxiliares e de compilação parcial não entram nesse total.
+
+## Compatibilidade e homologação após o SDK 1.5.10
+
+- O catálogo curado mantém 110 jogos e 148 projetos. O GetAll de desenvolvimento oferece 141 receitas para 140 projetos (94,59% de cobertura nominal). A distribuição pública continua separada. A marca `experimental` preserva o nível de confiança anterior.
+- Edge of Time Recomp v1.1 agora tem receita experimental de preparação. O ZIP Windows oficial de 192.213.315 bytes foi verificado por SHA-256 e preparado pelo motor. A instalação dos dados ainda passa pelo assistente do projeto, que exige os contêineres da edição americana e o Title Update. O resultado desta receita é parcial. [Release oficial](https://github.com/goliathret/EdgeOfTimeRecomp/releases/tag/v1.1).
+- A compilação de desenvolvimento do All-Fix usa o SDK 1.5.11 e separa o índice GetAll público do candidato. O gerador de addon registra commits completos para o catálogo e as receitas. A Loja oferece o aviso de SDK mínimo por versão.
+- SM64 Coop Deluxe v1.5.1 foi instalado no motor com o ZIP oficial e uma ROM local de SHA-1 correspondente à receita. A importação ocorreu em perfil isolado, o estado verificado foi registrado e o executável foi resolvido. O jogo não foi iniciado neste teste. A homologação histórica permanece a única registrada.
+- O motor preparou os oito componentes oficiais fixados do Hookshot em pasta privada. O cache guarda os ZIPs verificados. A extração positiva e o boot continuam dependentes da mídia Switch 2 compatível.
+- O Team Forever valida a edição pelo GameConfig do Data.rsdk, inclusive quando cifrado pelo formato RSDKv4, e rejeita a edição oposta antes de registrar o jogo. O teste usou uma estrutura sintética. A extração integral com mídia real e o primeiro boot seguem pendentes.
