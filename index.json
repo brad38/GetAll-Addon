@@ -1188,6 +1188,30 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "forza-horizon",
+      "project_id": "pinyon-shift",
+      "repository": "arcanite24/pinyon-shift",
+      "tag": "v0.9.5",
+      "schema_version": 9,
+      "path": "recipes/forza-horizon/pinyon-shift/v0.9.5.json",
+      "sha256": "8bc5fcbcbb921cb2dc0cdd49c2f3da85cf398991bf6f302bd6df8a0b73921b11",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "dead-or-alive-xtreme-beach-volleyball",
+      "project_id": "doaxvb-re",
+      "repository": "NoRain211/doaxvb-re",
+      "tag": "v0.8.0",
+      "schema_version": 9,
+      "path": "recipes/dead-or-alive-xtreme-beach-volleyball/doaxvb-re/v0.8.0.json",
+      "sha256": "681d3726bef9bf3316b811abc7bc7a96c961ca94d38c49fc00898d5231727d1f",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }
