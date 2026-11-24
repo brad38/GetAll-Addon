@@ -1,0 +1,43 @@
+{
+  "schema_version": 9,
+  "project_id": "totk-pc-recomp",
+  "tag": "v0.5.0",
+  "source_url": "https://github.com/valentderah/totk-pc-recomp/releases/tag/v0.5.0",
+  "operations": [],
+  "required_files": [
+    "TotK-Setup-0.5.0-windows/TotK-Setup.exe",
+    "TotK-Setup-0.5.0-windows/bin/totk_xlate.exe",
+    "TotK-Setup-0.5.0-windows/bin/hactool.exe",
+    "TotK-Setup-0.5.0-windows/bin/ninja.exe",
+    "TotK-Setup-0.5.0-windows/llvm/bin/clang.exe",
+    "TotK-Setup-0.5.0-windows/python/python.exe",
+    "TotK-Setup-0.5.0-windows/bin/SDL3.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "Kit oficial preparado. O jogo ainda nao foi compilado. A compilacao exige sua propria midia Switch e atualizacao 1.1.0, 1.2.1 ou 1.4.3, alem dos requisitos oficiais. O All-Fix nao executa o setup nem scripts automaticamente. Consulte as instrucoes oficiais.",
+  "build_profile": "totk-0.5.0-prepare",
+  "preparation_media": [
+    {
+      "id": "base-game",
+      "kind": "file",
+      "extensions": [
+        ".nsp",
+        ".xci",
+        ".nsz",
+        ".xcz"
+      ],
+      "version": "Switch original"
+    },
+    {
+      "id": "game-update",
+      "kind": "file",
+      "extensions": [
+        ".nsp",
+        ".xci",
+        ".nsz",
+        ".xcz"
+      ],
+      "version": "1.1.0, 1.2.1 ou 1.4.3"
+    }
+  ]
+}
