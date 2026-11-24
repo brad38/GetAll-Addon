@@ -1,5 +1,11 @@
 # Rodada 18 — missão contínua de conclusão (24/11/2026)
 
+SDK 1.5.9 / Desktop 3.0.0. Receitas 714cec7f6bfa176ae69986be77c1b8aa23c175f8; privado ec016409f8aebfe45092aecffb0b701045687d4e. 130/145 projetos (89,66%), 131 receitas, 15 sem receita e 15 kits v9. TotK CLI integrada com rejeição real de chave sintética; GT5/Burnout pipelines implementados e runtimes reais compilados; Bananza retenção da fase de dados/limpeza e testes negativos. 363 PASS C#, parser 131/131, 44 Python, JS, Release x64 de clone limpo. Zero novos jogos integralmente compilados, instalações completas ou boots. Executável e próximos comandos em [RODADA-18.md](RODADA-18.md); [matriz](COBERTURA-R18.md). Retomar diretamente LAS/SSX e demais kits, sem nova rodada e sem repetir preparação. CI fixado às receitas. Sem release/merge/DownloadAll.
+
+---
+
+# Rodada 18 — missão contínua de conclusão (24/11/2026)
+
 SDK 1.5.8; Desktop 3.0.0; código 930d4be203a25bc703d26f7252ab1f21bdef241f; receitas 028745e1c015428135c3281e58df6de4ef13edc0. Catálogo 110 jogos/145 projetos. 128/145 projetos com receita (88,28%); 129 receitas, 17 sem receita, 15 v9, 1 validated histórico. 3 perfis SM64 e DKB CLI; 39 preparações novas, CoopDX negativo; 345 PASS C#, parser 129/129, Python 44/44, JS PASS. Sem jogo integral/instalação/boot novo. [Matriz completa](COBERTURA-R18.md) | [Evidências e próxima tarefa executável](RODADA-18.md) | [Pacotes oficiais](R18-EVIDENCIAS-PORTATEIS.json). Retomar diretamente as tarefas da Rodada 18, não abrir nova rodada. Sem merge/release/DownloadAll.
 
 ---
