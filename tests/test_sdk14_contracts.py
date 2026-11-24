@@ -119,7 +119,7 @@ class SDK14ContractsTests(unittest.TestCase):
     def test_real_v6_v7_recipes_strong_sources(self):
         index=json.loads((ROOT/"index.json").read_text(encoding="utf-8"))
         entries={e["project_id"]:e for e in index["recipes"]}
-        self.assertEqual(len(index["recipes"]), 92)  # New v8 project in Round 11B
+        self.assertGreaterEqual(len(index["recipes"]), 94)  # Round 13 CI artifact candidate
         self.assertEqual(entries["autotmc-auto-tmc"]["schema_version"],6)
         self.assertEqual(entries["cannonball"]["schema_version"],7)
         for name in ("cannonball","zelda3","smw","autotmc-auto-tmc"):
@@ -135,6 +135,116 @@ class SDK14ContractsTests(unittest.TestCase):
         self.assertEqual(smw["inputs"][0]["sha1"],"6b47bb75d16514b6a476aa0c73a683a2a4c18765")
         zelda=json.loads((ROOT/entries["zelda3"]["path"]).read_text(encoding="utf-8"))
         self.assertEqual(zelda["inputs"][0]["sha256"],"66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb")
+
+
+    def test_picori_v7_imports_verified_usa_rom(self):
+        index = json.loads((ROOT / "index.json").read_text(encoding="utf-8"))
+        entry = next(e for e in index["recipes"] if e["project_id"] == "project-picori-999sian-tmc")
+        self.assertEqual(entry["repository"], "999sian/tmc")
+        self.assertEqual(entry["status"], "experimental")
+        self.assertEqual(entry["schema_version"], 7)
+        self.assertTrue(entry["has_inputs"])
+        recipe = json.loads((ROOT / entry["path"]).read_text(encoding="utf-8"))
+        self.assertEqual(self.errors(recipe), [])
+        self.assertEqual(recipe["source_url"], "https://github.com/999sian/tmc/releases/tag/v0.9.6")
+        self.assertEqual(recipe["launch_file"], "tmc_pc.exe")
+        self.assertIn("baserom.gba", recipe["required_files"])
+        self.assertEqual(recipe["inputs"][0]["sha1"], "b4bd50e4131b027c334547b4524e2dbbd4227130")
+        self.assertEqual(recipe["operations"][0], {
+            "kind": "import_input", "source": "original-minish-cap-usa",
+            "target": "baserom.gba", "scope": "installation",
+        })
+        for mutate in [
+            lambda d: d["inputs"][0].pop("sha1"),
+            lambda d: d["operations"][0].update(target="../outside.gba"),
+            lambda d: d.update(installer_profile="powershell"),
+        ]:
+            invalid = copy.deepcopy(recipe)
+            mutate(invalid)
+            self.assertTrue(self.errors(invalid))
+
+
+
+    def test_turbocharged_official_ci_artifact_recipe_is_restricted(self):
+        index = json.loads((ROOT / "index.json").read_text(encoding="utf-8"))
+        entry = next(e for e in index["recipes"] if e["project_id"] == "crash-team-racing-turbocharged")
+        self.assertEqual(entry["status"], "experimental")
+        self.assertEqual(entry["repository"], "CameronRedmore/Crash-Team-Racing-Turbocharged")
+        self.assertEqual(entry["tag"], "ci-07d0c49")
+        self.assertEqual(entry["schema_version"], 5)
+        self.assertEqual(entry["sha256"], "943f43da0758ee982b0f4373d25e3f74a5a8718eb066822f41200543e84b9b18")
+        doc = json.loads((ROOT / entry["path"]).read_text(encoding="utf-8"))
+        self.assertEqual(self.errors(doc), [])
+        self.assertEqual(doc["source_url"], "https://github.com/CameronRedmore/Crash-Team-Racing-Turbocharged/actions/runs/37521206289")
+        self.assertEqual(doc["launch_file"], doc["required_files"][0])
+        self.assertEqual(doc["inputs"], [])
+        self.assertTrue(doc["manual_steps"])
+        self.assertNotIn("validated", doc["manual_steps"].lower())
+        for mutate in (
+            lambda d: d["required_files"].remove(d["launch_file"]),
+            lambda d: d["operations"].append({"kind": "execute", "command": "cmd.exe"}),
+            lambda d: d.update(source_url="https://untrusted.example.org/game.zip"),
+            lambda d: d.update(launch_file="../shell.exe"),
+        ):
+            changed = copy.deepcopy(doc)
+            mutate(changed)
+            self.assertTrue(self.errors(changed))
+
+
+
+    def test_savagewind_official_windows_zip_is_declared_without_commercial_content(self):
+        index = json.loads((ROOT / "index.json").read_text(encoding="utf-8"))
+        entry = next(e for e in index["recipes"] if e["project_id"] == "savagewindrecomp")
+        self.assertEqual(entry["game_id"], "the-legend-of-zelda-breath-of-the-wild")
+        self.assertEqual(entry["repository"], "revivedx/savagewindrecomp")
+        self.assertEqual(entry["tag"], "v0.6.0-alpha.6")
+        self.assertEqual(entry["schema_version"], 5)
+        self.assertEqual(entry["status"], "experimental")
+        self.assertEqual(entry["sha256"], "9bb7a992123432ac587eb4cd711d64170f59b0d897d3bd238c2cf0b1559c7374")
+        doc = json.loads((ROOT / entry["path"]).read_text(encoding="utf-8"))
+        self.assertEqual(self.errors(doc), [])
+        self.assertEqual(doc["operations"], [])
+        self.assertEqual(doc["inputs"], [])
+        self.assertEqual(doc["launch_file"], "Savage Wind/savagewind.exe")
+        self.assertIn("Savage Wind/zig/zig.exe", doc["required_files"])
+        self.assertIn("1.9.0", doc["manual_steps"])
+        self.assertIn("exefs/", doc["manual_steps"])
+        self.assertIn("romfs/", doc["manual_steps"])
+        for mutate in [
+            lambda d: d.update(source_url="https://attacker.invalid/download.zip"),
+            lambda d: d.update(launch_file="../../bad.exe"),
+            lambda d: d["required_files"].remove(d["launch_file"]),
+            lambda d: d.update(installer_profile="run-any-exe"),
+        ]:
+            candidate = copy.deepcopy(doc)
+            mutate(candidate)
+            self.assertTrue(self.errors(candidate))
+
+
+    def test_sotc_pc_official_zip_requires_personal_ps4_dump(self):
+        index = json.loads((ROOT / "index.json").read_text(encoding="utf-8"))
+        entry = next(e for e in index["recipes"] if e["project_id"] == "shadow-of-the-colossus-pc")
+        self.assertEqual(entry["game_id"], "shadow-of-the-colossus")
+        self.assertEqual(entry["repository"], "AjncSystem/ShadowOfTheColossus-PC")
+        self.assertEqual(entry["status"], "experimental")
+        self.assertEqual(entry["tag"], "v0.77")
+        self.assertEqual(entry["sha256"], "7231a748c329592e0bdaa9345a4e0cdb1ada9c72f656b7857720e77ea0bbd286")
+        doc = json.loads((ROOT / entry["path"]).read_text(encoding="utf-8"))
+        self.assertEqual(self.errors(doc), [])
+        self.assertEqual(doc["operations"], [])
+        self.assertEqual(doc["inputs"], [])
+        self.assertEqual(doc["launch_file"], "SotC-PC/SotC.exe")
+        self.assertIn("CUSA08809", doc["manual_steps"])
+        self.assertIn("CUSA08034", doc["manual_steps"])
+        for mutate in [
+            lambda d: d.update(source_url="https://untrusted.invalid/SotC-PC.zip"),
+            lambda d: d.update(launch_file="../evil.exe"),
+            lambda d: d["required_files"].remove(d["launch_file"]),
+            lambda d: d.update(installer_profile="cmd-shell"),
+        ]:
+            candidate = copy.deepcopy(doc)
+            mutate(candidate)
+            self.assertTrue(self.errors(candidate))
 
 
 if __name__=="__main__":

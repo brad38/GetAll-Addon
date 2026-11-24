@@ -82,7 +82,7 @@ RE_NUMERIC_ROM_EXT = re.compile(r"\.[0-9]{1,3}$")
 RE_DATA_EXT_V7 = re.compile(r"\.(?:sfc|smc|gba)$", re.IGNORECASE)
 RE_BLOCKED_EXEC_ASSET = re.compile(r"\.(?:exe|msi|cmd|bat|ps1|vbs|wsf|scr|pif|com)$", re.IGNORECASE)
 VALID_STATUSES = {"validated", "disabled", "draft", "experimental"}
-VALID_SCHEMA_VERSIONS = {1, 2, 3, 4, 5, 6, 7, 8}
+VALID_SCHEMA_VERSIONS = {1, 2, 3, 4, 5, 6, 7, 8, 9}
 VALID_PROFILE_SCOPES_V5 = {"installation", "roaming_app_data", "local_app_data"}
 VALID_PREREQUISITES = {
     "dotnet-desktop-10-x64",
@@ -150,6 +150,7 @@ def load_schema_registry(schemas_dir: Path) -> tuple[dict[str, dict[str, Any]], 
         6: "installation-recipe-v6.schema.json",
         7: "installation-recipe-v7.schema.json",
         8: "installation-recipe-v8.schema.json",
+        9: "installation-recipe-v9.schema.json",
     }
     schemas: dict[Any, dict[str, Any]] = {}
     for key, filename in schema_files.items():
@@ -485,6 +486,29 @@ def validate_recipe_semantics(
     if schema_version not in VALID_SCHEMA_VERSIONS:
         errors.append(f"{label}: unsupported schema_version '{schema_version}'")
         return errors
+
+    if schema_version == 9:
+        # Independently pin the exact preparation contract, even without jsonschema.
+        profiles = json.loads("[{\"schema_version\":9,\"project_id\":\"god-of-war-native-pc-port-gow-pc-port\",\"tag\":\"launcher-v0.4.0\",\"source_url\":\"https://github.com/danielalves96/gow-pc-port/releases/tag/launcher-v0.4.0\",\"operations\":[],\"required_files\":[\"God Of War - PC Launcher_0.4.0_x64-portable/God Of War - PC Launcher.exe\",\"God Of War - PC Launcher_0.4.0_x64-portable/README.txt\",\"God Of War - PC Launcher_0.4.0_x64-portable/kit/install.ps1\",\"God Of War - PC Launcher_0.4.0_x64-portable/kit/bin/ps2_recomp.exe\",\"God Of War - PC Launcher_0.4.0_x64-portable/kit/bin/ps2-tools.exe\",\"God Of War - PC Launcher_0.4.0_x64-portable/kit/RustPortPS2/games/scus-97399/gow-port.toml\"],\"inputs\":[],\"manual_steps\":\"Kit oficial preparado. O jogo ainda nao foi compilado. A compilacao exige sua propria midia PS2 USA SCUS-97399 e dependencias do projeto. O All-Fix nao executa o launcher nem scripts automaticamente. Consulte as instrucoes oficiais.\",\"build_profile\":\"gow-0.4.0-prepare\",\"preparation_media\":[{\"id\":\"original-disc\",\"kind\":\"file\",\"extensions\":[\".iso\",\".chd\"],\"version\":\"PS2 USA SCUS-97399\"}]},{\"schema_version\":9,\"project_id\":\"totk-pc-recomp\",\"tag\":\"v0.5.0\",\"source_url\":\"https://github.com/valentderah/totk-pc-recomp/releases/tag/v0.5.0\",\"operations\":[],\"required_files\":[\"TotK-Setup-0.5.0-windows/TotK-Setup.exe\",\"TotK-Setup-0.5.0-windows/bin/totk_xlate.exe\",\"TotK-Setup-0.5.0-windows/bin/hactool.exe\",\"TotK-Setup-0.5.0-windows/bin/ninja.exe\",\"TotK-Setup-0.5.0-windows/llvm/bin/clang.exe\",\"TotK-Setup-0.5.0-windows/python/python.exe\",\"TotK-Setup-0.5.0-windows/bin/SDL3.dll\"],\"inputs\":[],\"manual_steps\":\"Kit oficial preparado. O jogo ainda nao foi compilado. A compilacao exige sua propria midia Switch e atualizacao 1.1.0, 1.2.1 ou 1.4.3, alem dos requisitos oficiais. O All-Fix nao executa o setup nem scripts automaticamente. Consulte as instrucoes oficiais.\",\"build_profile\":\"totk-0.5.0-prepare\",\"preparation_media\":[{\"id\":\"base-game\",\"kind\":\"file\",\"extensions\":[\".nsp\",\".xci\",\".nsz\",\".xcz\"],\"version\":\"Switch original\"},{\"id\":\"game-update\",\"kind\":\"file\",\"extensions\":[\".nsp\",\".xci\",\".nsz\",\".xcz\"],\"version\":\"1.1.0, 1.2.1 ou 1.4.3\"}]},{\"schema_version\":9,\"project_id\":\"pinyon-shift\",\"tag\":\"v0.9.5\",\"source_url\":\"https://github.com/arcanite24/pinyon-shift/releases/tag/v0.9.5\",\"operations\":[],\"required_files\":[\"PinyonShiftLauncher.exe\",\"pinyon-shift-source.zip\"],\"inputs\":[],\"manual_steps\":\"Kit oficial preparado. O jogo ainda nao foi compilado. Use sua propria midia Xbox 360 USA MS-2505 (4D5309C9). O launcher oficial obtem ferramentas e compila localmente. O All-Fix nao executa o launcher nem scripts automaticamente. Consulte as instrucoes oficiais.\",\"build_profile\":\"pinyon-0.9.5-prepare\",\"preparation_media\":[{\"id\":\"original-disc\",\"kind\":\"file\",\"extensions\":[\".iso\"],\"version\":\"Xbox 360 USA MS-2505 / 4D5309C9\"}]},{\"schema_version\":9,\"project_id\":\"doaxvb-re\",\"tag\":\"v0.8.0\",\"source_url\":\"https://github.com/NoRain211/doaxvb-re/releases/tag/v0.8.0\",\"operations\":[],\"required_files\":[\"DOAXBV-0.8.0/README.txt\",\"DOAXBV-0.8.0/BuildGame.cmd\",\"DOAXBV-0.8.0/Launcher.cmd\",\"DOAXBV-0.8.0/tools/build_game.py\",\"DOAXBV-0.8.0/tools/extract_iso.py\",\"DOAXBV-0.8.0/recomp-runtime/CMakeLists.txt\"],\"inputs\":[],\"manual_steps\":\"Kit oficial preparado. O jogo ainda nao foi compilado. Use sua propria ISO Xbox USA suportada pelo projeto. O primeiro build exige dependencias externas oficiais. O All-Fix nao executa Launcher.cmd, BuildGame.cmd ou instaladores automaticamente. Consulte README.txt e as instrucoes oficiais.\",\"build_profile\":\"doax-0.8.0-prepare\",\"preparation_media\":[{\"id\":\"original-disc\",\"kind\":\"file\",\"extensions\":[\".iso\"],\"version\":\"Xbox USA suportado pelo projeto\"}]}]")
+        identities = {
+            "gow-0.4.0-prepare": ("god-of-war-2005", "danielalves96/gow-pc-port"),
+            "totk-0.5.0-prepare": ("the-legend-of-zelda-tears-of-the-kingdom", "valentderah/totk-pc-recomp"),
+            "pinyon-0.9.5-prepare": ("forza-horizon", "arcanite24/pinyon-shift"),
+            "doax-0.8.0-prepare": ("dead-or-alive-xtreme-beach-volleyball", "NoRain211/doaxvb-re"),
+        }
+        profile = next((p for p in profiles if p["build_profile"] == recipe.get("build_profile")), None)
+        if profile is None or recipe != profile:
+            return errors + [f"{label}: v9 preparation profile is not approved"]
+        game, repository = identities[profile["build_profile"]]
+        if (entry.get("schema_version") != 9 or entry.get("status") != "experimental"
+                or entry.get("game_id") != game or entry.get("repository") != repository
+                or entry.get("project_id") != profile["project_id"] or entry.get("tag") != profile["tag"]
+                or entry.get("has_inputs") is not False or entry.get("has_manual_steps") is not True):
+            errors.append(f"{label}: preparation-only index identity or status invalid")
+        return errors
+
+    if "preparation_media" in recipe:
+        errors.append(f"{label}: preparation_media requires schema 9")
 
     # SDK 1.4.1 parser does not provide shell commands or arbitrary root scripts.
     # Reject unknown v8 members rather than silently treating them as launch steps.

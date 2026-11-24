@@ -1,0 +1,20 @@
+{
+  "schema_version": 5,
+  "project_id": "foxhollow",
+  "tag": "v1.0.30",
+  "source_url": "https://github.com/JackPriceBurns/foxhollow/releases/tag/v1.0.30",
+  "operations": [],
+  "required_files": [
+    "foxhollow.exe",
+    "SDL3.dll",
+    "webgpu_dawn.dll",
+    "nod.dll",
+    "dxcompiler.dll",
+    "dxil.dll",
+    "vcruntime140.dll",
+    "msvcp140.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "O port oficial Windows Foxhollow v1.0.30 foi preparado diretamente do CDN do desenvolvedor, sem executar o launcher instalador. Para iniciar manualmente, forneca sua propria imagem de disco legitima de Star Fox Adventures para GameCube (.iso ou .rvz). O codigo oficial src/main.c aceita o caminho da imagem como primeiro argumento. Abra um terminal na pasta preparada e execute .\\foxhollow.exe seguido do caminho entre aspas da sua imagem. O GetAll nao fornece a imagem nem inicia o jogo automaticamente. A homologacao de boot permanece pendente.",
+  "launch_file": "foxhollow.exe"
+}
