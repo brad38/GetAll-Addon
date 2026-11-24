@@ -12,7 +12,7 @@
 
 ## Testes
 
-345 PASS C# (suite), parser C# 129/129, 44 testes Python, jsonschema/paths/SHA256 129/129, JS regressões aprovadas inclusive 9 novos casos SM64; 3 preflights reais SM64, DKB negativo, CoopDX negativo, 39 preparações portáteis. Nenhuma instalação completa, jogo integralmente compilado, boot ou homologação nova. Evidências anteriores permanecem no histórico e matriz. CI público do commit de receitas #53 aprovado; Windows CI aponta exatamente para 028745e1c015428135c3281e58df6de4ef13edc0. Estado atual dos workflows deve ser verificado na retomada (runs do commit de código e do commit final). Publicação Release x64 self-contained a partir de clone remoto limpo.
+345 PASS C# (suite), parser C# 129/129, 44 testes Python, jsonschema/paths/SHA256 129/129, JS regressões aprovadas inclusive 9 novos casos SM64; 3 preflights reais SM64, DKB negativo, CoopDX negativo, 39 preparações portáteis. Nenhuma instalação completa, jogo integralmente compilado, boot ou homologação nova. Evidências anteriores permanecem no histórico e matriz. CI público do commit de receitas #53 aprovado; Windows CI aponta exatamente para 028745e1c015428135c3281e58df6de4ef13edc0. GetAll CI #54 (45326524918) e Windows CI #4 (45326406164) aprovados nos commits c3500d29d7f146769b92fd16fbf9541e734ef043 e 930d4be203a25bc703d26f7252ab1f21bdef241f; somente documentação posterior não muda o código testado. Publicação Release x64 self-contained a partir de clone remoto limpo.
 
 ## Artefatos locais
 
@@ -59,3 +59,7 @@ MML, Sonic Adventure e Forza: fluxos anteriores preservados, mídia positiva nã
 5. Homologar WPF/consentimento/cancelamento/biblioteca e boots quando houver mídia legítima; abrir o novo AllFix.exe e autorizar UAC normalmente, sem substituir a instalação. Verificar CI e preservar este checkpoint antes de qualquer alteração posterior.
 
 Esta é a mesma Rodada 18, desenvolvimento ainda não concluído. Sem merge, release, alteração do version.json público, DownloadAll ou mudança de versão Desktop.
+
+## Insumo já recuperado para continuidade TotK
+
+ZIP oficial TotK-Setup-0.5.0-windows.zip baixado em GetAll-R18/totk, 168127049 bytes, SHA256 201b08348ffb72c70570eba8f92f67d31bc611b5aff4b0de09756259e0c95a7d. Árvore: 6940 arquivos, 646931453 bytes, manifesto canônico SHA256 9b12cf5eb7cd04a57b8cd02f1611f068cf81280a6f8a61d6db4d33c3ef846fa5. VERSION 0.5.0+afae80c9. CLI real possui --base, --update, --keys, --lang, --dest, --root, --temp, --verify; NÃO incluir --dlss. Ferramentas, libs runtime v2/v3, VMA e hactool incluídos. Etapas check, kit, fonts, extract, lift, compile, prepare, pc_prompts, shapes, dlss, cleanup. Estado registra inputs/steps, não conteúdo de chaves. Chaves originais somente via seleção local efêmera, não armazenar ou transmitir chaves/hashes no estado ou telemetria; limpar staging e cópias temporárias de merge em falha. Validar dados finais contra expected-v1.1.0/1.2.1/1.4.3.json e exe_sha256/xlate_sha256, build-kit pinado, sem DLSS nem atualização automática. Ainda não integrado nem executado pelo motor nesta sessão; não repetir download ou auditoria. Esta é tarefa de desenvolvimento, não bloqueio exclusivamente externo.
