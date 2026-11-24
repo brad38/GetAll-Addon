@@ -1512,6 +1512,42 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "super-mario-64",
+      "project_id": "sm64ex",
+      "repository": "sm64pc/sm64ex",
+      "tag": "build-d7ca2c0",
+      "schema_version": 5,
+      "path": "recipes/super-mario-64/sm64ex/build-d7ca2c0.json",
+      "sha256": "119029a6223a585df320481c7a5c947af883d4e1c6a694a7d427558fb1bef38d",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "super-mario-64",
+      "project_id": "render96ex",
+      "repository": "Render96/Render96ex",
+      "tag": "build-48da5c4",
+      "schema_version": 5,
+      "path": "recipes/super-mario-64/render96ex/build-48da5c4.json",
+      "sha256": "a42fb7b94f9aeb316e4ab10bd6e5e30d4dd68738fa5341a9766971d058d555a0",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "super-mario-64",
+      "project_id": "sm64rt",
+      "repository": "DarioSamo/sm64rt",
+      "tag": "build-20e618b",
+      "schema_version": 5,
+      "path": "recipes/super-mario-64/sm64rt/build-20e618b.json",
+      "sha256": "92a254a2bf45e12c4004a1668755efc6edd0651c5ef4ff302315b204cd73147b",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }
