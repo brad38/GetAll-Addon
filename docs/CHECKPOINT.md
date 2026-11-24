@@ -1,3 +1,9 @@
+# Rodada 17G — checkpoint parcial (24/11/2026)
+
+SDK 1.5.7; Desktop 3.0.0; código privado 272a97821fd693e7ae056f2d700746e64a46426c; receitas GetAll 70d97c69e8ee8aac7d6db69995729a6dbbc8e184. 125/146 (85,62%); 126 receitas, 15 v9, 21 sem receita, 1 validated histórico. SM Rewrite compilado pelo motor; MKDD fonte/runtime_check verificados, jogo pendente; 15 novas preparações portáteis; CTR expiração UI; Forza fixture aprovada. 324 C#, parser 126/126, Python 44/44, JS PASS, clone limpo Release x64. Zero instalações completas/boots/homologações novas. [Matriz](COBERTURA-R17G-2026-11-24.md) | [Relatório](RODADA-17G-2026-11-24.md). Sem merge/release/DownloadAll.
+
+---
+
 # Rodada 17F — checkpoint parcial (24/11/2026)
 
 SDK 1.5.6; Desktop 3.0.0; código privado 7b77aab5ef8a1a3b7ad30db0833929997935bbc5. 123/146 projetos (84,25%); 124 receitas; 15 v9; 23 sem receita; 1 validated histórico. CTR e SM compilados pelo motor; 7 preparações reais; zero novas instalações completas/boots/homologações. CI Windows privado criado. [Matriz](COBERTURA-R17F-2026-11-24.md) | [Relatório](RODADA-17F-2026-11-24.md). Sem merge/release/DownloadAll.
