@@ -6,6 +6,46 @@
     {
       "const": {
         "schema_version": 9,
+        "project_id": "edge-of-time-recomp",
+        "tag": "v1.1",
+        "source_url": "https://github.com/goliathret/EdgeOfTimeRecomp/releases/tag/v1.1",
+        "operations": [],
+        "required_files": [
+          "EdgeOfTimeRecomp-dis/EdgeOfTimeRecomp.exe",
+          "EdgeOfTimeRecomp-dis/dxcompiler.dll",
+          "EdgeOfTimeRecomp-dis/dxil.dll",
+          "EdgeOfTimeRecomp-dis/gamecontrollerdb.txt",
+          "EdgeOfTimeRecomp-dis/reeot_GameLogic.dll",
+          "EdgeOfTimeRecomp-dis/rexruntime.dll"
+        ],
+        "inputs": [],
+        "manual_steps": "Forne\u00e7a a ISO e o Title Update da mesma edi\u00e7\u00e3o para instalar Edge of Time.",
+        "build_profile": "edge-of-time-1.1-xbox-import",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "ISO original americana de Spider-Man: Edge of Time para Xbox 360."
+          },
+          {
+            "id": "title-update",
+            "kind": "file",
+            "extensions": [
+              "",
+              ".stfs",
+              ".tu"
+            ],
+            "version": "Title Update STFS da mesma edi\u00e7\u00e3o da ISO. O arquivo pode n\u00e3o ter extens\u00e3o."
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
         "project_id": "marathon-recompiled",
         "tag": "v1.0.0",
         "source_url": "https://github.com/sonicnext-dev/MarathonRecomp/releases/tag/v1.0.0",

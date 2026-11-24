@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 9,
   "project_id": "edge-of-time-recomp",
   "tag": "v1.1",
   "source_url": "https://github.com/goliathret/EdgeOfTimeRecomp/releases/tag/v1.1",
@@ -13,5 +13,26 @@
     "EdgeOfTimeRecomp-dis/rexruntime.dll"
   ],
   "inputs": [],
-  "manual_steps": "O ZIP oficial do port foi preparado. Abra EdgeOfTimeRecomp.exe na pasta EdgeOfTimeRecomp-dis e use o assistente do projeto para selecionar os contêineres da sua cópia americana do Xbox 360 e do Title Update. O DLC é opcional. O assistente valida os arquivos e cria a instalação. A preparação pelo All-Fix termina antes dessa etapa."
+  "manual_steps": "Forneça a ISO e o Title Update da mesma edição para instalar Edge of Time.",
+  "build_profile": "edge-of-time-1.1-xbox-import",
+  "preparation_media": [
+    {
+      "id": "original-disc",
+      "kind": "file",
+      "extensions": [
+        ".iso"
+      ],
+      "version": "ISO original americana de Spider-Man: Edge of Time para Xbox 360."
+    },
+    {
+      "id": "title-update",
+      "kind": "file",
+      "extensions": [
+        "",
+        ".stfs",
+        ".tu"
+      ],
+      "version": "Title Update STFS da mesma edição da ISO. O arquivo pode não ter extensão."
+    }
+  ]
 }

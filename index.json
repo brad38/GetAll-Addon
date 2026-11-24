@@ -1707,12 +1707,13 @@
       "project_id": "edge-of-time-recomp",
       "repository": "goliathret/EdgeOfTimeRecomp",
       "tag": "v1.1",
-      "schema_version": 5,
+      "schema_version": 9,
       "path": "recipes/spider-man-edge-of-time/edge-of-time-recomp/v1.1.json",
-      "sha256": "a556ae37c23c220d622faccdcc06e5ffef4f884945b8cdf113651ff387a607ed",
+      "sha256": "efb33bc53035114ae94b474a7632e62665a435c825380e3b1906284aeecc0938",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.13"
     }
   ]
 }
