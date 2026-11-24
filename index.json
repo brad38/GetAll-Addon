@@ -1572,6 +1572,78 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "god-of-war-2005",
+      "project_id": "god-of-war-recomp",
+      "repository": "KIexster/god-of-war-recomp",
+      "tag": "build-d1d11ec",
+      "schema_version": 5,
+      "path": "recipes/god-of-war-2005/god-of-war-recomp/build-d1d11ec.json",
+      "sha256": "e161384f6524544dee63a85b4faeb0b5fa96563c9ad1bc0bf3252c48050babd9",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "mario-strikers-charged",
+      "project_id": "strikers-wiicompiled",
+      "repository": "BlackAndBlue95/Strikers-WiiCompiled",
+      "tag": "build-451e06b",
+      "schema_version": 5,
+      "path": "recipes/mario-strikers-charged/strikers-wiicompiled/build-451e06b.json",
+      "sha256": "af64b4cc65732aa5efec7a8461732248a363067dd54a284dbce4f08d5d0ae43e",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "super-mario-strikers",
+      "project_id": "strikersrecomp",
+      "repository": "aharonahdoot/StrikersRecomp",
+      "tag": "build-cd88f71",
+      "schema_version": 5,
+      "path": "recipes/super-mario-strikers/strikersrecomp/build-cd88f71.json",
+      "sha256": "6a69efa0322729df3ca2d4126f292d09c64cd16ae8100745b521d2eda4dca75b",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "mario-kart-double-dash",
+      "project_id": "mkdd-recomp",
+      "repository": "LeftInWalmart/MKDD-Recomp",
+      "tag": "build-e173ce4",
+      "schema_version": 5,
+      "path": "recipes/mario-kart-double-dash/mkdd-recomp/build-e173ce4.json",
+      "sha256": "113a82e515fae56573570abb1c61694fb6ff2d886e7ae21baee5bd0b7f10493e",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "wipeout",
+      "project_id": "wipeout-rewrite",
+      "repository": "phoboslab/wipeout-rewrite",
+      "tag": "build-b425ecb",
+      "schema_version": 5,
+      "path": "recipes/wipeout/wipeout-rewrite/build-b425ecb.json",
+      "sha256": "82abe250b027b9f9d6883f4a650cc85e3ebcea41d1672534889e36494acef00c",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "the-legend-of-zelda-ocarina-of-time",
+      "project_id": "hookshot-zelda-oot-port",
+      "repository": "ZuanCrisp/Zelda-OOT-Port",
+      "tag": "v3.0.2",
+      "schema_version": 9,
+      "path": "recipes/the-legend-of-zelda-ocarina-of-time/hookshot-zelda-oot-port/v3.0.2.json",
+      "sha256": "21d6b90471e08177bbb49bd4d70e21036e12c6a4cd05ca3a230e35530b2ee088",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }

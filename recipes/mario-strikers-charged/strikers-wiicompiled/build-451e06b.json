@@ -1,0 +1,13 @@
+{
+  "schema_version": 5,
+  "project_id": "strikers-wiicompiled",
+  "tag": "build-451e06b",
+  "source_url": "https://github.com/BlackAndBlue95/Strikers-WiiCompiled/commit/451e06bafe060da8d4110d0df7546e5ec64b6b3a",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Compilacao experimental local de Strikers-WiiCompiled. Use Retomar e selecione sua copia Mario Strikers Charged USA Rev 1 (R4QE01) ISO/WBFS/RVZ, pasta com sys/main.dol ou main.dol oficial. Nenhum jogo incluido."
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 5,
+  "project_id": "god-of-war-recomp",
+  "tag": "build-d1d11ec",
+  "source_url": "https://github.com/KIexster/god-of-war-recomp/commit/d1d11ec545c3baf2f3fc17e2df4247ac4b732d5c",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Compilacao experimental local de God of War Recomp (KIexster / PS2Recomp + parches). Use Retomar e selecione sua ISO PS2 USA (SCUS_973.99) ou PAL (SCES_531.33). Requer Visual Studio Build Tools e Windows SDK licenciados. Nenhum jogo incluido."
+}
