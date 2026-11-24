@@ -6,6 +6,34 @@
     {
       "const": {
         "schema_version": 9,
+        "project_id": "marathon-recompiled",
+        "tag": "v1.0.0",
+        "source_url": "https://github.com/sonicnext-dev/MarathonRecomp/releases/tag/v1.0.0",
+        "operations": [],
+        "required_files": [
+          "MarathonRecomp.exe",
+          "D3D12/D3D12Core.dll",
+          "dxcompiler.dll",
+          "dxil.dll"
+        ],
+        "inputs": [],
+        "manual_steps": "Forne\u00e7a a m\u00eddia original compat\u00edvel para o All-Fix verificar e importar os arquivos do jogo.",
+        "build_profile": "marathon-1.0.0-xbox-import",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file_or_directory",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "Xbox 360: ISO XDVDFS ou pasta extra\u00edda original de Sonic the Hedgehog (2006)."
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
         "project_id": "god-of-war-native-pc-port-gow-pc-port",
         "tag": "launcher-v0.4.0",
         "source_url": "https://github.com/danielalves96/gow-pc-port/releases/tag/launcher-v0.4.0",

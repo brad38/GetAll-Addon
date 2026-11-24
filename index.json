@@ -703,12 +703,13 @@
       "project_id": "marathon-recompiled",
       "repository": "sonicnext-dev/MarathonRecomp",
       "tag": "v1.0.0",
-      "schema_version": 3,
+      "schema_version": 9,
       "path": "recipes/sonic-the-hedgehog-2006/marathon-recompiled/v1.0.0.json",
-      "sha256": "a189ce4bb7c05e53823c797f2cd26dc567f32b1c2f847a087fed6896de702eb3",
+      "sha256": "2097a7d0803c37b7a6e841aeaa10b583008f2bf2fd11742b14fe818d3e54c8fb",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.12"
     },
     {
       "game_id": "shadow-the-hedgehog",
