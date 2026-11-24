@@ -78,6 +78,62 @@
           }
         ]
       }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "pinyon-shift",
+        "tag": "v0.9.5",
+        "source_url": "https://github.com/arcanite24/pinyon-shift/releases/tag/v0.9.5",
+        "operations": [],
+        "required_files": [
+          "PinyonShiftLauncher.exe",
+          "pinyon-shift-source.zip"
+        ],
+        "inputs": [],
+        "manual_steps": "Kit oficial preparado. O jogo ainda nao foi compilado. Use sua propria midia Xbox 360 USA MS-2505 (4D5309C9). O launcher oficial obtem ferramentas e compila localmente. O All-Fix nao executa o launcher nem scripts automaticamente. Consulte as instrucoes oficiais.",
+        "build_profile": "pinyon-0.9.5-prepare",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "Xbox 360 USA MS-2505 / 4D5309C9"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "doaxvb-re",
+        "tag": "v0.8.0",
+        "source_url": "https://github.com/NoRain211/doaxvb-re/releases/tag/v0.8.0",
+        "operations": [],
+        "required_files": [
+          "DOAXBV-0.8.0/README.txt",
+          "DOAXBV-0.8.0/BuildGame.cmd",
+          "DOAXBV-0.8.0/Launcher.cmd",
+          "DOAXBV-0.8.0/tools/build_game.py",
+          "DOAXBV-0.8.0/tools/extract_iso.py",
+          "DOAXBV-0.8.0/recomp-runtime/CMakeLists.txt"
+        ],
+        "inputs": [],
+        "manual_steps": "Kit oficial preparado. O jogo ainda nao foi compilado. Use sua propria ISO Xbox USA suportada pelo projeto. O primeiro build exige dependencias externas oficiais. O All-Fix nao executa Launcher.cmd, BuildGame.cmd ou instaladores automaticamente. Consulte README.txt e as instrucoes oficiais.",
+        "build_profile": "doax-0.8.0-prepare",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "Xbox USA suportado pelo projeto"
+          }
+        ]
+      }
     }
   ]
 }
