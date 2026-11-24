@@ -32,6 +32,6 @@
       "sha1": "9bef1128717f958171a4afac3ed78ee2bb4e86ce"
     }
   ],
-  "manual_steps": "O pacote oficial do Ghostship e sua ROM verificada baserom.us.z64 foram instalados. Abra Ghostship.exe na pasta do jogo para concluir a geracao local de recursos na primeira execucao.",
+  "manual_steps": "O pacote oficial Ghostship e a ROM US verificada foram preparados. O motor com o extrator nativo verificado gera sm64.o2r automaticamente, sem selecionar a ROM novamente. Sem o extrator incorporado, a geracao ocorre na primeira execucao.",
   "launch_file": "Ghostship.exe"
 }

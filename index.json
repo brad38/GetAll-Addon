@@ -33,7 +33,7 @@
       "tag": "3.0.0",
       "schema_version": 3,
       "path": "recipes/super-mario-64/ghostship/3.0.0.json",
-      "sha256": "e83c27672a4d1d478172199dcdf2629ec8c89b39943132d8c1a6c15088af41f4",
+      "sha256": "776e9f0c0fc0fb6455349a0ce707721e6a7f873be897e0df7c0270a1298855a7",
       "status": "experimental",
       "has_inputs": true,
       "has_manual_steps": true
@@ -189,7 +189,7 @@
       "tag": "v1.6",
       "schema_version": 3,
       "path": "recipes/super-smash-bros/battleship/v1.6.json",
-      "sha256": "3c6a62ac4d92b70b5d5aef4ba7f994de7ceeeac004f4b4ff2f75864670f17218",
+      "sha256": "a3f4fb0a09e8023dc8958d69ed652fe5250637b07407454f38de05bb66852b80",
       "status": "experimental",
       "has_inputs": true,
       "has_manual_steps": true

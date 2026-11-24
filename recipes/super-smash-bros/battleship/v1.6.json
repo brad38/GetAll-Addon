@@ -31,6 +31,6 @@
       "sha1": "e2929e10fccc0aa84e5776227e798abc07cedabf"
     }
   ],
-  "manual_steps": "O pacote oficial BattleShip e sua ROM verificada baserom.us.z64 foram instalados. Abra BattleShip.exe na pasta do jogo para concluir a extracao inicial de BattleShip.o2r na primeira execucao.",
+  "manual_steps": "O pacote oficial BattleShip US e a ROM verificada foram preparados. O motor gera BattleShip.o2r e o identificador da receita automaticamente com o Torch oficial, sem abrir o assistente do jogo. Em SDK anterior, a extracao ocorre na primeira execucao.",
   "launch_file": "BattleShip.exe"
 }
