@@ -1,3 +1,7 @@
+## Rodada 16 (23/11/2026)
+
+120/146 projetos em desenvolvimento, 92 na main, 26 pendentes, 13 kits v9, SDK 1.5.1. Consulte [matriz completa](COBERTURA-R16-2026-11-23.md) e [relatorio](RODADA-16-2026-11-23.md). Historico anterior preservado abaixo.
+
 # Rodada 16 — estado atual
 
 **120/146 projetos com receita em desenvolvimento**, 92 na main, 26 sem receita. 13 perfis v9 apenas preparação. SDK 1.5.1. Consulte [matriz e evidências completas](RODADA-16-2026-11-23.md). Histórico anterior preservado abaixo.
