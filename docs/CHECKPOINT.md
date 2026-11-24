@@ -1,3 +1,9 @@
+# Rodada 17E — checkpoint parcial (24/11/2026)
+
+SDK 1.5.5; Desktop 3.0.0; código privado f6ffb767e96be7dff5af2c80e8cc3c3d546e94bd. 122/146 (83,56%), 15 v9, 24 sem receita, 1 validated histórico. Toolchains reais e pipeline Forza integrado, fixture compilada; Sonic/MML recuperação atômica; CTR executável principal compilado com 11 CTest aprovados e 1 skip. Zero novas instalações completas/boots/homologações. [Matriz](COBERTURA-R17E-2026-11-24.md) | [Relatório](RODADA-17E-2026-11-24.md). Sem merge/release/DownloadAll.
+
+---
+
 # Rodada 17D - checkpoint parcial (23/11/2026)
 
 122/146 (83,56%), main 92, 24 sem receita, 15 v9, 1 validated histórico. SDK 1.5.4 / Desktop 3.0.0. Sonic processamento integral implementado, sem GDI real; Forza decoder XEX e SDK ReXGlue extraído, sem codegen/build; MML paridade US/JP verificada, sem mídia real. Desktop/SDK privados versionados no commit 62f1cd614a2eb371b8ada3f154666e15abed477a. Clone limpo: 300 C#, 122 parser, 44 Python, JS e 3 regressões oficiais; Release x64. Nenhuma nova instalação completa comprovada; UI não homologada. [Matriz](COBERTURA-R17D-2026-11-23.md) | [Relatório](RODADA-17D-2026-11-23.md). PR #18 draft; sem merge/release/DownloadAll.
