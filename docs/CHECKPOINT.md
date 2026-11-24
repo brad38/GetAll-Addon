@@ -1,3 +1,9 @@
+# Rodada 17D - checkpoint parcial (23/11/2026)
+
+122/146 (83,56%), main 92, 24 sem receita, 15 v9, 1 validated histórico. SDK 1.5.4 / Desktop 3.0.0. Sonic processamento integral implementado, sem GDI real; Forza decoder XEX e SDK ReXGlue extraído, sem codegen/build; MML paridade US/JP verificada, sem mídia real. Desktop/SDK privados versionados no commit 62f1cd614a2eb371b8ada3f154666e15abed477a. Clone limpo: 300 C#, 122 parser, 44 Python, JS e 3 regressões oficiais; Release x64. Nenhuma nova instalação completa comprovada; UI não homologada. [Matriz](COBERTURA-R17D-2026-11-23.md) | [Relatório](RODADA-17D-2026-11-23.md). PR #18 draft; sem merge/release/DownloadAll.
+
+---
+
 # Rodada 17C - estado atual (23/11/2026)
 
 122/146 projetos com receita (83,56%); 92 main, 24 sem receita, 15 v9, 1 validated historico. SDK 1.5.3 / Desktop 3.0.0. Retomada transacional MML condicionada a midia genuina; Forza XDVDFS/XEX; Sonic GDI e verificacoes estruturais Switch/PS4. Oito binarios de componentes upstream compilados em cinco projetos, zero novos jogos completos ou homologados. 277 PASS C#, 122 parser, 44 Python, JS e regressao offline tripla aprovados. [Matriz](COBERTURA-R17C-2026-11-23.md) | [Relatorio](RODADA-17C-2026-11-23.md). PR #18 draft, sem merge/release. Historico preservado.
