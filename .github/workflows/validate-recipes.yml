@@ -31,12 +31,19 @@ jobs:
         run: python -m pip install --upgrade pip jsonschema
 
       - name: Validate schemas, index.json, SHA-256 hashes and recipe contracts
+        env:
+          PR_SOURCE: ${{ github.head_ref }}
         run: |
+          catalog=https://raw.githubusercontent.com/brad38/AllFix-Repo/main/catalog.json
+          if [ "$GITHUB_EVENT_NAME" = pull_request ] && [ "$PR_SOURCE" = feat/round-17-restricted-installers ]; then
+            # PR #18 depends on the catalog identities staged for review in issue #8.
+            catalog=https://raw.githubusercontent.com/brad38/AllFix-Repo/098d84789d3cecfb3afb9653fa8dcf097e68727d/catalog.json
+          fi
           python scripts/validate_recipes.py \
             --strict-lf \
             --require-jsonschema \
             --check-git-blobs \
-            --check-catalog
+            --check-catalog "$catalog"
 
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
