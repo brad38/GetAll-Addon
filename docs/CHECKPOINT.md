@@ -1,3 +1,9 @@
+# Rodada 18 — checkpoint contínuo de 24/11/2026 (11:41 BRT)
+
+SDK 1.5.9 / Desktop 3.0.0. Privado 8d4a6ea51b68ef229cc203cd87262fcfb133e7c7; receitas fixadas 714cec7f6bfa176ae69986be77c1b8aa23c175f8. Cobertura 130/145 (89,66%), 131 receitas, 15 sem receita e 15 kits v9. SSX, Pinyon, GTA Stories e DOAX integrados com preflights reais; Render96 packs importados; GT5 ISO9660 legível e validação uniforme de volumes GT.VOL inteiros ou segmentados. 402 PASS C# (7 novas verificações GT5, 395 anteriores); parser 131/131 e JS PASS anteriores sem mudança de contrato; Release x64 self-contained de worktree limpa. Candidato local C:\Users\bradg\Downloads\GetAll-R18\publish-r18-gt5\AllFix.exe, 77591285 bytes, SHA256 eaf253867205469cc024de0073746311dcddfaf09b8ea4201dd977a215a2a489. Zero novas instalações jogáveis, builds integrais ou boots. Windows CI #13 e GetAll CI #60 aprovados; #14 iniciada. Retomar God of War, RyGT, SpartanPort, Odyssey, MKW e projetos sem receita viáveis; GT5 SELF/PUP/ISO cifrada, SM64 Windows limpo, Bananza positiva, UI WPF pendentes. Sem merge, release, DownloadAll ou substituição da instalação. [Detalhes](RODADA-18.md) e [matriz](COBERTURA-R18.md).
+
+---
+
 # Rodada 18 — missão contínua de conclusão (24/11/2026)
 
 SDK 1.5.9 / Desktop 3.0.0. Privado ce3edac8dea0b1d73e2568293a914358bb2d451f; receitas 714cec7f6bfa176ae69986be77c1b8aa23c175f8. 130/145 projetos, 131 receitas, 15 sem receita. SSX/Pinyon/GTA Stories/DOAX: pipelines integrados, preflights reais aprovados. GT5 ISO9660 legível e packs Render96 integrados. 395 PASS C#, parser 131/131, JS PASS e Release x64 limpo. Sem novos builds integrais, instalações jogáveis ou boots homologados. Executável publish-r18-continued/AllFix.exe; hash e pendências executáveis em [RODADA-18.md](RODADA-18.md). Retomar God of War, RyGT, SpartanPort, Odyssey, MKW e restantes viáveis, sem nova rodada.
