@@ -392,6 +392,65 @@
           }
         ]
       }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "fh1-reimagined",
+        "tag": "v0.3.9",
+        "source_url": "https://github.com/FH1-ReImagined/ForzaHorizon1-ReImagined/releases/tag/v0.3.9",
+        "operations": [],
+        "required_files": [
+          "forza-launcher.exe",
+          "README.txt",
+          "windows-build-manifest.json",
+          "project/forza-recomp/CMakeLists.txt",
+          "project/forza-recomp/forza_manifest.toml",
+          "licenses/ForzaHorizon1-ReImagined.txt"
+        ],
+        "inputs": [],
+        "manual_steps": "Kit oficial do Forza extraido offline e verificado integralmente. O jogo ainda nao foi compilado. Forneca sua propria copia Xbox 360 (ISO, Games on Demand ou pasta extraida), conforme README.txt. O All-Fix nao executa o launcher, instalador ou compiladores automaticamente.",
+        "build_profile": "fh1-0.3.9-inno-prepare",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "Xbox 360 original; alternativa: Games on Demand ou pasta extraida"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "mega-man-legends-modernization-project",
+        "tag": "v0.9.6-beta",
+        "source_url": "https://github.com/Drakfix/MML_Modernization-Project/releases/tag/v0.9.6-beta",
+        "operations": [],
+        "required_files": [
+          "mml_run64.exe",
+          "mml.dll",
+          "mml.ini",
+          "ddraw.dll",
+          "SDL3.dll",
+          "x64/SDL3.dll",
+          "THIRD-PARTY-NOTICES.txt"
+        ],
+        "inputs": [],
+        "manual_steps": "Runtime oficial extraido offline e verificado. Use sua propria instalacao de Mega Man Legends PC (MEGAMAN.EXE US) ou Rockman DASH PC (ROCKMAN.EXE JP). A importacao, patch e primeiro boot ainda precisam ser homologados. O All-Fix nao executa o instalador ou o jogo automaticamente.",
+        "build_profile": "mml-0.9.6-beta-pyinstaller-prepare",
+        "preparation_media": [
+          {
+            "id": "original-game",
+            "kind": "directory",
+            "extensions": [],
+            "version": "PC CD-ROM US ou JP; pasta com executavel original"
+          }
+        ]
+      }
     }
   ]
 }

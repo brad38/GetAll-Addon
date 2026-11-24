@@ -1440,6 +1440,30 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "forza-horizon",
+      "project_id": "fh1-reimagined",
+      "repository": "FH1-ReImagined/ForzaHorizon1-ReImagined",
+      "tag": "v0.3.9",
+      "schema_version": 9,
+      "path": "recipes/forza-horizon/fh1-reimagined/v0.3.9.json",
+      "sha256": "2b7de0011cfbf6c41d90db177cb8363cd5ac88f13e0608c91eacae466b921bb9",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "mega-man-legends-rockman-dash",
+      "project_id": "mega-man-legends-modernization-project",
+      "repository": "Drakfix/MML_Modernization-Project",
+      "tag": "v0.9.6-beta",
+      "schema_version": 9,
+      "path": "recipes/mega-man-legends-rockman-dash/mega-man-legends-modernization-project/v0.9.6-beta.json",
+      "sha256": "9063ad95b688d2c73f2876a620592b17b19c3f1c8122e803da805a5d2387e999",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }

@@ -1,3 +1,9 @@
+# Rodada 17B — estado atual (23/11/2026)
+
+122/146 projetos com receita em desenvolvimento (83,56%), 92 na main, 24 sem receita, 15 kits v9 de preparação, 121 experimental e 1 validated histórico. SDK 1.5.2; Desktop 3.0.0. Forza Inno e MML PyInstaller preparados pelo motor real; patch local US/JP, retomada sem redownload e grupos multipart testados. Build Docker Windows x64 com fixture sintético aprovado, sem autorização de build real de jogo. Nenhuma nova instalação completa ou homologação. [Matriz R17B](COBERTURA-R17B-2026-11-23.md) | [Relatório R17B](RODADA-17B-2026-11-23.md). Histórico anterior preservado.
+
+---
+
 # Rodada 17 — checkpoint parcial (23/11/2026)
 
 120/146 projetos em desenvolvimento; 92 na main (base R16); 26 sem receita; 13 kits v9, 1 validated histórico, 119 experimental. SDK 1.5.1 / aplicativo 3.0.0. Sem alterações nas receitas ou publicação. Refatoração local da extração NSIS e apresentação estruturada de mídia original; 201 verificações C#, 120/120 parser, regressão real SARecomp e Release x64 concluída. Workspace Bradsson: `C:\Users\bradg\Downloads\GetAll-R17-20261123\desktop`; prévia `C:\Users\bradg\Downloads\GetAll-R17-20261123\publish-final\AllFix.exe`. Artefatos, impedimentos e evidências em [RODADA-17-2026-11-23.md](RODADA-17-2026-11-23.md). Próximo: Inno Setup/Forza, build isolado e payloads multipart; nenhum merge ou release autorizado. Rodada 17 ainda não concluída.

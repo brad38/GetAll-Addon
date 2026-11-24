@@ -1,3 +1,9 @@
+# Rodada 17B — estado atual (23/11/2026)
+
+122/146 projetos com receita em desenvolvimento (83,56%), 92 na main, 24 sem receita, 15 kits v9 de preparação, 121 experimental e 1 validated histórico. SDK 1.5.2; Desktop 3.0.0. Forza Inno e MML PyInstaller preparados pelo motor real; patch local US/JP, retomada sem redownload e grupos multipart testados. Build Docker Windows x64 com fixture sintético aprovado, sem autorização de build real de jogo. Nenhuma nova instalação completa ou homologação. [Matriz R17B](COBERTURA-R17B-2026-11-23.md) | [Relatório R17B](RODADA-17B-2026-11-23.md). Histórico anterior preservado.
+
+---
+
 ## Rodada 16 (23/11/2026)
 
 120/146 projetos em desenvolvimento, 92 na main, 26 pendentes, 13 kits v9, SDK 1.5.1. Consulte [matriz completa](COBERTURA-R16-2026-11-23.md) e [relatorio](RODADA-16-2026-11-23.md). Historico anterior preservado abaixo.
