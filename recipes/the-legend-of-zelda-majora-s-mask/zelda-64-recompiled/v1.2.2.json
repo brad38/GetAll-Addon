@@ -11,6 +11,6 @@
     "SDL2.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Zelda64 Recompiled foi extraido. No primeiro uso, abra Zelda64Recompiled.exe na pasta instalada e forneca sua copia legitima norte-americana de Zelda Majora's Mask no menu do jogo. O projeto carrega os recursos da ROM selecionada e nao fornece o jogo original.",
+  "manual_steps": "SDK 1.5.18: o All-Fix prepara automaticamente o cache de ROM original no modo portatil oficial, apos verificar pacote, edicao e consentimento. Em SDK anterior, use o seletor de ROM do proprio port. Primeiro boot ainda aguarda homologacao com midia original.",
   "launch_file": "Zelda64Recompiled.exe"
 }

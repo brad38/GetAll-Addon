@@ -57,7 +57,7 @@
       "tag": "v1.2.2",
       "schema_version": 3,
       "path": "recipes/the-legend-of-zelda-majora-s-mask/zelda-64-recompiled/v1.2.2.json",
-      "sha256": "98330c3e60707974560cd242d4a2e9d6d66f4ab36154019c86db0102754220d1",
+      "sha256": "17671ffc07a81a19ffae87734314575e527a8c0b0cac7aea246ba15d7c2f4693",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -117,7 +117,7 @@
       "tag": "v1.0.2",
       "schema_version": 3,
       "path": "recipes/banjo-kazooie/banjo-recompiled/v1.0.2.json",
-      "sha256": "c19fe3c9a50eb81859d430ee11dcfcef2b2531f6bd40a5570c752f234a7946cc",
+      "sha256": "29b93eea1586df51dd50a604ff22f37a7d1186ac5e1b105ad963b6f0ff6691b1",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -141,7 +141,7 @@
       "tag": "v1.0.1",
       "schema_version": 3,
       "path": "recipes/banjo-tooie/banjo-tooie-recompiled/v1.0.1.json",
-      "sha256": "4e611d6f6b383197134b5ce6927e393de94fcc615202ad4f297819c7e5a5834a",
+      "sha256": "adee7a0981446ac18fa7743523987437d7d8940c9a77bbd70a166e6b6f1594a6",
       "status": "experimental",
       "has_inputs": true,
       "has_manual_steps": true
@@ -297,7 +297,7 @@
       "tag": "v0.9.2",
       "schema_version": 3,
       "path": "recipes/mario-kart-64/mariokart-64-recompiled/v0.9.2.json",
-      "sha256": "868d4e5442d5bd114a8185c14a5aed8aa5d524cacdea3e0354720aa61bdcf79d",
+      "sha256": "a9891002b49260a724d4e3a236ff2f57b22b4d22edad49b75ec01da104a75f62",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

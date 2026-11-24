@@ -11,6 +11,6 @@
     "dxil.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial de Mario Kart 64 (v0.9.2) foi extraido. Execute MarioKart64Recompiled.exe na pasta instalada e Escolha sua ROM original de Mario Kart 64 no menu inicial. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "manual_steps": "SDK 1.5.18: o All-Fix prepara automaticamente o cache de ROM original no modo portatil oficial, apos verificar pacote, edicao e consentimento. Em SDK anterior, use o seletor de ROM do proprio port. Primeiro boot ainda aguarda homologacao com midia original.",
   "launch_file": "MarioKart64Recompiled.exe"
 }

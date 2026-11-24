@@ -33,6 +33,6 @@
       "sha1": "af1a89e12b638b8d82cc4c085c8e01d4cba03fb3"
     }
   ],
-  "manual_steps": "O pacote oficial Banjo-Tooie Recompiled e sua ROM verificada banjo-tooie.us.z64 foram instalados. Execute BanjoTooieRecompiled.exe a partir da pasta que contem assets/ e escolha Select ROM indicando banjo-tooie.us.z64 na propria pasta instalada.",
+  "manual_steps": "SDK 1.5.18: o All-Fix prepara automaticamente o cache de ROM original no modo portatil oficial, apos verificar pacote, edicao e consentimento. Em SDK anterior, use o seletor de ROM do proprio port. Primeiro boot ainda aguarda homologacao com midia original.",
   "launch_file": "BanjoTooieRecompiled.exe"
 }

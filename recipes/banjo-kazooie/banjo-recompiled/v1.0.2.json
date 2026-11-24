@@ -11,6 +11,6 @@
     "SDL2.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Banjo Recompiled foi extraido. Abra BanjoRecompiled.exe na pasta instalada e forneca sua ROM original de Banjo-Kazooie USA v1.0 no menu inicial. O jogo carrega os recursos dessa copia; a ROM nao esta incluida.",
+  "manual_steps": "SDK 1.5.18: o All-Fix prepara automaticamente o cache de ROM original no modo portatil oficial, apos verificar pacote, edicao e consentimento. Em SDK anterior, use o seletor de ROM do proprio port. Primeiro boot ainda aguarda homologacao com midia original.",
   "launch_file": "BanjoRecompiled.exe"
 }
