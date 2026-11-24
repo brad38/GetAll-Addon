@@ -1152,6 +1152,42 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "star-fox-adventures",
+      "project_id": "foxhollow",
+      "repository": "JackPriceBurns/foxhollow",
+      "tag": "v1.0.30",
+      "schema_version": 5,
+      "path": "recipes/star-fox-adventures/foxhollow/v1.0.30.json",
+      "sha256": "cc9d7b40c61047232c00e9c523808043177d650476de00c77a09b5edcf3a4f1e",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "god-of-war-2005",
+      "project_id": "god-of-war-native-pc-port-gow-pc-port",
+      "repository": "danielalves96/gow-pc-port",
+      "tag": "launcher-v0.4.0",
+      "schema_version": 9,
+      "path": "recipes/god-of-war-2005/god-of-war-native-pc-port-gow-pc-port/launcher-v0.4.0.json",
+      "sha256": "a0e9724ae96d74b6252e4d060ccdb3fd70f5bf2e0ca77e0ed5c4c732b21ccd2a",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "the-legend-of-zelda-tears-of-the-kingdom",
+      "project_id": "totk-pc-recomp",
+      "repository": "valentderah/totk-pc-recomp",
+      "tag": "v0.5.0",
+      "schema_version": 9,
+      "path": "recipes/the-legend-of-zelda-tears-of-the-kingdom/totk-pc-recomp/v0.5.0.json",
+      "sha256": "173da52fe07d90ae1b688e06d6ba5a79d51d08ae86bf2dbf6bb4095ebf1255b9",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }
