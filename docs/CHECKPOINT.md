@@ -1,3 +1,9 @@
+# Rodada 17F — checkpoint parcial (24/11/2026)
+
+SDK 1.5.6; Desktop 3.0.0; código privado 7b77aab5ef8a1a3b7ad30db0833929997935bbc5. 123/146 projetos (84,25%); 124 receitas; 15 v9; 23 sem receita; 1 validated histórico. CTR e SM compilados pelo motor; 7 preparações reais; zero novas instalações completas/boots/homologações. CI Windows privado criado. [Matriz](COBERTURA-R17F-2026-11-24.md) | [Relatório](RODADA-17F-2026-11-24.md). Sem merge/release/DownloadAll.
+
+---
+
 # Rodada 17E — checkpoint parcial (24/11/2026)
 
 SDK 1.5.5; Desktop 3.0.0; código privado f6ffb767e96be7dff5af2c80e8cc3c3d546e94bd. 122/146 (83,56%), 15 v9, 24 sem receita, 1 validated histórico. Toolchains reais e pipeline Forza integrado, fixture compilada; Sonic/MML recuperação atômica; CTR executável principal compilado com 11 CTest aprovados e 1 skip. Zero novas instalações completas/boots/homologações. [Matriz](COBERTURA-R17E-2026-11-24.md) | [Relatório](RODADA-17E-2026-11-24.md). Sem merge/release/DownloadAll.
