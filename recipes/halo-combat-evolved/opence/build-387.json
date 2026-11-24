@@ -1,0 +1,15 @@
+{
+  "schema_version": 5,
+  "project_id": "opence",
+  "tag": "build-387",
+  "source_url": "https://github.com/OpenCommunityEdition/OpenCE/releases/tag/build-387",
+  "operations": [],
+  "required_files": [
+    "halo.exe",
+    "SDL3.dll",
+    "LICENSE.txt"
+  ],
+  "inputs": [],
+  "manual_steps": "Port Windows oficial preparado. Forneca sua propria imagem legitima do disco Xbox Halo Combat Evolved (.iso ou .xiso) no primeiro inicio do port ou coloque a imagem junto ao executavel conforme a documentacao oficial. A extracao de mapas pelo jogo e o primeiro boot ainda nao foram homologados.",
+  "launch_file": "halo.exe"
+}
