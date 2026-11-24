@@ -1,0 +1,17 @@
+{
+  "schema_version": 5,
+  "project_id": "god-hand-rearmed",
+  "tag": "v0.6.9.5",
+  "source_url": "https://github.com/God-Hand-Rearmed/God-Hand-Rearmed/releases/tag/v0.6.9.5",
+  "operations": [],
+  "required_files": [
+    "God Hand Rearmed/GHR.exe",
+    "God Hand Rearmed/pcsx2gs.dll",
+    "God Hand Rearmed/SDL3.dll",
+    "God Hand Rearmed/README.txt",
+    "God Hand Rearmed/shaderc_shared.dll"
+  ],
+  "inputs": [],
+  "manual_steps": "Port oficial preparado. Forneca sua propria imagem legitima de God Hand USA SLUS-21503 (.iso ou .chd) ao launcher oficial GHR.exe. A midia e o primeiro boot permanecem pendentes; nenhum jogo ou instalador e executado automaticamente.",
+  "launch_file": "God Hand Rearmed/GHR.exe"
+}
