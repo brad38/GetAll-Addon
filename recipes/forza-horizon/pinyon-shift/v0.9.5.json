@@ -1,0 +1,24 @@
+{
+  "schema_version": 9,
+  "project_id": "pinyon-shift",
+  "tag": "v0.9.5",
+  "source_url": "https://github.com/arcanite24/pinyon-shift/releases/tag/v0.9.5",
+  "operations": [],
+  "required_files": [
+    "PinyonShiftLauncher.exe",
+    "pinyon-shift-source.zip"
+  ],
+  "inputs": [],
+  "manual_steps": "Kit oficial preparado. O jogo ainda nao foi compilado. Use sua propria midia Xbox 360 USA MS-2505 (4D5309C9). O launcher oficial obtem ferramentas e compila localmente. O All-Fix nao executa o launcher nem scripts automaticamente. Consulte as instrucoes oficiais.",
+  "build_profile": "pinyon-0.9.5-prepare",
+  "preparation_media": [
+    {
+      "id": "original-disc",
+      "kind": "file",
+      "extensions": [
+        ".iso"
+      ],
+      "version": "Xbox 360 USA MS-2505 / 4D5309C9"
+    }
+  ]
+}

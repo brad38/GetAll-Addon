@@ -1,0 +1,30 @@
+{
+  "schema_version": 9,
+  "project_id": "sarecomp-sonic-adventure-recompiled",
+  "tag": "v0.52.0",
+  "source_url": "https://github.com/sonicfreak1337/SARecomp/releases/tag/v0.52.0",
+  "operations": [],
+  "required_files": [
+    "game.exe",
+    "sonic-setup.exe",
+    "sonic-config.exe",
+    "SDL3.dll",
+    "README.txt",
+    "resources/payload-files.tsv",
+    "resources/install-identity.json",
+    "resources/bootstrap.xor.z"
+  ],
+  "inputs": [],
+  "manual_steps": "Payload oficial extraido offline e verificado. Use seu proprio Sonic Adventure Dreamcast PAL v1.003 (MK-5100050), GDI e todas as tracks juntos. Execute manualmente sonic-setup.exe conforme README.txt para verificar e importar a midia. O All-Fix nao executa o instalador nem o jogo automaticamente.",
+  "build_profile": "sarecomp-0.52.0-prepare",
+  "preparation_media": [
+    {
+      "id": "original-disc",
+      "kind": "file",
+      "extensions": [
+        ".gdi"
+      ],
+      "version": "Dreamcast PAL v1.003 (MK-5100050), GDI e todas as tracks"
+    }
+  ]
+}

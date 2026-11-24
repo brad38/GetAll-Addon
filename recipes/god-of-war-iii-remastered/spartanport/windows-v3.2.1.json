@@ -1,0 +1,25 @@
+{
+  "schema_version": 9,
+  "project_id": "spartanport",
+  "tag": "windows-v3.2.1",
+  "source_url": "https://github.com/FelipePrado0/SpartanPort/releases/tag/windows-v3.2.1",
+  "operations": [],
+  "required_files": [
+    "spartanport-windows/SpartanPort.exe",
+    "spartanport-windows/Play SpartanPort.exe",
+    "spartanport-windows/README-Windows.txt",
+    "spartanport-windows/recomplauncher.json",
+    "spartanport-windows/bin/spartanport-probe.exe"
+  ],
+  "inputs": [],
+  "manual_steps": "Preparação apenas. Use seu próprio dump de God of War III Remastered PS4 CUSA01623 ou CUSA01715, versão 01.00/01.02. Configure manualmente o launcher oficial para preparar a imagem; nenhuma execução automática.",
+  "build_profile": "spartanport-3.2.1-prepare",
+  "preparation_media": [
+    {
+      "id": "original-game",
+      "kind": "directory",
+      "extensions": [],
+      "version": "PS4 CUSA01623/CUSA01715 01.00 ou 01.02"
+    }
+  ]
+}

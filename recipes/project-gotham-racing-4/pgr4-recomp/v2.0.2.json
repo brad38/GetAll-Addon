@@ -1,0 +1,17 @@
+{
+  "schema_version": 5,
+  "project_id": "pgr4-recomp",
+  "tag": "v2.0.2",
+  "source_url": "https://github.com/beatrixzy/PGR4-Recomp/releases/tag/v2.0.2",
+  "operations": [],
+  "required_files": [
+    "pgr4_launcher.exe",
+    "pgr4_recompiled.exe",
+    "rexruntime.dll",
+    "EOSSDK-Win64-Shipping.dll",
+    "README.txt"
+  ],
+  "inputs": [],
+  "manual_steps": "Port oficial Windows preparado. Forneca sua propria ISO legitima de Project Gotham Racing 4 para Xbox 360 e a atualizacao original exigida pelo projeto. Configure e extraia a midia no launcher oficial pgr4_launcher.exe. A receita nao inclui ISO, atualizacao ou DLC comercial; nenhum boot foi homologado.",
+  "launch_file": "pgr4_launcher.exe"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 5,
+  "project_id": "gears-of-war-2-pc-port",
+  "tag": "v0.4.8",
+  "source_url": "https://github.com/santiquiroz/gears-of-war-2-pc-port/releases/tag/v0.4.8",
+  "operations": [],
+  "required_files": [
+    "gow2-recomp-0.4.8-win64/gow2.exe",
+    "gow2-recomp-0.4.8-win64/rexgpu-xenos.dll",
+    "gow2-recomp-0.4.8-win64/rexruntime.dll",
+    "gow2-recomp-0.4.8-win64/gow2.default.toml",
+    "gow2-recomp-0.4.8-win64/QUICKSTART.txt"
+  ],
+  "inputs": [],
+  "manual_steps": "Pacote portatil oficial. No primeiro uso do launcher, forneca sua propria ISO legitima de Gears of War 2 Xbox 360 retail ou pasta extraida com default.xex e GearGame. Nao use build vazado de desenvolvimento. Nenhum dado comercial foi fornecido nem boot homologado.",
+  "launch_file": "gow2-recomp-0.4.8-win64/gow2.exe"
+}

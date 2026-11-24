@@ -1,0 +1,18 @@
+{
+  "schema_version": 5,
+  "project_id": "gt4recomp",
+  "tag": "v1.3.0-rc16",
+  "source_url": "https://github.com/moesuito/gt4-staticrecomp/releases/tag/v1.3.0-rc16",
+  "operations": [],
+  "required_files": [
+    "GT4Recomp.exe",
+    "SDL3.dll",
+    "PORTABLE.txt",
+    "game/gt4.exe",
+    "game/gt4-spec2.exe",
+    "game/MANIFEST.json"
+  ],
+  "inputs": [],
+  "manual_steps": "GT4Recomp portable oficial, release candidate. Forneca sua propria ISO legitima de Gran Turismo 4 USA v2.00 SCUS-97328 (ou sua imagem Spec II 1.10) no launcher. O GetAll nao inclui midia, nao executa o launcher automaticamente e nao homologou o boot.",
+  "launch_file": "GT4Recomp.exe"
+}
