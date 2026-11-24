@@ -6,6 +6,32 @@
     {
       "const": {
         "schema_version": 9,
+        "project_id": "ssx-recomp",
+        "tag": "v2.0.0",
+        "source_url": "https://github.com/AmarilloNL/ssx-recomp/releases/tag/v2.0.0",
+        "operations": [],
+        "required_files": [
+          "ssx-recomp.exe",
+          "recomplauncher.json"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione a m\u00eddia original de SSX EA-2413. Para incluir a atualiza\u00e7\u00e3o 0.0.3.2, forne\u00e7a o pacote STFS completo com default.xexp e patch0.big.",
+        "build_profile": "ssx-2.0.0-prepare",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "Xbox 360 EA-2413 USA/Europe/Australia"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
         "project_id": "edge-of-time-recomp",
         "tag": "v1.1",
         "source_url": "https://github.com/goliathret/EdgeOfTimeRecomp/releases/tag/v1.1",

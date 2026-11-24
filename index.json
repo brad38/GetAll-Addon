@@ -1274,11 +1274,11 @@
       "tag": "v2.0.0",
       "schema_version": 9,
       "path": "recipes/ssx-2012/ssx-recomp/v2.0.0.json",
-      "sha256": "dec9f31797a7eea6aeee0761011588d4151c26322e0686c388deb67f5c5a128a",
+      "sha256": "08964214bfff5dabac62f9d0ea2c6885d59427b12ec1601d8db2843f27ba837b",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.10"
+      "min_sdk_version": "1.5.14"
     },
     {
       "game_id": "the-legend-of-zelda-link-s-awakening",
