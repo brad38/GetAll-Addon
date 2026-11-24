@@ -211,3 +211,10 @@ Documentacao: [Rodada 11B](RODADA-11B-SDK141-2026-11-23.md), [Matriz 119](COBERT
 ## Proximos passos
 
 Revisar o PR, verificar CI e homologar Severed Chains apenas com Java25 configurado e copia legitima dos discos do usuario. Para automacao futura, solicitar ao Codex importacao/verificacao segura de midia e pos-condicoes; nenhuma hipotese de ROM hash deve ser inventada. Nao fazer merge nem publicar release.
+
+## Transferência para o Codex — 2026-11-24
+
+- O trabalho interrompido consta do checkpoint recuperável em `GetAll-R18/evidence-r18/handoff-20261124-161606`, com HEADs, patches binários e arquivos não rastreados.
+- As receitas Team Forever individuais e a combinada estão na branch existente. As duas individuais requerem o catálogo curado que declara `sonic-1-forever` e `sonic-2-absolute`.
+- A origem padrão continua `main`. Para testar as receitas ainda em revisão, use um complemento de teste explícito com um SHA de commit do GetAll e o Desktop/SDK 1.5.10 correspondentes.
+- Próxima validação funcional: primeiro clique em Instalar, mídia legítima, preparação e primeiro boot de Hookshot e dos dois Team Forever. Ship of Harkinian precisa de um `soh-torch` validado e integrado sob perfil fechado. Consulte [a matriz](COBERTURA-R18.md).

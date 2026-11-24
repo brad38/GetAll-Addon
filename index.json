@@ -1644,6 +1644,42 @@
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
+    },
+    {
+      "game_id": "sonic-the-hedgehog-1-2-2013",
+      "project_id": "sonic-1-forever-sonic-2-absolute",
+      "repository": "TeamForeverDev/Sonic1Forever",
+      "tag": "v1.5.2-v1.2.2",
+      "schema_version": 9,
+      "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-1-forever-sonic-2-absolute/v1.5.2-v1.2.2.json",
+      "sha256": "c3b2317522899e5e570b7c3509e417818204d81085ccdfa7a355d0de1733c67d",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "sonic-the-hedgehog-1-2-2013",
+      "project_id": "sonic-1-forever",
+      "repository": "TeamForeverDev/Sonic1Forever",
+      "tag": "v1.5.2",
+      "schema_version": 9,
+      "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-1-forever/v1.5.2.json",
+      "sha256": "6561526792ca7d71039eaf9672835339ee982c1cc2e57281e007ad1ae7dd847f",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
+    },
+    {
+      "game_id": "sonic-the-hedgehog-1-2-2013",
+      "project_id": "sonic-2-absolute",
+      "repository": "TeamForeverDev/Sonic2Absolute",
+      "tag": "v1.2.2",
+      "schema_version": 9,
+      "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-2-absolute/v1.2.2.json",
+      "sha256": "92e3a744b5b73539c97c69d899c1328b6a2d79ecf90c16b2dd26d2c808ca9a82",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }

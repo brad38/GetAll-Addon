@@ -1,0 +1,26 @@
+{
+  "schema_version": 9,
+  "project_id": "sonic-1-forever",
+  "tag": "v1.5.2",
+  "source_url": "https://github.com/TeamForeverDev/Sonic1Forever/commit/6e59292dc7be1914c3ad3fcbaf9ae304cceee441",
+  "operations": [],
+  "required_files": [
+    "Sonic1Forever/SonicForever.exe",
+    "Sonic1Forever/discord_game_sdk.dll",
+    "Sonic1Forever/Mods/modconfig.ini"
+  ],
+  "inputs": [],
+  "manual_steps": "Selecione os dados originais de Sonic 1 (2013) para concluir a instalação.",
+  "build_profile": "teamforever-sonic1-1.5.2",
+  "preparation_media": [
+    {
+      "id": "sonic1-rsdk",
+      "kind": "file",
+      "extensions": [
+        ".rsdk",
+        ".apk"
+      ],
+      "version": "Sonic 1 (2013) oficial: Data.rsdk ou .apk contendo assets/Data.rsdk"
+    }
+  ]
+}

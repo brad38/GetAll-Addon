@@ -478,6 +478,90 @@
           }
         ]
       }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "sonic-1-forever-sonic-2-absolute",
+        "tag": "v1.5.2-v1.2.2",
+        "source_url": "https://github.com/TeamForeverDev/Sonic1Forever/commit/6e59292dc7be1914c3ad3fcbaf9ae304cceee441",
+        "operations": [],
+        "required_files": [
+          "Sonic1Forever/SonicForever.exe",
+          "Sonic1Forever/discord_game_sdk.dll",
+          "Sonic1Forever/Mods/modconfig.ini"
+        ],
+        "inputs": [],
+        "manual_steps": "Kit oficial Team Forever (Sonic 1 Forever v1.5.2) preparado. Use Retomar para escolher Sonic 1 Forever e/ou Sonic 2 Absolute v1.2.2 e indicar seu arquivo Data.rsdk ou .apk oficial.",
+        "build_profile": "teamforever-1.5.2-1.2.2-prepare",
+        "preparation_media": [
+          {
+            "id": "sonic1-rsdk",
+            "kind": "file",
+            "extensions": [
+              ".rsdk",
+              ".apk"
+            ],
+            "version": "Sonic 1 (2013) oficial: Data.rsdk ou .apk contendo assets/Data.rsdk"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "sonic-1-forever",
+        "tag": "v1.5.2",
+        "source_url": "https://github.com/TeamForeverDev/Sonic1Forever/commit/6e59292dc7be1914c3ad3fcbaf9ae304cceee441",
+        "operations": [],
+        "required_files": [
+          "Sonic1Forever/SonicForever.exe",
+          "Sonic1Forever/discord_game_sdk.dll",
+          "Sonic1Forever/Mods/modconfig.ini"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione os dados originais de Sonic 1 (2013) para concluir a instalação.",
+        "build_profile": "teamforever-sonic1-1.5.2",
+        "preparation_media": [
+          {
+            "id": "sonic1-rsdk",
+            "kind": "file",
+            "extensions": [
+              ".rsdk",
+              ".apk"
+            ],
+            "version": "Sonic 1 (2013) oficial: Data.rsdk ou .apk contendo assets/Data.rsdk"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "sonic-2-absolute",
+        "tag": "v1.2.2",
+        "source_url": "https://github.com/TeamForeverDev/Sonic2Absolute/commit/04cef6e0fa8269b9c42c16542f0f3d15528554c7",
+        "operations": [],
+        "required_files": [
+          "Sonic2Absolute/Sonic2Absolute.exe",
+          "Sonic2Absolute/discord_game_sdk.dll",
+          "Sonic2Absolute/Mods/modconfig.ini"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione os dados originais de Sonic 2 (2013) para concluir a instalação.",
+        "build_profile": "teamforever-sonic2-1.2.2",
+        "preparation_media": [
+          {
+            "id": "sonic2-rsdk",
+            "kind": "file",
+            "extensions": [
+              ".rsdk",
+              ".apk"
+            ],
+            "version": "Sonic 2 (2013) oficial: Data.rsdk ou .apk contendo assets/Data.rsdk"
+          }
+        ]
+      }
     }
   ]
 }
