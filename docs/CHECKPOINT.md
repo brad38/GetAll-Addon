@@ -1,3 +1,9 @@
+# Rodada 18 — missão contínua de conclusão (24/11/2026)
+
+SDK 1.5.8; Desktop 3.0.0; código 930d4be203a25bc703d26f7252ab1f21bdef241f; receitas 028745e1c015428135c3281e58df6de4ef13edc0. Catálogo 110 jogos/145 projetos. 128/145 projetos com receita (88,28%); 129 receitas, 17 sem receita, 15 v9, 1 validated histórico. 3 perfis SM64 e DKB CLI; 39 preparações novas, CoopDX negativo; 345 PASS C#, parser 129/129, Python 44/44, JS PASS. Sem jogo integral/instalação/boot novo. [Matriz completa](COBERTURA-R18.md) | [Evidências e próxima tarefa executável](RODADA-18.md) | [Pacotes oficiais](R18-EVIDENCIAS-PORTATEIS.json). Retomar diretamente as tarefas da Rodada 18, não abrir nova rodada. Sem merge/release/DownloadAll.
+
+---
+
 # Rodada 17G — checkpoint parcial (24/11/2026)
 
 SDK 1.5.7; Desktop 3.0.0; código privado 272a97821fd693e7ae056f2d700746e64a46426c; receitas GetAll 70d97c69e8ee8aac7d6db69995729a6dbbc8e184. 125/146 (85,62%); 126 receitas, 15 v9, 21 sem receita, 1 validated histórico. SM Rewrite compilado pelo motor; MKDD fonte/runtime_check verificados, jogo pendente; 15 novas preparações portáteis; CTR expiração UI; Forza fixture aprovada. 324 C#, parser 126/126, Python 44/44, JS PASS, clone limpo Release x64. Zero instalações completas/boots/homologações novas. [Matriz](COBERTURA-R17G-2026-11-24.md) | [Relatório](RODADA-17G-2026-11-24.md). Sem merge/release/DownloadAll.
