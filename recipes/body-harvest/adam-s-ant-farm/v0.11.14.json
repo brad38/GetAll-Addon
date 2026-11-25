@@ -31,6 +31,6 @@
       "sha1": "bbb6666f5014a473747ee4145f036d9fb25d7348"
     }
   ],
-  "manual_steps": "O pacote oficial Adam's Ant Farm e sua ROM verificada body-harvest.us.z64 foram instalados em adams-ant-farm-windows-x86_64-v0.11.14/. Execute bh-launcher.exe e selecione essa ROM no primeiro uso.",
+  "manual_steps": "Forneça a ROM original americana de Body Harvest. O All-Fix compatível reutiliza a ROM importada e instala as dependências verificadas para iniciar Adam’s Ant Farm. Versões anteriores podem selecionar a ROM importada em bh-launcher.exe.",
   "launch_file": "adams-ant-farm-windows-x86_64-v0.11.14/bh-launcher.exe"
 }
