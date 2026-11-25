@@ -1,4 +1,12 @@
-# Conclusao integral do GetAll-Addon + SDK 1.5.9 + Desktop 3.0.0
+# Checkpoint do GetAll-Addon
+
+## SDK 1.5.43
+
+- `project-picori-999sian-tmc` v0.9.6 usa o extrator nativo integrado ao Desktop para gerar PAKs regionais a partir da ROM original dos EUA, Europa ou Japão. Builds sem o extrator preservam a importação da ROM americana.
+- `nookery-ex-acgc-pc-port` v1.0.0, `dusklight-ex-dusk` v2.0.3 e `strikers` v2.0.0 reutilizam a importação transacional de discos GameCube. O motor valida edição, revisão e digest, e informa a imagem ao executável oficial com `--disc`, `--dvd` ou `STRIKERS_DATA`.
+- Os pacotes oficiais passaram pelos testes de preparo, cancelamento e rejeição de mídia no motor. Os planos de inicialização foram conferidos com dados sintéticos. As quatro receitas continuam experimentais e aguardam instalação com mídia original e primeiro boot.
+
+## Histórico do SDK 1.5.9
 
 Desktop 3.0.0 / SDK 1.5.9 (`feat/round-17e-functional-installation`); GetAll-Addon (`feat/round-17-restricted-installers`). Catalogo oficial `brad38/AllFix-Repo`: 110 jogos, 145 projetos (Leonida removido pelo responsavel pelo catalogo). Cobertura alcancada: **136/145 projetos (93,79%)** contemplados por **137 receitas** (136 experimentais, 1 `validated` historico, 16 `v9`), cobrindo **100% dos projetos tecnicamente viaveis no Windows**. **504 PASS C#** (`AddonInfrastructure.dll`), **137/137 receitas** aprovadas pelo parser SDK (`--parse-getall`), **137/137** no validador estrito Python (`--strict-lf --require-jsonschema --check-git-blobs --check-catalog`), **44/44** `unittest`, regressao JavaScript (`STORE_R19_UI_OPTIONALS_PASS`) aprovada, e build x64 self-contained publicado em `C:\Users\bradg\Downloads\GetAll-R18\publish-r18-current\AllFix.exe` (`77654982` bytes, SHA256 `be4c025b58f9516bf7a1147e8fd9337f86f097c547d5eed04efef53a53264c82`; `Toolchains\allfix-r18-mario.tar` e rollback `publish-r18-gt5\AllFix.exe` preservados).
 

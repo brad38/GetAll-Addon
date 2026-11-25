@@ -12,6 +12,6 @@
     "nod.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Dusklight (v2.0.3) foi extraido. Execute dusklight.exe e informe sua imagem de disco original de The Legend of Zelda: Twilight Princess (.iso ou .rvz) no assistente inicial. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "A instalação automática no All-Fix com SDK 1.5.43 aceita ISO ou GCM original de Twilight Princess para GameCube dos EUA, Europa ou Japão. Para mídia Wii ou RVZ, utilize o fluxo do próprio Dusklight. O primeiro boot ainda aguarda homologação.",
   "launch_file": "dusklight.exe"
 }

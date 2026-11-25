@@ -12,6 +12,6 @@
     "nod.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Nookery (v1.0.0) foi extraido. Execute Nookery.exe e selecione sua imagem de disco legitima de Animal Crossing (GameCube USA GAFE01 rev 0 em .rvz, .iso, .ciso ou .gcm). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "A instalação automática no All-Fix com SDK 1.5.43 aceita ISO ou GCM original de Animal Crossing GAFE01 revisão 0. Em builds anteriores, selecione o disco original no Nookery. O primeiro boot ainda aguarda homologação.",
   "launch_file": "Nookery.exe"
 }

@@ -31,5 +31,5 @@
     }
   ],
   "launch_file": "tmc_pc.exe",
-  "manual_steps": "Receita experimental para o pacote Windows x64 v0.9.6 de Project Picori. O jogo prepara um cache de assets durante a primeira execucao com a ROM original; esse primeiro boot nao foi homologado. A automacao nesta receita suporta a ROM USA. O projeto oficial tambem suporta EU (baserom_eu.gba) e JP (baserom_jp.gba), mas essas regioes exigem preparo manual e teste independente; nao substitua a ROM por dados obtidos sem autorizacao."
+  "manual_steps": "O All-Fix com SDK 1.5.43 e o extrator integrado prepara o cache do Project Picori v0.9.6 para a ROM original dos EUA, Europa ou Japão. Em builds sem o extrator integrado, esta receita importa a ROM dos EUA e o jogo prepara os recursos na primeira execução. A instalação com mídia original e o primeiro boot aguardam homologação."
 }

@@ -645,7 +645,7 @@
       "tag": "v2.0.3",
       "schema_version": 3,
       "path": "recipes/the-legend-of-zelda-twilight-princess/dusklight-ex-dusk/v2.0.3.json",
-      "sha256": "656bf7793774e40798b57f945b8b63eaf01ca9db3052a3a4b505f58ddea2847e",
+      "sha256": "175e0c4cfaafe05d146a4bae18189acf90f5281de89a52eca8b63a29ceb232a3",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -657,7 +657,7 @@
       "tag": "v1.0.0",
       "schema_version": 3,
       "path": "recipes/animal-crossing/nookery-ex-acgc-pc-port/v1.0.0.json",
-      "sha256": "935c50550acbe557dcfb1bfb70df5c704df8d7a0970cdc5ffbcde544155c911f",
+      "sha256": "abca343a51748457d47a312cefab6b691f95493866db8e837bbfe2a4501862f9",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -681,7 +681,7 @@
       "tag": "v2.0.0",
       "schema_version": 3,
       "path": "recipes/super-mario-strikers/strikers/v2.0.0.json",
-      "sha256": "cea5c074a0d6c4b2e59232fc07aa7ba50d8238c439ca3984cd9bd1c913fc2b11",
+      "sha256": "73e4d44876096e6b913cd5e8576530a5f6528cc093007d6079a102744715f89c",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1114,7 +1114,7 @@
       "tag": "v0.9.6",
       "schema_version": 7,
       "path": "recipes/the-legend-of-zelda-the-minish-cap/project-picori-999sian-tmc/v0.9.6.json",
-      "sha256": "766e067433093424f974c787cc4db844826af416cf5413fa6e8566c195648618",
+      "sha256": "b2e67d81ac18672e53c877814cf211874b816ec60561e36f6d3622db20511d6a",
       "status": "experimental",
       "has_inputs": true,
       "has_manual_steps": true
