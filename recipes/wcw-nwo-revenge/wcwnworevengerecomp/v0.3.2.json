@@ -37,6 +37,6 @@
       "sha1": "e1711a2511394b9357b5f1ac8ca5cc17bd674836"
     }
   ],
-  "manual_steps": "O pacote oficial e sua ROM verificada revenge.z64 foram instalados. Abra RevengeRecompiled.exe na pasta do jogo e escolha revenge.z64 no botao Load ROM na primeira execucao.",
+  "manual_steps": "SDK 1.5.19: o All-Fix reutiliza a ROM original importada e prepara o cache portatil oficial apos validar SHA-1 e XXH3. Em SDK anterior, use o seletor do proprio port. Primeiro boot ainda aguarda homologacao com midia original.",
   "launch_file": "RevengeRecompiled.exe"
 }

@@ -32,6 +32,6 @@
       "sha1": "08a9037488c47d1e26ce6f709955639e9f0f0bb8"
     }
   ],
-  "manual_steps": "O pacote oficial BattleTanxGA Recompiled e sua ROM verificada BattleTanxGA.us.z64 foram instalados. Abra BattleTanxGARecompiled.exe e selecione BattleTanxGA.us.z64 na primeira execucao.",
+  "manual_steps": "SDK 1.5.19: o All-Fix reutiliza a ROM original importada e prepara o cache portatil oficial apos validar SHA-1 e XXH3. Em SDK anterior, use o seletor do proprio port. Primeiro boot ainda aguarda homologacao com midia original.",
   "launch_file": "BattleTanxGARecompiled.exe"
 }

@@ -37,6 +37,6 @@
       "sha1": "442d417a52ed672ca1a47e7261a5414debb1e27a"
     }
   ],
-  "manual_steps": "O pacote oficial e sua ROM verificada wm2k.z64 foram instalados. Abra Wm2kRecompiled.exe na pasta do jogo e escolha wm2k.z64 no botao Load ROM na primeira execucao.",
+  "manual_steps": "SDK 1.5.19: o All-Fix reutiliza a ROM original importada e prepara o cache portatil oficial apos validar SHA-1 e XXH3. Em SDK anterior, use o seletor do proprio port. Primeiro boot ainda aguarda homologacao com midia original.",
   "launch_file": "Wm2kRecompiled.exe"
 }

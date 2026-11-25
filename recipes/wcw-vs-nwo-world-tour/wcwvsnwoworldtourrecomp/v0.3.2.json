@@ -37,6 +37,6 @@
       "sha1": "5ad2d8359058c8bb71f08e3d3433b7a50d3bb645"
     }
   ],
-  "manual_steps": "O pacote oficial e sua ROM verificada wcw.z64 foram instalados. Abra WCWRecompiled.exe na pasta do jogo e escolha wcw.z64 no botao Load ROM na primeira execucao.",
+  "manual_steps": "SDK 1.5.19: o All-Fix reutiliza a ROM original importada e prepara o cache portatil oficial apos validar SHA-1 e XXH3. Em SDK anterior, use o seletor do proprio port. Primeiro boot ainda aguarda homologacao com midia original.",
   "launch_file": "WCWRecompiled.exe"
 }

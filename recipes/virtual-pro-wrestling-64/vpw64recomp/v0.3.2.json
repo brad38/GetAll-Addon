@@ -37,6 +37,6 @@
       "sha1": "f9e9fa2ed819c3a39db5cb6afeca186f021db5ed"
     }
   ],
-  "manual_steps": "O pacote oficial e sua ROM verificada vpw64.z64 foram instalados. Abra Vpw64Recompiled.exe na pasta do jogo e escolha vpw64.z64 no botao Load ROM na primeira execucao.",
+  "manual_steps": "SDK 1.5.19: o All-Fix reutiliza a ROM original importada e prepara o cache portatil oficial apos validar SHA-1 e XXH3. Em SDK anterior, use o seletor do proprio port. Primeiro boot ainda aguarda homologacao com midia original.",
   "launch_file": "Vpw64Recompiled.exe"
 }
