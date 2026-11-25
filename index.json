@@ -417,7 +417,7 @@
       "tag": "v0.2.0",
       "schema_version": 3,
       "path": "recipes/space-station-silicon-valley/sssv-recomp/v0.2.0.json",
-      "sha256": "5602dc26b833be3cee4da857d44acdc7354f286aec3d3d752f6a217f5cb4c583",
+      "sha256": "64c94371a53907e9ed91d1d277ada399194262f2f7e8356cd81fb5b4639eb368",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -453,7 +453,7 @@
       "tag": "v2.0.2",
       "schema_version": 3,
       "path": "recipes/snowboard-kids-2/snowboardkids2-recomp/v2.0.2.json",
-      "sha256": "50a50d22913d7e467b440afaadac03bc1d9520580e39e07dbca223dd26f813b8",
+      "sha256": "5f0d7c2604f46445d2414737448b19075d57eaaf819b15b778a5fdcb99861e00",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1363,7 +1363,7 @@
       "tag": "v0.7.5",
       "schema_version": 5,
       "path": "recipes/ninja-gaiden-ii/ng2recomp/v0.7.5.json",
-      "sha256": "49e09e22fa7d977bbbf5e53fd5398aef430299c5ffdd4252328b6b3759db7535",
+      "sha256": "f073f458888a6cc3e57c549c08057f17a075fdf114a057d7f43b42897961f5b1",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1387,7 +1387,7 @@
       "tag": "v1.1.0",
       "schema_version": 5,
       "path": "recipes/lost-odyssey/lost-odyssey-recomp/v1.1.0.json",
-      "sha256": "34ef6fc39365d1017e916073b9f5c44fa70b1885347223aa7125dd1b4b864028",
+      "sha256": "dbe957f302c7c0636d6848b2043d47c47a28532ace19ea85f18f376b70e892a3",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
