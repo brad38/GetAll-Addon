@@ -11,6 +11,6 @@
     "KingKong/kk-files.txt"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial King Kong Recompiled (v2.1.3) foi extraido. Execute king_kong.exe em KingKong/, clique em Select disc image e selecione sua imagem de disco original de Peter Jackson's King Kong (Xbox 360, .iso de 7.834.892.288 bytes / SHA-1 oficial 075f43709e9c9a095e099ab5056cc04b768288d1). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "Selecione sua ISO original de King Kong para Xbox 360 (7.834.892.288 bytes, SHA-1 oficial 075f43709e9c9a095e099ab5056cc04b768288d1). O All-Fix compatível verifica e extrai a mídia e configura a inicialização. Versões anteriores podem usar o instalador oficial do port.",
   "launch_file": "KingKong/king_kong.exe"
 }

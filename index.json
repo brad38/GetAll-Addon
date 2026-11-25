@@ -790,7 +790,7 @@
       "tag": "v2.1.3",
       "schema_version": 3,
       "path": "recipes/peter-jackson-s-king-kong/king-kong-recompiled/v2.1.3.json",
-      "sha256": "10a60d38f0262e172a87b5c000b03b2eb399480edac020d3c56c7fffb21b8c40",
+      "sha256": "d3c983c00346eaec4ef78b374ffcb80c8223d714237826539dc2dc07fb30ab26",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
