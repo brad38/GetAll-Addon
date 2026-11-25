@@ -11,6 +11,6 @@
     "git2-b7bad55.dll"
   ],
   "inputs": [],
-  "manual_steps": "O Super Metroid Launcher (v1.0.1) foi extraido. Execute 'Super Metroid Launcher.exe', clique em Download e selecione sua ROM original norte-americana (US) de Super Metroid (SHA-256 oficial 12b77c4bc9c1832cee8881244659065ee1d84c70c3d29e6eaf92e6798cc2ca72) no seletor do launcher (ou copie-a como sm.sfc ao lado do executavel) para concluir a compilacao local. Nenhuma ROM e fornecida.",
+  "manual_steps": "O All-Fix com SDK 1.5.46 compila Super Metroid com a ROM original verificada usando o código-fonte, TCC e SDL2 fixados. Builds anteriores preservam o fluxo pelo launcher oficial. O build x64 foi testado. A instalação com mídia original e o primeiro boot aguardam homologação.",
   "launch_file": "Super Metroid Launcher.exe"
 }

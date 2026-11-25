@@ -946,7 +946,7 @@
       "tag": "v1.3.7.0",
       "schema_version": 5,
       "path": "recipes/the-legend-of-zelda-a-link-to-the-past/zelda-3-launcher/v1.3.7.0.json",
-      "sha256": "d2ee44df1200aa9a245c42239c9cb2ee8618515f2e7330d374c87242bbdfe030",
+      "sha256": "fcb38cb32168c98729f65e3efad798b1155255a7b3f82f694ada93c6115c6480",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -958,7 +958,7 @@
       "tag": "v1.0.1",
       "schema_version": 5,
       "path": "recipes/super-metroid/super-metroid-launcher/v1.0.1.json",
-      "sha256": "fb9022a35534eea6ff5fe5bc921a93d0cf4bf58228f4a27d53b1d0c4f05e268f",
+      "sha256": "1e49d6f1327895bd66cdff41ff4b4f2e47ac753339211137e2ee25a3b82e1ebc",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

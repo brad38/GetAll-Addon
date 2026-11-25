@@ -1,5 +1,10 @@
 # Checkpoint do GetAll-Addon
 
+## SDK 1.5.46
+
+- `super-metroid-launcher` v1.0.1 e `zelda-3-launcher` v1.3.7.0 compartilham um perfil TCC baseado nos comandos upstream, com fontes e dependências fixados. Para Zelda 3, o motor prepara Python e wheels verificados e valida o arquivo de recursos produzido.
+- Os dois executáveis Windows x64 foram compilados no motor com os kits oficiais. Cancelamento, rejeição de ROM e planos de lançamento foram testados. O extrator Zelda recusou mídia sintética no teste. As receitas seguem experimentais até a instalação com mídia original e primeiro boot.
+
 ## SDK 1.5.45
 
 - `gsrecomp` 0.8.4 usa os compiladores do ZIP Windows fixado para preparar Golden Sun e The Lost Age. O motor identifica o jogo e a edição por SHA-1, importa a ROM com o nome esperado, valida a biblioteca resultante com o registro oficial e grava o fingerprint da release.

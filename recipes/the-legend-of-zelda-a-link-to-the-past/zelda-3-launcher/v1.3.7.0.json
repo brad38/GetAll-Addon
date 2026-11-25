@@ -11,6 +11,6 @@
     "LibGit2Sharp.dll"
   ],
   "inputs": [],
-  "manual_steps": "O Zelda 3 Launcher (v1.3.7.0) foi extraido. Execute 'Zelda 3 Launcher.exe', clique em Download e selecione sua ROM original norte-americana (US) de The Legend of Zelda: A Link to the Past (SHA-256 oficial 66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb) no seletor do launcher (ou copie-a como zelda3.sfc ao lado do executavel) para baixar e compilar localmente. Nenhuma ROM e fornecida.",
+  "manual_steps": "O All-Fix com SDK 1.5.46 compila Zelda 3 e extrai recursos da ROM original verificada com ferramentas fixadas. Builds anteriores preservam o fluxo pelo launcher oficial. O build x64 foi testado. A extração com mídia original e o primeiro boot aguardam homologação.",
   "launch_file": "Zelda 3 Launcher.exe"
 }
