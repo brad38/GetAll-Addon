@@ -501,7 +501,7 @@
       "tag": "v0.15.11",
       "schema_version": 3,
       "path": "recipes/super-mario-world/supermarioworldrecomp/v0.15.11.json",
-      "sha256": "a5d163e43ba12408e9e88ba65f05d0bbbe034090fb391e48d25d2038cc20019a",
+      "sha256": "8432bd64b20a64ce83d8e687946a046850d41d66a713e80c0886afbcff5aeb0c",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

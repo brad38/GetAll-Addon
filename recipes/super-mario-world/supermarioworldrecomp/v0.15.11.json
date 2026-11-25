@@ -10,6 +10,6 @@
     "libiconv-2.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial de Super Mario World (v0.15.11) foi extraido. Para jogar, selecione sua ROM original de Super Mario World (USA, .sfc/.smc) no assistente inicial. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "manual_steps": "O All-Fix SDK 1.5.47 reconhece este ZIP oficial e solicita a ROM original dos EUA no seletor compartilhado. Em versoes anteriores, a ROM deve ser selecionada no assistente oficial.",
   "launch_file": "SuperMarioWorldSNESRecomp.exe"
 }
