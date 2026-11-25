@@ -1078,7 +1078,7 @@
       "tag": "7.4-rc2",
       "schema_version": 5,
       "path": "recipes/driver-2/redriver2/7.4-rc2.json",
-      "sha256": "3da5666da79c5ba9a20f3d7a2089b64c82d15e08c8f003cc485095f4d93d75c8",
+      "sha256": "cc78159433c5e42f4b234bdd8b57e0fab51bebb3c8d63acd560351a296c53df2",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

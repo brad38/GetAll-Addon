@@ -13,7 +13,7 @@
     "install/jpsxdec.jar"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial REDRIVER2 (7.4-rc2) foi extraido. Com Java instalado (jpsxdec), execute Launcher.exe, abra 'Setup wizard', selecione as imagens originais dos dois discos PS1 (CD1 e CD2 de Driver 2, formato .bin/.cue ou .iso) e conclua a extracao antes de clicar em 'Launch game'. Nenhuma imagem de disco e fornecida pelo GetAll-Addon.",
+  "manual_steps": "No SDK 1.5.35, selecione os dois discos originais em BIN MODE2/2352 da mesma região e revisão (PAL ou NTSC-U). O All-Fix verifica e converte a mídia usando Java 21. Mantenha os dois arquivos nos locais escolhidos. Em SDKs anteriores, use o assistente do Launcher.exe.",
   "launch_file": "Launcher.exe",
   "prerequisites": [
     "java-21"
