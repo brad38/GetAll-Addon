@@ -9,6 +9,6 @@
     "lighthouse.o2r"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Lighthouse foi extraido. Abra Lighthouse.exe na pasta instalada e selecione sua ROM legitima e compativel de Banjo-Kazooie no formato .z64 (US v1.0/v1.1, JP ou PAL, segundo o README). O jogo gera os recursos localmente. Nenhuma ROM e fornecida.",
+  "manual_steps": "O SDK 1.5.33 com Torch integrado gera bk.o2r a partir da ROM legítima em formato .z64 (EUA 1.0/1.1, Japão ou PAL). Em builds anteriores ou sem Torch, abra Lighthouse.exe e selecione a ROM no menu inicial.",
   "launch_file": "Lighthouse.exe"
 }

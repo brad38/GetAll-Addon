@@ -129,7 +129,7 @@
       "tag": "1.2.2",
       "schema_version": 3,
       "path": "recipes/banjo-kazooie/lighthouse/1.2.2.json",
-      "sha256": "d4f86caf240f0f813d578035e1e3a7813c40fe8925a03efc9ddd6e16e9795750",
+      "sha256": "b9bb989962a894f1d165274c1773ed5a423a850384ecfeb776ac59c4e4bc8e7b",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
