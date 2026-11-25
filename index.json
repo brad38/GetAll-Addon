@@ -1363,7 +1363,7 @@
       "tag": "v0.7.5",
       "schema_version": 5,
       "path": "recipes/ninja-gaiden-ii/ng2recomp/v0.7.5.json",
-      "sha256": "7208a090f51fae403c52858091225f22631a68ae91f77d0ec538ab423f019360",
+      "sha256": "18c97ef9658d3cd5557d19be3b54c113ad62c70a61b19d859ebe7c24525c01ef",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1387,7 +1387,7 @@
       "tag": "v1.1.0",
       "schema_version": 5,
       "path": "recipes/lost-odyssey/lost-odyssey-recomp/v1.1.0.json",
-      "sha256": "0cd524f13312d03445216f15a2e546c5616e94310b5bf43e7ffbc8f1b0ad18e2",
+      "sha256": "171d6bc3e204fc47c577496e1cf3f1bae28f9fe3501e5823e94c64e171da8a4d",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

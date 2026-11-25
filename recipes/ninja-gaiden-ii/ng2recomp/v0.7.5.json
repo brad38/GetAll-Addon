@@ -12,6 +12,6 @@
     "NinjaGaiden2/README.txt"
   ],
   "inputs": [],
-  "manual_steps": "Use sua cópia original Xbox 360 Ninja Gaiden II (ISO, pacote Games on Demand ou pasta extraída com default.xex) e Title Update 3 da edição World. Selecione os arquivos locais no launcher oficial; DLC opcional. Não inclui mídia. Requer SSE4.2 e Vulkan 1.3.",
+  "manual_steps": "Selecione a ISO ou pasta extraída de Ninja Gaiden II World (69F555CB, revisão 4) e o Title Update 3 World original ou seu default.xexp. O All-Fix compatível prepara a mídia e configura a inicialização. O instalador oficial continua disponível para Games on Demand.",
   "launch_file": "NinjaGaiden2/ng2.exe"
 }
