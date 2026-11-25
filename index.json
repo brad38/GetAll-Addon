@@ -619,12 +619,12 @@
       "project_id": "sonic-3-a-i-r-oxygen-engine",
       "repository": "Eukaryot/sonic3air",
       "tag": "v26.03.28.0-stable",
-      "schema_version": 3,
+      "schema_version": 5,
       "path": "recipes/sonic-3-knuckles/sonic-3-a-i-r-oxygen-engine/v26.03.28.0-stable.json",
-      "sha256": "45594c3668307a026c2dadf23eed81ab8a359d524ac0105078f0a3483351bbf4",
+      "sha256": "4ac2441631caf6d88fbaa58b6ee195926ddc18227f0d12e5cc9144a9862e8a14",
       "status": "experimental",
-      "has_inputs": false,
-      "has_manual_steps": true
+      "has_inputs": true,
+      "has_manual_steps": false
     },
     {
       "game_id": "the-legend-of-zelda-the-wind-waker",
@@ -874,7 +874,7 @@
       "tag": "v2.9.5",
       "schema_version": 3,
       "path": "recipes/shadow-of-rome/shadow-of-rome-recompiled/v2.9.5.json",
-      "sha256": "3ab7f7b8e23a5b480eaeb3f2fe47c378613a4dae803c6584c68daf131d481f1b",
+      "sha256": "559c3172bf5f5c5e8266a45a58612bd7c654903ba0b4c0b603546329f79b0b9c",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

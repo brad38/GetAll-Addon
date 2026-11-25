@@ -12,6 +12,6 @@
     "ShadowOfRome-2.9.5-windows/lz4.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Shadow of Rome Recompiled (v2.9.5) foi extraido. Execute ShadowOfRome.exe em ShadowOfRome-2.9.5-windows/, clique em Play e selecione sua imagem .iso original de Shadow of Rome (PAL SLES-52950 ou NTSC-U SLUS-20902). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "No SDK 1.5.34, selecione a ISO original PAL SLES-52950 ou NTSC-U SLUS-20902 e mantenha o arquivo nesse local para jogar. Em versões anteriores, abra ShadowOfRome.exe e selecione a ISO no launcher.",
   "launch_file": "ShadowOfRome-2.9.5-windows/ShadowOfRome.exe"
 }
