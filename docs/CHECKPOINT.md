@@ -1,5 +1,11 @@
 # Checkpoint do GetAll-Addon
 
+## SDK 1.5.45
+
+- `gsrecomp` 0.8.4 usa os compiladores do ZIP Windows fixado para preparar Golden Sun e The Lost Age. O motor identifica o jogo e a edição por SHA-1, importa a ROM com o nome esperado, valida a biblioteca resultante com o registro oficial e grava o fingerprint da release.
+- O motor abriu o seletor com o ZIP oficial, rejeitou uma ROM incompatível e preservou o kit no cancelamento. Os fingerprints foram comparados com a árvore oficial. Os registros das DLLs e o plano de lançamento foram testados com fixtures. A receita segue experimental até uma instalação com mídia original e primeiro boot.
+- `battletanx-global-assault-pc-port` v0.2.5 reutiliza a importação N64 e passa a ROM validada ao executável oficial com `--play BattleTanxGA.z64`. O perfil fixa o pacote portátil e verifica os hashes SHA-1 e SHA-256 da edição americana revisão 0. Este perfil é distinto de `btgarecomp` e aguarda teste com ROM original e primeiro boot.
+
 ## SDK 1.5.44
 
 - `open-nectar` 1.3 aceita as quatro edições auditadas de Pikmin e Pikmin 2. O motor verifica o digest original e extrai os dados em staging com o leitor GameCube compilado a partir do fonte oficial. Um disco abre o executável correspondente. Uma pasta com os dois discos prepara os dois jogos e abre o seletor oficial.

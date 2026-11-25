@@ -153,7 +153,7 @@
       "tag": "v0.2.5",
       "schema_version": 3,
       "path": "recipes/battletanx-global-assault/battletanx-global-assault-pc-port/v0.2.5.json",
-      "sha256": "32452ac1ea4d0aa7e08103bf50370916cb00e0a1aa819923ef030289286e877f",
+      "sha256": "87bbd1c4c179b57f9eedba6cb0e61bbabc630e384ca6d078196c4c92ec293ca8",
       "status": "experimental",
       "has_inputs": true,
       "has_manual_steps": true
@@ -982,7 +982,7 @@
       "tag": "0.8.4",
       "schema_version": 5,
       "path": "recipes/golden-sun-golden-sun-the-lost-age/gsrecomp/0.8.4.json",
-      "sha256": "2e1c6ac713a5726271cdba0bb0015a74b24e6bd5b564fcb3ab81209459d8faf0",
+      "sha256": "0e939bb82e3a3ee4546415747dfbf353047c7cd1bea844e8b3cd0ab023e61fad",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

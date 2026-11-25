@@ -11,6 +11,6 @@
     "Golden Sun Recompiled/games/The Lost Age/TLARecomp.exe"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Golden Sun Recompiled (0.8.4) foi extraido em 'Golden Sun Recompiled/'. Execute 'GoldenSunLauncher.exe', escolha The Broken Seal ou The Lost Age e selecione sua ROM GBA original; na primeira inicializacao o launcher compila o codigo usando o MinGW embutido no pacote. Nenhuma ROM e fornecida.",
+  "manual_steps": "O All-Fix com SDK 1.5.45 compila The Broken Seal ou The Lost Age a partir de uma ROM GBA compatível. Selecione uma pasta com uma edição de cada jogo para instalar ambos. Builds anteriores preparam o pacote para uso com o assistente oficial. A compilação com mídia original e o primeiro boot ainda aguardam homologação.",
   "launch_file": "Golden Sun Recompiled/GoldenSunLauncher.exe"
 }

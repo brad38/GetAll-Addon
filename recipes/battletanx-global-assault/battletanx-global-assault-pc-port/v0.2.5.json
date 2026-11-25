@@ -33,6 +33,6 @@
       "sha256": "88268ce770ff39f2ca839848b842c87866df6c5ddaf775f180b2522c18ff6221"
     }
   ],
-  "manual_steps": "O pacote oficial e sua ROM verificada BattleTanxGA.z64 foram instalados em BattleTanxGA-0.2.5-windows-x64-portable/. Abra BattleTanxGA.exe na pasta instalada e selecione BattleTanxGA.z64 na mesma pasta no primeiro uso.",
+  "manual_steps": "O All-Fix com SDK 1.5.45 usa a ROM original validada no modo portátil de BattleTanx. Em builds anteriores, selecione BattleTanxGA.z64 no primeiro uso. A instalação com ROM original e o primeiro boot ainda aguardam homologação.",
   "launch_file": "BattleTanxGA-0.2.5-windows-x64-portable/BattleTanxGA.exe"
 }
