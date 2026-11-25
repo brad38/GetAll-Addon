@@ -25,3 +25,5 @@ Procedimento manual da receita: O pacote oficial BlueWake (v0.12.0) foi extraido
 - **Verificação de arquivos:** `5/5` `required_files` presentes; `launch_file_exists=True`
 - **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 5/5 `required_files` e `launch_file` presentes em `Destination`).
 - **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.
+
+O SDK 1.5.28 integra o importador Windows ao modal universal e à instalação transacional. O motor reconheceu o ZIP oficial, cancelou a seleção preservando o kit e limpou o staging após rejeitar a imagem sintética. A validação estrutural aceitou 415 RELs sintéticos e rejeitou quantidade e alinhamento inválidos. Extração positiva com o disco original e primeiro boot pendentes.

@@ -633,7 +633,7 @@
       "tag": "v0.12.0",
       "schema_version": 3,
       "path": "recipes/the-legend-of-zelda-the-wind-waker/bluewake/v0.12.0.json",
-      "sha256": "d3c4c234972484f96a2eed7393f281f6b2483d104b06aa04134a4549978b0240",
+      "sha256": "80c68393769e4d2295d364fe7b634c6ff74c0c40785b129370aef41b97bb1efa",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
