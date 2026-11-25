@@ -15,6 +15,6 @@
     "msvcp140.dll"
   ],
   "inputs": [],
-  "manual_steps": "O port oficial Windows Foxhollow v1.0.30 foi preparado diretamente do CDN do desenvolvedor, sem executar o launcher instalador. Para iniciar manualmente, forneca sua propria imagem de disco legitima de Star Fox Adventures para GameCube (.iso ou .rvz). O codigo oficial src/main.c aceita o caminho da imagem como primeiro argumento. Abra um terminal na pasta preparada e execute .\\foxhollow.exe seguido do caminho entre aspas da sua imagem. O GetAll nao fornece a imagem nem inicia o jogo automaticamente. A homologacao de boot permanece pendente.",
+  "manual_steps": "O SDK 1.5.42 verifica e importa a imagem original de Star Fox Adventures em ISO ou GCM (EUA ou Europa revisão 0 ou 1, Japão revisão 0). O botão Jogar inicia o executável oficial com o caminho do disco importado. Para RVZ e SDKs anteriores, consulte o método de execução do port.",
   "launch_file": "foxhollow.exe"
 }

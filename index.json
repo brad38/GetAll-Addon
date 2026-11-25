@@ -1162,7 +1162,7 @@
       "tag": "v1.0.30",
       "schema_version": 5,
       "path": "recipes/star-fox-adventures/foxhollow/v1.0.30.json",
-      "sha256": "cc9d7b40c61047232c00e9c523808043177d650476de00c77a09b5edcf3a4f1e",
+      "sha256": "2d6a6abec402a7ee58afcb1819c3d0d4b5db96af7e0726e17e7585ff7174e31a",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
