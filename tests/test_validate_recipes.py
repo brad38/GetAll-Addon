@@ -497,7 +497,7 @@ class ValidateRecipesTests(unittest.TestCase):
              "profile_folders": ["GGARecompiled"], "source": "gga-us-original",
              "target": "gga.us.z64"}
         ])
-        self.assertIn("configure", recipe["manual_steps"])
+        self.assertIn("LOCALAPPDATA/GGARecompiled/gga.us.z64", recipe["manual_steps"])
         original = recipe["inputs"][0]
         self.assertEqual(original["sha1"], "9f9e860816f9e2a68bb5f4f56086e0c7450c64d7")
         self.assertEqual(original["magic_hex"], "80371240")

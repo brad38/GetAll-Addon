@@ -32,6 +32,6 @@
       "sha1": "622d71a44da0b81ea68092cac9198c66154a4f4a"
     }
   ],
-  "manual_steps": "O pacote oficial Rocket-R e sua ROM verificada rocket-r.us.z64 foram instalados. Abra Rocket-R.exe na pasta do jogo e selecione rocket-r.us.z64 no menu inicial.",
+  "manual_steps": "O SDK 1.5.33 utiliza a ROM verificada e inicia o executável oficial com o perfil local. Em SDKs anteriores, abra Rocket-R.exe e selecione rocket-r.us.z64 na pasta do jogo.",
   "launch_file": "Rocket-R.exe"
 }

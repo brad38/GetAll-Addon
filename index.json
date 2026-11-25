@@ -201,7 +201,7 @@
       "tag": "v.1.0.1",
       "schema_version": 3,
       "path": "recipes/rocket-robot-on-wheels/rocket-r/v1.0.1.json",
-      "sha256": "d5f081a03d9323b2466bf27b12df36907823dbeda4ce7eac130a3c722e404ec7",
+      "sha256": "6ee54c3c03d483c1c2ccbf8616105221a72898c62e119275559f75c300ad8c28",
       "status": "experimental",
       "has_inputs": true,
       "has_manual_steps": true
