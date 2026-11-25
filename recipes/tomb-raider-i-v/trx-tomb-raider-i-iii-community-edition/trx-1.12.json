@@ -8,6 +8,6 @@
     "TRX.exe"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial de Tomb Raider I-III (trx-1.12) foi extraido. Para jogar, copie os arquivos de dados originais do seu Tomb Raider I, II ou III para a pasta instalada do TRX conforme docs/trx/INSTALLING.md antes de executar TRX.exe. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "manual_steps": "O SDK 1.5.39 importa uma pasta original ou ISO9660 de PC de Tomb Raider I, II ou III para o layout do TRX 1.12. Imagens BIN/CUE, instaladores de terceiros, expansões e outros formatos continuam sujeitos às instruções do projeto. Em SDKs anteriores, copie os dados originais conforme docs/trx/INSTALLING.md antes de iniciar TRX.exe.",
   "launch_file": "TRX.exe"
 }

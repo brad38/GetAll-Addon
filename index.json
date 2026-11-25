@@ -585,7 +585,7 @@
       "tag": "trx-1.12",
       "schema_version": 3,
       "path": "recipes/tomb-raider-i-v/trx-tomb-raider-i-iii-community-edition/trx-1.12.json",
-      "sha256": "2fc2f3778b62eb877205407db9e442c5103c4b889f4a2b4afb8229d43d7b428f",
+      "sha256": "fa5f34750f47f9f9f960cd7e30d2a843937d55058aac2c5d3facc91c1aff4f63",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
