@@ -32,6 +32,6 @@
       "sha1": "bbb6666f5014a473747ee4145f036d9fb25d7348"
     }
   ],
-  "manual_steps": "O pacote oficial Body Harvest Recompiled e sua ROM verificada body-harvest.us.z64 foram instalados. Execute body-harvest-recomp.exe e aponte para body-harvest.us.z64 no launcher.",
+  "manual_steps": "O All-Fix com o perfil portátil reutiliza a ROM original verificada e prepara bh.us.0.z64 para o runtime. Em versões anteriores, selecione body-harvest.us.z64 ao abrir o executável oficial.",
   "launch_file": "body-harvest-recomp.exe"
 }

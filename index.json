@@ -225,7 +225,7 @@
       "tag": "v0.1.0",
       "schema_version": 3,
       "path": "recipes/body-harvest/body-harvest-recomp/v0.1.0.json",
-      "sha256": "8cf6479a63d3e366f654e516e48168c51df30b9decd403f9bcacd58c7ee088c2",
+      "sha256": "d95afb369011c6a4226987ae4516f5d2bacd6f22b450c2eb006ec31415f132e8",
       "status": "experimental",
       "has_inputs": true,
       "has_manual_steps": true
