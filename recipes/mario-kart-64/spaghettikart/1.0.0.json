@@ -9,6 +9,6 @@
     "spaghetti.o2r"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial SpaghettiKart foi extraido. Execute Spaghettify.exe na pasta instalada e selecione sua ROM original de Mario Kart 64 USA no formato .z64. O jogo valida a copia e gera seus recursos em disco; nenhuma ROM e distribuida.",
+  "manual_steps": "Com o extrator verificado incorporado, o SDK 1.5.33 pede a ROM original americana e prepara mk64.o2r automaticamente. Sem o extrator, use a opção de importação do Spaghettify oficial.",
   "launch_file": "Spaghettify.exe"
 }

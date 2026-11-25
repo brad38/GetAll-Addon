@@ -93,7 +93,7 @@
       "tag": "1.0.0",
       "schema_version": 3,
       "path": "recipes/mario-kart-64/spaghettikart/1.0.0.json",
-      "sha256": "cd6017040f08befcbb69eab5d66db823c609c51c51f521f58bec8fea1b5654de",
+      "sha256": "1cfc18916afedfaa662e8f7205daa3780aaaf03fa5039fa6c0c1b6dbe2746b45",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -369,7 +369,7 @@
       "tag": "v0.3.0",
       "schema_version": 5,
       "path": "recipes/goemon-s-great-adventure/ggarecomp/v0.3.0.json",
-      "sha256": "612cba52dddea78305ade4b19bc9dea76ed5f17010af6e4498f9c460e0365c4f",
+      "sha256": "c99284b9258686e63175fe40cfc1b780418b04ea38e12df5588bd4aee0ac7fa0",
       "status": "experimental",
       "has_inputs": true,
       "has_manual_steps": true

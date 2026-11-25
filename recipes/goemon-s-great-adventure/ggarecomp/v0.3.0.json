@@ -34,6 +34,6 @@
       "sha1": "9f9e860816f9e2a68bb5f4f56086e0c7450c64d7"
     }
   ],
-  "manual_steps": "ROM americana US verificada e importada para LOCALAPPDATA/GGARecompiled/gga.us.z64. Abra GGARecompiled.exe e configure os controles; confirme a ROM no launcher apenas se ele ainda solicitar. Nao distribua nem substitua sua copia legitima. Nenhum boot com ROM real foi homologado.",
+  "manual_steps": "O SDK 1.5.33 prepara a ROM americana verificada em modo portátil. Em SDKs anteriores, use o cache LOCALAPPDATA/GGARecompiled/gga.us.z64 e abra o executável oficial.",
   "launch_file": "GGARecompiled.exe"
 }
