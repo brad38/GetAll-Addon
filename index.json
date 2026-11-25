@@ -597,7 +597,7 @@
       "tag": "latest",
       "schema_version": 3,
       "path": "recipes/tomb-raider-i-v/openlara/latest.json",
-      "sha256": "32b85d36ca276038c80d276bd671cb3613140cb25cbe6f11fed912784144e28c",
+      "sha256": "5929903241d9d3435b91b185f36ffc29330de56fc917632836120f3654b87ed1",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
