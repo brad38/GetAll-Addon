@@ -11,6 +11,6 @@
     "dxil.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial de Extreme-G: Recompiled (v1.0.0) foi extraido. Execute ExtremeGRecompiled.exe na pasta instalada e forneca sua copia original norte-americana (NTSC-U 1.0) de Extreme-G no menu inicial. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "manual_steps": "O SDK 1.5.33 prepara a ROM norte-americana NTSC-U 1.0 em formato .z64 e configura o cache portátil. Em SDKs anteriores, abra ExtremeGRecompiled.exe e selecione a ROM legítima no menu inicial.",
   "launch_file": "ExtremeGRecompiled.exe"
 }

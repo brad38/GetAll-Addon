@@ -1018,7 +1018,7 @@
       "tag": "v1.0.0",
       "schema_version": 5,
       "path": "recipes/extreme-g/extremegrecomp/v1.0.0.json",
-      "sha256": "1d4095cf20a9f52b643fa9713efdac408c97871e993dd4711dced486c5294349",
+      "sha256": "6ae050150aa8f889d5488638d9c88273f131fd41ab01f57019075af2c4a544e4",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
