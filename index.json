@@ -177,7 +177,7 @@
       "tag": "v1.1.8",
       "schema_version": 3,
       "path": "recipes/pokemon-snap/snap64-recomp/v1.1.8.json",
-      "sha256": "44e38e95583744bd65187584733607aa3c142ab4af58221e9d3b3e4ca007d315",
+      "sha256": "4da358de79ec9ca5f5abbf8291effda707b4d362b7a3e3fe01530fef3c29c885",
       "status": "experimental",
       "has_inputs": true,
       "has_manual_steps": false
@@ -321,7 +321,7 @@
       "tag": "v0.3.0",
       "schema_version": 3,
       "path": "recipes/dinosaur-planet/dinosaur-planet-recompiled-dino-recomp/v0.3.0.json",
-      "sha256": "69ead4d8f70a765db7fe8bd038ded89bc776114701893a20c5cdfe6a256c2aa3",
+      "sha256": "f940fc3dae72f416d2e3b88b37a4aad0f8cef72bfb4373c08e07720413a70034",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -477,7 +477,7 @@
       "tag": "v0.11.1",
       "schema_version": 5,
       "path": "recipes/automobili-lamborghini/automobililamborghini-recomp/v0.11.1.json",
-      "sha256": "47592d5246784cf593a52f9e2ea1d1ff49b761df70076fb35469fb5157a6503c",
+      "sha256": "dea5730c221b1af839f4f12edbaff829a1b8f93b73379c90aad40fc7bdb98444",
       "status": "experimental",
       "has_inputs": true,
       "has_manual_steps": false

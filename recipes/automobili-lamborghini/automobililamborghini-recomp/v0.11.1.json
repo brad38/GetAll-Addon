@@ -23,7 +23,7 @@
       "id": "usa-cart",
       "kind": "file",
       "name": "ROM original Automobili Lamborghini (USA)",
-      "description": "Escolha sua copia original legitima de Automobili Lamborghini (USA) em formato big-endian .z64. O All-Fix verifica SHA-256, 4 MiB e assinatura N64 antes de importar o arquivo com o nome exato reconhecido automaticamente pelo executavel. Nenhuma ROM e distribuida.",
+      "description": "Escolha sua copia original legitima de Automobili Lamborghini (USA) em formato big-endian .z64. O All-Fix verifica SHA-256, 4 MiB e assinatura N64 antes de importar o arquivo com o nome exato reconhecido automaticamente pelo executavel. Nenhuma ROM e distribuida. O SDK 1.5.31 usa a mesma mídia no lançamento sem pedir o arquivo novamente.",
       "extensions": [
         ".z64"
       ],

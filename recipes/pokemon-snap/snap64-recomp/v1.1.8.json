@@ -22,7 +22,7 @@
       "id": "original-rom",
       "kind": "file",
       "name": "ROM original de Pokemon Snap (US)",
-      "description": "Selecione sua copia legitima americana (US) de Pokemon Snap no formato big-endian .z64 (16 MiB). O All-Fix validara tamanho, assinatura e SHA-1 oficial e importara diretamente para Snap64Recomp-1.1.8-win64/pokemonsnap.z64.",
+      "description": "Selecione sua copia legitima americana (US) de Pokemon Snap no formato big-endian .z64 (16 MiB). O All-Fix validara tamanho, assinatura e SHA-1 oficial e importara diretamente para Snap64Recomp-1.1.8-win64/pokemonsnap.z64. O SDK 1.5.31 usa a mesma mídia no lançamento sem pedir o arquivo novamente.",
       "extensions": [
         ".z64"
       ],
