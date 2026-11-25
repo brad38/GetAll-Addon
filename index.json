@@ -754,7 +754,7 @@
       "tag": "v1.1.8",
       "schema_version": 3,
       "path": "recipes/silent-hill-downpour/downpourrecomp/v1.1.8.json",
-      "sha256": "3ecc623e877ea89ca78573f369b44e749292fa09ac43416a5d0fbd31e28ac012",
+      "sha256": "c941d71ea75c9a3e9530e5e766b01151a9e2fe8e0ec12fa88b4c37e77c8d6a3f",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -778,7 +778,7 @@
       "tag": "v0.3.0",
       "schema_version": 3,
       "path": "recipes/tony-hawk-s-project-8/project8recomp/v0.3.0.json",
-      "sha256": "30f59c89c1b80a2e1aab864357f167b049fa1c6a8f50bd9ad3cf0839d596cbeb",
+      "sha256": "d4f775aa17c6fecfca539fdb8c75d0f9365fe65fa3bff2454797a421a3df085e",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1300,7 +1300,7 @@
       "tag": "v0.4.8",
       "schema_version": 5,
       "path": "recipes/gears-of-war-2/gears-of-war-2-pc-port/v0.4.8.json",
-      "sha256": "6b68edd6cefd2856f9caebeb66a4f545565f08416324717944e1bd66ef931b10",
+      "sha256": "08af83f6d56e6dea4afe8208b0ebdb510afdc6e2f63537e3f9d871b242410601",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1363,7 +1363,7 @@
       "tag": "v0.7.5",
       "schema_version": 5,
       "path": "recipes/ninja-gaiden-ii/ng2recomp/v0.7.5.json",
-      "sha256": "18c97ef9658d3cd5557d19be3b54c113ad62c70a61b19d859ebe7c24525c01ef",
+      "sha256": "49e09e22fa7d977bbbf5e53fd5398aef430299c5ffdd4252328b6b3759db7535",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1387,7 +1387,7 @@
       "tag": "v1.1.0",
       "schema_version": 5,
       "path": "recipes/lost-odyssey/lost-odyssey-recomp/v1.1.0.json",
-      "sha256": "171d6bc3e204fc47c577496e1cf3f1bae28f9fe3501e5823e94c64e171da8a4d",
+      "sha256": "34ef6fc39365d1017e916073b9f5c44fa70b1885347223aa7125dd1b4b864028",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

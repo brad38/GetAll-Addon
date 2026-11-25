@@ -15,10 +15,10 @@ PREVIEW_ID = "allfix.install.universal.preview"
 CAPABILITY = "installation.recipe.remote"
 
 
-def package(root: Path, revision: str, catalog: str, version: str, output: Path) -> None:
+def package(root: Path, revision: str, catalog: str, version: str, output: Path, min_sdk: str = "1.5.11") -> None:
     if not COMMIT.fullmatch(revision) or not COMMIT.fullmatch(catalog):
         raise ValueError("Use os SHAs completos dos commits do GetAll e AllFix-Repo.")
-    if not VERSION.fullmatch(version):
+    if not VERSION.fullmatch(version) or not VERSION.fullmatch(min_sdk):
         raise ValueError("A versão do addon precisa usar o formato x.y.z.")
     index = json.loads(subprocess.check_output(
         ["git", "-C", str(root), "show", revision + ":index.json"]
@@ -30,7 +30,7 @@ def package(root: Path, revision: str, catalog: str, version: str, output: Path)
         "manifest_version": 1, "id": PREVIEW_ID, "name": "GetAll de desenvolvimento",
         "version": version, "api_version": "1.0", "entrypoint": "responses.json",
         "capabilities": [CAPABILITY], "permissions": [], "priority": 0,
-        "min_sdk_version": "1.5.11",
+        "min_sdk_version": min_sdk,
     }
     responses = {"responses": [{"capability": CAPABILITY, "match": {}, "result": {
         "repository": REPOSITORY, "ref": revision.lower(), "index_path": "index.json",
@@ -47,5 +47,6 @@ if __name__ == "__main__":
     parser.add_argument("catalog")
     parser.add_argument("version")
     parser.add_argument("output", type=Path)
+    parser.add_argument("--min-sdk", default="1.5.11")
     args = parser.parse_args()
-    package(Path(__file__).resolve().parents[1], args.revision, args.catalog, args.version, args.output)
+    package(Path(__file__).resolve().parents[1], args.revision, args.catalog, args.version, args.output, args.min_sdk)

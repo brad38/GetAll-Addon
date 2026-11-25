@@ -12,6 +12,6 @@
     "gow2-recomp-0.4.8-win64/QUICKSTART.txt"
   ],
   "inputs": [],
-  "manual_steps": "Pacote portatil oficial. No primeiro uso do launcher, forneca sua propria ISO legitima de Gears of War 2 Xbox 360 retail ou pasta extraida com default.xex e GearGame. Nao use build vazado de desenvolvimento. Nenhum dado comercial foi fornecido nem boot homologado.",
+  "manual_steps": "Selecione a ISO original de Gears of War 2, edição comercial americana de Xbox 360, ou uma pasta extraída com default.xex e GearGame. O All-Fix valida a edição e importa os recursos antes de habilitar Jogar.",
   "launch_file": "gow2-recomp-0.4.8-win64/gow2.exe"
 }

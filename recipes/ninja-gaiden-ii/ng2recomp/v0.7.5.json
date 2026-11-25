@@ -12,6 +12,6 @@
     "NinjaGaiden2/README.txt"
   ],
   "inputs": [],
-  "manual_steps": "Selecione a ISO ou pasta extraída de Ninja Gaiden II World (69F555CB, revisão 4) e o Title Update 3 World original ou seu default.xexp. O All-Fix compatível prepara a mídia e configura a inicialização. O instalador oficial continua disponível para Games on Demand.",
+  "manual_steps": "Selecione a ISO ou pasta extraída de Ninja Gaiden II World (69F555CB, revisão 4) e o Title Update 3 World original ou seu default.xexp. O All-Fix compatível prepara a mídia e configura a inicialização. O instalador oficial continua disponível para Games on Demand. Para GoD segmentado, selecione a pasta que contém o cabeçalho e a pasta .data correspondente.",
   "launch_file": "NinjaGaiden2/ng2.exe"
 }

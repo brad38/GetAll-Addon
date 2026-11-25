@@ -11,6 +11,6 @@
     "Project8Recomp-v0.3.0-windows-x86_64/SDL3.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Project8Recomp (v0.3.0) foi extraido. Execute Project8Recomp.exe em Project8Recomp-v0.3.0-windows-x86_64/ e aponte sua imagem .iso original de Tony Hawk's Project 8 (Xbox 360). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "Selecione a imagem ISO ou IMG original de Tony Hawk’s Project 8, edição World v1.0. O All-Fix verifica a edição, importa os recursos e registra a instalação junto ao launcher oficial.",
   "launch_file": "Project8Recomp-v0.3.0-windows-x86_64/Project8Recomp.exe"
 }
