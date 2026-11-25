@@ -8,6 +8,6 @@
     "RSDKv4.exe"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial de Sonic 1 & 2 (2013) (1.3.3) foi extraido. Para jogar, coloque o arquivo Data.rsdk original da sua copia oficial de Sonic 1 ou Sonic 2 (2013) ao lado de RSDKv4.exe antes de iniciar. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "manual_steps": "O SDK 1.5.32 solicita e importa o Data.rsdk original de Sonic 1 ou Sonic 2 (2013) no kit Windows verificado. Em SDKs anteriores, coloque o arquivo original ao lado de RSDKv4.exe.",
   "launch_file": "RSDKv4.exe"
 }
