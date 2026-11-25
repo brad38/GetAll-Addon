@@ -537,7 +537,7 @@
       "tag": "v0.7.1",
       "schema_version": 3,
       "path": "recipes/bloody-roar-ii/bloodyroar2recomp/v0.7.1.json",
-      "sha256": "135d411ed4905027243476dd40ed705eafb904e432bd0addb29d6ece7a6bff41",
+      "sha256": "117c47177183b58fcbc2d3b741cf8f527992a33b1471bf66afacdf080f486011",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

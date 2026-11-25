@@ -8,6 +8,6 @@
     "BloodyRoar2/BloodyRoar2_Recompiled.exe"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial de Bloody Roar II (v0.7.1) foi extraido. Para jogar, abra BloodyRoar2_Recompiled.exe na pasta BloodyRoar2/ e indique sua imagem .bin/.cue ou .iso/.chd original no assistente inicial. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "manual_steps": "O SDK 1.5.37 importa o BIN original americano SCUS-94424 ou europeu SLES-01722, gera o CUE e valida o disco com o verificador oficial para jogar localmente. Para outros formatos ou quando o modo online exigir um dump completo, use o seletor do port. Em SDKs anteriores, selecione a mídia original no assistente do port.",
   "launch_file": "BloodyRoar2/BloodyRoar2_Recompiled.exe"
 }
