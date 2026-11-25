@@ -742,7 +742,7 @@
       "tag": "v0.1.10",
       "schema_version": 3,
       "path": "recipes/the-darkness/the-darkness-recomp/v0.1.10.json",
-      "sha256": "048b3394579fefa7d1cc867e764c2a66cc9a18199b63bdeb651fac93a37ec775",
+      "sha256": "641e844a10b1a13155c572bd160544f309c35dd400eb2faa5b649a953f1244b2",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

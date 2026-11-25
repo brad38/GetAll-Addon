@@ -12,6 +12,6 @@
     "Launch.cmd"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial The Darkness Recomp (v0.1.10) foi extraido. Antes de iniciar, copie todos os arquivos e pastas extraidos do seu dump original de The Darkness (Xbox 360), incluindo default.xex, Content e System, diretamente para a subpasta Darkness/ (nao use um arquivo .iso diretamente). Voce tambem pode usar Launch.cmd ou LaunchWithSettings.cmd na raiz instalada. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "Selecione a ISO ou pasta extraída do seu disco original de The Darkness para Xbox 360, com default.xex e pastas Content e System. O All-Fix compatível verifica a revisão e importa os dados. Nas versões anteriores, copie os arquivos extraídos para a pasta Darkness do port.",
   "launch_file": "build_native/Release/DarkRecomp.exe"
 }
