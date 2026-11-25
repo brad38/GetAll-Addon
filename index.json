@@ -1042,7 +1042,7 @@
       "tag": "v1.2.256",
       "schema_version": 5,
       "path": "recipes/wipeout/wipeout-phantom-edition/v1.2.256.json",
-      "sha256": "7ad29699cc1d05296b2838313e4a9d97abb7da4389e1a22d4bf09646a1cd4fd8",
+      "sha256": "bc10fd729a4cdc557c35a01433490eae1812c301d0ed476e4346bf2458fb6b2d",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

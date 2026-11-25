@@ -19,6 +19,6 @@
     "wipeout/phantom/gamedatamanifest"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial WipeOut Phantom Edition (v1.2.256) foi extraido e a pasta wipeout/diskimages foi criada. Copie sua imagem multi-faixa PS1 da regiao USA composta por 9 arquivos .bin (faixa 1 em MODE2/2352 e faixas 2 a 9 em AUDIO) mais o arquivo .cue para wipeout/diskimages/ antes de iniciar wipeout/wipeout.exe. Na primeira execucao o port extrai os dados e faixas musicais automaticamente. Nenhuma midia e fornecida.",
+  "manual_steps": "O SDK 1.5.38 recebe a pasta com as nove faixas BIN do disco original americano SCUS-94301, verifica cada faixa, extrai os recursos e prepara a música em WAV. Em SDKs anteriores, forneça os nove BINs e o CUE em wipeout/diskimages e use a extração ao iniciar o port.",
   "launch_file": "wipeout/wipeout.exe"
 }
