@@ -11,6 +11,6 @@
     "nectar-windows/manifest.json"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Open Nectar (1.3) foi extraido. Execute nectar-launcher.exe na pasta nectar-windows/ e clique em Install para apontar suas imagens originais de Pikmin e/ou Pikmin 2 (.iso). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "O All-Fix com SDK 1.5.44 e o extrator integrado instala Pikmin ou Pikmin 2 a partir de um disco original em ISO/GCM. Para instalar ambos, selecione uma pasta com uma edição de cada jogo. Builds sem o extrator usam o instalador oficial do Open Nectar. A instalação com mídia original e o primeiro boot aguardam homologação.",
   "launch_file": "nectar-windows/nectar-launcher.exe"
 }

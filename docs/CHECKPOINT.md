@@ -1,5 +1,10 @@
 # Checkpoint do GetAll-Addon
 
+## SDK 1.5.44
+
+- `open-nectar` 1.3 aceita as quatro edições auditadas de Pikmin e Pikmin 2. O motor verifica o digest original e extrai os dados em staging com o leitor GameCube compilado a partir do fonte oficial. Um disco abre o executável correspondente. Uma pasta com os dois discos prepara os dois jogos e abre o seletor oficial.
+- O kit oficial e seleção/cancelamento foram testados no motor. O registro de recursos e os planos de lançamento individual e combinado foram verificados com arquivos sintéticos. A receita segue experimental. Extração com mídia original e primeiro boot aguardam homologação.
+
 ## SDK 1.5.43
 
 - `project-picori-999sian-tmc` v0.9.6 usa o extrator nativo integrado ao Desktop para gerar PAKs regionais a partir da ROM original dos EUA, Europa ou Japão. Builds sem o extrator preservam a importação da ROM americana.

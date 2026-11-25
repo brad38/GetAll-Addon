@@ -669,7 +669,7 @@
       "tag": "1.3",
       "schema_version": 3,
       "path": "recipes/pikmin-pikmin-2/open-nectar/1.3.json",
-      "sha256": "2161b9aa928dd5bf70044e16482a139ba9eb028b89bfc20a775aadc038139f17",
+      "sha256": "bd83c2fac44e91ecc7e468092f81740ce386571a1c3f7bbea052ef2a387efe66",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
