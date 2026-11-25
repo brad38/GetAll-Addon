@@ -9,6 +9,6 @@
     "2ship.o2r"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial 2 Ship 2 Harkinian foi extraido. Abra 2ship.exe na pasta instalada e forneca sua ROM legitima e compativel de Zelda Majora's Mask quando o aplicativo solicitar. Consulte 2ship.equipment para verificar a compatibilidade. Nenhuma ROM e fornecida.",
+  "manual_steps": "Com o extrator ZAPD integrado, o All-Fix solicita uma ROM original americana compatível e gera mm.o2r. Em versões sem esse extrator, abra 2ship.exe e forneça a ROM quando o port solicitar.",
   "launch_file": "2ship.exe"
 }

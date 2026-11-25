@@ -69,7 +69,7 @@
       "tag": "5.0.1",
       "schema_version": 3,
       "path": "recipes/the-legend-of-zelda-majora-s-mask/2-ship-2-harkinian-2s2h/5.0.1.json",
-      "sha256": "e72510e8e4c3224b527dcf1ed2b898a19ae4011b665c1827da6877b1c834b6c0",
+      "sha256": "9c94671dc02453be0f86daec220a0e724cb8df7345f184c1db1d6c4dcab6d9a0",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
