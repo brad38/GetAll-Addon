@@ -14,6 +14,6 @@
     "avutil-60.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Silent Hill Native PC Port (crossplatform-beta, SHPC_beta-2026.10.12.1.zip) foi extraido. Execute SilentHillPC_Launcher.exe e selecione sua imagem de disco original de Silent Hill (PS1 USA, PAL ou NTSC-J) para carregar os dados do jogo. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "O SDK 1.5.41 valida o BIN original dos EUA, Europa ou Japão revisão 1 ou 2, copia o disco para gamedata e inicia SilentHillPC.exe. Para outros formatos e imagens modificadas, consulte as instruções do port. Em SDKs anteriores, use SilentHillPC_Launcher.exe para selecionar a mídia.",
   "launch_file": "SilentHillPC_Launcher.exe"
 }

@@ -10,6 +10,6 @@
     "Phase-Distorter-0.5-windows-x86_64/MANIFEST.json"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Phase Distorter (0.5) foi extraido em Phase-Distorter-0.5-windows-x86_64/. Execute 'Phase Distorter.exe' e importe sua ROM legitima de EarthBound (US) ou Mother 2 (JP) no assistente inicial; os pacotes de ativos e saves ficam gravados em %APPDATA%/ebsrc/EarthBoundCpp/. Nenhuma ROM e fornecida.",
+  "manual_steps": "O SDK 1.5.41 valida a ROM original de EarthBound (EUA) ou Mother 2 (Japão), executa a importação oficial com consentimento e verifica o pacote de recursos local. Em SDKs anteriores, inicie Phase Distorter.exe e use o assistente oficial de importação.",
   "launch_file": "Phase-Distorter-0.5-windows-x86_64/Phase Distorter.exe"
 }

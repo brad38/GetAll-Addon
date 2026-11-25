@@ -910,7 +910,7 @@
       "tag": "crossplatform-beta",
       "schema_version": 3,
       "path": "recipes/silent-hill/silent-hill-native-pc-port/crossplatform-beta.json",
-      "sha256": "b58c4d61a71fc6cb561a89abc4abc91f0efcfcdfcd66a1e9aa52aada1834d93b",
+      "sha256": "750d651fb4404f66a5dc6385bdc00d09e0077313f7b28b88990a812ce8b07215",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -970,7 +970,7 @@
       "tag": "0.5",
       "schema_version": 5,
       "path": "recipes/earthbound-mother-2/phase-distorter/0.5.json",
-      "sha256": "0a8392c424fe19cd26d537d055edbb241b1b33cde80547d6165f8e4c39836ac5",
+      "sha256": "e44ca321a396f70570b7a32122244ab71e95a8c8ad0fbfa19c3edd94b35b58d4",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
