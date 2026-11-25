@@ -81,7 +81,7 @@
       "tag": "v2.0.0",
       "schema_version": 3,
       "path": "recipes/star-fox-64/starship/v2.0.0.json",
-      "sha256": "cb64304eba4ea961fa8e8034b0cb3b4c68d74cb8799d5ac06c2806b3eb6c0f13",
+      "sha256": "45abd8fb812bbdd2d91c3e72470bbe105730e4239bdc40c8829cfa29dab30c92",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

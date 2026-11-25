@@ -9,6 +9,6 @@
     "starship.o2r"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Starship foi extraido. Para jogar, abra Starship.exe na pasta instalada e selecione sua ROM original de Star Fox 64 USA v1.0 ou v1.1 em formato .z64; o projeto cria os recursos localmente. ROMs JP/EU nao sao aceitas como base. Nenhuma ROM e fornecida.",
+  "manual_steps": "Com o extrator Torch integrado, o All-Fix solicita uma ROM original americana 1.0 ou 1.1 de Star Fox 64 em formato .z64 e gera sf64.o2r. Em versões sem esse extrator, abra Starship.exe e forneça a ROM quando o port solicitar.",
   "launch_file": "Starship.exe"
 }
