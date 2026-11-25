@@ -11,6 +11,6 @@
     "Dr. Mario 64 Recompiled x64-Release/dxil.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial de Dr. Mario 64 Recompiled Plus (1.0.0) foi extraido em 'Dr. Mario 64 Recompiled x64-Release/'. Execute 'drmario64_recomp.exe' e forneca sua ROM original americana (US) de Dr. Mario 64 no menu inicial. Nenhuma ROM ou ativo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "O SDK 1.5.30 solicita a ROM original .z64 compatível e prepara o jogo em modo portátil. Em SDKs anteriores, importe a ROM pelo iniciador oficial.",
   "launch_file": "Dr. Mario 64 Recompiled x64-Release/drmario64_recomp.exe"
 }

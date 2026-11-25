@@ -309,7 +309,7 @@
       "tag": "v1.0.3",
       "schema_version": 3,
       "path": "recipes/donkey-kong-64/donkey-kong-64-recompiled-dk64-rekongpiled/v1.0.3.json",
-      "sha256": "eda74d60fcd0613b5c0e0978f726a1a0c60604ad5c68b4962c415f2e4f7389c1",
+      "sha256": "1fdf58937336612d8213c8d6418b0079182f5b7abae3377b9d87ce484ee4cdcf",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -333,7 +333,7 @@
       "tag": "v1.0.0",
       "schema_version": 3,
       "path": "recipes/bomberman-64/bm64recomp/v1.0.0.json",
-      "sha256": "11a0a9b99a57727f9a34ab68693f9b0291e7bf6d20eeca5d9a2ad098aca34580",
+      "sha256": "aed79feac8baf2d0bbe7195d2ad85c73fb248b72e81b94b747a1815445bc9bba",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -345,7 +345,7 @@
       "tag": "v0.7.1",
       "schema_version": 3,
       "path": "recipes/bomberman-hero/bmherorecomp/v0.7.1.json",
-      "sha256": "637c321f6c6a0ffc4c994125319aacd39a75362145bfa3f558b95b9d6f7df785",
+      "sha256": "5e480f0b776639e88e95cd57dbdb946f784f90f7148907f48adf3672ddb9f4d1",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -381,7 +381,7 @@
       "tag": "v0.1.0",
       "schema_version": 3,
       "path": "recipes/goemon-s-great-adventure/gga64recomp/v0.1.0.json",
-      "sha256": "0013dd181896b95865a3a43ab34773e65303738b10da72780afacd5fd692884c",
+      "sha256": "39c796049722921d010dc41e852bcf1f23f573bd843bdcf344960c6ead9139bc",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -393,7 +393,7 @@
       "tag": "0.0.3",
       "schema_version": 3,
       "path": "recipes/duke-nukem-zero-hour/dnzhrecomp/0.0.3.json",
-      "sha256": "69e0a1f6c35200fe8dcca3de8a2ac913c4c1b4950f9c204784de768f360906b9",
+      "sha256": "378036eed083326f908f2790e56027921ab84294a265438b6a5945a833fc34e7",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -441,7 +441,7 @@
       "tag": "v0.9.1",
       "schema_version": 3,
       "path": "recipes/mega-man-64/megaman64recompiled/v0.9.1.json",
-      "sha256": "acbe42b53748b4c8e323c694b42057024c367426a1c10b49800af26815e5a024",
+      "sha256": "d0c18be335a67dbfa9c9450bc55b3f5868aa409bb9d2c655d87f4aa2d96bb810",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -465,7 +465,7 @@
       "tag": "v0.1",
       "schema_version": 3,
       "path": "recipes/chameleon-twist/chameleontwist1-jp-recomp/v0.1.json",
-      "sha256": "676cbfc99d254e83a57389c37fa7f38a36c68585585388ea57ac072f967c45cd",
+      "sha256": "fa6bd72f25b9279e56e1adb4c2df554d1f103c765db63ceab4550b4356e8b2fa",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -934,7 +934,7 @@
       "tag": "1.0.0",
       "schema_version": 5,
       "path": "recipes/dr-mario-64/drmario64-recomp-plus/1.0.0.json",
-      "sha256": "663fb359992d02f2c1afed488076c2ab2f0b7833b89faa1600fdca00282f1066",
+      "sha256": "481091c057f82ea970e58b26bf97f3a538f9a951b1f97c4d46bc4c1c348d8740",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

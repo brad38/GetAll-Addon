@@ -11,6 +11,6 @@
     "dxil.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial de Bomberman Hero (v0.7.1) foi extraido. Execute BMHeroRecompiled.exe na pasta instalada e Forneca sua ROM original de Bomberman Hero (US) no menu inicial. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "manual_steps": "O SDK 1.5.30 solicita a ROM original .z64 compatível e prepara o jogo em modo portátil. Em SDKs anteriores, importe a ROM pelo iniciador oficial.",
   "launch_file": "BMHeroRecompiled.exe"
 }

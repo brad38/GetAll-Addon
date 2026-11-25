@@ -13,6 +13,6 @@
     "zlib1.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial de Donkey Kong 64 (v1.0.3) foi extraido. Execute DK64Recompiled.exe na pasta instalada e Escolha sua ROM original de Donkey Kong 64 (US) no menu inicial. Nenhuma ROM e fornecida pelo GetAll-Addon.",
+  "manual_steps": "O SDK 1.5.30 solicita a ROM original .z64 compatível e prepara o jogo em modo portátil. Em SDKs anteriores, importe a ROM pelo iniciador oficial.",
   "launch_file": "DK64Recompiled.exe"
 }
