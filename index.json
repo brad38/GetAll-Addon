@@ -429,7 +429,7 @@
       "tag": "v0.1",
       "schema_version": 3,
       "path": "recipes/quest-64/quest64-recomp/v0.1.json",
-      "sha256": "6ad0a6e6b608b927364442baba636ed3fafad2385348d7831940c9c7a0e81d4d",
+      "sha256": "e7f3b9a38bc9227f5de6e7dcfd6d8268c1853a02698b79cf7637d7cd70c9b866",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
