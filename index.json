@@ -1030,7 +1030,7 @@
       "tag": "v2.1.0",
       "schema_version": 5,
       "path": "recipes/vandal-hearts/vandalhearts-pcport/v2.1.0.json",
-      "sha256": "ef876de008e8f18478c360c3ad899d3a8c60850aa7d21617d7fd3af1265f548b",
+      "sha256": "769eb9a2d2d313b8c9a529d3ba53c24654b2d2c9bb3b50e658febc344f76cd67",
       "status": "experimental",
       "has_inputs": true,
       "has_manual_steps": true
@@ -1066,7 +1066,7 @@
       "tag": "v1.2.0p",
       "schema_version": 5,
       "path": "recipes/castlevania-symphony-of-the-night/symphonyrecomp/v1.2.0p.json",
-      "sha256": "fd03ac87a6b3e571578ca5690e6fba86e828c96e43d3e1990bcae4f47f124c5c",
+      "sha256": "89f8d96802d4e1602b1b3b1a63c198bf6cd425fa2d05bbbf63a785ea62e2f558",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1102,7 +1102,7 @@
       "tag": "release-3.0.0",
       "schema_version": 8,
       "path": "recipes/the-legend-of-dragoon/severed-chains/release-3.0.0.json",
-      "sha256": "864baf44f4e21b00c1a4094282e511e5612f2f79007f8a184ac610df47896813",
+      "sha256": "72e6ebe3a4524606dc99da22c919e48f7eb48a29051f23b9cdbc2b60cab00d03",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

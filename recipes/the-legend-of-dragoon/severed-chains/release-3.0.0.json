@@ -106,7 +106,7 @@
   "prerequisites": [
     "java-25"
   ],
-  "manual_steps": "Distribuicao Java oficial preparada, ainda NAO jogavel sem a preparacao de midias. Forneca suas proprias imagens dos discos originais NTSC-U de The Legend of Dragoon e siga as instrucoes oficiais para posicionar/preparar os arquivos em isos/. Essa etapa NAO e automatizada nem verificada por esta receita. Instale Java 25 ou superior e configure JAVA_HOME apontando ao JDK. O All-Fix nao fornece ROMs/ISOs, nao baixa Java e nao executa launch.bat. Aguarde homologacao de importacao de midia e primeiro boot antes de tratar o jogo como instalado.",
+  "manual_steps": "No SDK 1.5.36, configure JAVA_HOME para o JDK 25 e forneça os quatro discos originais NTSC-U em BIN MODE2/2352. O All-Fix copia os discos e executa o extrator oficial. Em versões anteriores, siga o guia oficial para preparar a pasta isos.",
   "java_launcher": {
     "jar": "lod-game-ab5dfe5ba6d4c07464a2f0e67985b9e77e2f7bdb.jar",
     "runtime": "java-25",

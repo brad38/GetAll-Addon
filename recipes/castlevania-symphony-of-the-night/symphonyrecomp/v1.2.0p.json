@@ -17,7 +17,7 @@
     "soft_oal.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial SymphonyRecomp (v1.2.0p) foi extraido e a pasta disc/ foi criada. Certifique-se de ter o .NET 10 Desktop Runtime x64 e o OpenAL instalados e copie para disc/ as faixas norte-americanas PS1 'Castlevania - Symphony of the Night (USA) (Track 1).bin', 'Castlevania - Symphony of the Night (USA) (Track 2).bin' e 'Castlevania - Symphony of the Night (USA).cue' (ou arquivo .chd compativel) antes de iniciar sotn.exe. Nenhum ativo comercial e fornecido.",
+  "manual_steps": "O SDK 1.5.36 valida e importa as duas faixas BIN do disco americano original e gera o CUE. O port usa .NET Desktop Runtime 10 x64 e OpenAL. Em SDKs anteriores, copie os arquivos BIN/CUE com os nomes oficiais, ou o CHD compatível, para disc/ e inicie sotn.exe.",
   "launch_file": "sotn.exe",
   "prerequisites": [
     "dotnet-desktop-10-x64",

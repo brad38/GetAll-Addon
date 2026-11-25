@@ -36,6 +36,6 @@
       "magic_hex": "00FFFFFFFFFFFFFFFFFFFF00"
     }
   ],
-  "manual_steps": "O pacote oficial de Vandal Hearts PC Port (v2.1.0) e sua imagem .bin foram preparados em game/vandalhearts.bin (compativel apenas com USA SLUS-00447, Asia SCPS-45183 ou Japan SLPM-86007; Europe SLES-00204 nao e suportada). Inicie vandalhearts_pc.exe para verificar o disco e jogar.",
+  "manual_steps": "O SDK 1.5.36 valida o BIN MODE2/2352 original (EUA, Ásia ou Japão), registra a instalação e inicia o port com o disco importado. Em SDKs anteriores, abra vandalhearts_pc.exe para verificar o BIN que foi importado em game/vandalhearts.bin.",
   "launch_file": "vandalhearts_pc.exe"
 }
