@@ -10,6 +10,6 @@
     "LICENSE.txt"
   ],
   "inputs": [],
-  "manual_steps": "Port Windows oficial preparado. Forneca sua propria imagem legitima do disco Xbox Halo Combat Evolved (.iso ou .xiso) no primeiro inicio do port ou coloque a imagem junto ao executavel conforme a documentacao oficial. A extracao de mapas pelo jogo e o primeiro boot ainda nao foram homologados.",
+  "manual_steps": "Forneça uma imagem ISO ou XISO original de Halo: Combat Evolved para Xbox. O instalador verifica o título e o formato dos mapas, importa os arquivos e abre halo.exe com os mapas locais. Em versões anteriores que apenas extraem o pacote, o próprio OpenCE solicita a imagem no primeiro uso.",
   "launch_file": "halo.exe"
 }

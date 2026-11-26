@@ -357,7 +357,7 @@
       "tag": "v0.2.0-dev",
       "schema_version": 3,
       "path": "recipes/mystical-ninja-starring-goemon/goemon64recomp/v0.2.0-dev.json",
-      "sha256": "3a5f0277be08cddef7642068b45c32ee554903514d891f83acd6accc9b304638",
+      "sha256": "3f4359c2ebbd33d1fd7f59904159cd6e9ee1fdf76aced076078c64dff6e28615",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -718,7 +718,7 @@
       "tag": "v1.0.1",
       "schema_version": 3,
       "path": "recipes/shadow-the-hedgehog/shadow-recompiled/v1.0.1.json",
-      "sha256": "901fc88ee9c9dfd52630849c264882edb33b853afc24474fae2d0d8c4d1fd479",
+      "sha256": "0c71f47b8a9de59b8f4f8d567dcad4b3aba25c34da138fd507e87ca94de3caf5",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1262,7 +1262,7 @@
       "tag": "build-387",
       "schema_version": 5,
       "path": "recipes/halo-combat-evolved/opence/build-387.json",
-      "sha256": "60559166a37bf298de15a8532deb64b0f82d9c3fa82d8f1e3bf1050ee5b78ca0",
+      "sha256": "acf12a0651e7554c5fac77a0b2fb692951fe1ef197876ca27b1a71f2bd33cfcf",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
