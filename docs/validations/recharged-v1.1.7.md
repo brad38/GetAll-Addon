@@ -25,3 +25,9 @@ Procedimento manual da receita: O pacote oficial Recharged foi extraido. Execute
 - **Verificação de arquivos:** `5/5` `required_files` presentes; `launch_file_exists=True`
 - **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 5/5 `required_files` e `launch_file` presentes em `Destination`).
 - **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.
+
+## Fluxo integral implementado no SDK 1.5.49
+
+O perfil local exige o ZIP oficial e o manifesto dos 275 arquivos. O seletor importa uma ISO Wii integral de 4699979776 bytes. Valida a assinatura Wii, ID, revisão e SHA-1 Redump da mídia inteira. São aceitos EUA R4QE01 rev. 1 (7970), Europa R4QP01 rev. 1 e 2 (9009 e 1400), Japão R4QJ01 rev. 0 (29253) e Coreia R4QK01 rev. 0 (62634). O executável oficial recebe o caminho relativo da ISO instalada por --disc, conforme src/launcher/main.cpp do commit 053746ffc142728ee8d4231eb4e9adbfc11bb30d. RVZ e WBFS podem ser usados pelo launcher upstream.
+
+O teste com o ZIP oficial confirmou preparo, seleção, cancelamento e rejeição de ISO truncada. Cinco cabeçalhos sintéticos e a rejeição de revisão incompatível foram testados. O comando de lançamento foi verificado com registro sintético. A instalação com ISO original e o primeiro boot estão pendentes. A receita permanece experimental.

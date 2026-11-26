@@ -12,6 +12,6 @@
     "recharged_game_us.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Recharged foi extraido. Execute recharged.exe na pasta instalada e, no launcher, adicione a pasta que contem a imagem legitima do disco Mario Strikers Charged (ISO, RVZ ou WBFS de regiao suportada). Clique em Play no launcher. A imagem do disco nao e distribuida nem importada pelo GetAll-Addon.",
+  "manual_steps": "O All-Fix SDK 1.5.49 reconhece o ZIP oficial e importa a ISO integral de uma edicao suportada do Wii. Para RVZ, WBFS ou versoes anteriores do All-Fix, use o launcher oficial.",
   "launch_file": "recharged.exe"
 }

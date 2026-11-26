@@ -165,7 +165,7 @@
       "tag": "v1.1.7",
       "schema_version": 3,
       "path": "recipes/mario-strikers-charged/recharged/v1.1.7.json",
-      "sha256": "05ff078cdf7f59a1f37d0b0829b7c3ac8dd007372de9470fe743cf304b7b82c3",
+      "sha256": "d4ecbb5daeda050799b4dd898c0e73ca0087e54fe6bbddfe798a8765fe2a46ec",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
