@@ -25,3 +25,9 @@ Procedimento manual da receita: O pacote oficial de King's Field (JP, 1994) (v0.
 - **Verificação de arquivos:** `2/2` `required_files` presentes; `launch_file_exists=True`
 - **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 2/2 `required_files` e `launch_file` presentes em `Destination`).
 - **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.
+
+## Fluxo integral implementado no SDK 1.5.48
+
+O motor confere o manifesto do ZIP oficial e aceita o BIN MODE2/2352 japonês SLPS-00017 de 30378432 bytes com SHA-1 00BFD94CE99BF214B03BDAA07DE99B9CA1466550 (Redump). O importador e o verificador usam o código upstream ac147450249c95b8d7683300292a2761796cb611 em modo japonês. O motor exige 428 arquivos nos recursos extraídos e verifica a árvore com o código oficial antes de registrar a instalação. O executável oficial recebe --data data/ja --language ja, com o manifesto dos arquivos conferido antes de iniciar.
+
+O teste com o pacote oficial confirmou preparo, seletor, cancelamento e rejeição de mídia incompatível. O importador e o verificador foram executados pelo motor em pasta com acentos e rejeitaram dados sintéticos. O plano de lançamento e a rejeição de recurso alterado foram exercitados com registro sintético. Extração com disco original e primeiro boot pendentes. A receita permanece experimental.

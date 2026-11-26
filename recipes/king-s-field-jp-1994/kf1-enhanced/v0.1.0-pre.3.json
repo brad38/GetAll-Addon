@@ -9,6 +9,6 @@
     "KingsFieldEnhanced-v0.1.0-pre.3-windows/SDL3.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial de King's Field (JP, 1994) (v0.1.0-pre.3) foi extraido. Para jogar, execute kings-field.exe e selecione sua imagem .cue+.bin ou .iso japonesa original para gerar a pasta data/. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "manual_steps": "O All-Fix SDK 1.5.48 reconhece o ZIP oficial e extrai os recursos do disco japones SLPS-00017 selecionado em BIN. Em versoes anteriores, use a importacao do jogo oficial.",
   "launch_file": "KingsFieldEnhanced-v0.1.0-pre.3-windows/kings-field.exe"
 }

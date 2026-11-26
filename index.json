@@ -561,7 +561,7 @@
       "tag": "v0.1.0-pre.3",
       "schema_version": 3,
       "path": "recipes/king-s-field-jp-1994/kf1-enhanced/v0.1.0-pre.3.json",
-      "sha256": "e0db9b537b209687fc73f60b7bfa81db245cff9d6b7d5f66a66babc8b3e25ed6",
+      "sha256": "5df1656db3d9205b36d6d8a651832b3e87e53b1371e5dc19c46cb584a62ed67c",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
