@@ -549,7 +549,7 @@
       "tag": "v0.2.0",
       "schema_version": 3,
       "path": "recipes/wwf-smackdown-2-know-your-role/knowyourrolerecomp/v0.2.0.json",
-      "sha256": "1156f85ee57eec9b207c3a6749eb8f0664f434d2b98de09179613b9d895be873",
+      "sha256": "62aaa8344db0f1d311565e78166ad8d3b2dbb64f6d691bd4d59ee73f52c67b10",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

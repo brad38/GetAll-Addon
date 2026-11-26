@@ -9,6 +9,6 @@
     "KnowYourRole-v0.2.0-win-x64/KnowYourRole-files/runtime/KnowYourRole.Game.exe"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial de WWF SmackDown! 2: Know Your Role (v0.2.0) foi extraido. Para jogar, abra KnowYourRole.exe em KnowYourRole-v0.2.0-win-x64/ e selecione o arquivo .cue/.bin da sua copia NTSC-U SLUS-01234. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "manual_steps": "A previa All-Fix SDK 1.5.50 com o compilador incorporado aceita o BIN original NTSC-U SLUS-01234 e compila o port. Para outras copias do All-Fix, use o launcher oficial.",
   "launch_file": "KnowYourRole-v0.2.0-win-x64/KnowYourRole.exe"
 }
