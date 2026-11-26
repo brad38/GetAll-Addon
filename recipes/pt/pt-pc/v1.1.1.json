@@ -13,6 +13,6 @@
     "pt-port-20261122-41edcc76/extractor/PT.PkgExtract.exe"
   ],
   "inputs": [],
-  "manual_steps": "Use sua própria cópia legítima de P.T. PS4 CUSA01127, com os dados originais solicitados pelo port. Siga o README oficial para importação manual. O pacote portátil não contém a pasta de dados original. Não execute instaladores ou atualizadores automaticamente.",
+  "manual_steps": "No All-Fix SDK 1.5.54 ou superior, use o ZIP portátil oficial e selecione sua pasta original de P.T. PS4 EUA (CUSA01127). O All-Fix copia os dados necessários para a instalação. Se a pasta original ainda estiver em PKG, extraia-a antes de selecionar.",
   "launch_file": "pt-port-20261122-41edcc76/pt.exe"
 }
