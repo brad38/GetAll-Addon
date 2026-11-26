@@ -18,5 +18,5 @@
     }
   ],
   "launch_file": "AutoTMC-Windows.exe",
-  "manual_steps": "O All-Fix instala somente o aplicativo portatil AutoTMC v1.0.2, nao o jogo The Minish Cap. Abra AutoTMC-Windows.exe e siga o assistente oficial para obter uma release do projeto TMC e fornecer a sua ROM legitima quando exigida; Python/ambiente e acesso a rede podem ser necessarios conforme a documentacao oficial. Nenhuma ROM ou instalacao funcional do jogo foi homologada."
+  "manual_steps": "Com o All-Fix SDK 1.5.60 ou superior, selecione sua ROM original americana BZME de The Minish Cap. O All-Fix baixa o pacote oficial Windows x64 do Project Picori v0.9.6, prepara os recursos e abre o jogo pela biblioteca. A instalação com ROM original e o primeiro boot aguardam homologação."
 }

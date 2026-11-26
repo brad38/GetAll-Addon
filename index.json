@@ -1090,7 +1090,7 @@
       "tag": "1.0.2",
       "schema_version": 6,
       "path": "recipes/the-legend-of-zelda-the-minish-cap/autotmc-auto-tmc/1.0.2.json",
-      "sha256": "cb110fe24ed3679cdc1e8320cb7e98e2b8c7807dad09472518e7a63c07c36fbb",
+      "sha256": "2c87d1c35bb71520f52fa23786d0422ef07e12f0463f14db088f7bce02dc135c",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
