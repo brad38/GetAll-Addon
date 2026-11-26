@@ -9,6 +9,6 @@
     "yfm-redecomp-v0.3.0/SDL3.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial de Yu-Gi-Oh! Forbidden Memories (v0.3.0) foi extraido. Para jogar, execute memories-pc.exe em yfm-redecomp-v0.3.0/ e selecione a imagem .bin do seu disco USA na primeira execucao. Nenhum arquivo comercial ou ROM e distribuido pelo GetAll-Addon.",
+  "manual_steps": "O All-Fix SDK 1.5.47 reconhece este ZIP oficial e solicita a imagem BIN original dos EUA (SLUS-01411) no seletor compartilhado. Em versoes anteriores, selecione a imagem no assistente oficial.",
   "launch_file": "yfm-redecomp-v0.3.0/memories-pc.exe"
 }

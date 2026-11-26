@@ -573,7 +573,7 @@
       "tag": "v0.3.0",
       "schema_version": 3,
       "path": "recipes/yu-gi-oh-forbidden-memories/yu-gi-oh-forbidden-memories-recompiled/v0.3.0.json",
-      "sha256": "db70d1e07f2b7549a92a6a345fd68d522a23e7ce083a9b77c1f0ca6be2e5bd49",
+      "sha256": "42433ce164e223c7a8ba891982e9da6f7e44b3ee89c319a999417900161416e8",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

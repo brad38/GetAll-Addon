@@ -25,3 +25,9 @@ Procedimento manual da receita: O pacote oficial de Yu-Gi-Oh! Forbidden Memories
 - **Verificação de arquivos:** `2/2` `required_files` presentes; `launch_file_exists=True`
 - **Observação:** Extração e validação concluídas em pasta temporária pelo motor real (`Status=PartiallyCompleted`, 2/2 `required_files` e `launch_file` presentes em `Destination`).
 - **Homologação final:** Permanece `experimental` até instalação ponta a ponta no `AllFix.exe` com mídia legítima do usuário e boot real comprovado do jogo.
+
+## Fluxo integral implementado no SDK 1.5.47
+
+O perfil local exige o ZIP oficial e confere o manifesto de 835 arquivos. O seletor compartilhado solicita o BIN MODE2/2352 original dos EUA, SLUS-01411. O motor usa tamanho e SHA-1 do catálogo Redump, importa em staging transacional e passa o BIN instalado ao executável oficial por MEMORIES_DISC. O suporte a esse caminho está em src/pc/platform/game_files.c no commit 663626b1d38355dd11f5532894a2b94169e7f349.
+
+O teste do motor com o pacote oficial conferiu preparo, seleção, cancelamento e rejeição do BIN sintético incompatível. O plano de lançamento e a rejeição de mídia alterada foram exercitados com um registro sintético. A instalação com mídia original e o primeiro boot estão pendentes. A receita permanece experimental.
