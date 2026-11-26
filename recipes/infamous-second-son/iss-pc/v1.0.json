@@ -12,6 +12,6 @@
     "infamous-windows-x86_64/out/tlg-probe.exe"
   ],
   "inputs": [],
-  "manual_steps": "Use sua própria cópia PS4 CUSA00223 EUA base 1.00 com update 1.07 aplicado na mesma pasta, eboot.bin e demais arquivos originais. Selecione a pasta no launcher. Requer Vulkan 1.3; não inclui mídia.",
+  "manual_steps": "No SDK 1.5.52 ou superior, selecione a pasta original PS4 CUSA00223 (EUA) com atualização 01.07 aplicada. Mantenha a pasta no mesmo local para jogar. Requer Vulkan 1.3.",
   "launch_file": "infamous-windows-x86_64/inFAMOUS Second Son.exe"
 }

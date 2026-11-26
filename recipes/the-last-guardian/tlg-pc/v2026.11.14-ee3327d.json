@@ -11,6 +11,6 @@
     "tlg-windows-x86_64/out/tlg-gpu-capabilities.exe"
   ],
   "inputs": [],
-  "manual_steps": "Forneça sua própria pasta do jogo PS4 CUSA03627 EUA ou CUSA03745 EU com update 01.03 aplicado, eboot.bin e arquivos do jogo. Selecione a pasta no launcher oficial. Firmware de áudio opcional deve vir do próprio console. Sem mídia ou execução automática; build experimental.",
+  "manual_steps": "No SDK 1.5.52 ou superior, selecione a pasta original PS4 CUSA03627 (EUA) ou CUSA03745 (Europa) com atualização 01.03 aplicada. Mantenha a pasta no mesmo local para jogar. Firmware de áudio é opcional e deve vir do próprio console.",
   "launch_file": "tlg-windows-x86_64/The Last Guardian.exe"
 }

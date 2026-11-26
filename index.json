@@ -1351,7 +1351,7 @@
       "tag": "v2026.11.14-ee3327d",
       "schema_version": 5,
       "path": "recipes/the-last-guardian/tlg-pc/v2026.11.14-ee3327d.json",
-      "sha256": "d8dc24e55ddd8ee42a7a081f1ac5ae626f6c00350835b335cab49780c1f3a8e9",
+      "sha256": "23fe95bb89773641ff2ef46ca5f1ef79884435ed429ab791d2d251c1fb96e9c0",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1375,7 +1375,7 @@
       "tag": "v1.0",
       "schema_version": 5,
       "path": "recipes/infamous-second-son/iss-pc/v1.0.json",
-      "sha256": "7ffafbef8ed1f229fb697d7adddaba85962557c196b8dfcaa1305a210ac57c51",
+      "sha256": "b74141b72b04cb1c2398da2ee34d3d00b100e200224fcfe6ddedb1f19830faa4",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
