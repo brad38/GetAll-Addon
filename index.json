@@ -1438,7 +1438,7 @@
       "tag": "v1.1.1",
       "schema_version": 5,
       "path": "recipes/pt/pt-pc/v1.1.1.json",
-      "sha256": "9e05ff1ccbc8dc0f226250389902a60a7afa457ff42563c2115a9c3a2aa0b540",
+      "sha256": "e67bb470f6249b4eb3e454f15cbb2f7669e610905e340df4f30ab9d056f4b216",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

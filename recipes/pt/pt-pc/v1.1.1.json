@@ -13,6 +13,6 @@
     "pt-port-20261122-41edcc76/extractor/PT.PkgExtract.exe"
   ],
   "inputs": [],
-  "manual_steps": "No All-Fix SDK 1.5.54 ou superior, use o ZIP portátil oficial e selecione sua pasta original de P.T. PS4 EUA (CUSA01127). O All-Fix copia os dados necessários para a instalação. Se a pasta original ainda estiver em PKG, extraia-a antes de selecionar.",
+  "manual_steps": "No All-Fix SDK 1.5.55 ou superior, use o ZIP portátil oficial e selecione a pasta extraída ou um fPKG criado a partir da sua cópia original de P.T. PS4 EUA (CUSA01127). O All-Fix importa os dados necessários. Para usar a pasta em versões anteriores, é necessário o SDK 1.5.54.",
   "launch_file": "pt-port-20261122-41edcc76/pt.exe"
 }
