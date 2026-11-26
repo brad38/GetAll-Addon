@@ -1006,7 +1006,7 @@
       "tag": "v0.5.1",
       "schema_version": 5,
       "path": "recipes/the-legend-of-zelda-the-wind-waker-hd/zeldawwhdrecomp/v0.5.1.json",
-      "sha256": "4735cd017d888208dd437f7c1407eff4e1bebc2908e59fea4f37e97b04016788",
+      "sha256": "7211aeb4208bd5ae66173160a3e4fe4138743113e0ad9b2d5200b2edd4cee88b",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

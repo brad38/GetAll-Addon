@@ -11,6 +11,6 @@
     "WindWakerHD-v0.5.1-windows-x86_64/portable.txt"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Wind Waker HD Recompiled (v0.5.1) foi extraido em WindWakerHD-v0.5.1-windows-x86_64/. Na primeira preparacao, extraia os ativos da sua copia legitima de Wii U (USA ou EUR) usando o assistente ou tools/bin/wwhd-extract.exe antes de iniciar 'Wind Waker HD.exe'. Nenhum ativo comercial e fornecido.",
+  "manual_steps": "O pacote oficial Wind Waker HD Recompiled (v0.5.1) foi extraido em WindWakerHD-v0.5.1-windows-x86_64/. No SDK 1.5.62 ou mais recente, selecione no All-Fix a pasta original já extraída da edição Wii U dos EUA ou da Europa, versão 0, com code, content e meta. O All-Fix valida a mídia e executa o setup oficial automaticamente. Em versões antigas do All-Fix, use o assistente oficial do port. Nenhum ativo comercial é fornecido.",
   "launch_file": "WindWakerHD-v0.5.1-windows-x86_64/Wind Waker HD.exe"
 }
