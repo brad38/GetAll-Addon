@@ -1226,7 +1226,7 @@
       "tag": "v1.3.0-rc16",
       "schema_version": 5,
       "path": "recipes/gran-turismo-4/gt4recomp/v1.3.0-rc16.json",
-      "sha256": "b3eb42c3df5a9a9dfa1331d528fdd60c3007321a8a92a0ba33073f65516cc4e1",
+      "sha256": "6ed215afabbae6bddba05fb86b9b9f4d2bcc09b1240a010b4ea880f9418bb214",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1238,7 +1238,7 @@
       "tag": "v0.6.9.5",
       "schema_version": 5,
       "path": "recipes/god-hand/god-hand-rearmed/v0.6.9.5.json",
-      "sha256": "8bbefc836afc90ea150a98af1c6f5ac6f79c7b52b4b0bfac2e42e2d7a456b249",
+      "sha256": "6230ecfd4b4adcb2936f43380810352bf0e5c67a2b140944349868f6a66646c8",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

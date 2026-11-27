@@ -12,6 +12,6 @@
     "God Hand Rearmed/shaderc_shared.dll"
   ],
   "inputs": [],
-  "manual_steps": "Port oficial preparado. Forneca sua propria imagem legitima de God Hand USA SLUS-21503 (.iso ou .chd) ao launcher oficial GHR.exe. A midia e o primeiro boot permanecem pendentes; nenhum jogo ou instalador e executado automaticamente.",
+  "manual_steps": "Selecione a ISO original americana de God Hand (SLUS-21503) na instalação. O GetAll verifica a mídia e prepara os arquivos para iniciar pelo botão Jogar. Versões anteriores do All-Fix e imagens CHD podem usar o launcher oficial.",
   "launch_file": "God Hand Rearmed/GHR.exe"
 }

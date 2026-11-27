@@ -13,6 +13,6 @@
     "game/MANIFEST.json"
   ],
   "inputs": [],
-  "manual_steps": "GT4Recomp portable oficial, release candidate. Forneca sua propria ISO legitima de Gran Turismo 4 USA v2.00 SCUS-97328 (ou sua imagem Spec II 1.10) no launcher. O GetAll nao inclui midia, nao executa o launcher automaticamente e nao homologou o boot.",
+  "manual_steps": "Na prévia do All-Fix com o preparador portátil, selecione sua ISO original americana de Gran Turismo 4 ou Gran Turismo 4 Spec II 1.10. O GetAll valida e prepara a mídia, e Jogar abre o executável do título com CoreGS 2.0. Em versões anteriores, selecione a ISO no launcher oficial.",
   "launch_file": "GT4Recomp.exe"
 }
