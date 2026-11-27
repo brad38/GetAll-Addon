@@ -4,6 +4,8 @@ import argparse
 import json
 from pathlib import Path
 
+USABLE_STATUSES = frozenset({"experimental", "validated"})
+
 def load(path):
     return json.loads(Path(path).read_text(encoding="utf-8-sig"))
 
@@ -36,14 +38,20 @@ def coverage(catalog, main_index, development_index):
     for (game,project),(platform,metadata) in projects.items():
         public=main.get((game,project),[])
         pending=development.get((game,project),[])
+        usable_public=[x for x in public if x.get("status") in USABLE_STATUSES]
+        usable_pending=[x for x in pending if x.get("status") in USABLE_STATUSES]
         rows.append({"game_id":game,"project_id":project,"platform_group":platform,
+                     # Keep every indexed version for inspection, including inactive recipes.
                      "main":public,"development":pending,
-                     "preparation_only":bool(pending) and all(x["schema_version"]==9 for x in pending),
-                     "validated":any(x["status"]=="validated" for x in pending)})
+                     "main_covered":bool(usable_public),
+                     "development_covered":bool(usable_pending),
+                     # This legacy schema metric does not establish installation or boot.
+                     "preparation_only":bool(usable_pending) and all(x["schema_version"]==9 for x in usable_pending),
+                     "validated":any(x["status"]=="validated" for x in usable_pending)})
     return {"games":len(catalog["games"]),"projects":len(projects),
-            "main_covered":sum(bool(r["main"]) for r in rows),
-            "development_covered":sum(bool(r["development"]) for r in rows),
-            "missing":sum(not r["development"] for r in rows),
+            "main_covered":sum(r["main_covered"] for r in rows),
+            "development_covered":sum(r["development_covered"] for r in rows),
+            "missing":sum(not r["development_covered"] for r in rows),
             "preparation_only":sum(r["preparation_only"] for r in rows),
             "validated":sum(r["validated"] for r in rows),"rows":rows}
 

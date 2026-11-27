@@ -9,7 +9,7 @@ import zipfile
 
 
 COMMIT = re.compile(r"[0-9a-fA-F]{40}")
-VERSION = re.compile(r"[0-9]{1,8}\.[0-9]{1,8}\.[0-9]{1,8}")
+VERSION = re.compile(r"(?:0|[1-9][0-9]{0,7})(?:\.(?:0|[1-9][0-9]{0,7})){2}")
 REPOSITORY = "brad38/GetAll-Addon"
 PREVIEW_ID = "allfix.install.universal.preview"
 CAPABILITY = "installation.recipe.remote"
@@ -19,7 +19,7 @@ def package(root: Path, revision: str, catalog: str, version: str, output: Path,
     if not COMMIT.fullmatch(revision) or not COMMIT.fullmatch(catalog):
         raise ValueError("Use os SHAs completos dos commits do GetAll e AllFix-Repo.")
     if not VERSION.fullmatch(version) or not VERSION.fullmatch(min_sdk):
-        raise ValueError("A versão do addon precisa usar o formato x.y.z.")
+        raise ValueError("As versões do addon e do SDK precisam usar x.y.z, sem zeros iniciais.")
     index = json.loads(subprocess.check_output(
         ["git", "-C", str(root), "show", revision + ":index.json"]
     ))

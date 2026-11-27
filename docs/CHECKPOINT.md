@@ -1,5 +1,119 @@
 # Checkpoint do GetAll-Addon
 
+## Continuidade verificada em 27/11/2026 — contratos e isolamento da prévia
+
+Esta continuidade usa o GetAll em `27966be0a0e7df41ab4b45f2252b4ac2f6031863`
+(`feat/marathon-xbox-media-import`) e o catálogo em
+`44bdb508842407d501e420457274eb4064f5d935` (`feat/catalog-release-dates`).
+As alterações desta sessão estão na branch isolada
+`work/continuar-getall-20261127`. O HEAD remoto do GetAll foi conferido novamente
+antes do commit e permanecia em `27966be`.
+
+### Estado confirmado e preservado
+
+| Indicador | Resultado observado |
+|---|---:|
+| Jogos no catálogo de desenvolvimento | 110 |
+| Projetos por ID | 148 |
+| Receitas no índice de desenvolvimento | 141 |
+| Projetos com receita utilizável | 140 |
+| Projetos sem receita | 8 |
+| Receitas experimentais | 140 |
+| Receitas com status `validated` histórico | 1 |
+| Novas instalações ou primeiros boots nesta sessão | 0 |
+
+As duas receitas de `crash-team-racing-turbocharged` explicam a diferença entre
+receitas e projetos. A cobertura utilizável conta somente `experimental` e
+`validated`, sem promover nenhum status. Não foi possível recontar os fluxos
+integrais: os 102 integrais e 38 incompletos do handoff pertencem ao checkpoint
+anterior e dependem da matriz funcional atual no Bradsson. Não somar os seis
+projetos mencionados nos commits posteriores como novos integrais sem essa
+evidência.
+
+Os commits `4d1d73f`, `efda491` e `27966be`, posteriores ao handoff `acc73ca`,
+atualizam instruções de mídia para The Simpsons Game, Earthworm Jim HD,
+3 on 3 NHL Arcade, PGR4, Blue Dragon e Sonic Unleashed. Foram preservados.
+O catálogo de datas conserva os três commits de desenvolvimento `098d847`,
+`3f4603c` e `44bdb50`, ainda separados de `main`; as 109 datas de lançamento,
+o `null` de Dinosaur Planet, todas as datas de inclusão e GT4 como PS2 foram
+preservados. Nenhum arquivo do catálogo foi alterado nesta sessão.
+
+### Correções implementadas
+
+- O CI seleciona o catálogo pelo canal do índice. Novas branches de prévia e
+  PRs para desenvolvimento usam o catálogo fixado de 148 projetos. Todo PR
+  destinado a `main` e toda execução na `main` rejeita índice de prévia antes
+  da validação, inclusive a antiga exceção `feat/round-17-restricted-installers`.
+- O empacotador rejeita versões e SDK mínimo com zeros iniciais que o schema
+  do próprio manifesto não aceita, antes de criar arquivos. O SDK mínimo
+  padrão existente foi preservado.
+- A cobertura deixa de contabilizar receitas `disabled` e `draft` como
+  utilizáveis, preservando todas as versões nos detalhes e contando cada
+  projeto uma única vez. O campo legado `preparation_only` não comprova fluxo
+  integral, instalação ou boot.
+- O monitor de releases verifica os estados e contratos de todas as versões
+  de um projeto antes de propor atualização automática. Encaminha contratos
+  diferentes de v3, estados protegidos e entradas com operações ou mídia para
+  revisão, sem baixar seus pacotes. Isso evita remover dependências, assets,
+  launchers Java ou perfis de preparação/compilação e não depende da ordem do
+  índice. Uma reprodução anterior com Severed Chains v8 gerava v3 e perdia
+  `java_launcher` e `prerequisites`; a regressão agora está coberta.
+
+### Validação desta sessão
+
+- **60 testes Python aprovados**, incluindo 14 regressões novas de CI,
+  empacotamento, cobertura e monitoramento. Fixtures e ZIPs de teste são
+  sintéticos; nenhum executável de terceiros foi executado.
+- **141 receitas aprovadas** em `validate_recipes.py --strict-lf
+  --require-jsonschema --check-git-blobs --check-catalog`, usando o catálogo
+  local de 148 projetos. Schemas, identidades, hashes e LF passaram.
+- O helper de CI foi executado com contexto simulado de PR para desenvolvimento
+  e catálogo oficial fixado: aprovado. O contexto de PR para `main` com índice
+  de prévia foi rejeitado antes do validador, conforme esperado.
+- O catálogo passou em `validate_catalog.py --require-dates --compare-with
+  origin/main`. `git diff --check` também passou.
+- [CI remoto do commit-base 27966be](https://github.com/brad38/GetAll-Addon/actions/runs/45935930815)
+  confirmado `completed/success`. Esse resultado não é CI das alterações
+  locais desta sessão.
+
+### Oito projetos sem receita e condições de desbloqueio
+
+| Projeto | Evidência ou condição atual |
+|---|---|
+| `drmario64-recomp` | Fonte arquivado, sem releases; exige geração de código a partir da ROM e perfil de build. Windows não foi verificado, não é incompatibilidade absoluta. |
+| `metaforce` | Índice de releases acessível, mas os diretórios `continuous/`, `dev/` e o repositório retornaram 404 nesta consulta. Falta distribuição oficial verificável. |
+| `twilight-princess-courage-reborn` | Documentação oficial de build Windows disponível; o repositório nela indicado e suas releases retornaram 404. Falta fonte/pacote fixável e integração do processamento. |
+| `wind-waker-recomp` | Upstream orienta migrar para BlueWake e retirou as releases próprias. Preservar o ID sucedido, sem duplicar a receita do sucessor. |
+| `project-2099` | Release beta5 declara mídia própria, mas também Title Update incluído. Não foi obtida evidência que resolva o bloqueio de distribuição ou um contrato de instalador aprovado. |
+| `doldecomp-mkdd-decompilacao-base` | Base de decompilação de console no catálogo; não houve evidência nova de port Windows. |
+| `tmc-decompilacao-base` | Base de decompilação de console no catálogo; não houve evidência nova de port Windows. |
+| `mml1-megaman-legends-decomp` | Base de decompilação de console no catálogo; não houve evidência nova de port Windows. |
+
+Fontes oficiais consultadas nesta retomada:
+[Dr. Mario 64](https://github.com/AngheloAlf/drmario64_recomp/commit/7892264252fd662c140625ad35cab62825ab473b),
+[releases Metaforce](https://releases.axiodl.com/),
+[build Courage Reborn](https://docs.couragereborn.com/building/build/),
+[Wind Waker Recomp](https://github.com/elliotttate/Wind-Waker-Recomp) e
+[metadados da release Project 2099 beta5](https://api.github.com/repos/GenryTheFox0/Project-2099/releases/tags/v2.0.0-beta.5).
+Nenhuma dessas verificações desbloqueou uma nova receita funcional nesta sessão.
+
+### Bloqueio operacional e próxima ação
+
+GetAll e catálogo foram obtidos por leitura pública. `brad38/Allfix` continua
+inacessível sem autenticação; o Bradsson não está conectado. Os arquivos locais
+`CONTINUIDADE.md`, `PENDENCIAS.md`, `MATRIZ-FUNCIONAL.md` e
+`LIMPEZA-ARMAZENAMENTO.md` não foram acessados nem substituídos. Não houve build
+Windows, execução do parser/motor C#, validação WPF ou primeiro boot.
+
+O teste de publicação `git push --dry-run` para a branch isolada falhou por
+ausência de autenticação (`unable to get password from user`). Nenhum push,
+PR, merge, release, alteração de `version.json` público ou troca de instalação
+foi realizado. A próxima ação é disponibilizar acesso ao Desktop atual e aos
+checkpoints do Bradsson, além da autenticação de escrita no GetAll; então
+conferir novamente os HEADs, integrar esta branch e continuar a fila funcional
+real, sem repetir os fluxos já implementados. DownloadAll permanece fora do
+escopo.
+
 ## SDK 1.5.46
 
 - `super-metroid-launcher` v1.0.1 e `zelda-3-launcher` v1.3.7.0 compartilham um perfil TCC baseado nos comandos upstream, com fontes e dependências fixados. Para Zelda 3, o motor prepara Python e wheels verificados e valida o arquivo de recursos produzido.
