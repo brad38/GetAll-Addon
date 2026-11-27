@@ -1187,11 +1187,11 @@
       "tag": "launcher-v0.4.0",
       "schema_version": 9,
       "path": "recipes/god-of-war-2005/god-of-war-native-pc-port-gow-pc-port/launcher-v0.4.0.json",
-      "sha256": "a0e9724ae96d74b6252e4d060ccdb3fd70f5bf2e0ca77e0ed5c4c732b21ccd2a",
+      "sha256": "8956a1ea2d1890dd62e1a5c9244bea6dd207d070cfafbfa20208562677641090",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.10"
+      "min_sdk_version": "1.5.67"
     },
     {
       "game_id": "the-legend-of-zelda-tears-of-the-kingdom",
@@ -1200,11 +1200,11 @@
       "tag": "v0.5.0",
       "schema_version": 9,
       "path": "recipes/the-legend-of-zelda-tears-of-the-kingdom/totk-pc-recomp/v0.5.0.json",
-      "sha256": "173da52fe07d90ae1b688e06d6ba5a79d51d08ae86bf2dbf6bb4095ebf1255b9",
+      "sha256": "8c40ba5cf4285b7287cfb381a0a01b1b1d2506dc0bf7657944fbb42bac52cfef",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.10"
+      "min_sdk_version": "1.5.67"
     },
     {
       "game_id": "forza-horizon",
@@ -1425,11 +1425,11 @@
       "tag": "v0.5.1",
       "schema_version": 9,
       "path": "recipes/donkey-kong-bananza/dkb-pc-recomp/v0.5.1.json",
-      "sha256": "c1dc79e23d7bd50ba3cfc287bf7a4bd54778912f2e1d8a6b6f9a92d9590a03f2",
+      "sha256": "81184ca5179c811e83d9e89334eb2ec3c27650564c26cb0041775c75b7a6c2ad",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.10"
+      "min_sdk_version": "1.5.67"
     },
     {
       "game_id": "mario-kart-world",
@@ -1603,10 +1603,11 @@
       "tag": "build-64ca169",
       "schema_version": 5,
       "path": "recipes/gran-turismo-5/gt5-recomp/build-64ca169.json",
-      "sha256": "cf42aafcefda951c1e482d330d44b4b4fa9d87403f3f8179bffba800beb76331",
+      "sha256": "cb0f81d98c3fb07dae5f85c0db0665c02f4add322192f4c21b579b2ef78418f0",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.67"
     },
     {
       "game_id": "god-of-war-2005",

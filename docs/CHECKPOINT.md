@@ -4,18 +4,18 @@
 
 Branch `work/complete-install-flows-20261127`, a partir de GetAll `f0942a6`
 e Desktop `c209adc`, sem merge em main. O checkpoint confirmado registra
-**128/148 fluxos integrais**, catorze acima de 114: sm64ex, Render96ex, sm64rt,
-Strikers Wii, WipEout, Dr. Mario, Double Dash C++, Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey e LAS. Há um
-homologado histórico, 127 integrais aguardando mídia, 11 parciais, dois
+**131/148 fluxos integrais**, dezessete acima de 114: sm64ex, Render96ex, sm64rt,
+Strikers Wii, WipEout, Dr. Mario, Double Dash C++, Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey, LAS, GOW 0.4.0, TotK e DKB. Há um
+homologado histórico, 130 integrais aguardando mídia, 8 parciais, dois
 adiados pelo usuário e sete sem receita. Nenhum novo primeiro boot foi
 comprovado. O índice tem **143 receitas para 141 projetos**, com uma entrada
 validated histórica e 142 experimentais.
 
 Desktop `7cbad7d` está na PR3 draft, com CI Windows `46035592163`
-aprovado. Outro GOW, GTA Stories, Pinyon/SSX, GT5 e geradores Switch seguem
+aprovado. GTA Stories, Pinyon/SSX/FH1, GT5 e os kits PS4 seguem
 em verificação.
 
-Build 14 do harness: **0 erros, 0 avisos, 1.661 checks PASS** e **143/143
+Build 19 do harness: **0 erros, 0 avisos, 1.689 checks PASS** e **143/143
 receitas aceitas pelo parser**. WipEout passou
 pela transação Run/Resume/registro/Jogar com compilação oficial e mídia
 sintética. Dr. Mario passou pela preparação nativa real, Python e geradores.

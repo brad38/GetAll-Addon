@@ -2,9 +2,9 @@
 
 ## Estado confirmado em 27/11/2026
 
-O checkpoint do Bradsson registra **128 de 148 projetos com fluxo integral
-implementado**, catorze a mais que os 114 do SDK 1.5.66. Há um homologado histórico
-e 127 integrais aguardando mídia original; 11 parciais, dois adiados pelo usuário
+O checkpoint do Bradsson registra **131 de 148 projetos com fluxo integral
+implementado**, dezessete a mais que os 114 do SDK 1.5.66. Há um homologado histórico
+e 130 integrais aguardando mídia original; 8 parciais, dois adiados pelo usuário
 e sete sem receita. A contagem é calculada sobre as 148 linhas únicas da matriz.
 
 O índice desta branch contém **143 receitas para 141 projetos**: uma entrada
@@ -13,11 +13,11 @@ fechou a preparação automática. Nenhuma das novas receitas foi homologada.
 
 O Desktop `7cbad7d254e4ee9d6f1600a3fbde08101279d3ab` está na PR3 draft,
 com CI Windows `46035592163` aprovado (testes, parser, JavaScript, build Release
-e publish win-x64). GetAll `ff21fcf06024cc0d998709436b13138074398c9c` está na
-PR20 draft, CI `46034996088` aprovado. A prévia anterior e as bases permanecem
+e publish win-x64). GetAll `b759f6995751d0356894b2fc4925ff5e9bcb314e` está na
+PR20 draft, CI `46038014110` aprovado. A prévia anterior e as bases permanecem
 preservadas. A nova prévia está em fechamento; nenhum merge ou release ocorreu.
 
-## Catorze fluxos concluídos tecnicamente
+## Dezessete fluxos concluídos tecnicamente
 
 | Projeto | Fluxo implementado ou reforçado | Verificação executada |
 |---|---|---|
@@ -33,9 +33,11 @@ preservadas. A nova prévia está em fechamento; nenhum merge ou release ocorreu
 | `mkdd-recomp` (Rust) | Rust gnullvm, LLVM-MinGW, JDK/Ghidra e GameCubeLoader privados, sem diálogo de mapa no modo headless; geração/build/registro/launch. | Dependências oficiais Bevy/CPAL/WGPU compiladas/linkadas/executadas, Cargo.lock preservado. Ghidra real: 15 checks, loader oficial, decompilação nativa, p-code/tabelas, caminho com espaços e home privado. |
 | `doaxvb-re` | Dependências CMake e DXC/CRT privados; RTGI solicitado exige shaders presentes; notices e import closure publicados. | Produção: 189 etapas, quatro executáveis de runtime/D3D11/Vulkan/RTGI ligados; seis arquivos de shaders verificados e runtime público executado, exit 0 em 106,92 s. |
 | `god-of-war-recomp` | ISO US validada antes do consentimento, duas camadas preservadas, compiladores/dependências privados, pipeline interpretado upstream e ELF no lançamento. | BUILD15: 44 checks e Native com 55 patches, recompiler/host públicos ligados e executados; consumidor C++ leu todos os 608 setores da fixture, inclusive camada2/padding. Exit 0 em 216,18 s. |
-
 | `super-odyssey-pc-recomp` | Automação existente refatorada para que a preparação real e a prova usem o mesmo helper de compilação. Instruções de Retomar alinhadas. | BUILD16: sete checks; geradores oficiais main/sdk/subsdk0 com NSO próprio, jump table real, seis unidades + gamelib_entry.c oficiais compilados e DLL/ABI verificados. MovieData preservada. Gate comercial rejeita a identidade própria. |
 | `lasrecomp` | Automação existente refatorada em BuildLasLibrary comum; instruções de Retomar alinhadas. | BUILD17: quatro checks; gerador SDK oficial e jump table própria, quatro objetos/DLL/ABI ligados. O gerador main rejeitou corretamente o build ID próprio; patches e main comercial aguardam original. |
+| `god-of-war-native-pc-port-gow-pc-port` | ISO/CHD US validada antes das ferramentas; extração preserva as duas camadas e padding; intérpretes upstream quando os manifestos não se aplicam; compilador/CRT privados e ELF no lançamento. | BUILD18: 21 checks de política + 12 engine/native; runtime/UI compilados, host público sem mídia encerrou como esperado e DiscSource C++ leu todos os setores. BUILD19: oito checks de helpers, três DLLs Microsoft por hash e duas licenças; PATH apenas System32. |
+| `totk-pc-recomp` | Automação existente usa runner Python privado comum; extração/patches/cache/build/registro/Jogar preservados. | BUILD19: sete checks, 22,65 s; geradores oficiais main/sdk com NSO próprio, libtotkrt.a fixada, selftest de memória/dispatch, RomFS próprio, DLLs isoladas e shader Maxwell → SPIR-V. |
+| `dkb-pc-recomp` | Automação existente usa o mesmo runner privado; mantém NUP ou ExeFS/RomFS, extração/patches/build/registro/Jogar. | BUILD19: oito checks, 69,58 s; 151 objetos de runtime + código próprio, selftest, probe NVN2 oficial com seis checks e tradução de shader próprio para SPIR-V. |
 
 Os três Mario compartilham 57 checks de política/transação/lançamento. Os três
 preflights oficiais passaram. Nenhuma ROM ou função comercial foi inventada.
@@ -51,10 +53,9 @@ substituem essa etapa. A mesma distinção vale para todos os fluxos acima.
 
 ## Implementações seguintes — fora da soma
 
-Outro God of War e GTA Stories, SDKs Pinyon/SSX, GT5 e os geradores de Switch
-estão em verificação. Odyssey/LAS já tinham automação; a conclusão acima reflete
+GTA Stories, SDKs Pinyon/SSX/FH1, GT5 e os kits PS4 estão em verificação. Odyssey/LAS já tinham automação; a conclusão acima reflete
 o fechamento da prova nativa e a integração dos helpers comuns de produção.
-As 14 entradas fechadas nesta rodada exigem SDK 1.5.67 no índice; os textos
+As entradas com estas alterações exigem SDK 1.5.67 no índice; os textos
 antigos seguem reconhecidos, e as novas instruções são comparadas exatamente.
 
 ## Evidências no Bradsson
@@ -75,13 +76,13 @@ Raiz: `C:\Users\bradg\Downloads\GetAll-R18\evidence-r18`.
   de produção e 16 checks, exit 0 em 54,60 s.
 - `flow-completion-20261127/regression-14.log`: **1.661 PASS, zero falhas**;
   build 14 sem erros ou avisos e parser 14 com 143/0.
-- `flow-completion-20261127/work-progress-128.json` e
-  `checkpoint-backups-128`: contagem e preservação do checkpoint anterior.
+- `flow-completion-20261127/work-progress-131.json` e
+  `checkpoint-backups-131`: contagem e preservação do checkpoint anterior.
 - `flow-completion-20261127/getall-parser14.json`: 143 receitas aceitas pelo
   parser do build 14, incluindo as instruções atualizadas DOAX/Burnout.
 
 Os arquivos `CONTINUIDADE.md`, `PENDENCIAS.md` e `MATRIZ-FUNCIONAL.md` do workspace
-foram atualizados para 128/148. Árvores históricas e mídia permanecem intactas.
+foram atualizados para 131/148. Árvores históricas e mídia permanecem intactas.
 A fila continua com contagens novas somente após a prova do fluxo correspondente.
 
 Provas seguintes: `complete-install-flows-20261127/strikers-gc-official-final.log`
@@ -101,3 +102,10 @@ Switch: `complete-install-flows-20261127/odyssey-generator-final.log` (BUILD16,
 sete PASS, 5,66 s) e `las-generator-final.log` (BUILD17, quatro PASS, 2,58 s).
 Os dois builds C# encerraram sem erros ou avisos. As fixtures usam identidade
 própria; não há mídia comercial, boot de jogo ou promoção para `validated`.
+
+GOW 0.4.0: `gow-native-completion-20261127/policy-build18.log`,
+`native-build18.log` (173,25 s) e `runtime-build19.log` (0,87 s).
+DKB/TotK: `flow-completion-20261127/dkb-native-final.log` e
+`totk-native-final.log`. Os dois passam pela DLL19 de produção; compilação e
+boot comerciais continuam pendentes. A regressão conjunta19 teve **1.689 PASS**;
+parser18 aprovou143/143 receitas do GetAll `b759f69`, cujo CI `46038014110` passou.

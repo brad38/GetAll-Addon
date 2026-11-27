@@ -14,7 +14,7 @@
     "DKB-Setup/llvm/bin/clang.exe"
   ],
   "inputs": [],
-  "manual_steps": "Kit oficial preparado. Forneca sua propria copia Switch 2 de Donkey Kong Bananza 1.0.0 ou com update 3.2.0: arquivo .nup, ou pasta contendo exefs e romfs. O setup oficial compila o jogo localmente. O All-Fix nao executa o setup nem ferramentas automaticamente.",
+  "manual_steps": "Use Retomar e selecione sua cópia original de Donkey Kong Bananza para Nintendo Switch 2, versão 1.0.0 ou 3.2.0, em arquivo .nup ou pasta com ExeFS e RomFS completos. O GetAll verifica os arquivos e compila o jogo localmente com ferramentas privadas. Ao concluir, use Jogar. Nenhum jogo está incluído.",
   "build_profile": "dkb-0.5.1-44ba6b1-prepare",
   "preparation_media": [
     {

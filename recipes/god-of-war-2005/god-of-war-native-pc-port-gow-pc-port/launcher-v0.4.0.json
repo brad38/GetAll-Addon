@@ -13,7 +13,7 @@
     "God Of War - PC Launcher_0.4.0_x64-portable/kit/RustPortPS2/games/scus-97399/gow-port.toml"
   ],
   "inputs": [],
-  "manual_steps": "Kit oficial preparado. O jogo ainda nao foi compilado. A compilacao exige sua propria midia PS2 USA SCUS-97399 e dependencias do projeto. O All-Fix nao executa o launcher nem scripts automaticamente. Consulte as instrucoes oficiais.",
+  "manual_steps": "O All-Fix valida seu disco americano original de God of War (SCUS-97399), prepara as ferramentas e compila o jogo automaticamente. Selecione sua ISO ou CHD original. Depois da conclusão, Jogar abre a instalação preparada.",
   "build_profile": "gow-0.4.0-prepare",
   "preparation_media": [
     {
