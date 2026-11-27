@@ -2,12 +2,14 @@
 
 from __future__ import annotations
 
+import copy
 import hashlib
 import json
 import shutil
 import sys
 import tempfile
 import unittest
+from unittest.mock import Mock
 import zipfile
 from pathlib import Path
 
@@ -99,6 +101,111 @@ class UpstreamWatchTests(unittest.TestCase):
 
         ok, errs, _ = validate_recipes.validate_repository(tmp, strict_lf=True)
         self.assertTrue(ok, f"Generated recipe must pass strict validation: {errs}")
+
+    def test_does_not_downgrade_extended_contracts_or_reactivate_recipes(self) -> None:
+        # These real recipes have no top-level inputs/operations. Their newer
+        # contracts still carry essential runtime, asset or build requirements.
+        cases = [
+            ("redriver2", "experimental"),
+            ("autotmc-auto-tmc", "experimental"),
+            ("severed-chains", "experimental"),
+            ("marathon-recompiled", "experimental"),
+            ("ship-of-harkinian-soh", "disabled"),
+            ("ship-of-harkinian-soh", "draft"),
+        ]
+        for project_id, status in cases:
+            with self.subTest(project_id=project_id, status=status):
+                tmp = self._make_temp_repo()
+                index_path = tmp / "index.json"
+                index = json.loads(index_path.read_text(encoding="utf-8"))
+                entry = next(e for e in index["recipes"] if e["project_id"] == project_id)
+                entry["status"] = status
+                index["recipes"] = [entry]
+                index_path.write_text(json.dumps(index), encoding="utf-8")
+                original_index = index_path.read_bytes()
+                recipe_path = tmp / entry["path"]
+                original_recipe = recipe_path.read_bytes()
+                recipe = json.loads(original_recipe)
+                inspection = upstream_watch.ZipInspection(
+                    asset_name="Fixture-Windows.zip",
+                    asset_url="https://example.invalid/fixture.zip",
+                    size_bytes=1,
+                    sha256="0" * 64,
+                    files=recipe["required_files"],
+                    executables=[],
+                    invalid_sdk_paths=[],
+                )
+                inspector = Mock(return_value=inspection)
+                release = {
+                    "tag_name": "fixture-next-release",
+                    "draft": False,
+                    "prerelease": False,
+                    "assets": [{
+                        "name": inspection.asset_name,
+                        "browser_download_url": inspection.asset_url,
+                        "size": inspection.size_bytes,
+                    }],
+                }
+                result = upstream_watch.run_upstream_watch(
+                    tmp, scope="tracked", apply_updates=True, inspect_assets=True,
+                    catalog_data={"games": []},
+                    releases_fetcher=lambda _: [release],
+                    asset_inspector=inspector,
+                )
+
+                self.assertEqual(result["updated_recipes"], [])
+                self.assertEqual(len(result["pending_reviews"]), 1)
+                self.assertEqual(result["pending_reviews"][0]["project_id"], project_id)
+                self.assertEqual(index_path.read_bytes(), original_index)
+                self.assertEqual(recipe_path.read_bytes(), original_recipe)
+                inspector.assert_not_called()
+
+    def test_mixed_project_versions_require_review_in_any_index_order(self) -> None:
+        for schema, status in ((5, "experimental"), (3, "disabled"), (3, "draft")):
+            for protected_first in (True, False):
+                with self.subTest(schema=schema, status=status, protected_first=protected_first):
+                    tmp = self._make_temp_repo()
+                    index_path = tmp / "index.json"
+                    index = json.loads(index_path.read_text(encoding="utf-8"))
+                    entry = next(e for e in index["recipes"] if e["project_id"] == "ship-of-harkinian-soh")
+                    recipe = json.loads((tmp / entry["path"]).read_text(encoding="utf-8"))
+                    protected = copy.deepcopy(recipe)
+                    protected["schema_version"] = schema
+                    protected["tag"] = "fixture-protected-version"
+                    protected["source_url"] = "https://github.com/HarbourMasters/Shipwright/releases/tag/fixture-protected-version"
+                    if schema == 5:
+                        protected["prerequisites"] = ["openal-x64"]
+                    protected_path = str(Path(entry["path"]).with_name("fixture-protected-version.json"))
+                    protected_bytes = json.dumps(protected).encode("utf-8")
+                    (tmp / protected_path).write_bytes(protected_bytes)
+                    protected_entry = dict(
+                        entry, schema_version=schema, status=status,
+                        tag=protected["tag"], path=protected_path,
+                        sha256=hashlib.sha256(protected_bytes).hexdigest(),
+                    )
+                    index["recipes"] = [protected_entry, entry] if protected_first else [entry, protected_entry]
+                    index_path.write_text(json.dumps(index), encoding="utf-8")
+                    original_index = index_path.read_bytes()
+                    inspection = upstream_watch.ZipInspection(
+                        "Fixture-Windows.zip", "https://example.invalid/fixture.zip",
+                        1, "0" * 64, recipe["required_files"], [], [],
+                    )
+                    inspector = Mock(return_value=inspection)
+                    release = {
+                        "tag_name": "fixture-next-release", "draft": False, "prerelease": False,
+                        "assets": [{"name": inspection.asset_name,
+                                    "browser_download_url": inspection.asset_url, "size": 1}],
+                    }
+                    result = upstream_watch.run_upstream_watch(
+                        tmp, scope="tracked", apply_updates=True, inspect_assets=True,
+                        catalog_data={"games": []}, releases_fetcher=lambda _: [release],
+                        asset_inspector=inspector,
+                    )
+                    self.assertEqual(result["updated_recipes"], [])
+                    self.assertEqual(len(result["pending_reviews"]), 1)
+                    self.assertEqual(index_path.read_bytes(), original_index)
+                    self.assertEqual((tmp / protected_path).read_bytes(), protected_bytes)
+                    inspector.assert_not_called()
 
     def test_never_auto_updates_validated_recipe_and_blocks_incompatible_zip(self) -> None:
         tmp = self._make_temp_repo()
