@@ -11,6 +11,6 @@
     "CaseWestRecomp/cw_defaults.env"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Dead Rising 2: Case West (v1.1.2) foi extraido. Copie seu pacote XBLA legitimo (Content/0000000000000000/58410B00/000D0000/) para CaseWestRecomp/assets/package/ (ou arraste-o para a janela inicial) e execute CaseWestRecomp/cw_runtime.exe. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "Selecione o pacote XBLA original da edição mundial de Case West durante a instalação. O GetAll verifica o pacote e prepara o conteúdo e os shaders para abrir pelo botão Jogar. Em versões anteriores, indique o pacote no launcher oficial.",
   "launch_file": "CaseWestRecomp/cw_runtime.exe"
 }
