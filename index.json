@@ -693,7 +693,7 @@
       "tag": "v1.0.3",
       "schema_version": 3,
       "path": "recipes/sonic-unleashed/unleashedrecomp/v1.0.3.json",
-      "sha256": "9776faeef271eb5fdffd3e20a317530adcfe679fb96dfdce99a5f4d967cc6402",
+      "sha256": "c8fde89fd488ac52b3c5183d2a3ce007ca381efb22dae13344d6bbfe0e1cf625",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

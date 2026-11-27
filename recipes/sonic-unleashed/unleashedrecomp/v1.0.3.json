@@ -11,6 +11,6 @@
     "dxil.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Unleashed Recompiled (v1.0.3) foi extraido. Execute UnleashedRecomp.exe para abrir o assistente oficial de instalacao e forneca os arquivos ou conteineres da sua copia original de Sonic Unleashed (Xbox 360 US ou EU, com Title Update obrigatorio e DLCs opcionais). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "No All-Fix com o perfil automático, selecione a ISO integral original europeia de Sonic Unleashed (Media ID 77A0CF1B) e o pacote STFS europeu do Title Update 2. O GetAll verifica e importa os arquivos antes de preparar o executável. Para outras edições compatíveis, use o assistente oficial do port. DLC é opcional.",
   "launch_file": "UnleashedRecomp.exe"
 }
