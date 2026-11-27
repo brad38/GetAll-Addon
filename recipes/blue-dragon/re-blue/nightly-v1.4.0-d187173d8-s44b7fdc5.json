@@ -12,6 +12,6 @@
     "D3D12/D3D12Core.dll"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial re:Blue (nightly-v1.4.0-d187173d8-s44b7fdc5) foi extraido. Execute reblue.exe (ou reblue_vk.exe para Vulkan) e selecione as 3 imagens .iso originais de Blue Dragon (Xbox 360) no assistente inicial. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "Selecione as três ISOs integrais originais de Blue Dragon para Xbox 360, na ordem dos discos e da mesma edição compatível dos EUA ou da Europa. O GetAll confere os discos, importa os recursos e abre o port oficial. Em versões anteriores do All-Fix, use o importador do port.",
   "launch_file": "reblue.exe"
 }

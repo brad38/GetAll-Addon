@@ -12,6 +12,6 @@
     "README.txt"
   ],
   "inputs": [],
-  "manual_steps": "Port oficial Windows preparado. Forneca sua propria ISO legitima de Project Gotham Racing 4 para Xbox 360 e a atualizacao original exigida pelo projeto. Configure e extraia a midia no launcher oficial pgr4_launcher.exe. A receita nao inclui ISO, atualizacao ou DLC comercial; nenhum boot foi homologado.",
+  "manual_steps": "Selecione a ISO integral original World de Project Gotham Racing 4 (Media ID 5A381A4E) e o pacote original STFS do Title Update 2 World. O GetAll valida a edição, prepara os dados do jogo e o TU2 e inicia o port oficial. Em versões anteriores do All-Fix, use o launcher oficial. DLC é opcional e fica no fluxo do port.",
   "launch_file": "pgr4_launcher.exe"
 }
