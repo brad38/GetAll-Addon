@@ -955,6 +955,42 @@
           }
         ]
       }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "shadow-of-the-colossus-pc",
+        "tag": "v0.77",
+        "source_url": "https://github.com/AjncSystem/ShadowOfTheColossus-PC/releases/tag/v0.77",
+        "operations": [],
+        "required_files": [
+          "SotC-PC/SotC.exe",
+          "SotC-PC/recomplauncher.json",
+          "SotC-PC/bin/bb-probe.exe",
+          "SotC-PC/bin/amd_fidelityfx_loader_vk.dll",
+          "SotC-PC/bin/libcrypto-3-x64.dll",
+          "SotC-PC/bin/SDL3.dll",
+          "SotC-PC/sotc.py",
+          "SotC-PC/sotc.ini",
+          "SotC-PC/scripts/prepare.py",
+          "SotC-PC/scripts/link_modules.py",
+          "SotC-PC/scripts/content_profile.py",
+          "SotC-PC/scripts/sotc_cpu.py",
+          "SotC-PC/scripts/sotc_modes.py",
+          "SotC-PC/scripts/link_libc.py"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua pasta original extraída de Shadow of the Colossus para PS4, CUSA08809 EU 1.01 ou CUSA08034 US 1.00, com os módulos descriptografados. O All-Fix valida a mídia e prepara o jogo automaticamente. Ao concluir, use Jogar e mantenha a pasta original no mesmo local. Nenhum jogo está incluído.",
+        "build_profile": "sotc-0.77-prepare",
+        "preparation_media": [
+          {
+            "id": "original-game",
+            "kind": "directory",
+            "extensions": [],
+            "version": "Pasta original PS4 CUSA08809 EU 1.01 ou CUSA08034 US 1.00, já extraída e descriptografada."
+          }
+        ]
+      }
     }
   ]
 }

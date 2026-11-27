@@ -1,29 +1,39 @@
 # Checkpoint do GetAll-Addon
 
-## Continuidade SDK 1.5.67 — em execução em 27/11/2026
+## Continuidade — SDK 1.5.68, fechamento local em 27/11/2026
 
 Branch `work/complete-install-flows-20261127`, a partir de GetAll `f0942a6`
 e Desktop `c209adc`, sem merge em main. O checkpoint confirmado registra
-**138/148 fluxos integrais**, vinte e quatro acima de 114: sm64ex, Render96ex, sm64rt,
-Strikers Wii, WipEout, Dr. Mario, Double Dash C++, Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey, LAS, GOW 0.4.0, TotK, DKB, GT5, RyGT, Spartan, SSX, GTA Stories, FH1 ReImagined e Pinyon Shift. Há um
-homologado histórico, 137 integrais aguardando mídia, um parcial, dois
-anteriormente adiados agora em retomada, e sete sem receita. Nenhum novo primeiro boot foi
+**140/148 fluxos integrais**, vinte e seis acima de 114: sm64ex, Render96ex, sm64rt,
+Strikers Wii, WipEout, Dr. Mario, Double Dash C++, Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey, LAS, GOW 0.4.0, TotK, DKB, GT5, RyGT, Spartan, SSX, GTA Stories, FH1 ReImagined, Pinyon Shift, Shadow of the Colossus e Savage Wind. Há um
+homologado histórico, 139 integrais aguardando mídia, um parcial e sete sem
+receita; as duas retomadas anteriormente adiadas foram concluídas. Nenhum novo primeiro boot foi
 comprovado. O índice tem **143 receitas para 141 projetos**, com uma entrada
 validated histórica e 142 experimentais.
 
+O candidato final usa SDK **1.5.68**. SotC e Savage Wind exigem esse mínimo
+no índice, pois a prévia138/SDK 1.5.67 não contém o perfil automático SotC.
+A versão nova mantém explícita essa diferença de capacidade.
+
 Desktop `6548ce0` está na PR3 draft, com CI Windows `46041444134`
-aprovado. O fechamento seguinte está local em `11cfdbf`, seguido das
-alterações CTR/SM, SSX, Pinyon e FH1. GetAll `08276acd` também está local.
+aprovado. O fechamento de 138 está local em Desktop `02d7c4b` e GetAll
+`c1ee000`, incluindo CTR/SM, SSX, Pinyon e FH1. O SotC está no commit
+local Desktop `c39ac77787893c2fb77e9dda48593ec266b11503`, com dez caminhos
+delimitados; o checkpoint139 mantém os 148 IDs e o histórico138.
 O envio seguinte ao GitHub foi recusado pela revisão automática por exigir
 autorização direta para os repositórios, branches e conteúdo exatos. Nenhum
 novo CI remoto é atribuído a essas alterações locais. FH1 concluiu a prova nativa com 22/22 verificações em 503,188 s. Pinyon
 também concluiu seu provider: SDK, 78 objetos públicos, três renderizadores,
-DLSS e entrada Windows oficiais. SotC e Savage Wind estão em retomada
-para atender ao pedido atual de concluir todos os projetos viáveis.
+DLSS e entrada Windows oficiais. SotC passou em 33 verificações de política e
+23 nativas, incluindo Run, retomada, cinco scripts oficiais, publicação,
+registro e Jogar. Savage Wind passou em 46 verificações de política e 26
+nativas, incluindo swgen/Zig oficiais, transação, recuperação do kit e
+preservação de saves. Restam oito dependências externas identificadas.
 
-Build27b do harness: **0 erros, 0 avisos, 1.787 checks PASS, zero falhas**.
-O parser27 aprovou **143/143 receitas** tanto do GetAll publicado `9caef66`
-quanto da árvore atualizada com os novos textos e hashes. WipEout passou
+BUILD30 SDK 1.5.68: **0 erros, 0 avisos, 1.866 checks PASS, zero falhas**
+(regressão em 13,515 s). O parser30 aprovou **143/143 receitas** do snapshot
+final em 11,547 s. O parser28 também havia aprovado 143/143 do GetAll
+publicado `9caef66`; não foi repetido porque o parser não mudou. WipEout passou
 pela transação Run/Resume/registro/Jogar com compilação oficial e mídia
 sintética. Dr. Mario passou pela preparação nativa real, Python e geradores.
 Double Dash C++ passou pelo runtime completo e execução SDL/C++20 sem Visual
@@ -32,7 +42,13 @@ e limites estão em [SDK 1.5.67](validations/sdk167-flow-completion.md).
 
 A prévia anterior, os worktrees concorrentes e as fontes de mídia foram
 preservados. GetAll `9caef66` está na PR20 draft, CI `46040722683` aprovado.
-A nova prévia ainda está em fechamento.
+A prévia Windows de 138 projetos está pronta em
+`publish-getall-complete-flows-20261127`, com Desktop 3.0.0, SDK 1.5.67
+e addon 1.5.72. O addon usa o GetAll publicado `9caef66`; o executável e
+os recursos incorporados passaram pela auditoria final. SotC
+já está na contagem de implementação, mas sua nova receita v9 depende da
+publicação do GetAll e ainda está fora dessa prévia. O novo código Savage Wind
+também pertence ao candidato final, sem substituir o executável da prévia138.
 As seções abaixo são históricas e mantêm as contagens da sua data.
 
 ## Integração da continuidade com SM64Plus — 27/11/2026

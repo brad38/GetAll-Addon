@@ -1151,22 +1151,24 @@
       "tag": "v0.6.0-alpha.6",
       "schema_version": 5,
       "path": "recipes/the-legend-of-zelda-breath-of-the-wild/savagewindrecomp/v0.6.0-alpha.6.json",
-      "sha256": "9bb7a992123432ac587eb4cd711d64170f59b0d897d3bd238c2cf0b1559c7374",
+      "sha256": "76a8c832c90915c38f4f370be8dfb47166230f04f802b67fd58f6f151b797628",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.68"
     },
     {
       "game_id": "shadow-of-the-colossus",
       "project_id": "shadow-of-the-colossus-pc",
       "repository": "AjncSystem/ShadowOfTheColossus-PC",
       "tag": "v0.77",
-      "schema_version": 5,
+      "schema_version": 9,
       "path": "recipes/shadow-of-the-colossus/shadow-of-the-colossus-pc/v0.77.json",
-      "sha256": "7231a748c329592e0bdaa9345a4e0cdb1ada9c72f656b7857720e77ea0bbd286",
+      "sha256": "dd6491c1b3afe360cbeb37ff890af5a18398f100b1896b43c651bda771187854",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.68"
     },
     {
       "game_id": "star-fox-adventures",
