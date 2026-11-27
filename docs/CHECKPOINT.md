@@ -4,19 +4,19 @@
 
 Branch `work/complete-install-flows-20261127`, a partir de GetAll `f0942a6`
 e Desktop `c209adc`, sem merge em main. O checkpoint confirmado registra
-**131/148 fluxos integrais**, dezessete acima de 114: sm64ex, Render96ex, sm64rt,
-Strikers Wii, WipEout, Dr. Mario, Double Dash C++, Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey, LAS, GOW 0.4.0, TotK e DKB. Há um
-homologado histórico, 130 integrais aguardando mídia, 8 parciais, dois
+**136/148 fluxos integrais**, vinte e dois acima de 114: sm64ex, Render96ex, sm64rt,
+Strikers Wii, WipEout, Dr. Mario, Double Dash C++, Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey, LAS, GOW 0.4.0, TotK, DKB, GT5, RyGT, Spartan, SSX e GTA Stories. Há um
+homologado histórico, 135 integrais aguardando mídia, 3 parciais, dois
 adiados pelo usuário e sete sem receita. Nenhum novo primeiro boot foi
 comprovado. O índice tem **143 receitas para 141 projetos**, com uma entrada
 validated histórica e 142 experimentais.
 
-Desktop `7cbad7d` está na PR3 draft, com CI Windows `46035592163`
-aprovado. GTA Stories, Pinyon/SSX/FH1, GT5 e os kits PS4 seguem
+Desktop `6548ce0` está na PR3 draft, com CI Windows `46041444134`
+aprovado. Pinyon/FH1 seguem
 em verificação.
 
-Build 19 do harness: **0 erros, 0 avisos, 1.689 checks PASS** e **143/143
-receitas aceitas pelo parser**. WipEout passou
+Build22 do harness: **0 erros, 0 avisos, 1.745 checks PASS**. O parser21
+aprovou **143/143 receitas** do GetAll `9caef66`. WipEout passou
 pela transação Run/Resume/registro/Jogar com compilação oficial e mídia
 sintética. Dr. Mario passou pela preparação nativa real, Python e geradores.
 Double Dash C++ passou pelo runtime completo e execução SDL/C++20 sem Visual
@@ -24,7 +24,7 @@ Studio. Burnout passou pelo fluxo e pelos quatro testes D3D8 reais. Evidências
 e limites estão em [SDK 1.5.67](validations/sdk167-flow-completion.md).
 
 A prévia anterior, os worktrees concorrentes e as fontes de mídia foram
-preservados. GetAll `ff21fcf` está na PR20 draft, CI `46034996088` aprovado.
+preservados. GetAll `9caef66` está na PR20 draft, CI `46040722683` aprovado.
 A nova prévia ainda está em fechamento.
 As seções abaixo são históricas e mantêm as contagens da sua data.
 

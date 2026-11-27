@@ -2,22 +2,22 @@
 
 ## Estado confirmado em 27/11/2026
 
-O checkpoint do Bradsson registra **131 de 148 projetos com fluxo integral
-implementado**, dezessete a mais que os 114 do SDK 1.5.66. Há um homologado histórico
-e 130 integrais aguardando mídia original; 8 parciais, dois adiados pelo usuário
+O checkpoint do Bradsson registra **136 de 148 projetos com fluxo integral
+implementado**, vinte e dois a mais que os 114 do SDK 1.5.66. Há um homologado histórico
+e 135 integrais aguardando mídia original; 3 parciais, dois adiados pelo usuário
 e sete sem receita. A contagem é calculada sobre as 148 linhas únicas da matriz.
 
 O índice desta branch contém **143 receitas para 141 projetos**: uma entrada
 `validated` histórica e 142 experimentais. Dr. Mario recebeu a nova receita e
 fechou a preparação automática. Nenhuma das novas receitas foi homologada.
 
-O Desktop `7cbad7d254e4ee9d6f1600a3fbde08101279d3ab` está na PR3 draft,
-com CI Windows `46035592163` aprovado (testes, parser, JavaScript, build Release
-e publish win-x64). GetAll `b759f6995751d0356894b2fc4925ff5e9bcb314e` está na
-PR20 draft, CI `46038014110` aprovado. A prévia anterior e as bases permanecem
+O Desktop `6548ce01ed45949effe09c00848317a90f3e53a7` está na PR3 draft,
+com CI Windows `46041444134` aprovado (testes, parser, JavaScript, build Release
+e publish win-x64). GetAll `9caef66df45682079656ddb6af5421ac1058c344` está na
+PR20 draft, CI `46040722683` aprovado. A prévia anterior e as bases permanecem
 preservadas. A nova prévia está em fechamento; nenhum merge ou release ocorreu.
 
-## Dezessete fluxos concluídos tecnicamente
+## Vinte e dois fluxos concluídos tecnicamente
 
 | Projeto | Fluxo implementado ou reforçado | Verificação executada |
 |---|---|---|
@@ -38,6 +38,11 @@ preservadas. A nova prévia está em fechamento; nenhum merge ou release ocorreu
 | `god-of-war-native-pc-port-gow-pc-port` | ISO/CHD US validada antes das ferramentas; extração preserva as duas camadas e padding; intérpretes upstream quando os manifestos não se aplicam; compilador/CRT privados e ELF no lançamento. | BUILD18: 21 checks de política + 12 engine/native; runtime/UI compilados, host público sem mídia encerrou como esperado e DiscSource C++ leu todos os setores. BUILD19: oito checks de helpers, três DLLs Microsoft por hash e duas licenças; PATH apenas System32. |
 | `totk-pc-recomp` | Automação existente usa runner Python privado comum; extração/patches/cache/build/registro/Jogar preservados. | BUILD19: sete checks, 22,65 s; geradores oficiais main/sdk com NSO próprio, libtotkrt.a fixada, selftest de memória/dispatch, RomFS próprio, DLLs isoladas e shader Maxwell → SPIR-V. |
 | `dkb-pc-recomp` | Automação existente usa o mesmo runner privado; mantém NUP ou ExeFS/RomFS, extração/patches/build/registro/Jogar. | BUILD19: oito checks, 69,58 s; 151 objetos de runtime + código próprio, selftest, probe NVN2 oficial com seis checks e tradução de shader próprio para SPIR-V. |
+| `gt5-recomp` | Compilador LLVM-MinGW, CMake/Ninja/MinGit/Python privados; mantém disco/ELF/SELF/PUP, PPU/SPU, D3D12/ImGui, FFmpeg, transação e Jogar. | BUILD20 compilou 200 etapas do alvo real com programa público próprio. BUILD21 verificou imports, três ABI FFmpeg, 11 marcadores e três presents D3D12; loader/finder/lifter geraram e compilaram dois C++ de PowerPC próprio. Gate comercial rejeitou a fixture. BigObj 65.545 seções e CodeView/PDB/delay-load preservados. |
+| `rygt-gt7` | Conversor PS4 oficial com dois módulos originais, nomes `.guest.prx` corrigidos, validação, publicação e Jogar. | BUILD22: seis checks em 1,74 s; pin/cópia do kit, recusa de fixture alterada, conversão com `--verify`, PE e dois PRXs próprios. Execução pelo worker real chamou dois exports próprios (37/42) e saiu 0; sem identidade comercial. |
+| `spartanport` | Preparação PS4 pelo CLI oficial, saída validada, publicação, registro e Jogar; instruções corrigidas para a automação existente. | BUILD23: nove checks em 2,73 s; kit459/pin, três layouts G3PROBE/content próprios, trailer recusado, host real chama exports37/42 e sai por libc exit(0); Vulkan submission/readback de4.096B. SFO sem ID comercial. |
+| `ssx-recomp` | ISO/pasta EA-2413 e TU STFS opcional; SDK e compilador privados, D3D12/Vulkan/FidelityFX, geração/build, cache verificado, registro e Jogar. | BUILD22: rota real prepara SDK do zero, configura fonte oficial, compila 14 objetos públicos disco/TU, verifica nove DLLs + EXE e executa consumidor D3D12/WIC com ambiente isolado. 70 checks de política/cache/extração/transação. |
+| `gta-stories-recompiled` | ISOs LCS/VCS validadas antes do consentimento; ferramentas privadas, codegen/build individual ou combinado, host/DLLs oneproc na ordem e caminhos corretos, packs e Jogar. | 42 checks de política + 72 nativos BUILD22: runtime/app LTO, 29 imports, DLL LCS real/export, host e Python privado. BUILD24: cinco contratos de dispatcher e launcher até Popen em 0,383 s. Sem entrada de jogo executada. |
 
 Os três Mario compartilham 57 checks de política/transação/lançamento. Os três
 preflights oficiais passaram. Nenhuma ROM ou função comercial foi inventada.
@@ -53,7 +58,7 @@ substituem essa etapa. A mesma distinção vale para todos os fluxos acima.
 
 ## Implementações seguintes — fora da soma
 
-GTA Stories, SDKs Pinyon/SSX/FH1, GT5 e os kits PS4 estão em verificação. Odyssey/LAS já tinham automação; a conclusão acima reflete
+SDKs Pinyon/FH1 estão em verificação. Odyssey/LAS já tinham automação; a conclusão acima reflete
 o fechamento da prova nativa e a integração dos helpers comuns de produção.
 As entradas com estas alterações exigem SDK 1.5.67 no índice; os textos
 antigos seguem reconhecidos, e as novas instruções são comparadas exatamente.
@@ -76,13 +81,13 @@ Raiz: `C:\Users\bradg\Downloads\GetAll-R18\evidence-r18`.
   de produção e 16 checks, exit 0 em 54,60 s.
 - `flow-completion-20261127/regression-14.log`: **1.661 PASS, zero falhas**;
   build 14 sem erros ou avisos e parser 14 com 143/0.
-- `flow-completion-20261127/work-progress-131.json` e
-  `checkpoint-backups-131`: contagem e preservação do checkpoint anterior.
+- `flow-completion-20261127/work-progress-136.json` e
+  `checkpoint-backups-136`: contagem e preservação do checkpoint anterior.
 - `flow-completion-20261127/getall-parser14.json`: 143 receitas aceitas pelo
   parser do build 14, incluindo as instruções atualizadas DOAX/Burnout.
 
 Os arquivos `CONTINUIDADE.md`, `PENDENCIAS.md` e `MATRIZ-FUNCIONAL.md` do workspace
-foram atualizados para 131/148. Árvores históricas e mídia permanecem intactas.
+foram atualizados para 136/148. Árvores históricas e mídia permanecem intactas.
 A fila continua com contagens novas somente após a prova do fluxo correspondente.
 
 Provas seguintes: `complete-install-flows-20261127/strikers-gc-official-final.log`
@@ -108,4 +113,22 @@ GOW 0.4.0: `gow-native-completion-20261127/policy-build18.log`,
 DKB/TotK: `flow-completion-20261127/dkb-native-final.log` e
 `totk-native-final.log`. Os dois passam pela DLL19 de produção; compilação e
 boot comerciais continuam pendentes. A regressão conjunta19 teve **1.689 PASS**;
-parser18 aprovou143/143 receitas do GetAll `b759f69`, cujo CI `46038014110` passou.
+parser18 aprovou 143/143 receitas do GetAll `b759f69`, cujo CI `46038014110` passou.
+
+GT5: `gt5-native-20261127/production run2/preflight/compile-link.log`
+comprova o build público integral de runtime/host/interface; `products-build21b.log`
+e `production run2/preflight/native-proof.json` registram a etapa final aprovada.
+O executável tem 4.841.984 bytes e o staging inclui três FFmpeg e oito avisos
+(mais os avisos de projeto/toolkit copiados pelo caminho de instalação).
+A fixture de D3D12 deriva da pública upstream e espera cada apresentação antes
+de enviar o quadro seguinte; mantém todas as 11 asserções e a exigência de três
+presents. A alteração é restrita ao teste. Não houve primeiro boot comercial.
+As falhas anteriores de lista de DLLs Windows e log já existente estão preservadas;
+a validação final usa os mesmos objetos nativos compilados, sem os recompilar.
+Parser21: 143/143 no GetAll `9caef66`, CI `46040722683` aprovado.
+
+RyGT: `flow-completion-20261127/rygt-native-final.log` e `rygt-native-final`. A prova chama o mesmo helper de conversão da instalação. A regressão22 completa passou com **1.745 PASS**, build C# sem erros ou avisos. GT5 também tem `README.md` e inventário com quatro fontes, 27 evidências, cinco binários e oito avisos em `gt5-native-20261127`.
+
+Spartan: `flow-completion-20261127/spartan-native-final.log` e `spartan-native-final`. BUILD23 sem erros ou avisos. O fluxo já estava automatizado; a nova evidência fecha a preparação e execução públicas pelo helper real, sem fornecimento de jogo, ID comercial ou promoção da receita.
+
+SSX: `flow-completion-20261127/rex-native-source/ssx-production-build22.log` termina em `SSX_PREFLIGHT_PASS`; a árvore `engine22` guarda a preparação real. GTA: `gta-stories-completion-20261127/native-build22.log`, `launch-contracts-build24.log`, README e inventário com sete fontes, 32 evidências, 31 produtos públicos e 38 avisos/documentos. A fixture Python corrigiu apenas `quick=False`; os objetos C++ não foram recompilados. BUILD24: zero erros/avisos. Nenhum dos dois casos comprovou boot comercial.

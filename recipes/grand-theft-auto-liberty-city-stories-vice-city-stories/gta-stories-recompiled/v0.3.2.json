@@ -13,7 +13,7 @@
     "GTA-Stories-Recompiled-0.3.2-windows/deps/manifest.json"
   ],
   "inputs": [],
-  "manual_steps": "Preparação apenas. Forneça seu disco original PS2 USA de Liberty City Stories (SLUS-21423) ou Vice City Stories (SLUS-21590); ambos para o modo combinado. Faça a compilação pelo launcher oficial manualmente. Não inclui mídia.",
+  "manual_steps": "Retomar compila Liberty City Stories USA v1.01 ou Vice City Stories USA v1.00 a partir da ISO original PS2. O modo combinado usa as duas ISOs originais e o runner oficial de duas cidades. Nenhum disco, mod ou save e fornecido.",
   "build_profile": "gta-stories-0.3.2-prepare",
   "preparation_media": [
     {

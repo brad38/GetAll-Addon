@@ -2,14 +2,13 @@
 
 ## Checkpoint de desenvolvimento — SDK 1.5.67, 27/11/2026
 
-Estado confirmado: **131/148 projetos com fluxo integral implementado**,
-incluindo um homologado histórico; 8 parciais, dois adiados pelo usuário e
-sete sem receita. Há 143 receitas para 141 projetos. Os dezessete fluxos fechados são
+Estado confirmado: **136/148 projetos com fluxo integral implementado**,
+incluindo um homologado histórico; 3 parciais, dois adiados pelo usuário e
+sete sem receita. Há 143 receitas para 141 projetos. Os vinte e dois fluxos fechados são
 sm64ex, Render96ex, sm64rt, Strikers Wii, WipEout, Dr. Mario, Double Dash C++,
-Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey, LAS, GOW 0.4.0, TotK e DKB. GTA Stories,
-Pinyon/SSX/FH1, GT5 e os kits PS4 seguem em verificação.
+Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey, LAS, GOW 0.4.0, TotK, DKB, GT5, RyGT, Spartan, SSX e GTA Stories. Pinyon/FH1 seguem em verificação.
 
-A verificação conjunta do build 19 passou em **1.689 checks**, com parser 143/0. Nenhum teste
+A verificação conjunta do build 22 passou em **1.745 checks**, e o parser21 aprovou 143/143. Nenhum teste
 sintético foi convertido em homologação. O histórico detalhado abaixo conserva
 os estados da época; para a implementação atual, ver
 [SDK 1.5.67](validations/sdk167-flow-completion.md) e a matriz individual

@@ -789,6 +789,116 @@
           }
         ]
       }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "rygt-gt7",
+        "tag": "rygt-2026-11-23",
+        "source_url": "https://github.com/RyGT-Team/RyGT/releases/tag/rygt-2026-11-23",
+        "operations": [],
+        "required_files": [
+          "RyGT-ci-889c5a7e/RyGTLauncher.exe",
+          "RyGT-ci-889c5a7e/converter/ryty.exe",
+          "RyGT-ci-889c5a7e/README.txt",
+          "RyGT-ci-889c5a7e/BUILD_INFO.txt",
+          "RyGT-ci-889c5a7e/SHA256SUMS.txt"
+        ],
+        "inputs": [],
+        "manual_steps": "Use Retomar e selecione sua pasta original de Gran Turismo 7 PS4 CUSA24769 versão 01.00, os módulos e as fontes do seu próprio firmware PS4. O GetAll prepara o jogo automaticamente com as ferramentas privadas do projeto. Ao concluir, use Jogar e mantenha os originais selecionados no mesmo local. Nenhum jogo ou firmware está incluído.",
+        "build_profile": "rygt-2026-11-23-prepare",
+        "preparation_media": [
+          {
+            "id": "original-game",
+            "kind": "directory",
+            "extensions": [],
+            "version": "PS4 CUSA24769"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "spartanport",
+        "tag": "windows-v3.2.1",
+        "source_url": "https://github.com/FelipePrado0/SpartanPort/releases/tag/windows-v3.2.1",
+        "operations": [],
+        "required_files": [
+          "spartanport-windows/SpartanPort.exe",
+          "spartanport-windows/Play SpartanPort.exe",
+          "spartanport-windows/README-Windows.txt",
+          "spartanport-windows/recomplauncher.json",
+          "spartanport-windows/bin/spartanport-probe.exe"
+        ],
+        "inputs": [],
+        "manual_steps": "Use Retomar e selecione sua pasta original de God of War III Remastered PS4 CUSA01623 ou CUSA01715, versão 01.00 ou 01.02. O GetAll prepara a imagem e o runtime automaticamente com as ferramentas privadas do projeto. Ao concluir, use Jogar e mantenha a pasta original no mesmo local. Nenhum jogo está incluído.",
+        "build_profile": "spartanport-3.2.1-prepare",
+        "preparation_media": [
+          {
+            "id": "original-game",
+            "kind": "directory",
+            "extensions": [],
+            "version": "PS4 CUSA01623/CUSA01715 01.00 ou 01.02"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "ssx-recomp",
+        "tag": "v2.0.0",
+        "source_url": "https://github.com/AmarilloNL/ssx-recomp/releases/tag/v2.0.0",
+        "operations": [],
+        "required_files": [
+          "ssx-recomp.exe",
+          "recomplauncher.json"
+        ],
+        "inputs": [],
+        "manual_steps": "Use sua cópia original de SSX EA-2413 para Xbox 360. O All-Fix valida o XEX e prepara automaticamente o SDK e o compilador privados, preservando D3D12, Vulkan e FidelityFX. A atualização 0.0.3.2 é opcional.",
+        "build_profile": "ssx-2.0.0-prepare",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "Xbox 360 EA-2413 USA/Europe/Australia"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "gta-stories-recompiled",
+        "tag": "v0.3.2",
+        "source_url": "https://github.com/batinium/gta-stories-recompiled/releases/tag/v0.3.2",
+        "operations": [],
+        "required_files": [
+          "GTA-Stories-Recompiled-0.3.2-windows/GTAStoriesLauncher.exe",
+          "GTA-Stories-Recompiled-0.3.2-windows/README.md",
+          "GTA-Stories-Recompiled-0.3.2-windows/CMakeLists.txt",
+          "GTA-Stories-Recompiled-0.3.2-windows/tools/build.py",
+          "GTA-Stories-Recompiled-0.3.2-windows/python/python.exe",
+          "GTA-Stories-Recompiled-0.3.2-windows/deps/manifest.json"
+        ],
+        "inputs": [],
+        "manual_steps": "Retomar compila Liberty City Stories USA v1.01 ou Vice City Stories USA v1.00 a partir da ISO original PS2. O modo combinado usa as duas ISOs originais e o runner oficial de duas cidades. Nenhum disco, mod ou save e fornecido.",
+        "build_profile": "gta-stories-0.3.2-prepare",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "PS2 USA SLUS-21423 ou SLUS-21590; ambos para modo combinado"
+          }
+        ]
+      }
     }
   ]
 }

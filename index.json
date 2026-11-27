@@ -1287,11 +1287,11 @@
       "tag": "v2.0.0",
       "schema_version": 9,
       "path": "recipes/ssx-2012/ssx-recomp/v2.0.0.json",
-      "sha256": "08964214bfff5dabac62f9d0ea2c6885d59427b12ec1601d8db2843f27ba837b",
+      "sha256": "884a8fd1873dd63a72720e8c92d7e878bf00c367abd13a8e86899d412e6ec841",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.14"
+      "min_sdk_version": "1.5.67"
     },
     {
       "game_id": "the-legend-of-zelda-link-s-awakening",
@@ -1325,11 +1325,11 @@
       "tag": "v0.3.2",
       "schema_version": 9,
       "path": "recipes/grand-theft-auto-liberty-city-stories-vice-city-stories/gta-stories-recompiled/v0.3.2.json",
-      "sha256": "c09b0c408a73c7feeca4e6a1a2901751bc54403c4a15cba97ed890b2fae1105d",
+      "sha256": "bbcacfe91c242be97aee9452de6517ffbf9ca9119631bdb43f507b3a4be81ab0",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.10"
+      "min_sdk_version": "1.5.67"
     },
     {
       "game_id": "gran-turismo-7",
@@ -1338,11 +1338,11 @@
       "tag": "rygt-2026-11-23",
       "schema_version": 9,
       "path": "recipes/gran-turismo-7/rygt-gt7/rygt-2026-11-23.json",
-      "sha256": "f5ec373c1e6fea79ae91ee20b82b8095e993778dbbcaf0574224baff2538b5c0",
+      "sha256": "cad738258ec43409d7ad794aa2ccd5b9344beb06783580f6d1ce3592fa73252a",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.10"
+      "min_sdk_version": "1.5.67"
     },
     {
       "game_id": "god-of-war-iii-remastered",
@@ -1351,11 +1351,11 @@
       "tag": "windows-v3.2.1",
       "schema_version": 9,
       "path": "recipes/god-of-war-iii-remastered/spartanport/windows-v3.2.1.json",
-      "sha256": "7baf7be97b1b68174999f097c5b82014ee6dd17c3dde4eb5bdae67e7a478a18a",
+      "sha256": "8ebc560a548feafa3855724a270d2fc340dbfbd5bd1559099c044ae3e3c2b21f",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.10"
+      "min_sdk_version": "1.5.67"
     },
     {
       "game_id": "the-last-guardian",
