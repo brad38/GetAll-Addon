@@ -12,6 +12,6 @@
     "DPRecomp-2.0.14-win64/deadlyprem.toml"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Deadly Premonition Recompilation (v2.0.14) foi extraido. Execute PlayDeadlyPremonition.exe em DPRecomp-2.0.14-win64/ e selecione sua imagem .iso original (PAL ou USA Xbox 360) no instalador inicial (ou copie seu dump com default.xex para assets/). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "Selecione a ISO integral original europeia ou americana de Deadly Premonition para Xbox 360. O GetAll valida a imagem e o XEX da edição, importa os arquivos e abre o executável regional. O launcher oficial continua disponível para pastas extraídas ou outros formatos que ele aceite.",
   "launch_file": "DPRecomp-2.0.14-win64/PlayDeadlyPremonition.exe"
 }
