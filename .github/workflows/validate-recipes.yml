@@ -33,23 +33,7 @@ jobs:
         run: python -m pip install --upgrade pip jsonschema
 
       - name: Validate schemas, index.json, SHA-256 hashes and recipe contracts
-        env:
-          PR_SOURCE: ${{ github.head_ref }}
-          PR_TARGET: ${{ github.base_ref }}
-        run: |
-          catalog=https://raw.githubusercontent.com/brad38/AllFix-Repo/main/catalog.json
-          if [ "$GITHUB_REF" = refs/heads/main ] || { [ "$GITHUB_EVENT_NAME" = pull_request ] && [ "$PR_TARGET" = main ] && [ "$PR_SOURCE" != feat/round-17-restricted-installers ]; }; then
-            python -c 'import json; assert json.load(open("index.json", encoding="utf-8")).get("channel", "public") == "public", "Preview index must not be served as production"'
-          fi
-          if [ "$GITHUB_REF" = refs/heads/feat/sm64plus-handoff ] || [ "$GITHUB_REF" = refs/heads/feat/marathon-xbox-media-import ] || [ "$GITHUB_REF" = refs/heads/feat/round-17-restricted-installers ] || { [ "$GITHUB_EVENT_NAME" = pull_request ] && [ "$PR_SOURCE" = feat/round-17-restricted-installers ]; }; then
-            # PR #18 depends on the catalog identities staged for review in issue #8.
-            catalog=https://raw.githubusercontent.com/brad38/AllFix-Repo/3f4603cf42ef43402b4a0a9470232e7d4fcd9eb9/catalog.json
-          fi
-          python scripts/validate_recipes.py \
-            --strict-lf \
-            --require-jsonschema \
-            --check-git-blobs \
-            --check-catalog "$catalog"
+        run: python scripts/validate_ci.py
 
       - name: Run unit tests
         run: python -m unittest discover -s tests -v

@@ -522,7 +522,8 @@ def run_upstream_watch(
             if target["kind"] == "indexed":
                 entries = target["entries"]
                 current_tags = {e["tag"] for e in entries}
-                # Use the newest entry as base template
+                # Retain the existing template order for compatible manual recipes;
+                # eligibility below is checked across every version, not list order.
                 base_entry = entries[-1]
                 allow_pre = any(
                     any(tok in t.lower() for tok in ("alpha", "beta", "rc", "pre", "dev", "test"))
@@ -535,8 +536,39 @@ def run_upstream_watch(
                 if not latest_tag or latest_tag in current_tags:
                     continue
 
-                base_recipe_path = repo_root / base_entry["path"]
-                base_recipe = json.loads(base_recipe_path.read_text(encoding="utf-8"))
+                project_recipes = [
+                    json.loads((repo_root / entry["path"]).read_text(encoding="utf-8"))
+                    for entry in entries
+                ]
+                base_recipe = project_recipes[-1]
+
+                # The generated document below is a v3 manual-step recipe. Never
+                # downgrade a newer contract or reactivate a disabled/draft recipe.
+                # In particular, v8 Java launchers and v9 preparation/build profiles
+                # cannot be copied by checking ZIP filenames alone.
+                review_reason = None
+                if any(e.get("status") == "validated" for e in entries):
+                    review_reason = "Validated recipe requires functional verification with original media"
+                elif any(e.get("status") != "experimental" for e in entries):
+                    review_reason = "Disabled or draft recipe requires explicit review before a new version"
+                elif any(e.get("schema_version") != 3 for e in entries) or any(r.get("schema_version") != 3 for r in project_recipes):
+                    review_reason = "Recipe contract is not v3; preserve its launcher, prerequisites and preparation/build profiles through manual review"
+                elif any(r.get("inputs") or r.get("operations") for r in project_recipes):
+                    review_reason = "ROM/input operations require functional verification with original media"
+                elif any(not isinstance(r.get("manual_steps"), str) or not r["manual_steps"].strip() for r in project_recipes):
+                    review_reason = "Automatic updates require a v3 recipe with explicit manual steps"
+                if review_reason:
+                    pending_reviews.append(
+                        {
+                            "project_id": pid,
+                            "current_tags": sorted(current_tags),
+                            "latest_tag": latest_tag,
+                            "reason": review_reason,
+                            "release_url": latest_rel.get("html_url", ""),
+                        }
+                    )
+                    continue
+
                 zip_asset = select_windows_zip_asset(latest_rel.get("assets", []))
 
                 if not zip_asset:
@@ -571,32 +603,6 @@ def run_upstream_watch(
                             }
                         )
                         continue
-
-                # Policy: never auto-update validated or input-requiring recipes without human ROM verification;
-                # only stage experimental v3 manual-step recipes when ZIP layout & SDK paths pass 100%.
-                has_inputs = bool(base_recipe.get("inputs"))
-                has_ops = bool(base_recipe.get("operations"))
-                is_validated = any(e.get("status") == "validated" for e in entries)
-
-                if is_validated or has_inputs or has_ops:
-                    reason = (
-                        "Existing recipe uses validated status or ROM/input operations requiring functional verification with original media"
-                    )
-                    item: dict[str, Any] = {
-                        "project_id": pid,
-                        "current_tags": sorted(current_tags),
-                        "latest_tag": latest_tag,
-                        "asset": zip_asset["name"],
-                        "reason": reason,
-                        "release_url": latest_rel.get("html_url", ""),
-                    }
-                    if inspection:
-                        item["zip_sha256"] = inspection.sha256
-                        item["zip_size"] = inspection.size_bytes
-                        if inspection.invalid_sdk_paths:
-                            item["sdk_path_warnings"] = inspection.invalid_sdk_paths[:5]
-                    pending_reviews.append(item)
-                    continue
 
                 if not inspection:
                     pending_reviews.append(

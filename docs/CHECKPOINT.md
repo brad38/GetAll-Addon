@@ -1,8 +1,171 @@
-# SM64Plus - continuidade isolada SDK 1.5.64
+# Checkpoint do GetAll-Addon
+
+## Integração da continuidade com SM64Plus — 27/11/2026
+
+Branch isolada `work/getall-integration-20261127`: combina os commits
+`bb07738`/`285d258` de `feat/sm64plus-handoff` com as correções de automação
+de `e41f4a3`, preservando os dois históricos. O conflito do workflow foi
+resolvido mantendo o gatilho de push de SM64Plus e a seleção de catálogo
+pelo canal do índice em `scripts/validate_ci.py`.
+
+O acesso autenticado ao Desktop privado e ao Bradsson foi restabelecido.
+Leitura de arquivos, terminal, .NET SDK 8.0.425 e autenticação de escrita
+do Git foram verificados. As alterações locais do workspace principal e
+os worktrees anteriores foram preservados. O Desktop mais recente
+verificado é `75defea0b71c1f3ed2c4a86d4391cd86e2a8d0a5`, SDK **1.5.65**, na
+branch `feat/sm64plus-handoff`; contém SM64Plus e o cache verificado de
+codegen do Pinyon.
+
+### Estado integrado
+
+- **142 receitas para 140 projetos**: 141 entradas experimentais e uma
+  entrada `validated` histórica. CTR Turbocharged e SM64Plus têm duas
+  receitas cada; a receita anterior LauncherMirror de SM64Plus foi mantida.
+- O checkpoint do handoff SM64Plus registra **114/148 fluxos integrais**,
+  incluindo um homologado. A matriz da raiz ainda registrava 113 antes
+  desse handoff; sua próxima atualização deve incluir o fluxo SM64Plus,
+  sem inferir integralidade a partir da contagem de receitas.
+- O catálogo de desenvolvimento continua com 110 jogos e 148 projetos;
+  a prévia usa o pin `3f4603cf42ef43402b4a0a9470232e7d4fcd9eb9`.
+- Nenhum status foi promovido por esta integração. O build positivo de
+  SM64Plus com ROM original e o primeiro boot continuam pendentes.
+
+### Validações reexecutadas na integração
+
+- **60/60 testes Python** aprovados.
+- **142/142 receitas** no validador estrito, com JSON Schema, hashes,
+  blobs Git, LF e catálogo de 148 projetos.
+- Helper de CI aprovado com contexto de push em `feat/sm64plus-handoff`
+  e catálogo oficial fixado; a prévia foi recusada ao simular PR para
+  `main`, inclusive com a antiga branch de exceção.
+- **142/142 receitas aprovadas pelo parser C# no Bradsson**, usando a
+  árvore `getall-sm64plus-handoff`. `git diff` confirmou que `index.json`
+  e todas as receitas são idênticos à árvore integrada. Evidência:
+  `evidence-r18/continuation-20261127/getall-parser.json` e `.log`.
+- `git diff --check` aprovado. O CI remoto deve ser consultado pelo
+  commit desta integração; o CI das bases não substitui esse resultado.
+
+Os registros abaixo descrevem etapas anteriores e seus bloqueios na data
+da execução. Os bloqueios de acesso e envio registrados na etapa inicial
+foram superados nesta integração.
+
+## SM64Plus - continuidade isolada SDK 1.5.64
 
 Nova receita experimental build-85c3e51; 142 receitas para 140 projetos. 114/148 fluxos integrais implementados, incluindo 1 homologado; SM64Plus aguarda ROM original e primeiro boot. Evidencias e limites em docs/validations/sm64plus-build-85c3e51.md. Branch isolada feat/sm64plus-handoff; nao modifica a branch concorrente.
 
-# Checkpoint do GetAll-Addon
+## Etapa inicial de 27/11/2026 — contratos e isolamento da prévia
+
+Esta continuidade usa o GetAll em `27966be0a0e7df41ab4b45f2252b4ac2f6031863`
+(`feat/marathon-xbox-media-import`) e o catálogo em
+`44bdb508842407d501e420457274eb4064f5d935` (`feat/catalog-release-dates`).
+As alterações desta sessão estão na branch isolada
+`work/continuar-getall-20261127`. O HEAD remoto do GetAll foi conferido novamente
+antes do commit e permanecia em `27966be`.
+
+### Estado confirmado e preservado
+
+| Indicador | Resultado observado |
+|---|---:|
+| Jogos no catálogo de desenvolvimento | 110 |
+| Projetos por ID | 148 |
+| Receitas no índice de desenvolvimento | 141 |
+| Projetos com receita utilizável | 140 |
+| Projetos sem receita | 8 |
+| Receitas experimentais | 140 |
+| Receitas com status `validated` histórico | 1 |
+| Novas instalações ou primeiros boots nesta sessão | 0 |
+
+As duas receitas de `crash-team-racing-turbocharged` explicam a diferença entre
+receitas e projetos. A cobertura utilizável conta somente `experimental` e
+`validated`, sem promover nenhum status. Não foi possível recontar os fluxos
+integrais: os 102 integrais e 38 incompletos do handoff pertencem ao checkpoint
+anterior e dependem da matriz funcional atual no Bradsson. Não somar os seis
+projetos mencionados nos commits posteriores como novos integrais sem essa
+evidência.
+
+Os commits `4d1d73f`, `efda491` e `27966be`, posteriores ao handoff `acc73ca`,
+atualizam instruções de mídia para The Simpsons Game, Earthworm Jim HD,
+3 on 3 NHL Arcade, PGR4, Blue Dragon e Sonic Unleashed. Foram preservados.
+O catálogo de datas conserva os três commits de desenvolvimento `098d847`,
+`3f4603c` e `44bdb50`, ainda separados de `main`; as 109 datas de lançamento,
+o `null` de Dinosaur Planet, todas as datas de inclusão e GT4 como PS2 foram
+preservados. Nenhum arquivo do catálogo foi alterado nesta sessão.
+
+### Correções implementadas
+
+- O CI seleciona o catálogo pelo canal do índice. Novas branches de prévia e
+  PRs para desenvolvimento usam o catálogo fixado de 148 projetos. Todo PR
+  destinado a `main` e toda execução na `main` rejeita índice de prévia antes
+  da validação, inclusive a antiga exceção `feat/round-17-restricted-installers`.
+- O empacotador rejeita versões e SDK mínimo com zeros iniciais que o schema
+  do próprio manifesto não aceita, antes de criar arquivos. O SDK mínimo
+  padrão existente foi preservado.
+- A cobertura deixa de contabilizar receitas `disabled` e `draft` como
+  utilizáveis, preservando todas as versões nos detalhes e contando cada
+  projeto uma única vez. O campo legado `preparation_only` não comprova fluxo
+  integral, instalação ou boot.
+- O monitor de releases verifica os estados e contratos de todas as versões
+  de um projeto antes de propor atualização automática. Encaminha contratos
+  diferentes de v3, estados protegidos e entradas com operações ou mídia para
+  revisão, sem baixar seus pacotes. Isso evita remover dependências, assets,
+  launchers Java ou perfis de preparação/compilação e não depende da ordem do
+  índice. Uma reprodução anterior com Severed Chains v8 gerava v3 e perdia
+  `java_launcher` e `prerequisites`; a regressão agora está coberta.
+
+### Validação desta sessão
+
+- **60 testes Python aprovados**, incluindo 14 regressões novas de CI,
+  empacotamento, cobertura e monitoramento. Fixtures e ZIPs de teste são
+  sintéticos; nenhum executável de terceiros foi executado.
+- **141 receitas aprovadas** em `validate_recipes.py --strict-lf
+  --require-jsonschema --check-git-blobs --check-catalog`, usando o catálogo
+  local de 148 projetos. Schemas, identidades, hashes e LF passaram.
+- O helper de CI foi executado com contexto simulado de PR para desenvolvimento
+  e catálogo oficial fixado: aprovado. O contexto de PR para `main` com índice
+  de prévia foi rejeitado antes do validador, conforme esperado.
+- O catálogo passou em `validate_catalog.py --require-dates --compare-with
+  origin/main`. `git diff --check` também passou.
+- [CI remoto do commit-base 27966be](https://github.com/brad38/GetAll-Addon/actions/runs/45935930815)
+  confirmado `completed/success`. Esse resultado não é CI das alterações
+  locais desta sessão.
+
+### Oito projetos sem receita e condições de desbloqueio
+
+| Projeto | Evidência ou condição atual |
+|---|---|
+| `drmario64-recomp` | Fonte arquivado, sem releases; exige geração de código a partir da ROM e perfil de build. Windows não foi verificado, não é incompatibilidade absoluta. |
+| `metaforce` | Índice de releases acessível, mas os diretórios `continuous/`, `dev/` e o repositório retornaram 404 nesta consulta. Falta distribuição oficial verificável. |
+| `twilight-princess-courage-reborn` | Documentação oficial de build Windows disponível; o repositório nela indicado e suas releases retornaram 404. Falta fonte/pacote fixável e integração do processamento. |
+| `wind-waker-recomp` | Upstream orienta migrar para BlueWake e retirou as releases próprias. Preservar o ID sucedido, sem duplicar a receita do sucessor. |
+| `project-2099` | Release beta5 declara mídia própria, mas também Title Update incluído. Não foi obtida evidência que resolva o bloqueio de distribuição ou um contrato de instalador aprovado. |
+| `doldecomp-mkdd-decompilacao-base` | Base de decompilação de console no catálogo; não houve evidência nova de port Windows. |
+| `tmc-decompilacao-base` | Base de decompilação de console no catálogo; não houve evidência nova de port Windows. |
+| `mml1-megaman-legends-decomp` | Base de decompilação de console no catálogo; não houve evidência nova de port Windows. |
+
+Fontes oficiais consultadas nesta retomada:
+[Dr. Mario 64](https://github.com/AngheloAlf/drmario64_recomp/commit/7892264252fd662c140625ad35cab62825ab473b),
+[releases Metaforce](https://releases.axiodl.com/),
+[build Courage Reborn](https://docs.couragereborn.com/building/build/),
+[Wind Waker Recomp](https://github.com/elliotttate/Wind-Waker-Recomp) e
+[metadados da release Project 2099 beta5](https://api.github.com/repos/GenryTheFox0/Project-2099/releases/tags/v2.0.0-beta.5).
+Nenhuma dessas verificações desbloqueou uma nova receita funcional nesta sessão.
+
+### Bloqueio operacional registrado antes da conexão
+
+GetAll e catálogo foram obtidos por leitura pública. `brad38/Allfix` continua
+inacessível sem autenticação; o Bradsson não está conectado. Os arquivos locais
+`CONTINUIDADE.md`, `PENDENCIAS.md`, `MATRIZ-FUNCIONAL.md` e
+`LIMPEZA-ARMAZENAMENTO.md` não foram acessados nem substituídos. Não houve build
+Windows, execução do parser/motor C#, validação WPF ou primeiro boot.
+
+O teste de publicação `git push --dry-run` para a branch isolada falhou por
+ausência de autenticação (`unable to get password from user`). Nenhum push,
+PR, merge, release, alteração de `version.json` público ou troca de instalação
+foi realizado. A próxima ação é disponibilizar acesso ao Desktop atual e aos
+checkpoints do Bradsson, além da autenticação de escrita no GetAll; então
+conferir novamente os HEADs, integrar esta branch e continuar a fila funcional
+real, sem repetir os fluxos já implementados. DownloadAll permanece fora do
+escopo.
 
 ## SDK 1.5.46
 
