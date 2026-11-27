@@ -13,7 +13,7 @@
     "Super Odyssey PC Recomp/odysseygen/python.exe"
   ],
   "inputs": [],
-  "manual_steps": "Preparação apenas. Forneça sua própria cópia Nintendo Switch de Super Mario Odyssey 1.0.0 ou 1.4.1 com update aplicado, pastas exefs e romfs. O instalador oficial compila o jogo localmente. Nenhuma execução automática.",
+  "manual_steps": "Use Retomar e selecione sua cópia original de Super Mario Odyssey 1.0.0 ou 1.4.1, com as pastas ExeFS e RomFS completas da mesma versão. O GetAll verifica os arquivos, empacota o RomFS e compila o jogo localmente com ferramentas privadas. Ao concluir, use Jogar. Requer AVX2, FMA e BMI2. Nenhum jogo está incluído.",
   "build_profile": "odyssey-1.0.0-prepare",
   "preparation_media": [
     {

@@ -4,16 +4,16 @@
 
 Branch `work/complete-install-flows-20261127`, a partir de GetAll `f0942a6`
 e Desktop `c209adc`, sem merge em main. O checkpoint confirmado registra
-**125/148 fluxos integrais**, onze acima de 114: sm64ex, Render96ex, sm64rt,
-Strikers Wii, WipEout, Dr. Mario, Double Dash C++, Burnout 3, Strikers GC, Double Dash Rust e DOAX. Há um
-homologado histórico, 124 integrais aguardando mídia, 14 parciais, dois
+**128/148 fluxos integrais**, catorze acima de 114: sm64ex, Render96ex, sm64rt,
+Strikers Wii, WipEout, Dr. Mario, Double Dash C++, Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey e LAS. Há um
+homologado histórico, 127 integrais aguardando mídia, 11 parciais, dois
 adiados pelo usuário e sete sem receita. Nenhum novo primeiro boot foi
 comprovado. O índice tem **143 receitas para 141 projetos**, com uma entrada
 validated histórica e 142 experimentais.
 
-Desktop local `7402a99` preserva a primeira etapa em 68 arquivos; alterações
-seguintes continuam em desenvolvimento. God of War KIexster,
-Pinyon/SSX, GT5 e geradores Switch seguem em verificação.
+Desktop `7cbad7d` está na PR3 draft, com CI Windows `46035592163`
+aprovado. Outro GOW, GTA Stories, Pinyon/SSX, GT5 e geradores Switch seguem
+em verificação.
 
 Build 14 do harness: **0 erros, 0 avisos, 1.661 checks PASS** e **143/143
 receitas aceitas pelo parser**. WipEout passou
@@ -24,8 +24,8 @@ Studio. Burnout passou pelo fluxo e pelos quatro testes D3D8 reais. Evidências
 e limites estão em [SDK 1.5.67](validations/sdk167-flow-completion.md).
 
 A prévia anterior, os worktrees concorrentes e as fontes de mídia foram
-preservados. GetAll `31cfa7c` está na PR20 draft, CI `46032725114` aprovado.
-Nova prévia e CI do próximo checkpoint Desktop ainda pendentes.
+preservados. GetAll `ff21fcf` está na PR20 draft, CI `46034996088` aprovado.
+A nova prévia ainda está em fechamento.
 As seções abaixo são históricas e mantêm as contagens da sua data.
 
 ## Integração da continuidade com SM64Plus — 27/11/2026

@@ -13,7 +13,7 @@
     "LAS Recomp/gamelib-src/gamelib_entry.c"
   ],
   "inputs": [],
-  "manual_steps": "Kit oficial preparado. O jogo ainda nao foi compilado. Use sua propria copia de Link's Awakening Switch, versao 1.0.0, 1.0.1 ou 1.1.0, com pastas exefs e romfs. O aplicativo oficial recompila a biblioteca do jogo localmente com as ferramentas fornecidas. O All-Fix nao executa o launcher nem compiladores automaticamente.",
+  "manual_steps": "Use Retomar e selecione sua cópia original de Link's Awakening para Nintendo Switch, versão 1.0.0, 1.0.1 ou 1.1.0, com as pastas ExeFS e RomFS completas. O GetAll verifica os arquivos, prepara as ferramentas privadas e compila a biblioteca localmente. Ao concluir, use Jogar. Nenhum jogo está incluído.",
   "build_profile": "las-0.6.1-prepare",
   "preparation_media": [
     {

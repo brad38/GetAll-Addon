@@ -2,18 +2,18 @@
 
 ## Checkpoint de desenvolvimento — SDK 1.5.67, 27/11/2026
 
-Estado confirmado: **125/148 projetos com fluxo integral implementado**,
-incluindo um homologado histórico; 14 parciais, dois adiados pelo usuário e
-sete sem receita. Há 143 receitas para 141 projetos. Os onze novos fluxos são
+Estado confirmado: **128/148 projetos com fluxo integral implementado**,
+incluindo um homologado histórico; 11 parciais, dois adiados pelo usuário e
+sete sem receita. Há 143 receitas para 141 projetos. Os catorze fluxos fechados são
 sm64ex, Render96ex, sm64rt, Strikers Wii, WipEout, Dr. Mario, Double Dash C++,
-Burnout 3, Strikers GC, Double Dash Rust e DOAX. GOW KIexster,
+Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey e LAS. Outro GOW, GTA Stories,
 Pinyon/SSX, GT5 e geradores Switch seguem em verificação.
 
 A verificação conjunta do build 14 passou em **1.661 checks**, com parser 143/0. Nenhum teste
 sintético foi convertido em homologação. O histórico detalhado abaixo conserva
 os estados da época; para a implementação atual, ver
 [SDK 1.5.67](validations/sdk167-flow-completion.md) e a matriz individual
-`MATRIZ-FUNCIONAL.md` no workspace do Bradsson. Nova prévia e CI ainda pendentes.
+`MATRIZ-FUNCIONAL.md` no workspace do Bradsson. CI Desktop/GetAll aprovado; nova prévia em fechamento.
 
 
 122/146 projetos com receita (83,56%); 92 main, 24 sem receita, 15 v9, 1 validated historico. SDK 1.5.3 / Desktop 3.0.0. Retomada transacional MML condicionada a midia genuina; Forza XDVDFS/XEX; Sonic GDI e verificacoes estruturais Switch/PS4. Oito binarios de componentes upstream compilados em cinco projetos, zero novos jogos completos ou homologados. 277 PASS C#, 122 parser, 44 Python, JS e regressao offline tripla aprovados. [Matriz](COBERTURA-R17C-2026-11-23.md) | [Relatorio](RODADA-17C-2026-11-23.md). PR #18 draft, sem merge/release. Historico preservado.
