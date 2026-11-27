@@ -9,5 +9,5 @@
     "README.md"
   ],
   "inputs": [],
-  "manual_steps": "Compilacao experimental local de StrikersRecomp (DolRecomp + GXRuntime + Aurora). Use Retomar e selecione sua ISO GameCube USA de Super Mario Strikers (G4QE01) ou main.dol. Nenhum jogo incluido."
+  "manual_steps": "Compilacao experimental local de StrikersRecomp (DolRecomp + GXRuntime + Aurora). Use Retomar e selecione a ISO GameCube USA original completa de Super Mario Strikers (G4QE01 Rev 0). O GetAll prepara as ferramentas privadas, compila o host e o renderer e registra a instalacao com Jogar. Nenhum jogo incluido."
 }

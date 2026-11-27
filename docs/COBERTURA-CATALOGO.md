@@ -2,13 +2,14 @@
 
 ## Checkpoint de desenvolvimento — SDK 1.5.67, 27/11/2026
 
-Estado confirmado: **122/148 projetos com fluxo integral implementado**,
-incluindo um homologado histórico; 17 parciais, dois adiados pelo usuário e
-sete sem receita. Há 143 receitas para 141 projetos. Os oito novos fluxos são
-sm64ex, Render96ex, sm64rt, Strikers Wii, WipEout, Dr. Mario, Double Dash C++
-e Burnout 3. Rust/MKDD, Strikers GC, DOAX e GOW KIexster seguem em execução.
+Estado confirmado: **125/148 projetos com fluxo integral implementado**,
+incluindo um homologado histórico; 14 parciais, dois adiados pelo usuário e
+sete sem receita. Há 143 receitas para 141 projetos. Os onze novos fluxos são
+sm64ex, Render96ex, sm64rt, Strikers Wii, WipEout, Dr. Mario, Double Dash C++,
+Burnout 3, Strikers GC, Double Dash Rust e DOAX. GOW KIexster,
+Pinyon/SSX, GT5 e geradores Switch seguem em verificação.
 
-A verificação conjunta do build 10 passou em **1.618 checks**. Nenhum teste
+A verificação conjunta do build 14 passou em **1.661 checks**, com parser 143/0. Nenhum teste
 sintético foi convertido em homologação. O histórico detalhado abaixo conserva
 os estados da época; para a implementação atual, ver
 [SDK 1.5.67](validations/sdk167-flow-completion.md) e a matriz individual

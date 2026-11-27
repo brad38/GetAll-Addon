@@ -9,5 +9,5 @@
     "README.md"
   ],
   "inputs": [],
-  "manual_steps": "Selecione sua ISO ou CISO original GameCube USA (GM4E01). O motor valida o disco, prepara Ghidra, Python e Rust/Cargo privados fixados, gera o codigo e compila mkdd-bevy. Visual Studio 2022 Build Tools C++ x64 e Windows SDK sao necessarios. Nenhum jogo e distribuido."
+  "manual_steps": "Compilacao experimental local de Mario Kart: Double Dash!! (Rust/Bevy). Use Retomar e selecione sua imagem GameCube USA GM4E01 original (ISO ou CISO). O AllFix prepara as ferramentas privadas verificadas, extrai os dados, gera o codigo e compila automaticamente. Nenhum jogo incluido."
 }

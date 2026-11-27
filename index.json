@@ -1610,7 +1610,7 @@
       "tag": "build-d1d11ec",
       "schema_version": 5,
       "path": "recipes/god-of-war-2005/god-of-war-recomp/build-d1d11ec.json",
-      "sha256": "e161384f6524544dee63a85b4faeb0b5fa96563c9ad1bc0bf3252c48050babd9",
+      "sha256": "58009010a9063916bf0ffad66fd7369fc030c46e4867497c668ef4a54117226b",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1634,7 +1634,7 @@
       "tag": "build-cd88f71",
       "schema_version": 5,
       "path": "recipes/super-mario-strikers/strikersrecomp/build-cd88f71.json",
-      "sha256": "6a69efa0322729df3ca2d4126f292d09c64cd16ae8100745b521d2eda4dca75b",
+      "sha256": "77b95bd2c700ea76fe6776b615b4ee65be25dee8a3c0fdb6e4997e6230feba7a",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1646,7 +1646,7 @@
       "tag": "build-e173ce4",
       "schema_version": 5,
       "path": "recipes/mario-kart-double-dash/mkdd-recomp/build-e173ce4.json",
-      "sha256": "f52d5dc709e0d93e4bbd5698509ec8eea2079668e7c5175bbbb8f63b00f35ebb",
+      "sha256": "5ddc2fd3f226c824d7551bb9a8be3279377f2860cf6ea365f93e869ef1c6d580",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
