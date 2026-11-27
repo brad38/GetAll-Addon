@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "output": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127",
+  "desktop_commit": "8ba34eb51ee0ab93accef3da5e1689c68825977d",
+  "getall_commit": "5b7fea8fb8d2b77df5a6cfd7e9efb6b463fba75b",
+  "sdk_version": "1.5.68",
+  "addon_version": "1.5.73",
+  "files": 74,
+  "copied_desktop_bytes": 165625170,
+  "executable_sha256": "3ce6d4ec0e182a450fa621cc8f7a2288250e1485d6be539513f9b8a705a099da",
+  "addon_sha256": "656fe2fd35cbda71b3e7974f3c8510ee75edf33b53f7a6c2c29d8e8ef3696914",
+  "manifest_sha256": "0220e843125b9223435d671fcbb834df1d13ce653fb770e6599989f7efd1c95a",
+  "script_sha256": "7b5714937d5015e4347bdb12c6e12a7346bbb852c65f3c896feae83b4f7f1e33",
+  "completed_utc": "2026-11-27T20:58:44.744380+00:00",
+  "storage": "Task-owned staging removed; source candidate and previous preview preserved."
+}

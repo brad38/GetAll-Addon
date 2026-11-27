@@ -1,0 +1,25 @@
+{
+  "queried_utc": "2026-11-27T21:01:39.271437+00:00",
+  "origins": [
+    {
+      "origin": "https://github.com/linifadomra/Courage-Reborn.git",
+      "url": "https://archive.softwareheritage.org/api/1/origin/https%3A%2F%2Fgithub.com%2Flinifadomra%2FCourage-Reborn.git/visit/latest/?require_snapshot=true",
+      "http_status": 404
+    },
+    {
+      "origin": "https://github.com/Linifadomra/Courage-Reborn",
+      "url": "https://archive.softwareheritage.org/api/1/origin/https%3A%2F%2Fgithub.com%2FLinifadomra%2FCourage-Reborn/visit/latest/?require_snapshot=true",
+      "http_status": 404
+    },
+    {
+      "origin": "https://github.com/Linifadomra/Courage-Reborn.git",
+      "url": "https://archive.softwareheritage.org/api/1/origin/https%3A%2F%2Fgithub.com%2FLinifadomra%2FCourage-Reborn.git/visit/latest/?require_snapshot=true",
+      "http_status": 404
+    },
+    {
+      "origin": "https://github.com/linifadomra/Courage-Reborn",
+      "url": "https://archive.softwareheritage.org/api/1/origin/https%3A%2F%2Fgithub.com%2Flinifadomra%2FCourage-Reborn/visit/latest/?require_snapshot=true",
+      "http_status": 404
+    }
+  ]
+}

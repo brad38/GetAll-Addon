@@ -14,7 +14,11 @@ A verificação conjunta do BUILD30/SDK 1.5.68 passou em **1.866 checks**, e o p
 sintético foi convertido em homologação. O histórico detalhado abaixo conserva
 os estados da época; para a implementação atual, ver
 [SDK 1.5.67](validations/sdk167-flow-completion.md) e a matriz individual
-`MATRIZ-FUNCIONAL.md` no workspace do Bradsson. Os CIs aprovados são dos commits publicados anteriores; o fechamento atual é local. A prévia Windows de 138 projetos está pronta, com SDK 1.5.67 e o índice publicado `9caef66`; SotC e Savage Wind seguem fora dessa prévia.
+`MATRIZ-FUNCIONAL.md` no workspace do Bradsson. O fechamento está publicado:
+Desktop `8ba34eb` (CI46059165665) e GetAll `5b7fea8` (CI46059162398), ambos
+aprovados. A [prévia completa SDK168](validations/sdk168-preview/README.md)
+contém os 140 fluxos, com addon 1.5.73 e o índice imutável publicado,
+incluindo SotC e Savage Wind. As PRs continuam draft, sem merge ou release.
 
 
 122/146 projetos com receita (83,56%); 92 main, 24 sem receita, 15 v9, 1 validated historico. SDK 1.5.3 / Desktop 3.0.0. Retomada transacional MML condicionada a midia genuina; Forza XDVDFS/XEX; Sonic GDI e verificacoes estruturais Switch/PS4. Oito binarios de componentes upstream compilados em cinco projetos, zero novos jogos completos ou homologados. 277 PASS C#, 122 parser, 44 Python, JS e regressao offline tripla aprovados. [Matriz](COBERTURA-R17C-2026-11-23.md) | [Relatorio](RODADA-17C-2026-11-23.md). PR #18 draft, sem merge/release. Historico preservado.

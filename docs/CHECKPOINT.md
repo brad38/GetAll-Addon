@@ -1,6 +1,6 @@
 # Checkpoint do GetAll-Addon
 
-## Continuidade — SDK 1.5.68, fechamento local em 27/11/2026
+## Continuidade — SDK 1.5.68, fontes publicadas e prévia completa em 27/11/2026
 
 Branch `work/complete-install-flows-20261127`, a partir de GetAll `f0942a6`
 e Desktop `c209adc`, sem merge em main. O checkpoint confirmado registra
@@ -15,14 +15,14 @@ O candidato final usa SDK **1.5.68**. SotC e Savage Wind exigem esse mínimo
 no índice, pois a prévia138/SDK 1.5.67 não contém o perfil automático SotC.
 A versão nova mantém explícita essa diferença de capacidade.
 
-Desktop `6548ce0` está na PR3 draft, com CI Windows `46041444134`
-aprovado. O fechamento de 138 está local em Desktop `02d7c4b` e GetAll
-`c1ee000`, incluindo CTR/SM, SSX, Pinyon e FH1. O SotC está no commit
-local Desktop `c39ac77787893c2fb77e9dda48593ec266b11503`, com dez caminhos
-delimitados; o checkpoint139 mantém os 148 IDs e o histórico138.
-O envio seguinte ao GitHub foi recusado pela revisão automática por exigir
-autorização direta para os repositórios, branches e conteúdo exatos. Nenhum
-novo CI remoto é atribuído a essas alterações locais. FH1 concluiu a prova nativa com 22/22 verificações em 503,188 s. Pinyon
+O GitHub confirmou Desktop `8ba34eb51ee0ab93accef3da5e1689c68825977d`
+na PR3 draft, CI Windows [46059165665](https://github.com/brad38/Allfix/actions/runs/46059165665)
+aprovado, e GetAll `5b7fea8fb8d2b77df5a6cfd7e9efb6b463fba75b`
+na PR20 draft, CI [46059162398](https://github.com/brad38/GetAll-Addon/actions/runs/46059162398)
+aprovado. Ambos estão na branch de desenvolvimento acima. As recusas de envio
+registradas anteriormente são históricas; não há novo merge ou release.
+O checkpoint139 mantém os 148 IDs e o histórico138.
+FH1 concluiu a prova nativa com 22/22 verificações em 503,188 s. Pinyon
 também concluiu seu provider: SDK, 78 objetos públicos, três renderizadores,
 DLSS e entrada Windows oficiais. SotC passou em 33 verificações de política e
 23 nativas, incluindo Run, retomada, cinco scripts oficiais, publicação,
@@ -40,15 +40,19 @@ Double Dash C++ passou pelo runtime completo e execução SDL/C++20 sem Visual
 Studio. Burnout passou pelo fluxo e pelos quatro testes D3D8 reais. Evidências
 e limites estão em [SDK 1.5.67](validations/sdk167-flow-completion.md).
 
-A prévia anterior, os worktrees concorrentes e as fontes de mídia foram
-preservados. GetAll `9caef66` está na PR20 draft, CI `46040722683` aprovado.
-A prévia Windows de 138 projetos está pronta em
-`publish-getall-complete-flows-20261127`, com Desktop 3.0.0, SDK 1.5.67
-e addon 1.5.72. O addon usa o GetAll publicado `9caef66`; o executável e
-os recursos incorporados passaram pela auditoria final. SotC
-já está na contagem de implementação, mas sua nova receita v9 depende da
-publicação do GetAll e ainda está fora dessa prévia. O novo código Savage Wind
-também pertence ao candidato final, sem substituir o executável da prévia138.
+A prévia Windows completa dos 140 está em `publish-getall-sdk168-20261127`,
+com Desktop 3.0.0, SDK 1.5.68 e addon 1.5.73 fixado ao GetAll publicado
+`5b7fea8`. Inclui SotC v9 e o novo fluxo Savage Wind. A montagem reutilizou
+o executável auditado, sem recompilação, e verificou 74 arquivos, 34 recursos,
+66 avisos e 12 propriedades. A prévia138/SDK 1.5.67 foi preservada.
+Pins, hashes, recibos e reprodução estão em [prévia SDK168](validations/sdk168-preview/README.md).
+
+A instrução atual do usuário exige limpeza contínua automática de artefatos
+comprovadamente descartáveis após validação, preservando fontes, receitas,
+scripts, logs, resultados, mídia original e dependências ativas. Ela substitui
+a proibição histórica de limpar intermediários de rodadas anteriores.
+Os oito restantes estão em investigação: a descoberta de uma fonte arquivada
+ou de um decoder alternativo só altera a contagem após implementação e prova.
 As seções abaixo são históricas e mantêm as contagens da sua data.
 
 ## Integração da continuidade com SM64Plus — 27/11/2026
