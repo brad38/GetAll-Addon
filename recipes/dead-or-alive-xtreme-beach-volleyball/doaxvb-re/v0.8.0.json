@@ -13,7 +13,7 @@
     "DOAXBV-0.8.0/recomp-runtime/CMakeLists.txt"
   ],
   "inputs": [],
-  "manual_steps": "Kit oficial preparado. O jogo ainda nao foi compilado. Use sua propria ISO Xbox USA suportada pelo projeto. O primeiro build exige dependencias externas oficiais. O All-Fix nao executa Launcher.cmd, BuildGame.cmd ou instaladores automaticamente. Consulte README.txt e as instrucoes oficiais.",
+  "manual_steps": "Selecione sua ISO original Xbox USA. O AllFix valida o XBE, gera o codigo e compila o runner D3D11 com ferramentas privadas. Vulkan e RTGI sao opcionais; as dependencias das opcoes selecionadas sao preparadas automaticamente. Nenhum jogo comercial esta incluido.",
   "build_profile": "doax-0.8.0-prepare",
   "preparation_media": [
     {

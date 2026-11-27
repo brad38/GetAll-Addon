@@ -9,5 +9,5 @@
     "README.md"
   ],
   "inputs": [],
-  "manual_steps": "Compilacao experimental local de MKDD-Recomp (LeftInWalmart / CISO + Rust). Use Retomar e selecione sua ISO ou CISO GameCube USA (GM4E01) com main.dol SHA-1 oficial. Requer toolchain Rust instalada localmente. Nenhum jogo incluido."
+  "manual_steps": "Selecione sua ISO ou CISO original GameCube USA (GM4E01). O motor valida o disco, prepara Ghidra, Python e Rust/Cargo privados fixados, gera o codigo e compila mkdd-bevy. Visual Studio 2022 Build Tools C++ x64 e Windows SDK sao necessarios. Nenhum jogo e distribuido."
 }

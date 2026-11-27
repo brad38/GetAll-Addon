@@ -9,5 +9,5 @@
     "README.md"
   ],
   "inputs": [],
-  "manual_steps": "Compilacao experimental local de Strikers-WiiCompiled. Use Retomar e selecione sua copia Mario Strikers Charged USA Rev 1 (R4QE01) ISO/WBFS/RVZ, pasta com sys/main.dol ou main.dol oficial. Nenhum jogo incluido."
+  "manual_steps": "Selecione sua midia original de Mario Strikers Charged Wii USA Rev 1 (ISO, WBFS, RVZ ou pasta extraida). O motor confere DOL/FST e todos os recursos, prepara o SDK .NET privado, traduz, compila e configura a instalacao portatil. Nenhum jogo e distribuido."
 }

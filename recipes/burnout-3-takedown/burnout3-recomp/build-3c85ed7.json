@@ -9,5 +9,5 @@
     "README.md"
   ],
   "inputs": [],
-  "manual_steps": "Compilacao experimental local de Burnout 3. Use Retomar e selecione seu disco Xbox norte-americano original (ISO ou pasta extraida). Requer Visual Studio Build Tools e Windows SDK licenciados. Nenhum jogo incluido."
+  "manual_steps": "Compilacao experimental local de Burnout 3. Use Retomar e selecione seu disco Xbox norte-americano original (ISO ou pasta extraida). O AllFix prepara compilador, dependencias e runtime privados e compila automaticamente. Nenhum jogo incluido."
 }

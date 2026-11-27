@@ -9,5 +9,5 @@
     "README.md"
   ],
   "inputs": [],
-  "manual_steps": "Compilacao experimental local de WipEout Rewrite (SDL2 + GLEW + clang-cl). Use Retomar e selecione sua pasta wipeout/ (textures/ e common/) ou imagem ISO original de WipEout. Nenhum jogo incluido."
+  "manual_steps": "Use Retomar e selecione a faixa BIN 1 original americana de WipEout para PlayStation (SCUS-94301), ou sua pasta de dados PSX. Quando necessário, o Desktop solicita separadamente a pasta original da edição PC com os modelos e texturas leeg e msdos, reúne os arquivos, prepara as ferramentas, compila e habilita Jogar. A mídia original permanece intacta. Pastas completas e ISOs preparadas anteriormente continuam aceitas; música e vídeo são opcionais. Para a edição PC, selecione uma pasta com os arquivos originais: instaladores e contêineres compactados dessa edição ainda não são extraídos."
 }

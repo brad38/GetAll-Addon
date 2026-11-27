@@ -1,5 +1,31 @@
 # Checkpoint do GetAll-Addon
 
+## Continuidade SDK 1.5.67 — em execução em 27/11/2026
+
+Branch `work/complete-install-flows-20261127`, a partir de GetAll `f0942a6`
+e Desktop `c209adc`, sem merge em main. O checkpoint confirmado registra
+**122/148 fluxos integrais**, oito acima de 114: sm64ex, Render96ex, sm64rt,
+Strikers Wii, WipEout, Dr. Mario, Double Dash C++ e Burnout 3. Há um
+homologado histórico, 121 integrais aguardando mídia, 17 parciais, dois
+adiados pelo usuário e sete sem receita. Nenhum novo primeiro boot foi
+comprovado. O índice tem **143 receitas para 141 projetos**, com uma entrada
+validated histórica e 142 experimentais.
+
+Desktop local `7402a99` preserva a primeira etapa em 68 arquivos; alterações
+seguintes continuam em desenvolvimento. Rust/MKDD (Ghidra final), Strikers GC,
+DOAX e God of War KIexster continuam fora da soma até sua prova de produção.
+
+Build 10 do harness: **0 erros, 0 avisos, 1.618 checks PASS**. WipEout passou
+pela transação Run/Resume/registro/Jogar com compilação oficial e mídia
+sintética. Dr. Mario passou pela preparação nativa real, Python e geradores.
+Double Dash C++ passou pelo runtime completo e execução SDL/C++20 sem Visual
+Studio. Burnout passou pelo fluxo e pelos quatro testes D3D8 reais. Evidências
+e limites estão em [SDK 1.5.67](validations/sdk167-flow-completion.md).
+
+A prévia anterior, os worktrees concorrentes e as fontes de mídia foram
+preservados. Nova prévia, parser final e CI dos novos commits ainda pendentes.
+As seções abaixo são históricas e mantêm as contagens da sua data.
+
 ## Integração da continuidade com SM64Plus — 27/11/2026
 
 Branch isolada `work/getall-integration-20261127`: combina os commits

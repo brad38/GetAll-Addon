@@ -1226,7 +1226,7 @@
       "tag": "v0.8.0",
       "schema_version": 9,
       "path": "recipes/dead-or-alive-xtreme-beach-volleyball/doaxvb-re/v0.8.0.json",
-      "sha256": "681d3726bef9bf3316b811abc7bc7a96c961ca94d38c49fc00898d5231727d1f",
+      "sha256": "911053100b6caf080ff33b63a4cbd5209743bd287ef186cfef1926ad8e200a14",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
@@ -1538,7 +1538,7 @@
       "tag": "build-bd36eb9",
       "schema_version": 5,
       "path": "recipes/mario-kart-double-dash/mariokartdd-recomp/build-bd36eb9.json",
-      "sha256": "d684e4ce5bab210d6fd4712ebdb475a2384dc9f262e09bad56d56ebafa9a12c3",
+      "sha256": "05f933262cb14b00512e3cf9980940d3a31d70b1043239b88a74dcdfcf45d777",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1550,7 +1550,7 @@
       "tag": "build-d7ca2c0",
       "schema_version": 5,
       "path": "recipes/super-mario-64/sm64ex/build-d7ca2c0.json",
-      "sha256": "119029a6223a585df320481c7a5c947af883d4e1c6a694a7d427558fb1bef38d",
+      "sha256": "2a4306fa23d76e3a1720de7eba881b0d6d905d96b9cff039545ef54fe307ff53",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1562,7 +1562,7 @@
       "tag": "build-48da5c4",
       "schema_version": 5,
       "path": "recipes/super-mario-64/render96ex/build-48da5c4.json",
-      "sha256": "a42fb7b94f9aeb316e4ab10bd6e5e30d4dd68738fa5341a9766971d058d555a0",
+      "sha256": "05363a9cd808361ad2ce9b1956597503b810e8963c8534a5d3cbd54a0c2681e5",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1574,7 +1574,7 @@
       "tag": "build-20e618b",
       "schema_version": 5,
       "path": "recipes/super-mario-64/sm64rt/build-20e618b.json",
-      "sha256": "92a254a2bf45e12c4004a1668755efc6edd0651c5ef4ff302315b204cd73147b",
+      "sha256": "4e90ddff3f5cc140ba0e6d843dcbf9146cc39c558597090b9e90d79df57cf267",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1586,7 +1586,7 @@
       "tag": "build-3c85ed7",
       "schema_version": 5,
       "path": "recipes/burnout-3-takedown/burnout3-recomp/build-3c85ed7.json",
-      "sha256": "c9b6fefb5fe6b80fe95bc7efd803b61f26e5cf62802df3a18bdd5c2d5bcd53b7",
+      "sha256": "acd0487703956b86d9d0f45ab76548b76cff982fc63c4aaa3c278c8ba47fee09",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1622,7 +1622,7 @@
       "tag": "build-451e06b",
       "schema_version": 5,
       "path": "recipes/mario-strikers-charged/strikers-wiicompiled/build-451e06b.json",
-      "sha256": "af64b4cc65732aa5efec7a8461732248a363067dd54a284dbce4f08d5d0ae43e",
+      "sha256": "15f3dd2d9992b3c68ee5393b8b967227538ad6604a1d9da694a097d90601c8d1",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1646,7 +1646,7 @@
       "tag": "build-e173ce4",
       "schema_version": 5,
       "path": "recipes/mario-kart-double-dash/mkdd-recomp/build-e173ce4.json",
-      "sha256": "113a82e515fae56573570abb1c61694fb6ff2d886e7ae21baee5bd0b7f10493e",
+      "sha256": "f52d5dc709e0d93e4bbd5698509ec8eea2079668e7c5175bbbb8f63b00f35ebb",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1658,7 +1658,7 @@
       "tag": "build-b425ecb",
       "schema_version": 5,
       "path": "recipes/wipeout/wipeout-rewrite/build-b425ecb.json",
-      "sha256": "82abe250b027b9f9d6883f4a650cc85e3ebcea41d1672534889e36494acef00c",
+      "sha256": "69d316b312df9f655b91c7e7a96480035f864c975ffa1b20281fba9f98d97189",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -1727,6 +1727,18 @@
       "has_inputs": false,
       "has_manual_steps": true,
       "min_sdk_version": "1.5.13"
+    },
+    {
+      "game_id": "dr-mario-64",
+      "project_id": "drmario64-recomp",
+      "repository": "AngheloAlf/drmario64_recomp",
+      "tag": "build-7892264",
+      "schema_version": 5,
+      "path": "recipes/dr-mario-64/drmario64-recomp/build-7892264.json",
+      "sha256": "edafaace3490267df625b6de87d0fd047b2112c3e6a26d324ea833fa34baa9b5",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true
     }
   ]
 }

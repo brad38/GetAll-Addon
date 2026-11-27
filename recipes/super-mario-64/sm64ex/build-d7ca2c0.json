@@ -9,5 +9,5 @@
     "README.md"
   ],
   "inputs": [],
-  "manual_steps": "Compilacao experimental local. Requer Docker Desktop com toolchain All-Fix SM64 aprovada. Use Retomar e selecione sua ROM original USA big-endian (.z64). Nenhuma ROM incluida. O renderer e os argumentos sao fixados pelo Desktop."
+  "manual_steps": "Selecione sua ROM original americana de Super Mario 64 (.z64). O motor verifica a midia e compila o port Windows x64 com ferramentas privadas fixadas. Nenhuma ROM e distribuida."
 }

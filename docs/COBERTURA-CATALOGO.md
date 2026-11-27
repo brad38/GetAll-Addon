@@ -1,5 +1,20 @@
 # Rodada 17C - estado atual (23/11/2026)
 
+## Checkpoint de desenvolvimento — SDK 1.5.67, 27/11/2026
+
+Estado confirmado: **122/148 projetos com fluxo integral implementado**,
+incluindo um homologado histórico; 17 parciais, dois adiados pelo usuário e
+sete sem receita. Há 143 receitas para 141 projetos. Os oito novos fluxos são
+sm64ex, Render96ex, sm64rt, Strikers Wii, WipEout, Dr. Mario, Double Dash C++
+e Burnout 3. Rust/MKDD, Strikers GC, DOAX e GOW KIexster seguem em execução.
+
+A verificação conjunta do build 10 passou em **1.618 checks**. Nenhum teste
+sintético foi convertido em homologação. O histórico detalhado abaixo conserva
+os estados da época; para a implementação atual, ver
+[SDK 1.5.67](validations/sdk167-flow-completion.md) e a matriz individual
+`MATRIZ-FUNCIONAL.md` no workspace do Bradsson. Nova prévia e CI ainda pendentes.
+
+
 122/146 projetos com receita (83,56%); 92 main, 24 sem receita, 15 v9, 1 validated historico. SDK 1.5.3 / Desktop 3.0.0. Retomada transacional MML condicionada a midia genuina; Forza XDVDFS/XEX; Sonic GDI e verificacoes estruturais Switch/PS4. Oito binarios de componentes upstream compilados em cinco projetos, zero novos jogos completos ou homologados. 277 PASS C#, 122 parser, 44 Python, JS e regressao offline tripla aprovados. [Matriz](COBERTURA-R17C-2026-11-23.md) | [Relatorio](RODADA-17C-2026-11-23.md). PR #18 draft, sem merge/release. Historico preservado.
 
 ---
