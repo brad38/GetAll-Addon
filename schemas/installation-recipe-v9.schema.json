@@ -899,6 +899,62 @@
           }
         ]
       }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "fh1-reimagined",
+        "tag": "v0.3.9",
+        "source_url": "https://github.com/FH1-ReImagined/ForzaHorizon1-ReImagined/releases/tag/v0.3.9",
+        "operations": [],
+        "required_files": [
+          "forza-launcher.exe",
+          "README.txt",
+          "windows-build-manifest.json",
+          "project/forza-recomp/CMakeLists.txt",
+          "project/forza-recomp/forza_manifest.toml",
+          "licenses/ForzaHorizon1-ReImagined.txt"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua cópia original de Forza Horizon para Xbox 360: ISO, Games on Demand ou pasta extraída. O All-Fix prepara as ferramentas privadas e compila o jogo automaticamente. Ao concluir, use Jogar. Nenhuma mídia está incluída.",
+        "build_profile": "fh1-0.3.9-inno-prepare",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "Xbox 360 original; alternativa: Games on Demand ou pasta extraida"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "pinyon-shift",
+        "tag": "v0.9.5",
+        "source_url": "https://github.com/arcanite24/pinyon-shift/releases/tag/v0.9.5",
+        "operations": [],
+        "required_files": [
+          "PinyonShiftLauncher.exe",
+          "pinyon-shift-source.zip"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione seu disco original de Forza Horizon USA MS-2505 em ISO ou pasta extraída. O All-Fix prepara as ferramentas privadas e compila o jogo automaticamente. A variante v4 opcional exige o Title Update original verificado. Ao concluir, use Jogar.",
+        "build_profile": "pinyon-0.9.5-prepare",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "Xbox 360 USA MS-2505 / 4D5309C9"
+          }
+        ]
+      }
     }
   ]
 }

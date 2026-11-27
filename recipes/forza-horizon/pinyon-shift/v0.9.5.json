@@ -9,7 +9,7 @@
     "pinyon-shift-source.zip"
   ],
   "inputs": [],
-  "manual_steps": "Selecione a mídia original de Forza Horizon USA MS-2505. A variante v4 opcional exige o Title Update STFS original verificado; a compilação é local e separada da versão base.",
+  "manual_steps": "Selecione seu disco original de Forza Horizon USA MS-2505 em ISO ou pasta extraída. O All-Fix prepara as ferramentas privadas e compila o jogo automaticamente. A variante v4 opcional exige o Title Update original verificado. Ao concluir, use Jogar.",
   "build_profile": "pinyon-0.9.5-prepare",
   "preparation_media": [
     {

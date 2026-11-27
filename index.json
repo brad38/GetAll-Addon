@@ -1213,11 +1213,11 @@
       "tag": "v0.9.5",
       "schema_version": 9,
       "path": "recipes/forza-horizon/pinyon-shift/v0.9.5.json",
-      "sha256": "25c3058e09e3f2fe85ecb05d3a72290b1333df7c0d6d5e2a1b585a776e20439d",
+      "sha256": "2f6249960b261bd44075c18d9f47c0f0f005bf4bd8bc50a08dd1039ad69dd9d0",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.15"
+      "min_sdk_version": "1.5.67"
     },
     {
       "game_id": "dead-or-alive-xtreme-beach-volleyball",
@@ -1476,11 +1476,11 @@
       "tag": "v0.3.9",
       "schema_version": 9,
       "path": "recipes/forza-horizon/fh1-reimagined/v0.3.9.json",
-      "sha256": "2b7de0011cfbf6c41d90db177cb8363cd5ac88f13e0608c91eacae466b921bb9",
+      "sha256": "473c7b331cd973b1ba4ddf42d7310cf309a9bdd3d0a92797b5ee2a1eeab951d5",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.10"
+      "min_sdk_version": "1.5.67"
     },
     {
       "game_id": "mega-man-legends-rockman-dash",
@@ -1502,10 +1502,11 @@
       "tag": "build-07d0c49",
       "schema_version": 5,
       "path": "recipes/crash-team-racing/crash-team-racing-turbocharged/build-07d0c49.json",
-      "sha256": "7968a649b008f329b266e431ef7c9f899967b6f2eb47c7401457d65a48c97c4b",
+      "sha256": "0c6336cb7df342e16fc6e447288bd40b9958f49f1453520cec00fd9080373bde",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.67"
     },
     {
       "game_id": "super-metroid",
@@ -1514,10 +1515,11 @@
       "tag": "build-578f90b",
       "schema_version": 5,
       "path": "recipes/super-metroid/sm/build-578f90b.json",
-      "sha256": "b9b867fb4c6e9375b92066488e27917c4d16dc435b4dafc276876ed87621ee8e",
+      "sha256": "c84193604b8407fe5a13325054497836227f0c51b120fa9bf9fd36af68a86076",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.67"
     },
     {
       "game_id": "super-metroid",
@@ -1526,10 +1528,11 @@
       "tag": "build-5237873",
       "schema_version": 5,
       "path": "recipes/super-metroid/sm-rewrite/build-5237873.json",
-      "sha256": "3e1a8728b6d7b7ef4fe9731f860077e79cecc9d442cb56e19520958744baee0f",
+      "sha256": "8faa4a7223be77c1f393d4e21a8e2dd7f00cf0cef8619f61722b5bf47b94134e",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.67"
     },
     {
       "game_id": "mario-kart-double-dash",

@@ -4,19 +4,26 @@
 
 Branch `work/complete-install-flows-20261127`, a partir de GetAll `f0942a6`
 e Desktop `c209adc`, sem merge em main. O checkpoint confirmado registra
-**136/148 fluxos integrais**, vinte e dois acima de 114: sm64ex, Render96ex, sm64rt,
-Strikers Wii, WipEout, Dr. Mario, Double Dash C++, Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey, LAS, GOW 0.4.0, TotK, DKB, GT5, RyGT, Spartan, SSX e GTA Stories. Há um
-homologado histórico, 135 integrais aguardando mídia, 3 parciais, dois
-adiados pelo usuário e sete sem receita. Nenhum novo primeiro boot foi
+**138/148 fluxos integrais**, vinte e quatro acima de 114: sm64ex, Render96ex, sm64rt,
+Strikers Wii, WipEout, Dr. Mario, Double Dash C++, Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey, LAS, GOW 0.4.0, TotK, DKB, GT5, RyGT, Spartan, SSX, GTA Stories, FH1 ReImagined e Pinyon Shift. Há um
+homologado histórico, 137 integrais aguardando mídia, um parcial, dois
+anteriormente adiados agora em retomada, e sete sem receita. Nenhum novo primeiro boot foi
 comprovado. O índice tem **143 receitas para 141 projetos**, com uma entrada
 validated histórica e 142 experimentais.
 
 Desktop `6548ce0` está na PR3 draft, com CI Windows `46041444134`
-aprovado. Pinyon/FH1 seguem
-em verificação.
+aprovado. O fechamento seguinte está local em `11cfdbf`, seguido das
+alterações CTR/SM, SSX, Pinyon e FH1. GetAll `08276acd` também está local.
+O envio seguinte ao GitHub foi recusado pela revisão automática por exigir
+autorização direta para os repositórios, branches e conteúdo exatos. Nenhum
+novo CI remoto é atribuído a essas alterações locais. FH1 concluiu a prova nativa com 22/22 verificações em 503,188 s. Pinyon
+também concluiu seu provider: SDK, 78 objetos públicos, três renderizadores,
+DLSS e entrada Windows oficiais. SotC e Savage Wind estão em retomada
+para atender ao pedido atual de concluir todos os projetos viáveis.
 
-Build22 do harness: **0 erros, 0 avisos, 1.745 checks PASS**. O parser21
-aprovou **143/143 receitas** do GetAll `9caef66`. WipEout passou
+Build27b do harness: **0 erros, 0 avisos, 1.787 checks PASS, zero falhas**.
+O parser27 aprovou **143/143 receitas** tanto do GetAll publicado `9caef66`
+quanto da árvore atualizada com os novos textos e hashes. WipEout passou
 pela transação Run/Resume/registro/Jogar com compilação oficial e mídia
 sintética. Dr. Mario passou pela preparação nativa real, Python e geradores.
 Double Dash C++ passou pelo runtime completo e execução SDL/C++20 sem Visual

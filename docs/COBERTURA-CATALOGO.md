@@ -2,17 +2,17 @@
 
 ## Checkpoint de desenvolvimento — SDK 1.5.67, 27/11/2026
 
-Estado confirmado: **136/148 projetos com fluxo integral implementado**,
-incluindo um homologado histórico; 3 parciais, dois adiados pelo usuário e
-sete sem receita. Há 143 receitas para 141 projetos. Os vinte e dois fluxos fechados são
+Estado confirmado: **138/148 projetos com fluxo integral implementado**,
+incluindo um homologado histórico; um parcial, dois anteriormente adiados
+agora em retomada e sete sem receita. Há 143 receitas para 141 projetos. Os vinte e quatro fluxos fechados são
 sm64ex, Render96ex, sm64rt, Strikers Wii, WipEout, Dr. Mario, Double Dash C++,
-Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey, LAS, GOW 0.4.0, TotK, DKB, GT5, RyGT, Spartan, SSX e GTA Stories. Pinyon/FH1 seguem em verificação.
+Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey, LAS, GOW 0.4.0, TotK, DKB, GT5, RyGT, Spartan, SSX, GTA Stories, FH1 ReImagined e Pinyon Shift. SotC e Savage Wind estão em implementação.
 
-A verificação conjunta do build 22 passou em **1.745 checks**, e o parser21 aprovou 143/143. Nenhum teste
+A verificação conjunta do build27b passou em **1.787 checks**, e o parser27 aprovou 143/143 tanto no índice publicado quanto no atualizado. Nenhum teste
 sintético foi convertido em homologação. O histórico detalhado abaixo conserva
 os estados da época; para a implementação atual, ver
 [SDK 1.5.67](validations/sdk167-flow-completion.md) e a matriz individual
-`MATRIZ-FUNCIONAL.md` no workspace do Bradsson. CI Desktop/GetAll aprovado; nova prévia em fechamento.
+`MATRIZ-FUNCIONAL.md` no workspace do Bradsson. Os CIs aprovados são dos commits publicados anteriores; o fechamento atual é local e a nova prévia está em preparação.
 
 
 122/146 projetos com receita (83,56%); 92 main, 24 sem receita, 15 v9, 1 validated historico. SDK 1.5.3 / Desktop 3.0.0. Retomada transacional MML condicionada a midia genuina; Forza XDVDFS/XEX; Sonic GDI e verificacoes estruturais Switch/PS4. Oito binarios de componentes upstream compilados em cinco projetos, zero novos jogos completos ou homologados. 277 PASS C#, 122 parser, 44 Python, JS e regressao offline tripla aprovados. [Matriz](COBERTURA-R17C-2026-11-23.md) | [Relatorio](RODADA-17C-2026-11-23.md). PR #18 draft, sem merge/release. Historico preservado.
