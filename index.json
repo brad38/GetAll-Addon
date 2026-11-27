@@ -802,7 +802,7 @@
       "tag": "v0.9.6",
       "schema_version": 3,
       "path": "recipes/earthworm-jim-hd/earthworm-jim-hd-recompiled/v0.9.6.json",
-      "sha256": "09855fb04ce20fd5ccafc1a2ef2dcb6dae2acb37075d23a00ac56bc6e4d26541",
+      "sha256": "7cad2cc46559b73033010ebcc3245906a9a2d33dceb16d6fa77bf57eb55209f1",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -814,7 +814,7 @@
       "tag": "v0.0.7.1",
       "schema_version": 3,
       "path": "recipes/the-simpsons-game/thesimpsonsgamerecomp/v0.0.7.1.json",
-      "sha256": "571ed74a9508d500276582c0c98638f7256f90ef687d250a75fc87923618d073",
+      "sha256": "055109f580bf053923043f5833685f94e496825b3e82bf1e3f29ea798ac48dfd",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
@@ -850,7 +850,7 @@
       "tag": "v0.1.1",
       "schema_version": 3,
       "path": "recipes/3-on-3-nhl-arcade/3on3nhl-recomp/v0.1.1.json",
-      "sha256": "e647215a89dfe0f1c833831426babfb16c40277d16ae215c9b12051fedb13361",
+      "sha256": "fc6ee98fcb4344853ec12acea53865c091046ce4a8cf6f0da8a7a14bfb4eff92",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true

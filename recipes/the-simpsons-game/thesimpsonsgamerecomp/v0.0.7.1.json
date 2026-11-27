@@ -11,6 +11,6 @@
     "extract-xiso.exe"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial The Simpsons Game Recompiled (v0.0.7.1) foi extraido. Execute simpsons-launcher.exe, abra a aba Install, selecione sua imagem .iso original de The Simpsons Game (Xbox 360) e clique em Play apos a extracao. Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "Com o ZIP Windows NoAVX2 v0.0.7.1, selecione a ISO integral original dos EUA para Xbox 360. O GetAll confere a edição, importa os recursos e inicia o executável oficial. Em versões do All-Fix sem esse perfil ou com o outro ZIP, mantenha a importação pelo launcher oficial.",
   "launch_file": "simpsons-launcher.exe"
 }

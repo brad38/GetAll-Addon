@@ -11,6 +11,6 @@
     "EarthwormJimHD/README.txt"
   ],
   "inputs": [],
-  "manual_steps": "O pacote oficial Earthworm Jim HD Recompiled (v0.9.6) foi extraido. Execute earthworm_jim_hd.exe em EarthwormJimHD/, clique em Install from package... e aponte seu pacote XBLA legitimo (Title ID 584109E2/000D0000/, com default.xex SHA-1 62d9d28a3bce42843607c26ab4b200e91cb31203). Nenhum arquivo comercial e distribuido pelo GetAll-Addon.",
+  "manual_steps": "Selecione o pacote XBLA original da edição mundial (584109E2). O GetAll verifica o pacote e os dados extraídos antes de abrir o port instalado. Em versões anteriores, use a opção de instalação do launcher oficial.",
   "launch_file": "EarthwormJimHD/earthworm_jim_hd.exe"
 }
