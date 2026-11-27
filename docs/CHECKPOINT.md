@@ -1,3 +1,7 @@
+# SM64Plus - continuidade isolada SDK 1.5.64
+
+Nova receita experimental build-85c3e51; 142 receitas para 140 projetos. 114/148 fluxos integrais implementados, incluindo 1 homologado; SM64Plus aguarda ROM original e primeiro boot. Evidencias e limites em docs/validations/sm64plus-build-85c3e51.md. Branch isolada feat/sm64plus-handoff; nao modifica a branch concorrente.
+
 # Checkpoint do GetAll-Addon
 
 ## SDK 1.5.46

@@ -1,0 +1,17 @@
+{
+    "schema_version":  5,
+    "project_id":  "sm64plus",
+    "tag":  "build-85c3e51",
+    "source_url":  "https://github.com/MorsGames/sm64plus/commit/85c3e5198f051b990da98ec0bcb7fc9f3197df65",
+    "operations":  [
+
+                   ],
+    "required_files":  [
+                           "source.zip",
+                           "README.md"
+                       ],
+    "inputs":  [
+
+               ],
+    "manual_steps":  "Selecione a ROM original americana de Super Mario 64 (8 MiB, .z64). O motor verifica a ROM e compila o port Windows x64 com a toolchain privada. Nenhuma ROM e distribuida."
+}

@@ -6,6 +6,7 @@ on:
     branches:
       - main
       - feat/marathon-xbox-media-import
+      - feat/sm64plus-handoff
   workflow_dispatch:
 
 permissions:
