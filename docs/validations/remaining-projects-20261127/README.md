@@ -1,5 +1,9 @@
 # Contratos restantes reavaliados — 27/11/2026
 
+> Registro histórico anterior ao fechamento SDK169. Metaforce e MKW foram
+> integrados e validados depois desta investigação; o estado atual é 142/148,
+> com os seis contratos restantes descritos na [integração SDK169](../sdk169-integration/README.md).
+
 A contagem continua em **140/148 fluxos integrais implementados**. Este registro
 preserva as verificações das fontes e o que cada projeto ainda exige. Não
 representa nova receita, instalação ou homologação. Metaforce e MKW estão em

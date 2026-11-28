@@ -1,6 +1,6 @@
 # SDK 1.5.69 — consolidação do armazenamento
 
-Os sete lotes de limpeza registrados removem **11.797 arquivos e 5.389.561.073 bytes lógicos**: aproximadamente **5,39 GB** (5,02 GiB). Este documento consolida remoções já executadas; sua criação e atualização não executaram novas exclusões.
+Os oito lotes de limpeza registrados no Windows Bradsson removem **11.890 arquivos e 5.571.039.928 bytes lógicos**: aproximadamente **5,57 GB** (5,19 GiB). Este documento consolida remoções já executadas; sua criação e atualização não executaram novas exclusões.
 
 | Parcela | Arquivos removidos | Bytes lógicos removidos |
 | --- | ---: | ---: |
@@ -8,7 +8,10 @@ Os sete lotes de limpeza registrados removem **11.797 arquivos e 5.389.561.073 b
 | Último lote MKW: cópias verificadas de nvdisasm | 6 | 35.684.352 |
 | Último lote MKW: fixtures autorais | 62 | 14.933 |
 | Lote posterior à validação integrada 31d: ZIP duplicado e transporte base64 | 2 | 21.658.683 |
-| **Total dos sete lotes** | **11.797** | **5.389.561.073** |
+| Limpeza final SDK169: candidato redundante e saídas falhas 31/31b/31c | 93 | 181.478.855 |
+| **Total dos oito lotes Windows** | **11.890** | **5.571.039.928** |
+
+Os **17.080 bytes** removidos separadamente no ambiente temporário scratch não entram no total Windows acima.
 
 As duas parcelas MKW pertencem à mesma execução. Bytes lógicos são os tamanhos dos arquivos removidos, não uma medição atual do espaço livre. O recibo MKW não registra espaço livre antes/depois; atividades concorrentes impedem inferir esse valor pela soma dos lotes.
 
@@ -49,6 +52,26 @@ O espaço livre observado nesse lote passou de **103.018.151.936 para 103.039.76
 
 O kit autoral histórico ficou intencionalmente incompleto após retirar sua cópia de fonte; a reprodução deve usar uma pasta nova e o cache compartilhado preservado. O recibo declara que mídia original, dados pessoais, build ativo, harness, toolchains e dependências compartilhadas ficaram fora do escopo de remoção.
 
+## Limpeza final SDK169
+
+O [recibo final](final-cleanup/result.json) tem **25.640 bytes**, SHA256 `fa2215792b510614036a44b1297d11b23b908d7d806215b1145b58e8fcae4ef3`, resultado `PASS` e término em `2026-11-28T00:55:27.864523+00:00` (27/11/2026, 21:55:27, em Fortaleza).
+
+| Saída descartável própria da tarefa | Arquivos | Bytes lógicos |
+| --- | ---: | ---: |
+| Candidato Desktop intermediário, redundante após montar a prévia completa | 80 | 165.754.040 |
+| Pasta vazia do harness 31 | 0 | 0 |
+| Saída incompleta do harness 31b | 3 | 116.109 |
+| Saída do harness 31c cuja regressão falhou | 10 | 15.608.706 |
+| **Total do lote** | **93** | **181.478.855** |
+
+Antes de remover o candidato, seus três recibos `ARTIFACT-MANIFEST.json`, `SHA256SUMS.txt` e `RESOURCE-AUDIT.json` foram arquivados em [candidate-receipts](final-cleanup/candidate-receipts). Esta consolidação conferiu os tamanhos e hashes das três cópias, além do plano e do script da remoção.
+
+O recibo confirma **cinco raízes e 253 arquivos preservados por hash**: as prévias completas SDK167, SDK168 e SDK169, o harness 30 e o harness 31d aprovado. Os recibos das falhas anteriores também foram preservados. O manifesto da prévia completa SDK169 permaneceu com SHA256 `18cbb75144560fbacbe20708b0b3a63a95577d85490a814cc4dece4d770d9590`.
+
+O plano tem SHA256 `7e9298276b3c2fdfdda238e5e33f3862c24c2e36079691cbb95ab62bfa3ecfcb`; o script de execução tem SHA256 `ae62a7c0fa2cc0f027262b0cfd0573a49c6293fcf7774b237ac186109188f72b`. Fontes, `bin/obj` do repositório, caches, ferramentas compartilhadas, originais e arquivos pessoais ficaram fora das raízes de remoção.
+
+O espaço livre observado nessa rodada passou de **102.123.524.096 para 102.305.079.296 bytes**, variação de **+181.555.200 bytes**. Trata-se da medição da rodada, distinta dos tamanhos lógicos removidos e sem representar o espaço livre atual.
+
 ## Base dos cinco lotes anteriores
 
 O subtotal de 11.727 arquivos e 5.332.203.105 bytes vem do [relatório de limpeza Metaforce](../metaforce-de8fc69/CLEANUP-OBJECTS.md), com 3.497 bytes e SHA256 `fcbb49b881b18bbb3f718a54e1c5ea19fec222908f26e44f576319afd33cd959` nesta consolidação. Esse relatório registra os cinco lotes e identifica os dois recibos Metaforce:
@@ -68,6 +91,6 @@ O hash de `LIMPEZA-ARMAZENAMENTO.md` registrado após esses cinco lotes é `74ba
 
 ## Alcance desta verificação
 
-O [resumo estruturado](storage-summary.json) conserva a origem dos números e os hashes. Os recibos MKW e Policy31d foram verificados diretamente a partir das cópias locais integrais. O subtotal anterior foi conferido contra o relatório local já existente; os recibos Windows dos cinco lotes anteriores não foram reabertos nesta tarefa. Portanto, este registro não declara uma nova inspeção do disco Windows nem uma nova medição de espaço disponível.
+O [resumo estruturado](storage-summary.json) conserva a origem dos números e os hashes. Os recibos MKW, Policy31d e da limpeza final SDK169 foram verificados diretamente a partir das cópias locais integrais. O subtotal anterior foi conferido contra o relatório local já existente; os recibos Windows dos cinco lotes anteriores não foram reabertos nesta tarefa. Portanto, este registro não declara uma nova inspeção do disco Windows nem uma nova medição de espaço disponível.
 
 Fontes, receitas, scripts de reprodução, logs relevantes, resultados, manifestos e hashes continuam preservados. Caches e toolchains compartilhados permanecem reutilizáveis. A consolidação não duplica executáveis, toolchains, mídia ou extrações temporárias.

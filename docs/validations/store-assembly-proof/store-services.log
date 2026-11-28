@@ -1,0 +1,22 @@
+PASS MKW store assembly: real Desktop assembly loaded
+DESKTOP_ASSEMBLY_SHA256=3c6ad7c8909888c13452777db37a6ddea940281f533b8588ba0852984ca2c44d
+PASS MKW store assembly: loaded Desktop contains the reviewed alias and immutable official pin
+PASS MKW store assembly: real resolver accepts the exact pin for adriadam10/mkw-recomp
+PASS MKW store assembly: real resolver accepts the exact pin for ADRIADAM10/MKW-RECOMP
+PASS MKW store assembly: real resolver rejects altered local-alias asset: https://github.com/adriadam10/mkw-recomp/releases/tag/v0.1.18
+PASS MKW store assembly: real resolver rejects altered local-alias asset: http://github.com/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip
+PASS MKW store assembly: real resolver rejects altered local-alias asset: https://github.com.evil.invalid/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip
+PASS MKW store assembly: real resolver rejects altered local-alias asset: https://github.com:444/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip
+PASS MKW store assembly: real resolver rejects altered local-alias asset: https://user@github.com/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip
+PASS MKW store assembly: real resolver rejects altered local-alias asset: https://github.com/adriadam10/mkw-recomp/releases/download/v0.1.18-allfix-cli/mkw-recomp-0.1.18-windows-x64.zip
+PASS MKW store assembly: real resolver rejects altered local-alias asset: https://github.com/adriadam10/mkw-recomp/releases/download/v0.1.17/mkw-recomp-0.1.18-windows-x64.zip
+PASS MKW store assembly: real resolver rejects altered local-alias asset: https://github.com/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip?download=1
+PASS MKW store assembly: real resolver rejects altered local-alias asset: https://github.com/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip#fragment
+PASS MKW store assembly: real resolver rejects altered local-alias asset: https://github.com/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip.altered
+PASS MKW store assembly: real resolver rejects altered local-alias asset: relative.zip
+PASS MKW store assembly: real resolver rejects altered local-alias asset: 
+PASS MKW store assembly: real catalog returns the explicit local variant, force=False
+PASS MKW store assembly: real catalog returns the explicit local variant, force=True
+PASS MKW store assembly: actual cache merge rejects malformed entries and keeps both local and upstream identities
+PASS MKW store assembly: no HTTP request started in either real service
+MKW_CLI_STORE_ASSEMBLY_PASS checks=20

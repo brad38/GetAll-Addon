@@ -1,0 +1,347 @@
+{
+  "checked_records": 100,
+  "missing": [
+    {
+      "group": "notices",
+      "item": {
+        "source_root": "task",
+        "source": "publish-getall-media-100\\KnowYourRole-LICENSE.txt",
+        "target": "KnowYourRole-LICENSE.txt",
+        "bytes": 1065,
+        "sha256": "9554cd8f4da9fe311221e8ddddfe7dc9aae255da096b28cb15f77cf09406ba0f"
+      },
+      "actual": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-media-100\\KnowYourRole-LICENSE.txt",
+        "exists": false,
+        "bytes": null,
+        "sha256": null
+      },
+      "identical_preserved": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\KnowYourRole-LICENSE.txt",
+          "exists": true,
+          "bytes": 1065,
+          "sha256": "9554cd8f4da9fe311221e8ddddfe7dc9aae255da096b28cb15f77cf09406ba0f"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\KnowYourRole-LICENSE.txt",
+          "exists": true,
+          "bytes": 1065,
+          "sha256": "9554cd8f4da9fe311221e8ddddfe7dc9aae255da096b28cb15f77cf09406ba0f"
+        }
+      ]
+    },
+    {
+      "group": "notices",
+      "item": {
+        "source_root": "task",
+        "source": "publish-getall-media-100\\KnowYourRole-THIRD-PARTY-NOTICES.txt",
+        "target": "KnowYourRole-THIRD-PARTY-NOTICES.txt",
+        "bytes": 1717,
+        "sha256": "7469cb89e59969aa3750333c111a06b5dc571c54f4d60a0e07c033214998cad3"
+      },
+      "actual": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-media-100\\KnowYourRole-THIRD-PARTY-NOTICES.txt",
+        "exists": false,
+        "bytes": null,
+        "sha256": null
+      },
+      "identical_preserved": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\KnowYourRole-THIRD-PARTY-NOTICES.txt",
+          "exists": true,
+          "bytes": 1717,
+          "sha256": "7469cb89e59969aa3750333c111a06b5dc571c54f4d60a0e07c033214998cad3"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\KnowYourRole-THIRD-PARTY-NOTICES.txt",
+          "exists": true,
+          "bytes": 1717,
+          "sha256": "7469cb89e59969aa3750333c111a06b5dc571c54f4d60a0e07c033214998cad3"
+        }
+      ]
+    },
+    {
+      "group": "notices",
+      "item": {
+        "source_root": "task",
+        "source": "publish-getall-media-100\\SpaghettiKart-Torch-LICENSE.txt",
+        "target": "SpaghettiKart-Torch-LICENSE.txt",
+        "bytes": 1081,
+        "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+      },
+      "actual": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-media-100\\SpaghettiKart-Torch-LICENSE.txt",
+        "exists": false,
+        "bytes": null,
+        "sha256": null
+      },
+      "identical_preserved": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\Helper-Licenses\\Ghostship-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\Helper-Licenses\\Paperboat-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\Helper-Licenses\\Starship\\Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\Lighthouse-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\SpaghettiKart-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\Helper-Licenses\\Ghostship-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\Helper-Licenses\\Paperboat-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\Helper-Licenses\\Starship\\Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\Lighthouse-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\SpaghettiKart-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        }
+      ]
+    },
+    {
+      "group": "notices",
+      "item": {
+        "source_root": "task",
+        "source": "publish-getall-media-100\\Lighthouse-Torch-LICENSE.txt",
+        "target": "Lighthouse-Torch-LICENSE.txt",
+        "bytes": 1081,
+        "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+      },
+      "actual": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-media-100\\Lighthouse-Torch-LICENSE.txt",
+        "exists": false,
+        "bytes": null,
+        "sha256": null
+      },
+      "identical_preserved": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\Helper-Licenses\\Ghostship-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\Helper-Licenses\\Paperboat-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\Helper-Licenses\\Starship\\Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\Lighthouse-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\SpaghettiKart-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\Helper-Licenses\\Ghostship-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\Helper-Licenses\\Paperboat-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\Helper-Licenses\\Starship\\Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\Lighthouse-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\SpaghettiKart-Torch-LICENSE.txt",
+          "exists": true,
+          "bytes": 1081,
+          "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+        }
+      ]
+    },
+    {
+      "group": "notices",
+      "item": {
+        "source_root": "task",
+        "source": "publish-getall-media-100\\Nectar-Extractor-Sources.zip",
+        "target": "Nectar-Extractor-Sources.zip",
+        "bytes": 31527,
+        "sha256": "89403d5c78a362107a1ddee41ce929bb420ad4b83382a38b74c22b0075c8a9f6"
+      },
+      "actual": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-media-100\\Nectar-Extractor-Sources.zip",
+        "exists": false,
+        "bytes": null,
+        "sha256": null
+      },
+      "identical_preserved": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\Nectar-Extractor-Sources.zip",
+          "exists": true,
+          "bytes": 31527,
+          "sha256": "89403d5c78a362107a1ddee41ce929bb420ad4b83382a38b74c22b0075c8a9f6"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\Nectar-Extractor-Sources.zip",
+          "exists": true,
+          "bytes": 31527,
+          "sha256": "89403d5c78a362107a1ddee41ce929bb420ad4b83382a38b74c22b0075c8a9f6"
+        }
+      ]
+    },
+    {
+      "group": "notices",
+      "item": {
+        "source_root": "task",
+        "source": "publish-getall-media-100\\Picori-Extractor-Sources.zip",
+        "target": "Picori-Extractor-Sources.zip",
+        "bytes": 5397861,
+        "sha256": "d5cd9311028bfceb031a97aaa0d280ba1a5f3ad203f7fa765e133b9029b68082"
+      },
+      "actual": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-media-100\\Picori-Extractor-Sources.zip",
+        "exists": false,
+        "bytes": null,
+        "sha256": null
+      },
+      "identical_preserved": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\Picori-Extractor-Sources.zip",
+          "exists": true,
+          "bytes": 5397861,
+          "sha256": "d5cd9311028bfceb031a97aaa0d280ba1a5f3ad203f7fa765e133b9029b68082"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\Picori-Extractor-Sources.zip",
+          "exists": true,
+          "bytes": 5397861,
+          "sha256": "d5cd9311028bfceb031a97aaa0d280ba1a5f3ad203f7fa765e133b9029b68082"
+        }
+      ]
+    },
+    {
+      "group": "notices",
+      "item": {
+        "source_root": "task",
+        "source": "publish-getall-media-100\\GT4-Disc-Helper-Sources.zip",
+        "target": "GT4-Disc-Helper-Sources.zip",
+        "bytes": 3986,
+        "sha256": "d64de2eaa8cc02070748d10a869886ee97865329c2188eecccd07126411242dd"
+      },
+      "actual": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-media-100\\GT4-Disc-Helper-Sources.zip",
+        "exists": false,
+        "bytes": null,
+        "sha256": null
+      },
+      "identical_preserved": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\GT4-Disc-Helper-Sources.zip",
+          "exists": true,
+          "bytes": 3986,
+          "sha256": "d64de2eaa8cc02070748d10a869886ee97865329c2188eecccd07126411242dd"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\GT4-Disc-Helper-Sources.zip",
+          "exists": true,
+          "bytes": 3986,
+          "sha256": "d64de2eaa8cc02070748d10a869886ee97865329c2188eecccd07126411242dd"
+        }
+      ]
+    },
+    {
+      "group": "notices",
+      "item": {
+        "source_root": "task",
+        "source": "publish-getall-media-100\\GT4Recomp-LICENSE.txt",
+        "target": "GT4Recomp-LICENSE.txt",
+        "bytes": 1614,
+        "sha256": "6ef414e487d2d012008577155da07cd87e65e3d0711ef1d0bf2424191265a54e"
+      },
+      "actual": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-media-100\\GT4Recomp-LICENSE.txt",
+        "exists": false,
+        "bytes": null,
+        "sha256": null
+      },
+      "identical_preserved": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127\\GT4Recomp-LICENSE.txt",
+          "exists": true,
+          "bytes": 1614,
+          "sha256": "6ef414e487d2d012008577155da07cd87e65e3d0711ef1d0bf2424191265a54e"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127\\GT4Recomp-LICENSE.txt",
+          "exists": true,
+          "bytes": 1614,
+          "sha256": "6ef414e487d2d012008577155da07cd87e65e3d0711ef1d0bf2424191265a54e"
+        }
+      ]
+    }
+  ],
+  "mismatches": [],
+  "missing_properties": [],
+  "old_preserved_count": 3,
+  "old_preserved_invalid": [],
+  "free_bytes": 103030587392,
+  "git_head": "921295de12349e726f7ca21a5edd8a8ecee123d8"
+}

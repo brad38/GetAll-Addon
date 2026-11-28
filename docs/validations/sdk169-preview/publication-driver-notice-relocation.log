@@ -1,0 +1,21 @@
+PRESERVED_PREVIEW_138_PASS (SDK167 and addon1.5.72 unchanged)
+PRESERVED_PREVIEW_140_PASS (SDK168 and addon1.5.73 unchanged)
+DESKTOP_CANDIDATE_INPUTS_PASS sdk=1.5.69 properties=12 resources=35 notices=71
+8.0.425
+  Determinando os projetos a serem restaurados...
+  C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\AddonSdk\AllFix.Addons.Sdk.csproj restaurado (em 76 ms).
+  C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\AllFix.Desktop.csproj restaurado (em 1,41 seg).
+  AllFix.Addons.Sdk -> C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\AddonSdk\bin\Release\net8.0\AllFix.Addons.Sdk.dll
+  AllFix.Desktop -> C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\bin\Release\net8.0-windows\win-x64\AllFix.dll
+  AllFix.Desktop -> C:\Users\bradg\Downloads\GetAll-R18\publish-desktop-final-sdk169-20261127.staging-run-20261128T004740Z-d8548a9f\
+BUNDLE_EXTRACTED assemblies=2
+RESOURCE_AUDIT_PASS resources=35 desktop=3.0.0.0 sdk=1.5.69.0
+PRESERVED_PREVIEW_138_PASS (SDK167 and addon1.5.72 unchanged)
+PRESERVED_PREVIEW_140_PASS (SDK168 and addon1.5.73 unchanged)
+PRESERVED_PREVIEW_138_PASS (SDK167 and addon1.5.72 unchanged)
+PRESERVED_PREVIEW_140_PASS (SDK168 and addon1.5.73 unchanged)
+DESKTOP_CANDIDATE_VERIFIED sdk=1.5.69 resources=35 notices=71 addon_included=false
+PRESERVED_PREVIEW_138_PASS (SDK167 and addon1.5.72 unchanged)
+PRESERVED_PREVIEW_140_PASS (SDK168 and addon1.5.73 unchanged)
+DESKTOP_CANDIDATE_VERIFIED sdk=1.5.69 resources=35 notices=71 addon_included=false
+DESKTOP_CANDIDATE_READY C:\Users\bradg\Downloads\GetAll-R18\publish-desktop-final-sdk169-20261127

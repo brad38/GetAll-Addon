@@ -1,0 +1,10 @@
+{
+    "status":  "verified",
+    "desktop_commit":  "921295de12349e726f7ca21a5edd8a8ecee123d8",
+    "sdk_version":  "1.5.69",
+    "addon_included":  false,
+    "publish":  "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127",
+    "completed_utc":  "2026-11-28T00:48:12.7444605Z",
+    "allfix_sha256":  "b558afccf6fa50ec9a3899b66055009f04f8ce71cfc4dbcc6ab3886bd0433fcd",
+    "manifest_sha256":  "aa85bbe915f2a8d975a8fa0139dea79d145d8c0a0107464941505a7f528a01e3"
+}

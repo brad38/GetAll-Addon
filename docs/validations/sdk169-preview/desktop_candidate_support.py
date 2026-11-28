@@ -65,6 +65,33 @@ def preserve_previous(support, base, task_root):
     print('PRESERVED_PREVIEW_140_PASS (SDK168 and addon1.5.73 unchanged)')
 
 
+def relocate_notices(support, inputs, task_root):
+    path = HERE/'notice-relocations.json'
+    relocations = support.read_json(path)
+    require(relocations.get('format') == 1 and
+            relocations.get('preserved_preview_manifest_sha256') == SDK168_MANIFEST,
+            'Unexpected notice relocation contract')
+    require(digest(task_root/'publish-getall-sdk168-20261127/ARTIFACT-MANIFEST.json') ==
+            SDK168_MANIFEST, 'Notice source preview manifest changed')
+    seen = set()
+    for row in relocations['files']:
+        target = row['target']
+        require(target not in seen and row['source_root'] == 'task' and
+                row['source'] == 'publish-getall-sdk168-20261127/' + target.replace('\\', '/'),
+                'Unexpected or repeated relocated notice')
+        seen.add(target)
+        matches = [item for item in inputs['notices'] if item['target'] == target]
+        require(len(matches) == 1, 'Missing unique original notice: ' + target)
+        item = matches[0]
+        require((item['source_root'], item['source'], item['bytes'], item['sha256']) ==
+                ('task', row['previous_source'], row['bytes'], row['sha256']),
+                'Original notice pin changed: ' + target)
+        support.check_record(task_root, row)
+        item['previous_source'] = item['source']
+        item['source'] = row['source']
+    inputs['notice_relocation_sha256'] = digest(path)
+
+
 def preflight(args):
     support, base, history = audited_tools(args.task_root)
     support.check_checkout(args.git, args.desktop_root, args.desktop_commit)
@@ -72,6 +99,7 @@ def preflight(args):
     inputs.update(task_root=str(args.task_root.absolute()), desktop_root=str(args.desktop_root.absolute()),
                   desktop_commit=args.desktop_commit, sdk_version='1.5.69', desktop_only=True,
                   predecessor_inputs_sha256=digest(history/BASE_INPUTS), predecessor_sdk_version='1.5.67')
+    relocate_notices(support, inputs, args.task_root)
     extra_path = HERE/'mkw-publish-inputs.json'
     extra = support.read_json(extra_path)
     require(extra.get('format') == 1 and len(extra.get('resources', [])) == 1 and
@@ -136,6 +164,7 @@ def finish(args):
         'remote_recipes_modified': False, 'native_resources_verified': len(inputs['resources']),
         'notices_verified': len(inputs['notices']), 'native_properties_verified': len(inputs['properties']),
         'source_inputs_sha256': digest(history/BASE_INPUTS), 'mkw_inputs_sha256': inputs['mkw_inputs_sha256'],
+        'notice_relocation_sha256': inputs['notice_relocation_sha256'],
         'audit_reuse_sha256': inputs['audit_reuse_sha256'],
         'effective_inputs_sha256': digest(args.inputs), 'preserved_preview138_manifest_sha256': OLD_MANIFEST,
         'preserved_preview140_manifest_sha256': SDK168_MANIFEST,

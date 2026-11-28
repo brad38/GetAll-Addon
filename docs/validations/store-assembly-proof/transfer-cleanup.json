@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "scope": "Scratch-only transport copies created by this proof; no Windows artifacts removed",
+  "status": "PASS",
+  "removed_files": [
+    {
+      "path": "sdk169-publish/store-assembly-proof.zip",
+      "bytes": 7320,
+      "sha256": "4cd5d68e4c77bbb4d008c2fea94d44b9602563a4e93d36df5b30b8fa9f55d8e6"
+    },
+    {
+      "path": "sdk169-publish/store-assembly-proof.zip.b64",
+      "bytes": 9760,
+      "sha256": "8a8bbf2dbb8091d8d6736c2d0482be7a00f2219144e781ca34f8e7aa5a4ca288"
+    }
+  ],
+  "removed_bytes": 17080,
+  "preserved": "Six proof source files in the repository and Windows, all logs/results/manifests, normal build output, audited candidate and final previews"
+}

@@ -1,0 +1,42 @@
+{
+  "format": 1,
+  "normalization": "UTF-8 without BOM, LF; originals retained on Windows",
+  "files": [
+    {
+      "path": "preview-result.json",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\preview-sdk169-20261127\\preview-result.json",
+      "source_bytes": 846,
+      "source_sha256": "38ab9d2cd15eb0335da5652b772aabaa34e67f418c687f4fc13b46a3d943d74e",
+      "source_encoding": "utf-8",
+      "bytes": 846,
+      "sha256": "38ab9d2cd15eb0335da5652b772aabaa34e67f418c687f4fc13b46a3d943d74e"
+    },
+    {
+      "path": "package-preview.log",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\preview-sdk169-20261127\\package-preview.log",
+      "source_bytes": 13,
+      "source_sha256": "9fa3b6ead7afc298499f30c5b70014c78b6686a8269611537606fa5a7c02b6a2",
+      "source_encoding": "utf-8",
+      "bytes": 13,
+      "sha256": "9fa3b6ead7afc298499f30c5b70014c78b6686a8269611537606fa5a7c02b6a2"
+    },
+    {
+      "path": "full-preview/ARTIFACT-MANIFEST.json",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk169-20261127\\ARTIFACT-MANIFEST.json",
+      "source_bytes": 15282,
+      "source_sha256": "18cbb75144560fbacbe20708b0b3a63a95577d85490a814cc4dece4d770d9590",
+      "source_encoding": "utf-8",
+      "bytes": 15282,
+      "sha256": "18cbb75144560fbacbe20708b0b3a63a95577d85490a814cc4dece4d770d9590"
+    },
+    {
+      "path": "full-preview/SHA256SUMS.txt",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk169-20261127\\SHA256SUMS.txt",
+      "source_bytes": 8755,
+      "source_sha256": "40816c82522652067835c7dfbaa70ee860b1b500d3e5be4b67c7664f3ea64bab",
+      "source_encoding": "utf-8",
+      "bytes": 8755,
+      "sha256": "40816c82522652067835c7dfbaa70ee860b1b500d3e5be4b67c7664f3ea64bab"
+    }
+  ]
+}

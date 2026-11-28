@@ -1,0 +1,931 @@
+{
+  "format": 1,
+  "task_root": "C:\\Users\\bradg\\Downloads\\GetAll-R18",
+  "desktop_root": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127",
+  "desktop_version": "3.0.0",
+  "sdk_version": "1.5.69",
+  "preview_version": "1.5.72",
+  "catalog_commit": "3f4603cf42ef43402b4a0a9470232e7d4fcd9eb9",
+  "prefixes": [
+    "AllFix.Tools.",
+    "DrMario64.",
+    "ForzaNative.",
+    "MkwSm86.",
+    "PinyonNative.",
+    "Sm64Build.",
+    "SsxNative.",
+    "UnleashedHelper."
+  ],
+  "properties": {
+    "SoHTorchPath": "console-cache\\soh-torch.exe",
+    "TwoShipZapdPath": "console-cache\\2ship-zapd.exe",
+    "PaperboatTorchPath": "console-cache\\paperboat-torch.exe",
+    "GhostshipTorchPath": "console-cache\\ghostship-torch.exe",
+    "StarshipTorchPath": "console-cache\\starship-torch.exe",
+    "SpaghettiTorchPath": "evidence-r18\\after-1.5.31\\spaghetti-torch-build\\Release\\torch.exe",
+    "SpaghettiDefinesPath": "evidence-r18\\after-1.5.31\\spaghetti-defines.h",
+    "LighthouseTorchPath": "evidence-r18\\after-1.5.31\\lighthouse-torch-build\\Release\\torch.exe",
+    "PicoriExtractorPath": "evidence-r18\\after-1.5.31\\picori-helper-win-x64\\asset_extractor.exe",
+    "NectarExtractorPath": "evidence-r18\\after-1.5.31\\nectar-1.3-native\\nectar-extract.exe",
+    "KnowYourRoleBuilderPath": "evidence-r18\\after-1.5.31\\know-role-builder\\KnowYourRole.exe",
+    "Gt4DiscHelperPath": "evidence-r18\\gt4-setup-contract\\helper-production-4\\getall-gt4-disc.exe"
+  },
+  "resources": [
+    {
+      "name": "SsxNative.source-support.zip",
+      "source_root": "desktop",
+      "source": "Tools\\SsxNative\\source-support.zip",
+      "group": "ssx",
+      "bytes": 601221,
+      "sha256": "054ae3be11679a61050033ccae491883c10b223c40fdd4a96512859b4e23715a"
+    },
+    {
+      "name": "Sm64Build.sm64plus-ucrt64.lock.json",
+      "source_root": "desktop",
+      "source": "Tools\\Sm64Build\\sm64plus-ucrt64.lock.json",
+      "group": "auxiliary",
+      "bytes": 15305,
+      "sha256": "4473152bf4b00ae9da3f0cae330d1a86a1a2dcba2aafc499588ef26afcc7a0e4"
+    },
+    {
+      "name": "DrMario64.file_to_c.exe",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\file_to_c.exe",
+      "group": "drmario64",
+      "bytes": 293376,
+      "sha256": "f6a50cab4253e291a2c18359afc34e5eddd71ba97eea1e4b039d8108017a2009"
+    },
+    {
+      "name": "DrMario64.N64Recomp.exe",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\N64Recomp.exe",
+      "group": "drmario64",
+      "bytes": 926720,
+      "sha256": "7b9bb46d7e93327a2d3fa808534e867a1a473f581b0b8508300a1db05a9d3cd6"
+    },
+    {
+      "name": "DrMario64.ORIGIN.txt",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\ORIGIN.txt",
+      "group": "drmario64",
+      "bytes": 433,
+      "sha256": "dddd9e260f0846acb4e9f9c36fdd9c6c3827f404baea113a7bc157044a452453"
+    },
+    {
+      "name": "DrMario64.RSPRecomp.exe",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\RSPRecomp.exe",
+      "group": "drmario64",
+      "bytes": 659968,
+      "sha256": "c749d4654094bbae2399a8e8e86c23251437bcaf581e45b60c19e567e0a77edd"
+    },
+    {
+      "name": "DrMario64.licenses.clang-LICENSE.TXT",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\clang-LICENSE.TXT",
+      "group": "drmario64",
+      "bytes": 15140,
+      "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47"
+    },
+    {
+      "name": "DrMario64.licenses.ELFIO-LICENSE.txt",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\ELFIO-LICENSE.txt",
+      "group": "drmario64",
+      "bytes": 1110,
+      "sha256": "a15b5135eae48f2f6f6572ac4d7baf678761fdfde530344e9202fceb9e4e5014"
+    },
+    {
+      "name": "DrMario64.licenses.fmt-LICENSE.txt",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\fmt-LICENSE.txt",
+      "group": "drmario64",
+      "bytes": 1458,
+      "sha256": "25b5db04aa6070c12ac518b91cbd0a59725c050ecb091456e6ebc3d3eeb369cf"
+    },
+    {
+      "name": "DrMario64.licenses.lld-LICENSE.TXT",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\lld-LICENSE.TXT",
+      "group": "drmario64",
+      "bytes": 15138,
+      "sha256": "f7891568956e34643eb6a0db1462db30820d40d7266e2a78063f2fe233ece5a0"
+    },
+    {
+      "name": "DrMario64.licenses.llvm-LICENSE.TXT",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\llvm-LICENSE.TXT",
+      "group": "drmario64",
+      "bytes": 15141,
+      "sha256": "8d85c1057d742e597985c7d4e6320b015a9139385cff4cbae06ffc0ebe89afee"
+    },
+    {
+      "name": "DrMario64.licenses.N64Recomp-LICENSE.txt",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\N64Recomp-LICENSE.txt",
+      "group": "drmario64",
+      "bytes": 1095,
+      "sha256": "8f3594c18cd4f7e551795c2a11d17c460f7dd2c39ffde0db82f1de876aaac0c4"
+    },
+    {
+      "name": "DrMario64.licenses.rabbitizer-LICENSE.txt",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\rabbitizer-LICENSE.txt",
+      "group": "drmario64",
+      "bytes": 1094,
+      "sha256": "f0df1d4bd58eb60274ae4a8d34e71acd7295903dae9b3b0a4872346ddd87846d"
+    },
+    {
+      "name": "DrMario64.licenses.RT64-LICENSE.txt",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\RT64-LICENSE.txt",
+      "group": "drmario64",
+      "bytes": 1095,
+      "sha256": "b242a9948efebf64d40331807202330ccf0e8704ea97ee4e970f51bb73e8f327"
+    },
+    {
+      "name": "DrMario64.licenses.sljit-LICENSE.txt",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\sljit-LICENSE.txt",
+      "group": "drmario64",
+      "bytes": 1469,
+      "sha256": "37c7a090fc61388430d63fc97bf8a22ffce92d3ca2249aac572cfaf411d3070f"
+    },
+    {
+      "name": "DrMario64.licenses.tomlplusplus-LICENSE.txt",
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\tomlplusplus-LICENSE.txt",
+      "group": "drmario64",
+      "bytes": 1094,
+      "sha256": "529bc3900a9571e49db285b0df432397e70b881cc3bf48de6667ae74ff4b06d8"
+    },
+    {
+      "name": "UnleashedHelper.unleashed-xex-patch.exe",
+      "source_root": "desktop",
+      "source": "Tools\\UnleashedHelper\\unleashed-xex-patch.exe",
+      "group": "auxiliary",
+      "bytes": 184320,
+      "sha256": "f74ae704cd33d9dbac2c30f9f05194973211904ba80b2283db7cd4ae4fa60d2c"
+    },
+    {
+      "name": "UnleashedHelper.allfix-mspack-lzx.dll",
+      "source_root": "desktop",
+      "source": "Tools\\UnleashedHelper\\allfix-mspack-lzx.dll",
+      "group": "auxiliary",
+      "bytes": 117760,
+      "sha256": "1de3d9dd9b7add138814707efea6ec9155dec42d6d96ba6c673766be8df26f85"
+    },
+    {
+      "name": "AllFix.Tools.soh-torch.exe",
+      "source_root": "task",
+      "source": "console-cache\\soh-torch.exe",
+      "group": "legacy",
+      "bytes": 1804288,
+      "sha256": "e1d221f2a58ad56581b85da752e0bc236e577a26a2e145404764ca836779be02"
+    },
+    {
+      "name": "AllFix.Tools.2ship-zapd.exe",
+      "source_root": "task",
+      "source": "console-cache\\2ship-zapd.exe",
+      "group": "legacy",
+      "bytes": 1858048,
+      "sha256": "b781f9c605a7a566b1b149b789e8f28f9e1c317b9bb71898609346bfebfaee33"
+    },
+    {
+      "name": "AllFix.Tools.paperboat-torch.exe",
+      "source_root": "task",
+      "source": "console-cache\\paperboat-torch.exe",
+      "group": "legacy",
+      "bytes": 2383872,
+      "sha256": "5211b9d2041fbb0ef6e712692a99bec9b045d985cf6a2c4a30d54fb42641ef99"
+    },
+    {
+      "name": "AllFix.Tools.ghostship-torch.exe",
+      "source_root": "task",
+      "source": "console-cache\\ghostship-torch.exe",
+      "group": "legacy",
+      "bytes": 2473984,
+      "sha256": "e51c4e6e801173e978156631fa01f1741d890d8f84a8ab500e73106fb3344e8d"
+    },
+    {
+      "name": "AllFix.Tools.starship-torch.exe",
+      "source_root": "task",
+      "source": "console-cache\\starship-torch.exe",
+      "group": "legacy",
+      "bytes": 1951744,
+      "sha256": "b40e1e78aa31a6035b89d82d2563f9f1906a3518d924b087666cb42542d10081"
+    },
+    {
+      "name": "AllFix.Tools.bluewake-import-windows-x64.zip",
+      "source_root": "desktop",
+      "source": "Tools\\NativeExtractors\\bluewake-import-windows-x64.zip",
+      "group": "legacy",
+      "bytes": 55610,
+      "sha256": "5dd29c5f689f55135a9b1591525cfb9ff917c1b5ee699c71629fcc671400a6df"
+    },
+    {
+      "name": "AllFix.Tools.kingsfield-import-windows-x64.zip",
+      "source_root": "desktop",
+      "source": "Tools\\NativeExtractors\\kingsfield-import-windows-x64.zip",
+      "group": "legacy",
+      "bytes": 512201,
+      "sha256": "8b915f1e4b17a4e5261cca664dd027b9485321591a54471a0515a80313eb0970"
+    },
+    {
+      "name": "AllFix.Tools.spaghetti-torch.exe",
+      "source_root": "task",
+      "source": "evidence-r18\\after-1.5.31\\spaghetti-torch-build\\Release\\torch.exe",
+      "group": "legacy",
+      "bytes": 2518528,
+      "sha256": "e5423dd886c578a550a57a103e53045880f59efd2aec5bf4ea1447e7ef018e55"
+    },
+    {
+      "name": "AllFix.Tools.spaghetti-defines.h",
+      "source_root": "task",
+      "source": "evidence-r18\\after-1.5.31\\spaghetti-defines.h",
+      "group": "legacy",
+      "bytes": 18222,
+      "sha256": "a8be4f588308dbc3eca23589a5809a0bbd5c232b6542baf9c86dcf188a573c74"
+    },
+    {
+      "name": "AllFix.Tools.lighthouse-torch.exe",
+      "source_root": "task",
+      "source": "evidence-r18\\after-1.5.31\\lighthouse-torch-build\\Release\\torch.exe",
+      "group": "legacy",
+      "bytes": 4266496,
+      "sha256": "91f20508aac740058b8bf540d5c5dd72b7792ad9d2959e53544c271ceaae5147"
+    },
+    {
+      "name": "AllFix.Tools.picori-asset-extractor.exe",
+      "source_root": "task",
+      "source": "evidence-r18\\after-1.5.31\\picori-helper-win-x64\\asset_extractor.exe",
+      "group": "legacy",
+      "bytes": 4958840,
+      "sha256": "b7c1172179af87050b7b6037a4e5ed0677818e7082c38de59a25e1ea3e338599"
+    },
+    {
+      "name": "AllFix.Tools.nectar-extract.exe",
+      "source_root": "task",
+      "source": "evidence-r18\\after-1.5.31\\nectar-1.3-native\\nectar-extract.exe",
+      "group": "legacy",
+      "bytes": 3039134,
+      "sha256": "59318b0d29b1df3766c8863b4d3aebc59501a24358690e309a964b54058d4e90"
+    },
+    {
+      "name": "AllFix.Tools.know-your-role-builder.exe",
+      "source_root": "task",
+      "source": "evidence-r18\\after-1.5.31\\know-role-builder\\KnowYourRole.exe",
+      "group": "legacy",
+      "bytes": 76668714,
+      "sha256": "ff0ef87da4887fa3164070ea0b853b09f65e5f3a539cfdc27c066d181b36964b"
+    },
+    {
+      "name": "AllFix.Tools.getall-gt4-disc.exe",
+      "source_root": "task",
+      "source": "evidence-r18\\gt4-setup-contract\\helper-production-4\\getall-gt4-disc.exe",
+      "group": "legacy",
+      "bytes": 1090560,
+      "sha256": "db97432b10b5a196dd63f713e748c71815b2fdeb8b3065b59821a7615cbb2f82"
+    },
+    {
+      "name": "ForzaNative.source-support.zip",
+      "source_root": "desktop",
+      "source": "Tools\\ForzaNative\\source-support.zip",
+      "group": "fh1",
+      "bytes": 198786,
+      "sha256": "2ba46f15ed7092eb250c47d8616684cea535a25e43fbe2aa0eb8208f8c76617f"
+    },
+    {
+      "name": "PinyonNative.source-support.zip",
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/source-support.zip",
+      "bytes": 175161,
+      "sha256": "cc77d46b575da64c3c66e50d5306cd4e12c9cd45f2dc42738b09e614367bcfc6",
+      "group": "pinyon"
+    },
+    {
+      "name": "MkwSm86.cli-support.zip",
+      "source_root": "desktop",
+      "source": "Tools/MkwSm86/mkw-sm86-cli-support-v1.zip",
+      "bytes": 63227,
+      "sha256": "1c79d30594951495f210a349da05aabe0e240f0189dba87c95a78da73a4500ce",
+      "group": "mkw-sm86"
+    }
+  ],
+  "notices": [
+    {
+      "source_root": "task",
+      "source": "publish-getall-sdk168-20261127/KnowYourRole-LICENSE.txt",
+      "target": "KnowYourRole-LICENSE.txt",
+      "bytes": 1065,
+      "sha256": "9554cd8f4da9fe311221e8ddddfe7dc9aae255da096b28cb15f77cf09406ba0f",
+      "previous_source": "publish-getall-media-100\\KnowYourRole-LICENSE.txt"
+    },
+    {
+      "source_root": "task",
+      "source": "publish-getall-sdk168-20261127/KnowYourRole-THIRD-PARTY-NOTICES.txt",
+      "target": "KnowYourRole-THIRD-PARTY-NOTICES.txt",
+      "bytes": 1717,
+      "sha256": "7469cb89e59969aa3750333c111a06b5dc571c54f4d60a0e07c033214998cad3",
+      "previous_source": "publish-getall-media-100\\KnowYourRole-THIRD-PARTY-NOTICES.txt"
+    },
+    {
+      "source_root": "task",
+      "source": "publish-getall-sdk168-20261127/SpaghettiKart-Torch-LICENSE.txt",
+      "target": "SpaghettiKart-Torch-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af",
+      "previous_source": "publish-getall-media-100\\SpaghettiKart-Torch-LICENSE.txt"
+    },
+    {
+      "source_root": "task",
+      "source": "publish-getall-sdk168-20261127/Lighthouse-Torch-LICENSE.txt",
+      "target": "Lighthouse-Torch-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af",
+      "previous_source": "publish-getall-media-100\\Lighthouse-Torch-LICENSE.txt"
+    },
+    {
+      "source_root": "task",
+      "source": "publish-getall-sdk168-20261127/Nectar-Extractor-Sources.zip",
+      "target": "Nectar-Extractor-Sources.zip",
+      "bytes": 31527,
+      "sha256": "89403d5c78a362107a1ddee41ce929bb420ad4b83382a38b74c22b0075c8a9f6",
+      "previous_source": "publish-getall-media-100\\Nectar-Extractor-Sources.zip"
+    },
+    {
+      "source_root": "task",
+      "source": "publish-getall-sdk168-20261127/Picori-Extractor-Sources.zip",
+      "target": "Picori-Extractor-Sources.zip",
+      "bytes": 5397861,
+      "sha256": "d5cd9311028bfceb031a97aaa0d280ba1a5f3ad203f7fa765e133b9029b68082",
+      "previous_source": "publish-getall-media-100\\Picori-Extractor-Sources.zip"
+    },
+    {
+      "source_root": "task",
+      "source": "publish-getall-sdk168-20261127/GT4-Disc-Helper-Sources.zip",
+      "target": "GT4-Disc-Helper-Sources.zip",
+      "bytes": 3986,
+      "sha256": "d64de2eaa8cc02070748d10a869886ee97865329c2188eecccd07126411242dd",
+      "previous_source": "publish-getall-media-100\\GT4-Disc-Helper-Sources.zip"
+    },
+    {
+      "source_root": "task",
+      "source": "publish-getall-sdk168-20261127/GT4Recomp-LICENSE.txt",
+      "target": "GT4Recomp-LICENSE.txt",
+      "bytes": 1614,
+      "sha256": "6ef414e487d2d012008577155da07cd87e65e3d0711ef1d0bf2424191265a54e",
+      "previous_source": "publish-getall-media-100\\GT4Recomp-LICENSE.txt"
+    },
+    {
+      "source_root": "task",
+      "source": "publish-getall-unleashed\\reBlue-Manifests-LICENSE.txt",
+      "target": "reBlue-Manifests-LICENSE.txt",
+      "bytes": 1494,
+      "sha256": "f8c7147eba0225be836dd7f701bd9e254b76386271fe0a57955ee479864b1c97"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\NativeExtractors\\README.md",
+      "target": "Helper-Licenses\\ORIGIN.md",
+      "bytes": 7974,
+      "sha256": "90caa1f5620524e34bdd71d9cefcf2ce8abea7706641caeeb41bf7ae5e1aa4e9"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\paperboat-torch-72960ca\\Torch-72960ca16f4723f96aaf4037b76072c230af8c11\\LICENSE",
+      "target": "Helper-Licenses\\Paperboat-Torch-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\ghostship-torch-106621f\\Torch-106621f0f0f9731b8739bec95227c2c5887492df\\LICENSE",
+      "target": "Helper-Licenses\\Ghostship-Torch-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\paperboat-torch-72960ca\\build\\_deps\\dr_libs-src\\LICENSE",
+      "target": "Helper-Licenses\\Paperboat-dependencies\\dr_libs-LICENSE",
+      "bytes": 2645,
+      "sha256": "a13603628866863f196c0201891a6dcc8062481e83b5d686f34cf9e45ceec899"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\paperboat-torch-72960ca\\build\\_deps\\libgfxd-src\\LICENSE",
+      "target": "Helper-Licenses\\Paperboat-dependencies\\libgfxd-LICENSE",
+      "bytes": 1108,
+      "sha256": "54cfd153aea4cbb4c7060b6afaa35021178b9c35d063094a70fa3a5c0acf4cfd"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\paperboat-torch-72960ca\\build\\_deps\\spdlog-src\\LICENSE",
+      "target": "Helper-Licenses\\Paperboat-dependencies\\spdlog-LICENSE",
+      "bytes": 1348,
+      "sha256": "d8cfaae20761042ac00dff862a1a9f31a437cbe337ea9aa8c13285222b7086c5"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\paperboat-torch-72960ca\\build\\_deps\\tinyxml2-src\\LICENSE.txt",
+      "target": "Helper-Licenses\\Paperboat-dependencies\\tinyxml2-LICENSE.txt",
+      "bytes": 826,
+      "sha256": "035a1f2fd2f6dba120f3c25cd2d04f9987f32405c847c0cb4859fe33e6148f45"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\paperboat-torch-72960ca\\build\\_deps\\yaml-cpp-src\\LICENSE",
+      "target": "Helper-Licenses\\Paperboat-dependencies\\yaml-cpp-LICENSE",
+      "bytes": 1080,
+      "sha256": "c06fd4ee9241e3b6841fcee5d471475be412c822ddf2876af17127acd426c011"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\paperboat-torch-72960ca\\build\\_deps\\zlib-src\\LICENSE",
+      "target": "Helper-Licenses\\Paperboat-dependencies\\zlib-LICENSE",
+      "bytes": 1024,
+      "sha256": "18dbd37f0ab175c37877e9053ff870a7de2809a3e9b9673b2696aa5009264638"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\starship-torch\\Torch-f75facb20883570ed091e8ae733ec0539f606e57\\LICENSE",
+      "target": "Helper-Licenses\\Starship\\Torch-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\starship-torch\\libgfxd\\libgfxd-96fd3b849f38b3a7c7b7f3ff03c5921d328e6cdf\\LICENSE",
+      "target": "Helper-Licenses\\Starship\\libgfxd-LICENSE.txt",
+      "bytes": 1087,
+      "sha256": "57e2db356ffa10601e08f64889990f22e748e9b6e431036a8c5d4b9e6c5c6c10"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\starship-torch\\spdlog\\spdlog-7e635fca68d014934b4af8a1cf874f63989352b7\\LICENSE",
+      "target": "Helper-Licenses\\Starship\\spdlog-LICENSE.txt",
+      "bytes": 1348,
+      "sha256": "a7241a379cb98d37788f82c2fc2e484c3ae85dae881fd3406f0637644850926f"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\starship-torch\\tinyxml2\\tinyxml2-10.0.0\\LICENSE.txt",
+      "target": "Helper-Licenses\\Starship\\tinyxml2-LICENSE.txt",
+      "bytes": 808,
+      "sha256": "9332252e9b9e46db8285d4a3f0bf25f139bf1dca6781b956d57f2302efca6432"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\starship-torch\\yaml-cpp\\yaml-cpp-28f93bdec6387d42332220afa9558060c8016795\\LICENSE",
+      "target": "Helper-Licenses\\Starship\\yaml-cpp-LICENSE.txt",
+      "bytes": 1061,
+      "sha256": "aa6fcc27be034e41e21dd832f9175bfe694a48491d9e14ff0fa278e19ad14f1b"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\2ship-zapd\\upstream\\LICENSE",
+      "target": "Helper-Licenses\\2Ship\\upstream-LICENSE.txt",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\2ship-zapd\\upstream\\ZAPDTR\\LICENSE",
+      "target": "Helper-Licenses\\2Ship\\ZAPDTR-LICENSE.txt",
+      "bytes": 1087,
+      "sha256": "354b9f8e19a4922599fd55916dbc8841e8dd1fd802c078d8761f174515fb521f"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\2ship-zapd\\upstream\\OTRExporter\\LICENSE",
+      "target": "Helper-Licenses\\2Ship\\OTRExporter-LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "005329140311ddc6e8a830752c85b2ec10d51db59adbe9366651c64ad31ae6a5"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\2ship-zapd\\upstream\\libultraship\\LICENSE",
+      "target": "Helper-Licenses\\2Ship\\libultraship-LICENSE.txt",
+      "bytes": 1090,
+      "sha256": "fdd4f25c62f0a30865c4395d53e731be208c7b8912d5c068dbd93ca7fadc8a97"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\2ship-zapd\\deps\\imgui\\LICENSE.txt",
+      "target": "Helper-Licenses\\2Ship\\imgui-LICENSE.txt",
+      "bytes": 1083,
+      "sha256": "c80c5789748d955c4a650562baa0d750494e2c7128c2ca66aaebe2e3c4e198bf"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\2ship-zapd\\deps\\libgfxd\\LICENSE",
+      "target": "Helper-Licenses\\2Ship\\libgfxd-LICENSE.txt",
+      "bytes": 1087,
+      "sha256": "57e2db356ffa10601e08f64889990f22e748e9b6e431036a8c5d4b9e6c5c6c10"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\2ship-zapd\\deps\\monocypher\\LICENCE.md",
+      "target": "Helper-Licenses\\2Ship\\monocypher-LICENSE.md",
+      "bytes": 9256,
+      "sha256": "a5781770269d2516e52ba4863f790c10a16da4089a1e81823aee19ff1e9026b0"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\2ship-zapd\\deps\\prism\\LICENSE",
+      "target": "Helper-Licenses\\2Ship\\prism-LICENSE.txt",
+      "bytes": 1090,
+      "sha256": "2bffb0c0adb719d4fadcdfa6ef9824f49719b837a4d4e64b1e5d14a5fd8bb4cb"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\2ship-zapd\\deps\\stormlib\\LICENSE",
+      "target": "Helper-Licenses\\2Ship\\stormlib-LICENSE.txt",
+      "bytes": 1108,
+      "sha256": "50b128e6750ed9d887e7a5748a6021238bb2f3bf34a5dd2768c410d932069e35"
+    },
+    {
+      "source_root": "task",
+      "source": "console-source\\2ship-zapd\\deps\\threadpool\\LICENSE.txt",
+      "target": "Helper-Licenses\\2Ship\\threadpool-LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "877daafacf05b94f7292b670304d1e746ab8e393f47c0693b10531e3660c2912"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\UnleashedHelper\\Sonic-Unleashed-Helper-NOTICES.txt",
+      "target": "Sonic-Unleashed-Helper-NOTICES.txt",
+      "bytes": 33115,
+      "sha256": "978611dc9d9158f00efa9bd10dcfea078e6d337db05627cd8f85378dd132a46a"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\UnleashedHelper\\Unleashed-Xex-Helper-Sources.zip",
+      "target": "Unleashed-Xex-Helper-Sources.zip",
+      "bytes": 248867,
+      "sha256": "2ee674de1f5134e3b53e3424ec18bf3ca2aae94fe0779aed684dd578a9a4f5f3"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\ORIGIN.txt",
+      "target": "Helper-Licenses\\DrMario64\\ORIGIN.txt",
+      "bytes": 433,
+      "sha256": "dddd9e260f0846acb4e9f9c36fdd9c6c3827f404baea113a7bc157044a452453"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\clang-LICENSE.TXT",
+      "target": "Helper-Licenses\\DrMario64\\licenses\\clang-LICENSE.TXT",
+      "bytes": 15140,
+      "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\ELFIO-LICENSE.txt",
+      "target": "Helper-Licenses\\DrMario64\\licenses\\ELFIO-LICENSE.txt",
+      "bytes": 1110,
+      "sha256": "a15b5135eae48f2f6f6572ac4d7baf678761fdfde530344e9202fceb9e4e5014"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\fmt-LICENSE.txt",
+      "target": "Helper-Licenses\\DrMario64\\licenses\\fmt-LICENSE.txt",
+      "bytes": 1458,
+      "sha256": "25b5db04aa6070c12ac518b91cbd0a59725c050ecb091456e6ebc3d3eeb369cf"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\lld-LICENSE.TXT",
+      "target": "Helper-Licenses\\DrMario64\\licenses\\lld-LICENSE.TXT",
+      "bytes": 15138,
+      "sha256": "f7891568956e34643eb6a0db1462db30820d40d7266e2a78063f2fe233ece5a0"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\llvm-LICENSE.TXT",
+      "target": "Helper-Licenses\\DrMario64\\licenses\\llvm-LICENSE.TXT",
+      "bytes": 15141,
+      "sha256": "8d85c1057d742e597985c7d4e6320b015a9139385cff4cbae06ffc0ebe89afee"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\N64Recomp-LICENSE.txt",
+      "target": "Helper-Licenses\\DrMario64\\licenses\\N64Recomp-LICENSE.txt",
+      "bytes": 1095,
+      "sha256": "8f3594c18cd4f7e551795c2a11d17c460f7dd2c39ffde0db82f1de876aaac0c4"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\rabbitizer-LICENSE.txt",
+      "target": "Helper-Licenses\\DrMario64\\licenses\\rabbitizer-LICENSE.txt",
+      "bytes": 1094,
+      "sha256": "f0df1d4bd58eb60274ae4a8d34e71acd7295903dae9b3b0a4872346ddd87846d"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\RT64-LICENSE.txt",
+      "target": "Helper-Licenses\\DrMario64\\licenses\\RT64-LICENSE.txt",
+      "bytes": 1095,
+      "sha256": "b242a9948efebf64d40331807202330ccf0e8704ea97ee4e970f51bb73e8f327"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\sljit-LICENSE.txt",
+      "target": "Helper-Licenses\\DrMario64\\licenses\\sljit-LICENSE.txt",
+      "bytes": 1469,
+      "sha256": "37c7a090fc61388430d63fc97bf8a22ffce92d3ca2249aac572cfaf411d3070f"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\DrMario64\\licenses\\tomlplusplus-LICENSE.txt",
+      "target": "Helper-Licenses\\DrMario64\\licenses\\tomlplusplus-LICENSE.txt",
+      "bytes": 1094,
+      "sha256": "529bc3900a9571e49db285b0df432397e70b881cc3bf48de6667ae74ff4b06d8"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\SsxNative\\source-support.zip",
+      "target": "Helper-Licenses\\SSX\\source-support.zip",
+      "bytes": 601221,
+      "sha256": "054ae3be11679a61050033ccae491883c10b223c40fdd4a96512859b4e23715a"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\SsxNative\\ORIGIN.json",
+      "target": "Helper-Licenses\\SSX\\ORIGIN.json",
+      "bytes": 10147,
+      "sha256": "855093b5c63af0c1a8e9f753cf1b860497d5b96ca18126e7cea9932f5da4f30f"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\ForzaNative\\source-support.zip",
+      "target": "Helper-Licenses\\FH1\\source-support.zip",
+      "bytes": 198786,
+      "sha256": "2ba46f15ed7092eb250c47d8616684cea535a25e43fbe2aa0eb8208f8c76617f"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools\\ForzaNative\\ORIGIN.json",
+      "target": "Helper-Licenses\\FH1\\ORIGIN.json",
+      "bytes": 51367,
+      "sha256": "6b0e0ba403928c3e46ea3d61547d07ba90ded31450670a2d01c2a1fff3e5b728"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/ORIGIN.json",
+      "bytes": 13709,
+      "sha256": "ffd2f8a0d99eb9fe36de6560b4e343159515f234cbf2c40a5c6fb784188b79c8",
+      "target": "Helper-Licenses/PinyonNative/ORIGIN.json"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/bridge-source/allfix_ngx_bridge.cpp",
+      "bytes": 7426,
+      "sha256": "9cfa6c15b512228dc789460e90936163169bb41cab95a3364ede5a77ada9bddd",
+      "target": "Helper-Licenses/PinyonNative/bridge-source/allfix_ngx_bridge.cpp"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/bridge-source/allfix_ngx_bridge.h",
+      "bytes": 16042,
+      "sha256": "e5d78a312bee09239dfb6ce11280e8d80c691f282a0366bddff225b1a81adbf8",
+      "target": "Helper-Licenses/PinyonNative/bridge-source/allfix_ngx_bridge.h"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/bridge-source/allfix_rex_etw.cpp",
+      "bytes": 1298,
+      "sha256": "f3b5de7890d025ca4f2613aa2dd6be06d334fcdc56fecadbc6c4ef42798ec121",
+      "target": "Helper-Licenses/PinyonNative/bridge-source/allfix_rex_etw.cpp"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/bridge-source/allfix_rex_etw.h",
+      "bytes": 532,
+      "sha256": "6bd7b55fb9c4d134298d9fdbfd88698463f7d2a45419c8f326a40c002ca2ade1",
+      "target": "Helper-Licenses/PinyonNative/bridge-source/allfix_rex_etw.h"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/bridge-source/layout-fields.json",
+      "bytes": 3100,
+      "sha256": "0f876840e6693be79766f0c5a07a73fbc1f0bb8a59c63222f68c31679d70b317",
+      "target": "Helper-Licenses/PinyonNative/bridge-source/layout-fields.json"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/notices/LLVM-MinGW-LICENSE.TXT",
+      "bytes": 15141,
+      "sha256": "8d85c1057d742e597985c7d4e6320b015a9139385cff4cbae06ffc0ebe89afee",
+      "target": "Helper-Licenses/PinyonNative/notices/LLVM-MinGW-LICENSE.TXT"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/notices/MinGW/COPYING",
+      "bytes": 2326,
+      "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f",
+      "target": "Helper-Licenses/PinyonNative/notices/MinGW/COPYING"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/notices/MinGW/COPYING.MinGW-w64-runtime.txt",
+      "bytes": 12155,
+      "sha256": "1db8da07b436c68833c0673ffee3d9fcb2526047f3820b81661865dfedc79a1f",
+      "target": "Helper-Licenses/PinyonNative/notices/MinGW/COPYING.MinGW-w64-runtime.txt"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/notices/MinGW/COPYING.MinGW-w64.txt",
+      "bytes": 5905,
+      "sha256": "f38e6194bd3bfa1b654f118e5acefe0aead437bbe669eee43957ccc65a7127f1",
+      "target": "Helper-Licenses/PinyonNative/notices/MinGW/COPYING.MinGW-w64.txt"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/notices/MinGW/COPYING.winpthreads.txt",
+      "bytes": 2883,
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177",
+      "target": "Helper-Licenses/PinyonNative/notices/MinGW/COPYING.winpthreads.txt"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/notices/MinGW/COPYING.winstorecompat.txt",
+      "bytes": 1099,
+      "sha256": "fa7368d1f93d890c173177475d8ec7aff265a7d08f1f364d66f74d138978ce36",
+      "target": "Helper-Licenses/PinyonNative/notices/MinGW/COPYING.winstorecompat.txt"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/notices/NOTICE.txt",
+      "bytes": 378,
+      "sha256": "6034df692a4ddee1063989bfac0a7920a6051cb84acbc4d7c4431ebc3dcc9ed7",
+      "target": "Helper-Licenses/PinyonNative/notices/NOTICE.txt"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/notices/NVIDIA-RTX-SDK.txt",
+      "bytes": 26620,
+      "sha256": "d4216e39ebef5f9b50a6712ebb37beeb5379862a67733a9999c651f21592aaf0",
+      "target": "Helper-Licenses/PinyonNative/notices/NVIDIA-RTX-SDK.txt"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/notices/ShiftGlue-BSD-3-Clause.txt",
+      "bytes": 1659,
+      "sha256": "8e065be1da2ff9a16b1f063d4636d8b67e6a654bb90583ea4332e66ac421bb18",
+      "target": "Helper-Licenses/PinyonNative/notices/ShiftGlue-BSD-3-Clause.txt"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/PinyonNative/source-support.zip",
+      "bytes": 175161,
+      "sha256": "cc77d46b575da64c3c66e50d5306cd4e12c9cd45f2dc42738b09e614367bcfc6",
+      "target": "Helper-Licenses/PinyonNative/source-support.zip"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/MkwSm86/support-src/notices/CuAssembler-MIT.txt",
+      "target": "licenses/MkwSm86/CuAssembler-MIT.txt",
+      "bytes": 1102,
+      "sha256": "2e4a290cc86b2ed281cc200b00a8ef8d13afaf26207f6b857bc330c555d91b23"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/MkwSm86/support-src/notices/Mesa-NAK-MIT.txt",
+      "target": "licenses/MkwSm86/Mesa-NAK-MIT.txt",
+      "bytes": 1442,
+      "sha256": "8875c84633d4d2e3794a11cc8d4a74731ada2c53cc6437644f6201c3628ad8ed"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/MkwSm86/support-src/notices/ORIGIN.txt",
+      "target": "licenses/MkwSm86/ORIGIN.txt",
+      "bytes": 597,
+      "sha256": "0d4884e85ddc077e9b2db69e70108858a595e07d23a381ebf8c1b60f09fb6035"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/MkwSm86/support-src/notices/mkw-MIT.txt",
+      "target": "licenses/MkwSm86/mkw-MIT.txt",
+      "bytes": 1063,
+      "sha256": "458bc459b303410a4cbed893a9a76affd0beada85a8d381e0f147b106ec450a7"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/MkwSm86/support-src/notices/nv-isa-solver-MIT.txt",
+      "target": "licenses/MkwSm86/nv-isa-solver-MIT.txt",
+      "bytes": 1068,
+      "sha256": "6f9eba9d8bab25327120b41a6cf101596d58b44cbd31c51091408bb77c69191a"
+    }
+  ],
+  "preserved_preview": [
+    {
+      "name": "AllFix.exe",
+      "bytes": 155464791,
+      "sha256": "738d5375c5003e00d9a30fc804f5551e5c89dc00088ed6be2b38e81cb7460913"
+    },
+    {
+      "name": "GetAll-Preview.zip",
+      "bytes": 879,
+      "sha256": "3916e4d2d3023c281fdf35e98c10cc0efc8febcc3ae4f610fd0087516b5a1f41"
+    },
+    {
+      "name": "ARTIFACT-MANIFEST.json",
+      "bytes": 873,
+      "sha256": "22501555ab9a80cedd51d61041fa3a8334a1234c154ae8633d4052dd211616ff"
+    }
+  ],
+  "observed_utc": "2026-11-27T17:46:07.1500409Z",
+  "project_resources": [
+    "SsxNative.source-support.zip",
+    "XboxMedia.marathon-1.0.0.json",
+    "XboxMedia.shadow-1.0.1.json",
+    "XboxMedia.reblue-1.4.0.txt",
+    "XboxMedia.reblue-LICENSE.txt",
+    "Sm64Build.sm64plus-ucrt64.lock.json",
+    "DrMario64.file_to_c.exe",
+    "DrMario64.N64Recomp.exe",
+    "DrMario64.ORIGIN.txt",
+    "DrMario64.RSPRecomp.exe",
+    "DrMario64.licenses.clang-LICENSE.TXT",
+    "DrMario64.licenses.ELFIO-LICENSE.txt",
+    "DrMario64.licenses.fmt-LICENSE.txt",
+    "DrMario64.licenses.lld-LICENSE.TXT",
+    "DrMario64.licenses.llvm-LICENSE.TXT",
+    "DrMario64.licenses.N64Recomp-LICENSE.txt",
+    "DrMario64.licenses.rabbitizer-LICENSE.txt",
+    "DrMario64.licenses.RT64-LICENSE.txt",
+    "DrMario64.licenses.sljit-LICENSE.txt",
+    "DrMario64.licenses.tomlplusplus-LICENSE.txt",
+    "XboxMedia.unleashed-1.0.3-game.json",
+    "XboxMedia.unleashed-1.0.3-update.json",
+    "UnleashedHelper.unleashed-xex-patch.exe",
+    "UnleashedHelper.allfix-mspack-lzx.dll",
+    "Web.index.html",
+    "Web.catalog.js",
+    "Web.automation.css",
+    "Web.automation.js",
+    "Web.library.css",
+    "Web.library.js",
+    "Web.updates.js",
+    "Web.manual.css",
+    "Web.manual.js",
+    "Web.closing.css",
+    "Web.closing.js",
+    "Web.reference.css",
+    "Web.modes.css",
+    "Web.mode-experience.jpg",
+    "Web.mode-store.png",
+    "Web.modes.js",
+    "Web.store.css",
+    "Web.store-search.js",
+    "Web.store.js",
+    "Web.payment.png",
+    "UnRAR.exe",
+    "AllFixSteam.allfix-steam-bridge.exe",
+    "AllFixSteam.winmm.dll",
+    "AllFixSteam.game_profiles.json",
+    "AllFixSteam.LICENSE_HXCOOP_MIT.txt",
+    "OfflineNsis.7z.exe",
+    "OfflineNsis.7z.dll",
+    "OfflineNsis.License.txt",
+    "OfflineNsis.ORIGIN.txt",
+    "OfflineInno.innounp.exe",
+    "OfflineInno.ORIGIN.txt",
+    "OfflinePyInstaller.mml-v0.9.6-beta.json",
+    "VerifiedPatches.mml-v0.9.6-beta.json",
+    "VerifiedPatches.MML-LICENSE.txt",
+    "ForzaXex.reference.json",
+    "ForzaXex.ORIGIN.txt",
+    "AllFix.Tools.soh-torch.exe",
+    "AllFix.Tools.2ship-zapd.exe",
+    "AllFix.Tools.paperboat-torch.exe",
+    "AllFix.Tools.ghostship-torch.exe",
+    "AllFix.Tools.starship-torch.exe",
+    "AllFix.Tools.bluewake-import-windows-x64.zip",
+    "AllFix.Tools.kingsfield-import-windows-x64.zip",
+    "AllFix.Tools.spaghetti-torch.exe",
+    "AllFix.Tools.spaghetti-defines.h",
+    "AllFix.Tools.lighthouse-torch.exe",
+    "AllFix.Tools.picori-asset-extractor.exe",
+    "AllFix.Tools.nectar-extract.exe",
+    "AllFix.Tools.know-your-role-builder.exe",
+    "AllFix.Tools.getall-gt4-disc.exe",
+    "ForzaNative.source-support.zip"
+  ],
+  "catalog_bytes": 115068,
+  "catalog_sha256": "dff40fc028cd544300c80e78d779ab503c2e9ae7b27df47ed5417c85f6e10aad",
+  "input_manifest_sha256": "5f1a485e43b2455f8da5bf5e4440214aa9db1ca502b8285b962c8da4ae8f88f9",
+  "pinyon_manifest_sha256": "9a0d5a715276409bdd4310b99801b85f6d1dc6a21978516085bfd50a40dfd238",
+  "desktop_commit": "921295de12349e726f7ca21a5edd8a8ecee123d8",
+  "getall_commit": "9caef66df45682079656ddb6af5421ac1058c344",
+  "getall_root": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-complete-flows-20261127",
+  "desktop_only": true,
+  "predecessor_inputs_sha256": "7ef784fd367c6fb34a7fca2465dcd59772bc90f2b4cf7acdb5f081c7277eed75",
+  "predecessor_sdk_version": "1.5.67",
+  "notice_relocation_sha256": "444ee0233e44ca611ae998c9ce7aa3a5c1c4369bef28c9f45b156cabf5a42dd6",
+  "mkw_inputs_sha256": "98db0e2407f5c49e7e386b9caee382dafef90fe4ce8307d9652e2af6540ded3e",
+  "audit_reuse_sha256": "44c25017032a47723a8454c12149c3261539f5693f0e72d987ffcf1e1a2e32a1",
+  "audit_assembly": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\desktop-final-publish-20261127\\run-20261127T192959Z-cc0522a1\\audit-bin\\audit.dll"
+}

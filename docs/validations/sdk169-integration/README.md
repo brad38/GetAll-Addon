@@ -10,8 +10,9 @@ um novo primeiro boot comercial.
 As fontes do Desktop estão no commit
 [`921295de12349e726f7ca21a5edd8a8ecee123d8`](https://github.com/brad38/Allfix/commit/921295de12349e726f7ca21a5edd8a8ecee123d8),
 branch `work/complete-install-flows-20261127`. O envio foi confirmado no
-GitHub. A publicação da prévia completa e a prova dos serviços Store no
-executável final são registradas separadamente no fechamento desta rodada.
+GitHub. A [prévia completa SDK169](../sdk169-preview/README.md) foi montada e
+verificada. A [prova dos serviços Store](../store-assembly-proof/RUN-RESULT.md)
+passou em 20 verificações no mesmo assembly distribuído no executável final.
 
 ## Resultados integrados
 

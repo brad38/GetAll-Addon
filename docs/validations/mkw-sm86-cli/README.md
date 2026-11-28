@@ -1,5 +1,11 @@
 # MKW: tradutor privado por CLI normal
 
+**Integração concluída:** o SDK 1.5.69 passou pelo BUILD31d e pelo parser 145/145;
+a prova Store20 usou o mesmo assembly distribuído na prévia final. Ver
+[resultado integrado](../sdk169-integration/README.md) e
+[prévia completa](../sdk169-preview/README.md). As evidências Native8 abaixo
+continuam separadas de homologação com mídia comercial.
+
 O perfil `mkw-0.1.18-cli-prepare` usa o kit oficial `v0.1.18` e solicita uma única pasta original do usuário. O alias local `v0.1.18-allfix-cli` identifica esse contrato no catálogo; ele não representa uma tag upstream. O perfil anterior `mkw-0.1.18-prepare` permanece separado, com suas duas entradas originais. Estados antigos não são promovidos automaticamente.
 
 Este pacote contém fontes Python, quatro adaptações de arquivos oficiais, um descritor fechado, avisos e a receita da prova autoral. O executável NVIDIA é obtido separadamente pela URL oficial fixada. O arquivo instalado `sm86/instructions.json` é um descritor interno com versão e hashes; não contém uma tabela de codificação NVIDIA.

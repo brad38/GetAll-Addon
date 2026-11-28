@@ -1,5 +1,48 @@
 # Checkpoint do GetAll-Addon
 
+## Continuidade — SDK 1.5.69, fontes e prévia verificadas em 27/11/2026
+
+**142/148 fluxos integrais implementados**, 28 acima do checkpoint de 114.
+Metaforce e a preparação automática de Mario Kart World completam esta
+rodada. Há **um homologado histórico, 141 integrais aguardando mídia original,
+zero parciais e seis sem receita**. Nenhum novo primeiro boot comercial foi
+comprovado. O índice tem **145 receitas para 142 projetos**: 144 entradas
+experimentais e uma homologação histórica.
+
+Desktop [`921295d`](https://github.com/brad38/Allfix/commit/921295de12349e726f7ca21a5edd8a8ecee123d8)
+e GetAll [`37fbc54`](https://github.com/brad38/GetAll-Addon/commit/37fbc54ee2d137952d8f1ca2b06f3602410870c9)
+foram confirmados no GitHub. Os CIs
+[Desktop 46089235002](https://github.com/brad38/Allfix/actions/runs/46089235002)
+e [GetAll 46089870630](https://github.com/brad38/GetAll-Addon/actions/runs/46089870630)
+passaram. As PRs continuam draft, sem merge, release pública ou mudança da
+instalação corrente. A documentação de fechamento pode avançar na mesma
+branch; os pins de código e receitas da prévia permanecem imutáveis.
+
+BUILD31d: **0 erros, 0 avisos, 1.967 verificações aprovadas**; parser C#
+**145/145**; Metaforce Policy **52**; serviços Store reais **20**. O DLL testado
+nos serviços é idêntico ao DLL auditado dentro do executável distribuído.
+As provas nativas Metaforce e MKW foram preservadas; fixtures, `--help` e
+SPIR-V validado não foram convertidos em homologação com mídia comercial.
+Resultados e reprodução: [integração SDK169](validations/sdk169-integration/README.md).
+
+A [prévia completa SDK169](validations/sdk169-preview/README.md) está em
+`publish-getall-sdk169-20261127`, com Desktop 3.0.0, SDK 1.5.69 e addon
+1.5.74. Foram verificados 79 arquivos listados no manifesto, 35 recursos,
+71 avisos e 12 propriedades. As prévias SDK167 e SDK168 foram preservadas.
+
+Os seis restantes são Courage Reborn (fonte inacessível), Project 2099
+(runtime/contrato de preparação indisponíveis), MKDD/TMC/MML1 base
+(decompilações para console, sem port Windows correspondente) e Wind Waker
+Recomp (sucessor BlueWake já coberto). Os 148 IDs foram mantidos.
+[Contratos e evidência](validations/remaining-projects-20261127/README.md).
+
+A [limpeza contínua](validations/sdk169-integration/STORAGE.md) mantém fontes,
+receitas, scripts, logs e resultados, reutiliza caches/toolchains e remove
+somente descartáveis comprovados. Mídia original, dados pessoais e dependências
+em uso permanecem preservados. As seções seguintes conservam o histórico.
+
+---
+
 ## Continuidade — SDK 1.5.68, fontes publicadas e prévia completa em 27/11/2026
 
 Branch `work/complete-install-flows-20261127`, a partir de GetAll `f0942a6`
