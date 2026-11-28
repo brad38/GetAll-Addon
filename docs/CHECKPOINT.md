@@ -6,12 +6,15 @@ Catálogo fixado em b816345f811547cc04f6150faf16548c26b7409b. O índice
 9f177ce34a9bdca33d4dcfaa18ead3929a1255236056e9ee5b3799a592aa933f
 contém 146 receitas, com 134 experimentais, uma validada histórica e 11
 desativadas. São 135 IDs com contrato ativo entre os 137 projetos elegíveis.
-A contagem de contratos é independente da execução do motor com mídia original.
+A matriz registra 135 projetos com automação implementada e dois bloqueados.
+Há 52 resultados sintéticos atuais, 13 históricos, uma falha e 71
+sem teste atribuído. Os indicadores de mídia original, boot e gameplay
+mantêm a evidência anterior.
 
 StrikersRecomp v9 pede uma única ISO americana G4QE01 Rev 0 e fixa a rota
 RecompCore. O contrato anterior continua arquivado e bloqueado. VandalHearts
 e REDRIVER2 continuam sem contrato ativo. Veja a
-[prova técnica e seus limites](validations/official-scope/strikers-and-mkdd-follow-up-20261128.md).
+[recibo dos testes SDK 1.5.71](validations/official-scope/strikers-getall-result-20261128.json).
 
 ---
 

@@ -144,3 +144,8 @@ ISO G4QE01 Rev 0 fornecida pelo usuário.
 A validação de schema, identidade, política e hash do contrato passou.
 Os ensaios de host e de geração acima usaram mídias autorais. Instalação
 com mídia original e primeiro boot são evidências ainda pendentes.
+
+O SDK 1.5.71 executou 15 verificações do kit e testou compilação, staging
+e lançamento com mídia autoral. O host encontrou a DLL pelo ID, sem
+variável de ambiente de substituição. A verificação de lançamento
+recusou a DLL alterada. [Recibo](strikers-getall-result-20261128.json).

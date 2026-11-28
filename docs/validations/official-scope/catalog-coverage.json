@@ -4,10 +4,10 @@
   "games": 108,
   "projects": 137,
   "main_covered": null,
-  "development_covered": 134,
-  "missing": 3,
-  "uses_closed_preparation_profiles": 31,
-  "preparation_only": 31,
+  "development_covered": 135,
+  "missing": 2,
+  "uses_closed_preparation_profiles": 32,
+  "preparation_only": 32,
   "legacy_preparation_only_semantics": "Deprecated alias of uses_closed_preparation_profiles. Schema 9 does not imply manual-only, partial or unavailable automation.",
   "validated": 1,
   "legacy_validated_is_execution_evidence": false,
@@ -16,12 +16,12 @@
       "evidenced": 137
     },
     "automated_installation_implemented": {
-      "implemented": 134,
-      "blocked": 3
+      "implemented": 135,
+      "blocked": 2
     },
     "synthetic_validation": {
-      "unknown": 72,
-      "passed": 51,
+      "unknown": 71,
+      "passed": 52,
       "historical": 13,
       "failed": 1
     },
@@ -4624,22 +4624,19 @@
           "project_id": "strikersrecomp",
           "repository": "aharonahdoot/StrikersRecomp",
           "tag": "build-cd88f71",
-          "schema_version": 5,
+          "schema_version": 9,
           "path": "recipes/super-mario-strikers/strikersrecomp/build-cd88f71.json",
-          "sha256": "77b95bd2c700ea76fe6776b615b4ee65be25dee8a3c0fdb6e4997e6230feba7a",
-          "status": "disabled",
+          "sha256": "a9a80f21fd63a331d67ab453f6d22c485ef0bb80ce68abc76f96b531530a8121",
+          "status": "experimental",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/validations/official-scope/remaining-official-blockers.json"
+          "min_sdk_version": "1.5.71"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "uses_closed_preparation_profiles": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -4662,29 +4659,30 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
+          "status": "implemented",
+          "reason": "Closed original-media preparation, build, registration and launch implemented for the pinned recipe. Original-media completion and first boot have not been observed.",
           "evidence": [
             {
-              "path": "docs/validations/official-scope/remaining-official-blockers.json",
-              "sha256": "879bfb3995ed34ab0a498535bbd242fca1b741d201cd957443048ef5a75bde7f",
-              "observed": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão. Restoration condition: Validar uma combinação oficial compatível de dependências e embalagem Windows, ou integrar um ambiente oficialmente suportado sem modificar código/runtime do jogo.",
+              "path": "docs/validations/official-scope/strikers-getall-result-20261128.json",
+              "sha256": "0cd5f6168af4c953c73172e76ea852853bc51d8c27241d894662fb7f35c32f1b",
+              "scope": "getall",
               "data_kind": "code_review",
-              "scope": "getall"
-            },
-            {
-              "path": "docs/validations/official-scope/strikers-recompcore-headless-result-20261128.json",
-              "sha256": "3d794fe7fe0e8e827ea71a5c0b7a985d593b5ef24c1d96440b4b7c6764f73434",
-              "observed": "Unmodified RecompCore 283baee built with MSVC for Windows. The official core 6 accepted the matching authored module and rejected the wrong game ID.",
-              "data_kind": "synthetic",
-              "scope": "getall"
+              "observed": "The official source archive, the exact schema 9 contract and the shared installation state establish the single-ISO selection and source integrity behavior. The reviewed local handler preserves the pinned engine and isolated RecompCore route."
             }
-          ],
-          "reason": "The recommended upstream RecompCore host and module loaded synthetic fixtures on Windows. A pinned, licensed distribution/build and exact-disc GetAll installation are not yet integrated."
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "reason": "Source staging and rejection/cancellation through the actual engine, plus authored-disc module building and Windows runtime staging. The staged host was already built.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/strikers-getall-result-20261128.json",
+              "sha256": "0cd5f6168af4c953c73172e76ea852853bc51d8c27241d894662fb7f35c32f1b",
+              "scope": "getall",
+              "data_kind": "synthetic",
+              "observed": "15 shared installer assertions passed. Official DolRecomp generated code from an authored disc, linked the AMD64 module, verified its export and staged 2,636 files. A second authored-disc test verified the launch arguments, rejected a modified DLL and confirmed the staged host discovers and loads the generated module by game ID."
+            }
+          ]
         },
         "original_media_installation": {
           "status": "unknown",

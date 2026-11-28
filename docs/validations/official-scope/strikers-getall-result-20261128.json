@@ -1,0 +1,94 @@
+{
+  "scope": "Official source staging, one ISO picker, negative-media/cancellation tests, and authored GameCube input through module compilation and Windows runtime staging. No install or boot with original game media.",
+  "sdk_version": "1.5.71",
+  "project_id": "strikersrecomp",
+  "tag": "build-cd88f71",
+  "recipe": {
+    "bytes": 786,
+    "sha256": "a9a80f21fd63a331d67ab453f6d22c485ef0bb80ce68abc76f96b531530a8121"
+  },
+  "official_source": {
+    "bytes": 181877,
+    "sha256": "1f361113dbfd35d0b0e6e1c5b98cbdf755cc28334f984cbdd95572a3be189a62"
+  },
+  "test_assertions": [
+    "PASS STRIKERS RECOMPCORE reviewed source profile reaches the shared original-media flow",
+    "PASS STRIKERS RECOMPCORE the shared modal requests exactly one G4QE01 Rev 0 ISO",
+    "PASS STRIKERS RECOMPCORE an unreviewed source origin cannot use the preparation profile",
+    "PASS STRIKERS RECOMPCORE official source reaches the media prompt without registering a playable installation",
+    "PASS STRIKERS RECOMPCORE prepared kit is exactly the pinned source archive and official README",
+    "PASS STRIKERS RECOMPCORE a prepared kit cannot be launched before verification",
+    "PASS STRIKERS RECOMPCORE the selector receives the same ISO contract as the modal",
+    "PASS STRIKERS RECOMPCORE closing the ISO picker cancels the current operation",
+    "PASS STRIKERS RECOMPCORE cancelling the selector preserves the verified source checkpoint and does not provision tools",
+    "PASS STRIKERS RECOMPCORE cancelling before selection does not ask for media",
+    "PASS STRIKERS RECOMPCORE early cancellation leaves the prepared kit untouched",
+    "PASS STRIKERS RECOMPCORE retry uses the original media contract",
+    "PASS STRIKERS RECOMPCORE an incompatible ISO is rejected before local build",
+    "PASS STRIKERS RECOMPCORE retry revalidates the existing kit and preserves the input without enabling Play",
+    "PASS STRIKERS RECOMPCORE rejection and cancellation leave no working transaction or secondary install",
+    "STRIKERS_RECOMPCORE_KIT_PASS (source, selection, cancellation and rejection; no retail game boot)"
+  ],
+  "synthetic_module_pipeline": {
+    "test_switch": "--strikers-recompcore-module",
+    "authored_disc_id": "QATX01",
+    "official_disc_validation_enabled_for_test": false,
+    "precompiled_host_revision_for_staging": "283baee01e54b6c3f71e441bb78fc77b260512fa",
+    "log_fingerprints": {
+      "dol-configure.log": {
+        "bytes": 601,
+        "sha256": "472d2962732267e9cc9cd0f729b3830b327e2f50f2a17e29d1cca694e43ed9bc"
+      },
+      "dol-build.log": {
+        "bytes": 561,
+        "sha256": "4da84447d4e8529c18931ff84bb47a53c38a5d0bf58eb6e2c73e936695512ec6"
+      },
+      "module-generate.log": {
+        "bytes": 3288,
+        "sha256": "4cbd3f7dbea1ecdd27fa11e6ac204547c5eea9e0621f1cfa1f43d5881bb8a821"
+      },
+      "module-configure.log": {
+        "bytes": 797,
+        "sha256": "f895a26483e76ce52160eb0e3f25a16cf817fb76926ad384c000ee4546b9b6be"
+      },
+      "module-build.log": {
+        "bytes": 804,
+        "sha256": "7191b474253adb8c389b38ca9e9f3a2bce387364a07cd3d71ecf247f3c185b11"
+      },
+      "module-exports.log": {
+        "bytes": 3052,
+        "sha256": "e3d15f7d8a29c76e368515d5a0c3857db975d9ea2d42a60e3f8fe8d9e799236d"
+      }
+    },
+    "staged_file_count": 2636,
+    "module": {
+      "bytes": 67072,
+      "sha256": "40c7fa5d5975ae46b02dc230d87f178ccc9480d49e3dfcc723f8903c0f59f3fa"
+    },
+    "executable": {
+      "bytes": 17000960,
+      "sha256": "79e5871bc8d1dc4eb0c4eb03b8f9adc8bb3b124d770c6d0ac5aafc5fac355fd0"
+    }
+  },
+  "original_media_installation_observed": false,
+  "original_media_first_boot_observed": false,
+  "synthetic_staged_launch": {
+    "fixture": {
+      "bytes": 24576,
+      "sha256": "dbd82a6839ec1d5d733b98171f94cb74a323e6215183633abfe1d7974e669595"
+    },
+    "probe_result": {
+      "bytes": 1122,
+      "sha256": "75b0ca3a5304a9a4716c0f250e73a4605d8f60389e74e45400c5480a91916e37"
+    },
+    "generated_module": {
+      "bytes": 67072,
+      "sha256": "8ef618b325eaa8cc743e08641f7d839be14af6d48d3ef8efff500f91e5f43fd6"
+    },
+    "game_id": "G4QE01",
+    "fixture_only": true,
+    "module_discovered_by_game_id": true,
+    "production_environment_override": false,
+    "modified_module_rejected_by_launcher": true
+  }
+}
