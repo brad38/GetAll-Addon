@@ -435,6 +435,29 @@ def sanitize_tag_filename(tag: str) -> str:
     return cleaned
 
 
+def read_store_release_index(catalog_source: str) -> dict[str, Any]:
+    """Reuse Store collection for matching public and explicit preview channels."""
+    prefix = "https://raw.githubusercontent.com/brad38/AllFix-Repo/"
+    if not catalog_source.startswith(prefix) or not catalog_source.endswith("/catalog.json"):
+        return {}
+    ref = catalog_source[len(prefix):-len("/catalog.json")]
+    if ref == "main":
+        url = prefix + "main/releases.json"
+        expected = None
+    elif re.fullmatch(r"[a-f0-9]{40}", ref):
+        url = prefix + f"main/release-previews/{ref}/releases.json"
+        expected = ref
+    else:
+        return {}
+    try:
+        value, _ = fetch_json(url)
+        if value.get("schema_version") == 1 and value.get("catalog_ref") == expected:
+            return value
+    except (OSError, ValueError, AttributeError):
+        pass  # Migration and excluded sources continue to use the authenticated monitor.
+    return {}
+
+
 def run_upstream_watch(
     repo_root: Path,
     *,
@@ -456,8 +479,8 @@ def run_upstream_watch(
     baseline = load_audit_baseline(repo_root)
 
     if catalog_data is None:
-        catalog_data, loaded_eligibility, loaded_exclusions = load_scope(
-            catalog_source or select_catalog(index_data, os.environ))
+        catalog_source = catalog_source or select_catalog(index_data, os.environ)
+        catalog_data, loaded_eligibility, loaded_exclusions = load_scope(catalog_source)
         eligibility_data = eligibility_data if eligibility_data is not None else loaded_eligibility
         exclusions_data = exclusions_data if exclusions_data is not None else loaded_exclusions
     decisions = assessments(eligibility_data)
@@ -470,7 +493,22 @@ def run_upstream_watch(
 
     headers = get_github_headers()
     if releases_fetcher is None:
+        store = read_store_release_index(str(catalog_source)) if catalog_source else {}
+        store_repos = store.get("repositories", {})
+        store_projects = store.get("projects", {})
+        matching_sources = {
+            project.get("source", {}).get("github_repository", "").lower()
+            for game in catalog_data.get("games", [])
+            for project in game.get("projects", [])
+            if project.get("source", {}).get("provider") == "github"
+            and project.get("source", {}).get("github_repository")
+            and store_projects.get(f"{game.get('id')}/{project.get('id')}") ==
+                project["source"]["github_repository"].lower()
+        }
         def releases_fetcher(repo: str) -> list[dict[str, Any]]:
+            row = store_repos.get(repo.lower(), {})
+            if repo.lower() in matching_sources and row.get("state") == "ok" and isinstance(row.get("releases"), list):
+                return row["releases"]
             url = f"{GITHUB_API_BASE}/repos/{repo}/releases?per_page=10"
             data, resp_headers = fetch_json(url, headers=headers)
             remaining = resp_headers.get("x-ratelimit-remaining")

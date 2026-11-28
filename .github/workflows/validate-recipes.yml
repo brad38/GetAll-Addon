@@ -8,6 +8,7 @@ on:
       - feat/marathon-xbox-media-import
       - feat/sm64plus-handoff
       - work/official-install-scope-20261127
+      - work/getall-release-index
   workflow_dispatch:
 
 permissions:

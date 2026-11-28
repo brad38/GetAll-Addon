@@ -21,6 +21,17 @@ import validate_recipes  # noqa: E402
 
 
 class UpstreamWatchTests(unittest.TestCase):
+    def test_store_release_index_is_scoped_to_catalog_ref(self) -> None:
+        pin = "a" * 40
+        base = "https://raw.githubusercontent.com/brad38/AllFix-Repo/"
+        pinned = {"schema_version": 1, "catalog_ref": pin, "repositories": {}}
+        with patch.object(upstream_watch, "fetch_json", return_value=(pinned, {})) as fetch:
+            self.assertEqual(upstream_watch.read_store_release_index(base + pin + "/catalog.json"), pinned)
+            fetch.assert_called_once_with(base + "main/release-previews/" + pin + "/releases.json")
+            self.assertEqual(upstream_watch.read_store_release_index(base + "main/catalog.json"), {})
+            self.assertEqual(upstream_watch.read_store_release_index("https://elsewhere.example/catalog.json"), {})
+            self.assertEqual(fetch.call_count, 2)
+
     def test_candidate_discovery_excludes_catalog_forks_and_invalid_results(self) -> None:
         fetcher = Mock(return_value=({"items": [
             {"full_name": "Ports/ExampleRecomp"},
