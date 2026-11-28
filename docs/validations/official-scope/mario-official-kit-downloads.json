@@ -1,0 +1,23 @@
+[
+  {
+    "project": "sm64ex",
+    "url": "https://codeload.github.com/sm64pc/sm64ex/zip/d7ca2c04364a6dd0dac58b47151e04e26887e6f0",
+    "bytes": 11541633,
+    "sha256": "9c9fad7d6d027971ee6c3447bf36c95aae7e1dc4a2715dabb8106c771b696bee",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\mario-official-kits\\sm64ex.zip"
+  },
+  {
+    "project": "render96ex",
+    "url": "https://codeload.github.com/Render96/Render96ex/zip/48da5c491c8abfb2f5192b59278c1c269411e533",
+    "bytes": 11615689,
+    "sha256": "43091630151c8023b72e7faa2726c3914376fee2cc3becbfefba30423b71b403",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\mario-official-kits\\render96ex.zip"
+  },
+  {
+    "project": "sm64rt",
+    "url": "https://codeload.github.com/DarioSamo/sm64rt/zip/20e618b75ae4a6810bd92ac6a937cb167517aac5",
+    "bytes": 76969492,
+    "sha256": "a742cdb0879c073c697099ef60ed8014b00e2d7104797f2cbbde28bc59917acb",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\mario-official-kits\\sm64rt.zip"
+  }
+]

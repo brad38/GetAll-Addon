@@ -1,0 +1,42 @@
+[
+  {
+    "project": "gow",
+    "repository": "danielalves96/gow-pc-port",
+    "commit": "adebc00e69d4395318c94523f345b26c7daf3451",
+    "path": "gow-launcher/crates/gow-core/src/launch.rs",
+    "url": "https://raw.githubusercontent.com/danielalves96/gow-pc-port/adebc00e69d4395318c94523f345b26c7daf3451/gow-launcher/crates/gow-core/src/launch.rs",
+    "bytes": 40053,
+    "sha256": "5e9e1e33ff7057f9446ffbf5f755177d85f0e1716029a19bace332df7b0e471e",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\gow\\gow-launcher\\crates\\gow-core\\src\\launch.rs"
+  },
+  {
+    "project": "gow",
+    "repository": "danielalves96/gow-pc-port",
+    "commit": "adebc00e69d4395318c94523f345b26c7daf3451",
+    "path": "gow-launcher/crates/gow-core/src/game.rs",
+    "url": "https://raw.githubusercontent.com/danielalves96/gow-pc-port/adebc00e69d4395318c94523f345b26c7daf3451/gow-launcher/crates/gow-core/src/game.rs",
+    "bytes": 15723,
+    "sha256": "ad28307623e146793064fe1c53aa0a4a7dbeac63fe66929e544698fe82997067",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\gow\\gow-launcher\\crates\\gow-core\\src\\game.rs"
+  },
+  {
+    "project": "gow",
+    "repository": "danielalves96/gow-pc-port",
+    "commit": "adebc00e69d4395318c94523f345b26c7daf3451",
+    "path": "gow-launcher/crates/gow-core/src/direct.rs",
+    "url": "https://raw.githubusercontent.com/danielalves96/gow-pc-port/adebc00e69d4395318c94523f345b26c7daf3451/gow-launcher/crates/gow-core/src/direct.rs",
+    "bytes": 4796,
+    "sha256": "fd9eee241d0f5fbe119f0da74a457277cd0f8d835e93bbff85fe2becce234cca",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\gow\\gow-launcher\\crates\\gow-core\\src\\direct.rs"
+  },
+  {
+    "project": "gow",
+    "repository": "danielalves96/gow-pc-port",
+    "commit": "adebc00e69d4395318c94523f345b26c7daf3451",
+    "path": "gow-launcher/crates/gow-core/src/paths.rs",
+    "url": "https://raw.githubusercontent.com/danielalves96/gow-pc-port/adebc00e69d4395318c94523f345b26c7daf3451/gow-launcher/crates/gow-core/src/paths.rs",
+    "bytes": 3532,
+    "sha256": "1fa8faeabee4420a1260670a0a536b2cfa2f10b76b55c618c18b3bc220659c18",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\gow\\gow-launcher\\crates\\gow-core\\src\\paths.rs"
+  }
+]

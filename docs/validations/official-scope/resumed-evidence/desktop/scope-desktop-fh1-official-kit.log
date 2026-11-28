@@ -1,0 +1,4 @@
+PASS FH1 OFFICIAL all real upstream kit files match the pinned original manifest
+PASS FH1 OFFICIAL incomplete real kit rejected
+PASS FH1 OFFICIAL changed source or SDK member rejected
+FH1_OFFICIAL_KIT_PASS (kit integrity only; no original-media install, boot or gameplay)

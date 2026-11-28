@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "original_media_used": false,
+  "game_built": false,
+  "game_started": false,
+  "gameplay_verified": false,
+  "official_extractor_exit": 0,
+  "files_verified": 4,
+  "layers": 2,
+  "source_sha256": "fde560206c2fa78ba533bd8691ad87fcbb4ad43474ea83f4b1b9c39aa7421f02"
+}

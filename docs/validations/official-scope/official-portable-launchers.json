@@ -1,0 +1,61 @@
+[
+  {
+    "project": "fh1",
+    "repository": "FH1-ReImagined/ForzaHorizon1-ReImagined",
+    "commit": "46d5ed62866af68700d15c61748df8c29ad0248d",
+    "path": "launcher/forza_launcher/datafolder.py",
+    "url": "https://raw.githubusercontent.com/FH1-ReImagined/ForzaHorizon1-ReImagined/46d5ed62866af68700d15c61748df8c29ad0248d/launcher/forza_launcher/datafolder.py",
+    "bytes": 25471,
+    "sha256": "2189bcce00b4fb64fa2cf6c2fcbf7857318bf2b74633f671525d73a8cf971580",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\fh1\\launcher\\forza_launcher\\datafolder.py"
+  },
+  {
+    "project": "pinyon",
+    "repository": "arcanite24/pinyon-shift",
+    "commit": "850518ce00c66d65557bcbf190a62d2e2a6bb0e3",
+    "path": "tools/setup-preview.ps1",
+    "url": "https://raw.githubusercontent.com/arcanite24/pinyon-shift/850518ce00c66d65557bcbf190a62d2e2a6bb0e3/tools/setup-preview.ps1",
+    "bytes": 15383,
+    "sha256": "59b1c60e947cdd6e1e6c21a750e0d8ae9ded2228393fef45ff5e54e5394c94e9",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\pinyon\\tools\\setup-preview.ps1"
+  },
+  {
+    "project": "pinyon",
+    "repository": "arcanite24/pinyon-shift",
+    "commit": "850518ce00c66d65557bcbf190a62d2e2a6bb0e3",
+    "path": "tools/launch-preview.ps1",
+    "url": "https://raw.githubusercontent.com/arcanite24/pinyon-shift/850518ce00c66d65557bcbf190a62d2e2a6bb0e3/tools/launch-preview.ps1",
+    "bytes": 18263,
+    "sha256": "45ff8132e336489031b50bc2f1199e7a6a021d7cf24c1fd79ec594da074194d6",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\pinyon\\tools\\launch-preview.ps1"
+  },
+  {
+    "project": "pinyon",
+    "repository": "arcanite24/pinyon-shift",
+    "commit": "850518ce00c66d65557bcbf190a62d2e2a6bb0e3",
+    "path": "tools/release-common.ps1",
+    "url": "https://raw.githubusercontent.com/arcanite24/pinyon-shift/850518ce00c66d65557bcbf190a62d2e2a6bb0e3/tools/release-common.ps1",
+    "bytes": 74680,
+    "sha256": "6fafb70bdc6f79c066e32ad6f35a88bdfdebc78faf435bad74283561c22e7985",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\pinyon\\tools\\release-common.ps1"
+  },
+  {
+    "task": [
+      "pinyon",
+      "arcanite24/pinyon-shift",
+      "850518ce00c66d65557bcbf190a62d2e2a6bb0e3",
+      "release-toolchain.json"
+    ],
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "project": "pinyon",
+    "repository": "arcanite24/pinyon-shift",
+    "commit": "850518ce00c66d65557bcbf190a62d2e2a6bb0e3",
+    "path": "launcher/PinyonShift.Launcher/MainWindow.xaml.cs",
+    "url": "https://raw.githubusercontent.com/arcanite24/pinyon-shift/850518ce00c66d65557bcbf190a62d2e2a6bb0e3/launcher/PinyonShift.Launcher/MainWindow.xaml.cs",
+    "bytes": 137170,
+    "sha256": "6f6ab0528d51e3241eb7433109a0e54a2039e8f28089441307f1f47c39411148",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\pinyon\\launcher\\PinyonShift.Launcher\\MainWindow.xaml.cs"
+  }
+]

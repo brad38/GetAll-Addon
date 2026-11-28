@@ -1,0 +1,14 @@
+{
+  "schema_version": 3,
+  "project_id": "ship-of-harkinian-soh",
+  "tag": "9.3.1",
+  "source_url": "https://github.com/HarbourMasters/Shipwright/releases/tag/9.3.1",
+  "operations": [],
+  "required_files": [
+    "soh.exe",
+    "soh.o2r"
+  ],
+  "inputs": [],
+  "manual_steps": "O pacote oficial Ship of Harkinian foi extraido. Para concluir o primeiro uso, abra soh.exe na pasta instalada e selecione uma ROM legitima e compativel de Zelda Ocarina of Time quando solicitado; consulte ship.equipment para verificar sua ROM. O jogo extrai os recursos localmente; nao ha ROM ou ativos comerciais no pacote.",
+  "launch_file": "soh.exe"
+}

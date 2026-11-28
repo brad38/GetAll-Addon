@@ -1,0 +1,29 @@
+{
+  "kit": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\forza-svod\\05f3d8f5b259453f82975a56c3005200\\games\\Forza Horizon - fh1-reimagined v0.3.9",
+  "source_commit": "46d5ed62866af68700d15c61748df8c29ad0248d",
+  "manifest_sha256": "05a6759e90dc4b9dfb2fda99e7e73c32bc0fb657c16d752c05148cb6cd0c1ae3",
+  "files_verified": 1079,
+  "payload_bytes_verified": 403224077,
+  "failures": [],
+  "tests": [
+    {
+      "arguments": [
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "0.3.9\n",
+      "stderr": "",
+      "classification": "official-cli-only; no game build, media, boot or gameplay"
+    },
+    {
+      "arguments": [
+        "--build",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: forza-launcher --build [-h] [--root ROOT] [--jobs JOBS] [--clean]\n                              [--accept-microsoft-license]\n                              [--title-update TITLE_UPDATE] [--base]\n                              [--download-toolchain]\n\noptions:\n  -h, --help            show this help message and exit\n  --root ROOT           data root (default: the launcher's)\n  --jobs JOBS\n  --clean\n  --accept-microsoft-license\n  --title-update TITLE_UPDATE\n                        your Title Update 4 package, a zip holding it or a\n                        folder (default: the one set in the launcher; TU4 is\n                        recommended: Horizon Rally, 1000 Club)\n  --base                build the base game, without a title update\n  --download-toolchain  use the pinned LLVM, CMake and ninja even when the\n                        system has them\n",
+      "stderr": "",
+      "classification": "official-cli-only; no game build, media, boot or gameplay"
+    }
+  ]
+}

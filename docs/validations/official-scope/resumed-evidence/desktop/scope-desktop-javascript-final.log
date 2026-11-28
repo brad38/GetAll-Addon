@@ -1,0 +1,25 @@
+STORE_SEARCH_REGRESSION_PASS cases=12 staticChecks=12
+STORE_R15_ASSET_REGRESSION_PASS cases=11
+STORE_R16_ASSET_REGRESSION_PASS cases=4
+STORE_R17_MEDIA_REGRESSION_PASS cases=5
+STORE_R17_FORZA_ASSET_PASS cases=4
+STORE_INSTALL_ENTRY_PASS cases=3
+STORE_R17_MML_ASSET_PASS cases=3
+STORE_R17C_ALTERNATIVE_MEDIA_PASS cases=3
+STORE_R17G_EXPIRY_PASS cases=6
+STORE_R18_SM64_AND_EXTRA_ASSET_PASS cases=30
+STORE_R19_UI_OPTIONALS_PASS cases=5
+STORE_INITIAL_AUTOMATION_PASS cases=5
+✔ projeto funcional sem automação permanece consultável e não oferece instalação (1.5018ms)
+✔ limitações e procedimento oficial são exibidos com texto escapado (0.8149ms)
+✔ a release precisa da receita do canal e do SDK compatível (0.8626ms)
+✔ diálogos simultâneos preservam a fila e o cancelamento (1.3136ms)
+✔ progresso da instalação usa etapa e medições do motor (1.2283ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 85.3318

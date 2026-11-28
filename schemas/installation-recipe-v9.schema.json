@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "All-Fix v9 — closed preparation-only profiles",
-  "description": "Exact, locally approved preparation contracts. No execution, no commands, no game launch. Adding a profile requires an SDK update.",
+  "title": "All-Fix v9 - closed SDK preparation profiles",
+  "description": "Exact preparation contracts implemented by a reviewed SDK. Recipes declare no arbitrary command, script or launch arguments. Official extraction, build and launch behavior belongs to the named SDK profile; adding a profile requires an SDK update.",
   "oneOf": [
     {
       "const": {
@@ -1017,6 +1017,415 @@
             "kind": "directory",
             "extensions": [],
             "version": "MKW Switch 2 ExeFS/RomFS completas (1.0.0/1.8.0)"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "ssx-recomp",
+        "tag": "v2.0.1",
+        "source_url": "https://github.com/AmarilloNL/ssx-recomp/releases/tag/v2.0.1",
+        "operations": [],
+        "required_files": [
+          "ssx-recomp.exe",
+          "recomplauncher.json"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua ISO ou pasta original de SSX EA-2413. O instalador oficial compila o jogo sem alterações de fonte; a instalação pode baixar ferramentas e requer aceite explícito dos termos do Visual Studio Build Tools. Title Update e DLCs são opcionais.",
+        "build_profile": "ssx-2.0.1-official-prepare",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file_or_directory",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "Xbox 360 EA-2413 USA/Europe/Australia"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "pinyon-shift",
+        "tag": "v0.9.5",
+        "source_url": "https://github.com/arcanite24/pinyon-shift/releases/tag/v0.9.5",
+        "operations": [],
+        "required_files": [
+          "PinyonShiftLauncher.exe",
+          "pinyon-shift-source.zip"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua ISO ou pasta original de Forza Horizon USA (MS-2505). O All-Fix executa a preparação oficial do Pinyon Shift, com verificação dos arquivos, download das ferramentas e compilação sem alterações de fonte. O uso das bibliotecas Microsoft exige aceite explícito dos termos. Ao concluir, use Jogar; configurações, shaders e DLCs seguem os procedimentos oficiais. Nenhum jogo está incluído.",
+        "build_profile": "pinyon-v0.9.5-official-installer",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file_or_directory",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "Xbox 360 USA MS-2505 / 4D5309C9"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "fh1-reimagined",
+        "tag": "v0.3.9",
+        "source_url": "https://github.com/FH1-ReImagined/ForzaHorizon1-ReImagined/releases/tag/v0.3.9",
+        "operations": [],
+        "required_files": [
+          "forza-launcher.exe",
+          "README.txt",
+          "windows-build-manifest.json",
+          "project/forza-recomp/CMakeLists.txt",
+          "project/forza-recomp/forza_manifest.toml",
+          "licenses/ForzaHorizon1-ReImagined.txt"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua mídia original de Forza Horizon para Xbox 360. O launcher oficial importa a mídia e compila o jogo com fontes e SDK oficiais. O download das ferramentas Microsoft exige aceite explícito dos termos. A atualização TU4 é opcional.",
+        "build_profile": "fh1-0.3.9-official-prepare",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file_or_directory",
+            "extensions": [
+              ".iso",
+              ".god"
+            ],
+            "version": "Xbox 360 original; Games on Demand ou pasta extraída"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "god-of-war-native-pc-port-gow-pc-port",
+        "tag": "launcher-v0.4.0",
+        "source_url": "https://github.com/danielalves96/gow-pc-port/releases/tag/launcher-v0.4.0",
+        "operations": [],
+        "required_files": [
+          "God Of War - PC Launcher_0.4.0_x64-portable/God Of War - PC Launcher.exe",
+          "God Of War - PC Launcher_0.4.0_x64-portable/README.txt",
+          "God Of War - PC Launcher_0.4.0_x64-portable/kit/install.ps1",
+          "God Of War - PC Launcher_0.4.0_x64-portable/kit/bin/ps2_recomp.exe",
+          "God Of War - PC Launcher_0.4.0_x64-portable/kit/bin/ps2-tools.exe",
+          "God Of War - PC Launcher_0.4.0_x64-portable/kit/RustPortPS2/games/scus-97399/gow-port.toml"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua ISO ou CHD original de God of War USA (SCUS-97399). O All-Fix verifica a mídia e executa o instalador oficial 0.4.0, com o compilador e as opções padrão do projeto. A primeira compilação pode demorar; ao concluir, use Jogar. Nenhum jogo está incluído.",
+        "build_profile": "gow-0.4.0-official-installer",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso",
+              ".chd"
+            ],
+            "version": "Disco original God of War USA (SCUS-97399), em ISO ou CHD."
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "ship-of-harkinian-soh",
+        "tag": "9.3.1",
+        "source_url": "https://github.com/HarbourMasters/Shipwright/releases/tag/9.3.1",
+        "operations": [],
+        "required_files": [
+          "soh.exe",
+          "soh.o2r"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua ROM original compatível de Ocarina of Time em formato .z64. O extrator Torch oficial gera os recursos locais sem alterar as fontes do projeto. Ao concluir, use Jogar. Nenhuma ROM está incluída.",
+        "build_profile": "ship-of-harkinian-9.3.1-official-extractor",
+        "preparation_media": [
+          {
+            "id": "original-rom",
+            "kind": "file",
+            "extensions": [
+              ".z64"
+            ],
+            "version": "Ocarina of Time .z64 big-endian de 32 MiB e SHA-1 oficial"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "sm64ex",
+        "tag": "build-d7ca2c0",
+        "source_url": "https://github.com/sm64pc/sm64ex/commit/d7ca2c04364a6dd0dac58b47151e04e26887e6f0",
+        "operations": [],
+        "required_files": [
+          "source.zip",
+          "README.md"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua ROM original americana de Super Mario 64 em formato .z64, de 8 MiB. O All-Fix compila sm64ex pelo Makefile oficial intacto, com recursos externos e MSYS2 privado obtido sob demanda. Ao concluir, use Jogar. Nenhuma ROM está incluída.",
+        "build_profile": "sm64ex-official-msys-d7ca2c0",
+        "preparation_media": [
+          {
+            "id": "original-rom",
+            "kind": "file",
+            "extensions": [
+              ".z64"
+            ],
+            "version": "ROM original americana de Super Mario 64 em formato .z64, de 8 MiB."
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "render96ex",
+        "tag": "build-48da5c4",
+        "source_url": "https://github.com/Render96/Render96ex/commit/48da5c491c8abfb2f5192b59278c1c269411e533",
+        "operations": [],
+        "required_files": [
+          "source.zip",
+          "README.md"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua ROM original americana de Super Mario 64 em formato .z64, de 8 MiB. O All-Fix compila Render96ex pelo Makefile oficial intacto, com recursos externos e MSYS2 privado obtido sob demanda. Os packs oficiais de modelos e texturas são opcionais. Ao concluir, use Jogar. Nenhuma ROM está incluída.",
+        "build_profile": "render96ex-official-msys-48da5c4",
+        "preparation_media": [
+          {
+            "id": "original-rom",
+            "kind": "file",
+            "extensions": [
+              ".z64"
+            ],
+            "version": "ROM original americana de Super Mario 64 em formato .z64, de 8 MiB."
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "sm64rt",
+        "tag": "build-20e618b",
+        "source_url": "https://github.com/DarioSamo/sm64rt/commit/20e618b75ae4a6810bd92ac6a937cb167517aac5",
+        "operations": [],
+        "required_files": [
+          "source.zip",
+          "README.md"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua ROM original americana de Super Mario 64 em formato .z64, de 8 MiB. O All-Fix compila sm64rt pelo Makefile oficial intacto, mantendo RT64 e recursos externos. MSYS2 e bibliotecas oficiais são obtidos sob demanda. O jogo exige GPU compatível com DXR. Ao concluir, use Jogar. Nenhuma ROM está incluída.",
+        "build_profile": "sm64rt-official-msys-20e618b",
+        "preparation_media": [
+          {
+            "id": "original-rom",
+            "kind": "file",
+            "extensions": [
+              ".z64"
+            ],
+            "version": "ROM original americana de Super Mario 64 em formato .z64, de 8 MiB."
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "sm64plus",
+        "tag": "LauncherMirror",
+        "source_url": "https://github.com/MorsGames/sm64plus/releases/tag/LauncherMirror",
+        "operations": [],
+        "required_files": [
+          "build.sh",
+          "data.win",
+          "gamecontrollerdb.txt",
+          "lib64Plus.dll",
+          "lib64Plus_arm64.so",
+          "lib64Plus_x64.so",
+          "options.ini",
+          "rebuild.sh",
+          "rebuild_clean.sh",
+          "SDL2.dll",
+          "Super Mario 64 Plus.exe"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua ROM original americana de Super Mario 64 em formato .z64, de 8 MiB. O All-Fix executa o script oficial do SM64Plus com texturas personalizadas habilitadas, fontes intactas e MSYS2 privado obtido sob demanda. Ao concluir, use Jogar para abrir o launcher oficial. Nenhuma ROM está incluída.",
+        "build_profile": "sm64plus-launcher-official-build",
+        "preparation_media": [
+          {
+            "id": "original-rom",
+            "kind": "file",
+            "extensions": [
+              ".z64"
+            ],
+            "version": "ROM original americana de Super Mario 64 em formato .z64, de 8 MiB."
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "sm",
+        "tag": "build-578f90b",
+        "source_url": "https://github.com/snesrev/sm/commit/578f90b3cc49557bb70060ad033bb90b8cf8ac50",
+        "operations": [],
+        "required_files": [
+          "source/sm.sln",
+          "source/src/sm.vcxproj",
+          "source/src/packages.config",
+          "source/sm.ini",
+          "source/README.md",
+          "source/BUILDING.md",
+          "source/LICENSE.txt"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua ROM original norte-americana de Super Metroid sem cabeçalho. O All-Fix compila as fontes oficiais intactas com Visual Studio 2022; se as ferramentas não estiverem instaladas, será necessário aceitar os termos da Microsoft para obtê-las. O primeiro boot ainda não foi homologado.",
+        "build_profile": "sm-official-msvc-source-578f90b",
+        "preparation_media": [
+          {
+            "id": "original-rom",
+            "kind": "file",
+            "extensions": [
+              ".smc",
+              ".sfc"
+            ],
+            "version": "Super Metroid USA sem cabeçalho; 3145728 bytes; SHA-1 da957f0d63d14cb441d215462904c4fa8519c613"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "sm-rewrite",
+        "tag": "build-5237873",
+        "source_url": "https://github.com/testyourmine/sm_rewrite/commit/523787384a7c912153883b21714f5edabf4e2406",
+        "operations": [],
+        "required_files": [
+          "source/CMakeLists.txt",
+          "source/CMakePresets.json",
+          "source/vcpkg.json",
+          "source/sm.ini",
+          "source/README.md",
+          "source/BUILDING.md",
+          "source/LICENSE.txt"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua ROM original norte-americana de Super Metroid sem cabeçalho. O All-Fix compila as fontes oficiais intactas com Visual Studio 2022; se as ferramentas não estiverem instaladas, será necessário aceitar os termos da Microsoft para obtê-las. O primeiro boot ainda não foi homologado.",
+        "build_profile": "sm-rewrite-official-msvc-source-5237873",
+        "preparation_media": [
+          {
+            "id": "original-rom",
+            "kind": "file",
+            "extensions": [
+              ".smc",
+              ".sfc"
+            ],
+            "version": "Super Metroid USA sem cabeçalho; 3145728 bytes; SHA-1 da957f0d63d14cb441d215462904c4fa8519c613"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "gt5-recomp",
+        "tag": "build-64ca169",
+        "source_url": "https://github.com/MormonFTP-hub/gt5-recomp/commit/64ca1697c5f9bb513bfe0414d9a36c10dafd0a37",
+        "operations": [],
+        "required_files": [
+          "source.zip",
+          "README.md"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua ISO decifrada ou pasta PS3_GAME original de Gran Turismo 5 e o firmware PS3 obtido legalmente. O All-Fix executa o instalador oficial, preservando DirectX 12, Vulkan e os complementos gráficos oficiais. Dependências Microsoft e NVIDIA são obtidas somente quando necessárias e após aceite explícito. Ao concluir, use Jogar. Nenhum jogo ou firmware está incluído.",
+        "build_profile": "gt5-64ca169-official-installer",
+        "preparation_media": [
+          {
+            "id": "original-game",
+            "kind": "file_or_directory",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "GT5: ISO decifrada ou pasta PS3_GAME BCES00569/BCUS98114 v01.00"
+          },
+          {
+            "id": "original-firmware",
+            "kind": "file_or_directory",
+            "extensions": [
+              ".pup"
+            ],
+            "version": "GT5: pasta dev_flash ou firmware PS3UPDAT.PUP local obtido legalmente"
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "god-of-war-recomp",
+        "tag": "build-d1d11ec",
+        "source_url": "https://github.com/KIexster/god-of-war-recomp/commit/d1d11ec545c3baf2f3fc17e2df4247ac4b732d5c",
+        "operations": [],
+        "required_files": [
+          "source.zip",
+          "README.md"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua ISO original americana de God of War para PS2 (SCUS_973.99). O All-Fix executa os scripts oficiais de extração, compilação e execução da KIexster, sem alterar os fontes do projeto. Se faltarem ferramentas Microsoft, o download exige aceite explícito dos termos. A primeira compilação pode demorar; nenhum jogo está incluído.",
+        "build_profile": "god-of-war-kiexster-d1d11ec-official-installer",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "ISO original americana de God of War PS2 (SCUS_973.99)."
+          }
+        ]
+      }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "mariokartdd-recomp",
+        "tag": "build-bd36eb9",
+        "source_url": "https://github.com/ethannicholas/mariokartdd-recomp/commit/bd36eb982ea58c6651584cc48264876d1aba9546",
+        "operations": [],
+        "required_files": [
+          "CMakeLists.txt",
+          "build.ps1",
+          "LICENSE",
+          "README.md",
+          "gcn-recomp/CMakeLists.txt",
+          "gcn-recomp/LICENSE",
+          "gcn-recomp/recomp/extract_dol.py",
+          "gcn-recomp/recomp/recomp.py"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione sua ISO original americana de Mario Kart: Double Dash!! (GM4E01). O All-Fix executa build.ps1 oficial com Clang, Visual Studio 2022 e o submódulo fixado pelo autor, preservando OpenXR e as opções do projeto. Ferramentas Microsoft ausentes exigem aceite explícito antes da instalação. Primeiro boot ainda não homologado.",
+        "build_profile": "mariokartdd-bd36eb9-official-msvc-clang",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "GameCube USA GM4E01; main.dol SHA-1 e389e50357d4a5076ab3d38672204658f411123d"
           }
         ]
       }

@@ -1,0 +1,22 @@
+{
+  "installed": {
+    "InstallRoot": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools",
+    "MsBuild": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe",
+    "VcVars64": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+    "CMake": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe",
+    "Ninja": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja\\ninja.exe",
+    "Vcpkg": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\vcpkg",
+    "Clang": null
+  },
+  "bootstrap_sha256": "8aaf70d164808d313ee6226af5d1e3b2db43c60be551bfeb2b70ce139d792c37",
+  "signature": {
+    "status": "Valid",
+    "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+    "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72"
+  },
+  "target": "x64",
+  "windows_sdk": "10.0.26100.0\\",
+  "provisioned": false,
+  "bootstrap_executed": false,
+  "limits": "Discovery/environment/signature checks only. Fresh installation and UAC path were not exercised."
+}

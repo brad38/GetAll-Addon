@@ -1,0 +1,92 @@
+{
+  "repository": "https://github.com/HarbourMasters/Torch",
+  "commit": "2ab12fe9660aec04e02ee89fe81baed304a1a1d6",
+  "archive_url": "https://codeload.github.com/HarbourMasters/Torch/zip/2ab12fe9660aec04e02ee89fe81baed304a1a1d6",
+  "archive_sha256": "0b4eadfb86b77d89fdff89e90264eb3f53b48ea47872d487518fd27fc6832b08",
+  "archive_bytes": 1869615,
+  "checked_at_utc": "2026-11-28T02:43:04.495378+00:00",
+  "configure_command": [
+    "C:\\Program Files\\CMake\\bin\\cmake.exe",
+    "-S",
+    "{soh-work-dir}\\Torch-2ab12fe9660aec04e02ee89fe81baed304a1a1d6",
+    "-B",
+    "{soh-work-dir}\\torch-build",
+    "-G",
+    "Ninja",
+    "-DCMAKE_MAKE_PROGRAM=C:\\Users\\bradg\\AppData\\Local\\Microsoft\\WinGet\\Links\\ninja.EXE",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DUSE_STANDALONE=ON",
+    "-DPORT_VERSION_ENDIANNESS=ON",
+    "-DROM_CRC_BSWAP=OFF",
+    "-DBUILD_UI=OFF",
+    "-DBUILD_STORMLIB=OFF",
+    "-DBUILD_NAUDIO=OFF",
+    "-DBUILD_OOT=ON",
+    "-DFETCHCONTENT_UPDATES_DISCONNECTED=ON",
+    "-DBUILD_SM64=OFF",
+    "-DBUILD_MK64=OFF",
+    "-DBUILD_SF64=OFF",
+    "-DBUILD_PM64=OFF",
+    "-DBUILD_FZERO=OFF",
+    "-DBUILD_BK64=OFF",
+    "-DBUILD_MARIO_ARTIST=OFF",
+    "-DFETCHCONTENT_SOURCE_DIR_LIBGFXD={soh-work-dir}\\dependencies\\libgfxd",
+    "-DFETCHCONTENT_SOURCE_DIR_SPDLOG={soh-work-dir}\\dependencies\\spdlog",
+    "-DFETCHCONTENT_SOURCE_DIR_TINYXML2={soh-work-dir}\\dependencies\\tinyxml2",
+    "-DFETCHCONTENT_SOURCE_DIR_YAML-CPP={soh-work-dir}\\dependencies\\yaml-cpp",
+    "-DFETCHCONTENT_SOURCE_DIR_ZLIB={soh-work-dir}\\dependencies\\zlib"
+  ],
+  "build_command": [
+    "C:\\Program Files\\CMake\\bin\\cmake.exe",
+    "--build",
+    "{soh-work-dir}\\torch-build",
+    "--target",
+    "torch",
+    "--parallel",
+    "2"
+  ],
+  "build_exit_code": 0,
+  "source_files_checked": 764,
+  "source_changed": [],
+  "source_unchanged": true,
+  "dependencies": {
+    "libgfxd": {
+      "commit": "96fd3b849f38b3a7c7b7f3ff03c5921d328e6cdf",
+      "cache": "{workspace}\\console-source\\paperboat-torch-72960ca\\build\\_deps\\libgfxd-src",
+      "source": "{soh-work-dir}\\dependencies\\libgfxd",
+      "changed_by_upstream_build": []
+    },
+    "spdlog": {
+      "commit": "79524ddd08a4ec981b7fea76afd08ee05f83755d",
+      "cache": "{workspace}\\console-source\\paperboat-torch-72960ca\\build\\_deps\\spdlog-src",
+      "source": "{soh-work-dir}\\dependencies\\spdlog",
+      "changed_by_upstream_build": []
+    },
+    "tinyxml2": {
+      "commit": "321ea883b7190d4e85cae5512a12e5eaa8f8731f",
+      "cache": "{workspace}\\console-source\\paperboat-torch-72960ca\\build\\_deps\\tinyxml2-src",
+      "source": "{soh-work-dir}\\dependencies\\tinyxml2",
+      "changed_by_upstream_build": []
+    },
+    "yaml-cpp": {
+      "commit": "56e3bb550c91fd7005566f19c079cb7a503223cf",
+      "cache": "{workspace}\\console-source\\paperboat-torch-72960ca\\build\\_deps\\yaml-cpp-src",
+      "source": "{soh-work-dir}\\dependencies\\yaml-cpp",
+      "changed_by_upstream_build": []
+    },
+    "zlib": {
+      "commit": "51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf",
+      "cache": "{workspace}\\console-source\\paperboat-torch-72960ca\\build\\_deps\\zlib-src",
+      "source": "{soh-work-dir}\\dependencies\\zlib",
+      "changed_by_upstream_build": [
+        "zconf.h",
+        "zconf.h.included"
+      ]
+    }
+  },
+  "executable": "{soh-work-dir}\\torch-build\\torch.exe",
+  "executable_exists": true,
+  "executable_sha256": "947b5714668072c121166abcf3bfeee72c77495c52a3cbf4a1b2b7e0e284a15c",
+  "executable_bytes": 2226688,
+  "scope": "Official standalone Torch at Shipwright 9.3.1's pinned commit. Source files are not patched. CMake uses the same officially defined OoT format options, while USE_STANDALONE enables Torch's own CLI. Build dependencies are exported at their official pinned commits from existing local git caches. No ROM or game execution."
+}

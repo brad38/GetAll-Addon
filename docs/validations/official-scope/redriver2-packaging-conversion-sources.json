@@ -1,0 +1,20 @@
+[
+  {
+    "path": ".appveyor/AfterBuild.bat",
+    "url": "https://github.com/OpenDriver2/REDRIVER2/blob/acca6b139302dd72c1fbff52556f3493aafda2dd/.appveyor/AfterBuild.bat",
+    "sha256": "8032e6700df8ab70528b13fae857ad6dbee22a4ab70a187cad71c88c6c152c81",
+    "bytes": 316
+  },
+  {
+    "path": "data/install/conv.bat",
+    "url": "https://github.com/OpenDriver2/REDRIVER2/blob/acca6b139302dd72c1fbff52556f3493aafda2dd/data/install/conv.bat",
+    "sha256": "91850e3eb3ae5bdbf885a7947f1af61e50ac90eb50e6010f96725655c0b76ca7",
+    "bytes": 318
+  },
+  {
+    "path": "data/install/conv.sh",
+    "url": "https://github.com/OpenDriver2/REDRIVER2/blob/acca6b139302dd72c1fbff52556f3493aafda2dd/data/install/conv.sh",
+    "sha256": "d5a00af2b9a19404b6b7675e50ac0a4abfeeac97100e316ca9c305114402391e",
+    "bytes": 344
+  }
+]

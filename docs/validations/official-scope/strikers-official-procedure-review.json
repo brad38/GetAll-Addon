@@ -1,0 +1,96 @@
+{
+  "repository": "aharonahdoot/StrikersRecomp",
+  "commit": "cd88f71f5a836c103484c038454b4143000d883c",
+  "archive_url": "https://codeload.github.com/aharonahdoot/StrikersRecomp/zip/cd88f71f5a836c103484c038454b4143000d883c",
+  "archive_sha256": "1f361113dbfd35d0b0e6e1c5b98cbdf755cc28334f984cbdd95572a3be189a62",
+  "sources": [
+    {
+      "path": ".github/workflows/lint.yml",
+      "url": "https://github.com/aharonahdoot/StrikersRecomp/blob/cd88f71f5a836c103484c038454b4143000d883c/.github/workflows/lint.yml",
+      "sha256": "6d8d341dcfa5987ef073d3990cdf5eed4cc486799e391b90a5245c9f8562b80f",
+      "bytes": 419
+    },
+    {
+      "path": "CMakeLists.txt",
+      "url": "https://github.com/aharonahdoot/StrikersRecomp/blob/cd88f71f5a836c103484c038454b4143000d883c/CMakeLists.txt",
+      "sha256": "37a9540dfcf28775f15bbb8e7001044ded44c3f3eccd36f79daf7778df140810",
+      "bytes": 4295
+    },
+    {
+      "path": "README.md",
+      "url": "https://github.com/aharonahdoot/StrikersRecomp/blob/cd88f71f5a836c103484c038454b4143000d883c/README.md",
+      "sha256": "7febbfaa60dc7eb2ac0a318f083e55a81e36206289b2c4668f874e4932236b0d",
+      "bytes": 3459
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "url": "https://github.com/aharonahdoot/StrikersRecomp/blob/cd88f71f5a836c103484c038454b4143000d883c/THIRD_PARTY.md",
+      "sha256": "1935e41c514aad400bf563b7e7fb24ff074d3f205f90a609b896682a9bc5667c",
+      "bytes": 437
+    },
+    {
+      "path": "bootstrap.sh",
+      "url": "https://github.com/aharonahdoot/StrikersRecomp/blob/cd88f71f5a836c103484c038454b4143000d883c/bootstrap.sh",
+      "sha256": "84e76025f7d9fef35cd39b574e0cc8b8ef843122ae0d9c7b818b4837fb2e6084",
+      "bytes": 1073
+    },
+    {
+      "path": "chassis-module/CMakeLists.txt",
+      "url": "https://github.com/aharonahdoot/StrikersRecomp/blob/cd88f71f5a836c103484c038454b4143000d883c/chassis-module/CMakeLists.txt",
+      "sha256": "aea8c21defba31efef520d939bbc4dd09592b66359f2650e80085c5e950dd92f",
+      "bytes": 2653
+    },
+    {
+      "path": "docs/COMPATIBILITY.md",
+      "url": "https://github.com/aharonahdoot/StrikersRecomp/blob/cd88f71f5a836c103484c038454b4143000d883c/docs/COMPATIBILITY.md",
+      "sha256": "c17274271ee47f55118c4b3ed2d8059270ebb4a30e20dd66a21587cdc9ab4fe3",
+      "bytes": 5511
+    },
+    {
+      "path": "docs/architecture.md",
+      "url": "https://github.com/aharonahdoot/StrikersRecomp/blob/cd88f71f5a836c103484c038454b4143000d883c/docs/architecture.md",
+      "sha256": "82111178c067d2f137c1f48acd4d9b8790db454793bef011047d23075f948858",
+      "bytes": 3941
+    },
+    {
+      "path": "docs/reproducing.md",
+      "url": "https://github.com/aharonahdoot/StrikersRecomp/blob/cd88f71f5a836c103484c038454b4143000d883c/docs/reproducing.md",
+      "sha256": "4cd80813318b1c4abfc735e9ca6910f1781833ddec013a36a098674d5f1b5949",
+      "bytes": 1443
+    },
+    {
+      "path": "patches/README.md",
+      "url": "https://github.com/aharonahdoot/StrikersRecomp/blob/cd88f71f5a836c103484c038454b4143000d883c/patches/README.md",
+      "sha256": "aa7f918d501203407bfa83fb2baeb98b5a135d5a4a976d86d0514873f120f914",
+      "bytes": 578
+    },
+    {
+      "path": "tools/completion_G4QE01.md",
+      "url": "https://github.com/aharonahdoot/StrikersRecomp/blob/cd88f71f5a836c103484c038454b4143000d883c/tools/completion_G4QE01.md",
+      "sha256": "76bef63bb45c9b96eba076fcfbc78405a92fa4fb6e36b64b0d76293d7366edc9",
+      "bytes": 4319
+    },
+    {
+      "path": "tools/package_module.sh",
+      "url": "https://github.com/aharonahdoot/StrikersRecomp/blob/cd88f71f5a836c103484c038454b4143000d883c/tools/package_module.sh",
+      "sha256": "f2602dfb2503d0bc306345bf4636fd4053213bb019a2ff07cef4cff176d95d5e",
+      "bytes": 1976
+    }
+  ],
+  "scope": "official procedure review; no original media or gameplay",
+  "api": [
+    {
+      "url": "https://api.github.com/repos/aharonahdoot/StrikersRecomp",
+      "sha256": "83de0a6a9eb0a9be33a8271ce444adbe11daf46480a6d2957616eca833fddd00"
+    }
+  ],
+  "head_current_verified": "cd88f71f5a836c103484c038454b4143000d883c",
+  "reviewed_at": "2026-11-28",
+  "decision": "keep_automation_suspended_pending_official_windows_contract",
+  "concrete_blockers": [
+    "bootstrap.sh selects GXRuntime v0.1.0, whose CMake exports DolRuntime::runtime/aurora; the pinned Strikers source asks for GXRuntime::runtime/aurora and gxruntime headers.",
+    "The official RecompCore packaging script chooses .so on every non-Darwin host while Windows CMake produces .dll; the documented invocation uses Metal.",
+    "The pinned GXRuntime README identifies Windows support as roadmap work; the reviewed automation cannot substitute renderer/host source changes and claim official Windows installation."
+  ],
+  "restore_when": "An official compatible dependency revision/Windows packaging contract is reviewed and proven intact, or an officially supported execution environment is integrated without changing game sources."
+}

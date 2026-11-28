@@ -1,0 +1,18 @@
+{
+  "schema_version": 5,
+  "project_id": "mariokartdd-recomp",
+  "tag": "build-bd36eb9",
+  "source_url": "https://github.com/ethannicholas/mariokartdd-recomp/commit/bd36eb982ea58c6651584cc48264876d1aba9546",
+  "operations": [],
+  "required_files": [
+    "CMakeLists.txt",
+    "LICENSE",
+    "README.md",
+    "gcn-recomp/CMakeLists.txt",
+    "gcn-recomp/LICENSE",
+    "gcn-recomp/recomp/extract_dol.py",
+    "gcn-recomp/recomp/recomp.py"
+  ],
+  "inputs": [],
+  "manual_steps": "Compilação local experimental. Use Retomar e forneça sua ISO GameCube americana GM4E01; o main.dol é conferido pelo SHA-1 oficial. O GetAll prepara as ferramentas em ambiente privado, compila, registra a instalação e habilita Jogar. O modo VR permanece desativado. Nenhum jogo comercial está incluído."
+}

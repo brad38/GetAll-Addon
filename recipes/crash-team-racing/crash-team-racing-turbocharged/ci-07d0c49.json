@@ -3,14 +3,33 @@
   "project_id": "crash-team-racing-turbocharged",
   "tag": "ci-07d0c49",
   "source_url": "https://github.com/CameronRedmore/Crash-Team-Racing-Turbocharged/actions/runs/37521206289",
-  "operations": [],
+  "operations": [
+    {
+      "kind": "import_input",
+      "scope": "installation",
+      "source": "original-ctr-us-bin",
+      "target": "ctr-turbocharged-turbocharged-07d0c49-windows-x86/assets/ctr-u.bin"
+    }
+  ],
   "required_files": [
     "ctr-turbocharged-turbocharged-07d0c49-windows-x86/Crash Team Racing - Turbocharged.exe",
     "ctr-turbocharged-turbocharged-07d0c49-windows-x86/assets/dualshock.png",
     "ctr-turbocharged-turbocharged-07d0c49-windows-x86/assets/fonts/LuckiestGuy-Regular.ttf",
     "ctr-turbocharged-turbocharged-07d0c49-windows-x86/README.txt"
   ],
-  "inputs": [],
-  "launch_file": "ctr-turbocharged-turbocharged-07d0c49-windows-x86/Crash Team Racing - Turbocharged.exe",
-  "manual_steps": "Distribuicao oficial Windows x86 de CI do proprio desenvolvedor, commit 07d0c49, verificada por tamanho e SHA-256 contra o artefato GitHub Actions. O pacote instala somente o port sem dados comerciais. No primeiro inicio, forneca ao assistente do jogo sua propria imagem BIN legitima de Crash Team Racing NTSC-U com setores MODE2/2352; ISO 2048 nao e aceito. O arquivo de CI expira em 2027-01-04 e requer suporte do All-Fix a origem oficial de artefatos; sem esse suporte a instalacao pelo catalogo fica bloqueada. Nenhum boot real foi homologado."
+  "inputs": [
+    {
+      "id": "original-ctr-us-bin",
+      "kind": "file",
+      "name": "Imagem original Crash Team Racing NTSC-U 926",
+      "description": "Selecione o BIN bruto MODE2/2352 da sua própria cópia de Crash Team Racing USA NTSC-U 926. O All-Fix confere o tamanho e SHA-256 do perfil oficial e copia a imagem para assets/ctr-u.bin, conforme o procedimento do Turbocharged. A mídia original é preservada.",
+      "extensions": [
+        ".bin"
+      ],
+      "required": true,
+      "size": 605698800,
+      "sha256": "f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0"
+    }
+  ],
+  "launch_file": "ctr-turbocharged-turbocharged-07d0c49-windows-x86/Crash Team Racing - Turbocharged.exe"
 }

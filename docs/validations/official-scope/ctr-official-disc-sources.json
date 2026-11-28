@@ -1,0 +1,52 @@
+[
+  {
+    "project": "ctr",
+    "repository": "CameronRedmore/Crash-Team-Racing-Turbocharged",
+    "commit": "07d0c49f01d62dcb9887b455be27ce65728ee893",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/CameronRedmore/Crash-Team-Racing-Turbocharged/07d0c49f01d62dcb9887b455be27ce65728ee893/README.md",
+    "bytes": 38225,
+    "sha256": "6ca3e1ca6325b6fae65deb29ce4c080dbddb9cd823cc124ce57eb283771a416a",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\ctr\\README.md"
+  },
+  {
+    "project": "ctr",
+    "repository": "CameronRedmore/Crash-Team-Racing-Turbocharged",
+    "commit": "07d0c49f01d62dcb9887b455be27ce65728ee893",
+    "path": "platform/native_disc_setup.c",
+    "url": "https://raw.githubusercontent.com/CameronRedmore/Crash-Team-Racing-Turbocharged/07d0c49f01d62dcb9887b455be27ce65728ee893/platform/native_disc_setup.c",
+    "bytes": 19958,
+    "sha256": "9925f0422cec69483b1c724e6e142bf5827965a01ca9eaaa8feda672b6fc8233",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\ctr\\platform\\native_disc_setup.c"
+  },
+  {
+    "project": "ctr",
+    "repository": "CameronRedmore/Crash-Team-Racing-Turbocharged",
+    "commit": "07d0c49f01d62dcb9887b455be27ce65728ee893",
+    "path": "platform/native_disc_image.c",
+    "url": "https://raw.githubusercontent.com/CameronRedmore/Crash-Team-Racing-Turbocharged/07d0c49f01d62dcb9887b455be27ce65728ee893/platform/native_disc_image.c",
+    "bytes": 17964,
+    "sha256": "4b5ac6d69f95e36a6c32e7c0d1274cda4f8c516b211c19b05a660819692f5e35",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\ctr\\platform\\native_disc_image.c"
+  },
+  {
+    "project": "ctr",
+    "repository": "CameronRedmore/Crash-Team-Racing-Turbocharged",
+    "commit": "07d0c49f01d62dcb9887b455be27ce65728ee893",
+    "path": "metadata/retail/ntsc-u-926/disc.json",
+    "url": "https://raw.githubusercontent.com/CameronRedmore/Crash-Team-Racing-Turbocharged/07d0c49f01d62dcb9887b455be27ce65728ee893/metadata/retail/ntsc-u-926/disc.json",
+    "bytes": 108270,
+    "sha256": "5340fa2f43d901d9312aaa7cdb8e9b7149c17f2c29c119b9701644bb80c6299d",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\ctr\\metadata\\retail\\ntsc-u-926\\disc.json"
+  },
+  {
+    "project": "ctr-native",
+    "repository": "CTR-tools/ctr-native",
+    "commit": "79d6f1e925c62e85cef2c0f6514e56584e9eb67b",
+    "path": "metadata/retail/ntsc-u-926/matching.json",
+    "url": "https://raw.githubusercontent.com/CTR-tools/ctr-native/79d6f1e925c62e85cef2c0f6514e56584e9eb67b/metadata/retail/ntsc-u-926/matching.json",
+    "bytes": 232942,
+    "sha256": "05bae9b7cdf7893f5fa02e63263f3ca63ac89f5c4f210e232b5ef61172a06f1b",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\ctr-native\\metadata\\retail\\ntsc-u-926\\matching.json"
+  }
+]

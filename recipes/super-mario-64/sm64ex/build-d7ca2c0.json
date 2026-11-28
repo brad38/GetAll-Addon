@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 9,
   "project_id": "sm64ex",
   "tag": "build-d7ca2c0",
   "source_url": "https://github.com/sm64pc/sm64ex/commit/d7ca2c04364a6dd0dac58b47151e04e26887e6f0",
@@ -9,5 +9,16 @@
     "README.md"
   ],
   "inputs": [],
-  "manual_steps": "Selecione sua ROM original americana de Super Mario 64 (.z64). O motor verifica a midia e compila o port Windows x64 com ferramentas privadas fixadas. Nenhuma ROM e distribuida."
+  "manual_steps": "Selecione sua ROM original americana de Super Mario 64 em formato .z64, de 8 MiB. O All-Fix compila sm64ex pelo Makefile oficial intacto, com recursos externos e MSYS2 privado obtido sob demanda. Ao concluir, use Jogar. Nenhuma ROM está incluída.",
+  "build_profile": "sm64ex-official-msys-d7ca2c0",
+  "preparation_media": [
+    {
+      "id": "original-rom",
+      "kind": "file",
+      "extensions": [
+        ".z64"
+      ],
+      "version": "ROM original americana de Super Mario 64 em formato .z64, de 8 MiB."
+    }
+  ]
 }

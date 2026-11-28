@@ -1,0 +1,7 @@
+PASS MSVC OFFICIAL vswhere resolves real installed MSBuild/CMake/Ninja/vcpkg
+PASS MSVC OFFICIAL vcvars64 produces actual x64 compiler/SDK environment
+Reutilizando Visual Studio 2022 e Windows SDK instalados.
+PASS MSVC OFFICIAL existing VS reused without accepting terms again, download or installer execution
+PASS MSVC OFFICIAL actual signed bootstrap verifies before cache publication
+PASS MSVC OFFICIAL tampered Microsoft bootstrap rejected without executing it
+MSVC_OFFICIAL_INSTALLED_PASS

@@ -85,6 +85,26 @@ class CatalogCoverageTests(unittest.TestCase):
         self.assertTrue(row["main_covered"])
         self.assertTrue(row["development_covered"])
 
+    def test_schema_nine_alias_does_not_override_implemented_evidence(self):
+        index=copy.deepcopy(self.index)
+        index["recipes"][0].update(tag="v1",sha256="a"*64)
+        record=self._execution("automated_installation_implemented",status="implemented",data_kind="code_review")
+        actual=coverage(self.catalog,self.empty,index,evidence=record)
+        row=actual["rows"][0]
+        self.assertTrue(row["uses_closed_preparation_profiles"])
+        self.assertEqual(row["dimensions"]["automated_installation_implemented"]["status"],"implemented")
+        self.assertEqual(actual["uses_closed_preparation_profiles"],actual["preparation_only"])
+        self.assertIn("does not imply",actual["legacy_preparation_only_semantics"])
+
+    def test_disabled_contract_preserves_specific_blocker_and_evidence(self):
+        index=copy.deepcopy(self.index)
+        index["recipes"][0].update(tag="v1",sha256="a"*64,status="disabled")
+        record=self._execution("automated_installation_implemented",status="blocked",data_kind="code_review")
+        blocked=record["projects"]["p"]["dimensions"]["automated_installation_implemented"]
+        blocked["reason"]="Required upstream runtime exports a different target; no intact Windows contract verified."
+        actual=coverage(self.catalog,self.empty,index,evidence=record)
+        self.assertEqual(actual["rows"][0]["dimensions"]["automated_installation_implemented"],blocked)
+
     def test_main_and_development_statuses_are_counted_independently(self):
         inactive=copy.deepcopy(self.index)
         inactive["recipes"][0]["status"]="disabled"

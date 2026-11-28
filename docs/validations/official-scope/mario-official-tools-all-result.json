@@ -1,0 +1,32 @@
+{
+  "scope": "Official all target; earlier all-except-recomp probe was inapplicable outside SM64Plus",
+  "projects": [
+    {
+      "project": "sm64ex",
+      "command": "make -C tools -j2 all",
+      "exit_code": 0,
+      "seconds": 13.16,
+      "log": "sm64ex-official-tools-all.log",
+      "log_sha256": "8d78d7ffe6d2d643d08dfb901c7751a8c284d574f8500b884d972100b9b14263",
+      "tracked_sources_unchanged": true
+    },
+    {
+      "project": "render96ex",
+      "command": "make -C tools -j2 all",
+      "exit_code": 0,
+      "seconds": 13.22,
+      "log": "render96ex-official-tools-all.log",
+      "log_sha256": "1b1037d22883bf310c1fd15cfbc488e3447f04367077edbacdd6ea1a5795a8f2",
+      "tracked_sources_unchanged": true
+    },
+    {
+      "project": "sm64rt",
+      "command": "make -C tools -j2 all",
+      "exit_code": 0,
+      "seconds": 13.3,
+      "log": "sm64rt-official-tools-all.log",
+      "log_sha256": "7f83a3302e9ab5475a9ad1714d3f27219fcfa890e125a6f645f8880d9d7d241c",
+      "tracked_sources_unchanged": true
+    }
+  ]
+}

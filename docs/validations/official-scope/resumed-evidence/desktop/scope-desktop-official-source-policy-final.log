@@ -1,0 +1,18 @@
+PASS OFFICIAL SOURCE GT5 has no implicit third-party licence acceptance
+PASS OFFICIAL SOURCE Microsoft and NVIDIA consent remain independent
+PASS OFFICIAL SOURCE GT5 receives no hardware bypass, renderer replacement or partial-build override
+PASS OFFICIAL SOURCE GT5 source and output paths preserve spaces without command interpolation
+PASS OFFICIAL SOURCE missing GT5 official scripts are rejected before execution
+PASS OFFICIAL SOURCE optional component absence is recorded instead of claiming full coverage
+PASS OFFICIAL SOURCE build/component results never certify a boot or gameplay
+PASS OFFICIAL SOURCE component report reflects the actual official CMake outcome
+PASS OFFICIAL SOURCE relocation removes generated CMake state while preserving runtime and sources
+PASS OFFICIAL SOURCE KIexster calls the official play script without its 60-second diagnostic timeout
+PASS OFFICIAL SOURCE KIexster uses the official default build
+PASS OFFICIAL SOURCE KIexster adapter only selects owned work and original-media paths
+PASS OFFICIAL SOURCE legacy private tail-sector metadata is rejected
+PASS OFFICIAL SOURCE KIexster checks extracted files against both authored ISO layers
+PASS OFFICIAL SOURCE changed second-layer data is rejected
+PASS OFFICIAL SOURCE failure diagnostics retain a bounded log tail and leave media untouched
+PASS OFFICIAL SOURCE diagnostic retention rejects an unowned work directory
+PASS OFFICIAL SOURCE disc comparison observes cancellation

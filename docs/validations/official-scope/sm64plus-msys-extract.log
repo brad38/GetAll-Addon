@@ -1,0 +1,93 @@
+
+7-Zip SFX 26.05 ZS v1.5.7 R1 (x64) : Copyright (c) 1999- Igor Pavlov, 2016- Tino Reichardt, 2022- Sergey G. Brester, 2026- fzxx : 2026-11-02
+
+Extracting archive: C:\Users\bradg\Downloads\GetAll-R18\getall-scope-20261127\docs\validations\official-scope\research-cache\sm64plus-msys\msys2-base-x86_64-20261120.sfx.exe
+--
+Path = C:\Users\bradg\Downloads\GetAll-R18\getall-scope-20261127\docs\validations\official-scope\research-cache\sm64plus-msys\msys2-base-x86_64-20261120.sfx.exe
+Type = 7z
+
+  0%
+    
+  0% 498 - msys64\usr\share\terminfo\6b
+                                       
+  0% 970 - msys64\usr\lib\terminfo\61\abm85
+                                           
+  1% 1418 - msys64\usr\lib\terminfo\63\contour-direct
+                                                     
+  1% 1848 - msys64\usr\lib\terminfo\68\h-100bw
+                                              
+  1% 2295 - msys64\usr\lib\terminfo\6e\ncr260vt200an
+                                                    
+  1% 2709 - msys64\usr\lib\terminfo\72\regent40+
+                                                
+  1% 3151 - msys64\usr\lib\terminfo\76\vc404
+                                            
+  2% 3598 - msys64\usr\lib\terminfo\78\xnuppc-200x75
+                                                    
+  2% 4048 - msys64\usr\share\bash-completion\completions-core\freeciv.bash
+                                                                          
+  3% 4493 - msys64\usr\share\bash-completion\completions-core\sha224sum.bash
+                                                                            
+  3% 4955 - msys64\usr\share\bash-completi . 00_bash_completion_compat.bash
+                                                                           
+  7% 5350 - msys64\usr\share\info\gnutls-internals.png.gz
+                                                         
+ 15% 5695 - msys64\usr\share\locale\fi\LC_MESSAGES\util-linux.mo
+                                                                
+ 25% 6027 - msys64\usr\share\locale\pt\LC_MESSAGES\coreutils.mo
+                                                               
+ 35% 6315 - msys64\usr\share\locale\zh_TW\LC_MESSAGES\libgpg-error.mo
+                                                                     
+ 36% 6673 - msys64\usr\share\man\man1\gpgv.1.gz
+                                               
+ 37% 7004 - msys64\usr\share\man\man1\zless.1.gz
+                                                
+ 37% 7345 - msys64\usr\share\man\man3\CURLOPT_KEYPASSWD.3.gz
+                                                            
+ 37% 7670 - msys64\usr\share\man\man3\curs_initscr.3x.gz
+                                                        
+ 38% 8014 - msys64\usr\share\man\man3\libalpm_packages.3.gz
+                                                           
+ 38% 8359 - msys64\usr\share\man\man3\mvwprintw.3x.gz
+                                                     
+ 38% 8686 - msys64\usr\share\man\man3\waddch.3x.gz
+                                                  
+ 39% 8965 - msys64\usr\share\mintty\icon\wsl.ico
+                                                
+ 44% 9228 - msys64\usr\share\terminfo\61\aj830
+                                              
+ 45% 9560 - msys64\usr\share\terminfo\63\cgc3
+                                             
+ 45% 9903 - msys64\usr\share\terminfo\64\dku7102
+                                                
+ 45% 10237 - msys64\usr\share\terminfo\69\ibm6153-90
+                                                    
+ 45% 10587 - msys64\usr\share\terminfo\6e\next
+                                              
+ 45% 10935 - msys64\usr\share\terminfo\72\rt6221
+                                                
+ 45% 11269 - msys64\usr\share\terminfo\74\tvi912c-2p-p
+                                                      
+ 46% 11594 - msys64\usr\share\terminfo\77\wy370-EPC
+                                                   
+ 46% 11917 - msys64\usr\share\terminfo\78\xterm-sco
+                                                   
+ 46% 12257 - msys64\usr\share\zoneinfo\Asia\Karachi
+                                                   
+ 46% 12607 - msys64\usr\share\zoneinfo\posix\Africa\Tunis
+                                                         
+ 46% 12921 - msys64\usr\share\zoneinfo\posix\Australia\Tasmania
+                                                               
+ 46% 13257 - msys64\usr\share\zoneinfo\right\America\Cuiaba
+                                                           
+ 46% 13604 - msys64\usr\share\zoneinfo\right\Europe\Kaliningrad
+                                                               
+ 47% 13925 - msys64\var\lib\pacman\local\liblz4-1.11.1-1\mtree
+                                                              
+ 49% 14175 - msys64\usr\bin\factor.exe
+                                      
+ 70% 14339 - msys64\usr\bin\msys-smartcols-1.dll
+                                                
+ 91% 14463 - msys64\usr\bin\uniq.exe
+                                    
+Everything is Ok

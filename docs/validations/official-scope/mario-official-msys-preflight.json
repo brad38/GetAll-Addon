@@ -1,0 +1,229 @@
+{
+  "scope": "official tools compilation and missing-ROM negatives; no original media, full game build, boot or gameplay",
+  "projects": [
+    {
+      "project": "sm64ex",
+      "repo": "sm64pc/sm64ex",
+      "commit": "d7ca2c04364a6dd0dac58b47151e04e26887e6f0",
+      "flags": "EXTERNAL_DATA=1",
+      "steps": [
+        {
+          "name": "sm64ex-init",
+          "command": "git init",
+          "exit_code": 0,
+          "seconds": 0.14,
+          "log": "sm64ex-init.log",
+          "log_sha256": "da57dd08af1a82463b31fe7a7425cb25c61104bf7d93627f835c097da6a52dec"
+        },
+        {
+          "name": "sm64ex-origin",
+          "command": "git remote add origin https://github.com/sm64pc/sm64ex.git",
+          "exit_code": 0,
+          "seconds": 0.09,
+          "log": "sm64ex-origin.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "sm64ex-fetch",
+          "command": "git fetch --depth 1 origin d7ca2c04364a6dd0dac58b47151e04e26887e6f0",
+          "exit_code": 0,
+          "seconds": 1.66,
+          "log": "sm64ex-fetch.log",
+          "log_sha256": "155de4ea924fba7498233ce3ecac7f3c9e72b308f4cf6c104e72a98cca268687"
+        },
+        {
+          "name": "sm64ex-checkout",
+          "command": "git checkout --detach FETCH_HEAD",
+          "exit_code": 0,
+          "seconds": 2.99,
+          "log": "sm64ex-checkout.log",
+          "log_sha256": "0e5feb17690fadfda741706eb6e63a0d2f08971f118242b368e82c948858de5a"
+        },
+        {
+          "name": "sm64ex-head",
+          "command": "git rev-parse HEAD",
+          "exit_code": 0,
+          "seconds": 0.09,
+          "log": "sm64ex-head.log",
+          "log_sha256": "61644e4ab6210e312cbd71da861e3aa8c526c784867724330af94303e4a96cda"
+        },
+        {
+          "name": "sm64ex-tools",
+          "command": "make -C tools -j2 all-except-recomp",
+          "exit_code": 2,
+          "seconds": 0.09,
+          "log": "sm64ex-tools.log",
+          "log_sha256": "69bf3bf0245e034d3e90d1c570e5a197db162b2a1f72e6d3e51cdcac2b6a06c0"
+        },
+        {
+          "name": "sm64ex-missing-rom",
+          "command": "make -j2 EXTERNAL_DATA=1",
+          "exit_code": 2,
+          "seconds": 0.56,
+          "log": "sm64ex-missing-rom.log",
+          "log_sha256": "3d384f4a596899d934158b98f2631eef70d9846dcca6bf25eec2a33b60054afa"
+        },
+        {
+          "name": "sm64ex-source-integrity",
+          "command": "git diff --exit-code && git status --porcelain --untracked-files=no",
+          "exit_code": 0,
+          "seconds": 1.16,
+          "log": "sm64ex-source-integrity.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "project": "render96ex",
+      "repo": "Render96/Render96ex",
+      "commit": "48da5c491c8abfb2f5192b59278c1c269411e533",
+      "flags": "EXTERNAL_DATA=1",
+      "steps": [
+        {
+          "name": "render96ex-init",
+          "command": "git init",
+          "exit_code": 0,
+          "seconds": 0.12,
+          "log": "render96ex-init.log",
+          "log_sha256": "6e0350f624c18bc992b05561f37688212b36bbde20434559d0acdb0ccc5314d8"
+        },
+        {
+          "name": "render96ex-origin",
+          "command": "git remote add origin https://github.com/Render96/Render96ex.git",
+          "exit_code": 0,
+          "seconds": 0.11,
+          "log": "render96ex-origin.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "render96ex-fetch",
+          "command": "git fetch --depth 1 origin 48da5c491c8abfb2f5192b59278c1c269411e533",
+          "exit_code": 0,
+          "seconds": 1.64,
+          "log": "render96ex-fetch.log",
+          "log_sha256": "35af2a933d0e01d6ba80866ad48a0134f268995f4703190a845c2dd123fc2e5c"
+        },
+        {
+          "name": "render96ex-checkout",
+          "command": "git checkout --detach FETCH_HEAD",
+          "exit_code": 0,
+          "seconds": 3.0,
+          "log": "render96ex-checkout.log",
+          "log_sha256": "532c5852c41b02a296687db985e75566cd5287f1b0b64a5b778409af9f3f81f5"
+        },
+        {
+          "name": "render96ex-head",
+          "command": "git rev-parse HEAD",
+          "exit_code": 0,
+          "seconds": 0.11,
+          "log": "render96ex-head.log",
+          "log_sha256": "caf0208aa5f12333759f1a579cf3d1a547d786a42f5f794a6d6f43d7367e37fc"
+        },
+        {
+          "name": "render96ex-tools",
+          "command": "make -C tools -j2 all-except-recomp",
+          "exit_code": 2,
+          "seconds": 0.08,
+          "log": "render96ex-tools.log",
+          "log_sha256": "78633932427cd9530ce3dc11d2df3ec6e697aa160874138301ae20442f395568"
+        },
+        {
+          "name": "render96ex-missing-rom",
+          "command": "make -j2 EXTERNAL_DATA=1",
+          "exit_code": 2,
+          "seconds": 0.56,
+          "log": "render96ex-missing-rom.log",
+          "log_sha256": "b24b1012d08f8dc138457c6e9fb309abe8f5d57da4b4f2cd3b248124c3d81d47"
+        },
+        {
+          "name": "render96ex-source-integrity",
+          "command": "git diff --exit-code && git status --porcelain --untracked-files=no",
+          "exit_code": 0,
+          "seconds": 1.16,
+          "log": "render96ex-source-integrity.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "project": "sm64rt",
+      "repo": "DarioSamo/sm64rt",
+      "commit": "20e618b75ae4a6810bd92ac6a937cb167517aac5",
+      "flags": "RENDER_API=RT64 EXTERNAL_DATA=1",
+      "steps": [
+        {
+          "name": "sm64rt-init",
+          "command": "git init",
+          "exit_code": 0,
+          "seconds": 0.14,
+          "log": "sm64rt-init.log",
+          "log_sha256": "c2a31446da4f1b7fc6501c14951d7b2be8795c1c7c00b87dcc93fafd5c415f87"
+        },
+        {
+          "name": "sm64rt-origin",
+          "command": "git remote add origin https://github.com/DarioSamo/sm64rt.git",
+          "exit_code": 0,
+          "seconds": 0.09,
+          "log": "sm64rt-origin.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "sm64rt-fetch",
+          "command": "git fetch --depth 1 origin 20e618b75ae4a6810bd92ac6a937cb167517aac5",
+          "exit_code": 0,
+          "seconds": 4.28,
+          "log": "sm64rt-fetch.log",
+          "log_sha256": "36798006507d9526b3e02d9cfe1ee7b266079d17782acfd3cdc75226bfa8adab"
+        },
+        {
+          "name": "sm64rt-checkout",
+          "command": "git checkout --detach FETCH_HEAD",
+          "exit_code": 0,
+          "seconds": 3.7,
+          "log": "sm64rt-checkout.log",
+          "log_sha256": "ea2c9286ec2d2d7e14955e6e46eb361c0176852096aa5ab63f4f98d04b215bbe"
+        },
+        {
+          "name": "sm64rt-head",
+          "command": "git rev-parse HEAD",
+          "exit_code": 0,
+          "seconds": 0.09,
+          "log": "sm64rt-head.log",
+          "log_sha256": "f5b667844778ef7747cd2d7666dfe262278e2128feed86f227329986bdfede02"
+        },
+        {
+          "name": "sm64rt-tools",
+          "command": "make -C tools -j2 all-except-recomp",
+          "exit_code": 2,
+          "seconds": 0.09,
+          "log": "sm64rt-tools.log",
+          "log_sha256": "7fabda4b3015a98b5f87fbee0f4d00cc4aa2bb9ea83256a13fe613c650756099"
+        },
+        {
+          "name": "sm64rt-missing-rom",
+          "command": "make -j2 RENDER_API=RT64 EXTERNAL_DATA=1",
+          "exit_code": 2,
+          "seconds": 0.53,
+          "log": "sm64rt-missing-rom.log",
+          "log_sha256": "c15836b305f3d570e262573c12af8b2cbbaad8f12cf47da207577620b63e7ef5"
+        },
+        {
+          "name": "sm64rt-source-integrity",
+          "command": "git diff --exit-code && git status --porcelain --untracked-files=no",
+          "exit_code": 0,
+          "seconds": 0.42,
+          "log": "sm64rt-source-integrity.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    }
+  ],
+  "sm64plus_tools": {
+    "name": "sm64plus-official-tools",
+    "command": "make -C tools -j2 all-except-recomp",
+    "exit_code": 0,
+    "seconds": 15.66,
+    "log": "sm64plus-official-tools.log",
+    "log_sha256": "88b217b01bf13c116db3c545a487e624557f724ac2291a14421bbfae7af7599d"
+  }
+}

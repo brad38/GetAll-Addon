@@ -1,116 +1,121 @@
-# Cobertura de instalação e elegibilidade — 27/11/2026
+# Cobertura de instalação e elegibilidade — 28/11/2026
 
-A revisão cobre os 148 IDs anteriores sem exigir que todos permaneçam ativos.
-O catálogo revisado tem **108 jogos e 137 projetos elegíveis**. Os outros **11 IDs**
-ficam em `AllFix-Repo/excluded-projects.json`, com metadados, motivo e condições
-para reconsideração. O registro de elegibilidade e as exclusões pertencem ao
-mesmo commit de `catalog.json`.
+A revisão preserva **108 jogos e 137 projetos elegíveis**. Os **11 IDs arquivados**
+ficam em AllFix-Repo/excluded-projects.json, com metadados, motivo e condição de
+reavaliação. O catálogo, a elegibilidade e as exclusões usam o mesmo commit
+**e4fdde9d7c128f79eb19cf99ea07e2e9b628127a**, confirmado remotamente pelos três documentos.
 
-## Estado do GetAll
+## Receitas e projetos
 
-O índice preserva **145 receitas**: **122 experimentais**, **uma homologação
-histórica (`validated`)** e **22 desativadas (`disabled`)**. Há contrato ativo para
-**123 projetos**; **14 projetos elegíveis** ficam sem automação ativa e continuam
-com o procedimento oficial registrado no catálogo. Quantidade de receitas não
-comprova instalação, boot ou gameplay.
+O índice contém **146 receitas: 133 experimental, uma validated histórica e
+12 disabled**. Há **134 receitas ativas para 134 projetos**. Os outros
+**três projetos elegíveis** permanecem disponíveis pelo procedimento oficial
+registrado no catálogo, com automação suspensa por um impedimento concreto.
 
-As 22 variantes suspensas compreendem 19 variantes com mudanças próprias
-identificadas na auditoria de fontes, Ship of Harkinian 9.3.1 com auxiliar sem
-proveniência suficiente, e duas entradas retiradas por elegibilidade/duplicidade
-(GGA64 e o agregado Sonic 1 Forever/Sonic 2 Absolute). Dr. Mario base, Metaforce e
-Burnout 3 já fazem parte das 19 primeiras. As receitas permanecem versionadas e
-com hashes, datas e motivos. A exclusão editorial não proíbe o usuário de jogar
-uma instalação existente; a suspensão de um pipeline alterado impede executá-lo
-como instalação oficial.
+As 12 receitas desativadas se dividem em **cinco IDs arquivados** (GGA64,
+Burnout 3, o agregado Sonic 1 Forever/Sonic 2 Absolute, Dr. Mario 64 base e
+Metaforce), **quatro variantes antigas com outra receita ativa no mesmo projeto**
+(SM64Plus, SSX, CTR e MKW) e **três projetos elegíveis bloqueados**
+(StrikersRecomp, VandalHearts-PcPort e REDRIVER2). Dr. Mario 64 Plus é um projeto
+distinto; sua presença não reativa o ID base. Burnout 3 e Metaforce não têm
+uma rota ativa nem permanecem no catálogo atual.
 
-Os aliases oficiais **SM64Plus LauncherMirror**, **CTR ci-07d0c49** e **MKW
-v0.1.18** continuam disponíveis. A variante `mkw v0.1.18-allfix-cli` permanece
-suspensa. Hookshot agora referencia `ItsNotRexed/Hookshot` e o perfil
-`hookshot-3.0.2-official-prepare`. KnowYourRole usa o executável de instalação
-fornecido no ZIP oficial com `--cue`/`--out`; a receita não exige duplicar seu
-launcher recompilado dentro do Desktop.
+A retomada restaurou treze projetos anteriormente suspensos por caminhos oficiais,
+completou SM64Plus/CTR e eliminou a etapa manual restante de Shadow of Rome.
+Novos perfis têm hashes exatos aprovados; os perfis antigos adulterados continuam
+bloqueados. Os bytes anteriores permanecem em retired-recipes. Veja
+[a revisão dos contratos](OFFICIAL-CONTRACT-RESTORATION-20261128.md).
 
 ## Seis dimensões independentes
 
-| Dimensão | Resultado registrado | O que o resultado permite concluir |
+| Dimensão | Resultado registrado | Alcance da evidência |
 |---|---:|---|
-| Upstream funcional | 137 com evidência específica | Gameplay documentado pelas fontes revisadas; limitações e procedimento oficial permanecem no catálogo. |
-| Automação implementada | 121 implementadas; 2 parciais; 14 suspensas | Revisão de rotas e corpos de instalação no código. Não é uma execução ponta a ponta. |
-| Validação sintética | 13 relatórios históricos; 124 sem resultado individual transferido | Provas limitadas de ferramentas/transações em SDK anterior. Não foram reaprovadas automaticamente para o SDK 1.5.70. |
-| Instalação com mídia original | 1 relato histórico; 136 desconhecidas | Relato anterior de SM64 Coop Deluxe, sem novo recibo de reprodução nesta rodada. |
-| Primeiro boot pelo GetAll | 1 relato histórico; 136 desconhecidos | O mesmo relato registra importação e execução; não houve nova confirmação. |
-| Gameplay pelo GetAll | 137 desconhecidos | Não se transforma o relato genérico de execução nem gameplay upstream em sessão de gameplay comprovada pelo GetAll. |
+| Upstream funcional | 137 com evidência específica | Evidência externa do catálogo, independente de testes locais GetAll. |
+| Automação implementada | 134 implementadas; 0 parciais; 3 bloqueadas | Código, dispatch, perfil e operação oficial revisados; não é uma instalação comercial concluída. |
+| Validação sintética | 15 atuais passaram; 13 históricos; 1 falhou; 108 desconhecidos | Somente as operações descritas em cada recibo: pacotes, negativos, configuração, ferramentas ou builds sem mídia. |
+| Instalação com mídia original | 1 relato histórico; 136 desconhecidas | SM64 Coop Deluxe v1.5.1, sem nova reprodução nesta rodada. |
+| Primeiro boot pelo GetAll | 1 relato histórico; 136 desconhecidos | O mesmo relato anterior de importação e execução. |
+| Gameplay pelo GetAll | 137 desconhecidos | Nenhuma sessão específica GetAll atribuível foi acrescentada. |
 
-`unknown` significa ausência de prova atribuível no registro, não falha do port.
-`historical` preserva uma prova anterior sem afirmar que a implementação atual
-passou novamente. `partial` identifica um trecho documentado que ainda depende
-do procedimento manual oficial ou da validação da integração substituída.
-Os dois parciais desta revisão são SM64Plus LauncherMirror e CTR ci-07d0c49,
-que conservam a preparação manual oficial. MKW v0.1.18, Hookshot e KnowYourRole
-têm rotas oficiais implementadas, confirmadas pela leitura dos handlers e do
-dispatch do SDK 1.5.70. A falta de uma execução atual não muda essa dimensão
-para parcial. As provas de mídia, boot e gameplay continuam independentes;
-veja [a revisão dessas rotas](validations/official-scope/installation-route-refresh.json).
+Nesta retomada houve **zero instalação completa com mídia original, zero
+primeiro boot e zero sessão de gameplay com mídia original**. A única receita
+validated continua SM64 Coop Deluxe v1.5.1, SHA-256
+54fb8ac09863fc500b532244070e9cbe5bc4a81aaff66530b4e711b97fb2a2f3.
+Sua evidência é o relato histórico na
+[auditoria de 22/11](AUDITORIA-CATALOGO-2026-11-22.md), SHA-256
+5a3747fbc2ba1f57d28ddb26851dfc93f71f3fa1d761ccc6e69f92d9e52cef78.
+Não foi criada uma nova homologação.
 
-O arquivo [installation-evidence.json](installation-evidence.json) registra cada
-projeto e dimensão. Cada alegação positiva exige tag e SHA-256 exatos da receita,
-fonte atribuível e observação. Os arquivos locais têm SHA-256 conferido. Se a
-receita mudar ou ficar desativada, a prova positiva deixa de contar como atual.
-Provas sintéticas não são aceitas nos campos de mídia original, boot e gameplay;
-provas externas do upstream alimentam somente a dimensão upstream funcional.
+Os 15 resultados atuais positivos correspondem a SSX, FH1, GOW Daniel, Pinyon,
+SoH, SM64Plus, sm64ex, Render96ex, SM64RT, SM, SM Rewrite, GT5, GOW KIexster,
+MKDD e Shadow of Rome. Seus escopos variam: FH1 prova integridade do kit;
+SM/SM Rewrite também têm compilação nativa intacta sem ROM; MKDD prova
+runtime_check sem link do jogo; Mario prova ferramentas e recusas de ROM;
+SoR prova defaults, kit e plano de lançamento sintético. Uma aprovação não
+substitui as demais dimensões.
 
-A matriz reproduzida está em
-[official-scope/catalog-coverage.json](validations/official-scope/catalog-coverage.json).
-Ela não consulta nem muda a instalação pública. Os campos antigos de contagem
-são preservados para consumidores existentes e explicitamente não significam
-cobertura funcional. `main_comparison: not_requested` significa que não houve
-comparação com a branch pública nessa execução.
+A única falha sintética atual é a configuração CMake nativa intacta de
+VandalHearts neste ambiente: links simbólicos obrigatórios e OpenAL impediram
+a configuração. Esse resultado não é uma avaliação de gameplay nem uma
+declaração de incompatibilidade universal. Os demais detalhes estão nos
+[recibos dos bloqueios](validations/official-scope/remaining-official-blockers.json).
 
-## Monitoramento e reentrada
+## Impedimentos concretos e reentrada
 
-O monitor consulta somente fontes oficiais. Uma proposta automática de receita
-exige projeto ativo com classificação funcional, evidência concreta de gameplay,
-procedimento oficial e revisão de proveniência. README, release existente,
-compilação, tela inicial e fixture isolada não bastam. Candidatos e excluídos
-podem gerar uma nota de revisão, sem download de builds, receita ativa, mudança
-de catálogo ou substituição de `added_at`.
+| Projeto | Impedimento da automação atual | Condição de reentrada |
+|---|---|---|
+| StrikersRecomp | GXRuntime v0.1.0 fixado pelo bootstrap exporta alvos diferentes dos exigidos; a rota RecompCore examinada não estabelece o contrato Windows completo. | Revisão upstream compatível ou ambiente oficialmente suportado, verificados sem patches próprios de runtime. |
+| VandalHearts-PcPort | Binários incorporam dados declarados no NOTICE; a alternativa de fonte/mídia/BIOS próprios ainda carece de ambiente oficial integrado e validado. | Validar build oficial com os arquivos próprios e recursos preservados; não reutilizar a distribuição binária como substituto dessa geração. |
+| REDRIVER2 | O pacote copia dados extras rastreados cuja procedência/extração integral não foi esclarecida; os conversores examinados cobrem áudio/vídeo. | Documentar origem/licença dos extras ou extração oficial reprodutível dos CDs próprios. |
 
-Receitas desativadas, suspensões de integridade, contratos estendidos e receitas
-homologadas exigem revisão explícita para uma nova versão. Nenhuma atualização
-reativa uma receita ou atribui `validated` automaticamente. A branch de
-monitoramento da prévia e a base da PR derivam da branch de revisão; a prévia é
-recusada quando o destino é `main`. O workflow preserva relatórios textuais
-pequenos e usa arquivos temporários para inspeções de ZIP.
+Essas são suspensões da integração, não remoções da elegibilidade funcional.
+A investigação e os commits exatos constam em
+[OFFICIAL-CONTRACT-RESTORATION-20261128.md](OFFICIAL-CONTRACT-RESTORATION-20261128.md).
 
-O validador admite um ID fora do catálogo somente quando a receita está
-`disabled`, sua identidade consta no registro de exclusões e o repositório
-preservado confere. IDs órfãos ativos ou sem registro falham. As 20 variantes
-suspensas por fidelidade/proveniência também constam em
-[official-install-policy.json](official-install-policy.json), independentemente
-de o projeto continuar elegível no catálogo.
+## Registros e semântica
 
-## Reprodução
+O [ledger](installation-evidence.json) registra cada projeto e dimensão. Uma
+alegação positiva exige tag e SHA-256 exatos da receita, fonte atribuível e
+observação. Arquivos locais têm SHA-256 conferido. Se a receita mudar ou for
+desativada, uma prova positiva deixa de contar como atual. Provas sintéticas
+não são aceitas como mídia original, boot ou gameplay; evidência upstream
+alimenta somente a primeira dimensão.
 
-```sh
-python scripts/validate_recipes.py --strict-lf --require-jsonschema --check-git-blobs --check-catalog ../catalog-scope/catalog.json
-python scripts/catalog_coverage.py --catalog ../catalog-scope/catalog.json --output docs/validations/official-scope/catalog-coverage.json
+A [matriz JSON](validations/official-scope/catalog-coverage.json) é gerada sem
+consultar ou mudar a instalação pública. Os campos legados main_covered e
+development_covered contam contratos, não execução. preparation_only é um
+alias descontinuado de uses_closed_preparation_profiles: schema 9 pode
+implementar a preparação oficial completa no SDK e não significa somente
+manual. Existem 31 projetos com esses perfis fechados. O estado de automação
+vem da dimensão apropriada. main_comparison: not_requested indica ausência
+de comparação com a branch pública.
+
+unknown significa falta de prova atribuível; historical preserva prova anterior
+sem reaprová-la; failed descreve a operação nomeada que falhou. Não se converte
+uma fixture, tela inicial ou build em gameplay.
+
+## Testes e reprodução
+
+**79 testes Python passaram**. O ponto de entrada real do CI local
+validou as **146 receitas** com LF estrito, JSON Schema, blobs Git e o catálogo
+público fixado. A matriz verificou todas as referências locais de evidência.
+Desktop registrou **2312 verificações de regressão**, parser **146/146**,
+builds sem avisos/erros e testes específicos dos kits oficiais. Os recibos
+[de validação](validations/official-scope/README.md) delimitam cada resultado.
+
+~~~sh
+python scripts/validate_recipes.py --strict-lf --require-jsonschema --check-git-blobs --check-catalog ../catalog-scope-20261127/catalog.json
+python scripts/catalog_coverage.py --catalog ../catalog-scope-20261127/catalog.json --output docs/validations/official-scope/catalog-coverage.json
 python -m unittest discover -s tests -v
-```
+python scripts/validate_ci.py
+~~~
 
-O CI usa `scripts/validate_ci.py` com o catálogo fixado em
-`3d86836676e9c7fa7359c32987c13fefc0a2ff8b` e seus registros
-companheiros. A seleção do canal é testada separadamente. Os testes cobrem
-reativação indevida, candidato/excluído, conservação de datas, igualdade de
-identidade, hashes de provas e a separação das seis dimensões.
+CI e monitor da prévia fixam o catálogo em e4fdde9d7c128f79eb19cf99ea07e2e9b628127a.
+O monitor consulta fontes oficiais, preserva datas e não reativa receita
+desativada nem atribui validated automaticamente. Candidatos/excluídos geram
+revisão, não instalação automática. A prévia não pode ter main como destino.
 
-## Proveniência e limites
-
-A [matriz da auditoria de fontes](audits/source-integrity-20261127/audit-matrix.json)
-registra as rotas e os corpos examinados. Os resultados sintéticos transferidos
-citados individualmente vêm de [SDK 1.5.67/68](validations/sdk167-flow-completion.md).
-O relato histórico de SM64 está na
-[auditoria de 22/11](AUDITORIA-CATALOGO-2026-11-22.md).
-Nenhum novo teste com mídia comercial foi fabricado para preencher a matriz.
-Compilações intermediárias, ZIPs de inspeção e fixtures descartáveis podem ser
-removidos depois da verificação; fontes, receitas, scripts, logs, hashes,
-resultados, mídias originais e dependências ativas permanecem preservados.
+O pacote de TESTE é **1.5.76**, com SDK mínimo **1.5.70**. Seu recibo posterior
+ao commit contém o SHA GetAll definitivo, o SHA do catálogo, o hash/tamanho
+do ZIP e os dois membros JSON. Commit local, publicação e CI hospedado são
+verificados separadamente; a geração do ZIP não presume acesso remoto.

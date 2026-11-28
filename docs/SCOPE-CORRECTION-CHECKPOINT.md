@@ -14,12 +14,18 @@
 
 ## Etapas e estado de integração
 
-A pesquisa e os registros de catálogo foram concluídos: 108 jogos, 137 projetos
-ativos e 11 excluídos, commit `3d86836676e9c7fa7359c32987c13fefc0a2ff8b`.
-O GetAll tem 145 receitas preservadas, 123 ativas e 22 desativadas, com matriz
-em [seis dimensões](INSTALLATION-COVERAGE.md). O commit final de receitas e o catálogo são fixados no recibo do complemento
-de prévia depois da última revisão de código e evidências. A integração Windows, o push e o CI
-hospedado são etapas separadas e não se inferem dos testes locais.
+A revisão final registra 108 jogos, 137 projetos ativos e 11 arquivados.
+Catálogo e4fdde9d7c128f79eb19cf99ea07e2e9b628127a, publicado e conferido nos três documentos.
+GetAll: 146 receitas, 134 ativas e 12 desativadas; 134 implementações e três
+impedimentos concretos, sem fluxos parciais. A matriz separa 15 resultados
+sintéticos atuais, 13 históricos, uma falha limitada de configuração e
+108 desconhecidos. Não houve instalação/boot/gameplay com mídia original nesta retomada.
+
+O complemento final de TESTE 1.5.76 requer SDK 1.5.70 e é gerado com os commits
+definitivos, registrados no recibo externo ao commit para evitar referência
+circular. O envio GetAll e o CI hospedado são etapas de integração separadas.
+Ver [checkpoint](CHECKPOINT.md), [matriz](INSTALLATION-COVERAGE.md) e
+[provas finais](validations/official-scope/README.md).
 
 Plano da rodada, preservado para rastreabilidade:
 

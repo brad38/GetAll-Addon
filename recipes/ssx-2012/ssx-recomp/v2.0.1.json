@@ -1,0 +1,24 @@
+{
+  "schema_version": 9,
+  "project_id": "ssx-recomp",
+  "tag": "v2.0.1",
+  "source_url": "https://github.com/AmarilloNL/ssx-recomp/releases/tag/v2.0.1",
+  "operations": [],
+  "required_files": [
+    "ssx-recomp.exe",
+    "recomplauncher.json"
+  ],
+  "inputs": [],
+  "manual_steps": "Selecione sua ISO ou pasta original de SSX EA-2413. O instalador oficial compila o jogo sem alterações de fonte; a instalação pode baixar ferramentas e requer aceite explícito dos termos do Visual Studio Build Tools. Title Update e DLCs são opcionais.",
+  "build_profile": "ssx-2.0.1-official-prepare",
+  "preparation_media": [
+    {
+      "id": "original-disc",
+      "kind": "file_or_directory",
+      "extensions": [
+        ".iso"
+      ],
+      "version": "Xbox 360 EA-2413 USA/Europe/Australia"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "project_id": "sm64ex",
+    "tag": "build-d7ca2c0",
+    "path": "recipes/super-mario-64/sm64ex/build-d7ca2c0.json",
+    "sha256": "70420921a4ce7fd5d5cbfe5c5d37c5f0c09691b94211835a3b0a5cf3a36f4ec5",
+    "build_profile": "sm64ex-official-msys-d7ca2c0",
+    "retired_path": "docs/retired-recipes/super-mario-64/sm64ex/build-d7ca2c0.json",
+    "retired_sha256": "2a4306fa23d76e3a1720de7eba881b0d6d905d96b9cff039545ef54fe307ff53",
+    "retired_build_profile": null,
+    "upstream_commit": "d7ca2c04364a6dd0dac58b47151e04e26887e6f0",
+    "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+  },
+  {
+    "project_id": "render96ex",
+    "tag": "build-48da5c4",
+    "path": "recipes/super-mario-64/render96ex/build-48da5c4.json",
+    "sha256": "0cdec0870d9e041e8ae3badf54ffd4f9344f703035761667fb3aedb8279d7c68",
+    "build_profile": "render96ex-official-msys-48da5c4",
+    "retired_path": "docs/retired-recipes/super-mario-64/render96ex/build-48da5c4.json",
+    "retired_sha256": "05363a9cd808361ad2ce9b1956597503b810e8963c8534a5d3cbd54a0c2681e5",
+    "retired_build_profile": null,
+    "upstream_commit": "48da5c491c8abfb2f5192b59278c1c269411e533",
+    "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+  },
+  {
+    "project_id": "sm64rt",
+    "tag": "build-20e618b",
+    "path": "recipes/super-mario-64/sm64rt/build-20e618b.json",
+    "sha256": "1f99eaabe5ca438fb8b4c98694eabf291614b5f1eed88c0b6b64108964f28f8f",
+    "build_profile": "sm64rt-official-msys-20e618b",
+    "retired_path": "docs/retired-recipes/super-mario-64/sm64rt/build-20e618b.json",
+    "retired_sha256": "4e90ddff3f5cc140ba0e6d843dcbf9146cc39c558597090b9e90d79df57cf267",
+    "retired_build_profile": null,
+    "upstream_commit": "20e618b75ae4a6810bd92ac6a937cb167517aac5",
+    "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+  },
+  {
+    "project_id": "sm64plus",
+    "tag": "LauncherMirror",
+    "path": "recipes/super-mario-64/sm64plus/LauncherMirror.json",
+    "sha256": "fdfae75dba229c904a786ec3b1ee9b76484ad5cbf1ea6941dc5a1971dd60fc72",
+    "build_profile": "sm64plus-launcher-official-build",
+    "retired_path": "docs/retired-recipes/super-mario-64/sm64plus/LauncherMirror.json",
+    "retired_sha256": "a5e96174858f2ae90563f0f1c1f0980701a5a1a8c8918d0ceae8f9426f973df8",
+    "retired_build_profile": null,
+    "upstream_commit": "44fccee2fc4bd4768ae4eff1e5c47b21abe5d85d",
+    "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+  },
+  {
+    "project_id": "sm",
+    "tag": "build-578f90b",
+    "path": "recipes/super-metroid/sm/build-578f90b.json",
+    "sha256": "8db09ea83b13734394f9ff46f744d269d70cbfddd8086709c0c7dce0558c575d",
+    "build_profile": "sm-official-msvc-source-578f90b",
+    "retired_path": "docs/retired-recipes/super-metroid/sm/build-578f90b.json",
+    "retired_sha256": "c84193604b8407fe5a13325054497836227f0c51b120fa9bf9fd36af68a86076",
+    "retired_build_profile": null,
+    "upstream_commit": "578f90b3cc49557bb70060ad033bb90b8cf8ac50",
+    "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+  },
+  {
+    "project_id": "sm-rewrite",
+    "tag": "build-5237873",
+    "path": "recipes/super-metroid/sm-rewrite/build-5237873.json",
+    "sha256": "024aafa8c6269c19ca8704f3475f1d3918bbe75c5ee78a17ffd0a3349dec508f",
+    "build_profile": "sm-rewrite-official-msvc-source-5237873",
+    "retired_path": "docs/retired-recipes/super-metroid/sm-rewrite/build-5237873.json",
+    "retired_sha256": "8faa4a7223be77c1f393d4e21a8e2dd7f00cf0cef8619f61722b5bf47b94134e",
+    "retired_build_profile": null,
+    "upstream_commit": "523787384a7c912153883b21714f5edabf4e2406",
+    "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+  },
+  {
+    "project_id": "gt5-recomp",
+    "tag": "build-64ca169",
+    "path": "recipes/gran-turismo-5/gt5-recomp/build-64ca169.json",
+    "sha256": "0faba67a8bb85fc52f8b2216c86c19b52563bf7f9586935234a46b30d8a11b64",
+    "build_profile": "gt5-64ca169-official-installer",
+    "retired_path": "docs/retired-recipes/gran-turismo-5/gt5-recomp/build-64ca169.json",
+    "retired_sha256": "cb0f81d98c3fb07dae5f85c0db0665c02f4add322192f4c21b579b2ef78418f0",
+    "retired_build_profile": null,
+    "upstream_commit": "64ca1697c5f9bb513bfe0414d9a36c10dafd0a37",
+    "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+  },
+  {
+    "project_id": "god-of-war-recomp",
+    "tag": "build-d1d11ec",
+    "path": "recipes/god-of-war-2005/god-of-war-recomp/build-d1d11ec.json",
+    "sha256": "7cd086059a43268479256e9afa21adba4ebe41ab582aab6a806f912a1bf0a587",
+    "build_profile": "god-of-war-kiexster-d1d11ec-official-installer",
+    "retired_path": "docs/retired-recipes/god-of-war-2005/god-of-war-recomp/build-d1d11ec.json",
+    "retired_sha256": "58009010a9063916bf0ffad66fd7369fc030c46e4867497c668ef4a54117226b",
+    "retired_build_profile": null,
+    "upstream_commit": "d1d11ec545c3baf2f3fc17e2df4247ac4b732d5c",
+    "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+  }
+]

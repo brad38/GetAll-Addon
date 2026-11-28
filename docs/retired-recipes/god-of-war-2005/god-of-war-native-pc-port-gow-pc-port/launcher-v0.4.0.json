@@ -1,0 +1,29 @@
+{
+  "schema_version": 9,
+  "project_id": "god-of-war-native-pc-port-gow-pc-port",
+  "tag": "launcher-v0.4.0",
+  "source_url": "https://github.com/danielalves96/gow-pc-port/releases/tag/launcher-v0.4.0",
+  "operations": [],
+  "required_files": [
+    "God Of War - PC Launcher_0.4.0_x64-portable/God Of War - PC Launcher.exe",
+    "God Of War - PC Launcher_0.4.0_x64-portable/README.txt",
+    "God Of War - PC Launcher_0.4.0_x64-portable/kit/install.ps1",
+    "God Of War - PC Launcher_0.4.0_x64-portable/kit/bin/ps2_recomp.exe",
+    "God Of War - PC Launcher_0.4.0_x64-portable/kit/bin/ps2-tools.exe",
+    "God Of War - PC Launcher_0.4.0_x64-portable/kit/RustPortPS2/games/scus-97399/gow-port.toml"
+  ],
+  "inputs": [],
+  "manual_steps": "O All-Fix valida seu disco americano original de God of War (SCUS-97399), prepara as ferramentas e compila o jogo automaticamente. Selecione sua ISO ou CHD original. Depois da conclusão, Jogar abre a instalação preparada.",
+  "build_profile": "gow-0.4.0-prepare",
+  "preparation_media": [
+    {
+      "id": "original-disc",
+      "kind": "file",
+      "extensions": [
+        ".iso",
+        ".chd"
+      ],
+      "version": "PS2 USA SCUS-97399"
+    }
+  ]
+}

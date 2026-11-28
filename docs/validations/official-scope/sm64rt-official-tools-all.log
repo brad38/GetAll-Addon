@@ -1,0 +1,78 @@
+make: Entrando no diretório '/c/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/sm64rt/tools'
+
+gcc -I../include -I. -Wall -Wextra -Wno-unused-parameter -pedantic -std=c99 -O2 -s -DN64GRAPHICS_STANDALONE n64graphics.c utils.c -o n64graphics -lm 
+make[1]: Entrando no diretório '/c/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/sm64rt/tools/audiofile'
+
+g++ -std=c++11 -DNDEBUG -fno-rtti -fno-exceptions -fvisibility-inlines-hidden -O2 -I. -c audiofile.cpp
+ar rcs libaudiofile.a audiofile.o
+make[1]: Saindo do diretório '/c/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/sm64rt/tools/audiofile'
+
+gcc -I../include -I. -Wall -Wextra -Wno-unused-parameter -pedantic -std=c99 -O2 -s  n64graphics_ci_dir/n64graphics_ci.c n64graphics_ci_dir/exoquant/exoquant.c n64graphics_ci_dir/utils.c -o n64graphics_ci -lm 
+gcc -I../include -I. -Wall -Wextra -Wno-unused-parameter -pedantic -std=c99 -O2 -s -DMIO0_STANDALONE libmio0.c -o mio0 -lm 
+gcc -I../include -I. -Wall -Wextra -Wno-unused-parameter -pedantic -std=c99 -O2 -s -DN64CKSUM_STANDALONE n64cksum.c utils.c -o n64cksum -lm 
+gcc -I../include -I. -Wall -Wextra -Wno-unused-parameter -pedantic -std=c99 -O2 -s  textconv.c utf8.c hashtable.c -o textconv -lm 
+gcc -I../include -I. -Wall -Wextra -Wno-unused-parameter -pedantic -std=c99 -O2 -s  patch_libultra_math.c -o patch_libultra_math -lm 
+gcc -I../include -I. -Wall -Wextra -Wno-unused-parameter -pedantic -std=c99 -O2 -s  aifc_decode.c -o aifc_decode -lm 
+gcc -I../include -I. -Wall -Wextra -Wno-unused-parameter -pedantic -std=c99 -O2 -s  aiff_extract_codebook.c -o aiff_extract_codebook -lm 
+gcc -I../include -I. -Wall -Wextra -Wno-unused-parameter -pedantic -std=c99 -O2 -s -Wno-unused-result -Wno-uninitialized -Wno-sign-compare -Wno-absolute-value sdk-tools/adpcm/vadpcm_enc.c sdk-tools/adpcm/vpredictor.c sdk-tools/adpcm/quant.c sdk-tools/adpcm/util.c sdk-tools/adpcm/vencode.c -o vadpcm_enc -lm 
+gcc -I../include -I. -Wall -Wextra -Wno-unused-parameter -pedantic -std=c99 -O2 -s -Iaudiofile -Wno-uninitialized sdk-tools/tabledesign/codebook.c sdk-tools/tabledesign/estimate.c sdk-tools/tabledesign/print.c sdk-tools/tabledesign/tabledesign.c -o tabledesign -lm -Laudiofile -laudiofile -lstdc++ -lm
+gcc -I../include -I. -Wall -Wextra -Wno-unused-parameter -pedantic -std=c99 -O2 -s  extract_data_for_mio.c -o extract_data_for_mio -lm 
+gcc -I../include -I. -Wall -Wextra -Wno-unused-parameter -pedantic -std=c99 -O2 -s  skyconv.c n64graphics.c utils.c -o skyconv -lm 
+make: Saindo do diretório '/c/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/sm64rt/tools'
+
+audiofile.cpp:3565:47: warning: 'template<class _Arg, class _Result> struct std::unary_function' is deprecated [-Wdeprecated-declarations]
+ 3565 |         struct signedToUnsigned : public std::unary_function<SignedType, UnsignedType>
+      |                                               ^~~~~~~~~~~~~~
+In file included from C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/string:52,
+                 from audiofile.cpp:1736:
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/bits/stl_function.h:120:12: note: declared here
+  120 |     struct unary_function
+      |            ^~~~~~~~~~~~~~
+audiofile.cpp:3570:47: warning: 'template<class _Arg, class _Result> struct std::unary_function' is deprecated [-Wdeprecated-declarations]
+ 3570 |         struct unsignedToSigned : public std::unary_function<SignedType, UnsignedType>
+      |                                               ^~~~~~~~~~~~~~
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/bits/stl_function.h:120:12: note: declared here
+  120 |     struct unary_function
+      |            ^~~~~~~~~~~~~~
+audiofile.cpp:3763:33: warning: 'template<class _Arg, class _Result> struct std::unary_function' is deprecated [-Wdeprecated-declarations]
+ 3763 | struct intToFloat : public std::unary_function<Arg, Result>
+      |                                 ^~~~~~~~~~~~~~
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/bits/stl_function.h:120:12: note: declared here
+  120 |     struct unary_function
+      |            ^~~~~~~~~~~~~~
+audiofile.cpp:3829:29: warning: 'template<class _Arg, class _Result> struct std::unary_function' is deprecated [-Wdeprecated-declarations]
+ 3829 | struct lshift : public std::unary_function<Arg, Result>
+      |                             ^~~~~~~~~~~~~~
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/bits/stl_function.h:120:12: note: declared here
+  120 |     struct unary_function
+      |            ^~~~~~~~~~~~~~
+audiofile.cpp:3835:29: warning: 'template<class _Arg, class _Result> struct std::unary_function' is deprecated [-Wdeprecated-declarations]
+ 3835 | struct rshift : public std::unary_function<Arg, Result>
+      |                             ^~~~~~~~~~~~~~
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/bits/stl_function.h:120:12: note: declared here
+  120 |     struct unary_function
+      |            ^~~~~~~~~~~~~~
+audiofile.cpp:3931:35: warning: 'template<class _Arg, class _Result> struct std::unary_function' is deprecated [-Wdeprecated-declarations]
+ 3931 | struct floatToFloat : public std::unary_function<Arg, Result>
+      |                                   ^~~~~~~~~~~~~~
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/bits/stl_function.h:120:12: note: declared here
+  120 |     struct unary_function
+      |            ^~~~~~~~~~~~~~
+patch_libultra_math.c: In function 'main':
+patch_libultra_math.c:113:26: warning: overflow in conversion from 'long long unsigned int' to 'long int' changes value from '18446744073709551564' to '-52' [-Woverflow]
+  113 |                 fseek(f, -sizeof(hdr), SEEK_CUR);
+      |                          ^~~~~~~~~~~~
+skyconv.c:218:9: warning: 'realpath' redefined
+  218 | #define realpath(path, resolved_path) _fullpath(resolved_path, path, PATH_MAX)
+      |         ^~~~~~~~
+In file included from skyconv.c:14:
+utils.h:12:11: note: this is the location of the previous definition
+   12 |   #define realpath(N,R) _fullpath((R),(N),MAX_PATH)
+      |           ^~~~~~~~
+skyconv.c: In function 'write_skybox_c':
+skyconv.c:287:28: warning: '_skybox.c' directive writing 9 bytes into a region of size between 4 and 259 [-Wformat-overflow=]
+  287 |     sprintf(fBuffer, "%s/%s_skybox.c", output, skyboxName);
+      |                            ^~~~~~~~~
+skyconv.c:287:5: note: 'sprintf' output 11 or more bytes (assuming 266) into a destination of size 260
+  287 |     sprintf(fBuffer, "%s/%s_skybox.c", output, skyboxName);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

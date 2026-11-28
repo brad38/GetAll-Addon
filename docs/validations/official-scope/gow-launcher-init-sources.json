@@ -1,0 +1,22 @@
+[
+  {
+    "project": "gow",
+    "repository": "danielalves96/gow-pc-port",
+    "commit": "adebc00e69d4395318c94523f345b26c7daf3451",
+    "path": "gow-launcher/src-tauri/src/lib.rs",
+    "url": "https://raw.githubusercontent.com/danielalves96/gow-pc-port/adebc00e69d4395318c94523f345b26c7daf3451/gow-launcher/src-tauri/src/lib.rs",
+    "bytes": 53779,
+    "sha256": "e35297729ac418869ebda529040ae61e58d15510ac1e737f7f9bf47404c295a5",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\gow\\gow-launcher\\src-tauri\\src\\lib.rs"
+  },
+  {
+    "project": "gow",
+    "repository": "danielalves96/gow-pc-port",
+    "commit": "adebc00e69d4395318c94523f345b26c7daf3451",
+    "path": "gow-launcher/crates/gow-core/src/settings.rs",
+    "url": "https://raw.githubusercontent.com/danielalves96/gow-pc-port/adebc00e69d4395318c94523f345b26c7daf3451/gow-launcher/crates/gow-core/src/settings.rs",
+    "bytes": 25211,
+    "sha256": "4f3feac36916799d13a0fee8b03681481401918cd8d34d773c7d53705be892b2",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\gow\\gow-launcher\\crates\\gow-core\\src\\settings.rs"
+  }
+]

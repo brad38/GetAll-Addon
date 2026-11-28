@@ -1,0 +1,24 @@
+{
+  "reviewed_at": "2026-11-27",
+  "scope": "Recipe payload provenance; not a legal determination or upstream gameplay reassessment",
+  "projects": [
+    {
+      "project_id": "vandalhearts-pcport",
+      "tag": "v2.1.0",
+      "decision": "suspend_binary_recipe",
+      "source": "https://github.com/HalmyLyseas/VandalHearts-PcPort/blob/14552fffa0e0b47e02b57592e274fc6e7a649923/NOTICE",
+      "observed": "The upstream NOTICE explicitly identifies static PS1 data, kanji glyphs derived from a PlayStation BIOS and tables embedded in binary releases; the source build regenerates the excluded inputs from the owner's executable/BIOS.",
+      "reason": "O pacote binário declara dados de jogo/BIOS incorporados sem proveniência de redistribuição suficiente. A importação da BIN própria não regenera esses bytes. O projeto continua elegível por fonte e mídia/BIOS próprios; a receita binária fica suspensa.",
+      "reinstate_when": "Implement and verify the official build generating all excluded inputs from the user's original game executable and compatible BIOS, or obtain an official redistributable payload with documented provenance."
+    },
+    {
+      "project_id": "redriver2",
+      "tag": "7.4-rc2",
+      "decision": "suspend_binary_recipe_pending_payload_provenance",
+      "source": "https://github.com/OpenDriver2/REDRIVER2/issues/234",
+      "observed": "The upstream provenance issue identifies LANG/GFX/GAL/REPLAYS/ReChases/XA/DATA and credits supplied in data/DRIVER2 and asks how to reproduce them from the discs. No maintainer answer was present in the inspected issue; the current recipe consumes the release package before importing the user's discs.",
+      "reason": "A origem de dados extras incluídos no pacote oficial continua sem confirmação suficiente no registro upstream; importar os dois discos não demonstra a procedência desses arquivos. A automação binária fica suspensa até comprovar a origem ou extraí-los pelo procedimento oficial.",
+      "reinstate_when": "Document provenance of the release's extra data or verify an official install/build path that derives the needed data exclusively from the user's discs; do not replace missing data with AllFix gameplay changes."
+    }
+  ]
+}

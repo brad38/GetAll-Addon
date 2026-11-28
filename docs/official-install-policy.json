@@ -120,8 +120,8 @@
       "project_id": "strikersrecomp",
       "tag": "build-cd88f71",
       "path": "recipes/super-mario-strikers/strikersrecomp/build-cd88f71.json",
-      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-STRIKERS"
+      "reason": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão.",
+      "audit_reference": "docs/validations/official-scope/remaining-official-blockers.json"
     },
     {
       "project_id": "drmario64-recomp",
@@ -143,6 +143,20 @@
       "path": "recipes/mario-kart-world/mkw-recomp/v0.1.18-allfix-cli.json",
       "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
       "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MKW"
+    },
+    {
+      "project_id": "vandalhearts-pcport",
+      "tag": "v2.1.0",
+      "path": "recipes/vandal-hearts/vandalhearts-pcport/v2.1.0.json",
+      "reason": "O NOTICE declara dados do jogo/BIOS incorporados nos binários. A alternativa fonte foi verificada e usa executável PS-X e BIOS próprios; o teste nativo CMake intacto falhou na criação obrigatória de symlinks por falta de privilégio. O procedimento Windows documentado usa cross-compilação Linux/macOS e dependências próprias, ainda sem integração validada no Desktop.",
+      "audit_reference": "docs/validations/official-scope/remaining-official-blockers.json"
+    },
+    {
+      "project_id": "redriver2",
+      "tag": "7.4-rc2",
+      "path": "recipes/driver-2/redriver2/7.4-rc2.json",
+      "reason": "A compilação oficial copia os mesmos 76 arquivos rastreados data/DRIVER2 ao pacote. Os conversores oficiais geram apenas vídeo e áudio da mídia própria; não fornecem reconstrução dos extras LANG/GFX/GAL/REPLAYS questionados na issue234. Compilar somente o executável não resolve a lacuna de procedência desses dados.",
+      "audit_reference": "docs/validations/official-scope/remaining-official-blockers.json"
     }
   ],
   "preserved_official_aliases": [
@@ -159,5 +173,151 @@
       "tag": "LauncherMirror"
     }
   ],
-  "reactivation": "A new release does not clear a blocked recipe. Re-review source fidelity, preserve disabled history, and explicitly approve a new official installation contract."
+  "reactivation": "Retired pairs and profiles remain blocked. A reviewed replacement under a real upstream tag is accepted only for its exact recipe SHA-256, profile and identity; the old recipe remains archived byte for byte. New upstream versions do not clear the block.",
+  "approved_recipe_replacements": [
+    {
+      "project_id": "pinyon-shift",
+      "tag": "v0.9.5",
+      "path": "recipes/forza-horizon/pinyon-shift/v0.9.5.json",
+      "sha256": "ff9e16931df48b3d071a23462e0b963c7abad99bd0d3da87349ba73602e67f47",
+      "build_profile": "pinyon-v0.9.5-official-installer",
+      "retired_path": "docs/retired-recipes/forza-horizon/pinyon-shift/v0.9.5.json",
+      "retired_sha256": "2f6249960b261bd44075c18d9f47c0f0f005bf4bd8bc50a08dd1039ad69dd9d0",
+      "retired_build_profile": "pinyon-0.9.5-prepare",
+      "upstream_commit": "850518ce00c66d65557bcbf190a62d2e2a6bb0e3",
+      "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+    },
+    {
+      "project_id": "fh1-reimagined",
+      "tag": "v0.3.9",
+      "path": "recipes/forza-horizon/fh1-reimagined/v0.3.9.json",
+      "sha256": "c08776b221a9a0df9404f930a59c1193170e6007eee58861a612b11795ed2550",
+      "build_profile": "fh1-0.3.9-official-prepare",
+      "retired_path": "docs/retired-recipes/forza-horizon/fh1-reimagined/v0.3.9.json",
+      "retired_sha256": "473c7b331cd973b1ba4ddf42d7310cf309a9bdd3d0a92797b5ee2a1eeab951d5",
+      "retired_build_profile": "fh1-0.3.9-inno-prepare",
+      "upstream_commit": "46d5ed62866af68700d15c61748df8c29ad0248d",
+      "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+    },
+    {
+      "project_id": "god-of-war-native-pc-port-gow-pc-port",
+      "tag": "launcher-v0.4.0",
+      "path": "recipes/god-of-war-2005/god-of-war-native-pc-port-gow-pc-port/launcher-v0.4.0.json",
+      "sha256": "52a39bd83ebb08ddc132a138d3bf50ad39598634a0654536a8871b984387ce40",
+      "build_profile": "gow-0.4.0-official-installer",
+      "retired_path": "docs/retired-recipes/god-of-war-2005/god-of-war-native-pc-port-gow-pc-port/launcher-v0.4.0.json",
+      "retired_sha256": "8956a1ea2d1890dd62e1a5c9244bea6dd207d070cfafbfa20208562677641090",
+      "retired_build_profile": "gow-0.4.0-prepare",
+      "upstream_commit": "adebc00e69d4395318c94523f345b26c7daf3451",
+      "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+    },
+    {
+      "project_id": "ship-of-harkinian-soh",
+      "tag": "9.3.1",
+      "path": "recipes/the-legend-of-zelda-ocarina-of-time/ship-of-harkinian-soh/9.3.1.json",
+      "sha256": "499d162f2256376af6196cfd99147cf4d7d8eeb4e9255889ce6f61d54f244a17",
+      "build_profile": "ship-of-harkinian-9.3.1-official-extractor",
+      "retired_path": "docs/retired-recipes/the-legend-of-zelda-ocarina-of-time/ship-of-harkinian-soh/9.3.1.json",
+      "retired_sha256": "ecd0ec380b4762b5bae57ad9265d6ef1b67127408a19bff2f0c3b9e384b6f8f3",
+      "retired_build_profile": null,
+      "upstream_commit": "f0599f96f8d442f26d0fa1c5cedafddacd56633f",
+      "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+    },
+    {
+      "project_id": "sm64ex",
+      "tag": "build-d7ca2c0",
+      "path": "recipes/super-mario-64/sm64ex/build-d7ca2c0.json",
+      "sha256": "70420921a4ce7fd5d5cbfe5c5d37c5f0c09691b94211835a3b0a5cf3a36f4ec5",
+      "build_profile": "sm64ex-official-msys-d7ca2c0",
+      "retired_path": "docs/retired-recipes/super-mario-64/sm64ex/build-d7ca2c0.json",
+      "retired_sha256": "2a4306fa23d76e3a1720de7eba881b0d6d905d96b9cff039545ef54fe307ff53",
+      "retired_build_profile": null,
+      "upstream_commit": "d7ca2c04364a6dd0dac58b47151e04e26887e6f0",
+      "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+    },
+    {
+      "project_id": "render96ex",
+      "tag": "build-48da5c4",
+      "path": "recipes/super-mario-64/render96ex/build-48da5c4.json",
+      "sha256": "0cdec0870d9e041e8ae3badf54ffd4f9344f703035761667fb3aedb8279d7c68",
+      "build_profile": "render96ex-official-msys-48da5c4",
+      "retired_path": "docs/retired-recipes/super-mario-64/render96ex/build-48da5c4.json",
+      "retired_sha256": "05363a9cd808361ad2ce9b1956597503b810e8963c8534a5d3cbd54a0c2681e5",
+      "retired_build_profile": null,
+      "upstream_commit": "48da5c491c8abfb2f5192b59278c1c269411e533",
+      "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+    },
+    {
+      "project_id": "sm64rt",
+      "tag": "build-20e618b",
+      "path": "recipes/super-mario-64/sm64rt/build-20e618b.json",
+      "sha256": "1f99eaabe5ca438fb8b4c98694eabf291614b5f1eed88c0b6b64108964f28f8f",
+      "build_profile": "sm64rt-official-msys-20e618b",
+      "retired_path": "docs/retired-recipes/super-mario-64/sm64rt/build-20e618b.json",
+      "retired_sha256": "4e90ddff3f5cc140ba0e6d843dcbf9146cc39c558597090b9e90d79df57cf267",
+      "retired_build_profile": null,
+      "upstream_commit": "20e618b75ae4a6810bd92ac6a937cb167517aac5",
+      "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+    },
+    {
+      "project_id": "sm",
+      "tag": "build-578f90b",
+      "path": "recipes/super-metroid/sm/build-578f90b.json",
+      "sha256": "8db09ea83b13734394f9ff46f744d269d70cbfddd8086709c0c7dce0558c575d",
+      "build_profile": "sm-official-msvc-source-578f90b",
+      "retired_path": "docs/retired-recipes/super-metroid/sm/build-578f90b.json",
+      "retired_sha256": "c84193604b8407fe5a13325054497836227f0c51b120fa9bf9fd36af68a86076",
+      "retired_build_profile": null,
+      "upstream_commit": "578f90b3cc49557bb70060ad033bb90b8cf8ac50",
+      "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+    },
+    {
+      "project_id": "sm-rewrite",
+      "tag": "build-5237873",
+      "path": "recipes/super-metroid/sm-rewrite/build-5237873.json",
+      "sha256": "024aafa8c6269c19ca8704f3475f1d3918bbe75c5ee78a17ffd0a3349dec508f",
+      "build_profile": "sm-rewrite-official-msvc-source-5237873",
+      "retired_path": "docs/retired-recipes/super-metroid/sm-rewrite/build-5237873.json",
+      "retired_sha256": "8faa4a7223be77c1f393d4e21a8e2dd7f00cf0cef8619f61722b5bf47b94134e",
+      "retired_build_profile": null,
+      "upstream_commit": "523787384a7c912153883b21714f5edabf4e2406",
+      "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+    },
+    {
+      "project_id": "gt5-recomp",
+      "tag": "build-64ca169",
+      "path": "recipes/gran-turismo-5/gt5-recomp/build-64ca169.json",
+      "sha256": "0faba67a8bb85fc52f8b2216c86c19b52563bf7f9586935234a46b30d8a11b64",
+      "build_profile": "gt5-64ca169-official-installer",
+      "retired_path": "docs/retired-recipes/gran-turismo-5/gt5-recomp/build-64ca169.json",
+      "retired_sha256": "cb0f81d98c3fb07dae5f85c0db0665c02f4add322192f4c21b579b2ef78418f0",
+      "retired_build_profile": null,
+      "upstream_commit": "64ca1697c5f9bb513bfe0414d9a36c10dafd0a37",
+      "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+    },
+    {
+      "project_id": "god-of-war-recomp",
+      "tag": "build-d1d11ec",
+      "path": "recipes/god-of-war-2005/god-of-war-recomp/build-d1d11ec.json",
+      "sha256": "7cd086059a43268479256e9afa21adba4ebe41ab582aab6a806f912a1bf0a587",
+      "build_profile": "god-of-war-kiexster-d1d11ec-official-installer",
+      "retired_path": "docs/retired-recipes/god-of-war-2005/god-of-war-recomp/build-d1d11ec.json",
+      "retired_sha256": "58009010a9063916bf0ffad66fd7369fc030c46e4867497c668ef4a54117226b",
+      "retired_build_profile": null,
+      "upstream_commit": "d1d11ec545c3baf2f3fc17e2df4247ac4b732d5c",
+      "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+    },
+    {
+      "project_id": "mariokartdd-recomp",
+      "tag": "build-bd36eb9",
+      "path": "recipes/mario-kart-double-dash/mariokartdd-recomp/build-bd36eb9.json",
+      "sha256": "0a6cac02a5c9baebbd4ac086b1d20ef4f82165197dcac9b10c4ebba566cc0994",
+      "build_profile": "mariokartdd-bd36eb9-official-msvc-clang",
+      "retired_path": "docs/retired-recipes/mario-kart-double-dash/mariokartdd-recomp/build-bd36eb9.json",
+      "retired_sha256": "05f933262cb14b00512e3cf9980940d3a31d70b1043239b88a74dcdfcf45d777",
+      "retired_build_profile": null,
+      "upstream_commit": "bd36eb982ea58c6651584cc48264876d1aba9546",
+      "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+    }
+  ]
 }

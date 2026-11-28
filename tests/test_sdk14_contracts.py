@@ -179,15 +179,23 @@ class SDK14ContractsTests(unittest.TestCase):
         self.assertEqual(entry["repository"], "CameronRedmore/Crash-Team-Racing-Turbocharged")
         self.assertEqual(entry["tag"], "ci-07d0c49")
         self.assertEqual(entry["schema_version"], 5)
-        self.assertEqual(entry["sha256"], "943f43da0758ee982b0f4373d25e3f74a5a8718eb066822f41200543e84b9b18")
+        self.assertEqual(entry["sha256"], "cbd8ccee6b8985d6d386bbc8fcf64dbfc8d23bc9323e13ab7e36848f45f30624")
         doc = json.loads((ROOT / entry["path"]).read_text(encoding="utf-8"))
         self.assertEqual(self.errors(doc), [])
         self.assertEqual(doc["source_url"], "https://github.com/CameronRedmore/Crash-Team-Racing-Turbocharged/actions/runs/37521206289")
         self.assertEqual(doc["launch_file"], doc["required_files"][0])
-        self.assertEqual(doc["inputs"], [])
-        self.assertTrue(doc["manual_steps"])
-        self.assertNotIn("validated", doc["manual_steps"].lower())
+        self.assertNotIn("manual_steps", doc)
+        self.assertEqual(len(doc["inputs"]), 1)
+        original = doc["inputs"][0]
+        self.assertTrue(original["required"])
+        self.assertEqual(original["size"], 605698800)
+        self.assertEqual(original["sha256"], "f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0")
+        self.assertEqual(original["extensions"], [".bin"])
+        self.assertEqual(doc["operations"], [{"kind": "import_input", "scope": "installation",
+            "source": original["id"], "target": "ctr-turbocharged-turbocharged-07d0c49-windows-x86/assets/ctr-u.bin"}])
         for mutate in (
+            lambda d: d["inputs"][0].pop("sha256"),
+            lambda d: d["operations"][0].update(target="../outside.bin"),
             lambda d: d["required_files"].remove(d["launch_file"]),
             lambda d: d["operations"].append({"kind": "execute", "command": "cmd.exe"}),
             lambda d: d.update(source_url="https://untrusted.example.org/game.zip"),

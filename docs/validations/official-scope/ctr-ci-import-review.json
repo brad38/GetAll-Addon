@@ -1,0 +1,20 @@
+{
+  "project_id": "crash-team-racing-turbocharged",
+  "tag": "ci-07d0c49",
+  "previous_sha256": "943f43da0758ee982b0f4373d25e3f74a5a8718eb066822f41200543e84b9b18",
+  "recipe_sha256": "cbd8ccee6b8985d6d386bbc8fcf64dbfc8d23bc9323e13ab7e36848f45f30624",
+  "upstream_commit": "07d0c49f01d62dcb9887b455be27ce65728ee893",
+  "upstream_procedure": "README.md explicitly permits copying the player's own raw NTSC-U MODE2/2352 image to assets/ctr-u.bin next to the unchanged official executable.",
+  "media_profile": {
+    "source": "https://github.com/CTR-tools/ctr-native/blob/79d6f1e925c62e85cef2c0f6514e56584e9eb67b/metadata/retail/ntsc-u-926/matching.json",
+    "target": "ntsc-u-926",
+    "size": 605698800,
+    "sha256": "f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0"
+  },
+  "implementation": "Existing schema-v5 import_input verifies size/hash, stages the copy and preserves the original. The game keeps its own optional font, graphics and update-check settings.",
+  "limits": [
+    "Only the documented canonical NTSC-U 926 BIN is automated. Other structurally valid dumps remain supported by the upstream interactive importer, outside this exact GetAll input contract.",
+    "The CI download remains pinned to its official artifact; expiry must be handled as an unavailable source, never replaced by a mirror.",
+    "No original-media import, first boot or gameplay was performed in this review."
+  ]
+}

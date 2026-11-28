@@ -1,0 +1,5 @@
+{
+  "project": "sm",
+  "error": "Timeout waiting for missing-ROM rejection",
+  "scope": "No media supplied; timeout does not validate launch"
+}

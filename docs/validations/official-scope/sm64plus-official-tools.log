@@ -1,0 +1,168 @@
+make: Entrando no diretório '/c/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/launcher/sm64plus/tools'
+
+g++ -I . -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s -std=c++11 -fno-exceptions -fno-rtti -pipe armips.cpp -o armips -pthread -municode -lm
+make[1]: Entrando no diretório '/c/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/launcher/sm64plus/tools/audiofile'
+
+g++ -std=c++11 -O2 -I. -c audiofile.cpp -o audiofile.o
+ar rcs libaudiofile.a audiofile.o
+make[1]: Saindo do diretório '/c/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/launcher/sm64plus/tools/audiofile'
+
+gcc -I . -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s -DN64GRAPHICS_STANDALONE n64graphics.c utils.c -o n64graphics  -lm
+gcc -I . -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s  n64graphics_ci_dir/n64graphics_ci.c n64graphics_ci_dir/exoquant/exoquant.c n64graphics_ci_dir/utils.c -o n64graphics_ci  -lm
+gcc -I . -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s -DMIO0_STANDALONE libmio0.c -o mio0  -lm
+gcc -I . -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s -DN64CKSUM_STANDALONE n64cksum.c utils.c -o n64cksum  -lm
+gcc -I . -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s  textconv.c utf8.c hashtable.c -o textconv  -lm
+gcc -I . -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s  patch_elf_32bit.c -o patch_elf_32bit  -lm
+gcc -I . -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s  aifc_decode.c -o aifc_decode  -lm
+gcc -I . -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s  aiff_extract_codebook.c -o aiff_extract_codebook  -lm
+gcc -I . -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s -Wno-unused-result -Wno-uninitialized -Wno-sign-compare -Wno-absolute-value sdk-tools/adpcm/vadpcm_enc.c sdk-tools/adpcm/vpredictor.c sdk-tools/adpcm/quant.c sdk-tools/adpcm/util.c sdk-tools/adpcm/vencode.c -o vadpcm_enc  -lm
+gcc -I . -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s -Iaudiofile -Wno-uninitialized sdk-tools/tabledesign/codebook.c sdk-tools/tabledesign/estimate.c sdk-tools/tabledesign/print.c sdk-tools/tabledesign/tabledesign.c audiofile/libaudiofile.a -o tabledesign -Laudiofile -laudiofile -lstdc++ -lm
+gcc -I . -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s  extract_data_for_mio.c -o extract_data_for_mio  -lm
+gcc -I . -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s  skyconv.c n64graphics.c utils.c -o skyconv  -lm
+make: Saindo do diretório '/c/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/launcher/sm64plus/tools'
+
+audiofile.cpp:3565:47: warning: 'template<class _Arg, class _Result> struct std::unary_function' is deprecated [-Wdeprecated-declarations]
+ 3565 |         struct signedToUnsigned : public std::unary_function<SignedType, UnsignedType>
+      |                                               ^~~~~~~~~~~~~~
+In file included from C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/string:52,
+                 from audiofile.cpp:1736:
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/bits/stl_function.h:120:12: note: declared here
+  120 |     struct unary_function
+      |            ^~~~~~~~~~~~~~
+audiofile.cpp:3570:47: warning: 'template<class _Arg, class _Result> struct std::unary_function' is deprecated [-Wdeprecated-declarations]
+ 3570 |         struct unsignedToSigned : public std::unary_function<SignedType, UnsignedType>
+      |                                               ^~~~~~~~~~~~~~
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/bits/stl_function.h:120:12: note: declared here
+  120 |     struct unary_function
+      |            ^~~~~~~~~~~~~~
+audiofile.cpp:3763:33: warning: 'template<class _Arg, class _Result> struct std::unary_function' is deprecated [-Wdeprecated-declarations]
+ 3763 | struct intToFloat : public std::unary_function<Arg, Result>
+      |                                 ^~~~~~~~~~~~~~
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/bits/stl_function.h:120:12: note: declared here
+  120 |     struct unary_function
+      |            ^~~~~~~~~~~~~~
+audiofile.cpp:3829:29: warning: 'template<class _Arg, class _Result> struct std::unary_function' is deprecated [-Wdeprecated-declarations]
+ 3829 | struct lshift : public std::unary_function<Arg, Result>
+      |                             ^~~~~~~~~~~~~~
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/bits/stl_function.h:120:12: note: declared here
+  120 |     struct unary_function
+      |            ^~~~~~~~~~~~~~
+audiofile.cpp:3835:29: warning: 'template<class _Arg, class _Result> struct std::unary_function' is deprecated [-Wdeprecated-declarations]
+ 3835 | struct rshift : public std::unary_function<Arg, Result>
+      |                             ^~~~~~~~~~~~~~
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/bits/stl_function.h:120:12: note: declared here
+  120 |     struct unary_function
+      |            ^~~~~~~~~~~~~~
+audiofile.cpp:3931:35: warning: 'template<class _Arg, class _Result> struct std::unary_function' is deprecated [-Wdeprecated-declarations]
+ 3931 | struct floatToFloat : public std::unary_function<Arg, Result>
+      |                                   ^~~~~~~~~~~~~~
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/bits/stl_function.h:120:12: note: declared here
+  120 |     struct unary_function
+      |            ^~~~~~~~~~~~~~
+armips.cpp:1274:9: warning: ISO C++ prohibits anonymous structs [-Wpedantic]
+ 1274 |         {
+      |         ^
+armips.cpp: In member function 'bool FileTokenizer::init(TextFile*)':
+armips.cpp:13551:51: warning: moving a temporary object prevents copy elision [-Wpessimizing-move]
+13551 |                                 addToken(std::move(loadToken()));
+      |                                          ~~~~~~~~~^~~~~~~~~~~~~
+armips.cpp:13551:51: note: remove 'std::move' call
+In file included from C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/cwchar:49,
+                 from C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/bits/postypes.h:42,
+                 from C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/iosfwd:44,
+                 from C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/ios:42,
+                 from C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/istream:42,
+                 from C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/c++/16.2.0/sstream:42,
+                 from armips.cpp:60:
+In function 'wchar_t* wmemcpy(wchar_t*, const wchar_t*, size_t)',
+    inlined from 'void Token::setStringValue(const std::wstring&, size_t, size_t)' at armips.cpp:3348:10,
+    inlined from 'void Token::setStringValue(const std::wstring&)' at armips.cpp:3341:17,
+    inlined from 'Token::Token(const Token&)' at armips.cpp:3285:18:
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/wchar.h:101:31: warning: 'void* memcpy(void*, const void*, size_t)' accessing between 9223372036854775800 and 9223372036854775804 bytes at offsets 0 and 0 overlaps 9223372036854775793 bytes at offset 7 [-Wrestrict]
+  101 |     return (wchar_t *) memcpy (_S1,_S2,_N*sizeof(wchar_t));
+      |                        ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function 'wchar_t* wmemcpy(wchar_t*, const wchar_t*, size_t)',
+    inlined from 'void Token::setOriginalText(const std::wstring&, size_t, size_t)' at armips.cpp:3330:10,
+    inlined from 'void Token::setOriginalText(const std::wstring&)' at armips.cpp:3323:18,
+    inlined from 'Token::Token(const Token&)' at armips.cpp:3282:19:
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/wchar.h:101:31: warning: 'void* memcpy(void*, const void*, size_t)' accessing between 9223372036854775800 and 9223372036854775804 bytes at offsets 0 and 0 overlaps 9223372036854775793 bytes at offset 7 [-Wrestrict]
+  101 |     return (wchar_t *) memcpy (_S1,_S2,_N*sizeof(wchar_t));
+      |                        ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+armips.cpp: In member function 'wchar_t TextFile::readCharacter()':
+armips.cpp:15055:50: warning: 'value' may be used uninitialized [-Wmaybe-uninitialized]
+15055 |         if (value == L'\r' && recursion == false && atEnd() == false)
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+armips.cpp:14979:17: note: 'value' was declared here
+14979 |         wchar_t value;
+      |                 ^~~~~
+In function 'wchar_t* wmemcpy(wchar_t*, const wchar_t*, size_t)',
+    inlined from 'void Token::setStringValue(const std::wstring&, size_t, size_t)' at armips.cpp:3348:10,
+    inlined from 'void Token::setStringValue(const std::wstring&)' at armips.cpp:3341:17,
+    inlined from 'Token::Token(const Token&)' at armips.cpp:3285:18,
+    inlined from 'void TokenStreamTokenizer::init(const std::vector<Token>&)' at armips.cpp:3501:12:
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/wchar.h:101:31: warning: 'void* memcpy(void*, const void*, size_t)' accessing between 9223372036854775800 and 9223372036854775804 bytes at offsets 0 and 0 overlaps 9223372036854775793 bytes at offset 7 [-Wrestrict]
+  101 |     return (wchar_t *) memcpy (_S1,_S2,_N*sizeof(wchar_t));
+      |                        ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function 'wchar_t* wmemcpy(wchar_t*, const wchar_t*, size_t)',
+    inlined from 'void Token::setOriginalText(const std::wstring&, size_t, size_t)' at armips.cpp:3330:10,
+    inlined from 'void Token::setOriginalText(const std::wstring&)' at armips.cpp:3323:18,
+    inlined from 'Token::Token(const Token&)' at armips.cpp:3282:19,
+    inlined from 'void TokenStreamTokenizer::init(const std::vector<Token>&)' at armips.cpp:3501:12:
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/wchar.h:101:31: warning: 'void* memcpy(void*, const void*, size_t)' accessing between 9223372036854775800 and 9223372036854775804 bytes at offsets 0 and 0 overlaps 9223372036854775793 bytes at offset 7 [-Wrestrict]
+  101 |     return (wchar_t *) memcpy (_S1,_S2,_N*sizeof(wchar_t));
+      |                        ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function 'wchar_t* wmemcpy(wchar_t*, const wchar_t*, size_t)',
+    inlined from 'void Token::setStringValue(const std::wstring&, size_t, size_t)' at armips.cpp:3348:10,
+    inlined from 'void Token::setStringValue(const std::wstring&)' at armips.cpp:3341:17,
+    inlined from 'Token::Token(const Token&)' at armips.cpp:3285:18,
+    inlined from 'std::vector<Token> Tokenizer::getTokens(TokenizerPosition, TokenizerPosition) const' at armips.cpp:13014:16:
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/wchar.h:101:31: warning: 'void* memcpy(void*, const void*, size_t)' accessing between 9223372036854775800 and 9223372036854775804 bytes at offsets 0 and 0 overlaps 9223372036854775793 bytes at offset 7 [-Wrestrict]
+  101 |     return (wchar_t *) memcpy (_S1,_S2,_N*sizeof(wchar_t));
+      |                        ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function 'wchar_t* wmemcpy(wchar_t*, const wchar_t*, size_t)',
+    inlined from 'void Token::setOriginalText(const std::wstring&, size_t, size_t)' at armips.cpp:3330:10,
+    inlined from 'void Token::setOriginalText(const std::wstring&)' at armips.cpp:3323:18,
+    inlined from 'Token::Token(const Token&)' at armips.cpp:3282:19,
+    inlined from 'std::vector<Token> Tokenizer::getTokens(TokenizerPosition, TokenizerPosition) const' at armips.cpp:13014:16:
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/wchar.h:101:31: warning: 'void* memcpy(void*, const void*, size_t)' accessing between 9223372036854775800 and 9223372036854775804 bytes at offsets 0 and 0 overlaps 9223372036854775793 bytes at offset 7 [-Wrestrict]
+  101 |     return (wchar_t *) memcpy (_S1,_S2,_N*sizeof(wchar_t));
+      |                        ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function 'wchar_t* wmemcpy(wchar_t*, const wchar_t*, size_t)',
+    inlined from 'void Token::setStringValue(const std::wstring&, size_t, size_t)' at armips.cpp:3348:10,
+    inlined from 'void Token::setStringValue(const std::wstring&)' at armips.cpp:3341:17,
+    inlined from 'void Tokenizer::registerReplacement(const std::wstring&, const std::wstring&)' at armips.cpp:13036:20:
+C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/msys64/mingw64/include/wchar.h:101:31: warning: 'void* memcpy(void*, const void*, size_t)' accessing between 9223372036854775800 and 9223372036854775804 bytes at offsets 0 and 0 overlaps 9223372036854775793 bytes at offset 7 [-Wrestrict]
+  101 |     return (wchar_t *) memcpy (_S1,_S2,_N*sizeof(wchar_t));
+      |                        ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In constructor 'ExpressionValue::ExpressionValue(ExpressionValue&&)',
+    inlined from 'ExpressionValue ExpressionInternal::evaluate()' at armips.cpp:18032:10:
+armips.cpp:1226:8: warning: 'val.ExpressionValue::<anonymous>' may be used uninitialized [-Wmaybe-uninitialized]
+ 1226 | struct ExpressionValue
+      |        ^~~~~~~~~~~~~~~
+armips.cpp: In member function 'ExpressionValue ExpressionInternal::evaluate()':
+armips.cpp:17924:25: note: 'val' declared here
+17924 |         ExpressionValue val;
+      |                         ^~~
+armips.cpp: In member function 'bool CDirectiveConditional::evaluate()':
+armips.cpp:9627:33: warning: 'value' may be used uninitialized [-Wmaybe-uninitialized]
+ 9627 |                 return value != 0;
+      |                                 ^
+armips.cpp:9614:17: note: 'value' was declared here
+ 9614 |         int64_t value;
+      |                 ^~~~~
+In function 'std::unique_ptr<T> make_unique(Args&& ...) [with T = CDirectiveConditional; Args = {ConditionType&}]',
+    inlined from 'std::unique_ptr<CAssemblerCommand> parseDirectiveConditional(Parser&, int)' at armips.cpp:11149:46:
+armips.cpp:70:31: warning: 'type' may be used uninitialized [-Wmaybe-uninitialized]
+   70 |     return std::unique_ptr<T>(new T(std::forward<Args>(args)...));
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+armips.cpp: In function 'std::unique_ptr<CAssemblerCommand> parseDirectiveConditional(Parser&, int)':
+armips.cpp:11039:23: note: 'type' was declared here
+11039 |         ConditionType type;
+      |                       ^~~~
+skyconv.c: In function 'write_skybox_c':
+skyconv.c:287:28: warning: '_skybox.c' directive writing 9 bytes into a region of size between 4 and 259 [-Wformat-overflow=]
+  287 |     sprintf(fBuffer, "%s/%s_skybox.c", output, skyboxName);
+      |                            ^~~~~~~~~
+skyconv.c:287:5: note: 'sprintf' output 11 or more bytes (assuming 266) into a destination of size 260
+  287 |     sprintf(fBuffer, "%s/%s_skybox.c", output, skyboxName);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

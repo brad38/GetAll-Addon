@@ -1,0 +1,11 @@
+  Determinando os projetos a serem restaurados...
+  C:\Users\bradg\Downloads\GetAll-R18\desktop-scope-20261127\AddonSdk\AllFix.Addons.Sdk.csproj restaurado (em 70 ms).
+  1 de 2 projetos estão atualizados para restauração.
+  AllFix.Addons.Sdk -> C:\Users\bradg\Downloads\GetAll-R18\desktop-scope-20261127\AddonSdk\bin\Release\net8.0\AllFix.Addons.Sdk.dll
+  AddonInfrastructure -> C:\Users\bradg\Downloads\GetAll-R18\desktop-scope-20261127\Tests\AddonInfrastructure\bin\Release\net8.0\AddonInfrastructure.dll
+
+Compilação com êxito.
+    0 Aviso(s)
+    0 Erro(s)
+
+Tempo Decorrido 00:00:04.08

@@ -1,16 +1,33 @@
 {
-  "schema_version": 5,
+  "schema_version": 9,
   "project_id": "sm64plus",
   "tag": "LauncherMirror",
   "source_url": "https://github.com/MorsGames/sm64plus/releases/tag/LauncherMirror",
   "operations": [],
   "required_files": [
-    "Super Mario 64 Plus.exe",
-    "SDL2.dll",
+    "build.sh",
+    "data.win",
+    "gamecontrollerdb.txt",
     "lib64Plus.dll",
-    "data.win"
+    "lib64Plus_arm64.so",
+    "lib64Plus_x64.so",
+    "options.ini",
+    "rebuild.sh",
+    "rebuild_clean.sh",
+    "SDL2.dll",
+    "Super Mario 64 Plus.exe"
   ],
   "inputs": [],
-  "manual_steps": "O launcher oficial do SM64Plus (LauncherMirror) foi extraido. Abra 'Super Mario 64 Plus.exe' na pasta instalada e selecione sua ROM legitima de Super Mario 64 (US, .z64) quando o launcher solicitar para extrair os ativos e gerar a build local. Nenhuma ROM e distribuida pelo GetAll-Addon.",
-  "launch_file": "Super Mario 64 Plus.exe"
+  "manual_steps": "Selecione sua ROM original americana de Super Mario 64 em formato .z64, de 8 MiB. O All-Fix executa o script oficial do SM64Plus com texturas personalizadas habilitadas, fontes intactas e MSYS2 privado obtido sob demanda. Ao concluir, use Jogar para abrir o launcher oficial. Nenhuma ROM está incluída.",
+  "build_profile": "sm64plus-launcher-official-build",
+  "preparation_media": [
+    {
+      "id": "original-rom",
+      "kind": "file",
+      "extensions": [
+        ".z64"
+      ],
+      "version": "ROM original americana de Super Mario 64 em formato .z64, de 8 MiB."
+    }
+  ]
 }

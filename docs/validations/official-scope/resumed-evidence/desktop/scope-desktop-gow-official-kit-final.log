@@ -1,0 +1,9 @@
+PASS OFFICIAL LAUNCHER KIT actual release archive matches the exact upstream pin
+PASS OFFICIAL LAUNCHER KIT Run stages the real official kit without a playable-installation claim
+PASS OFFICIAL LAUNCHER KIT every staged file and official installer script retains its pinned original bytes
+PASS OFFICIAL LAUNCHER KIT cancelling original-media selection leaves the real kit resumable before authorization
+PASS OFFICIAL LAUNCHER KIT invalid PS2 ISO rejected before the official installer
+PASS OFFICIAL LAUNCHER KIT rejected media cannot trigger execution authorization
+PASS OFFICIAL LAUNCHER KIT negative tests preserve original input, intact kit and resumable unverified state
+PASS OFFICIAL LAUNCHER KIT negative media and consent tests create no compiler workspace or bootstrap cache
+OFFICIAL_LAUNCHER_KIT_PASS gow-0.4.0-official-installer (kit staging and negative gates only; installer, compiler and original game were not executed)

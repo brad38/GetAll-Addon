@@ -1,0 +1,99 @@
+{
+  "checked_at_utc": "2026-11-28T02:44:11.643962+00:00",
+  "binary": "{soh-work-dir}\\torch-build\\torch.exe",
+  "binary_sha256": "947b5714668072c121166abcf3bfeee72c77495c52a3cbf4a1b2b7e0e284a15c",
+  "official_config_url": "https://raw.githubusercontent.com/HarbourMasters/Shipwright/f0599f96f8d442f26d0fa1c5cedafddacd56633f/soh/assets/yml/config.yml",
+  "official_config_sha256": "23aad70c10f4f574bc88bbd779d6c6911f1c34f34956b0031012ce347dcfd16c",
+  "tests": [
+    {
+      "test": "help",
+      "command": [
+        "{soh-work-dir}\\torch-build\\torch.exe",
+        "--help"
+      ],
+      "exit_code": 0,
+      "log_sha256": "9c6adfb5b632e4261e9e627518c77a658ddc9f46b724b5598e66a9b729c5ccec",
+      "output_excerpt": "elp                   Print this help message and exit\r\n\r\nSubcommands:\r\n  otr                         OTR - Generates an otr\r\n                              \r\n  o2r                         O2R - Generates an o2r\r\n                              \r\n  code                        Code - Generates C code\r\n                              \r\n  binary                      Binary - Generates a binary\r\n                              \r\n  header                      Header - Generates headers only\r\n                              \r\n  pack                        Pack - Packs an archive from a folder\r\n                              \r\n  modding                     Modding - Generates modding files like png\r\n                              \r\n\r\nTorch - [T]orch is [O]ur [R]esource [C]onversion [H]elper\r\n        * It extracts from a baserom and generates code or an otr.\r\n        * It can also generate an otr from a folder of assets.\r\n\r\nUsage: {soh-work-dir}\\torch-build\\torch.exe [OPTIONS] SUBCOMMAND\r\n\r\nOptions:\r\n  -h,--help                   Print this help message and exit\r\n\r\nSubcommands:\r\n  otr                         OTR - Generates an otr\r\n                              \r\n  o2r                         O2R - Generates an o2r\r\n                              \r\n  code                        Code - Generates C code\r\n                              \r\n  binary                      Binary - Generates a binary\r\n                              \r\n  header                      Header - Generates headers only\r\n                              \r\n  pack                        Pack - Packs an archive from a folder\r\n                              \r\n  modding                     Modding - Generates modding files like png\r\n                              \r\n"
+    },
+    {
+      "test": "o2r-help",
+      "command": [
+        "{soh-work-dir}\\torch-build\\torch.exe",
+        "o2r",
+        "--help"
+      ],
+      "exit_code": 0,
+      "log_sha256": "057e01017c0fd5a1861e8a4e5bad814608b96a81f0aff7ebe99f999188d29c53",
+      "output_excerpt": "O2R - Generates an o2r\r\n\r\nUsage: {soh-work-dir}\\torch-build\\torch.exe o2r [OPTIONS] <baserom.z64>\r\n\r\nPositionals:\r\n  <baserom.z64> TEXT:FILE REQUIRED\r\n\r\nOptions:\r\n  -h,--help                   Print this help message and exit\r\n  -v,--verbose                Verbose Debug Mode\r\n  -s,--srcdir TEXT:DIR        Set source directory to locate config.yml and asset metadata for processing\r\n  -d,--destdir TEXT           Set destination directory for export\r\n  -a,--additional-files TEXT:FILE ...\r\n                              Additional files to include in the o2r archive (e.g., mods.toml)\r\n  -u,--version TEXT           Version to set in the o2r archive\r\n  -S,--single TEXT            Extracts 1 yml rather than everything relative to the source directory\r\n\r\nO2R - Generates an o2r\r\n\r\nUsage: {soh-work-dir}\\torch-build\\torch.exe o2r [OPTIONS] <baserom.z64>\r\n\r\nPositionals:\r\n  <baserom.z64> TEXT:FILE REQUIRED\r\n\r\nOptions:\r\n  -h,--help                   Print this help message and exit\r\n  -v,--verbose                Verbose Debug Mode\r\n  -s,--srcdir TEXT:DIR        Set source directory to locate config.yml and asset metadata for processing\r\n  -d,--destdir TEXT           Set destination directory for export\r\n  -a,--additional-files TEXT:FILE ...\r\n                              Additional files to include in the o2r archive (e.g., mods.toml)\r\n  -u,--version TEXT           Version to set in the o2r archive\r\n  -S,--single TEXT            Extracts 1 yml rather than everything relative to the source directory\r\n"
+    },
+    {
+      "test": "missing-rom",
+      "command": [
+        "{soh-work-dir}\\torch-build\\torch.exe",
+        "o2r",
+        "{soh-work-dir}\\native-probe\\does-not-exist.z64",
+        "-s",
+        "{soh-work-dir}\\native-probe\\official-assets",
+        "-d",
+        "{soh-work-dir}\\native-probe\\negative-output",
+        "-u",
+        "9.3.1"
+      ],
+      "exit_code": 105,
+      "log_sha256": "dfdbe4d6c1f320ee2b63c8b7c714640642f6eb7a6d4579df23327922aa7ad202",
+      "output_excerpt": "O2R - Generates an o2r\r\n\r\nUsage: {soh-work-dir}\\torch-build\\torch.exe o2r [OPTIONS] <baserom.z64>\r\n\r\nPositionals:\r\n  <baserom.z64> TEXT:FILE REQUIRED\r\n\r\nOptions:\r\n  -h,--help                   Print this help message and exit\r\n  -v,--verbose                Verbose Debug Mode\r\n  -s,--srcdir TEXT:DIR        Set source directory to locate config.yml and asset metadata for processing\r\n  -d,--destdir TEXT           Set destination directory for export\r\n  -a,--additional-files TEXT:FILE ...\r\n                              Additional files to include in the o2r archive (e.g., mods.toml)\r\n  -u,--version TEXT           Version to set in the o2r archive\r\n  -S,--single TEXT            Extracts 1 yml rather than everything relative to the source directory\r\n\r\n<baserom.z64>: File does not exist: {soh-work-dir}\\native-probe\\does-not-exist.z64\r\nRun with --help for more information.\r\n"
+    },
+    {
+      "test": "invalid-rom",
+      "command": [
+        "{soh-work-dir}\\torch-build\\torch.exe",
+        "o2r",
+        "{soh-work-dir}\\native-probe\\invalid.z64",
+        "-s",
+        "{soh-work-dir}\\native-probe\\official-assets",
+        "-d",
+        "{soh-work-dir}\\native-probe\\negative-output",
+        "-u",
+        "9.3.1"
+      ],
+      "exit_code": 0,
+      "log_sha256": "aa5bbb604d38613fcfafcf2bb1c7e984ca2372b9a148c04978064dd627d72629",
+      "output_excerpt": "ory for MTX\r\n[2026-11-27 23:44:11.633] [info] Registered factory for F32\r\n[2026-11-27 23:44:11.633] [info] Registered factory for INC\r\n[2026-11-27 23:44:11.633] [info] Registered factory for LIGHTS\r\n[2026-11-27 23:44:11.633] [info] Registered factory for GFX\r\n[2026-11-27 23:44:11.633] [info] Registered factory for VEC3F\r\n[2026-11-27 23:44:11.633] [info] Registered factory for VEC3S\r\n[2026-11-27 23:44:11.633] [info] Registered factory for ARRAY\r\n[2026-11-27 23:44:11.633] [info] Registered factory for ASSET_ARRAY\r\n[2026-11-27 23:44:11.633] [info] Registered factory for VP\r\n[2026-11-27 23:44:11.633] [info] Registered factory for COMPRESSED_TEXTURE\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:ARRAY\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:MTX\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:SKELETON\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:LIMB\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:ANIMATION\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:CURVE_ANIMATION\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:PLAYER_ANIMATION\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:PLAYER_ANIMATION_DATA\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:COLLISION\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:TEXT\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:SCENE\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:ROOM\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:CUTSCENE\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:PATH\r\n[2026-11-27 23:44:11.633] [info] Registered factory for OOT:AUDIO\r\n[2026-11-27 23:44:11.635] [error] No config found for ae4e828569b5701353d10a5db82ddcf6b3e20490\r\n"
+    },
+    {
+      "test": "pack-metadata",
+      "command": [
+        "{soh-work-dir}\\torch-build\\torch.exe",
+        "pack",
+        "{soh-work-dir}\\native-probe\\pack-input",
+        "{soh-work-dir}\\native-probe\\metadata-probe.o2r",
+        "o2r",
+        "-u",
+        "9.3.1"
+      ],
+      "exit_code": 0,
+      "log_sha256": "bb8953bc15f9aace0a70e9459ea32a0cab58f6517f762eeb8bca3fea6e96b576",
+      "output_excerpt": "[2026-11-27 23:44:11.640] [critical] ------------------------------------------------\r\n[2026-11-27 23:44:11.641] [critical] Starting Torch...\r\n[2026-11-27 23:44:11.641] [critical] Scanning {soh-work-dir}\\native-probe\\pack-input\r\n[2026-11-27 23:44:11.641] [info] Loaded ZIP (O2R) archive: {soh-work-dir}\\native-probe\\metadata-probe.o2r\r\n[2026-11-27 23:44:11.641] [critical] > Added probe.txt\r\n[2026-11-27 23:44:11.641] [critical] Adding version file\r\n[2026-11-27 23:44:11.641] [critical] Done! Took 0ms\r\n[2026-11-27 23:44:11.641] [critical] Exported to {soh-work-dir}\\native-probe\\metadata-probe.o2r\r\n[2026-11-27 23:44:11.641] [critical] ------------------------------------------------\r\n"
+    }
+  ],
+  "metadata": {
+    "entries": [
+      "probe.txt",
+      "portVersion"
+    ],
+    "port_version_hex": "01000900030001",
+    "port_version_bytes": 7,
+    "fixture_matches": true
+  },
+  "checks": {
+    "help_succeeded": true,
+    "o2r_help_has_src_dest_version": true,
+    "missing_rom_rejected": true,
+    "invalid_rom_no_archive": true,
+    "input_unchanged": true,
+    "metadata_7_byte_big_endian_version": true,
+    "metadata_fixture_matches": true
+  },
+  "passed": true,
+  "limits": "No original media, first boot or gameplay was tested. A synthetic archive verifies pack and portVersion format only. An invalid input verifies failure to emit a usable archive; callers must verify expected outputs because upstream may return zero after a rejected ROM."
+}

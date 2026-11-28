@@ -1,0 +1,17 @@
+{
+  "schema_version": 5,
+  "project_id": "sm",
+  "tag": "build-578f90b",
+  "source_url": "https://github.com/snesrev/sm/commit/578f90b3cc49557bb70060ad033bb90b8cf8ac50",
+  "operations": [],
+  "required_files": [
+    "sm.exe",
+    "SDL2.dll",
+    "sm.ini",
+    "LICENSE.txt",
+    "README.md"
+  ],
+  "inputs": [],
+  "launch_file": "sm.exe",
+  "manual_steps": "O AllFix baixa e verifica as fontes oficiais fixadas, prepara LLVM-MinGW, CMake, Ninja e SDL2 privados e compila o executável Windows x64. Depois, selecione a ROM original de Super Metroid sem cabeçalho (3.145.728 bytes; SHA1 da957f0d63d14cb441d215462904c4fa8519c613) para concluir a instalação e habilitar Jogar."
+}

@@ -1,0 +1,249 @@
+{
+  "reviewed_at": "2026-11-28",
+  "repository": "brad38/Allfix",
+  "branch": "work/official-install-scope-20261127",
+  "state": "Reviewed working-tree files; immutable commit is recorded separately by the final integration receipt.",
+  "source_files": [
+    {
+      "path": "Services/GameInstallationFidelity.cs",
+      "sha256": "7121eca8d7e20c936d67d55533f90ace45ffeaa614ca1b7c95aeda332e844a7a",
+      "bytes": 8273
+    },
+    {
+      "path": "Services/GameInstallationForzaOfficial.cs",
+      "sha256": "330b21a11f1e4d689a87d054147cf448bfd1f84c081ba584a4194c434a8903a8",
+      "bytes": 9305
+    },
+    {
+      "path": "Services/GameInstallationGowKiexsterOfficial.cs",
+      "sha256": "adc0ad04fa0ec84c5765dad9ec0b2b74f0b1ef7573959ea525b675223148c081",
+      "bytes": 15144
+    },
+    {
+      "path": "Services/GameInstallationGowOfficial.cs",
+      "sha256": "e7caef429cd3d3013216be6cdd11ed18973e9063b1e2059e958727385953e993",
+      "bytes": 16444
+    },
+    {
+      "path": "Services/GameInstallationGt5Official.cs",
+      "sha256": "2aa0d576f3c2db55df96321cc90cae5c2c0c1dd7c8a943377109b1efe5fe7b96",
+      "bytes": 16007
+    },
+    {
+      "path": "Services/GameInstallationMkddOfficialBuild.cs",
+      "sha256": "6247d6fe7083fde7dc3be554881406221c4faa9ecaee8509eece4095e73b07de",
+      "bytes": 14417
+    },
+    {
+      "path": "Services/GameInstallationOfficialMsvc.cs",
+      "sha256": "754a352b9b0540bccdabb5ef5ebf03237f9365d6f320ebaef3b822b5af9dfb49",
+      "bytes": 20180
+    },
+    {
+      "path": "Services/GameInstallationOfficialSourceKit.cs",
+      "sha256": "3e78ce224557388ef5853c6116da1160bc034c48da86d7cd84f55e64fed319d3",
+      "bytes": 5792
+    },
+    {
+      "path": "Services/GameInstallationPinyonOfficial.cs",
+      "sha256": "dd047cc1f78b2fee5b68b68d57e5cc0941fb02bb0eb479e3aee3f21fc0ca9ca5",
+      "bytes": 13333
+    },
+    {
+      "path": "Services/GameInstallationService.cs",
+      "sha256": "87cab839b41e782d2c89474316d6e22bc72b8e9c30dfd5ebd67ce1794a98b6a3",
+      "bytes": 92350
+    },
+    {
+      "path": "Services/GameInstallationShadowOfRome.cs",
+      "sha256": "3b1939ddc87f41e8f6138a7664402e64a4adea57a60da100345c2a392482ece2",
+      "bytes": 12712
+    },
+    {
+      "path": "Services/GameInstallationSm64PlusOfficial.cs",
+      "sha256": "3c4dc94465a714c2a3cefefc8113e2e8fc2dcdb20117d05bfcf6ee7ea5976e48",
+      "bytes": 24001
+    },
+    {
+      "path": "Services/GameInstallationSmOfficialBuild.cs",
+      "sha256": "59d19333599495607d2b7394259f7b053af813228f210ced3ccc8ccc67e128f5",
+      "bytes": 17261
+    },
+    {
+      "path": "Services/GameInstallationSoh.cs",
+      "sha256": "29f739cdadd472988e70c81f94fadb7c569ae635fd7789a815fd5d31a3b447a3",
+      "bytes": 7941
+    },
+    {
+      "path": "Services/GameInstallationSsxOfficial.cs",
+      "sha256": "acb29e1dab4e2c3ae571ee50d8a428c51f3c416827d970c1665cd57cc100a304",
+      "bytes": 13792
+    },
+    {
+      "path": "Services/PreparedToolProfiles.cs",
+      "sha256": "8f4cfb1ebd1f657239137bce1cb1c7c2d965d0d2d2a69369a8190e73d6a02a16",
+      "bytes": 33184
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MarioOfficialIntegration.cs",
+      "sha256": "3937c2f439da1a24c15e3a909d1a729df7c90aaadd145fe660c7ff13c5d4a662",
+      "bytes": 9121
+    },
+    {
+      "path": "Tests/AddonInfrastructure/OfficialLauncherKitIntegration.cs",
+      "sha256": "c85d667bf7dd945c22bb10940ef5c95377dfa5b05642831ec0f268f77be1551d",
+      "bytes": 7903
+    }
+  ],
+  "contracts": [
+    {
+      "project_id": "ssx-recomp",
+      "tag": "v2.0.1",
+      "recipe_sha256": "0a6a532a3f41b124922b17eda1fe2c9f6768fe4a0cce2499e4b7272884c0703a",
+      "recipe_path": "recipes/ssx-2012/ssx-recomp/v2.0.1.json",
+      "build_profile": "ssx-2.0.1-official-prepare",
+      "handler": "Services/GameInstallationSsxOfficial.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "fh1-reimagined",
+      "tag": "v0.3.9",
+      "recipe_sha256": "c08776b221a9a0df9404f930a59c1193170e6007eee58861a612b11795ed2550",
+      "recipe_path": "recipes/forza-horizon/fh1-reimagined/v0.3.9.json",
+      "build_profile": "fh1-0.3.9-official-prepare",
+      "handler": "Services/GameInstallationForzaOfficial.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "god-of-war-native-pc-port-gow-pc-port",
+      "tag": "launcher-v0.4.0",
+      "recipe_sha256": "52a39bd83ebb08ddc132a138d3bf50ad39598634a0654536a8871b984387ce40",
+      "recipe_path": "recipes/god-of-war-2005/god-of-war-native-pc-port-gow-pc-port/launcher-v0.4.0.json",
+      "build_profile": "gow-0.4.0-official-installer",
+      "handler": "Services/GameInstallationGowOfficial.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "pinyon-shift",
+      "tag": "v0.9.5",
+      "recipe_sha256": "ff9e16931df48b3d071a23462e0b963c7abad99bd0d3da87349ba73602e67f47",
+      "recipe_path": "recipes/forza-horizon/pinyon-shift/v0.9.5.json",
+      "build_profile": "pinyon-v0.9.5-official-installer",
+      "handler": "Services/GameInstallationPinyonOfficial.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "ship-of-harkinian-soh",
+      "tag": "9.3.1",
+      "recipe_sha256": "499d162f2256376af6196cfd99147cf4d7d8eeb4e9255889ce6f61d54f244a17",
+      "recipe_path": "recipes/the-legend-of-zelda-ocarina-of-time/ship-of-harkinian-soh/9.3.1.json",
+      "build_profile": "ship-of-harkinian-9.3.1-official-extractor",
+      "handler": "Services/GameInstallationSoh.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "sm64plus",
+      "tag": "LauncherMirror",
+      "recipe_sha256": "fdfae75dba229c904a786ec3b1ee9b76484ad5cbf1ea6941dc5a1971dd60fc72",
+      "recipe_path": "recipes/super-mario-64/sm64plus/LauncherMirror.json",
+      "build_profile": "sm64plus-launcher-official-build",
+      "handler": "Services/GameInstallationSm64PlusOfficial.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "sm64ex",
+      "tag": "build-d7ca2c0",
+      "recipe_sha256": "70420921a4ce7fd5d5cbfe5c5d37c5f0c09691b94211835a3b0a5cf3a36f4ec5",
+      "recipe_path": "recipes/super-mario-64/sm64ex/build-d7ca2c0.json",
+      "build_profile": "sm64ex-official-msys-d7ca2c0",
+      "handler": "Services/GameInstallationSm64PlusOfficial.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "render96ex",
+      "tag": "build-48da5c4",
+      "recipe_sha256": "0cdec0870d9e041e8ae3badf54ffd4f9344f703035761667fb3aedb8279d7c68",
+      "recipe_path": "recipes/super-mario-64/render96ex/build-48da5c4.json",
+      "build_profile": "render96ex-official-msys-48da5c4",
+      "handler": "Services/GameInstallationSm64PlusOfficial.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "sm64rt",
+      "tag": "build-20e618b",
+      "recipe_sha256": "1f99eaabe5ca438fb8b4c98694eabf291614b5f1eed88c0b6b64108964f28f8f",
+      "recipe_path": "recipes/super-mario-64/sm64rt/build-20e618b.json",
+      "build_profile": "sm64rt-official-msys-20e618b",
+      "handler": "Services/GameInstallationSm64PlusOfficial.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "sm",
+      "tag": "build-578f90b",
+      "recipe_sha256": "8db09ea83b13734394f9ff46f744d269d70cbfddd8086709c0c7dce0558c575d",
+      "recipe_path": "recipes/super-metroid/sm/build-578f90b.json",
+      "build_profile": "sm-official-msvc-source-578f90b",
+      "handler": "Services/GameInstallationSmOfficialBuild.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "sm-rewrite",
+      "tag": "build-5237873",
+      "recipe_sha256": "024aafa8c6269c19ca8704f3475f1d3918bbe75c5ee78a17ffd0a3349dec508f",
+      "recipe_path": "recipes/super-metroid/sm-rewrite/build-5237873.json",
+      "build_profile": "sm-rewrite-official-msvc-source-5237873",
+      "handler": "Services/GameInstallationSmOfficialBuild.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "gt5-recomp",
+      "tag": "build-64ca169",
+      "recipe_sha256": "0faba67a8bb85fc52f8b2216c86c19b52563bf7f9586935234a46b30d8a11b64",
+      "recipe_path": "recipes/gran-turismo-5/gt5-recomp/build-64ca169.json",
+      "build_profile": "gt5-64ca169-official-installer",
+      "handler": "Services/GameInstallationGt5Official.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "god-of-war-recomp",
+      "tag": "build-d1d11ec",
+      "recipe_sha256": "7cd086059a43268479256e9afa21adba4ebe41ab582aab6a806f912a1bf0a587",
+      "recipe_path": "recipes/god-of-war-2005/god-of-war-recomp/build-d1d11ec.json",
+      "build_profile": "god-of-war-kiexster-d1d11ec-official-installer",
+      "handler": "Services/GameInstallationGowKiexsterOfficial.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "mariokartdd-recomp",
+      "tag": "build-bd36eb9",
+      "recipe_sha256": "0a6cac02a5c9baebbd4ac086b1d20ef4f82165197dcac9b10c4ebba566cc0994",
+      "recipe_path": "recipes/mario-kart-double-dash/mariokartdd-recomp/build-bd36eb9.json",
+      "build_profile": "mariokartdd-bd36eb9-official-msvc-clang",
+      "handler": "Services/GameInstallationMkddOfficialBuild.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "shadow-of-rome-recompiled",
+      "tag": "v2.9.5",
+      "recipe_sha256": "559c3172bf5f5c5e8266a45a58612bd7c654903ba0b4c0b603546329f79b0b9c",
+      "recipe_path": "recipes/shadow-of-rome/shadow-of-rome-recompiled/v2.9.5.json",
+      "build_profile": null,
+      "handler": "Services/GameInstallationShadowOfRome.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    },
+    {
+      "project_id": "crash-team-racing-turbocharged",
+      "tag": "ci-07d0c49",
+      "recipe_sha256": "cbd8ccee6b8985d6d386bbc8fcf64dbfc8d23bc9323e13ab7e36848f45f30624",
+      "recipe_path": "recipes/crash-team-racing/crash-team-racing-turbocharged/ci-07d0c49.json",
+      "build_profile": null,
+      "handler": "Services/GameInstallationService.cs",
+      "observation": "Official source/payload, preparation, media validation and play dispatch reviewed by the implementation owners. This is implementation evidence only, not a completed original-media installation."
+    }
+  ],
+  "limits": [
+    "No original game media used for these review claims.",
+    "Synthetic and native tool results have separate receipts.",
+    "Retired profiles remain blocked; replacements require exact identity, profile and digest."
+  ]
+}

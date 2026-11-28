@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "reviewed_at": "2026-11-27",
-  "method": "Reviewed source-route evidence and individually attributed prior synthetic reports. Exact recipe hashes bind positive states; no original-media execution is inferred from schema/status/build.",
+  "reviewed_at": "2026-11-28",
+  "method": "Reviewed official contracts and exact source/recipe bindings, with individually attributed current synthetic/native-tool results and separate historical reports. No original-media install, boot or gameplay occurred in this resumed review.",
   "projects": {
     "ghostship": {
       "reviewed_at": "2026-11-27",
@@ -118,31 +118,53 @@
       ]
     },
     "sm64plus": {
-      "reviewed_at": "2026-11-27",
+      "reviewed_at": "2026-11-28",
       "recipe_revisions": [
         {
           "tag": "LauncherMirror",
-          "sha256": "a5e96174858f2ae90563f0f1c1f0980701a5a1a8c8918d0ceae8f9426f973df8"
+          "sha256": "fdfae75dba229c904a786ec3b1ee9b76484ad5cbf1ea6941dc5a1971dd60fc72"
         }
       ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "partial",
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
           "evidence": [
             {
-              "path": "recipes/super-mario-64/sm64plus/LauncherMirror.json",
-              "sha256": "a5e96174858f2ae90563f0f1c1f0980701a5a1a8c8918d0ceae8f9426f973df8",
-              "observed": "Official package/kit contract retained with manual upstream preparation. The retired custom build does not count as active automation.",
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for sm64plus.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
               "data_kind": "code_review",
               "scope": "getall"
             }
-          ],
-          "reason": "Official launcher or manual procedure remains necessary for media preparation."
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm64plus-official-kit.log",
+              "sha256": "c7bccb45baeb56938e5eb3060052287632bc11817206b483e790ad90feac1c69",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/sm64plus-official-script-result.json",
+              "sha256": "dc06587a7ffad955de49e93d9abe1692ab8636ea34ed3bf9616102e790a83e6a",
+              "observed": "Official source/tools and script behavior checked with absent media; source/HEAD intact. No complete game build.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -161,24 +183,59 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "render96ex": {
-      "reviewed_at": "2026-11-27",
-      "recipe_revisions": [],
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "build-48da5c4",
+          "sha256": "0cdec0870d9e041e8ae3badf54ffd4f9344f703035761667fb3aedb8279d7c68"
+        }
+      ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for render96ex.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-render96ex-official-kit.log",
+              "sha256": "40fd9f79cea4f222acf95de04499fa52cfa912812ad45fcbfa2d48e58b136994",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/mario-official-tools-all-result.json",
+              "sha256": "e6a6f12cdf051137287b392c9b72c18ed83ab5288df4d3ed9f5aec64f195ebf6",
+              "observed": "Official make tools target compiled using private signed MSYS2 packages; no original ROM or game link.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -197,24 +254,59 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "sm64ex": {
-      "reviewed_at": "2026-11-27",
-      "recipe_revisions": [],
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "build-d7ca2c0",
+          "sha256": "70420921a4ce7fd5d5cbfe5c5d37c5f0c09691b94211835a3b0a5cf3a36f4ec5"
+        }
+      ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for sm64ex.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm64ex-official-kit.log",
+              "sha256": "1c31beadd17b6706927e5afb9d9575c2a14f4e147c848e98476f6e89543ad050",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/mario-official-tools-all-result.json",
+              "sha256": "e6a6f12cdf051137287b392c9b72c18ed83ab5288df4d3ed9f5aec64f195ebf6",
+              "observed": "Official make tools target compiled using private signed MSYS2 packages; no original ROM or game link.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -233,24 +325,59 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "sm64rt": {
-      "reviewed_at": "2026-11-27",
-      "recipe_revisions": [],
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "build-20e618b",
+          "sha256": "1f99eaabe5ca438fb8b4c98694eabf291614b5f1eed88c0b6b64108964f28f8f"
+        }
+      ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for sm64rt.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm64rt-official-kit.log",
+              "sha256": "981a0b491285b49e46b3f92c3b886144b1343b077c8fe8fe7017e1ada70ab3e1",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/mario-official-tools-all-result.json",
+              "sha256": "e6a6f12cdf051137287b392c9b72c18ed83ab5288df4d3ed9f5aec64f195ebf6",
+              "observed": "Official make tools target compiled; RT64 option preserved. No original ROM, game link or ray-tracing execution.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -269,24 +396,66 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "ship-of-harkinian-soh": {
-      "reviewed_at": "2026-11-27",
-      "recipe_revisions": [],
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "9.3.1",
+          "sha256": "499d162f2256376af6196cfd99147cf4d7d8eeb4e9255889ce6f61d54f244a17"
+        }
+      ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for ship-of-harkinian-soh.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-soh-official-kit-final.log",
+              "sha256": "4347f85b5a75606557879b5447eec0754a230ec0b75177afeb56624185ead412",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/torch/build-evidence.json",
+              "sha256": "9ce91bb47265bf7faf96e83a36e80cce222d51084a4a1642f86ef0fbc2c2fc31",
+              "observed": "Standalone official Torch built from intact sources; wrapper compile failure is separately preserved. No original ROM used.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/torch/native-probe-evidence.json",
+              "sha256": "fda37775f4f9e75d11e2a978561f7bbf32c99e82a0fef2b475f89d34c1a289f3",
+              "observed": "Native Torch metadata/negative-input probes; output and metadata are required independently of exit code.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -305,9 +474,9 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "hookshot-zelda-oot-port": {
@@ -2628,13 +2797,21 @@
       ]
     },
     "strikersrecomp": {
-      "reviewed_at": "2026-11-27",
+      "reviewed_at": "2026-11-28",
       "recipe_revisions": [],
       "dimensions": {
         "automated_installation_implemented": {
           "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "reason": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/remaining-official-blockers.json",
+              "sha256": "879bfb3995ed34ab0a498535bbd242fca1b741d201cd957443048ef5a75bde7f",
+              "observed": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão. Restoration condition: Validar uma combinação oficial compatível de dependências e embalagem Windows, ou integrar um ambiente oficialmente suportado sem modificar código/runtime do jogo.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
           "status": "unknown",
@@ -2658,9 +2835,9 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
-        "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Procedimento upstream: bootstrap.sh, tools/generate.py com ISO própria; módulo RecompCore ou build standalone nos hosts oficialmente documentados. Não foi afirmado que o projeto seja impossível de compilar no Windows.",
+        "Validar uma combinação oficial compatível de dependências e embalagem Windows, ou integrar um ambiente oficialmente suportado sem modificar código/runtime do jogo.",
+        "Upstream functionality remains distinct from the unavailable official Windows automation."
       ]
     },
     "recharged": {
@@ -2770,18 +2947,53 @@
       ]
     },
     "mariokartdd-recomp": {
-      "reviewed_at": "2026-11-27",
-      "recipe_revisions": [],
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "build-bd36eb9",
+          "sha256": "0a6cac02a5c9baebbd4ac086b1d20ef4f82165197dcac9b10c4ebba566cc0994"
+        }
+      ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for mariokartdd-recomp.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-mkdd-official-kit-final.log",
+              "sha256": "c5ad49c5eaaef0202ee5fbd5729565d647d190ae62dc6e5ad3b14e6bf89803c9",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/native/mkdd-official/build-result.json",
+              "sha256": "a55966f72573ede6024e80fae28999c6217ee8bfffe391546f841ebb138c8c2e",
+              "observed": "Official build.ps1 compiled 42 runtime_check objects, 165 original sources unchanged, OpenXR ON and benchmark-only OFF; synthetic wrong main.dol hash rejected. No final game link or OpenXR runtime build.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -2800,9 +3012,9 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "mkdd-recomp": {
@@ -3010,18 +3222,53 @@
       ]
     },
     "sm": {
-      "reviewed_at": "2026-11-27",
-      "recipe_revisions": [],
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "build-578f90b",
+          "sha256": "8db09ea83b13734394f9ff46f744d269d70cbfddd8086709c0c7dce0558c575d"
+        }
+      ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for sm.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm-official-kit.log",
+              "sha256": "600afc97c3721fee00c48ee285a25bd8a057dcdf63dbb647d547d2c04321a8d3",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/native/sm-official/build-result.json",
+              "sha256": "5a697b95e7457189a9a4ae9f40e9a657dc8c8453775305870b4bf73a64dc6e7d",
+              "observed": "Unchanged official MSVC solution built sm.exe and SDL2.dll, with 124 original files unchanged; no ROM or game execution.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3040,24 +3287,59 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "sm-rewrite": {
-      "reviewed_at": "2026-11-27",
-      "recipe_revisions": [],
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "build-5237873",
+          "sha256": "024aafa8c6269c19ca8704f3475f1d3918bbe75c5ee78a17ffd0a3349dec508f"
+        }
+      ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for sm-rewrite.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm-rewrite-official-kit.log",
+              "sha256": "2da269a4009bf59ff4dffeceb089ce1bc9c381b581e71215df98fcf699339f09",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/native/sm-rewrite-official/build-result.json",
+              "sha256": "22b3fea5892e11096099d744f94b914271e251c8065ca377e8db0835821ff85b",
+              "observed": "Official Windows CMake/vcpkg preset built sm.exe and SDL2.dll, with 193 source files unchanged; no ROM or game execution.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3076,9 +3358,9 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "supermarioworldrecomp": {
@@ -3425,18 +3707,46 @@
       ]
     },
     "god-of-war-native-pc-port-gow-pc-port": {
-      "reviewed_at": "2026-11-27",
-      "recipe_revisions": [],
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "launcher-v0.4.0",
+          "sha256": "52a39bd83ebb08ddc132a138d3bf50ad39598634a0654536a8871b984387ce40"
+        }
+      ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for god-of-war-native-pc-port-gow-pc-port.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-gow-official-kit-final.log",
+              "sha256": "02406eb747e74e6f763171c5b743d904a61a422a90bc2992e651a252dadcbb66",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3455,24 +3765,59 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "god-of-war-recomp": {
-      "reviewed_at": "2026-11-27",
-      "recipe_revisions": [],
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "build-d1d11ec",
+          "sha256": "7cd086059a43268479256e9afa21adba4ebe41ab582aab6a806f912a1bf0a587"
+        }
+      ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for god-of-war-recomp.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-kiexster-official-kit-final.log",
+              "sha256": "710a82a82193bdd51c63368a1b8bf93a4be4b9486069c974f783aa0fa60a3ddd",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/native/kiexster-official-extractor/result.json",
+              "sha256": "0c8f2e41f261281c1eba97ce4be87d078783326a1daeb65c01ab1d844200bb4c",
+              "observed": "Unchanged upstream extractor tested only with an authored synthetic ISO, preserving original script bytes.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3491,13 +3836,13 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "shadow-of-rome-recompiled": {
-      "reviewed_at": "2026-11-27",
+      "reviewed_at": "2026-11-28",
       "recipe_revisions": [
         {
           "tag": "v2.9.5",
@@ -3507,21 +3852,43 @@
       "dimensions": {
         "automated_installation_implemented": {
           "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
           "evidence": [
             {
-              "path": "docs/audits/source-integrity-20261127/audit-matrix.json",
-              "sha256": "3da81219c18f28e0c7e48cc104979d97b599d385fd34763a34cbd8835d8275c8",
-              "observed": "Row 81 / shadow-of-rome-recompiled: installer route shadowrome and handler body reviewed; code for preparation/import/build is present. This records implementation only, without asserting end-to-end success.",
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for shadow-of-rome-recompiled.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
               "data_kind": "code_review",
               "scope": "getall"
             }
-          ],
-          "reason": "Static review of the installation handler, separate from functional execution."
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-shadow-rome-defaults.log",
+              "sha256": "656342516dc856f97609296e64c58ec4d94a79ca1f21b0e1bdb8ae9b098fd564",
+              "observed": "Seven checks of all 44 upstream FirstStartIni defaults, PAL/NTSC binding and byte-exact preservation of an existing INI; no original-disc extraction or boot.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-shadow-rome-official-kit-final.log",
+              "sha256": "45c8806dc306ad60d38d71cca5d1d42f5a78da87d478b47397b4adb9559751ad",
+              "observed": "Six actual release kit and authored launch-plan checks, including changed media rejection. No original-disc installation or game boot.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3540,9 +3907,9 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "symphonyrecomp": {
@@ -3644,26 +4011,33 @@
       ]
     },
     "crash-team-racing-turbocharged": {
-      "reviewed_at": "2026-11-27",
+      "reviewed_at": "2026-11-28",
       "recipe_revisions": [
         {
           "tag": "ci-07d0c49",
-          "sha256": "943f43da0758ee982b0f4373d25e3f74a5a8718eb066822f41200543e84b9b18"
+          "sha256": "cbd8ccee6b8985d6d386bbc8fcf64dbfc8d23bc9323e13ab7e36848f45f30624"
         }
       ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "partial",
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
           "evidence": [
             {
-              "path": "recipes/crash-team-racing/crash-team-racing-turbocharged/ci-07d0c49.json",
-              "sha256": "943f43da0758ee982b0f4373d25e3f74a5a8718eb066822f41200543e84b9b18",
-              "observed": "Official package/kit contract retained with manual upstream preparation. The retired custom build does not count as active automation.",
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for crash-team-racing-turbocharged.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
               "data_kind": "code_review",
               "scope": "getall"
             }
-          ],
-          "reason": "Official launcher or manual procedure remains necessary for media preparation."
+          ]
         },
         "synthetic_validation": {
           "status": "unknown",
@@ -3687,9 +4061,9 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "ctr-native": {
@@ -3848,7 +4222,7 @@
       ]
     },
     "redriver2": {
-      "reviewed_at": "2026-11-27",
+      "reviewed_at": "2026-11-28",
       "recipe_revisions": [
         {
           "tag": "7.4-rc2",
@@ -3857,17 +4231,17 @@
       ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "implemented",
+          "status": "blocked",
+          "reason": "A compilação oficial copia os mesmos 76 arquivos rastreados data/DRIVER2 ao pacote. Os conversores oficiais geram apenas vídeo e áudio da mídia própria; não fornecem reconstrução dos extras LANG/GFX/GAL/REPLAYS questionados na issue234. Compilar somente o executável não resolve a lacuna de procedência desses dados.",
           "evidence": [
             {
-              "path": "docs/audits/source-integrity-20261127/audit-matrix.json",
-              "sha256": "3da81219c18f28e0c7e48cc104979d97b599d385fd34763a34cbd8835d8275c8",
-              "observed": "Row 88 / redriver2: installer route redriver and handler body reviewed; code for preparation/import/build is present. This records implementation only, without asserting end-to-end success.",
+              "path": "docs/validations/official-scope/remaining-official-blockers.json",
+              "sha256": "879bfb3995ed34ab0a498535bbd242fca1b741d201cd957443048ef5a75bde7f",
+              "observed": "A compilação oficial copia os mesmos 76 arquivos rastreados data/DRIVER2 ao pacote. Os conversores oficiais geram apenas vídeo e áudio da mídia própria; não fornecem reconstrução dos extras LANG/GFX/GAL/REPLAYS questionados na issue234. Compilar somente o executável não resolve a lacuna de procedência desses dados. Restoration condition: Documentar a procedência dos extras ou validar uma reconstrução oficial desses dados a partir das mídias próprias, preservando as funcionalidades do upstream.",
               "data_kind": "code_review",
               "scope": "getall"
             }
-          ],
-          "reason": "Static review of the installation handler, separate from functional execution."
+          ]
         },
         "synthetic_validation": {
           "status": "unknown",
@@ -3891,9 +4265,9 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
-        "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Método Windows oficial com ambos CDs próprios, launcher Java ou _convert_cd_fmv_xa.bat. A via de fonte VS2019/premake permanece documentada, porém sua embalagem usa o mesmo diretório de dados; não foi verificada uma rota que derive todos os extras dos discos.",
+        "Documentar a procedência dos extras ou validar uma reconstrução oficial desses dados a partir das mídias próprias, preservando as funcionalidades do upstream.",
+        "Upstream functionality remains distinct from the unavailable official Windows automation."
       ]
     },
     "severed-chains": {
@@ -3995,7 +4369,7 @@
       ]
     },
     "vandalhearts-pcport": {
-      "reviewed_at": "2026-11-27",
+      "reviewed_at": "2026-11-28",
       "recipe_revisions": [
         {
           "tag": "v2.1.0",
@@ -4004,22 +4378,30 @@
       ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "implemented",
+          "status": "blocked",
+          "reason": "O NOTICE declara dados do jogo/BIOS incorporados nos binários. A alternativa fonte foi verificada e usa executável PS-X e BIOS próprios; o teste nativo CMake intacto falhou na criação obrigatória de symlinks por falta de privilégio. O procedimento Windows documentado usa cross-compilação Linux/macOS e dependências próprias, ainda sem integração validada no Desktop.",
           "evidence": [
             {
-              "path": "docs/audits/source-integrity-20261127/audit-matrix.json",
-              "sha256": "3da81219c18f28e0c7e48cc104979d97b599d385fd34763a34cbd8835d8275c8",
-              "observed": "Row 91 / vandalhearts-pcport: installer route vandal and handler body reviewed; code for preparation/import/build is present. This records implementation only, without asserting end-to-end success.",
+              "path": "docs/validations/official-scope/remaining-official-blockers.json",
+              "sha256": "879bfb3995ed34ab0a498535bbd242fca1b741d201cd957443048ef5a75bde7f",
+              "observed": "O NOTICE declara dados do jogo/BIOS incorporados nos binários. A alternativa fonte foi verificada e usa executável PS-X e BIOS próprios; o teste nativo CMake intacto falhou na criação obrigatória de symlinks por falta de privilégio. O procedimento Windows documentado usa cross-compilação Linux/macOS e dependências próprias, ainda sem integração validada no Desktop. Restoration condition: Integrar e verificar ambiente oficial de compilação que suporte o staging de symlinks, gerando todos os dados necessários exclusivamente das mídias/BIOS fornecidos pelo usuário. Não substituir por binário que já incorpora esses dados.",
               "data_kind": "code_review",
               "scope": "getall"
             }
-          ],
-          "reason": "Static review of the installation handler, separate from functional execution."
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "failed",
+          "reason": "The intact native Windows CMake configuration failed on required symlinks and OpenAL; no claim about overall game functionality.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/vandal-native-configure-result.json",
+              "sha256": "0019329d1f86b2815758b566ff975a947083e498b3f3f58311ea5e4302bb8b25",
+              "observed": "Native configuration only: required symbolic links could not be created in this environment; sources remained unchanged and no original media was supplied.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ]
         },
         "original_media_installation": {
           "status": "unknown",
@@ -4038,9 +4420,9 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
-        "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "CMake VH_PSX_EXE + VH_KROM_SOURCE, mantendo VH_WEBP/VH_HDVIDEO ligados. A fonte atual pode ler diretamente PS-X EXE sem ELF/PsyQ; o gerador aceita BIOS próprio e valida o hash da região de fonte. A embalagem unificada oficial compila os dois cores regionais US/JP e usa libav estático.",
+        "Integrar e verificar ambiente oficial de compilação que suporte o staging de symlinks, gerando todos os dados necessários exclusivamente das mídias/BIOS fornecidos pelo usuário. Não substituir por binário que já incorpora esses dados.",
+        "Upstream functionality remains distinct from the unavailable official Windows automation."
       ]
     },
     "bloodyroar2recomp": {
@@ -4835,18 +5217,46 @@
       ]
     },
     "pinyon-shift": {
-      "reviewed_at": "2026-11-27",
-      "recipe_revisions": [],
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "v0.9.5",
+          "sha256": "ff9e16931df48b3d071a23462e0b963c7abad99bd0d3da87349ba73602e67f47"
+        }
+      ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for pinyon-shift.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-pinyon-official-kit-final.log",
+              "sha256": "6aaf2616cbd8ac261fb8801dba5effd09d54ff14ec3240a2565c0cbb86acec69",
+              "observed": "Real official kit and embedded scripts verified; cancellation/unsupported extension and missing Microsoft license acceptance stop preparation. No official setup, compiler, original ISO validation, boot or gameplay executed.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -4865,24 +5275,52 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "fh1-reimagined": {
-      "reviewed_at": "2026-11-27",
-      "recipe_revisions": [],
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "v0.3.9",
+          "sha256": "c08776b221a9a0df9404f930a59c1193170e6007eee58861a612b11795ed2550"
+        }
+      ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for fh1-reimagined.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-fh1-official-kit.log",
+              "sha256": "160d887e95faf7fef2e12d84b5149fda066d649bec7cc6aa7b7da95fc3009327",
+              "observed": "Actual official kit manifest matches; missing/modified files rejected. Kit integrity only, not the complete installer.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -4901,9 +5339,9 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "re-blue": {
@@ -5772,18 +6210,46 @@
       ]
     },
     "gt5-recomp": {
-      "reviewed_at": "2026-11-27",
-      "recipe_revisions": [],
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "build-64ca169",
+          "sha256": "0faba67a8bb85fc52f8b2216c86c19b52563bf7f9586935234a46b30d8a11b64"
+        }
+      ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for gt5-recomp.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-gt5-official-kit-final.log",
+              "sha256": "090b17ef5ed78e9a08777b2cad25d74f33ef76c2e9b75475869a29fbf3fb5fc6",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -5802,9 +6268,9 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "rygt-gt7": {
@@ -6534,18 +7000,46 @@
       ]
     },
     "ssx-recomp": {
-      "reviewed_at": "2026-11-27",
-      "recipe_revisions": [],
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "v2.0.1",
+          "sha256": "0a6a532a3f41b124922b17eda1fe2c9f6768fe4a0cce2499e4b7272884c0703a"
+        }
+      ],
       "dimensions": {
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "Official upstream remains eligible; the historical GetAll implementation is suspended. Follow the official installation method in the catalog assessment."
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for ssx-recomp.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-ssx-official-kit.log",
+              "sha256": "c95b14cfb9b8a74ca0884467520e18b88c6e5974b42249376a2fcbfe97dd6d98",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -6564,9 +7058,9 @@
         }
       },
       "limits": [
-        "Implementation is a source review, not an executed install.",
+        "Implemented route, separate from a completed installation with original media.",
         "External upstream gameplay belongs only to upstream_functional.",
-        "Historical synthetic results are scoped to the recorded earlier SDK."
+        "Current synthetic evidence covers only the explicitly observed operation; earlier evidence remains historical."
       ]
     },
     "dkb-pc-recomp": {

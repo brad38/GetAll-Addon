@@ -1,0 +1,152 @@
+-- Configuring incomplete, errors occurred!
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/audio.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/battle.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/card.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/cd_files.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/common.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/field.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/glyphs.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/graphics.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/gte_macros.inc':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/include_asm.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/inline_gte.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/labels.inc':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/macro.inc':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/object.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/state.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/types.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/units.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:65 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/window.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:76 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/PsyQ':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:77 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/types.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:78 (file):
+  file failed to create symbolic link
+  'C:/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/vandal-cmake-configure/datagen/include_stage/inline_gte.h':
+  O cliente n�o tem o privil�gio necess�rio.
+
+
+
+CMake Error at CMakeLists.txt:91 (find_library):
+  Could not find OPENAL_LIB using the following names: openal, OpenAL32
+
+

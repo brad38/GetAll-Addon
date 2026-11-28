@@ -1,0 +1,61 @@
+{
+  "shipwright_ref": "9.3.1",
+  "shipwright_commit": "f0599f96f8d442f26d0fa1c5cedafddacd56633f",
+  "torch_commit": "2ab12fe9660aec04e02ee89fe81baed304a1a1d6",
+  "sources": [
+    {
+      "name": "torch",
+      "repository": "https://github.com/HarbourMasters/Torch",
+      "commit": "2ab12fe9660aec04e02ee89fe81baed304a1a1d6",
+      "archive_url": "https://codeload.github.com/HarbourMasters/Torch/zip/2ab12fe9660aec04e02ee89fe81baed304a1a1d6",
+      "archive_name": "torch-2ab12fe9660aec04e02ee89fe81baed304a1a1d6.zip",
+      "archive_sha256": "0b4eadfb86b77d89fdff89e90264eb3f53b48ea47872d487518fd27fc6832b08",
+      "archive_bytes": 1869615
+    },
+    {
+      "name": "libgfxd",
+      "repository": "https://github.com/glankk/libgfxd",
+      "commit": "96fd3b849f38b3a7c7b7f3ff03c5921d328e6cdf",
+      "archive_url": "https://codeload.github.com/glankk/libgfxd/zip/96fd3b849f38b3a7c7b7f3ff03c5921d328e6cdf",
+      "archive_name": "libgfxd-96fd3b849f38b3a7c7b7f3ff03c5921d328e6cdf.zip",
+      "archive_sha256": "65455a00ca3ba44bc284d490928532cc92e4c79e92be40e7178ca3a02470ec84",
+      "archive_bytes": 52684
+    },
+    {
+      "name": "spdlog",
+      "repository": "https://github.com/gabime/spdlog",
+      "commit": "79524ddd08a4ec981b7fea76afd08ee05f83755d",
+      "archive_url": "https://codeload.github.com/gabime/spdlog/zip/79524ddd08a4ec981b7fea76afd08ee05f83755d",
+      "archive_name": "spdlog-79524ddd08a4ec981b7fea76afd08ee05f83755d.zip",
+      "archive_sha256": "2594162a28f06d12bf38ab4388c002156db9f8d5f7bcb0e1b4e60067dbad6c76",
+      "archive_bytes": 377580
+    },
+    {
+      "name": "tinyxml2",
+      "repository": "https://github.com/leethomason/tinyxml2",
+      "commit": "321ea883b7190d4e85cae5512a12e5eaa8f8731f",
+      "archive_url": "https://codeload.github.com/leethomason/tinyxml2/zip/321ea883b7190d4e85cae5512a12e5eaa8f8731f",
+      "archive_name": "tinyxml2-321ea883b7190d4e85cae5512a12e5eaa8f8731f.zip",
+      "archive_sha256": "23100b3c4e3b2d528fdf9b490d68b1fd39ad91c5306d804d4fd2c2a5ef959471",
+      "archive_bytes": 837238
+    },
+    {
+      "name": "yaml-cpp",
+      "repository": "https://github.com/jbeder/yaml-cpp",
+      "commit": "56e3bb550c91fd7005566f19c079cb7a503223cf",
+      "archive_url": "https://codeload.github.com/jbeder/yaml-cpp/zip/56e3bb550c91fd7005566f19c079cb7a503223cf",
+      "archive_name": "yaml-cpp-56e3bb550c91fd7005566f19c079cb7a503223cf.zip",
+      "archive_sha256": "4b7b1e19f30c2acb51591fd90320aa0824234d3b38a36ab3181530ce6841c66b",
+      "archive_bytes": 1372925
+    },
+    {
+      "name": "zlib",
+      "repository": "https://github.com/madler/zlib",
+      "commit": "51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf",
+      "archive_url": "https://codeload.github.com/madler/zlib/zip/51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf",
+      "archive_name": "zlib-51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf.zip",
+      "archive_sha256": "8be92f276c1280aa4f46a878008c7bf295b6ca8da0eb27b41e3666d894f0d32c",
+      "archive_bytes": 1728531
+    }
+  ]
+}

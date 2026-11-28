@@ -1,0 +1,37 @@
+{
+  "repository": "https://github.com/testyourmine/sm_rewrite",
+  "commit": "523787384a7c912153883b21714f5edabf4e2406",
+  "archive_url": "https://codeload.github.com/testyourmine/sm_rewrite/zip/523787384a7c912153883b21714f5edabf4e2406",
+  "archive_sha256": "b96cea8987cda3bb08b507a7435c98c43d34efc733763bd68825a005035839ee",
+  "checked_at_utc": "2026-11-28T02:56:50.785608+00:00",
+  "configure_command": [
+    "C:\\Program Files\\CMake\\bin\\cmake.exe",
+    "--preset",
+    "windows-relwithdebinfo",
+    "-DCMAKE_MAKE_PROGRAM=C:\\Users\\bradg\\AppData\\Local\\Microsoft\\WinGet\\Links\\ninja.EXE",
+    "-B",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261127\\sm-rewrite-official\\b"
+  ],
+  "build_command": [
+    "C:\\Program Files\\CMake\\bin\\cmake.exe",
+    "--build",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261127\\sm-rewrite-official\\b",
+    "--parallel",
+    "2"
+  ],
+  "exit_code": 0,
+  "original_source_files": 193,
+  "changed_original_sources": [],
+  "output_directory": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261127\\sm-rewrite-official\\b",
+  "outputs": {
+    "SDL2.dll": {
+      "bytes": 1665536,
+      "sha256": "0b9b692fe142f66f84e44f2de5eeae25f59af84a1fe9168f39f8908ff2bb3bac"
+    },
+    "sm.exe": {
+      "bytes": 1842176,
+      "sha256": "e908d2a2b15cc18e66320de2feb808e057021727fbd8562da97ca0e1031c1c11"
+    }
+  },
+  "limits": "Official Windows CMake preset and VS bundled vcpkg; no source patch, ROM, game execution or original-media validation."
+}

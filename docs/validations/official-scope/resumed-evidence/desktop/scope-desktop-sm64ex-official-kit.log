@@ -1,0 +1,8 @@
+PASS MARIO OFFICIAL real upstream package stages only approved kit/source: sm64ex-official-msys-d7ca2c0
+PASS MARIO OFFICIAL source alias keeps immutable archive and upstream README
+PASS MARIO OFFICIAL missing original ROM leaves the real kit resumable
+PASS MARIO OFFICIAL synthetic ROM cannot start private bootstrap or compilation
+PASS MARIO OFFICIAL invalid media is rejected before execution authorization
+PASS MARIO OFFICIAL negative tests preserve original media bytes and preparation state
+PASS MARIO OFFICIAL no bootstrap cache or build workspace is created for invalid media
+MARIO_OFFICIAL_KIT_PASS sm64ex-official-msys-d7ca2c0 (no original-media installation, full game build, boot or gameplay)

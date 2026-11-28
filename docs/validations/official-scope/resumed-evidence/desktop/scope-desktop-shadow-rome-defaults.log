@@ -1,0 +1,7 @@
+PASS Shadow of Rome exact official Launcher.cs source identity
+PASS Shadow of Rome official FirstStartIni declaration found
+PASS Shadow of Rome all 44 initial settings match the upstream array exactly
+PASS Shadow of Rome complete official first-start settings and selected ISO registered: SLES-52950
+PASS Shadow of Rome existing preferences and missing-key fallback behavior are preserved byte for byte
+PASS Shadow of Rome complete official first-start settings and selected ISO registered: SLUS-20902
+PASS Shadow of Rome existing preferences and missing-key fallback behavior are preserved byte for byte

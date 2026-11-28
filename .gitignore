@@ -7,3 +7,4 @@ venv/
 
 # Generated coverage report; CI preserves the report as an artifact.
 /catalog-coverage-report.json
+/docs/validations/official-scope/research-cache/

@@ -1,11 +1,12 @@
 {
-  "schema_version": 5,
+  "schema_version": 9,
   "project_id": "mariokartdd-recomp",
   "tag": "build-bd36eb9",
   "source_url": "https://github.com/ethannicholas/mariokartdd-recomp/commit/bd36eb982ea58c6651584cc48264876d1aba9546",
   "operations": [],
   "required_files": [
     "CMakeLists.txt",
+    "build.ps1",
     "LICENSE",
     "README.md",
     "gcn-recomp/CMakeLists.txt",
@@ -14,5 +15,16 @@
     "gcn-recomp/recomp/recomp.py"
   ],
   "inputs": [],
-  "manual_steps": "Compilação local experimental. Use Retomar e forneça sua ISO GameCube americana GM4E01; o main.dol é conferido pelo SHA-1 oficial. O GetAll prepara as ferramentas em ambiente privado, compila, registra a instalação e habilita Jogar. O modo VR permanece desativado. Nenhum jogo comercial está incluído."
+  "manual_steps": "Selecione sua ISO original americana de Mario Kart: Double Dash!! (GM4E01). O All-Fix executa build.ps1 oficial com Clang, Visual Studio 2022 e o submódulo fixado pelo autor, preservando OpenXR e as opções do projeto. Ferramentas Microsoft ausentes exigem aceite explícito antes da instalação. Primeiro boot ainda não homologado.",
+  "build_profile": "mariokartdd-bd36eb9-official-msvc-clang",
+  "preparation_media": [
+    {
+      "id": "original-disc",
+      "kind": "file",
+      "extensions": [
+        ".iso"
+      ],
+      "version": "GameCube USA GM4E01; main.dol SHA-1 e389e50357d4a5076ab3d38672204658f411123d"
+    }
+  ]
 }

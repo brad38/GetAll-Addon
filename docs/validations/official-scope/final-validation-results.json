@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-11-28T03:35:30.334217+00:00",
+  "catalog_commit": "e4fdde9d7c128f79eb19cf99ea07e2e9b628127a",
+  "index_sha256": "deb759f53fbbbdbc40f712542d28de4990756bf752048dde1284ae0611f132dd",
+  "results": [
+    {
+      "test": "final-python-tests",
+      "command": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\.venv-validation-r18\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 50.719,
+      "log": "docs/validations/official-scope/final-python-tests.log",
+      "sha256": "aec2fedcbb11fa1e18cf34a53586982531ba9477b9e33c9d60f31765813d41bf",
+      "tests": 79
+    },
+    {
+      "test": "final-ci-local",
+      "command": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\.venv-validation-r18\\Scripts\\python.exe",
+        "scripts/validate_ci.py"
+      ],
+      "exit_code": 0,
+      "seconds": 7.579,
+      "log": "docs/validations/official-scope/final-ci-local.log",
+      "sha256": "45fa26db3f2b7ee2ef3aee91e7747d6e08714aa92ce07ecba053bb05ee596439"
+    }
+  ],
+  "scope": "Local unit tests and the real CI validation entry point against the published exact catalog commit. Does not claim hosted GetAll CI, game execution or publication of this working tree."
+}

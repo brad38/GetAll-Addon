@@ -518,7 +518,34 @@ def validate_recipe_semantics(
             for profile in list(profiles)
             if profile["build_profile"] in updated_instructions
         )
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "ssx-recomp", "tag": "v2.0.1", "source_url": "https://github.com/AmarilloNL/ssx-recomp/releases/tag/v2.0.1", "operations": [], "required_files": ["ssx-recomp.exe", "recomplauncher.json"], "inputs": [], "manual_steps": "Selecione sua ISO ou pasta original de SSX EA-2413. O instalador oficial compila o jogo sem alterações de fonte; a instalação pode baixar ferramentas e requer aceite explícito dos termos do Visual Studio Build Tools. Title Update e DLCs são opcionais.", "build_profile": "ssx-2.0.1-official-prepare", "preparation_media": [{"id": "original-disc", "kind": "file_or_directory", "extensions": [".iso"], "version": "Xbox 360 EA-2413 USA/Europe/Australia"}]}'''))
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "pinyon-shift", "tag": "v0.9.5", "source_url": "https://github.com/arcanite24/pinyon-shift/releases/tag/v0.9.5", "operations": [], "required_files": ["PinyonShiftLauncher.exe", "pinyon-shift-source.zip"], "inputs": [], "manual_steps": "Selecione sua ISO ou pasta original de Forza Horizon USA (MS-2505). O All-Fix executa a preparação oficial do Pinyon Shift, com verificação dos arquivos, download das ferramentas e compilação sem alterações de fonte. O uso das bibliotecas Microsoft exige aceite explícito dos termos. Ao concluir, use Jogar; configurações, shaders e DLCs seguem os procedimentos oficiais. Nenhum jogo está incluído.", "build_profile": "pinyon-v0.9.5-official-installer", "preparation_media": [{"id": "original-disc", "kind": "file_or_directory", "extensions": [".iso"], "version": "Xbox 360 USA MS-2505 / 4D5309C9"}]}'''))
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "fh1-reimagined", "tag": "v0.3.9", "source_url": "https://github.com/FH1-ReImagined/ForzaHorizon1-ReImagined/releases/tag/v0.3.9", "operations": [], "required_files": ["forza-launcher.exe", "README.txt", "windows-build-manifest.json", "project/forza-recomp/CMakeLists.txt", "project/forza-recomp/forza_manifest.toml", "licenses/ForzaHorizon1-ReImagined.txt"], "inputs": [], "manual_steps": "Selecione sua mídia original de Forza Horizon para Xbox 360. O launcher oficial importa a mídia e compila o jogo com fontes e SDK oficiais. O download das ferramentas Microsoft exige aceite explícito dos termos. A atualização TU4 é opcional.", "build_profile": "fh1-0.3.9-official-prepare", "preparation_media": [{"id": "original-disc", "kind": "file_or_directory", "extensions": [".iso", ".god"], "version": "Xbox 360 original; Games on Demand ou pasta extraída"}]}'''))
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "god-of-war-native-pc-port-gow-pc-port", "tag": "launcher-v0.4.0", "source_url": "https://github.com/danielalves96/gow-pc-port/releases/tag/launcher-v0.4.0", "operations": [], "required_files": ["God Of War - PC Launcher_0.4.0_x64-portable/God Of War - PC Launcher.exe", "God Of War - PC Launcher_0.4.0_x64-portable/README.txt", "God Of War - PC Launcher_0.4.0_x64-portable/kit/install.ps1", "God Of War - PC Launcher_0.4.0_x64-portable/kit/bin/ps2_recomp.exe", "God Of War - PC Launcher_0.4.0_x64-portable/kit/bin/ps2-tools.exe", "God Of War - PC Launcher_0.4.0_x64-portable/kit/RustPortPS2/games/scus-97399/gow-port.toml"], "inputs": [], "manual_steps": "Selecione sua ISO ou CHD original de God of War USA (SCUS-97399). O All-Fix verifica a mídia e executa o instalador oficial 0.4.0, com o compilador e as opções padrão do projeto. A primeira compilação pode demorar; ao concluir, use Jogar. Nenhum jogo está incluído.", "build_profile": "gow-0.4.0-official-installer", "preparation_media": [{"id": "original-disc", "kind": "file", "extensions": [".iso", ".chd"], "version": "Disco original God of War USA (SCUS-97399), em ISO ou CHD."}]}'''))
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "ship-of-harkinian-soh", "tag": "9.3.1", "source_url": "https://github.com/HarbourMasters/Shipwright/releases/tag/9.3.1", "operations": [], "required_files": ["soh.exe", "soh.o2r"], "inputs": [], "manual_steps": "Selecione sua ROM original compatível de Ocarina of Time em formato .z64. O extrator Torch oficial gera os recursos locais sem alterar as fontes do projeto. Ao concluir, use Jogar. Nenhuma ROM está incluída.", "build_profile": "ship-of-harkinian-9.3.1-official-extractor", "preparation_media": [{"id": "original-rom", "kind": "file", "extensions": [".z64"], "version": "Ocarina of Time .z64 big-endian de 32 MiB e SHA-1 oficial"}]}'''))
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "sm64ex", "tag": "build-d7ca2c0", "source_url": "https://github.com/sm64pc/sm64ex/commit/d7ca2c04364a6dd0dac58b47151e04e26887e6f0", "operations": [], "required_files": ["source.zip", "README.md"], "inputs": [], "manual_steps": "Selecione sua ROM original americana de Super Mario 64 em formato .z64, de 8 MiB. O All-Fix compila sm64ex pelo Makefile oficial intacto, com recursos externos e MSYS2 privado obtido sob demanda. Ao concluir, use Jogar. Nenhuma ROM está incluída.", "build_profile": "sm64ex-official-msys-d7ca2c0", "preparation_media": [{"id": "original-rom", "kind": "file", "extensions": [".z64"], "version": "ROM original americana de Super Mario 64 em formato .z64, de 8 MiB."}]}'''))
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "render96ex", "tag": "build-48da5c4", "source_url": "https://github.com/Render96/Render96ex/commit/48da5c491c8abfb2f5192b59278c1c269411e533", "operations": [], "required_files": ["source.zip", "README.md"], "inputs": [], "manual_steps": "Selecione sua ROM original americana de Super Mario 64 em formato .z64, de 8 MiB. O All-Fix compila Render96ex pelo Makefile oficial intacto, com recursos externos e MSYS2 privado obtido sob demanda. Os packs oficiais de modelos e texturas são opcionais. Ao concluir, use Jogar. Nenhuma ROM está incluída.", "build_profile": "render96ex-official-msys-48da5c4", "preparation_media": [{"id": "original-rom", "kind": "file", "extensions": [".z64"], "version": "ROM original americana de Super Mario 64 em formato .z64, de 8 MiB."}]}'''))
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "sm64rt", "tag": "build-20e618b", "source_url": "https://github.com/DarioSamo/sm64rt/commit/20e618b75ae4a6810bd92ac6a937cb167517aac5", "operations": [], "required_files": ["source.zip", "README.md"], "inputs": [], "manual_steps": "Selecione sua ROM original americana de Super Mario 64 em formato .z64, de 8 MiB. O All-Fix compila sm64rt pelo Makefile oficial intacto, mantendo RT64 e recursos externos. MSYS2 e bibliotecas oficiais são obtidos sob demanda. O jogo exige GPU compatível com DXR. Ao concluir, use Jogar. Nenhuma ROM está incluída.", "build_profile": "sm64rt-official-msys-20e618b", "preparation_media": [{"id": "original-rom", "kind": "file", "extensions": [".z64"], "version": "ROM original americana de Super Mario 64 em formato .z64, de 8 MiB."}]}'''))
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "sm64plus", "tag": "LauncherMirror", "source_url": "https://github.com/MorsGames/sm64plus/releases/tag/LauncherMirror", "operations": [], "required_files": ["build.sh", "data.win", "gamecontrollerdb.txt", "lib64Plus.dll", "lib64Plus_arm64.so", "lib64Plus_x64.so", "options.ini", "rebuild.sh", "rebuild_clean.sh", "SDL2.dll", "Super Mario 64 Plus.exe"], "inputs": [], "manual_steps": "Selecione sua ROM original americana de Super Mario 64 em formato .z64, de 8 MiB. O All-Fix executa o script oficial do SM64Plus com texturas personalizadas habilitadas, fontes intactas e MSYS2 privado obtido sob demanda. Ao concluir, use Jogar para abrir o launcher oficial. Nenhuma ROM está incluída.", "build_profile": "sm64plus-launcher-official-build", "preparation_media": [{"id": "original-rom", "kind": "file", "extensions": [".z64"], "version": "ROM original americana de Super Mario 64 em formato .z64, de 8 MiB."}]}'''))
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "sm", "tag": "build-578f90b", "source_url": "https://github.com/snesrev/sm/commit/578f90b3cc49557bb70060ad033bb90b8cf8ac50", "operations": [], "required_files": ["source/sm.sln", "source/src/sm.vcxproj", "source/src/packages.config", "source/sm.ini", "source/README.md", "source/BUILDING.md", "source/LICENSE.txt"], "inputs": [], "manual_steps": "Selecione sua ROM original norte-americana de Super Metroid sem cabeçalho. O All-Fix compila as fontes oficiais intactas com Visual Studio 2022; se as ferramentas não estiverem instaladas, será necessário aceitar os termos da Microsoft para obtê-las. O primeiro boot ainda não foi homologado.", "build_profile": "sm-official-msvc-source-578f90b", "preparation_media": [{"id": "original-rom", "kind": "file", "extensions": [".smc", ".sfc"], "version": "Super Metroid USA sem cabeçalho; 3145728 bytes; SHA-1 da957f0d63d14cb441d215462904c4fa8519c613"}]}'''))
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "sm-rewrite", "tag": "build-5237873", "source_url": "https://github.com/testyourmine/sm_rewrite/commit/523787384a7c912153883b21714f5edabf4e2406", "operations": [], "required_files": ["source/CMakeLists.txt", "source/CMakePresets.json", "source/vcpkg.json", "source/sm.ini", "source/README.md", "source/BUILDING.md", "source/LICENSE.txt"], "inputs": [], "manual_steps": "Selecione sua ROM original norte-americana de Super Metroid sem cabeçalho. O All-Fix compila as fontes oficiais intactas com Visual Studio 2022; se as ferramentas não estiverem instaladas, será necessário aceitar os termos da Microsoft para obtê-las. O primeiro boot ainda não foi homologado.", "build_profile": "sm-rewrite-official-msvc-source-5237873", "preparation_media": [{"id": "original-rom", "kind": "file", "extensions": [".smc", ".sfc"], "version": "Super Metroid USA sem cabeçalho; 3145728 bytes; SHA-1 da957f0d63d14cb441d215462904c4fa8519c613"}]}'''))
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "gt5-recomp", "tag": "build-64ca169", "source_url": "https://github.com/MormonFTP-hub/gt5-recomp/commit/64ca1697c5f9bb513bfe0414d9a36c10dafd0a37", "operations": [], "required_files": ["source.zip", "README.md"], "inputs": [], "manual_steps": "Selecione sua ISO decifrada ou pasta PS3_GAME original de Gran Turismo 5 e o firmware PS3 obtido legalmente. O All-Fix executa o instalador oficial, preservando DirectX 12, Vulkan e os complementos gráficos oficiais. Dependências Microsoft e NVIDIA são obtidas somente quando necessárias e após aceite explícito. Ao concluir, use Jogar. Nenhum jogo ou firmware está incluído.", "build_profile": "gt5-64ca169-official-installer", "preparation_media": [{"id": "original-game", "kind": "file_or_directory", "extensions": [".iso"], "version": "GT5: ISO decifrada ou pasta PS3_GAME BCES00569/BCUS98114 v01.00"}, {"id": "original-firmware", "kind": "file_or_directory", "extensions": [".pup"], "version": "GT5: pasta dev_flash ou firmware PS3UPDAT.PUP local obtido legalmente"}]}'''))
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "god-of-war-recomp", "tag": "build-d1d11ec", "source_url": "https://github.com/KIexster/god-of-war-recomp/commit/d1d11ec545c3baf2f3fc17e2df4247ac4b732d5c", "operations": [], "required_files": ["source.zip", "README.md"], "inputs": [], "manual_steps": "Selecione sua ISO original americana de God of War para PS2 (SCUS_973.99). O All-Fix executa os scripts oficiais de extração, compilação e execução da KIexster, sem alterar os fontes do projeto. Se faltarem ferramentas Microsoft, o download exige aceite explícito dos termos. A primeira compilação pode demorar; nenhum jogo está incluído.", "build_profile": "god-of-war-kiexster-d1d11ec-official-installer", "preparation_media": [{"id": "original-disc", "kind": "file", "extensions": [".iso"], "version": "ISO original americana de God of War PS2 (SCUS_973.99)."}]}'''))
+        profiles.append(json.loads('''{"schema_version": 9, "project_id": "mariokartdd-recomp", "tag": "build-bd36eb9", "source_url": "https://github.com/ethannicholas/mariokartdd-recomp/commit/bd36eb982ea58c6651584cc48264876d1aba9546", "operations": [], "required_files": ["CMakeLists.txt", "build.ps1", "LICENSE", "README.md", "gcn-recomp/CMakeLists.txt", "gcn-recomp/LICENSE", "gcn-recomp/recomp/extract_dol.py", "gcn-recomp/recomp/recomp.py"], "inputs": [], "manual_steps": "Selecione sua ISO original americana de Mario Kart: Double Dash!! (GM4E01). O All-Fix executa build.ps1 oficial com Clang, Visual Studio 2022 e o submódulo fixado pelo autor, preservando OpenXR e as opções do projeto. Ferramentas Microsoft ausentes exigem aceite explícito antes da instalação. Primeiro boot ainda não homologado.", "build_profile": "mariokartdd-bd36eb9-official-msvc-clang", "preparation_media": [{"id": "original-disc", "kind": "file", "extensions": [".iso"], "version": "GameCube USA GM4E01; main.dol SHA-1 e389e50357d4a5076ab3d38672204658f411123d"}]}'''))
         identities = {
+            "mariokartdd-bd36eb9-official-msvc-clang": ("mario-kart-double-dash", "ethannicholas/mariokartdd-recomp"),
+            "god-of-war-kiexster-d1d11ec-official-installer": ("god-of-war-2005", "KIexster/god-of-war-recomp"),
+            "gt5-64ca169-official-installer": ("gran-turismo-5", "MormonFTP-hub/gt5-recomp"),
+            "sm-rewrite-official-msvc-source-5237873": ("super-metroid", "testyourmine/sm_rewrite"),
+            "sm-official-msvc-source-578f90b": ("super-metroid", "snesrev/sm"),
+            "sm64plus-launcher-official-build": ("super-mario-64", "MorsGames/sm64plus"),
+            "sm64rt-official-msys-20e618b": ("super-mario-64", "DarioSamo/sm64rt"),
+            "render96ex-official-msys-48da5c4": ("super-mario-64", "Render96/Render96ex"),
+            "sm64ex-official-msys-d7ca2c0": ("super-mario-64", "sm64pc/sm64ex"),
+            "ship-of-harkinian-9.3.1-official-extractor": ("the-legend-of-zelda-ocarina-of-time", "HarbourMasters/Shipwright"),
+            "pinyon-v0.9.5-official-installer": ("forza-horizon", "arcanite24/pinyon-shift"),
+            "gow-0.4.0-official-installer": ("god-of-war-2005", "danielalves96/gow-pc-port"),
+            "fh1-0.3.9-official-prepare": ("forza-horizon", "FH1-ReImagined/ForzaHorizon1-ReImagined"),
             "sotc-0.77-prepare": ("shadow-of-the-colossus", "AjncSystem/ShadowOfTheColossus-PC"),
             "edge-of-time-1.1-xbox-import": ("spider-man-edge-of-time", "goliathret/EdgeOfTimeRecomp"),
             "marathon-1.0.0-xbox-import": ("sonic-the-hedgehog-2006", "sonicnext-dev/MarathonRecomp"),
@@ -527,6 +554,7 @@ def validate_recipe_semantics(
             "pinyon-0.9.5-prepare": ("forza-horizon", "arcanite24/pinyon-shift"),
             "doax-0.8.0-prepare": ("dead-or-alive-xtreme-beach-volleyball", "NoRain211/doaxvb-re"),
             "ssx-2.0.0-prepare": ("ssx-2012", "AmarilloNL/ssx-recomp"),
+            "ssx-2.0.1-official-prepare": ("ssx-2012", "AmarilloNL/ssx-recomp"),
             "las-0.6.1-prepare": ("the-legend-of-zelda-link-s-awakening", "peiikai/LASRecomp"),
             "gta-stories-0.3.2-prepare": ("grand-theft-auto-liberty-city-stories-vice-city-stories", "batinium/gta-stories-recompiled"),
             "rygt-2026-11-23-prepare": ("gran-turismo-7", "RyGT-Team/RyGT"),
@@ -550,7 +578,7 @@ def validate_recipe_semantics(
                 or entry.get("game_id") != game or entry.get("repository") != repository
                 or entry.get("project_id") != profile["project_id"] or entry.get("tag") != profile["tag"]
                 or entry.get("has_inputs") is not False or entry.get("has_manual_steps") is not True):
-            errors.append(f"{label}: preparation-only index identity or status invalid")
+            errors.append(f"{label}: closed preparation-profile index identity or status invalid")
         return errors
 
     if "preparation_media" in recipe:
@@ -1126,11 +1154,55 @@ def validate_repository(
     catalog_lookup: dict[tuple[str, str], str] | None = None
     excluded_lookup: dict[tuple[str, str], str] = {}
     blocked_recipes: set[tuple[str, str]] = set()
+    approved_replacements: dict[tuple[str, str], dict] = {}
+    retired_files: list[Path] = []
     policy_path = repo_root / "docs" / "official-install-policy.json"
     if index_data.get("execution_policy") == "official_upstream_only":
         try:
             policy = json.loads(policy_path.read_text(encoding="utf-8"))
             blocked_recipes = {(r["project_id"], r["tag"]) for r in policy["blocked_recipes"]}
+            for replacement in policy.get("approved_recipe_replacements", []):
+                required = ("project_id", "tag", "path", "sha256", "build_profile",
+                            "retired_path", "retired_sha256",
+                            "upstream_commit", "audit_reference")
+                if not isinstance(replacement, dict) or any(
+                        not isinstance(replacement.get(field), str) or not replacement[field]
+                        for field in required):
+                    raise ValueError("Incomplete approved recipe replacement")
+                if ("retired_build_profile" not in replacement or
+                        (replacement["retired_build_profile"] is not None and
+                         (not isinstance(replacement["retired_build_profile"], str)
+                          or not replacement["retired_build_profile"]))):
+                    raise ValueError("Retired build profile must be a string or explicit null")
+                key = (replacement["project_id"], replacement["tag"])
+                if key not in blocked_recipes or key in approved_replacements:
+                    raise ValueError(f"Replacement must bind one unique retired identity: {key}")
+                if (not RE_SHA256.fullmatch(replacement["sha256"])
+                        or not RE_SHA256.fullmatch(replacement["retired_sha256"])
+                        or re.fullmatch(r"[0-9a-f]{40}", replacement["upstream_commit"]) is None):
+                    raise ValueError(f"Invalid immutable replacement revision: {key}")
+                expected_retired = "docs/retired-recipes/" + replacement["path"].removeprefix("recipes/")
+                if (not replacement["path"].startswith("recipes/")
+                        or not RE_INDEX_PATH.fullmatch(replacement["path"])
+                        or replacement["retired_path"] != expected_retired
+                        or not (repo_root / expected_retired).resolve().is_relative_to(repo_root.resolve())):
+                    raise ValueError(f"Unsafe or unbound retired recipe path: {key}")
+                if not any((r["project_id"], r["tag"], r["path"]) ==
+                           (*key, replacement["path"]) for r in policy["blocked_recipes"]):
+                    raise ValueError(f"Replacement path differs from retired identity: {key}")
+                archived = repo_root / expected_retired
+                retired_raw, retired_errors = read_utf8_bytes(archived, strict_lf=strict_lf)
+                errors.extend(retired_errors)
+                retired = json.loads(retired_raw.decode("utf-8"))
+                if (hashlib.sha256(retired_raw).hexdigest() != replacement["retired_sha256"]
+                        or retired.get("project_id") != key[0]
+                        or retired.get("tag") != key[1]
+                        or retired.get("build_profile") != replacement["retired_build_profile"]
+                        or replacement["sha256"] == replacement["retired_sha256"]
+                        or replacement["build_profile"] == replacement["retired_build_profile"]):
+                    raise ValueError(f"Retired bytes/profile were not preserved separately: {key}")
+                retired_files.append(archived)
+                approved_replacements[key] = replacement
         except (OSError, ValueError, KeyError, TypeError) as exc:
             errors.append(f"Missing/invalid official installation policy: {exc}")
     if catalog_source:
@@ -1156,7 +1228,7 @@ def validate_repository(
     seen_keys: set[tuple[str, str]] = set()
     seen_paths: set[str] = set()
     indexed_files: set[Path] = set()
-    checked_files: list[Path] = [index_path]
+    checked_files: list[Path] = [index_path, *retired_files]
 
     for idx, entry in enumerate(entries):
         loc = f"index.json:recipes[{idx}]"
@@ -1208,8 +1280,6 @@ def validate_repository(
                 errors.append(f"{loc}: disabled recipe requires disabled_reason")
         elif entry.get("disabled_reason"):
             errors.append(f"{loc}: retired recipe cannot be reactivated without explicit source review")
-        if (project_id, tag) in blocked_recipes and status != "disabled":
-            errors.append(f"{loc}: source-integrity policy requires this recipe to remain disabled")
         if not isinstance(expected_sha, str) or not RE_SHA256.match(expected_sha):
             errors.append(f"{loc}: invalid sha256 '{expected_sha}'")
 
@@ -1269,6 +1339,17 @@ def validate_repository(
         except json.JSONDecodeError as exc:
             errors.append(f"{rel_path}: invalid JSON ({exc})")
             continue
+
+        if (project_id, tag) in blocked_recipes and status != "disabled":
+            replacement = approved_replacements.get((project_id, tag))
+            if (replacement is None
+                    or replacement["path"] != rel_path
+                    or replacement["sha256"] != actual_sha
+                    or replacement["build_profile"] != recipe_doc.get("build_profile")):
+                errors.append(
+                    f"{loc}: source-integrity policy requires this recipe to remain disabled; "
+                    "only the exact reviewed replacement hash and profile may run"
+                )
 
         if sv in VALID_SCHEMA_VERSIONS:
             errors.extend(

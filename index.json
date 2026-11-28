@@ -43,15 +43,13 @@
       "project_id": "ship-of-harkinian-soh",
       "repository": "HarbourMasters/Shipwright",
       "tag": "9.3.1",
-      "schema_version": 3,
+      "schema_version": 9,
       "path": "recipes/the-legend-of-zelda-ocarina-of-time/ship-of-harkinian-soh/9.3.1.json",
-      "sha256": "ecd0ec380b4762b5bae57ad9265d6ef1b67127408a19bff2f0c3b9e384b6f8f3",
-      "status": "disabled",
+      "sha256": "499d162f2256376af6196cfd99147cf4d7d8eeb4e9255889ce6f61d54f244a17",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "disabled_reason": "Auxiliar incorporado soh-torch sem prova suficiente de procedência; usar launcher/importação oficial até validação do componente oficial.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/audits/source-integrity-20261127/native-soh-provenance-gap.json"
+      "min_sdk_version": "1.5.70"
     },
     {
       "game_id": "the-legend-of-zelda-majora-s-mask",
@@ -943,12 +941,13 @@
       "project_id": "sm64plus",
       "repository": "MorsGames/sm64plus",
       "tag": "LauncherMirror",
-      "schema_version": 5,
+      "schema_version": 9,
       "path": "recipes/super-mario-64/sm64plus/LauncherMirror.json",
-      "sha256": "a5e96174858f2ae90563f0f1c1f0980701a5a1a8c8918d0ceae8f9426f973df8",
+      "sha256": "fdfae75dba229c904a786ec3b1ee9b76484ad5cbf1ea6941dc5a1971dd60fc72",
       "status": "experimental",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.70"
     },
     {
       "game_id": "dr-mario-64",
@@ -1054,9 +1053,12 @@
       "schema_version": 5,
       "path": "recipes/vandal-hearts/vandalhearts-pcport/v2.1.0.json",
       "sha256": "769eb9a2d2d313b8c9a529d3ba53c24654b2d2c9bb3b50e658febc344f76cd67",
-      "status": "experimental",
+      "status": "disabled",
       "has_inputs": true,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "disabled_reason": "O NOTICE declara dados do jogo/BIOS incorporados nos binários. A alternativa fonte foi verificada e usa executável PS-X e BIOS próprios; o teste nativo CMake intacto falhou na criação obrigatória de symlinks por falta de privilégio. O procedimento Windows documentado usa cross-compilação Linux/macOS e dependências próprias, ainda sem integração validada no Desktop.",
+      "disabled_at": "2026-11-27",
+      "audit_reference": "docs/validations/official-scope/remaining-official-blockers.json"
     },
     {
       "game_id": "wipeout",
@@ -1102,9 +1104,12 @@
       "schema_version": 5,
       "path": "recipes/driver-2/redriver2/7.4-rc2.json",
       "sha256": "cc78159433c5e42f4b234bdd8b57e0fab51bebb3c8d63acd560351a296c53df2",
-      "status": "experimental",
+      "status": "disabled",
       "has_inputs": false,
-      "has_manual_steps": true
+      "has_manual_steps": true,
+      "disabled_reason": "A compilação oficial copia os mesmos 76 arquivos rastreados data/DRIVER2 ao pacote. Os conversores oficiais geram apenas vídeo e áudio da mídia própria; não fornecem reconstrução dos extras LANG/GFX/GAL/REPLAYS questionados na issue234. Compilar somente o executável não resolve a lacuna de procedência desses dados.",
+      "disabled_at": "2026-11-27",
+      "audit_reference": "docs/validations/official-scope/remaining-official-blockers.json"
     },
     {
       "game_id": "the-legend-of-zelda-the-minish-cap",
@@ -1149,10 +1154,10 @@
       "tag": "ci-07d0c49",
       "schema_version": 5,
       "path": "recipes/crash-team-racing/crash-team-racing-turbocharged/ci-07d0c49.json",
-      "sha256": "943f43da0758ee982b0f4373d25e3f74a5a8718eb066822f41200543e84b9b18",
+      "sha256": "cbd8ccee6b8985d6d386bbc8fcf64dbfc8d23bc9323e13ab7e36848f45f30624",
       "status": "experimental",
-      "has_inputs": false,
-      "has_manual_steps": true
+      "has_inputs": true,
+      "has_manual_steps": false
     },
     {
       "game_id": "the-legend-of-zelda-breath-of-the-wild",
@@ -1199,14 +1204,11 @@
       "tag": "launcher-v0.4.0",
       "schema_version": 9,
       "path": "recipes/god-of-war-2005/god-of-war-native-pc-port-gow-pc-port/launcher-v0.4.0.json",
-      "sha256": "8956a1ea2d1890dd62e1a5c9244bea6dd207d070cfafbfa20208562677641090",
-      "status": "disabled",
+      "sha256": "52a39bd83ebb08ddc132a138d3bf50ad39598634a0654536a8871b984387ce40",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.67",
-      "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-GOW"
+      "min_sdk_version": "1.5.70"
     },
     {
       "game_id": "the-legend-of-zelda-tears-of-the-kingdom",
@@ -1228,14 +1230,11 @@
       "tag": "v0.9.5",
       "schema_version": 9,
       "path": "recipes/forza-horizon/pinyon-shift/v0.9.5.json",
-      "sha256": "2f6249960b261bd44075c18d9f47c0f0f005bf4bd8bc50a08dd1039ad69dd9d0",
-      "status": "disabled",
+      "sha256": "ff9e16931df48b3d071a23462e0b963c7abad99bd0d3da87349ba73602e67f47",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.67",
-      "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-REX"
+      "min_sdk_version": "1.5.70"
     },
     {
       "game_id": "dead-or-alive-xtreme-beach-volleyball",
@@ -1497,14 +1496,11 @@
       "tag": "v0.3.9",
       "schema_version": 9,
       "path": "recipes/forza-horizon/fh1-reimagined/v0.3.9.json",
-      "sha256": "473c7b331cd973b1ba4ddf42d7310cf309a9bdd3d0a92797b5ee2a1eeab951d5",
-      "status": "disabled",
+      "sha256": "c08776b221a9a0df9404f930a59c1193170e6007eee58861a612b11795ed2550",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.67",
-      "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-REX"
+      "min_sdk_version": "1.5.70"
     },
     {
       "game_id": "mega-man-legends-rockman-dash",
@@ -1540,96 +1536,78 @@
       "project_id": "sm",
       "repository": "snesrev/sm",
       "tag": "build-578f90b",
-      "schema_version": 5,
+      "schema_version": 9,
       "path": "recipes/super-metroid/sm/build-578f90b.json",
-      "sha256": "c84193604b8407fe5a13325054497836227f0c51b120fa9bf9fd36af68a86076",
-      "status": "disabled",
+      "sha256": "8db09ea83b13734394f9ff46f744d269d70cbfddd8086709c0c7dce0558c575d",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.67",
-      "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-SM"
+      "min_sdk_version": "1.5.70"
     },
     {
       "game_id": "super-metroid",
       "project_id": "sm-rewrite",
       "repository": "testyourmine/sm_rewrite",
       "tag": "build-5237873",
-      "schema_version": 5,
+      "schema_version": 9,
       "path": "recipes/super-metroid/sm-rewrite/build-5237873.json",
-      "sha256": "8faa4a7223be77c1f393d4e21a8e2dd7f00cf0cef8619f61722b5bf47b94134e",
-      "status": "disabled",
+      "sha256": "024aafa8c6269c19ca8704f3475f1d3918bbe75c5ee78a17ffd0a3349dec508f",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.67",
-      "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-SM"
+      "min_sdk_version": "1.5.70"
     },
     {
       "game_id": "mario-kart-double-dash",
       "project_id": "mariokartdd-recomp",
       "repository": "ethannicholas/mariokartdd-recomp",
       "tag": "build-bd36eb9",
-      "schema_version": 5,
+      "schema_version": 9,
       "path": "recipes/mario-kart-double-dash/mariokartdd-recomp/build-bd36eb9.json",
-      "sha256": "05f933262cb14b00512e3cf9980940d3a31d70b1043239b88a74dcdfcf45d777",
-      "status": "disabled",
+      "sha256": "0a6cac02a5c9baebbd4ac086b1d20ef4f82165197dcac9b10c4ebba566cc0994",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.67",
-      "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MKDDCPP"
+      "min_sdk_version": "1.5.70"
     },
     {
       "game_id": "super-mario-64",
       "project_id": "sm64ex",
       "repository": "sm64pc/sm64ex",
       "tag": "build-d7ca2c0",
-      "schema_version": 5,
+      "schema_version": 9,
       "path": "recipes/super-mario-64/sm64ex/build-d7ca2c0.json",
-      "sha256": "2a4306fa23d76e3a1720de7eba881b0d6d905d96b9cff039545ef54fe307ff53",
-      "status": "disabled",
+      "sha256": "70420921a4ce7fd5d5cbfe5c5d37c5f0c09691b94211835a3b0a5cf3a36f4ec5",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.67",
-      "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MARIO"
+      "min_sdk_version": "1.5.70"
     },
     {
       "game_id": "super-mario-64",
       "project_id": "render96ex",
       "repository": "Render96/Render96ex",
       "tag": "build-48da5c4",
-      "schema_version": 5,
+      "schema_version": 9,
       "path": "recipes/super-mario-64/render96ex/build-48da5c4.json",
-      "sha256": "05363a9cd808361ad2ce9b1956597503b810e8963c8534a5d3cbd54a0c2681e5",
-      "status": "disabled",
+      "sha256": "0cdec0870d9e041e8ae3badf54ffd4f9344f703035761667fb3aedb8279d7c68",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.67",
-      "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MARIO"
+      "min_sdk_version": "1.5.70"
     },
     {
       "game_id": "super-mario-64",
       "project_id": "sm64rt",
       "repository": "DarioSamo/sm64rt",
       "tag": "build-20e618b",
-      "schema_version": 5,
+      "schema_version": 9,
       "path": "recipes/super-mario-64/sm64rt/build-20e618b.json",
-      "sha256": "4e90ddff3f5cc140ba0e6d843dcbf9146cc39c558597090b9e90d79df57cf267",
-      "status": "disabled",
+      "sha256": "1f99eaabe5ca438fb8b4c98694eabf291614b5f1eed88c0b6b64108964f28f8f",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.67",
-      "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MARIO"
+      "min_sdk_version": "1.5.70"
     },
     {
       "game_id": "burnout-3-takedown",
@@ -1652,32 +1630,26 @@
       "project_id": "gt5-recomp",
       "repository": "MormonFTP-hub/gt5-recomp",
       "tag": "build-64ca169",
-      "schema_version": 5,
+      "schema_version": 9,
       "path": "recipes/gran-turismo-5/gt5-recomp/build-64ca169.json",
-      "sha256": "cb0f81d98c3fb07dae5f85c0db0665c02f4add322192f4c21b579b2ef78418f0",
-      "status": "disabled",
+      "sha256": "0faba67a8bb85fc52f8b2216c86c19b52563bf7f9586935234a46b30d8a11b64",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.67",
-      "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-GT5"
+      "min_sdk_version": "1.5.70"
     },
     {
       "game_id": "god-of-war-2005",
       "project_id": "god-of-war-recomp",
       "repository": "KIexster/god-of-war-recomp",
       "tag": "build-d1d11ec",
-      "schema_version": 5,
+      "schema_version": 9,
       "path": "recipes/god-of-war-2005/god-of-war-recomp/build-d1d11ec.json",
-      "sha256": "58009010a9063916bf0ffad66fd7369fc030c46e4867497c668ef4a54117226b",
-      "status": "disabled",
+      "sha256": "7cd086059a43268479256e9afa21adba4ebe41ab582aab6a806f912a1bf0a587",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.67",
-      "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-GOW"
+      "min_sdk_version": "1.5.70"
     },
     {
       "game_id": "mario-strikers-charged",
@@ -1704,9 +1676,9 @@
       "has_inputs": false,
       "has_manual_steps": true,
       "min_sdk_version": "1.5.67",
-      "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "disabled_reason": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão.",
       "disabled_at": "2026-11-27",
-      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-STRIKERS"
+      "audit_reference": "docs/validations/official-scope/remaining-official-blockers.json"
     },
     {
       "game_id": "mario-kart-double-dash",
@@ -1849,6 +1821,19 @@
       "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
       "disabled_at": "2026-11-27",
       "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MKW"
+    },
+    {
+      "game_id": "ssx-2012",
+      "project_id": "ssx-recomp",
+      "repository": "AmarilloNL/ssx-recomp",
+      "tag": "v2.0.1",
+      "schema_version": 9,
+      "path": "recipes/ssx-2012/ssx-recomp/v2.0.1.json",
+      "sha256": "0a6a532a3f41b124922b17eda1fe2c9f6768fe4a0cce2499e4b7272884c0703a",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.70"
     }
   ],
   "execution_policy": "official_upstream_only"

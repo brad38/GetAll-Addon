@@ -1,0 +1,72 @@
+{
+  "msys2": {
+    "release": "2026-11-20",
+    "url": "https://github.com/msys2/msys2-installer/releases/download/2026-11-20/msys2-base-x86_64-20261120.sfx.exe",
+    "size": 42938808,
+    "sha256": "4f6dadfdb2c9be5fc1938e30b635cb72bb4344c35e8b6fd225bc3250fcab5897"
+  },
+  "launcher_asset": {
+    "url": "https://github.com/MorsGames/sm64plus/releases/download/LauncherMirror/SM64Plus.zip",
+    "size": 6617082,
+    "sha256": "f3f930a822c80694fbb7faf0c82cea2b14290b83bad2e9823ff2f2433e46fdb7",
+    "files": [
+      {
+        "path": "build.sh",
+        "size": 1471,
+        "sha256": "46683247c8d1d4bebcaa69d88924214959f9175ec93d8405dca3cd0ce76d5cd4"
+      },
+      {
+        "path": "data.win",
+        "size": 2333516,
+        "sha256": "ac7501e54689be19839910da7a2b96b06533e0218ae8ae8eaab5543a5bfe9bc1"
+      },
+      {
+        "path": "gamecontrollerdb.txt",
+        "size": 589595,
+        "sha256": "99dec642552828508700fd6a2b6de6a7bb5d8ab879731344b75465a2b650b7b9"
+      },
+      {
+        "path": "lib64Plus.dll",
+        "size": 246018,
+        "sha256": "8482c44e910aafe6a2a6863dc8967c21776476aaefe6d94cef7b0d6ec3c6149c"
+      },
+      {
+        "path": "lib64Plus_arm64.so",
+        "size": 8184,
+        "sha256": "dfe2702f791f40afd72771fb173c0518c26de93f31766551a476e39d73cf8b37"
+      },
+      {
+        "path": "lib64Plus_x64.so",
+        "size": 16112,
+        "sha256": "d3442a75dfd5bac54c3dba00093f490921f153d3b7c644810694d0bb1827e50b"
+      },
+      {
+        "path": "options.ini",
+        "size": 143,
+        "sha256": "07862956b0e2736c073f449f0221848a667f852a364e53f3307c9b97a51b960f"
+      },
+      {
+        "path": "rebuild.sh",
+        "size": 578,
+        "sha256": "aca9badf63ccdb04d7440b1e83d2bb63c980ecacfc69551afbf4f7bd0f1eef7a"
+      },
+      {
+        "path": "rebuild_clean.sh",
+        "size": 703,
+        "sha256": "6674f11d966f36072ab17a99e108069c1ad52f541bb12d6f8f700f3d2ba7a361"
+      },
+      {
+        "path": "SDL2.dll",
+        "size": 2403231,
+        "sha256": "1c7498cde9a97322718bedbb790f42783b5dadfb3dcee8bf8b1aa2199c6a3d28"
+      },
+      {
+        "path": "Super Mario 64 Plus.exe",
+        "size": 8637440,
+        "sha256": "2829b1b36640fc93a8eb177b9c29e13b88b19821c707889a046e6a2fb12dac97"
+      }
+    ],
+    "tree_sha256": "8ccdea4cdd10cd6fae1bc58526fb37628c5c599adc58a1c9637bd50a4cdc6012"
+  },
+  "game_commit": "44fccee2fc4bd4768ae4eff1e5c47b21abe5d85d"
+}

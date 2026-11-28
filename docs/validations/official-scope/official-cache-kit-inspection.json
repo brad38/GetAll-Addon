@@ -1,0 +1,101 @@
+{
+  "PinyonShift-Launcher.zip": {
+    "bytes": 69162260,
+    "sha256": "6ecf1b85f22f5c31284bc22e76c79f5c08d397f9aa36cb58a8fd70bff1316af3",
+    "files": 2,
+    "sample": [
+      "PinyonShiftLauncher.exe",
+      "pinyon-shift-source.zip"
+    ],
+    "important": []
+  },
+  "pinyon-850518c.zip": {
+    "bytes": 5327399,
+    "sha256": "31f634f69742196acb30d9af8be39cd84bdb225d6b1c060f06914c170277b51b",
+    "files": 1132,
+    "sample": [
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/",
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/.gitattributes",
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/.github/",
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/.github/FUNDING.yml",
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/.github/ISSUE_TEMPLATE/",
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/.github/ISSUE_TEMPLATE/bug.yml",
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/.github/ISSUE_TEMPLATE/crash.yml",
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/.github/PULL_REQUEST_TEMPLATE.md",
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/.github/launcher-ready.png",
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/.github/launcher-settings.png",
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/.github/pinyon-shift-banner.png",
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/.github/pinyon-shift-logo.png"
+    ],
+    "important": [
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/config/release-toolchain.json",
+      "pinyon-shift-850518ce00c66d65557bcbf190a62d2e2a6bb0e3/config/supported-dumps.json"
+    ]
+  },
+  "fh1_candidates": [
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\forza-svod\\05f3d8f5b259453f82975a56c3005200\\games\\Forza Horizon - fh1-reimagined v0.3.9",
+      "manifest_type": "dict",
+      "keys": [
+        "build_packages",
+        "files",
+        "python",
+        "schema",
+        "source_commit",
+        "version",
+        "workflow_run"
+      ],
+      "files": 1079,
+      "exe": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\forza-svod\\05f3d8f5b259453f82975a56c3005200\\games\\Forza Horizon - fh1-reimagined v0.3.9\\launcher\\forza-launcher.exe",
+      "exe_exists": false
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\forza-svod\\26320bc590d14f0ebd75bca88ea0920e\\games\\Forza Horizon - fh1-reimagined v0.3.9",
+      "manifest_type": "dict",
+      "keys": [
+        "build_packages",
+        "files",
+        "python",
+        "schema",
+        "source_commit",
+        "version",
+        "workflow_run"
+      ],
+      "files": 1079,
+      "exe": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\forza-svod\\26320bc590d14f0ebd75bca88ea0920e\\games\\Forza Horizon - fh1-reimagined v0.3.9\\launcher\\forza-launcher.exe",
+      "exe_exists": false
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\forza-svod\\2e579bd8346a472aa2ae8d2026b9e5a4\\games\\Forza Horizon - fh1-reimagined v0.3.9",
+      "manifest_type": "dict",
+      "keys": [
+        "build_packages",
+        "files",
+        "python",
+        "schema",
+        "source_commit",
+        "version",
+        "workflow_run"
+      ],
+      "files": 1079,
+      "exe": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\forza-svod\\2e579bd8346a472aa2ae8d2026b9e5a4\\games\\Forza Horizon - fh1-reimagined v0.3.9\\launcher\\forza-launcher.exe",
+      "exe_exists": false
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\forza-svod\\e661dbd324424104a69b3ca47d6ffd8a\\games\\Forza Horizon - fh1-reimagined v0.3.9",
+      "manifest_type": "dict",
+      "keys": [
+        "build_packages",
+        "files",
+        "python",
+        "schema",
+        "source_commit",
+        "version",
+        "workflow_run"
+      ],
+      "files": 1079,
+      "exe": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\forza-svod\\e661dbd324424104a69b3ca47d6ffd8a\\games\\Forza Horizon - fh1-reimagined v0.3.9\\launcher\\forza-launcher.exe",
+      "exe_exists": false
+    }
+  ]
+}

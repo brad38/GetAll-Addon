@@ -1,0 +1,38 @@
+[
+    {
+        "test":  "suite",
+        "exit":  0,
+        "log":  "..\\scope-desktop-suite-latest.log",
+        "passes":  2278
+    },
+    {
+        "test":  "gt5-official-kit",
+        "exit":  0,
+        "log":  "..\\scope-desktop-gt5-official-kit-latest.log",
+        "passes":  8
+    },
+    {
+        "test":  "kiexster-official-kit",
+        "exit":  0,
+        "log":  "..\\scope-desktop-kiexster-official-kit-latest.log",
+        "passes":  8
+    },
+    {
+        "test":  "kiexster-official-extractor",
+        "exit":  0,
+        "log":  "..\\scope-desktop-kiexster-official-extractor-latest.log",
+        "passes":  3
+    },
+    {
+        "test":  "msvc-official-installed",
+        "exit":  0,
+        "log":  "..\\scope-desktop-msvc-official-installed-latest.log",
+        "passes":  5
+    },
+    {
+        "test":  "source-parser",
+        "exit":  0,
+        "log":  "..\\scope-desktop-source-parser-latest.log",
+        "passes":  1902
+    }
+]

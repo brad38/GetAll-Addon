@@ -1,0 +1,867 @@
+{
+  "projects": [
+    {
+      "project": "ssx",
+      "repository": "AmarilloNL/ssx-recomp",
+      "tag": "v2.0.1",
+      "commit": "bdef7c73d774b200ee97d4722c0c2c62ee58edf8",
+      "tree_truncated": false,
+      "candidate_sources": [
+        "installer/SSXInstaller.cs",
+        "installer/build-installer.ps1",
+        "installer/make-icon.ps1",
+        "recomplauncher.json",
+        "scripts/build-regpu-package.ps1",
+        "scripts/build-regpu.ps1",
+        "scripts/build-sdk-package.ps1",
+        "scripts/build-ssx.ps1"
+      ],
+      "sources": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/AmarilloNL/ssx-recomp/bdef7c73d774b200ee97d4722c0c2c62ee58edf8/README.md",
+          "sha256": "20e8a0c9be09b2c2756bdf1d4101a9d3ceaec76ea078afaadd5bc82b52b3c020",
+          "bytes": 19147,
+          "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\ssx\\README.md",
+          "excerpts": [
+            {
+              "line": 101,
+              "text": "\n1. **Download** `ssx-linux-installer.sh` from the [latest release](../../releases/latest).\n2. **Run** `bash ssx-linux-installer.sh --iso ~/Games/SSX.iso` in a terminal. Add\n   `--title-update <file>` for [the title update](#title-update).\n3. **Install:** it installs the missing build tools (it asks for your password) and builds the game.\n4. **Play:** when it says **DONE**, start **SSX** from your app menu."
+            },
+            {
+              "line": 115,
+              "text": "| **Internet** | for the first build and for updates | for the first build and for updates |\n| **Updating** | **Check for updates** in `ssx-recomp.exe` | run the script again |\n| **Saves, DLC & music** | `source\\dist\\SSX\\userdata` in the SSX folder | `~/.local/share/ssx` |\n| **Build log** | `source\\build-ssx.log` in the SSX folder | `~/SSX-PC/source/build-ssx-linux.log` |\n\n> [!IMPORTANT]"
+            },
+            {
+              "line": 130,
+              "text": "   Windows asks for permission for LLVM and Visual Studio.\n4. **Downloads** the prebuilt ReXGlue SDK and ReGPU renderer. Neither contains game code.\n5. **Builds** the game into `source\\dist\\SSX`.\n\nThe source is in [`installer/SSXInstaller.cs`](installer/SSXInstaller.cs). Playing never goes\nonline, and a rebuild without new build tools works offline."
+            },
+            {
+              "line": 152,
+              "text": "<br>\n\n- **Folder:** the port goes to `~/SSX-PC`; `--folder` picks another place.\n- **Your own music:** needs `ffmpeg`.\n- **Not on Linux yet:** the gamer picture, and building with RecompLauncher.\n- **Standard renderer:** 1× only."
+            },
+            {
+              "line": 364,
+              "text": "\n```\nssx-recomp.exe          --game <ISO or extracted folder> [--folder <folder>] [--title-update <file>] [--dlc <file>]...\nssx-linux-installer.sh  --iso <ISO> --folder <folder> [--title-update <file>] [--no-menu]\n```\n"
+            },
+            {
+              "line": 365,
+              "text": "```\nssx-recomp.exe          --game <ISO or extracted folder> [--folder <folder>] [--title-update <file>] [--dlc <file>]...\nssx-linux-installer.sh  --iso <ISO> --folder <folder> [--title-update <file>] [--no-menu]\n```\n\nOn Windows `--game` (or `--iso`) takes the disc image or the extracted disc's folder, every option"
+            },
+            {
+              "line": 368,
+              "text": "```\n\nOn Windows `--game` (or `--iso`) takes the disc image or the extracted disc's folder, every option\nalso takes its value after `=` (`--dlc=<file>`), and `--folder` defaults to the folder\n`ssx-recomp.exe` is in. `--prepare` prints only `progress <0-1> <step>` lines and, when it fails,\nthe reason as its last line (it's [RecompLauncher's](recomplauncher.json) setup step). The exit code"
+            },
+            {
+              "line": 369,
+              "text": "\nOn Windows `--game` (or `--iso`) takes the disc image or the extracted disc's folder, every option\nalso takes its value after `=` (`--dlc=<file>`), and `--folder` defaults to the folder\n`ssx-recomp.exe` is in. `--prepare` prints only `progress <0-1> <step>` lines and, when it fails,\nthe reason as its last line (it's [RecompLauncher's](recomplauncher.json) setup step). The exit code\nsays what happened:"
+            },
+            {
+              "line": 370,
+              "text": "On Windows `--game` (or `--iso`) takes the disc image or the extracted disc's folder, every option\nalso takes its value after `=` (`--dlc=<file>`), and `--folder` defaults to the folder\n`ssx-recomp.exe` is in. `--prepare` prints only `progress <0-1> <step>` lines and, when it fails,\nthe reason as its last line (it's [RecompLauncher's](recomplauncher.json) setup step). The exit code\nsays what happened:\n"
+            },
+            {
+              "line": 385,
+              "text": "| 50 | the build failed (the details are in `source\\build-ssx.log`) |\n\nThe game itself (`ssx.exe`) takes `--game <ISO or folder>` too, for that start only. It exits with\n10 when it has no copy of the game to start, 11 when it's built for the title update but the\nupdate's files are missing, and ReXGlue's 1 when it couldn't start or read the disc.\n"
+            },
+            {
+              "line": 389,
+              "text": "update's files are missing, and ReXGlue's 1 when it couldn't start or read the disc.\n\nThe game ends up in `<folder>/source/dist/SSX/ssx.exe` (Windows) or\n`<folder>/source/dist/SSX/ssx` (Linux), set up to read the ISO it was built from; a first build takes\n10–30 minutes, longer when build tools have to be installed. `--no-menu` leaves the player's own SSX\napp-menu entry alone (Linux; accepted and ignored on Windows, which makes no shortcut here). Without"
+            },
+            {
+              "line": 390,
+              "text": "\nThe game ends up in `<folder>/source/dist/SSX/ssx.exe` (Windows) or\n`<folder>/source/dist/SSX/ssx` (Linux), set up to read the ISO it was built from; a first build takes\n10–30 minutes, longer when build tools have to be installed. `--no-menu` leaves the player's own SSX\napp-menu entry alone (Linux; accepted and ignored on Windows, which makes no shortcut here). Without\na terminal, the Linux installer installs missing build tools through the desktop's password prompt"
+            }
+          ]
+        },
+        {
+          "path": "installer/SSXInstaller.cs",
+          "url": "https://raw.githubusercontent.com/AmarilloNL/ssx-recomp/bdef7c73d774b200ee97d4722c0c2c62ee58edf8/installer/SSXInstaller.cs",
+          "sha256": "cddfc265a98289581ca273a42325f03b86e084705e2de8e7559ed05c4be8476a",
+          "bytes": 114779,
+          "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\ssx\\installer\\SSXInstaller.cs",
+          "excerpts": [
+            {
+              "line": 75,
+              "text": "  static int Main(string[] args) {\n    Install.RemoveReplacedExe();\n    if (args.Length > 0 && Array.IndexOf(HeadlessOptions, args[0].Split('=')[0]) >= 0) return Headless(args);\n    string folder = Install.Folder;\n    // --rebuild: started by the Update button after replacing this exe; rebuilds with the ISO the game uses.\n    bool rebuild = args.Length > 0 && args[0] == \"--rebuild\";"
+            },
+            {
+              "line": 94,
+              "text": "  }\n\n  static readonly string[] HeadlessOptions = {\n    \"--game\", \"--iso\", \"--folder\", \"--title-update\", \"--dlc\", \"--portable\", \"--no-menu\", \"--prepare\", \"--accept-vs-license\" };\n\n  const string Usage = \"Usage: ssx-recomp.exe [--prepare] --game <your SSX .iso, or its extracted folder> \" +"
+            },
+            {
+              "line": 95,
+              "text": "\n  static readonly string[] HeadlessOptions = {\n    \"--game\", \"--iso\", \"--folder\", \"--title-update\", \"--dlc\", \"--portable\", \"--no-menu\", \"--prepare\", \"--accept-vs-license\" };\n\n  const string Usage = \"Usage: ssx-recomp.exe [--prepare] --game <your SSX .iso, or its extracted folder> \" +\n                       \"[--folder <folder>] [--title-update <file>] [--dlc <file>]...\";"
+            },
+            {
+              "line": 97,
+              "text": "    \"--game\", \"--iso\", \"--folder\", \"--title-update\", \"--dlc\", \"--portable\", \"--no-menu\", \"--prepare\", \"--accept-vs-license\" };\n\n  const string Usage = \"Usage: ssx-recomp.exe [--prepare] --game <your SSX .iso, or its extracted folder> \" +\n                       \"[--folder <folder>] [--title-update <file>] [--dlc <file>]...\";\n\n  // Without a window, for a launcher: builds as the window does (into <folder>, by default the one"
+            },
+            {
+              "line": 98,
+              "text": "\n  const string Usage = \"Usage: ssx-recomp.exe [--prepare] --game <your SSX .iso, or its extracted folder> \" +\n                       \"[--folder <folder>] [--title-update <file>] [--dlc <file>]...\";\n\n  // Without a window, for a launcher: builds as the window does (into <folder>, by default the one\n  // ssx-recomp.exe is in; the game ends up in <folder>\\source\\dist\\SSX\\ssx.exe; no desktop shortcut),"
+            },
+            {
+              "line": 101,
+              "text": "\n  // Without a window, for a launcher: builds as the window does (into <folder>, by default the one\n  // ssx-recomp.exe is in; the game ends up in <folder>\\source\\dist\\SSX\\ssx.exe; no desktop shortcut),\n  // the build's output on stdout. Options take their value after a space or after = (--dlc=<file>).\n  // --game (or --iso): the disc image, or the extracted disc's folder or its default.xex.\n  // Exit codes: 0 the game is built, 2 wrong options, 1 something unexpected, else the builder's"
+            },
+            {
+              "line": 103,
+              "text": "  // ssx-recomp.exe is in; the game ends up in <folder>\\source\\dist\\SSX\\ssx.exe; no desktop shortcut),\n  // the build's output on stdout. Options take their value after a space or after = (--dlc=<file>).\n  // --game (or --iso): the disc image, or the extracted disc's folder or its default.xex.\n  // Exit codes: 0 the game is built, 2 wrong options, 1 something unexpected, else the builder's\n  // (scripts\\build-ssx.ps1): 10-13 the copy of the game, 20-22 the title update, 30-31 the build\n  // tools, 40 a download, 50 the build, 60 Smart App Control blocked a build tool."
+            },
+            {
+              "line": 107,
+              "text": "  // (scripts\\build-ssx.ps1): 10-13 the copy of the game, 20-22 the title update, 30-31 the build\n  // tools, 40 a download, 50 the build, 60 Smart App Control blocked a build tool.\n  // --prepare (RecompLauncher's setup step, recomplauncher.json): prints only \"progress <0-1> <step>\"\n  // lines (the build's output still goes to build-ssx.log) and, when it fails, the reason as its\n  // last line; a --title-update or --dlc file that isn't there is skipped: the player didn't pick it.\n  // --accept-vs-license: the setup screen's required tick for the Visual Studio Build Tools' license"
+            },
+            {
+              "line": 112,
+              "text": "  // --accept-vs-license: the setup screen's required tick for the Visual Studio Build Tools' license\n  // (RecompLauncher enforces it); accepted, nothing more to do here.\n  static int Headless(string[] args) {\n    string iso = null, titleUpdate = null;\n    string folder = Install.Folder;\n    var dlc = new List<string>();"
+            },
+            {
+              "line": 123,
+              "text": "        value = name.Substring(eq + 1);\n        name = name.Substring(0, eq);\n      } else if (Array.IndexOf(new[] { \"--game\", \"--iso\", \"--folder\", \"--title-update\", \"--dlc\" }, name) >= 0) {\n        if (i + 1 >= args.Length) { Console.Error.WriteLine(Usage); return 2; }\n        value = args[++i];\n      }"
+            },
+            {
+              "line": 127,
+              "text": "        value = args[++i];\n      }\n      if (name == \"--iso\" || name == \"--game\") iso = value;\n      else if (name == \"--folder\") folder = value;\n      else if (name == \"--title-update\") titleUpdate = value;\n      else if (name == \"--dlc\") dlc.Add(value);"
+            },
+            {
+              "line": 128,
+              "text": "      }\n      if (name == \"--iso\" || name == \"--game\") iso = value;\n      else if (name == \"--folder\") folder = value;\n      else if (name == \"--title-update\") titleUpdate = value;\n      else if (name == \"--dlc\") dlc.Add(value);\n      else if (name == \"--prepare\" && value == null) prepare = true;"
+            },
+            {
+              "line": 131,
+              "text": "      else if (name == \"--title-update\") titleUpdate = value;\n      else if (name == \"--dlc\") dlc.Add(value);\n      else if (name == \"--prepare\" && value == null) prepare = true;\n      else if (name == \"--accept-vs-license\" && value == null) { }\n      else if (name == \"--portable\") { }  // always portable now; kept so older command lines still work\n      else if (name == \"--no-menu\") { }  // (the Linux installer's option: one launcher command line for both)"
+            },
+            {
+              "line": 133,
+              "text": "      else if (name == \"--prepare\" && value == null) prepare = true;\n      else if (name == \"--accept-vs-license\" && value == null) { }\n      else if (name == \"--portable\") { }  // always portable now; kept so older command lines still work\n      else if (name == \"--no-menu\") { }  // (the Linux installer's option: one launcher command line for both)\n      else { Console.Error.WriteLine(Usage); return 2; }\n    }"
+            },
+            {
+              "line": 134,
+              "text": "      else if (name == \"--accept-vs-license\" && value == null) { }\n      else if (name == \"--portable\") { }  // always portable now; kept so older command lines still work\n      else if (name == \"--no-menu\") { }  // (the Linux installer's option: one launcher command line for both)\n      else { Console.Error.WriteLine(Usage); return 2; }\n    }\n    if (iso == null) { Console.Error.WriteLine(Usage); return 2; }"
+            },
+            {
+              "line": 169,
+              "text": "}\n\n// --prepare's output: the build's steps and its ninja counts as RecompLauncher progress lines\n// (\"progress 0.42 Recompile the Xbox 360 code\"), the same progress the setup window shows.\nclass PrepareProgress {\n  int stage;"
+            },
+            {
+              "line": 209,
+              "text": "\n// The SSX folder is the one ssx-recomp.exe is in: the build goes to source\\ there, the game is\n// source\\dist\\SSX\\ssx.exe, and it always runs portable (a portable.txt next to ssx.exe), so its\n// saves, DLC, music, shader cache and settings stay in this folder too. Nothing is written\n// anywhere else, and the folder can be moved or copied as a whole.\nstatic class Install {"
+            },
+            {
+              "line": 422,
+              "text": "  }\n\n  // One command-line argument, quoted the way the C runtime splits them again.\n  static string Quote(string arg) {\n    if (arg.Length > 0 && arg.IndexOfAny(new[] { ' ', '\\t', '\"' }) < 0) return arg;\n    var s = new StringBuilder(\"\\\"\");"
+            }
+          ]
+        },
+        {
+          "path": "recomplauncher.json",
+          "url": "https://raw.githubusercontent.com/AmarilloNL/ssx-recomp/bdef7c73d774b200ee97d4722c0c2c62ee58edf8/recomplauncher.json",
+          "sha256": "d2479c5bd88de8021d4b7ae50c1365f355c0308faa887a118136916898129660",
+          "bytes": 11716,
+          "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\ssx\\recomplauncher.json",
+          "excerpts": [
+            {
+              "line": 51,
+              "text": "    \"program\": [\"ssx-recomp.exe\"],\n    \"args\": [\n      \"--prepare\", \"--game\", \"{input:game}\",\n      \"--title-update={input:titleupdate}\",\n      \"--dlc={input:dlc-mounteddie}\", \"--dlc={input:dlc-presell}\", \"--dlc={input:dlc-japan}\",\n      \"--dlc={input:dlc-eddie}\", \"--dlc={input:dlc-macboard}\""
+            },
+            {
+              "line": 68,
+              "text": "      }\n    ],\n    \"done\": [\"{install}/source/dist/SSX/ssx.exe\"]\n  },\n  \"saves\": [\n    \"{install}/source/dist/SSX/userdata/B13EBABEBABEBABE/4541096D/00000001\","
+            },
+            {
+              "line": 71,
+              "text": "  },\n  \"saves\": [\n    \"{install}/source/dist/SSX/userdata/B13EBABEBABEBABE/4541096D/00000001\",\n    \"{install}/source/dist/SSX/userdata/tuning\",\n    \"{install}/source/dist/SSX/userdata/achievements/4541096D.toml\",\n    \"{install}/source/dist/SSX/ssx.toml\""
+            },
+            {
+              "line": 72,
+              "text": "  \"saves\": [\n    \"{install}/source/dist/SSX/userdata/B13EBABEBABEBABE/4541096D/00000001\",\n    \"{install}/source/dist/SSX/userdata/tuning\",\n    \"{install}/source/dist/SSX/userdata/achievements/4541096D.toml\",\n    \"{install}/source/dist/SSX/ssx.toml\"\n  ],"
+            },
+            {
+              "line": 73,
+              "text": "    \"{install}/source/dist/SSX/userdata/B13EBABEBABEBABE/4541096D/00000001\",\n    \"{install}/source/dist/SSX/userdata/tuning\",\n    \"{install}/source/dist/SSX/userdata/achievements/4541096D.toml\",\n    \"{install}/source/dist/SSX/ssx.toml\"\n  ],\n  \"start\": {"
+            },
+            {
+              "line": 74,
+              "text": "    \"{install}/source/dist/SSX/userdata/tuning\",\n    \"{install}/source/dist/SSX/userdata/achievements/4541096D.toml\",\n    \"{install}/source/dist/SSX/ssx.toml\"\n  ],\n  \"start\": {\n    \"program\": [\"ssx-recomp.exe\"],"
+            },
+            {
+              "line": 84,
+              "text": "      \"id\": \"main\",\n      \"format\": \"toml\",\n      \"file\": [{ \"path\": \"{install}/source/dist/SSX/ssx.toml\" }],\n      \"game_path\": \"game_data_root\"\n    }\n  ],"
+            },
+            {
+              "line": 89,
+              "text": "  ],\n  \"folders\": {\n    \"logs\": [{ \"path\": \"{install}/source/dist/SSX/logs\" }],\n    \"data\": [{ \"path\": \"{install}/source/dist/SSX/userdata\" }],\n    \"game\": [{ \"path\": \"{install}/source/dist/SSX\" }]\n  },"
+            },
+            {
+              "line": 90,
+              "text": "  \"folders\": {\n    \"logs\": [{ \"path\": \"{install}/source/dist/SSX/logs\" }],\n    \"data\": [{ \"path\": \"{install}/source/dist/SSX/userdata\" }],\n    \"game\": [{ \"path\": \"{install}/source/dist/SSX\" }]\n  },\n  \"exit_codes\": {"
+            },
+            {
+              "line": 91,
+              "text": "    \"logs\": [{ \"path\": \"{install}/source/dist/SSX/logs\" }],\n    \"data\": [{ \"path\": \"{install}/source/dist/SSX/userdata\" }],\n    \"game\": [{ \"path\": \"{install}/source/dist/SSX\" }]\n  },\n  \"exit_codes\": {\n    \"1\": \"SSX couldn't start or couldn't read a file from your copy of the game. If it says nothing more, check your copy is complete (the setup checks it against the verified disc) and set it up again.\","
+            }
+          ]
+        },
+        {
+          "path": "scripts/build-ssx.ps1",
+          "url": "https://raw.githubusercontent.com/AmarilloNL/ssx-recomp/bdef7c73d774b200ee97d4722c0c2c62ee58edf8/scripts/build-ssx.ps1",
+          "sha256": "216cb550ffb69bb55f047f979954da409ad720557799ca634daff4dfe86cca89",
+          "bytes": 35222,
+          "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\ssx\\scripts\\build-ssx.ps1",
+          "excerpts": [
+            {
+              "line": 20,
+              "text": "# the ERROR line): 10-13 the copy of the game, 20-22 the title update, 30-31 the build tools,\n# 40 a download, 50 the build itself.\nparam([Alias('Game')][string]$Iso, [string]$TitleUpdate, [switch]$NoTitleUpdate, [switch]$NoPause, [switch]$NoReGpu)\n\n$ErrorActionPreference = 'Continue'\n$root = (Resolve-Path \"$PSScriptRoot\\..\").Path"
+            },
+            {
+              "line": 180,
+              "text": "# An Xbox 360 STFS package holding default.xexp (a patch for default.xex) and patch0.big (data).\n# With default.xexp next to default.xex the game is recompiled from the patched executable\n# (CMakeLists.txt), and package.ps1 puts both files in dist\\SSX\\update for the game to load.\n# Minimal STFS reader, plain PowerShell like the disc reader above. Read-only packages store a\n# file's blocks one after another; a hash table block follows every 170 data blocks.\nfunction Get-StfsBlockOffset([long]$HeaderSize, [int]$Shift, [long]$Index) {"
+            },
+            {
+              "line": 522,
+              "text": "Step \"Recompiling SSX and building the PC version (this takes a while)\"\n& \"$root\\scripts\\package.ps1\" -Preset ssx-player -Clang $clang\nif (-not (Test-Path \"$root\\dist\\SSX\\ssx.exe\")) { Fail \"The build failed. The details are in build-ssx.log.\" 50 }\nif ($nonAscii) { Set-Utf8CodePage \"$root\\dist\\SSX\\ssx.exe\" }  # see Set-Utf8CodePage\n# The ReGPU renderer next to ssx.exe (the game's default). Without it the game uses the standard\n# renderer, so a failed download isn't fatal. Kept in tools\\regpu like the SDK, so a rebuild"
+            },
+            {
+              "line": 523,
+              "text": "& \"$root\\scripts\\package.ps1\" -Preset ssx-player -Clang $clang\nif (-not (Test-Path \"$root\\dist\\SSX\\ssx.exe\")) { Fail \"The build failed. The details are in build-ssx.log.\" 50 }\nif ($nonAscii) { Set-Utf8CodePage \"$root\\dist\\SSX\\ssx.exe\" }  # see Set-Utf8CodePage\n# The ReGPU renderer next to ssx.exe (the game's default). Without it the game uses the standard\n# renderer, so a failed download isn't fatal. Kept in tools\\regpu like the SDK, so a rebuild\n# downloads it only when the package version changes."
+            },
+            {
+              "line": 539,
+              "text": "            Set-Content \"$regpu\\.version\" $ReGpuPackage\n        }\n        Copy-Item \"$regpu\\*\" \"$root\\dist\\SSX\" -Recurse -Force -Exclude .version\n        Write-Host \"ReGPU renderer installed.\"\n    } catch {\n        Write-Host \"Couldn't download the ReGPU renderer ($($_.Exception.Message)); the game will use the standard renderer.\" -ForegroundColor Yellow"
+            },
+            {
+              "line": 547,
+              "text": "\n# Point the game at the ISO so the first start needs no questions.\n$toml = \"$root\\dist\\SSX\\ssx.toml\"\nif (-not (Test-Path $toml)) {\n    $isoEscaped = $Iso.Replace('\\', '\\\\').Replace('\"', '\\\"')\n    Set-Content $toml \"# SSX settings - written by the game. Edit in-game with F1.`ngame_data_root = `\"$isoEscaped`\"\" -Encoding ascii"
+            },
+            {
+              "line": 556,
+              "text": "# writes static-shaders.bin beside ssx.exe and quits (about 15 s). Without the file ReGPU compiles each\n# shader the first time it is drawn, as before, so a failure here only warns.\nif (Test-Path \"$root\\dist\\SSX\\rexgpu-regpu.dll\") {\n    Step \"Collecting the game's shaders for the renderer\"\n    Remove-Item \"$root\\dist\\SSX\\static-shaders.bin\" -ErrorAction SilentlyContinue\n    $collect = Start-Process \"$root\\dist\\SSX\\ssx.exe\" -WorkingDirectory \"$root\\dist\\SSX\" -WindowStyle Minimized -PassThru `"
+            },
+            {
+              "line": 558,
+              "text": "if (Test-Path \"$root\\dist\\SSX\\rexgpu-regpu.dll\") {\n    Step \"Collecting the game's shaders for the renderer\"\n    Remove-Item \"$root\\dist\\SSX\\static-shaders.bin\" -ErrorAction SilentlyContinue\n    $collect = Start-Process \"$root\\dist\\SSX\\ssx.exe\" -WorkingDirectory \"$root\\dist\\SSX\" -WindowStyle Minimized -PassThru `\n        -ArgumentList '--ssx_collect_shaders=true', '--audio_mute', '--fullscreen=false'\n    if (-not $collect.WaitForExit(120000)) {"
+            },
+            {
+              "line": 559,
+              "text": "    Step \"Collecting the game's shaders for the renderer\"\n    Remove-Item \"$root\\dist\\SSX\\static-shaders.bin\" -ErrorAction SilentlyContinue\n    $collect = Start-Process \"$root\\dist\\SSX\\ssx.exe\" -WorkingDirectory \"$root\\dist\\SSX\" -WindowStyle Minimized -PassThru `\n        -ArgumentList '--ssx_collect_shaders=true', '--audio_mute', '--fullscreen=false'\n    if (-not $collect.WaitForExit(120000)) {\n        Stop-Process -Id $collect.Id -ErrorAction SilentlyContinue"
+            },
+            {
+              "line": 563,
+              "text": "    if (-not $collect.WaitForExit(120000)) {\n        Stop-Process -Id $collect.Id -ErrorAction SilentlyContinue\n        Remove-Item \"$root\\dist\\SSX\\regpu-starting.flag\" -ErrorAction SilentlyContinue\n    }\n    # The pipelines (shader pairs and render states) rides need, so ReGPU builds them at the first start too.\n    Copy-Item \"$root\\regpu-plugin\\pipeline-seed.txt\" \"$root\\dist\\SSX\\\" -Force"
+            },
+            {
+              "line": 566,
+              "text": "    }\n    # The pipelines (shader pairs and render states) rides need, so ReGPU builds them at the first start too.\n    Copy-Item \"$root\\regpu-plugin\\pipeline-seed.txt\" \"$root\\dist\\SSX\\\" -Force\n    if (Test-Path \"$root\\dist\\SSX\\static-shaders.bin\") { Write-Host \"  Shaders collected.\" }\n    else { Write-Host \"  Couldn't collect them; the game compiles each shader the first time it's used instead.\" -ForegroundColor Yellow }\n}"
+            },
+            {
+              "line": 567,
+              "text": "    # The pipelines (shader pairs and render states) rides need, so ReGPU builds them at the first start too.\n    Copy-Item \"$root\\regpu-plugin\\pipeline-seed.txt\" \"$root\\dist\\SSX\\\" -Force\n    if (Test-Path \"$root\\dist\\SSX\\static-shaders.bin\") { Write-Host \"  Shaders collected.\" }\n    else { Write-Host \"  Couldn't collect them; the game compiles each shader the first time it's used instead.\" -ForegroundColor Yellow }\n}\n"
+            },
+            {
+              "line": 572,
+              "text": "\nWrite-Host \"\"\nWrite-Host \"DONE. Your game is in: $root\\dist\\SSX\" -ForegroundColor Green\nWrite-Host \"Start it with ssx.exe (F1 opens the settings).\"\nWrite-Host \"Keep your ISO (or extracted disc) where it is: the game reads its data from it every time it starts.\"\nStop-Transcript | Out-Null"
+            },
+            {
+              "line": 577,
+              "text": "Stop-Transcript | Out-Null\nif (-not $NoPause) {\n    Start-Process explorer.exe \"$root\\dist\\SSX\"\n    Read-Host \"Press Enter to close\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "pinyon",
+      "repository": "arcanite24/pinyon-shift",
+      "tag": "v0.9.5",
+      "commit": "850518ce00c66d65557bcbf190a62d2e2a6bb0e3",
+      "tree_truncated": false,
+      "candidate_sources": [
+        "launcher/PinyonShift.Launcher.Desktop/App.axaml.cs",
+        "launcher/PinyonShift.Launcher.Desktop/Dialog.cs",
+        "launcher/PinyonShift.Launcher.Desktop/Installation.cs",
+        "launcher/PinyonShift.Launcher.Desktop/MainWindow.Android.cs",
+        "launcher/PinyonShift.Launcher.Desktop/MainWindow.Dlc.cs",
+        "launcher/PinyonShift.Launcher.Desktop/MainWindow.Mods.cs",
+        "launcher/PinyonShift.Launcher.Desktop/MainWindow.Panels.cs",
+        "launcher/PinyonShift.Launcher.Desktop/MainWindow.Play.cs",
+        "launcher/PinyonShift.Launcher.Desktop/MainWindow.Radio.cs",
+        "launcher/PinyonShift.Launcher.Desktop/MainWindow.Saves.cs",
+        "launcher/PinyonShift.Launcher.Desktop/MainWindow.Settings.cs",
+        "launcher/PinyonShift.Launcher.Desktop/MainWindow.Update.cs",
+        "launcher/PinyonShift.Launcher.Desktop/MainWindow.axaml.cs",
+        "launcher/PinyonShift.Launcher.Desktop/Program.cs",
+        "launcher/PinyonShift.Launcher.Desktop/QrCodeBitmap.cs",
+        "launcher/PinyonShift.Launcher/App.xaml.cs",
+        "launcher/PinyonShift.Launcher/HardwareCheck.cs",
+        "launcher/PinyonShift.Launcher/MainWindow.ConfigureWheel.cs",
+        "launcher/PinyonShift.Launcher/MainWindow.Mods.cs",
+        "launcher/PinyonShift.Launcher/MainWindow.Sync.cs",
+        "launcher/PinyonShift.Launcher/MainWindow.Update.cs",
+        "launcher/PinyonShift.Launcher/MainWindow.xaml.cs",
+        "launcher/PinyonShift.Launcher/PortableMode.cs",
+        "launcher/PinyonShift.Launcher/QrCodeBitmap.cs",
+        "launcher/PinyonShift.Launcher/RouteStep.cs",
+        "launcher/PinyonShift.Launcher/SaveSyncStatus.cs",
+        "launcher/PinyonShift.Launcher/Wheel/Bindings/BindingModel.cs",
+        "launcher/PinyonShift.Launcher/Wheel/Bindings/Capture.cs",
+        "launcher/PinyonShift.Launcher/Wheel/Bindings/GameConfig.cs",
+        "launcher/PinyonShift.Launcher/Wheel/Bindings/TelemetrySettings.cs",
+        "launcher/PinyonShift.Launcher/Wheel/Controls/ValueBar.cs",
+        "launcher/PinyonShift.Launcher/Wheel/Diagnostics/Log.cs",
+        "launcher/PinyonShift.Launcher/Wheel/Input/DeviceManager.cs",
+        "launcher/PinyonShift.Launcher/Wheel/Input/Sdl.cs",
+        "launcher/PinyonShift.Launcher/Wheel/Input/WheelMath.cs",
+        "launcher/PinyonShift.Launcher/Wheel/WheelSettings.cs",
+        "launcher/PinyonShift.Launcher/Wheel/WheelSetupView.xaml.cs",
+        "launcher/Shared/AndroidShare.cs",
+        "launcher/Shared/AndroidShareContent.cs",
+        "launcher/Shared/LauncherUpdate.cs",
+        "launcher/Shared/ModCatalog.cs",
+        "launcher/Shared/QrCode.cs",
+        "site/build.py",
+        "tools/build-android.ps1",
+        "tools/build-fh1-gpu-prewarm.py",
+        "tools/build-fh1-radio.py",
+        "tools/build-host-objects.py",
+        "tools/build-immersive-camera.py",
+        "tools/build-mod-archives.py",
+        "tools/build-mod-patches.py",
+        "tools/build-prebuilt.py",
+        "tools/build-preview.ps1",
+        "tools/build-shiftglue-kit.ps1",
+        "tools/build-v4.ps1",
+        "tools/check-launcher.py",
+        "tools/install-android-usb.ps1",
+        "tools/install-build-tools.ps1",
+        "tools/install-sample-mod.py",
+        "tools/nn08-bench/build.py",
+        "tools/nn08-bench/prepare.py",
+        "tools/package-launcher.ps1",
+        "tools/package-launcher.py",
+        "tools/prepare-fh1-rally.py",
+        "tools/prepare-fh1-shaders.ps1",
+        "tools/prepare-fh1-vulkan.ps1",
+        "tools/prepare-rexglue.ps1",
+        "tools/tests/test_build_capabilities.py",
+        "tools/tests/test_build_fh1_gpu_prewarm.py",
+        "tools/tests/test_build_fh1_radio.py",
+        "tools/tests/test_build_label.py",
+        "tools/tests/test_build_mod_archives.py",
+        "tools/tests/test_build_mod_patches.py",
+        "tools/tests/test_codegen_build_graph.py",
+        "tools/tests/test_deck_builds.py",
+        "tools/tests/test_manage_dlc_launcher.py",
+        "tools/tests/test_portable_install.py",
+        "tools/tests/test_prepare_fh1_shaders.py",
+        "tools/tests/test_stale_build_inputs.py",
+        "tools/wheel-setup/build-sdl.ps1"
+      ],
+      "sources": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/arcanite24/pinyon-shift/850518ce00c66d65557bcbf190a62d2e2a6bb0e3/README.md",
+          "sha256": "52df009eac4ac1854617b500e555ba2d92c1e2c03b75cff50fb692c06614ac2b",
+          "bytes": 9724,
+          "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\pinyon\\README.md",
+          "excerpts": [
+            {
+              "line": 142,
+              "text": "No USB debugging is needed. The bundled Mesa Turnip driver is selected\nautomatically on Adreno 7xx, and the in-game SMOOTH 60 and QUALITY 30 presets\ncover the common setups. USB and command-line installs, drivers and saves are\ncovered in [docs/ANDROID.md](docs/ANDROID.md).\n\n## Reporting bugs"
+            },
+            {
+              "line": 159,
+              "text": "\n```powershell\n.\\tools\\setup-preview.ps1 -IsoPath C:\\path\\to\\your-disc.iso\n.\\tools\\launch-preview.ps1\n```\n"
+            },
+            {
+              "line": 164,
+              "text": "\nSee [Building](docs/BUILDING.md) for details and the `tools/pinyon.py`\ncommand line.\n\n## Roadmap\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "fh1",
+      "repository": "FH1-ReImagined/ForzaHorizon1-ReImagined",
+      "tag": "v0.3.9",
+      "commit": "46d5ed62866af68700d15c61748df8c29ad0248d",
+      "tree_truncated": false,
+      "candidate_sources": [
+        "launcher/forza_launcher/__init__.py",
+        "launcher/forza_launcher/_version.py",
+        "launcher/forza_launcher/antialiasing.py",
+        "launcher/forza_launcher/bindings.py",
+        "launcher/forza_launcher/browser.py",
+        "launcher/forza_launcher/build_env.py",
+        "launcher/forza_launcher/builder.py",
+        "launcher/forza_launcher/catalog_import.py",
+        "launcher/forza_launcher/challenges.py",
+        "launcher/forza_launcher/cleanenv.py",
+        "launcher/forza_launcher/cli.py",
+        "launcher/forza_launcher/config.py",
+        "launcher/forza_launcher/connection_test.py",
+        "launcher/forza_launcher/coop_grant.py",
+        "launcher/forza_launcher/crash_report.py",
+        "launcher/forza_launcher/data/dlc-4D5309C9.json",
+        "launcher/forza_launcher/data/loading_tips.json",
+        "launcher/forza_launcher/data/pipelines-4D5309C9.json",
+        "launcher/forza_launcher/datafolder.py",
+        "launcher/forza_launcher/decal_pack.py",
+        "launcher/forza_launcher/deck_clock.py",
+        "launcher/forza_launcher/display.py",
+        "launcher/forza_launcher/dlccheck.py",
+        "launcher/forza_launcher/dlcscan.py",
+        "launcher/forza_launcher/dlss.py",
+        "launcher/forza_launcher/ed25519.py",
+        "launcher/forza_launcher/errors.py",
+        "launcher/forza_launcher/evdev_joysticks.py",
+        "launcher/forza_launcher/fan_dlc.py",
+        "launcher/forza_launcher/fetch.py",
+        "launcher/forza_launcher/fm4cars.py",
+        "launcher/forza_launcher/fm4tracks.py",
+        "launcher/forza_launcher/fsr3.py",
+        "launcher/forza_launcher/gallery.py",
+        "launcher/forza_launcher/game.py",
+        "launcher/forza_launcher/gamepad.py",
+        "launcher/forza_launcher/gamertag.py",
+        "launcher/forza_launcher/garage.py",
+        "launcher/forza_launcher/gpu.py",
+        "launcher/forza_launcher/haptics/__init__.py",
+        "launcher/forza_launcher/haptics/feel.py",
+        "launcher/forza_launcher/haptics/service.py",
+        "launcher/forza_launcher/haptics/settings.py",
+        "launcher/forza_launcher/haptics/telemetry.py",
+        "launcher/forza_launcher/haptics/vendor/__init__.py",
+        "launcher/forza_launcher/haptics/vendor/dualsense/__init__.py",
+        "launcher/forza_launcher/haptics/vendor/dualsense/_hidraw.py",
+        "launcher/forza_launcher/haptics/vendor/dualsense/main.py",
+        "launcher/forza_launcher/haptics/vendor/dualsense/triggers.py",
+        "launcher/forza_launcher/haptics/xbox.py",
+        "launcher/forza_launcher/hd_pack.py",
+        "launcher/forza_launcher/ingame.py",
+        "launcher/forza_launcher/installer.py",
+        "launcher/forza_launcher/languages.py",
+        "launcher/forza_launcher/linux_update.py",
+        "launcher/forza_launcher/live_auth.py",
+        "launcher/forza_launcher/loading_tips.py",
+        "launcher/forza_launcher/mods.py",
+        "launcher/forza_launcher/online_features.py",
+        "launcher/forza_launcher/paths.py",
+        "launcher/forza_launcher/pins.py",
+        "launcher/forza_launcher/power.py",
+        "launcher/forza_launcher/radio.py",
+        "launcher/forza_launcher/regpu.py",
+        "launcher/forza_launcher/save_editor.py",
+        "launcher/forza_launcher/saves.py",
+        "launcher/forza_launcher/schema.py",
+        "launcher/forza_launcher/server_list.py",
+        "launcher/forza_launcher/shader_prebuild.py",
+        "launcher/forza_launcher/shader_share.py",
+        "launcher/forza_launcher/shader_warmup.py",
+        "launcher/forza_launcher/specs.py",
+        "launcher/forza_launcher/steam_shortcuts.py",
+        "launcher/forza_launcher/texture_compress.py",
+        "launcher/forza_launcher/texture_packs.py",
+        "launcher/forza_launcher/tuning_status.py",
+        "launcher/forza_launcher/ugc.py",
+        "launcher/forza_launcher/ui/__init__.py",
+        "launcher/forza_launcher/ui/bindings_editor.py",
+        "launcher/forza_launcher/ui/catalogs.py",
+        "launcher/forza_launcher/ui/challenges_card.py",
+        "launcher/forza_launcher/ui/controller_artwork.py",
+        "launcher/forza_launcher/ui/controller_widgets.py",
+        "launcher/forza_launcher/ui/controls_page.py",
+        "launcher/forza_launcher/ui/crash_report.py",
+        "launcher/forza_launcher/ui/fan_dlc_notice.py",
+        "launcher/forza_launcher/ui/file_dialogs.py",
+        "launcher/forza_launcher/ui/fm4_tracks.py",
+        "launcher/forza_launcher/ui/gallery_page.py",
+        "launcher/forza_launcher/ui/gamepad.py",
+        "launcher/forza_launcher/ui/mods_page.py",
+        "launcher/forza_launcher/ui/offline_notice.py",
+        "launcher/forza_launcher/ui/online_features.py",
+        "launcher/forza_launcher/ui/pages.py",
+        "launcher/forza_launcher/ui/radio_page.py",
+        "launcher/forza_launcher/ui/save_editor.py",
+        "launcher/forza_launcher/ui/saves_page.py",
+        "launcher/forza_launcher/ui/servers_page.py",
+        "launcher/forza_launcher/ui/settings_page.py",
+        "launcher/forza_launcher/ui/settings_search.py",
+        "launcher/forza_launcher/ui/steam.py",
+        "launcher/forza_launcher/ui/texture_packs_page.py",
+        "launcher/forza_launcher/ui/theme.py",
+        "launcher/forza_launcher/ui/updates.py",
+        "launcher/forza_launcher/ui/web_account.py",
+        "launcher/forza_launcher/ui/web_view.py",
+        "launcher/forza_launcher/ui/widgets.py",
+        "launcher/forza_launcher/ui/window.py",
+        "launcher/forza_launcher/ui/workers.py",
+        "launcher/forza_launcher/unicorns.py",
+        "launcher/forza_launcher/update_helper.py",
+        "launcher/forza_launcher/updater.py",
+        "launcher/forza_launcher/upload_site.py",
+        "launcher/forza_launcher/vr.py",
+        "launcher/forza_launcher/vulkan_probe.py",
+        "launcher/forza_launcher/web_account.py",
+        "launcher/forza_launcher/xex_reference.py",
+        "launcher/forza_launcher/xexcheck.py",
+        "launcher/main.py",
+        "launcher/packaging/build_installer.ps1",
+        "launcher/packaging/check_bootloader.py",
+        "launcher/packaging/ci_fetch.py",
+        "launcher/packaging/ci_patch_simde.py",
+        "launcher/packaging/ci_toolchain_mirror.py",
+        "launcher/packaging/flatpak_sources_mirror.py",
+        "launcher/packaging/gamepad_smoke.py",
+        "launcher/packaging/make_package.py",
+        "launcher/packaging/release_checksums.py",
+        "launcher/packaging/smoke_gui.py",
+        "launcher/packaging/test_installer.ps1",
+        "launcher/packaging/verify_signature.ps1",
+        "launcher/packaging/windows_build_manifest.py",
+        "launcher/packaging/windows_version_info.py",
+        "launcher/test_ai_rubber_banding.py",
+        "launcher/test_antialiasing.py",
+        "launcher/test_auto_pause_settings.py",
+        "launcher/test_bindings.py",
+        "launcher/test_browser.py",
+        "launcher/test_build_id.py",
+        "launcher/test_build_tree.py",
+        "launcher/test_builder_command_errors.py",
+        "launcher/test_car_audio_volume.py",
+        "launcher/test_career_state.py",
+        "launcher/test_catalog_import.py",
+        "launcher/test_catalogs_ui.py",
+        "launcher/test_challenges.py",
+        "launcher/test_check_bootloader.py",
+        "launcher/test_checkout_build.py",
+        "launcher/test_ci_linux_sdk_setup.py",
+        "launcher/test_ci_toolchain_mirror.py",
+        "launcher/test_cleanenv.py",
+        "launcher/test_cmake_unsafe_path.py",
+        "launcher/test_cockpit_fov.py",
+        "launcher/test_cockpit_gauges.py",
+        "launcher/test_code_signing.py",
+        "launcher/test_connection_test.py",
+        "launcher/test_controls.py",
+        "launcher/test_coop_grant.py",
+        "launcher/test_cpu_target.py",
+        "launcher/test_crash_report.py",
+        "launcher/test_custom_radio.py",
+        "launcher/test_datafolder.py",
+        "launcher/test_decal_pack.py",
+        "launcher/test_deck_clock.py",
+        "launcher/test_discord_settings.py",
+        "launcher/test_dlc.py",
+        "launcher/test_dlc_integrity.py",
+        "launcher/test_dlc_scan.py",
+        "launcher/test_dlc_warnings.py",
+        "launcher/test_error_messages.py",
+        "launcher/test_fan_dlc.py",
+        "launcher/test_fast_travel_anywhere.py",
+        "launcher/test_fetch.py",
+        "launcher/test_fetch_diagnostics.py",
+        "launcher/test_file_dialogs.py",
+        "launcher/test_flatpak_folder.py",
+        "launcher/test_flatpak_sources_mirror.py",
+        "launcher/test_fm4_import.py",
+        "launcher/test_fm4_track_guide.py",
+        "launcher/test_fm4_tracks.py",
+        "launcher/test_frame_rate_control.py",
+        "launcher/test_frame_rate_presets.py",
+        "launcher/test_friends_shortcut.py",
+        "launcher/test_fsr3.py",
+        "launcher/test_gallery.py",
+        "launcher/test_game_exit.py",
+        "launcher/test_game_language.py",
+        "launcher/test_gamepad.py",
+        "launcher/test_gamertag.py",
+        "launcher/test_gamertag_ascii.py",
+        "launcher/test_garage.py",
+        "launcher/test_gpu.py",
+        "launcher/test_gpu_wait_blocking.py",
+        "launcher/test_haptics.py",
+        "launcher/test_haptics_session.py",
+        "launcher/test_hd_pack.py",
+        "launcher/test_hdr.py",
+        "launcher/test_ingame_graphics.py",
+        "launcher/test_intel_vulkan.py",
+        "launcher/test_launcher_layout.py",
+        "launcher/test_launcher_ui.py",
+        "launcher/test_linux_update.py",
+        "launcher/test_live_auth.py",
+        "launcher/test_llvm_tools.py",
+        "launcher/test_loading_tips.py",
+        "launcher/test_local_server.py",
+        "launcher/test_log_rotation.py",
+        "launcher/test_match_display.py",
+        "launcher/test_memory_check.py",
+        "launcher/test_mods.py",
+        "launcher/test_motion_blur.py",
+        "launcher/test_msvc.py",
+        "launcher/test_native_menu.py",
+        "launcher/test_native_menu_settings.py",
+        "launcher/test_native_tuning.py",
+        "launcher/test_native_tuning_assets.py",
+        "launcher/test_native_tuning_play.py",
+        "launcher/test_native_tuning_settings.py",
+        "launcher/test_online_features.py",
+        "launcher/test_performance_overlay.py",
+        "launcher/test_physics_triggers.py",
+        "launcher/test_play_log_folders.py",
+        "launcher/test_power.py",
+        "launcher/test_prebuild_guard.py",
+        "launcher/test_radio_event_music.py",
+        "launcher/test_radio_station_switch.py",
+        "launcher/test_regpu.py",
+        "launcher/test_regpu_sources.py",
+        "launcher/test_reiglue_checkout.py",
+        "launcher/test_relaunch.py",
+        "launcher/test_release_checksums.py",
+        "launcher/test_responsive.py",
+        "launcher/test_save_editor.py",
+        "launcher/test_saves.py",
+        "launcher/test_saves_ui.py",
+        "launcher/test_scene_resolution.py",
+        "launcher/test_sdk_overlay_helpers.py",
+        "launcher/test_server_list.py",
+        "launcher/test_server_packaging.py",
+        "launcher/test_settings_search.py",
+        "launcher/test_shader_prebuild.py",
+        "launcher/test_shader_share.py",
+        "launcher/test_shader_warmup.py",
+        "launcher/test_skip_startup_movies.py",
+        "launcher/test_specs.py",
+        "launcher/test_startup_movie_tools.py",
+        "launcher/test_steam_deck.py",
+        "launcher/test_steam_shortcuts.py",
+        "launcher/test_steam_ui.py",
+        "launcher/test_steamos_hint.py",
+        "launcher/test_texture_compress.py",
+        "launcher/test_texture_packs.py",
+        "launcher/test_tools_msys.py",
+        "launcher/test_trigger_feel.py",
+        "launcher/test_trim_pyside6.py",
+        "launcher/test_ugc.py",
+        "launcher/test_ultrawide.py",
+        "launcher/test_updater.py",
+        "launcher/test_updates_ui.py",
+        "launcher/test_upload_site.py",
+        "launcher/test_vc_redist_pin.py",
+        "launcher/test_vr.py",
+        "launcher/test_vr_ui.py",
+        "launcher/test_web_account.py",
+        "launcher/test_wheel_devices.py",
+        "launcher/test_wheel_ffb.py",
+        "launcher/test_wheel_handbrake.py",
+        "launcher/test_wheel_primary.py",
+        "launcher/test_wheel_shifter.py",
+        "launcher/test_wheel_thrustmaster.py",
+        "launcher/test_windows_build_manifest.py",
+        "launcher/test_windows_version_info.py",
+        "launcher/test_world_detail.py",
+        "launcher/test_xbox_haptics.py",
+        "launcher/test_xcontent.py",
+        "launcher/test_xex.py",
+        "launcher/test_xwin.py",
+        "launcher/tests/test_dlss.py",
+        "launcher/tests/test_dlss_vendor_ui.py",
+        "tools/build_map_roads.py",
+        "tools/install_dlc.py",
+        "tools/prepare_horizon2_ui.py",
+        "tools/test_build_map_roads.py",
+        "tools/test_pipeline_prebuild.cpp"
+      ],
+      "sources": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/FH1-ReImagined/ForzaHorizon1-ReImagined/46d5ed62866af68700d15c61748df8c29ad0248d/README.md",
+          "sha256": "e810a30db5bd5147387f151a987dccd7b128b66d8065f8637c3d3184d7a10769",
+          "bytes": 30274,
+          "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\fh1\\README.md",
+          "excerpts": []
+        },
+        {
+          "path": "docs/launcher.md",
+          "url": "https://raw.githubusercontent.com/FH1-ReImagined/ForzaHorizon1-ReImagined/46d5ed62866af68700d15c61748df8c29ad0248d/docs/launcher.md",
+          "sha256": "ee402e8e95d3ab00f2a4da5c3cf7b467435ab9e1eab2ccea19c6455ca6f1937e",
+          "bytes": 156986,
+          "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\fh1\\docs\\launcher.md",
+          "excerpts": [
+            {
+              "line": 210,
+              "text": "   `build/tu`, configures with `-DFORZA_TITLE_UPDATE=4` (`hints_tu4/`, `generated_tu4/`) and\n   stages `build/tu` as `runtime/update`, which Play passes as `--update_data_root`\n   (`--game_data_root` stays the disc's files). Without it the base manifest is built and\n   `runtime/update` removed. `--build` takes `--title-update PATH` (default: the launcher's\n   setting) and `--base`.\n3. **Build**: preflight (RAM for the chosen job count, disk, cores), toolchain, SDK, codegen from `default.xex`,"
+            },
+            {
+              "line": 275,
+              "text": "\nKnown folders, profile IDs, custom server addresses and common secret fields are\nremoved on a best-effort basis. Arbitrary environment variables, command lines,\nprofile data and game files are excluded. Review the text for anything else personal\nand add reproduction steps. **Copy report** and **Save report…** work without a browser.\nThe report stays in memory until the next successful launch or launcher exit; saving"
+            },
+            {
+              "line": 762,
+              "text": "launcher.json keeps the order and the mods turned off (`\"mods\": {\"order\": [...], \"disabled\":\n[...]}`); every start passes `--forza_mods_dir=<data folder>/mods --forza_mods=A|B` (`|` alone:\nnone), except an option that **Extra command-line flags** (**Settings > Advanced**) name, as\n`--name=value` or `--name value` (the game refuses an option given twice). The player's guide is\n[modding.md](modding.md). Tests: `launcher/test_mods.py`.\n"
+            },
+            {
+              "line": 898,
+              "text": "deadzones, vibration, `FORZA_PAD_PER_USER`), Gameplay (the CPU drivers' rubber banding), Audio, Online (server mode, live room, Horizon\nWorld switches), Profile (own save or a copy of a Xenia Canary save, gamertag, language),\nAdvanced (log, GPU, game/data folders, extra command-line flags, environment variables,\na free-form \"other settings\" box for any further `forza.toml` key, a live preview of the\ngenerated `forza.toml` and command line). Keys that hold their default are not written.\nDisplay > Picture > **Cockpit gauges always lit** (`cockpit_gauges_lit`, off by default, #183)"
+            },
+            {
+              "line": 900,
+              "text": "Advanced (log, GPU, game/data folders, extra command-line flags, environment variables,\na free-form \"other settings\" box for any further `forza.toml` key, a live preview of the\ngenerated `forza.toml` and command line). Keys that hold their default are not written.\nDisplay > Picture > **Cockpit gauges always lit** (`cockpit_gauges_lit`, off by default, #183)\nkeeps the instrument backlight of your own car on by day too; the headlights and other cars\nstay as the game draws them ([how](rendering.md#cockpit-gauges-lit-by-day-183))."
+            },
+            {
+              "line": 1012,
+              "text": "Expansion Pack (`Media/1600.puboffer`): Horizon Rally then gives the same Marketplace error (#79).\n`forza-launcher --dry-run` prints what Play would run; it matches `tools/play.sh`\n(`--game_data_root`, `--log_file`, `FORZA_SERVER`, library path).\nDefaults differ from the game's in two places: the first run sets `frame_rate = 60` and `present_effect = \"fsr\"` (AMD FSR 1; a launcher that already holds a choice keeps it; the old `fsr2` entry becomes `fsr`; `fsr3` is now the temporal upscaler).\n\n**20 and 40 fps (#263).** The Frame rate list starts with 20, 30 and 40 fps; a typed rate under 60 becomes the"
+            },
+            {
+              "line": 1035,
+              "text": "anti-aliasing Off (FSR 3 becomes FSR 1, SMAA and FSR Native AA the game's own anti-aliasing) and passes\n`--gpu_wait_blocking=true` (already the default). A frame rate of 20 or 40 stays: the player chose it for a\nscreen 30 does not divide (a Deck at 40 Hz). Only this start's `forza.toml` and command line change: `launcher.json`\nkeeps the player's own values, which the next start on mains power uses again, and the player's own extra flags\nstill come last. Auto applies on a Steam Deck (as the GPU detection finds it) whose battery runs it: no charger in\n`/sys/class/power_supply` online (type Mains, USB, ...) and the system battery discharging; a controller's or a"
+            },
+            {
+              "line": 1390,
+              "text": "  and resume (ninja continued with 287 of 346 steps left); a download interrupted at 20 MB\n  resumed with Range and passed its sha256.\n* `--dry-run` output equals `tools/play.sh` for the same settings (`--game_data_root`,\n  `--log_file`, `FORZA_SERVER`, `LD_LIBRARY_PATH` order; `--xenia` gives `--user_data_root`,\n  `--cache_root`, `--profile_xuid`; the Xenia save copy and DLC link were run).\n* DLC from a Xenia content folder (#36, 2026-10-14, Linux): `tools/install_dlc.py` and the DLC card take"
+            },
+            {
+              "line": 1534,
+              "text": "  numbers (game 1.1 GB; build 2 GB at -j4, 3.2 GB at -j8). The launcher's memory check follows them (#32, see\n  \"Memory check\" below).\n* The launcher window (not headless) runs under Qt's Wayland platform inside the sandbox (KDE Plasma 6,\n  radv), with the Qt file dialogs; screenshots taken with spectacle on the host.\n* Test recipe: `FLATPAK_USER_DIR=~/.cache/forza-flatpak/userdir` for a clean installation. The window\n  can be driven from a script run with the sandbox's python (`flatpak run --command=sh APP -c"
+            },
+            {
+              "line": 1618,
+              "text": "  digests) or \"is not the supported code: it differs in: section .text (code) at 0x823f0000-0x823fffff ...\"\n  (any section, code or data, with the address ranges of the 64 KB pieces). `run_build` runs the same check,\n  so a headless build cannot start from other code. Second bug in the same log: the player chose\n  `<name>.data\\Data0000`; `resolve_package` now maps a `DataNNNN` file (or the `.data` folder) to the package file\n  beside the folder. A relative `--title-update` path to `--build` is made absolute (the title update tool ran in\n  another directory)."
+            },
+            {
+              "line": 1704,
+              "text": "clamp disabled and a future-stamped toolchain copy, ninja loops, the launcher deletes the build tree, clamps and the\nsecond attempt finishes; with the clamp disabled for good the message above is the result of the second failure.\nLinux headless build (`--build --base --jobs 4`, scratch root, system clang 23.1.2 / cmake 4.4.3 / ninja 1.13.2): 350\nsteps, 5.6 min, 1.8 GB peak; a second run resumes the same tree (no \"configuring from scratch\"). The CI installer of\n`release.yml` run 38654797202 (all jobs green, artifacts only): installed in the VM (PDT) at 23:39 UTC, the toolchain\nfile's modification time is 23:33:54 UTC, the build's own time (v0.1.3's installer gave +6.5 h); `TimeStampsInUTC`"
+            },
+            {
+              "line": 1808,
+              "text": "  with `attrib +P` by its attribute, `Documents\\forza` and the default are not.\n* **Chosen folder.** The copy that \"Change folder\" runs (saves, runtime, state, and the 7.1 GB of game files, 6 s on the VM's\n  disk), the config switched to `C:\\fh2`, the old folder untouched, then a headless build with no `--root` built in `C:\\fh2`\n  (6.4 min, `runtime: C:\\fh2\\runtime`). The window flow (both questions, the check, the switch) was run against a Linux\n  offscreen window with the dialogs answered by script; not clicked by hand on Windows.\n* **Access denied.** Denying read on `SDL3Config.cmake` alone (`icacls /deny tester:(RA)`) did not make ninja fail (Windows"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "gow",
+      "repository": "danielalves96/gow-pc-port",
+      "tag": "launcher-v0.4.0",
+      "commit": "adebc00e69d4395318c94523f345b26c7daf3451",
+      "tree_truncated": false,
+      "candidate_sources": [
+        "RustPortPS2/third_party/rabbitizer/rust/build.rs",
+        "gow-launcher/crates/fake-runner/src/main.rs",
+        "gow-launcher/crates/fake-runner/tests/start.rs",
+        "gow-launcher/crates/gow-cli/src/main.rs",
+        "gow-launcher/crates/gow-core/src/activity.rs",
+        "gow-launcher/crates/gow-core/src/controller.rs",
+        "gow-launcher/crates/gow-core/src/credential.rs",
+        "gow-launcher/crates/gow-core/src/direct.rs",
+        "gow-launcher/crates/gow-core/src/display.rs",
+        "gow-launcher/crates/gow-core/src/elf_check.rs",
+        "gow-launcher/crates/gow-core/src/failure.rs",
+        "gow-launcher/crates/gow-core/src/game.rs",
+        "gow-launcher/crates/gow-core/src/gamepad.rs",
+        "gow-launcher/crates/gow-core/src/gpu.rs",
+        "gow-launcher/crates/gow-core/src/ingame.rs",
+        "gow-launcher/crates/gow-core/src/installer.rs",
+        "gow-launcher/crates/gow-core/src/iso.rs",
+        "gow-launcher/crates/gow-core/src/iso_chd.rs",
+        "gow-launcher/crates/gow-core/src/iso_patch.rs",
+        "gow-launcher/crates/gow-core/src/keys.rs",
+        "gow-launcher/crates/gow-core/src/kit.rs",
+        "gow-launcher/crates/gow-core/src/launch.rs",
+        "gow-launcher/crates/gow-core/src/legacy.rs",
+        "gow-launcher/crates/gow-core/src/lib.rs",
+        "gow-launcher/crates/gow-core/src/optimizer.rs",
+        "gow-launcher/crates/gow-core/src/padmap.rs",
+        "gow-launcher/crates/gow-core/src/paths.rs",
+        "gow-launcher/crates/gow-core/src/process.rs",
+        "gow-launcher/crates/gow-core/src/proctree.rs",
+        "gow-launcher/crates/gow-core/src/rebuild.rs",
+        "gow-launcher/crates/gow-core/src/report.rs",
+        "gow-launcher/crates/gow-core/src/report/host.rs",
+        "gow-launcher/crates/gow-core/src/report/scrub.rs",
+        "gow-launcher/crates/gow-core/src/report/session.rs",
+        "gow-launcher/crates/gow-core/src/save_art.rs",
+        "gow-launcher/crates/gow-core/src/saves.rs",
+        "gow-launcher/crates/gow-core/src/script.rs",
+        "gow-launcher/crates/gow-core/src/settings.rs",
+        "gow-launcher/crates/gow-core/src/shortcut.rs",
+        "gow-launcher/crates/gow-core/src/system.rs",
+        "gow-launcher/crates/gow-core/src/textures.rs",
+        "gow-launcher/crates/gow-core/src/update.rs",
+        "gow-launcher/package-lock.json",
+        "gow-launcher/package.json",
+        "gow-launcher/src-tauri/build.rs",
+        "gow-launcher/src-tauri/capabilities/default.json",
+        "gow-launcher/src-tauri/src/lib.rs",
+        "gow-launcher/src-tauri/src/main.rs",
+        "gow-launcher/src-tauri/src/updater.rs",
+        "gow-launcher/src-tauri/tauri.conf.json",
+        "gow-launcher/src/i18n/en.json",
+        "gow-launcher/src/i18n/pt-BR.json",
+        "gow-launcher/src/lib/padmap-cases.json",
+        "gow-launcher/src/lib/sdlmap-cases.json",
+        "gow-launcher/tsconfig.json",
+        "install.ps1",
+        "scripts/build_release_windows.ps1",
+        "scripts/build_runtime_windows.ps1",
+        "scripts/ci/test-install-ps1.ps1"
+      ],
+      "sources": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/danielalves96/gow-pc-port/adebc00e69d4395318c94523f345b26c7daf3451/README.md",
+          "sha256": "2fb76117a37bce428e7f5b94f422411bf27f9e1661177eab08bce4465df97686",
+          "bytes": 21661,
+          "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\gow\\README.md",
+          "excerpts": []
+        },
+        {
+          "path": "docs/INSTALL.md",
+          "url": "https://raw.githubusercontent.com/danielalves96/gow-pc-port/adebc00e69d4395318c94523f345b26c7daf3451/docs/INSTALL.md",
+          "sha256": "52d5cead92fb9324806ede3245a61b3eb546d3f628fd62e1d8ffa9adbbd5e4ea",
+          "bytes": 22971,
+          "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\gow\\docs\\INSTALL.md",
+          "excerpts": [
+            {
+              "line": 42,
+              "text": "  the game's executable (widescreen hacks, cheats, code fixes) is refused, because the port runs the USA disc's own code,\n  and either way nothing is left behind. The option is not shown for an ISO that is already modified (nor for a CHD until it is converted, and then only if its disc is the unmodified original). Patches made with secondary compression (`xdelta3 -S djw|fgk|lzma`) are not supported: ask for one made\n  with `xdelta3 -S none`. Without the launcher, the same decoder runs from the command line:\n\n  ```\n  bin\\ps2-tools.exe xdelta-apply patch.xdelta \"God of War (USA).iso\" \"God of War (patched).iso\""
+            },
+            {
+              "line": 55,
+              "text": "  read. Both `chdman createcd` CHDs (`cdlz`, `cdzl`, `cdfl`, `cdzs`) and `createdvd` / `createhd` ones (`lzma`, `zlib`,\n  `huff`, `flac`, `zstd`) work; CHDs older than version 5 and delta CHDs that need a parent CHD do not (`chdman copy`\n  turns them into a complete version 5 one). From the command line, `install.cmd -Iso \"D:\\God of War.chd\"` (or\n  `./install.sh \"God of War.chd\"`) converts it to a temporary ISO in the install folder and deletes it once the disc is\n  extracted; the converter alone is:\n"
+            }
+          ]
+        },
+        {
+          "path": "docs/LAUNCHER.md",
+          "url": "https://raw.githubusercontent.com/danielalves96/gow-pc-port/adebc00e69d4395318c94523f345b26c7daf3451/docs/LAUNCHER.md",
+          "sha256": "9e976c49568e9509f626687e47345bfc401f992118853a8116ec19d6be265a2d",
+          "bytes": 28670,
+          "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\gow\\docs\\LAUNCHER.md",
+          "excerpts": [
+            {
+              "line": 4,
+              "text": "\n*God Of War - PC Launcher* is the front end of the port: it installs the game, stores your settings and starts it with\nthe right environment. It is a native application (Rust + Tauri + React), not a wrapper around a command line. This\npage describes what every tab does and where the launcher keeps its files.\n\nIf you just want to play, set **Graphics → render resolution 2×** and **Performance → FPS limit 60**, then press"
+            }
+          ]
+        },
+        {
+          "path": "install.ps1",
+          "url": "https://raw.githubusercontent.com/danielalves96/gow-pc-port/adebc00e69d4395318c94523f345b26c7daf3451/install.ps1",
+          "sha256": "762ab26471798215d2ad1330fd777dd91df1823092c77050ab4048a51da9e9e9",
+          "bytes": 70376,
+          "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\gow\\install.ps1",
+          "excerpts": [
+            {
+              "line": 32,
+              "text": "#\n# Nothing generated from the game (disc, C++ code, microcode) leaves this computer.\nparam(\n    [string]$Iso = '',\n    [switch]$InstallTools,\n    [switch]$NoOptimize,"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

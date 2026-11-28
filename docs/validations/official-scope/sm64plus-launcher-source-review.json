@@ -1,0 +1,435 @@
+{
+  "repository": "MorsGames/sm64plus-launcher",
+  "commit": "47cd535c21c7c27fec27e38fd74c2587c3a4d7f6",
+  "source_files_scanned": 51,
+  "tree_truncated": false,
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/README.md",
+      "bytes": 3940,
+      "sha256": "1d829f4ccbb04273b398605ee811e482528fa00be8acaf0d28c98c005d96ad09",
+      "matches": [
+        {
+          "line": 45,
+          "text": "   So we need to manually build the game according to the [Manual Building Guide](https://github.com/MorsGames/sm64plus/wiki/Manual-Building-Guide). The only thing we need to do differently is to use the command `git clone https://github.com/MorsGames/sm64plus.git --branch dev` in step 4 instead."
+        }
+      ]
+    },
+    {
+      "path": "datafiles/build.sh",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/datafiles/build.sh",
+      "bytes": 1461,
+      "sha256": "c3d32bd17138830ab99210e45ea47136fa823af30e95704ad12e9c7844417d2d",
+      "matches": [
+        {
+          "line": 5,
+          "text": "    git clone https://github.com/MorsGames/sm64plus.git || { tput setaf 1; echo \"Couldn't download the game files from the repository.\"; read -n1 -r -p \"Press any key to close this window.\" key; exit; }"
+        },
+        {
+          "line": 9,
+          "text": "mv \"$LOCALAPPDATA\\SM64Plus\\baserom.us.z64\" \"sm64plus\\baserom.us.z64\" || { tput setaf 1; echo \"Couldn't move the ROM file.\"; read -n1 -r -p \"Press any key to close this window.\" key; exit; }"
+        }
+      ]
+    },
+    {
+      "path": "datafiles/rebuild.sh",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/datafiles/rebuild.sh",
+      "bytes": 573,
+      "sha256": "6477cf0681df187c863a9eae17e3ec11037c0ca43ce9e1aa0f2e35ed2e72447e",
+      "matches": []
+    },
+    {
+      "path": "datafiles/rebuild_clean.sh",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/datafiles/rebuild_clean.sh",
+      "bytes": 698,
+      "sha256": "83c41c2be6aa11bf31de25a8e61e0d7e1e3ae6c9c873633dcf26a7199a705afb",
+      "matches": []
+    },
+    {
+      "path": "library/build.sh",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/library/build.sh",
+      "bytes": 1029,
+      "sha256": "f4fa0f02ce059f02f412c2e366d650a63c0d7d4e609f1bec09bb6f6e08ba4b05",
+      "matches": [
+        {
+          "line": 32,
+          "text": "cmake --build build --config Release"
+        }
+      ]
+    },
+    {
+      "path": "objects/obj_background/CleanUp_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_background/CleanUp_0.gml",
+      "bytes": 46,
+      "sha256": "2a04786b67ceec9b41804d7b2de713e197120aa2cebf1358aa6e343862ac8711",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_background/Create_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_background/Create_0.gml",
+      "bytes": 1670,
+      "sha256": "b025fec68cb1938d3ada9d46ca358725ef2860ee832ee86eaac63f6be65820be",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_background/Draw_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_background/Draw_0.gml",
+      "bytes": 2073,
+      "sha256": "10eaa9fb6b6cd87fca702ac268ba4aabe56fecc7d032f873cfa3de1da61b2eda",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_background/Draw_73.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_background/Draw_73.gml",
+      "bytes": 2579,
+      "sha256": "45db22dd9c305a87710cf57e15557127fb8e77348cdbd662ec0ee7781b53df58",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_background/Step_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_background/Step_0.gml",
+      "bytes": 575,
+      "sha256": "f4411490b5572541bdf796a3509f113e5216d711ab4fbe3c2a609e0cf5b83208",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_button_detector/Create_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_button_detector/Create_0.gml",
+      "bytes": 123,
+      "sha256": "c23d83340233d0761fb9cc7307d643ed22b91ae5b057eae8e42954731be7a2de",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_button_detector/Draw_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_button_detector/Draw_0.gml",
+      "bytes": 1177,
+      "sha256": "416696d533bd2a759a128988b3b29a94625dc5faaefc3f8e83a4a16207c3d3aa",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_button_detector/Step_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_button_detector/Step_0.gml",
+      "bytes": 686,
+      "sha256": "134306f09203e774786a1d56211b927d170422a49935b5df632e0a76bb40b46a",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_init/Create_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_init/Create_0.gml",
+      "bytes": 3588,
+      "sha256": "ddf5e03ca9f025168931fd34f179e689864598d676ab6f74d190201fe06db1e7",
+      "matches": [
+        {
+          "line": 26,
+          "text": "\t\t\tvar _mingw_path = @\"C:\\msys64\\mingw64.exe\";"
+        },
+        {
+          "line": 28,
+          "text": "\t\t\t\t_mingw_path = get_open_filename(\"Find mingw64.exe in your MSYS2 installation folder.|mingw64.exe\", \"\");"
+        },
+        {
+          "line": 82,
+          "text": "\tvar _mingw_path = @\"C:\\msys64\\mingw64.exe\";"
+        },
+        {
+          "line": 84,
+          "text": "\t\t_mingw_path = get_open_filename(\"Find mingw64.exe in your MSYS2 installation folder.|mingw64.exe\", \"\");"
+        }
+      ]
+    },
+    {
+      "path": "objects/obj_init/Draw_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_init/Draw_0.gml",
+      "bytes": 420,
+      "sha256": "9ab6a1c98df02467dfa742dab46457f6890b5ffc862ad802283033aea268d5c2",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_init/Step_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_init/Step_0.gml",
+      "bytes": 2681,
+      "sha256": "313cdc4735da439e5e3b68d8690fd28854e432fb9dfb487ffc49c3f342b1ad4c",
+      "matches": [
+        {
+          "line": 1,
+          "text": "/// @desc Open the URL for MSYS."
+        },
+        {
+          "line": 27,
+          "text": "\t\t\t\t\"First, we need to download MSYS2. Press <SPACE> to head to the download page.\\n\\nOnce downloaded, run the installer, and click \\\"Next\\\" until the installation is complete. If you want to change the installation folder, keep in mind that installing it to any drive other than C might cause issues.\\n\\n\" +"
+        },
+        {
+          "line": 41,
+          "text": "\t\turl_open(\"https://www.msys2.org/\");"
+        },
+        {
+          "line": 44,
+          "text": "        if (file_exists(game_save_id + \"baserom.us.z64\")) {"
+        },
+        {
+          "line": 59,
+          "text": "\t\tvar _original_path = get_open_filename(\"Z64 ROM File (*.z64)|*.z64|All Files (*.*)|*.*\", \"\");"
+        },
+        {
+          "line": 61,
+          "text": "\t\t\tfile_copy(_original_path, game_save_id + \"baserom.us.z64\")"
+        }
+      ]
+    },
+    {
+      "path": "objects/obj_menu_parent/Create_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_menu_parent/Create_0.gml",
+      "bytes": 2671,
+      "sha256": "e72ccebbc182d4c532300b8afdec3ead132899488cf8396fa827cb80d4c9484d",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_menu_parent/Step_2.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_menu_parent/Step_2.gml",
+      "bytes": 110,
+      "sha256": "3fb4c90e80c3749df1e8fb785ebc00e1247597e9747d1b3e327b106d597455c7",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_palette_editor/Create_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_palette_editor/Create_0.gml",
+      "bytes": 1365,
+      "sha256": "580db7e5c2a8d5278980a18223317efc72895f215bbe3800a0f13d49f3b2b6c9",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_palette_editor/Draw_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_palette_editor/Draw_0.gml",
+      "bytes": 929,
+      "sha256": "f380e51ae3d039d01745dc1a65e1d31d34a1ad69bf5cfd919f4ed61b9b783a4d",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_palette_editor/Step_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_palette_editor/Step_0.gml",
+      "bytes": 1527,
+      "sha256": "88b53803cadb422a4481ff8361f5c1c34afa1be91698a330eeb1a4bed0fae2b7",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_persistent/Create_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_persistent/Create_0.gml",
+      "bytes": 829,
+      "sha256": "5af3015a530ba47c89958e6e37eb65b74b13cdf81bab46db5faa8a6c8c8a1394",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_persistent/Destroy_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_persistent/Destroy_0.gml",
+      "bytes": 59,
+      "sha256": "69763685ded29cf1cf28a1a0ea91d1de1498f22f338c2ed604b4d7c92b60faa1",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_persistent/Draw_64.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_persistent/Draw_64.gml",
+      "bytes": 80,
+      "sha256": "90884a39345d5a6a00e2ca41f333dbe4fcc4862b1876e9d5a84284a8c637d270",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_persistent/Other_5.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_persistent/Other_5.gml",
+      "bytes": 55,
+      "sha256": "73e19c44fddc2512ec1df2dac2a6595d8e1bd453f3b4eeb56b5bfe991c1e5d91",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_persistent/Other_75.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_persistent/Other_75.gml",
+      "bytes": 119,
+      "sha256": "dadb62b681e02b06414ae4d9e8e5403cea4265d8afb8dff289a82026c4f27805",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_persistent/Step_1.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_persistent/Step_1.gml",
+      "bytes": 2824,
+      "sha256": "69ea86f7a17cf7a479300d9005e0313398baf4dd30afc6f21f06ac2b8e8fbe44",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_settings_menu/Create_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_settings_menu/Create_0.gml",
+      "bytes": 10413,
+      "sha256": "d43c9747d4cada751182a3ce2c4818af9d1a7e8c41aef9a15e981bac1ff6a797",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_settings_menu/Destroy_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_settings_menu/Destroy_0.gml",
+      "bytes": 338,
+      "sha256": "1c5e9e5f6a0bfd2ece77fc778b29ac4da0e197a0ac2433de80ba31ba5b4af419",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_settings_menu/Draw_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_settings_menu/Draw_0.gml",
+      "bytes": 7766,
+      "sha256": "af45262f78b4899bda44813fd5555092d034f657c093a643e1330cc0d17e111b",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_settings_menu/Step_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_settings_menu/Step_0.gml",
+      "bytes": 739,
+      "sha256": "5f5e1eea0a58b6050a5b31d478fa346486826bcdbe720e6f08acc1b6c8f5c6fe",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_start_game/Create_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_start_game/Create_0.gml",
+      "bytes": 961,
+      "sha256": "383213de8692b329fea7b137772cedd1a9ac113823e0daacf99ad6dca5b653b2",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_start_game/Draw_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_start_game/Draw_0.gml",
+      "bytes": 509,
+      "sha256": "7913d46d0a854811f3847e15306a36ea3c263df93dd66199a88785c89458a942",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_start_game/Step_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_start_game/Step_0.gml",
+      "bytes": 506,
+      "sha256": "5781e9f2955ac1a63f71865a0801cfb733db78d5120e7b55003bfa1aaf47c98f",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_title_menu/Create_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_title_menu/Create_0.gml",
+      "bytes": 801,
+      "sha256": "7fc3ea95cd1ba161233ef492177ebce804872e57b2510bf5bc2a51a2f91a1975",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_title_menu/Draw_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_title_menu/Draw_0.gml",
+      "bytes": 2130,
+      "sha256": "8bcc20fc2ac17699cc9720a6b6e87c52542af25a672b39cd2a865cd5e90f12f5",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_title_menu/Other_4.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_title_menu/Other_4.gml",
+      "bytes": 563,
+      "sha256": "ea91e8f2afcee92780071345832493f58ebe61b927f5e61f66c7c6836950652b",
+      "matches": []
+    },
+    {
+      "path": "objects/obj_title_menu/Step_0.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/objects/obj_title_menu/Step_0.gml",
+      "bytes": 4195,
+      "sha256": "11972029bec73fcae3e8b97f2807b31580706bb3872a8dc9f602384fbb9d98c6",
+      "matches": [
+        {
+          "line": 79,
+          "text": "\t\t\t\t\t\tvar _mingw_path = @\"C:\\msys64\\mingw64.exe\";"
+        },
+        {
+          "line": 81,
+          "text": "\t\t\t\t\t\t\t_mingw_path = get_open_filename(\"Find mingw64.exe in your MSYS2 installation folder.|mingw64.exe\", \"\");"
+        }
+      ]
+    },
+    {
+      "path": "scripts/scr_audio/scr_audio.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/scripts/scr_audio/scr_audio.gml",
+      "bytes": 1418,
+      "sha256": "3d4cc8fc05580b8111b62d10525b0324b3b515c8b7128a50822e4af76f5a9e22",
+      "matches": []
+    },
+    {
+      "path": "scripts/scr_categories_and_options/scr_categories_and_options.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/scripts/scr_categories_and_options/scr_categories_and_options.gml",
+      "bytes": 14063,
+      "sha256": "5a1823e93bd89c9780e465156b9d1e1ffbdb68bd22f62258c306ec58022c2aa0",
+      "matches": []
+    },
+    {
+      "path": "scripts/scr_constants_and_globals/scr_constants_and_globals.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/scripts/scr_constants_and_globals/scr_constants_and_globals.gml",
+      "bytes": 2356,
+      "sha256": "ffe27509a629e5cc4c6ec32af391df2cf973605ada8c2c8e8322e0d55814e6bf",
+      "matches": []
+    },
+    {
+      "path": "scripts/scr_copy_dir/scr_copy_dir.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/scripts/scr_copy_dir/scr_copy_dir.gml",
+      "bytes": 895,
+      "sha256": "9a72c70fb37fd2a6fc45d242bdb91eaddcdae116fecdbbde48b215cfb584ded0",
+      "matches": []
+    },
+    {
+      "path": "scripts/scr_d3d_shit/scr_d3d_shit.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/scripts/scr_d3d_shit/scr_d3d_shit.gml",
+      "bytes": 549,
+      "sha256": "048a1d504dd8cd2bea7fa679eb17eafd66459bfbf5ea2be3193784872782d269",
+      "matches": []
+    },
+    {
+      "path": "scripts/scr_execute_shell_extensions/scr_execute_shell_extensions.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/scripts/scr_execute_shell_extensions/scr_execute_shell_extensions.gml",
+      "bytes": 954,
+      "sha256": "10e982640a5348c7b12f55e2fa9c6911eadc267887b668507a1a8f3e36679a15",
+      "matches": []
+    },
+    {
+      "path": "scripts/scr_get_digits/scr_get_digits.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/scripts/scr_get_digits/scr_get_digits.gml",
+      "bytes": 180,
+      "sha256": "3189e4046d3dabc60f9f778bdda6c69dbf14a907f21401d66615ae953956ee20",
+      "matches": []
+    },
+    {
+      "path": "scripts/scr_input/scr_input.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/scripts/scr_input/scr_input.gml",
+      "bytes": 22539,
+      "sha256": "30e528974a4fc23f962bef7350e70bbca1de532f196202385bcfc7c90910c322",
+      "matches": []
+    },
+    {
+      "path": "scripts/scr_sdl_controller/scr_sdl_controller.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/scripts/scr_sdl_controller/scr_sdl_controller.gml",
+      "bytes": 2810,
+      "sha256": "a7adafe749a762924bf0f272aae73e57c63d017a80d309a518aab276111bde18",
+      "matches": []
+    },
+    {
+      "path": "scripts/scr_text_rendering/scr_text_rendering.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/scripts/scr_text_rendering/scr_text_rendering.gml",
+      "bytes": 4110,
+      "sha256": "fb7214fe8a5da4bca72cbc710fbdbefdb3a9e021ea7d0e19ed33346777484efb",
+      "matches": []
+    },
+    {
+      "path": "scripts/scr_types/scr_types.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/scripts/scr_types/scr_types.gml",
+      "bytes": 29066,
+      "sha256": "cdf7428eabb57c00e9b610c1fd511187459f0d6a3df53bcc24fcc247af8a6f57",
+      "matches": []
+    },
+    {
+      "path": "scripts/scr_wease/scr_wease.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/scripts/scr_wease/scr_wease.gml",
+      "bytes": 17980,
+      "sha256": "57a1fddd9a0013616e7c21000c5a9ae1c4e4ab28dd72b8075e87dc9f2edc70f7",
+      "matches": []
+    },
+    {
+      "path": "scripts/scr_wtimer/scr_wtimer.gml",
+      "url": "https://raw.githubusercontent.com/MorsGames/sm64plus-launcher/47cd535c21c7c27fec27e38fd74c2587c3a4d7f6/scripts/scr_wtimer/scr_wtimer.gml",
+      "bytes": 22224,
+      "sha256": "a103f8e59e7af79841580c2d463d5a03d6630825d5c16063f190de6be61a52a8",
+      "matches": []
+    }
+  ]
+}

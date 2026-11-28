@@ -1,0 +1,9 @@
+PASS OFFICIAL SOURCE new fixed official source profile is parsed
+PASS OFFICIAL SOURCE source receipt cannot redirect to an unapproved archive
+PASS OFFICIAL SOURCE real codeload archive stages a source kit, without claiming a playable installation
+PASS OFFICIAL SOURCE source kit contains exactly the pinned archive and official README
+PASS OFFICIAL SOURCE invalid original media is rejected before tools, licence prompts or the official installer
+PASS OFFICIAL SOURCE bad media cannot trigger local preparation authorization
+PASS OFFICIAL SOURCE rejected media preserves the original input and resumable source kit
+PASS OFFICIAL SOURCE negative media test leaves no compiler workspace
+OFFICIAL_SOURCE_KIT_PASS gt5-recomp (source staging and negative media; no original-media build, boot or gameplay)

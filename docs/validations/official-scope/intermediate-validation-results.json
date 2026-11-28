@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-11-28T03:29:57.876527+00:00",
+  "catalog_commit": "e4fdde9d7c128f79eb19cf99ea07e2e9b628127a",
+  "index_sha256": "deb759f53fbbbdbc40f712542d28de4990756bf752048dde1284ae0611f132dd",
+  "results": [
+    {
+      "test": "final-python-tests",
+      "command": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\.venv-validation-r18\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 1,
+      "seconds": 51.109,
+      "log": "docs/validations/official-scope/final-python-tests.log",
+      "sha256": "ba8001f23828791040bed0b9ea4503c5a3c61c2cdc8df481d91b808522cdb342",
+      "tests": 79
+    }
+  ],
+  "scope": "Local unit tests and the real CI validation entry point against the published exact catalog commit. Does not claim hosted GetAll CI, game execution or publication of this working tree."
+}

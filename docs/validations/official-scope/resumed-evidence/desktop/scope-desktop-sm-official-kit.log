@@ -1,0 +1,12 @@
+PASS SM OFFICIAL new official profile is parsed
+PASS SM OFFICIAL redirected source URL cannot enter compiler
+PASS SM OFFICIAL source-only recipe cannot claim a game executable
+PASS SM OFFICIAL unreviewed build instructions cannot enter compiler
+PASS SM OFFICIAL changed archive cannot enter compiler
+PASS SM OFFICIAL real official archive stages verified sources without claiming runtime readiness
+PASS SM OFFICIAL kit contains neither a compiled game nor commercial media
+PASS SM OFFICIAL changed original member rejects even the otherwise exact kit
+PASS SM OFFICIAL invalid original ROM is rejected before dependency setup or compilation
+PASS SM OFFICIAL rejected ROM preserves the immutable kit, original media and resumable state
+PASS SM OFFICIAL negative original-media test creates no compiler workspace
+SM_OFFICIAL_KIT_PASS sm (source identity and negative media only; no original-media install, boot or gameplay)

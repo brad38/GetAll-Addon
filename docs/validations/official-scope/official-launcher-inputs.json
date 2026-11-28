@@ -1,0 +1,88 @@
+{
+  "ssx": {
+    "url": "https://github.com/AmarilloNL/ssx-recomp/releases/download/v2.0.1/ssx-recomp-v2.0.1-Windows-x64.zip",
+    "bytes": 423102,
+    "sha256": "66f0188ca2ba84166574833dc01bd9dbad5d356f28babbed7dc8efe15ad185a4",
+    "members": [
+      {
+        "path": "recomplauncher.json",
+        "bytes": 11965,
+        "sha256": "590ee33596962f9d01656c9ac6c2981bc74c0afed89bdefbb4705cbcd129b9e1"
+      },
+      {
+        "path": "ssx-recomp.exe",
+        "bytes": 483840,
+        "sha256": "556155833cc4c23859f1f17ec0226e699b1569e4dbd49795ba25707038ac80f9"
+      }
+    ],
+    "negative_tests": [
+      {
+        "arguments": [
+          "--prepare"
+        ],
+        "exit_code": 2,
+        "expected": 2,
+        "stdout": "",
+        "stderr": "Usage: ssx-recomp.exe [--prepare] --game <your SSX .iso, or its extracted folder> [--folder <folder>] [--title-update <file>] [--dlc <file>]...\n",
+        "scope": "official CLI negative fixture; not original-media installation, first boot or gameplay"
+      },
+      {
+        "arguments": [
+          "--prepare",
+          "--game",
+          "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\ssx\\release\\nonexistent.iso"
+        ],
+        "exit_code": 10,
+        "expected": 10,
+        "stdout": "Your copy of SSX wasn't found: C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\ssx\\release\\nonexistent.iso\n",
+        "stderr": "",
+        "scope": "official CLI negative fixture; not original-media installation, first boot or gameplay"
+      }
+    ],
+    "local_directory": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\ssx\\release"
+  },
+  "additional_sources": [
+    {
+      "path": "launcher/forza_launcher/cli.py",
+      "url": "https://raw.githubusercontent.com/FH1-ReImagined/ForzaHorizon1-ReImagined/46d5ed62866af68700d15c61748df8c29ad0248d/launcher/forza_launcher/cli.py",
+      "sha256": "4ba4b48f7f8a0ec5d09ff7dc6219d36e35a2c08e4bda8028eb1da48fc6fb0fb2",
+      "bytes": 5957,
+      "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\fh1\\launcher\\forza_launcher\\cli.py"
+    },
+    {
+      "path": "launcher/PinyonShift.Launcher/App.xaml.cs",
+      "url": "https://raw.githubusercontent.com/arcanite24/pinyon-shift/850518ce00c66d65557bcbf190a62d2e2a6bb0e3/launcher/PinyonShift.Launcher/App.xaml.cs",
+      "sha256": "545fc8ce7f76f26414e3450cbe0535bd1bbef1a6b984becab0f6dd360bc91600",
+      "bytes": 99,
+      "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\pinyon\\launcher\\PinyonShift.Launcher\\App.xaml.cs"
+    },
+    {
+      "path": "launcher/PinyonShift.Launcher.Desktop/Program.cs",
+      "url": "https://raw.githubusercontent.com/arcanite24/pinyon-shift/850518ce00c66d65557bcbf190a62d2e2a6bb0e3/launcher/PinyonShift.Launcher.Desktop/Program.cs",
+      "sha256": "c5619f6e04fa1e353bebf59d2514f256673a8ba056f13ac0508a5c8f63e18a49",
+      "bytes": 358,
+      "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\pinyon\\launcher\\PinyonShift.Launcher.Desktop\\Program.cs"
+    },
+    {
+      "path": "gow-launcher/crates/gow-core/src/installer.rs",
+      "url": "https://raw.githubusercontent.com/danielalves96/gow-pc-port/adebc00e69d4395318c94523f345b26c7daf3451/gow-launcher/crates/gow-core/src/installer.rs",
+      "sha256": "ba07a620c9bd19b69a743987b14e9f86064d32b01902fd4643d9f1740f32af65",
+      "bytes": 32114,
+      "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\gow\\gow-launcher\\crates\\gow-core\\src\\installer.rs"
+    },
+    {
+      "path": "gow-launcher/crates/gow-cli/src/main.rs",
+      "url": "https://raw.githubusercontent.com/danielalves96/gow-pc-port/adebc00e69d4395318c94523f345b26c7daf3451/gow-launcher/crates/gow-cli/src/main.rs",
+      "sha256": "b0f0ac9e751d5d81fef0c3d1a48f951f9e2df93de0ab4251fbc0de36e74e7e4d",
+      "bytes": 8493,
+      "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\gow\\gow-launcher\\crates\\gow-cli\\src\\main.rs"
+    },
+    {
+      "path": "scripts/package.ps1",
+      "url": "https://raw.githubusercontent.com/AmarilloNL/ssx-recomp/bdef7c73d774b200ee97d4722c0c2c62ee58edf8/scripts/package.ps1",
+      "sha256": "378ac6f85a2c1f9a05b4ddbce8a8de92449876d630068858d43f9923fd06fa1b",
+      "bytes": 5716,
+      "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\ssx\\scripts\\package.ps1"
+    }
+  ]
+}

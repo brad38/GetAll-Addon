@@ -1,5 +1,47 @@
 # Checkpoint do GetAll-Addon
 
+## Retomada final dos contratos oficiais — 28/11/2026
+
+Catálogo fixado e publicamente conferido: **e4fdde9d7c128f79eb19cf99ea07e2e9b628127a**,
+108 jogos, 137 projetos ativos e 11 arquivados. Índice final SHA-256
+**deb759f53fbbbdbc40f712542d28de4990756bf752048dde1284ae0611f132dd**: 146 receitas, 133 experimental,
+uma validated histórica e 12 disabled; **134 contratos/projetos ativos**.
+
+A matriz registra **134 implementadas, zero parciais e três bloqueadas**.
+Sintéticos: **15 atuais positivos, 13 históricos,
+1 falha de configuração e 108 desconhecidos**.
+Mídia e boot: um relato histórico cada; gameplay: 137 desconhecidos.
+Nesta retomada, zero instalações completas, zero boots e zero sessões de
+gameplay com mídia original. A única validated continua SM64 Coop Deluxe v1.5.1.
+
+Foram restauradas as rotas oficiais de SSX, FH1, GOW Daniel, Pinyon, SoH,
+sm64ex, Render96ex, SM64RT, SM, SM Rewrite, GT5, GOW KIexster e MKDD.
+SM64Plus/CTR foram completados e Shadow of Rome preserva o preset oficial
+integral da primeira inicialização. StrikersRecomp, VandalHearts e REDRIVER2
+ficam suspensos pelos impedimentos concretos documentados, mantendo os
+procedimentos oficiais e a elegibilidade upstream.
+
+Validação final: **79 testes Python**, ponto de entrada CI local,
+146 receitas e hashes/evidências; Desktop **2312 checks**, parser **146/146**,
+build e testes individuais de kits. Uma asserção antiga de CTR ainda esperava
+a cópia manual; foi atualizada para conferir a importação verificada e o teste
+completo passou. O log intermediário está preservado.
+
+O complemento final é **TESTE 1.5.76 / SDK mínimo 1.5.70**, em ZIP com somente
+addon.json e responses.json. O recibo gerado depois do commit fixa os dois SHAs.
+O catálogo já foi confirmado remoto; o envio GetAll e seu CI hospedado são
+responsabilidade da integração final, sem inferi-los do pacote local.
+
+Registros: [matriz](INSTALLATION-COVERAGE.md),
+[contratos e impedimentos](OFFICIAL-CONTRACT-RESTORATION-20261128.md),
+[recibos e reprodução](validations/official-scope/README.md).
+Sem merge main, release pública, mudança de version.json ou substituição
+da instalação corrente.
+
+As seções seguintes conservam o histórico e os números de cada etapa.
+
+---
+
 ## Revisão de elegibilidade e fidelidade — 27/11/2026
 
 Este checkpoint substitui a antiga conclusão de **142/148 fluxos integrais**.

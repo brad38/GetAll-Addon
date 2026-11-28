@@ -1,0 +1,549 @@
+{
+  "reviewed_at": "2026-11-28",
+  "method": "Text-only snapshots; originals are unchanged. UTF-16/Windows OEM CP850/CRLF logs normalized to UTF-8 LF with both hashes recorded.",
+  "files": [
+    {
+      "origin": "scope-desktop-sm64plus-official-kit.log",
+      "origin_bytes": 1286,
+      "origin_sha256": "c067f464a1fdca8e1e15969e0c00fbdd5cfdebddef31eee6f2e2786aabb3e32f",
+      "origin_encoding": "utf-16",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm64plus-official-kit.log",
+      "bytes": 635,
+      "sha256": "c7bccb45baeb56938e5eb3060052287632bc11817206b483e790ad90feac1c69",
+      "pass_lines": 6
+    },
+    {
+      "origin": "scope-desktop-sm64ex-official-kit.log",
+      "origin_bytes": 1426,
+      "origin_sha256": "cc07dd08507fa69153bc561e0c8e561a7aac96ee55c286ddbbe4af9775ebaeda",
+      "origin_encoding": "utf-16",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm64ex-official-kit.log",
+      "bytes": 704,
+      "sha256": "1c31beadd17b6706927e5afb9d9575c2a14f4e147c848e98476f6e89543ad050",
+      "pass_lines": 7
+    },
+    {
+      "origin": "scope-desktop-render96ex-official-kit.log",
+      "origin_bytes": 1442,
+      "origin_sha256": "fedc522b6ee46361f207d560c761702c6897b3e055b6249e84b774319fd0eb42",
+      "origin_encoding": "utf-16",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-render96ex-official-kit.log",
+      "bytes": 712,
+      "sha256": "40fd9f79cea4f222acf95de04499fa52cfa912812ad45fcbfa2d48e58b136994",
+      "pass_lines": 7
+    },
+    {
+      "origin": "scope-desktop-sm64rt-official-kit.log",
+      "origin_bytes": 1426,
+      "origin_sha256": "cb2d5d78638d345e5ff936efc1c08ca283cad5665b06eb3ad117c3ebb6b51b93",
+      "origin_encoding": "utf-16",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm64rt-official-kit.log",
+      "bytes": 704,
+      "sha256": "981a0b491285b49e46b3f92c3b886144b1343b077c8fe8fe7017e1ada70ab3e1",
+      "pass_lines": 7
+    },
+    {
+      "origin": "scope-desktop-sm-official-kit.log",
+      "origin_bytes": 1868,
+      "origin_sha256": "197f4c6b833aa59ed29f47892169951adee38ffd002e64b64f1df4f00d5543ba",
+      "origin_encoding": "utf-16",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm-official-kit.log",
+      "bytes": 921,
+      "sha256": "600afc97c3721fee00c48ee285a25bd8a057dcdf63dbb647d547d2c04321a8d3",
+      "pass_lines": 11
+    },
+    {
+      "origin": "scope-desktop-sm-rewrite-official-kit.log",
+      "origin_bytes": 1884,
+      "origin_sha256": "b58856cf1fc7324262e14b4f033725375e848c29c92f6956a7338a787c8706d3",
+      "origin_encoding": "utf-16",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm-rewrite-official-kit.log",
+      "bytes": 929,
+      "sha256": "2da269a4009bf59ff4dffeceb089ce1bc9c381b581e71215df98fcf699339f09",
+      "pass_lines": 11
+    },
+    {
+      "origin": "scope-desktop-ssx-official-kit.log",
+      "origin_bytes": 982,
+      "origin_sha256": "870c75c219ba54086c0d147458aff97298fde5cea00290b9cf89475aa7fe6f0a",
+      "origin_encoding": "utf-16",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-ssx-official-kit.log",
+      "bytes": 483,
+      "sha256": "c95b14cfb9b8a74ca0884467520e18b88c6e5974b42249376a2fcbfe97dd6d98",
+      "pass_lines": 6
+    },
+    {
+      "origin": "scope-desktop-fh1-official-kit.log",
+      "origin_bytes": 554,
+      "origin_sha256": "cdcb2e65522039a0633e06690052c4c9518b8536b2793d889353b879ccfd8fa5",
+      "origin_encoding": "utf-16",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-fh1-official-kit.log",
+      "bytes": 272,
+      "sha256": "160d887e95faf7fef2e12d84b5149fda066d649bec7cc6aa7b7da95fc3009327",
+      "pass_lines": 3
+    },
+    {
+      "origin": "scope-desktop-gt5-official-kit-final.log",
+      "origin_bytes": 809,
+      "origin_sha256": "858c01c419d5d577c8d2c1d120ce4abd8999afea908dac68e2af9c37b39cf16c",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-gt5-official-kit-final.log",
+      "bytes": 800,
+      "sha256": "090b17ef5ed78e9a08777b2cad25d74f33ef76c2e9b75475869a29fbf3fb5fc6",
+      "pass_lines": 8
+    },
+    {
+      "origin": "scope-desktop-kiexster-official-kit-final.log",
+      "origin_bytes": 816,
+      "origin_sha256": "2eee0279ce588703bb827db5730096c2f614e86aacb45e28b91da1895191387d",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-kiexster-official-kit-final.log",
+      "bytes": 807,
+      "sha256": "710a82a82193bdd51c63368a1b8bf93a4be4b9486069c974f783aa0fa60a3ddd",
+      "pass_lines": 8
+    },
+    {
+      "origin": "scope-desktop-kiexster-official-extractor-final.log",
+      "origin_bytes": 250,
+      "origin_sha256": "dda6ca249df92662c362cb6dc36c98aa6597b5d2e9f2a53e32d640884c2b7458",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-kiexster-official-extractor-final.log",
+      "bytes": 247,
+      "sha256": "7260fdccf1795be5ec214dfae0aa66d9e3e5097f66d2ff02070a7d2406ce1502",
+      "pass_lines": 3
+    },
+    {
+      "origin": "scope-desktop-msvc-official-installed-final.log",
+      "origin_bytes": 500,
+      "origin_sha256": "94505406e8994dc15d12ff04195b588f8a8f4cfeb63ee6a02b45893be9981d89",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-msvc-official-installed-final.log",
+      "bytes": 493,
+      "sha256": "2a7f94e419edb1b64af68455d7e8bb2d2e2df639f7e3673078dc9643ef1a73fa",
+      "pass_lines": 5
+    },
+    {
+      "origin": "scope-desktop-shadow-rome-defaults.log",
+      "origin_bytes": 1226,
+      "origin_sha256": "0908905497478a714702d556251075224ffcfcb9d53b49040b1f4796a4d2a921",
+      "origin_encoding": "utf-16",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-shadow-rome-defaults.log",
+      "bytes": 605,
+      "sha256": "656342516dc856f97609296e64c58ec4d94a79ca1f21b0e1bdb8ae9b098fd564",
+      "pass_lines": 7
+    },
+    {
+      "origin": "scope-desktop-soh-official-kit-final.log",
+      "origin_bytes": 289,
+      "origin_sha256": "24b396a0db3ab01a85c73e10fe22e37f2022948238969ff08c1cee95a4d72eda",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-soh-official-kit-final.log",
+      "bytes": 285,
+      "sha256": "4347f85b5a75606557879b5447eec0754a230ec0b75177afeb56624185ead412",
+      "pass_lines": 3
+    },
+    {
+      "origin": "scope-desktop-mkdd-official-kit-final.log",
+      "origin_bytes": 789,
+      "origin_sha256": "6ac7e39c07e4b08ad40b3e09f4ccab96daaec9c95139650e1938dcc0f117a0fa",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-mkdd-official-kit-final.log",
+      "bytes": 779,
+      "sha256": "c5ad49c5eaaef0202ee5fbd5729565d647d190ae62dc6e5ad3b14e6bf89803c9",
+      "pass_lines": 9
+    },
+    {
+      "origin": "scope-desktop-suite-final.log",
+      "origin_bytes": 183664,
+      "origin_sha256": "ad10db851c4933b9ea36587c2c5cde2b4eca989a359a7898b4d493c652176e94",
+      "origin_encoding": "cp850",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-suite-final.log",
+      "bytes": 181494,
+      "sha256": "5469760c9c964e790dd863eb2ab98e849b3ee8af74956111d0386f9f703711ee",
+      "pass_lines": 2312
+    },
+    {
+      "origin": "scope-desktop-source-parser-latest.log",
+      "origin_bytes": 299930,
+      "origin_sha256": "256cde135d1d14349f469a1bac4e6a91a0b21736dece816f0f1076dbf5af0187",
+      "origin_encoding": "utf-16",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-source-parser-latest.log",
+      "bytes": 148063,
+      "sha256": "ce14596135003d20e93d1a9d2ebac8deec3dd2e3d2e42090debfe93faee51c9a",
+      "pass_lines": 1902
+    },
+    {
+      "origin": "scope-desktop-gow-official-kit-final.log",
+      "origin_bytes": 942,
+      "origin_sha256": "e04f49c45f45d2ab5c5dbd052cdcac860883142f5fd6d5cd05cfedde37c2b45f",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-gow-official-kit-final.log",
+      "bytes": 933,
+      "sha256": "02406eb747e74e6f763171c5b743d904a61a422a90bc2992e651a252dadcbb66",
+      "pass_lines": 8
+    },
+    {
+      "origin": "scope-desktop-harness-build-final.log",
+      "origin_bytes": 605,
+      "origin_sha256": "3aee7dfba424127670b1571aa1b146391d64a31aee1b7233073a038239e336a7",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-harness-build-final.log",
+      "bytes": 594,
+      "sha256": "0b2c3e79fcc8544f98723a73dcdb87a8dc77249f36401955a807f6155eba5fda",
+      "pass_lines": 0
+    },
+    {
+      "origin": "scope-desktop-javascript-final.log",
+      "origin_bytes": 983,
+      "origin_sha256": "48036814e2d152e1bf5a86fbeaa052b4ba40c18d6c37fc43ea5453ada0253c60",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-javascript-final.log",
+      "bytes": 983,
+      "sha256": "48036814e2d152e1bf5a86fbeaa052b4ba40c18d6c37fc43ea5453ada0253c60",
+      "pass_lines": 0
+    },
+    {
+      "origin": "scope-desktop-official-source-policy-final.log",
+      "origin_bytes": 1480,
+      "origin_sha256": "f7e59c584a1d06751cc760d96e1bb711b5dbb78019adde1087c815af9f838a92",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-official-source-policy-final.log",
+      "bytes": 1462,
+      "sha256": "84c4f6a8f79cc307c34e736c20c92141132b1413d9d7b7568de8eaee8356b33d",
+      "pass_lines": 18
+    },
+    {
+      "origin": "scope-desktop-parser-final.log",
+      "origin_bytes": 152968,
+      "origin_sha256": "abeeb26dcec400e677639c92e2f68a0d05907daef6185d40dae8ba2de3b4abc9",
+      "origin_encoding": "cp850",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-parser-final.log",
+      "bytes": 151033,
+      "sha256": "63ec539c533b1e33774dc72395b441a3be434e5f8e6ecb2c912b4ae3445c65b6",
+      "pass_lines": 1936
+    },
+    {
+      "origin": "scope-desktop-pinyon-official-kit-final.log",
+      "origin_bytes": 1154,
+      "origin_sha256": "a71b08c450052c77f02bf99d2c2da0434508c087a5f3f13ae7d2c52e36285d45",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-pinyon-official-kit-final.log",
+      "bytes": 1143,
+      "sha256": "6aaf2616cbd8ac261fb8801dba5effd09d54ff14ec3240a2565c0cbb86acec69",
+      "pass_lines": 10
+    },
+    {
+      "origin": "scope-desktop-shadow-rome-official-kit-final.log",
+      "origin_bytes": 340,
+      "origin_sha256": "edce423420f27fa7850f4b63936e563c026f373c58c7f2560f3318bcad5351c8",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-shadow-rome-official-kit-final.log",
+      "bytes": 334,
+      "sha256": "45c8806dc306ad60d38d71cca5d1d42f5a78da87d478b47397b4adb9559751ad",
+      "pass_lines": 6
+    },
+    {
+      "origin": "scope-desktop-ui-build-final.log",
+      "origin_bytes": 629,
+      "origin_sha256": "b1bd20a64adcbdabe210b90c5cd642e5d19a4af6117b0353bb762cce41617496",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-ui-build-final.log",
+      "bytes": 618,
+      "sha256": "17e54ef3cc131348d2ad1c94339e435d50e1356ce4fe7c102fb24241f1e36a50",
+      "pass_lines": 0
+    },
+    {
+      "origin": "scope-desktop-source-kits-results.json",
+      "origin_bytes": 898,
+      "origin_sha256": "202c8f0eb23f6c9bad216c7fa88e11bf071d46ef701881e0798918e7fa23dfe0",
+      "origin_encoding": "utf-8-sig",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-source-kits-results.json",
+      "bytes": 857,
+      "sha256": "3d696201e918cff8d04e748713a3b41ba3cd9c64b73b9c0104d566a7e0f36096"
+    },
+    {
+      "origin": "scope-desktop-source-regression-results.json",
+      "origin_bytes": 1004,
+      "origin_sha256": "764ac43c4654de1d8cf24699b4d09563762a5ecac16d29e09777e025c5d343c9",
+      "origin_encoding": "utf-8-sig",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-source-regression-results.json",
+      "bytes": 963,
+      "sha256": "0bcbd388e1f9f032d9e1de76bfea8cdd29d4fb5e7e6e74d0886e37cd407bf48b"
+    },
+    {
+      "origin": "scope-desktop-source-parser.json",
+      "origin_bytes": 52118,
+      "origin_sha256": "bc14f176dd4fa0609592d7a984ba3b643e8377ebf13f500f96ac561338fd78a6",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-source-parser.json",
+      "bytes": 50360,
+      "sha256": "3b4255397b40f1d6a9193fbbcb85c8b8acb5b12eb5f27d4ceaee17462ae938e5"
+    },
+    {
+      "origin": "scope-desktop-final-parser.json",
+      "origin_bytes": 51806,
+      "origin_sha256": "53fc94cf47c235ac4957b3d30de228c0c261cae49b9fa50189c54bc47b2317d6",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-final-parser.json",
+      "bytes": 50048,
+      "sha256": "58929899461816204d08ffcb8e93bc65afccaf922f2aa45bd1127d0968cf06a4"
+    },
+    {
+      "origin": "scope-desktop-final-validation-results.json",
+      "origin_bytes": 3934,
+      "origin_sha256": "d6c542ed47476bddc72d2c89785c788fd98ffdd6a93a129672ad2a299311a68f",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-final-validation-results.json",
+      "bytes": 3827,
+      "sha256": "cb1809d68aa1767fdb39fb3ed819a49c9b1ffaa8c1044c83e88d5cf119a2ed25"
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/sm-official/build-result.json",
+      "origin_bytes": 1748,
+      "origin_sha256": "5a697b95e7457189a9a4ae9f40e9a657dc8c8453775305870b4bf73a64dc6e7d",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/sm-official/build-result.json",
+      "bytes": 1748,
+      "sha256": "5a697b95e7457189a9a4ae9f40e9a657dc8c8453775305870b4bf73a64dc6e7d"
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/sm-official/build.log",
+      "origin_bytes": 1825,
+      "origin_sha256": "dd0abe5f6af21347968766a0071eef29fd6ab4a3108c6955eb52008a1978980d",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/sm-official/build.log",
+      "bytes": 1758,
+      "sha256": "76cd1c75f480f5522a31eba4b9462a2a3d6c5af09de53515b44b4c88fe4b9d3c",
+      "pass_lines": 0
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/sm-official/source-before.json",
+      "origin_bytes": 11252,
+      "origin_sha256": "1b09fea3974c35928858fb1550d2cc8dd876f5953a94f7ec73e750615f635fa1",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/sm-official/source-before.json",
+      "bytes": 11252,
+      "sha256": "1b09fea3974c35928858fb1550d2cc8dd876f5953a94f7ec73e750615f635fa1"
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/sm-official/native-no-rom-result.json",
+      "origin_bytes": 144,
+      "origin_sha256": "8ecb873e549067b364e124e24f50ac6ee7089fb590161de593bc1727f6e6584a",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/sm-official/native-no-rom-result.json",
+      "bytes": 144,
+      "sha256": "8ecb873e549067b364e124e24f50ac6ee7089fb590161de593bc1727f6e6584a"
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/sm-rewrite-official/build-result.json",
+      "origin_bytes": 1575,
+      "origin_sha256": "22b3fea5892e11096099d744f94b914271e251c8065ca377e8db0835821ff85b",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/sm-rewrite-official/build-result.json",
+      "bytes": 1575,
+      "sha256": "22b3fea5892e11096099d744f94b914271e251c8065ca377e8db0835821ff85b"
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/sm-rewrite-official/build.log",
+      "origin_bytes": 355631,
+      "origin_sha256": "fd229a7b66ca04ec328daaa59c758fcf433ec01ef004935aea14ecbdba5836f9",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/sm-rewrite-official/build.log",
+      "bytes": 355571,
+      "sha256": "9800375c30610972c2d89cb85fe388f9c74338b2ca2ac373d2ebf4bb032edd77",
+      "pass_lines": 0
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/sm-rewrite-official/source-before.json",
+      "origin_bytes": 18178,
+      "origin_sha256": "5460a57cb94a26bb1e6659e5202f34694ade0cd03a269b8eb3822c08dc811037",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/sm-rewrite-official/source-before.json",
+      "bytes": 18178,
+      "sha256": "5460a57cb94a26bb1e6659e5202f34694ade0cd03a269b8eb3822c08dc811037"
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/sm-rewrite-official/native-no-rom-result.json",
+      "origin_bytes": 1302,
+      "origin_sha256": "a7c2ace93957dfca179c4a32aa93a7de915d44f7e292d9e8c4875ce55d53f370",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/sm-rewrite-official/native-no-rom-result.json",
+      "bytes": 1302,
+      "sha256": "a7c2ace93957dfca179c4a32aa93a7de915d44f7e292d9e8c4875ce55d53f370"
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/mkdd-official/build-result.json",
+      "origin_bytes": 2969,
+      "origin_sha256": "a55966f72573ede6024e80fae28999c6217ee8bfffe391546f841ebb138c8c2e",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/mkdd-official/build-result.json",
+      "bytes": 2969,
+      "sha256": "a55966f72573ede6024e80fae28999c6217ee8bfffe391546f841ebb138c8c2e"
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/mkdd-official/build-official.log",
+      "origin_bytes": 279234,
+      "origin_sha256": "c5144fa4c154b6d6285412d7a6c995c4a9b525dca1cbb3d6cfee5892892fc3db",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/mkdd-official/build-official.log",
+      "bytes": 276730,
+      "sha256": "cfd25243eb96af3e2bf927d6ee7d1403b3e15188c7efee718eca05b2157b760f",
+      "pass_lines": 0
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/mkdd-official/combined-source-manifest.json",
+      "origin_bytes": 27498,
+      "origin_sha256": "93bb9b8ed00713ca3986d1ecace501d845595952e1e4f8ffa02eba9323a726b3",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/mkdd-official/combined-source-manifest.json",
+      "bytes": 26666,
+      "sha256": "a71b6f86d39893f10c100edc818a84f343cc6e3dcb5ce18057823f6ac8ecea70"
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/mkdd-official/negative-extraction.log",
+      "origin_bytes": 143,
+      "origin_sha256": "9db855f86f82ba7ce06ba1a334e4ff770e7996589fb7bddd6d407f9960b0c053",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/mkdd-official/negative-extraction.log",
+      "bytes": 142,
+      "sha256": "35ff7bb740e750de664b3e646d92239b88a3be73dd27fd878708030ad24045e2",
+      "pass_lines": 0
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/mkdd-official/source-receipt.json",
+      "origin_bytes": 335,
+      "origin_sha256": "dc48250b71d1f2a721ed63baee48edd803954a58a9ac45e33ce1f493433b7852",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/mkdd-official/source-receipt.json",
+      "bytes": 328,
+      "sha256": "4259dee491f323c4ceb7b090fbb3dd7a6eeb19e5a901114ae6955e76609483d1"
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/mkdd-official/gcn-receipt.json",
+      "origin_bytes": 319,
+      "origin_sha256": "eb956031180aeb87e3baddd1f6b99b44b7d600354f4103eb80a11eca228f9aa0",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/mkdd-official/gcn-receipt.json",
+      "bytes": 312,
+      "sha256": "d7420d508577495d1b3e5998d813391d6e1a6f65845b4bc55a7648b09ef8e107"
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/kiexster-official-extractor/result.json",
+      "origin_bytes": 294,
+      "origin_sha256": "7b49068538cde753eacf48c3ebed1a972a5d63c31642fd4ff6fcbbedf90f13b8",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/kiexster-official-extractor/result.json",
+      "bytes": 284,
+      "sha256": "0c8f2e41f261281c1eba97ce4be87d078783326a1daeb65c01ab1d844200bb4c"
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/kiexster-official-extractor/extractor.log",
+      "origin_bytes": 49,
+      "origin_sha256": "23d2fe8e9d723fe17e00fe7082e4488ce4eeec24deed5e8513971d71539cfc9c",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/kiexster-official-extractor/extractor.log",
+      "bytes": 48,
+      "sha256": "4ac03771cacc363790231369de608f7d01891d9eddd9774e387c25555b437a6a",
+      "pass_lines": 0
+    },
+    {
+      "origin": "evidence-r18/official-scope-20261127/msvc-official/dotnet-smoke/msvc-smoke-result.json",
+      "origin_bytes": 1313,
+      "origin_sha256": "7231160f289ac0c4ef676e4d21169c17aa181275247a0a731d801ac05c600b75",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/native/msvc-official/msvc-smoke-result.json",
+      "bytes": 1292,
+      "sha256": "a8ffeabcc288d69ff62bb39ae1197212f57549c859051b72dbc7c86e0589f7d2"
+    },
+    {
+      "origin": "desktop-scope-20261127/Tools/NativeExtractors/SoH/build-evidence.json",
+      "origin_bytes": 3849,
+      "origin_sha256": "9ce91bb47265bf7faf96e83a36e80cce222d51084a4a1642f86ef0fbc2c2fc31",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/torch/build-evidence.json",
+      "bytes": 3849,
+      "sha256": "9ce91bb47265bf7faf96e83a36e80cce222d51084a4a1642f86ef0fbc2c2fc31"
+    },
+    {
+      "origin": "desktop-scope-20261127/Tools/NativeExtractors/SoH/native-probe-evidence.json",
+      "origin_bytes": 10096,
+      "origin_sha256": "fda37775f4f9e75d11e2a978561f7bbf32c99e82a0fef2b475f89d34c1a289f3",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/torch/native-probe-evidence.json",
+      "bytes": 10096,
+      "sha256": "fda37775f4f9e75d11e2a978561f7bbf32c99e82a0fef2b475f89d34c1a289f3"
+    },
+    {
+      "origin": "desktop-scope-20261127/Tools/NativeExtractors/SoH/recipe-validation.json",
+      "origin_bytes": 433,
+      "origin_sha256": "c2fad653a75873ae7794d2edafbba65bd7c9da8f089d8b2d14c50d4daebaf6cc",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/torch/recipe-validation.json",
+      "bytes": 433,
+      "sha256": "c2fad653a75873ae7794d2edafbba65bd7c9da8f089d8b2d14c50d4daebaf6cc"
+    },
+    {
+      "origin": "desktop-scope-20261127/Tools/NativeExtractors/SoH/source-files.sha256.json",
+      "origin_bytes": 86261,
+      "origin_sha256": "af5b4e0a887868a83bbcbe72396ce441bde83862e47139236aeb43d535bedd7e",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/torch/source-files.sha256.json",
+      "bytes": 86261,
+      "sha256": "af5b4e0a887868a83bbcbe72396ce441bde83862e47139236aeb43d535bedd7e"
+    },
+    {
+      "origin": "desktop-scope-20261127/Tools/NativeExtractors/SoH/upstream.json",
+      "origin_bytes": 2994,
+      "origin_sha256": "c8ee0591eccdb8595f97ff2e58206390fa06234b90dbc4b1c56dcfd8ec796bf8",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/torch/upstream.json",
+      "bytes": 2994,
+      "sha256": "c8ee0591eccdb8595f97ff2e58206390fa06234b90dbc4b1c56dcfd8ec796bf8"
+    },
+    {
+      "origin": "desktop-scope-20261127/Tools/NativeExtractors/SoH/wrapper-compile-evidence.json",
+      "origin_bytes": 3142,
+      "origin_sha256": "609108433b5f05628108c431e90812294f7961171baf70b6805f975c71fe9d64",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/torch/wrapper-compile-evidence.json",
+      "bytes": 3142,
+      "sha256": "609108433b5f05628108c431e90812294f7961171baf70b6805f975c71fe9d64"
+    },
+    {
+      "origin": "desktop-scope-20261127/Tools/NativeExtractors/SoH/README.md",
+      "origin_bytes": 6279,
+      "origin_sha256": "eff94ccad1b2a76906b5c1c7a1a1ae50275a8c9770f815f609581c9a84f407f3",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/torch/README.md",
+      "bytes": 6279,
+      "sha256": "eff94ccad1b2a76906b5c1c7a1a1ae50275a8c9770f815f609581c9a84f407f3"
+    },
+    {
+      "origin": "desktop-scope-20261127/Tools/NativeExtractors/SoH/LICENSE-Torch.txt",
+      "origin_bytes": 1081,
+      "origin_sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/torch/LICENSE-Torch.txt",
+      "bytes": 1081,
+      "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af"
+    },
+    {
+      "origin": "desktop-scope-20261127/docs/audits/official-installation-20261127/shadow-rome-firststart.json",
+      "origin_bytes": 1732,
+      "origin_sha256": "08fd05adfe1656b1d3e801fc40f1d9e395f85fa864a93237ff14999cda0d47dd",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/contracts/shadow-rome-firststart.json",
+      "bytes": 1732,
+      "sha256": "08fd05adfe1656b1d3e801fc40f1d9e395f85fa864a93237ff14999cda0d47dd"
+    },
+    {
+      "origin": "desktop-scope-20261127/docs/audits/official-installation-20261127/GOW-PINYON-OFFICIAL-CONTRACTS.md",
+      "origin_bytes": 8116,
+      "origin_sha256": "0540457bcc39656e83403aa2d13aa35219dcef5a00e3d55ac8463984140ff1a0",
+      "origin_encoding": "utf-8",
+      "path": "docs/validations/official-scope/resumed-evidence/contracts/GOW-PINYON-OFFICIAL-CONTRACTS.md",
+      "bytes": 8116,
+      "sha256": "0540457bcc39656e83403aa2d13aa35219dcef5a00e3d55ac8463984140ff1a0"
+    }
+  ]
+}

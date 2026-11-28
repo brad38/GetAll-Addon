@@ -1,0 +1,107 @@
+[
+  {
+    "test": "mkdd-official-kit",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-mkdd-official-kit-final.log",
+    "passes": 9,
+    "log_sha256": "6ac7e39c07e4b08ad40b3e09f4ccab96daaec9c95139650e1938dcc0f117a0fa"
+  },
+  {
+    "test": "soh-official-kit",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-soh-official-kit-final.log",
+    "passes": 3,
+    "log_sha256": "24b396a0db3ab01a85c73e10fe22e37f2022948238969ff08c1cee95a4d72eda"
+  },
+  {
+    "test": "official-source-policy",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-official-source-policy-final.log",
+    "passes": 18,
+    "log_sha256": "f7e59c584a1d06751cc760d96e1bb711b5dbb78019adde1087c815af9f838a92"
+  },
+  {
+    "test": "gt5-official-kit",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-gt5-official-kit-final.log",
+    "passes": 8,
+    "log_sha256": "858c01c419d5d577c8d2c1d120ce4abd8999afea908dac68e2af9c37b39cf16c"
+  },
+  {
+    "test": "kiexster-official-kit",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-kiexster-official-kit-final.log",
+    "passes": 8,
+    "log_sha256": "2eee0279ce588703bb827db5730096c2f614e86aacb45e28b91da1895191387d"
+  },
+  {
+    "test": "kiexster-official-extractor",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-kiexster-official-extractor-final.log",
+    "passes": 3,
+    "log_sha256": "dda6ca249df92662c362cb6dc36c98aa6597b5d2e9f2a53e32d640884c2b7458"
+  },
+  {
+    "test": "suite",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-suite-final.log",
+    "passes": 2312,
+    "log_sha256": "ad10db851c4933b9ea36587c2c5cde2b4eca989a359a7898b4d493c652176e94"
+  },
+  {
+    "test": "parser",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-parser-final.log",
+    "passes": 1936,
+    "log_sha256": "abeeb26dcec400e677639c92e2f68a0d05907daef6185d40dae8ba2de3b4abc9"
+  },
+  {
+    "test": "msvc-official-installed",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-msvc-official-installed-final.log",
+    "passes": 5,
+    "log_sha256": "94505406e8994dc15d12ff04195b588f8a8f4cfeb63ee6a02b45893be9981d89"
+  },
+  {
+    "test": "javascript",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-javascript-final.log",
+    "passes": 0,
+    "log_sha256": "48036814e2d152e1bf5a86fbeaa052b4ba40c18d6c37fc43ea5453ada0253c60"
+  },
+  {
+    "test": "ui-build",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-ui-build-final.log",
+    "passes": 0,
+    "log_sha256": "b1bd20a64adcbdabe210b90c5cd642e5d19a4af6117b0353bb762cce41617496"
+  },
+  {
+    "test": "harness-build",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-harness-build-final.log",
+    "passes": 0,
+    "log_sha256": "3aee7dfba424127670b1571aa1b146391d64a31aee1b7233073a038239e336a7"
+  },
+  {
+    "test": "gow-official-kit",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-gow-official-kit-final.log",
+    "passes": 8,
+    "log_sha256": "e04f49c45f45d2ab5c5dbd052cdcac860883142f5fd6d5cd05cfedde37c2b45f"
+  },
+  {
+    "test": "pinyon-official-kit",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-pinyon-official-kit-final.log",
+    "passes": 10,
+    "log_sha256": "a71b08c450052c77f02bf99d2c2da0434508c087a5f3f13ae7d2c52e36285d45"
+  },
+  {
+    "test": "shadow-rome-official-kit",
+    "exit": 0,
+    "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\scope-desktop-shadow-rome-official-kit-final.log",
+    "passes": 6,
+    "log_sha256": "edce423420f27fa7850f4b63936e563c026f373c58c7f2560f3318bcad5351c8"
+  }
+]

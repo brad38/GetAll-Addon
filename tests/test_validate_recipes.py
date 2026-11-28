@@ -40,6 +40,7 @@ class ValidateRecipesTests(unittest.TestCase):
         shutil.copy2(REPO_ROOT / "index.json", tmp / "index.json")
         (tmp / "docs").mkdir()
         shutil.copy2(REPO_ROOT / "docs" / "official-install-policy.json", tmp / "docs" / "official-install-policy.json")
+        shutil.copytree(REPO_ROOT / "docs" / "retired-recipes", tmp / "docs" / "retired-recipes")
         # Normalize copied files in temp repo to LF for strict_lf tests
         for jf in tmp.rglob("*.json"):
             jf.write_bytes(jf.read_bytes().replace(b"\r\n", b"\n"))
@@ -68,6 +69,44 @@ class ValidateRecipesTests(unittest.TestCase):
         ok,errors,_=validate_recipes.validate_repository(tmp)
         self.assertFalse(ok)
         self.assertTrue(any("source-integrity policy" in e for e in errors),errors)
+
+    def test_reviewed_replacements_bind_exact_bytes_and_profile(self) -> None:
+        tmp = self._make_temp_repo()
+        policy = json.loads((tmp / "docs/official-install-policy.json").read_text(encoding="utf-8"))
+        self.assertTrue(policy["approved_recipe_replacements"])
+        index_path = tmp / "index.json"
+        index = json.loads(index_path.read_text(encoding="utf-8"))
+        replacement = policy["approved_recipe_replacements"][0]
+        entry = next(e for e in index["recipes"] if
+                     (e["project_id"], e["tag"]) ==
+                     (replacement["project_id"], replacement["tag"]))
+        # Even updating the index hash cannot make retired bytes executable.
+        old = (tmp / replacement["retired_path"]).read_bytes()
+        (tmp / entry["path"]).write_bytes(old)
+        entry["sha256"] = hashlib.sha256(old).hexdigest()
+        index_path.write_text(json.dumps(index), encoding="utf-8")
+        ok, errors, _ = validate_recipes.validate_repository(tmp)
+        self.assertFalse(ok)
+        self.assertTrue(any("source-integrity policy" in e for e in errors), errors)
+
+    def test_replacement_requires_preserved_retired_bytes(self) -> None:
+        tmp = self._make_temp_repo()
+        policy = json.loads((tmp / "docs/official-install-policy.json").read_text(encoding="utf-8"))
+        archived = tmp / policy["approved_recipe_replacements"][0]["retired_path"]
+        archived.write_bytes(archived.read_bytes() + b" ")
+        ok, errors, _ = validate_recipes.validate_repository(tmp)
+        self.assertFalse(ok)
+        self.assertTrue(any("Retired bytes/profile" in e for e in errors), errors)
+
+    def test_replacement_hash_does_not_allow_another_profile(self) -> None:
+        tmp = self._make_temp_repo()
+        policy_path = tmp / "docs/official-install-policy.json"
+        policy = json.loads(policy_path.read_text(encoding="utf-8"))
+        policy["approved_recipe_replacements"][0]["build_profile"] = "other-official-profile"
+        policy_path.write_text(json.dumps(policy), encoding="utf-8")
+        ok, errors, _ = validate_recipes.validate_repository(tmp)
+        self.assertFalse(ok)
+        self.assertTrue(any("source-integrity policy" in e for e in errors), errors)
 
     def test_disabled_history_still_requires_provenance_and_valid_hash(self) -> None:
         tmp=self._make_temp_repo()

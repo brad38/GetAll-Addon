@@ -1,0 +1,13 @@
+{
+  "schema_version": 5,
+  "project_id": "sm64rt",
+  "tag": "build-20e618b",
+  "source_url": "https://github.com/DarioSamo/sm64rt/commit/20e618b75ae4a6810bd92ac6a937cb167517aac5",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Selecione sua ROM original americana de Super Mario 64 (.z64). O motor verifica a midia, compila o port Windows x64 e prepara o RT64 e seu runtime local verificado. Nenhuma ROM e distribuida."
+}

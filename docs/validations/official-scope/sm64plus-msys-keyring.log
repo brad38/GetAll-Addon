@@ -1,0 +1,30 @@
+==> Gerando chave mestra do pacman. Isso pode levar algum tempo.
+==> Atualizando base de dados de confiança...
+==> Anexando chaves de msys2.gpg...
+==> Assinando localmente chaves confiáveis no chaveiro...
+  -> 5 chaves assinadas localmente.
+==> Importando valores de confiança do proprietário...
+==> Desabilitando chaves revogadas no chaveiro...
+  -> 4 chaves desabilitadas
+==> Atualizando base de dados de confiança...
+gpg: /etc/pacman.d/gnupg/trustdb.gpg: trustdb criada
+gpg: nenhumas chaves plenamente confiáveis encontradas
+gpg: starting migration from earlier GnuPG versions
+gpg: porting secret keys from '/etc/pacman.d/gnupg/secring.gpg' to gpg-agent
+gpg: migration succeeded
+gpg: Generating pacman keyring master key...
+gpg: pasta '/etc/pacman.d/gnupg/openpgp-revocs.d' criada
+gpg: certificado de revogação armazenado como '/etc/pacman.d/gnupg/openpgp-revocs.d/60EB8081C84E61F8C1C2DDD085E272B734A3A412.rev'
+gpg: Done
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: profundidade: 0 válidas:   1 assinadas:   0 confiáveis: 0-, 0i, 0n, 0m, 0c, 1p
+gpg: setting ownertrust to 4
+gpg: setting ownertrust to 4
+gpg: setting ownertrust to 4
+gpg: setting ownertrust to 4
+gpg: setting ownertrust to 4
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: profundidade: 0 válidas:   1 assinadas:   5 confiáveis: 0-, 0i, 0n, 0m, 0c, 1p
+gpg: profundidade: 1 válidas:   5 assinadas:   7 confiáveis: 0-, 0i, 0n, 5m, 0c, 0p
+gpg: profundidade: 2 válidas:   4 assinadas:   2 confiáveis: 4-, 0i, 0n, 0m, 0c, 0p
+gpg: próxima verificação da trustdb a 2027-02-10

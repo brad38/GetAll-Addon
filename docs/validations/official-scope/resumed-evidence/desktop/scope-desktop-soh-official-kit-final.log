@@ -1,0 +1,4 @@
+PASS SOH OFFICIAL real official release stages with the new profile
+PASS SOH OFFICIAL wrong ROM cannot invoke extractor or register playable output
+PASS SOH OFFICIAL invalid ROM preserves the intact prepared release
+SOH_OFFICIAL_KIT_PASS (no original-ROM extraction, boot or gameplay)

@@ -1,0 +1,42 @@
+{
+  "repository": "https://github.com/snesrev/sm",
+  "commit": "578f90b3cc49557bb70060ad033bb90b8cf8ac50",
+  "archive_url": "https://codeload.github.com/snesrev/sm/zip/578f90b3cc49557bb70060ad033bb90b8cf8ac50",
+  "archive_sha256": "fb6e66cc090147c9f6e2df2916b38327b7c479fe586f91aad02d4d5f7643ae6b",
+  "checked_at_utc": "2026-11-28T02:52:19.949240+00:00",
+  "command": [
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261127\\sm-official\\sm-578f90b3cc49557bb70060ad033bb90b8cf8ac50\\sm.sln",
+    "/restore",
+    "/p:RestorePackagesConfig=true",
+    "/p:Configuration=Release",
+    "/p:Platform=x64",
+    "/m:2",
+    "/verbosity:minimal",
+    "/nologo",
+    "/nodeReuse:false"
+  ],
+  "exit_code": 0,
+  "original_source_files": 124,
+  "changed_original_sources": [],
+  "output_directory": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261127\\sm-official\\sm-578f90b3cc49557bb70060ad033bb90b8cf8ac50\\build\\bin-x64-Release",
+  "outputs": {
+    "SDL2.dll": {
+      "bytes": 2509824,
+      "sha256": "0dd1ea6a6bf86a01a9ef0cff4247c446760f955e276e874a9db8e51ab8afe99f"
+    },
+    "sm.exe": {
+      "bytes": 1963520,
+      "sha256": "9840f8989bfd51452e3c5701f96c810c21298d6b1d0422f23b08f0a3cec29fe8"
+    },
+    "sm.ilk": {
+      "bytes": 4910658,
+      "sha256": "9d210e48c06cd2783f63287b9c528c6c7c63655fab7bc7cb95387f4baf04c571"
+    },
+    "sm.pdb": {
+      "bytes": 6238208,
+      "sha256": "077e7ac618b5327142315d0b96d6a9b823692db13b8b2054f160f0bb98bc0419"
+    }
+  },
+  "limits": "Official Visual Studio solution; no source patch, ROM, game execution or original-media validation."
+}

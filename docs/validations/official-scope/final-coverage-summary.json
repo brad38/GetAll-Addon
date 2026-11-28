@@ -1,0 +1,69 @@
+{
+  "reviewed_at": "2026-11-28",
+  "catalog_commit": "e4fdde9d7c128f79eb19cf99ea07e2e9b628127a",
+  "index_sha256": "deb759f53fbbbdbc40f712542d28de4990756bf752048dde1284ae0611f132dd",
+  "games": 108,
+  "eligible_projects": 137,
+  "archived_catalog_projects": 11,
+  "recipes": 146,
+  "recipe_statuses": {
+    "validated": 1,
+    "experimental": 133,
+    "disabled": 12
+  },
+  "active_recipes": 134,
+  "projects_with_active_contract": 134,
+  "manual_only_projects": 3,
+  "dimensions": {
+    "upstream_functional": {
+      "evidenced": 137
+    },
+    "automated_installation_implemented": {
+      "implemented": 134,
+      "blocked": 3
+    },
+    "synthetic_validation": {
+      "unknown": 108,
+      "passed": 15,
+      "historical": 13,
+      "failed": 1
+    },
+    "original_media_installation": {
+      "unknown": 136,
+      "historical": 1
+    },
+    "first_boot": {
+      "unknown": 136,
+      "historical": 1
+    },
+    "gameplay": {
+      "unknown": 137
+    }
+  },
+  "new_original_media_installations": 0,
+  "new_first_boots": 0,
+  "new_gameplay_sessions": 0,
+  "historical_validated": {
+    "project_id": "sm64coopdx-super-mario-64-coop-deluxe",
+    "tag": "v1.5.1",
+    "recipe_sha256": "54fb8ac09863fc500b532244070e9cbe5bc4a81aaff66530b4e711b97fb2a2f3",
+    "evidence": "docs/AUDITORIA-CATALOGO-2026-11-22.md",
+    "evidence_sha256": "5a3747fbc2ba1f57d28ddb26851dfc93f71f3fa1d761ccc6e69f92d9e52cef78",
+    "limit": "Prior user report of original-ROM import and launch; not reproduced in this resumed work; no specific gameplay sequence."
+  },
+  "validation": {
+    "python_tests": 79,
+    "local_ci_exit": 0,
+    "desktop_suite_passes": 2312,
+    "desktop_parser_recipes": 146
+  },
+  "preview": {
+    "addon_version": "1.5.76",
+    "min_sdk_version": "1.5.70",
+    "getall_commit": "Exact final local commit recorded with the subsequently generated ZIP."
+  },
+  "publication": {
+    "catalog_public_documents_verified": true,
+    "getall_publication": "Pending exact work-branch push by integration owner at the time of this local summary; no hosted GetAll CI inferred."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "project_id": "mariokartdd-recomp",
+  "tag": "build-bd36eb9",
+  "path": "recipes/mario-kart-double-dash/mariokartdd-recomp/build-bd36eb9.json",
+  "sha256": "0a6cac02a5c9baebbd4ac086b1d20ef4f82165197dcac9b10c4ebba566cc0994",
+  "build_profile": "mariokartdd-bd36eb9-official-msvc-clang",
+  "retired_path": "docs/retired-recipes/mario-kart-double-dash/mariokartdd-recomp/build-bd36eb9.json",
+  "retired_sha256": "05f933262cb14b00512e3cf9980940d3a31d70b1043239b88a74dcdfcf45d777",
+  "retired_build_profile": null,
+  "upstream_commit": "bd36eb982ea58c6651584cc48264876d1aba9546",
+  "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+}

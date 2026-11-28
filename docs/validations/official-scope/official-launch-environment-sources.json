@@ -1,0 +1,22 @@
+[
+  {
+    "project": "gow",
+    "repository": "danielalves96/gow-pc-port",
+    "commit": "adebc00e69d4395318c94523f345b26c7daf3451",
+    "path": "gow-launcher/crates/gow-core/src/process.rs",
+    "url": "https://raw.githubusercontent.com/danielalves96/gow-pc-port/adebc00e69d4395318c94523f345b26c7daf3451/gow-launcher/crates/gow-core/src/process.rs",
+    "bytes": 10078,
+    "sha256": "0d38b5242c8d0506469d1f7376d70125696ee35448d5ccff821483a8e2771752",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\gow\\gow-launcher\\crates\\gow-core\\src\\process.rs"
+  },
+  {
+    "project": "fh1",
+    "repository": "FH1-ReImagined/ForzaHorizon1-ReImagined",
+    "commit": "46d5ed62866af68700d15c61748df8c29ad0248d",
+    "path": "launcher/forza_launcher/paths.py",
+    "url": "https://raw.githubusercontent.com/FH1-ReImagined/ForzaHorizon1-ReImagined/46d5ed62866af68700d15c61748df8c29ad0248d/launcher/forza_launcher/paths.py",
+    "bytes": 5519,
+    "sha256": "7d94bf1c2767fac51da57907e76dde1cc9c2e70908a9493363250ec692701d2c",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\fh1\\launcher\\forza_launcher\\paths.py"
+  }
+]

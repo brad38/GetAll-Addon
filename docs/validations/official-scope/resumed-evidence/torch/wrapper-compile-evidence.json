@@ -1,0 +1,31 @@
+{
+  "repository": "https://github.com/HarbourMasters/Shipwright",
+  "ref": "9.3.1",
+  "commit": "f0599f96f8d442f26d0fa1c5cedafddacd56633f",
+  "checked_at_utc": "2026-11-28T02:38:45.756742+00:00",
+  "scope": "Compile the unchanged official soh-torch CLI translation unit and its official declaration header with the installed MSVC standard library. No ROM, extraction or game execution. Full dependency build is not attempted if this minimal compilation fails.",
+  "sources": [
+    {
+      "path": "soh/assets/tools/torch-cli/main.cpp",
+      "url": "https://raw.githubusercontent.com/HarbourMasters/Shipwright/f0599f96f8d442f26d0fa1c5cedafddacd56633f/soh/assets/tools/torch-cli/main.cpp",
+      "bytes": 3544,
+      "sha256": "b229b75d1b5ce568db7b70a2010a8060f2194b6b836b6dc0fcfe9397764410a6"
+    },
+    {
+      "path": "soh/soh/Extractor/TorchExtract.h",
+      "url": "https://raw.githubusercontent.com/HarbourMasters/Shipwright/f0599f96f8d442f26d0fa1c5cedafddacd56633f/soh/soh/Extractor/TorchExtract.h",
+      "bytes": 1027,
+      "sha256": "57999e6341d2ba13c79668f46d8814f2fd4f3c4b134abafff1b2440eb04d4f04"
+    }
+  ],
+  "after_sha256": {
+    "soh/assets/tools/torch-cli/main.cpp": "b229b75d1b5ce568db7b70a2010a8060f2194b6b836b6dc0fcfe9397764410a6",
+    "soh/soh/Extractor/TorchExtract.h": "57999e6341d2ba13c79668f46d8814f2fd4f3c4b134abafff1b2440eb04d4f04"
+  },
+  "source_unchanged": true,
+  "command_file": "{soh-work-dir}\\compile-cli-probe.cmd",
+  "log": "{soh-work-dir}\\cli-msvc-compile.log",
+  "compiler_exit_code": 2,
+  "object_exists": false,
+  "compiler_log": "**********************************************************************\n** Visual Studio 2022 Developer Command Prompt v17.14.45\n** Copyright (c) 2025 Microsoft Corporation\n**********************************************************************\n[vcvarsall.bat] Environment initialized for: 'x64'\nmain.cpp\nC:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\include\\chrono(2359): warning C4530: manipulador de exceção de C++ usado, mas semântica de liberação não está habilitada. Especifique /EHsc\n{soh-work-dir}\\source\\soh\\assets\\tools\\torch-cli\\main.cpp(101): error C2664: 'std::string SohTorch::Extract(std::vector<uint8_t,std::allocator<uint8_t>>,const std::string &,const std::string &,const std::string &,std::atomic<unsigned __int64> *)': não é possível converter um argumento 1 de 'const _Ty' em 'std::vector<uint8_t,std::allocator<uint8_t>>'\n        with\n        [\n            _Ty=std::string\n        ]\n{soh-work-dir}\\source\\soh\\assets\\tools\\torch-cli\\main.cpp(101): note: Nenhum operador de conversão definida pelo usuário disponível que possa realizar esta conversão, ou o operador não pode ser chamado\n{soh-work-dir}\\source\\soh\\soh\\Extractor\\TorchExtract.h(21): note: consulte a declaração de 'SohTorch::Extract'\n{soh-work-dir}\\source\\soh\\assets\\tools\\torch-cli\\main.cpp(101): note: ao tentar corresponder a lista de argumentos '(const _Ty, std::string, std::string, std::string, nullptr)'\n        with\n        [\n            _Ty=std::string\n        ]\n"
+}

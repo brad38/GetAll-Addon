@@ -1,0 +1,14 @@
+[
+  {
+    "path": "src_rebuild/premake5.lua",
+    "url": "https://raw.githubusercontent.com/OpenDriver2/REDRIVER2/acca6b139302dd72c1fbff52556f3493aafda2dd/src_rebuild/premake5.lua",
+    "bytes": 5675,
+    "sha256": "09ef305fdd2e32f123e58b4d0b2efd4bc5e3ab4b1afcac61cc9b1996a5a59906"
+  },
+  {
+    "path": "appveyor.yml",
+    "url": "https://raw.githubusercontent.com/OpenDriver2/REDRIVER2/acca6b139302dd72c1fbff52556f3493aafda2dd/appveyor.yml",
+    "bytes": 1680,
+    "sha256": "16252f6d9eccbc85316c2bc6713af685f9d6da7c1b2daddd20d1eabaa92264e1"
+  }
+]

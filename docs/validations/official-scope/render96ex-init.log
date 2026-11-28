@@ -1,0 +1,14 @@
+Repositório Git vazio inicializado em /c/Users/bradg/Downloads/GetAll-R18/g-msys-official-test/render96ex/.git/
+hint: Usando 'master' como o nome do branch inicial. Este nome de branch padrão
+hint: mudará para "main" no Git 3.0. Para configurar o nome do branch inicial
+hint: a ser usado em todos os seus novos repositórios, o que suprimirá este aviso,
+hint: execute:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Nomes comumente escolhidos no lugar de 'master' são 'main', 'trunk' e
+hint: 'development'. O branch recém-criado pode ser renomeado com este comando:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"

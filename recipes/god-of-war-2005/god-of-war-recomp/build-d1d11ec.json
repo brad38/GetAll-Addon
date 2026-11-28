@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 9,
   "project_id": "god-of-war-recomp",
   "tag": "build-d1d11ec",
   "source_url": "https://github.com/KIexster/god-of-war-recomp/commit/d1d11ec545c3baf2f3fc17e2df4247ac4b732d5c",
@@ -9,5 +9,16 @@
     "README.md"
   ],
   "inputs": [],
-  "manual_steps": "Selecione sua ISO original americana de God of War para PS2 (SCUS_973.99). O AllFix verifica as duas camadas do disco, prepara as ferramentas privadas e compila o jogo automaticamente."
+  "manual_steps": "Selecione sua ISO original americana de God of War para PS2 (SCUS_973.99). O All-Fix executa os scripts oficiais de extração, compilação e execução da KIexster, sem alterar os fontes do projeto. Se faltarem ferramentas Microsoft, o download exige aceite explícito dos termos. A primeira compilação pode demorar; nenhum jogo está incluído.",
+  "build_profile": "god-of-war-kiexster-d1d11ec-official-installer",
+  "preparation_media": [
+    {
+      "id": "original-disc",
+      "kind": "file",
+      "extensions": [
+        ".iso"
+      ],
+      "version": "ISO original americana de God of War PS2 (SCUS_973.99)."
+    }
+  ]
 }

@@ -1,0 +1,23 @@
+{
+  "project": "sm-rewrite",
+  "command": [
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261127\\sm-rewrite-official\\native-no-rom-probe\\sm.exe",
+    "--config",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261127\\sm-rewrite-official\\native-no-rom-probe\\sm.ini",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261127\\sm-rewrite-official\\native-no-rom-probe\\missing.smc"
+  ],
+  "exit_code": 1,
+  "output": "Failed to read file\r\nError: unable to load rom: C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261127\\sm-rewrite-official\\native-no-rom-probe\\missing.smc\r\n",
+  "source_unchanged": true,
+  "input_rom_exists": false,
+  "binary_hashes": {
+    "sm.exe": "e908d2a2b15cc18e66320de2feb808e057021727fbd8562da97ca0e1031c1c11",
+    "SDL2.dll": "0b9b692fe142f66f84e44f2de5eeae25f59af84a1fe9168f39f8908ff2bb3bac",
+    "sm.ini": "371cf99151daffdc9d41245800ce8ed837510abfb25c95a553723af3cfd86674"
+  },
+  "test_only_environment": {
+    "SDL_VIDEODRIVER": "dummy",
+    "SDL_AUDIODRIVER": "dummy"
+  },
+  "scope": "Actual unmodified MSVC executable with official config and absent media. No original ROM, game boot or gameplay. Dummy drivers apply only to this negative probe."
+}

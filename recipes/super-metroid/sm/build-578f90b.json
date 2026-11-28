@@ -1,17 +1,30 @@
 {
-  "schema_version": 5,
+  "schema_version": 9,
   "project_id": "sm",
   "tag": "build-578f90b",
   "source_url": "https://github.com/snesrev/sm/commit/578f90b3cc49557bb70060ad033bb90b8cf8ac50",
   "operations": [],
   "required_files": [
-    "sm.exe",
-    "SDL2.dll",
-    "sm.ini",
-    "LICENSE.txt",
-    "README.md"
+    "source/sm.sln",
+    "source/src/sm.vcxproj",
+    "source/src/packages.config",
+    "source/sm.ini",
+    "source/README.md",
+    "source/BUILDING.md",
+    "source/LICENSE.txt"
   ],
   "inputs": [],
-  "launch_file": "sm.exe",
-  "manual_steps": "O AllFix baixa e verifica as fontes oficiais fixadas, prepara LLVM-MinGW, CMake, Ninja e SDL2 privados e compila o executável Windows x64. Depois, selecione a ROM original de Super Metroid sem cabeçalho (3.145.728 bytes; SHA1 da957f0d63d14cb441d215462904c4fa8519c613) para concluir a instalação e habilitar Jogar."
+  "manual_steps": "Selecione sua ROM original norte-americana de Super Metroid sem cabeçalho. O All-Fix compila as fontes oficiais intactas com Visual Studio 2022; se as ferramentas não estiverem instaladas, será necessário aceitar os termos da Microsoft para obtê-las. O primeiro boot ainda não foi homologado.",
+  "build_profile": "sm-official-msvc-source-578f90b",
+  "preparation_media": [
+    {
+      "id": "original-rom",
+      "kind": "file",
+      "extensions": [
+        ".smc",
+        ".sfc"
+      ],
+      "version": "Super Metroid USA sem cabeçalho; 3145728 bytes; SHA-1 da957f0d63d14cb441d215462904c4fa8519c613"
+    }
+  ]
 }

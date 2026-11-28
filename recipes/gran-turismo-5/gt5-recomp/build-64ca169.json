@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 9,
   "project_id": "gt5-recomp",
   "tag": "build-64ca169",
   "source_url": "https://github.com/MormonFTP-hub/gt5-recomp/commit/64ca1697c5f9bb513bfe0414d9a36c10dafd0a37",
@@ -9,5 +9,24 @@
     "README.md"
   ],
   "inputs": [],
-  "manual_steps": "Compilacao experimental local de GT5 para Direct3D 12. Use Retomar e selecione sua ISO ou pasta PS3_GAME original BCES00569/BCUS98114 v01.00, EBOOT.elf decifrado (ou SELF debug) e firmware dev_flash ou PS3UPDAT.PUP local licito. O AllFix prepara as ferramentas privadas e compila automaticamente. Nenhum jogo ou firmware incluido."
+  "manual_steps": "Selecione sua ISO decifrada ou pasta PS3_GAME original de Gran Turismo 5 e o firmware PS3 obtido legalmente. O All-Fix executa o instalador oficial, preservando DirectX 12, Vulkan e os complementos gráficos oficiais. Dependências Microsoft e NVIDIA são obtidas somente quando necessárias e após aceite explícito. Ao concluir, use Jogar. Nenhum jogo ou firmware está incluído.",
+  "build_profile": "gt5-64ca169-official-installer",
+  "preparation_media": [
+    {
+      "id": "original-game",
+      "kind": "file_or_directory",
+      "extensions": [
+        ".iso"
+      ],
+      "version": "GT5: ISO decifrada ou pasta PS3_GAME BCES00569/BCUS98114 v01.00"
+    },
+    {
+      "id": "original-firmware",
+      "kind": "file_or_directory",
+      "extensions": [
+        ".pup"
+      ],
+      "version": "GT5: pasta dev_flash ou firmware PS3UPDAT.PUP local obtido legalmente"
+    }
+  ]
 }

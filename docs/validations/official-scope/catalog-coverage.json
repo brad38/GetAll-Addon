@@ -4,9 +4,11 @@
   "games": 108,
   "projects": 137,
   "main_covered": null,
-  "development_covered": 123,
-  "missing": 14,
-  "preparation_only": 17,
+  "development_covered": 134,
+  "missing": 3,
+  "uses_closed_preparation_profiles": 31,
+  "preparation_only": 31,
+  "legacy_preparation_only_semantics": "Deprecated alias of uses_closed_preparation_profiles. Schema 9 does not imply manual-only, partial or unavailable automation.",
   "validated": 1,
   "legacy_validated_is_execution_evidence": false,
   "dimension_counts": {
@@ -14,13 +16,14 @@
       "evidenced": 137
     },
     "automated_installation_implemented": {
-      "implemented": 121,
-      "partial": 2,
-      "blocked": 14
+      "implemented": 134,
+      "blocked": 3
     },
     "synthetic_validation": {
-      "unknown": 124,
-      "historical": 13
+      "unknown": 108,
+      "passed": 15,
+      "historical": 13,
+      "failed": 1
     },
     "original_media_installation": {
       "unknown": 136,
@@ -35,6 +38,74 @@
     }
   },
   "historical_excluded_recipes": [
+    {
+      "index": "development",
+      "game_id": "sonic-the-hedgehog-1-2-2013",
+      "project_id": "sonic-1-forever-sonic-2-absolute",
+      "recipes": [
+        {
+          "game_id": "sonic-the-hedgehog-1-2-2013",
+          "project_id": "sonic-1-forever-sonic-2-absolute",
+          "repository": "TeamForeverDev/Sonic1Forever",
+          "tag": "v1.5.2-v1.2.2",
+          "schema_version": 9,
+          "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-1-forever-sonic-2-absolute/v1.5.2-v1.2.2.json",
+          "sha256": "c3b2317522899e5e570b7c3509e417818204d81085ccdfa7a355d0de1733c67d",
+          "status": "disabled",
+          "has_inputs": false,
+          "has_manual_steps": true,
+          "min_sdk_version": "1.5.11",
+          "disabled_reason": "Fora do catálogo ativo após revisão de elegibilidade: ID de pacote legado duplicado: manter histórico e os dois IDs individuais, sem contá-lo como projeto ativo independente.",
+          "disabled_at": "2026-11-27",
+          "audit_reference": "AllFix-Repo/excluded-projects.json#sonic-1-forever-sonic-2-absolute"
+        }
+      ]
+    },
+    {
+      "index": "development",
+      "game_id": "goemon-s-great-adventure",
+      "project_id": "gga64recomp",
+      "recipes": [
+        {
+          "game_id": "goemon-s-great-adventure",
+          "project_id": "gga64recomp",
+          "repository": "StopSine/GGA64Recomp",
+          "tag": "v0.1.0",
+          "schema_version": 3,
+          "path": "recipes/goemon-s-great-adventure/gga64recomp/v0.1.0.json",
+          "sha256": "39c796049722921d010dc41e852bcf1f23f573bd843bdcf344960c6ead9139bc",
+          "status": "disabled",
+          "has_inputs": false,
+          "has_manual_steps": true,
+          "disabled_reason": "Fora do catálogo ativo após revisão de elegibilidade: Documentação e release sugerem execução, mas a investigação não encontrou evidência específica verificável além dessas declarações. Isso significa prova insuficiente, não conclusão de que o port esteja quebrado.",
+          "disabled_at": "2026-11-27",
+          "audit_reference": "AllFix-Repo/excluded-projects.json#gga64recomp"
+        }
+      ]
+    },
+    {
+      "index": "development",
+      "game_id": "burnout-3-takedown",
+      "project_id": "burnout3-recomp",
+      "recipes": [
+        {
+          "game_id": "burnout-3-takedown",
+          "project_id": "burnout3-recomp",
+          "repository": "sp00nznet/burnout3",
+          "tag": "build-3c85ed7",
+          "schema_version": 5,
+          "path": "recipes/burnout-3-takedown/burnout3-recomp/build-3c85ed7.json",
+          "sha256": "acd0487703956b86d9d0f45ab76548b76cff982fc63c4aaa3c278c8ba47fee09",
+          "status": "disabled",
+          "has_inputs": false,
+          "has_manual_steps": true,
+          "min_sdk_version": "1.5.67",
+          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+          "disabled_at": "2026-11-27",
+          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-BURNOUT"
+        }
+      ]
+    },
     {
       "index": "development",
       "game_id": "dr-mario-64",
@@ -80,74 +151,6 @@
           "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-META"
         }
       ]
-    },
-    {
-      "index": "development",
-      "game_id": "burnout-3-takedown",
-      "project_id": "burnout3-recomp",
-      "recipes": [
-        {
-          "game_id": "burnout-3-takedown",
-          "project_id": "burnout3-recomp",
-          "repository": "sp00nznet/burnout3",
-          "tag": "build-3c85ed7",
-          "schema_version": 5,
-          "path": "recipes/burnout-3-takedown/burnout3-recomp/build-3c85ed7.json",
-          "sha256": "acd0487703956b86d9d0f45ab76548b76cff982fc63c4aaa3c278c8ba47fee09",
-          "status": "disabled",
-          "has_inputs": false,
-          "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-BURNOUT"
-        }
-      ]
-    },
-    {
-      "index": "development",
-      "game_id": "goemon-s-great-adventure",
-      "project_id": "gga64recomp",
-      "recipes": [
-        {
-          "game_id": "goemon-s-great-adventure",
-          "project_id": "gga64recomp",
-          "repository": "StopSine/GGA64Recomp",
-          "tag": "v0.1.0",
-          "schema_version": 3,
-          "path": "recipes/goemon-s-great-adventure/gga64recomp/v0.1.0.json",
-          "sha256": "39c796049722921d010dc41e852bcf1f23f573bd843bdcf344960c6ead9139bc",
-          "status": "disabled",
-          "has_inputs": false,
-          "has_manual_steps": true,
-          "disabled_reason": "Fora do catálogo ativo após revisão de elegibilidade: Documentação e release sugerem execução, mas a investigação não encontrou evidência específica verificável além dessas declarações. Isso significa prova insuficiente, não conclusão de que o port esteja quebrado.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "AllFix-Repo/excluded-projects.json#gga64recomp"
-        }
-      ]
-    },
-    {
-      "index": "development",
-      "game_id": "sonic-the-hedgehog-1-2-2013",
-      "project_id": "sonic-1-forever-sonic-2-absolute",
-      "recipes": [
-        {
-          "game_id": "sonic-the-hedgehog-1-2-2013",
-          "project_id": "sonic-1-forever-sonic-2-absolute",
-          "repository": "TeamForeverDev/Sonic1Forever",
-          "tag": "v1.5.2-v1.2.2",
-          "schema_version": 9,
-          "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-1-forever-sonic-2-absolute/v1.5.2-v1.2.2.json",
-          "sha256": "c3b2317522899e5e570b7c3509e417818204d81085ccdfa7a355d0de1733c67d",
-          "status": "disabled",
-          "has_inputs": false,
-          "has_manual_steps": true,
-          "min_sdk_version": "1.5.11",
-          "disabled_reason": "Fora do catálogo ativo após revisão de elegibilidade: ID de pacote legado duplicado: manter histórico e os dois IDs individuais, sem contá-lo como projeto ativo independente.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "AllFix-Repo/excluded-projects.json#sonic-1-forever-sonic-2-absolute"
-        }
-      ]
     }
   ],
   "rows": [
@@ -172,6 +175,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -243,6 +247,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": true,
       "dimensions": {
@@ -336,17 +341,19 @@
           "project_id": "sm64plus",
           "repository": "MorsGames/sm64plus",
           "tag": "LauncherMirror",
-          "schema_version": 5,
+          "schema_version": 9,
           "path": "recipes/super-mario-64/sm64plus/LauncherMirror.json",
-          "sha256": "a5e96174858f2ae90563f0f1c1f0980701a5a1a8c8918d0ceae8f9426f973df8",
+          "sha256": "fdfae75dba229c904a786ec3b1ee9b76484ad5cbf1ea6941dc5a1971dd60fc72",
           "status": "experimental",
           "has_inputs": false,
-          "has_manual_steps": true
+          "has_manual_steps": true,
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
       "development_covered": true,
-      "preparation_only": false,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -368,22 +375,44 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "partial",
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
           "evidence": [
             {
-              "path": "recipes/super-mario-64/sm64plus/LauncherMirror.json",
-              "sha256": "a5e96174858f2ae90563f0f1c1f0980701a5a1a8c8918d0ceae8f9426f973df8",
-              "observed": "Official package/kit contract retained with manual upstream preparation. The retired custom build does not count as active automation.",
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for sm64plus.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
               "data_kind": "code_review",
               "scope": "getall"
             }
-          ],
-          "reason": "Official launcher or manual procedure remains necessary for media preparation."
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm64plus-official-kit.log",
+              "sha256": "c7bccb45baeb56938e5eb3060052287632bc11817206b483e790ad90feac1c69",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/sm64plus-official-script-result.json",
+              "sha256": "dc06587a7ffad955de49e93d9abe1692ab8636ea34ed3bf9616102e790a83e6a",
+              "observed": "Official source/tools and script behavior checked with absent media; source/HEAD intact. No complete game build.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -413,21 +442,19 @@
           "project_id": "render96ex",
           "repository": "Render96/Render96ex",
           "tag": "build-48da5c4",
-          "schema_version": 5,
+          "schema_version": 9,
           "path": "recipes/super-mario-64/render96ex/build-48da5c4.json",
-          "sha256": "05363a9cd808361ad2ce9b1956597503b810e8963c8534a5d3cbd54a0c2681e5",
-          "status": "disabled",
+          "sha256": "0cdec0870d9e041e8ae3badf54ffd4f9344f703035761667fb3aedb8279d7c68",
+          "status": "experimental",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MARIO"
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -449,14 +476,44 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for render96ex.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-render96ex-official-kit.log",
+              "sha256": "40fd9f79cea4f222acf95de04499fa52cfa912812ad45fcbfa2d48e58b136994",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/mario-official-tools-all-result.json",
+              "sha256": "e6a6f12cdf051137287b392c9b72c18ed83ab5288df4d3ed9f5aec64f195ebf6",
+              "observed": "Official make tools target compiled using private signed MSYS2 packages; no original ROM or game link.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -486,21 +543,19 @@
           "project_id": "sm64ex",
           "repository": "sm64pc/sm64ex",
           "tag": "build-d7ca2c0",
-          "schema_version": 5,
+          "schema_version": 9,
           "path": "recipes/super-mario-64/sm64ex/build-d7ca2c0.json",
-          "sha256": "2a4306fa23d76e3a1720de7eba881b0d6d905d96b9cff039545ef54fe307ff53",
-          "status": "disabled",
+          "sha256": "70420921a4ce7fd5d5cbfe5c5d37c5f0c09691b94211835a3b0a5cf3a36f4ec5",
+          "status": "experimental",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MARIO"
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -522,14 +577,44 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for sm64ex.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm64ex-official-kit.log",
+              "sha256": "1c31beadd17b6706927e5afb9d9575c2a14f4e147c848e98476f6e89543ad050",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/mario-official-tools-all-result.json",
+              "sha256": "e6a6f12cdf051137287b392c9b72c18ed83ab5288df4d3ed9f5aec64f195ebf6",
+              "observed": "Official make tools target compiled using private signed MSYS2 packages; no original ROM or game link.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -559,21 +644,19 @@
           "project_id": "sm64rt",
           "repository": "DarioSamo/sm64rt",
           "tag": "build-20e618b",
-          "schema_version": 5,
+          "schema_version": 9,
           "path": "recipes/super-mario-64/sm64rt/build-20e618b.json",
-          "sha256": "4e90ddff3f5cc140ba0e6d843dcbf9146cc39c558597090b9e90d79df57cf267",
-          "status": "disabled",
+          "sha256": "1f99eaabe5ca438fb8b4c98694eabf291614b5f1eed88c0b6b64108964f28f8f",
+          "status": "experimental",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MARIO"
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -595,14 +678,44 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for sm64rt.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm64rt-official-kit.log",
+              "sha256": "981a0b491285b49e46b3f92c3b886144b1343b077c8fe8fe7017e1ada70ab3e1",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/mario-official-tools-all-result.json",
+              "sha256": "e6a6f12cdf051137287b392c9b72c18ed83ab5288df4d3ed9f5aec64f195ebf6",
+              "observed": "Official make tools target compiled; RT64 option preserved. No original ROM, game link or ray-tracing execution.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -632,20 +745,19 @@
           "project_id": "ship-of-harkinian-soh",
           "repository": "HarbourMasters/Shipwright",
           "tag": "9.3.1",
-          "schema_version": 3,
+          "schema_version": 9,
           "path": "recipes/the-legend-of-zelda-ocarina-of-time/ship-of-harkinian-soh/9.3.1.json",
-          "sha256": "ecd0ec380b4762b5bae57ad9265d6ef1b67127408a19bff2f0c3b9e384b6f8f3",
-          "status": "disabled",
+          "sha256": "499d162f2256376af6196cfd99147cf4d7d8eeb4e9255889ce6f61d54f244a17",
+          "status": "experimental",
           "has_inputs": false,
           "has_manual_steps": true,
-          "disabled_reason": "Auxiliar incorporado soh-torch sem prova suficiente de procedência; usar launcher/importação oficial até validação do componente oficial.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/native-soh-provenance-gap.json"
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -661,14 +773,51 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for ship-of-harkinian-soh.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-soh-official-kit-final.log",
+              "sha256": "4347f85b5a75606557879b5447eec0754a230ec0b75177afeb56624185ead412",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/torch/build-evidence.json",
+              "sha256": "9ce91bb47265bf7faf96e83a36e80cce222d51084a4a1642f86ef0fbc2c2fc31",
+              "observed": "Standalone official Torch built from intact sources; wrapper compile failure is separately preserved. No original ROM used.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/torch/native-probe-evidence.json",
+              "sha256": "fda37775f4f9e75d11e2a978561f7bbf32c99e82a0fef2b475f89d34c1a289f3",
+              "observed": "Native Torch metadata/negative-input probes; output and metadata are required independently of exit code.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -709,6 +858,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -809,6 +959,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -880,6 +1031,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -957,6 +1109,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1028,6 +1181,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1100,6 +1254,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1177,6 +1332,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1254,6 +1410,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1325,6 +1482,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1396,6 +1554,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1473,6 +1632,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1545,6 +1705,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1616,6 +1777,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1693,6 +1855,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1764,6 +1927,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1835,6 +1999,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1912,6 +2077,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -1983,6 +2149,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -2054,6 +2221,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -2125,6 +2293,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -2196,6 +2365,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -2267,6 +2437,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -2344,6 +2515,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -2415,6 +2587,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -2486,6 +2659,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -2569,6 +2743,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -2640,6 +2815,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -2718,6 +2894,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -2789,6 +2966,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -2861,6 +3039,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -2932,6 +3111,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3009,6 +3189,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3085,6 +3266,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3156,6 +3338,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3228,6 +3411,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3300,6 +3484,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3371,6 +3556,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3442,6 +3628,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3513,6 +3700,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3584,6 +3772,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3655,6 +3844,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3732,6 +3922,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3811,6 +4002,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3890,6 +4082,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -3969,6 +4162,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -4048,6 +4242,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -4127,6 +4322,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -4203,13 +4399,14 @@
           "has_inputs": false,
           "has_manual_steps": true,
           "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+          "disabled_reason": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão.",
           "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-STRIKERS"
+          "audit_reference": "docs/validations/official-scope/remaining-official-blockers.json"
         }
       ],
       "main_covered": null,
       "development_covered": false,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -4234,8 +4431,16 @@
         },
         "automated_installation_implemented": {
           "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/remaining-official-blockers.json",
+              "sha256": "879bfb3995ed34ab0a498535bbd242fca1b741d201cd957443048ef5a75bde7f",
+              "observed": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão. Restoration condition: Validar uma combinação oficial compatível de dependências e embalagem Windows, ou integrar um ambiente oficialmente suportado sem modificar código/runtime do jogo.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ],
+          "reason": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão."
         },
         "synthetic_validation": {
           "status": "unknown",
@@ -4280,6 +4485,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -4353,6 +4559,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -4430,21 +4637,19 @@
           "project_id": "mariokartdd-recomp",
           "repository": "ethannicholas/mariokartdd-recomp",
           "tag": "build-bd36eb9",
-          "schema_version": 5,
+          "schema_version": 9,
           "path": "recipes/mario-kart-double-dash/mariokartdd-recomp/build-bd36eb9.json",
-          "sha256": "05f933262cb14b00512e3cf9980940d3a31d70b1043239b88a74dcdfcf45d777",
-          "status": "disabled",
+          "sha256": "0a6cac02a5c9baebbd4ac086b1d20ef4f82165197dcac9b10c4ebba566cc0994",
+          "status": "experimental",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MKDDCPP"
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -4461,14 +4666,44 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for mariokartdd-recomp.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-mkdd-official-kit-final.log",
+              "sha256": "c5ad49c5eaaef0202ee5fbd5729565d647d190ae62dc6e5ad3b14e6bf89803c9",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/native/mkdd-official/build-result.json",
+              "sha256": "a55966f72573ede6024e80fae28999c6217ee8bfffe391546f841ebb138c8c2e",
+              "observed": "Official build.ps1 compiled 42 runtime_check objects, 165 original sources unchanged, OpenXR ON and benchmark-only OFF; synthetic wrong main.dol hash rejected. No final game link or OpenXR runtime build.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -4509,6 +4744,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -4589,6 +4825,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -4661,6 +4898,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -4740,6 +4978,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -4809,21 +5048,19 @@
           "project_id": "sm",
           "repository": "snesrev/sm",
           "tag": "build-578f90b",
-          "schema_version": 5,
+          "schema_version": 9,
           "path": "recipes/super-metroid/sm/build-578f90b.json",
-          "sha256": "c84193604b8407fe5a13325054497836227f0c51b120fa9bf9fd36af68a86076",
-          "status": "disabled",
+          "sha256": "8db09ea83b13734394f9ff46f744d269d70cbfddd8086709c0c7dce0558c575d",
+          "status": "experimental",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-SM"
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -4847,14 +5084,44 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for sm.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm-official-kit.log",
+              "sha256": "600afc97c3721fee00c48ee285a25bd8a057dcdf63dbb647d547d2c04321a8d3",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/native/sm-official/build-result.json",
+              "sha256": "5a697b95e7457189a9a4ae9f40e9a657dc8c8453775305870b4bf73a64dc6e7d",
+              "observed": "Unchanged official MSVC solution built sm.exe and SDL2.dll, with 124 original files unchanged; no ROM or game execution.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -4884,21 +5151,19 @@
           "project_id": "sm-rewrite",
           "repository": "testyourmine/sm_rewrite",
           "tag": "build-5237873",
-          "schema_version": 5,
+          "schema_version": 9,
           "path": "recipes/super-metroid/sm-rewrite/build-5237873.json",
-          "sha256": "8faa4a7223be77c1f393d4e21a8e2dd7f00cf0cef8619f61722b5bf47b94134e",
-          "status": "disabled",
+          "sha256": "024aafa8c6269c19ca8704f3475f1d3918bbe75c5ee78a17ffd0a3349dec508f",
+          "status": "experimental",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-SM"
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -4922,14 +5187,44 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for sm-rewrite.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-sm-rewrite-official-kit.log",
+              "sha256": "2da269a4009bf59ff4dffeceb089ce1bc9c381b581e71215df98fcf699339f09",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/native/sm-rewrite-official/build-result.json",
+              "sha256": "22b3fea5892e11096099d744f94b914271e251c8065ca377e8db0835821ff85b",
+              "observed": "Official Windows CMake/vcpkg preset built sm.exe and SDL2.dll, with 193 source files unchanged; no ROM or game execution.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -4969,6 +5264,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -5048,6 +5344,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -5127,6 +5424,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -5206,6 +5504,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -5278,6 +5577,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -5357,6 +5657,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -5367,14 +5668,14 @@
             {
               "url": "https://github.com/Shmargus/GSRecomp/issues/22",
               "kind": "user_gameplay_report",
-              "observed": "v0.8.4Ubuntu chega ao topo deMercuryLighthouse, derrotaSaturos e mede queda de desempenho; capturas/sistema especificados.",
+              "observed": "Em Ubuntu, a v0.8.4 chega ao topo de Mercury Lighthouse, derrota Saturos e apresenta queda de desempenho; o relato inclui capturas e sistema.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/Shmargus/GSRecomp/issues/39",
               "kind": "user_gameplay_report",
-              "observed": "Jogador usaEscape, localiza navio e relata impossibilidade de embarcar.",
+              "observed": "Jogador usa Escape, localiza o navio e relata não conseguir embarcar.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -5436,6 +5737,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -5446,14 +5748,14 @@
             {
               "url": "https://github.com/open-goal/jak-project/issues/4466",
               "kind": "user_gameplay_report",
-              "observed": "Relato de missão emJakII descreve interação com objetivo e corte de cena faltante; usado somente como relato de jogador, não campanha certificada.",
+              "observed": "Relato de uma missão de Jak II descreve interação com o objetivo e uma cutscene ausente. É evidência de jogo ativo, sem certificar toda a campanha.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://opengoal.dev/docs/usage/installation/",
               "kind": "official_installation",
-              "observed": "Guia oficial apresenta launcher e fluxoISO→extração→compilação para os três primeirosJak, requisitos e plataformas.",
+              "observed": "Guia oficial apresenta o launcher e o fluxo ISO, extração e compilação para os três primeiros jogos Jak, com requisitos e plataformas.",
               "ref_id_if_web": "turn597242887view2"
             }
           ]
@@ -5506,19 +5808,17 @@
           "tag": "launcher-v0.4.0",
           "schema_version": 9,
           "path": "recipes/god-of-war-2005/god-of-war-native-pc-port-gow-pc-port/launcher-v0.4.0.json",
-          "sha256": "8956a1ea2d1890dd62e1a5c9244bea6dd207d070cfafbfa20208562677641090",
-          "status": "disabled",
+          "sha256": "52a39bd83ebb08ddc132a138d3bf50ad39598634a0654536a8871b984387ce40",
+          "status": "experimental",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-GOW"
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -5528,35 +5828,58 @@
             {
               "url": "https://github.com/danielalves96/gow-pc-port/issues/52",
               "kind": "user_gameplay_report",
-              "observed": "v0.4.0Windows11 jogada atéTempleofOracle apresenta queda60→9fps a4K; hardware e configuração especificados.",
+              "observed": "No Windows 11, a v0.4.0 chega ao Temple of the Oracle e apresenta queda de 60 para 9 FPS em 4K; há hardware e configuração especificados.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/danielalves96/gow-pc-port/issues/35",
               "kind": "user_gameplay_report",
-              "observed": "v0.3.3Windows chega ao sextoGorgonEye e trava após coletá-lo.",
+              "observed": "Na v0.3.3 em Windows, o jogador coleta o sexto Gorgon Eye e encontra um travamento.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/danielalves96/gow-pc-port/issues/42",
               "kind": "user_gameplay_report",
-              "observed": "Relato de campanha completa usou intervenções/patcheslocais do jogador e IA; explicitamente NÃO usado para certificar campanha completa do upstream.",
+              "observed": "O relato de campanha completa utilizou patches locais do jogador e IA; não foi usado para certificar a campanha completa do upstream.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for god-of-war-native-pc-port-gow-pc-port.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-gow-official-kit-final.log",
+              "sha256": "02406eb747e74e6f763171c5b743d904a61a422a90bc2992e651a252dadcbb66",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -5586,21 +5909,19 @@
           "project_id": "god-of-war-recomp",
           "repository": "KIexster/god-of-war-recomp",
           "tag": "build-d1d11ec",
-          "schema_version": 5,
+          "schema_version": 9,
           "path": "recipes/god-of-war-2005/god-of-war-recomp/build-d1d11ec.json",
-          "sha256": "58009010a9063916bf0ffad66fd7369fc030c46e4867497c668ef4a54117226b",
-          "status": "disabled",
+          "sha256": "7cd086059a43268479256e9afa21adba4ebe41ab582aab6a806f912a1bf0a587",
+          "status": "experimental",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-GOW"
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -5610,21 +5931,51 @@
             {
               "url": "https://github.com/KIexster/god-of-war-recomp/blob/d1d11ec545c3baf2f3fc17e2df4247ac4b732d5c/docs/ESTADO.md",
               "kind": "maintainer_gameplay_report",
-              "observed": "Diário técnico de6nov registra combate no barco comscriptnormal,60FPS, guardado/recarga no altar e áreasArena09, alémdecontagens e limitações. Cabeçalho antigo9outnão representa últimasentradas.",
+              "observed": "Diário técnico de 6 de novembro registra combate no barco com script normal a 60 FPS, save e recarga no altar, além da área Arena09. Alguns testes usam warp e saves prévios; não provam progressão natural de toda a campanha.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_validation_document"
             }
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for god-of-war-recomp.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-kiexster-official-kit-final.log",
+              "sha256": "710a82a82193bdd51c63368a1b8bf93a4be4b9486069c974f783aa0fa60a3ddd",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/native/kiexster-official-extractor/result.json",
+              "sha256": "0c8f2e41f261281c1eba97ce4be87d078783326a1daeb65c01ab1d844200bb4c",
+              "observed": "Unchanged upstream extractor tested only with an authored synthetic ISO, preserving original script bytes.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -5664,6 +6015,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -5674,20 +6026,20 @@
             {
               "url": "https://github.com/Korvonordico/shadow-of-rome-recompiled/releases/tag/v2.9.5",
               "kind": "maintainer_gameplay_report",
-              "observed": "Notas registram teste manual nafloresta/riodoCapítulo1 comCLEAN, mudanças de controlesPS4 aplicadasnojogo e mídiaamericana/russa; documentação de release também informa campanhaPALjogada atécréditos.",
+              "observed": "Notas de playtest descrevem teste manual na floresta e no rio do capítulo 1 com dados CLEAN, controles PS4 em jogo e mídia americana/russa; também há declaração do mantenedor de campanha PAL até os créditos.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_release_playtest"
             },
             {
               "url": "https://www.youtube.com/watch?v=2GsRxUH3Ctk",
               "kind": "official_demo_link_unplayed",
-              "observed": "Demonstração ligada pelo próprio autor compara primeira arenaPS2 eportPC;URLidentificada, vídeo não reproduzido pela ferramenta.",
+              "observed": "O próprio autor vincula demonstração comparando a primeira arena no PS2 e no port PC; o vídeo não foi reproduzido pela ferramenta.",
               "ref_id_if_web": null
             },
             {
               "url": "https://github.com/Korvonordico/shadow-of-rome-recompiled/issues/3",
               "kind": "user_gameplay_report",
-              "observed": "Usuário confirma testePALitalianov1.9 e relata deriva de áudio nascinemáticas a60FPS.",
+              "observed": "Usuário confirma teste com PAL italiano na v1.9 e relata deriva de áudio nas cinemáticas a 60 FPS.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -5695,21 +6047,43 @@
         },
         "automated_installation_implemented": {
           "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
           "evidence": [
             {
-              "path": "docs/audits/source-integrity-20261127/audit-matrix.json",
-              "sha256": "3da81219c18f28e0c7e48cc104979d97b599d385fd34763a34cbd8835d8275c8",
-              "observed": "Row 81 / shadow-of-rome-recompiled: installer route shadowrome and handler body reviewed; code for preparation/import/build is present. This records implementation only, without asserting end-to-end success.",
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for shadow-of-rome-recompiled.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
               "data_kind": "code_review",
               "scope": "getall"
             }
-          ],
-          "reason": "Static review of the installation handler, separate from functional execution."
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-shadow-rome-defaults.log",
+              "sha256": "656342516dc856f97609296e64c58ec4d94a79ca1f21b0e1bdb8ae9b098fd564",
+              "observed": "Seven checks of all 44 upstream FirstStartIni defaults, PAL/NTSC binding and byte-exact preservation of an existing INI; no original-disc extraction or boot.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-shadow-rome-official-kit-final.log",
+              "sha256": "45c8806dc306ad60d38d71cca5d1d42f5a78da87d478b47397b4adb9559751ad",
+              "observed": "Six actual release kit and authored launch-plan checks, including changed media rejection. No original-disc installation or game boot.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -5749,6 +6123,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -5759,14 +6134,14 @@
             {
               "url": "https://github.com/BlackLabelHQ/SymphonyRecomp/issues/163",
               "kind": "user_gameplay_report",
-              "observed": "Jogador atravessa sala de espinhos dasCatacumbas e volta; fornece dois vídeos do problema gráfico.",
+              "observed": "Jogador atravessa a sala de espinhos das Catacumbas e volta; dois vídeos acompanham o defeito gráfico.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/BlackLabelHQ/SymphonyRecomp/issues/166",
               "kind": "user_gameplay_report",
-              "observed": "Captura mostra defeito na extensãowidescreen das salasCD.",
+              "observed": "Captura mostra um defeito na extensão widescreen das salas CD.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -5828,6 +6203,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -5838,14 +6214,14 @@
             {
               "url": "https://github.com/Rinnegatamante/Crash-Team-Racing-High-Octane/issues/42",
               "kind": "user_gameplay_report",
-              "observed": "Usuário tenta repetidamente atalho deHotAirSkyway, testa30FPS e compara física comoriginal.",
+              "observed": "Jogador tenta repetidamente o atalho de Hot Air Skyway, testa a 30 FPS e compara a física com a versão original.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/Rinnegatamante/Crash-Team-Racing-High-Octane/issues/30",
               "kind": "user_gameplay_report",
-              "observed": "Família relata partidas frequentes3–4jogadores ecrash reproduzível emMysteryCaves.",
+              "observed": "Família relata partidas frequentes com três ou quatro jogadores e crash reproduzível em Mystery Caves.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -5899,10 +6275,10 @@
           "tag": "ci-07d0c49",
           "schema_version": 5,
           "path": "recipes/crash-team-racing/crash-team-racing-turbocharged/ci-07d0c49.json",
-          "sha256": "943f43da0758ee982b0f4373d25e3f74a5a8718eb066822f41200543e84b9b18",
+          "sha256": "cbd8ccee6b8985d6d386bbc8fcf64dbfc8d23bc9323e13ab7e36848f45f30624",
           "status": "experimental",
-          "has_inputs": false,
-          "has_manual_steps": true
+          "has_inputs": true,
+          "has_manual_steps": false
         },
         {
           "game_id": "crash-team-racing",
@@ -5923,6 +6299,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -5933,38 +6310,45 @@
             {
               "url": "https://github.com/CameronRedmore/Crash-Team-Racing-Turbocharged/issues/47",
               "kind": "user_gameplay_report",
-              "observed": "WindowsZIP07d0c49 rodaAdventure/HotAirSkyway; jogador testa30FPS e mede impossibilidade de salto.",
+              "observed": "O ZIP Windows 07d0c49 permite jogar Adventure e Hot Air Skyway; o jogador compara o salto a 30 FPS.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/CameronRedmore/Crash-Team-Racing-Turbocharged/issues/46",
               "kind": "user_gameplay_report",
-              "observed": "MesmoWindowsZIP alcança quarto hub e repete desafioCTRToken deOxideStation maisde20vezes.",
+              "observed": "O mesmo ZIP Windows chega ao quarto hub; o jogador repete mais de vinte vezes o desafio CTR Token de Oxide Station.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/CameronRedmore/Crash-Team-Racing-Turbocharged/issues/25",
               "kind": "user_gameplay_report",
-              "observed": "Usuário observa páginaReleases vazia; isso não apaga evidência de jogo do artefatoCI.",
+              "observed": "Usuário relata página de releases vazia; isso não elimina a evidência de partidas no artefato oficial de CI.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
           ]
         },
         "automated_installation_implemented": {
-          "status": "partial",
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
           "evidence": [
             {
-              "path": "recipes/crash-team-racing/crash-team-racing-turbocharged/ci-07d0c49.json",
-              "sha256": "943f43da0758ee982b0f4373d25e3f74a5a8718eb066822f41200543e84b9b18",
-              "observed": "Official package/kit contract retained with manual upstream preparation. The retired custom build does not count as active automation.",
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for crash-team-racing-turbocharged.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
               "data_kind": "code_review",
               "scope": "getall"
             }
-          ],
-          "reason": "Official launcher or manual procedure remains necessary for media preparation."
+          ]
         },
         "synthetic_validation": {
           "status": "unknown",
@@ -6009,6 +6393,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -6019,14 +6404,14 @@
             {
               "url": "https://github.com/CTR-tools/ctr-native/issues/58",
               "kind": "user_gameplay_report",
-              "observed": "TestesWindows/Linux3–4jogadores emVsSingle/Cup percorremMysteryCaves; caminhodireito e1–2jogadoresfuncionam,esquerdofalha.",
+              "observed": "Testes Windows e Linux com três ou quatro jogadores em Vs Single/Cup percorrem Mystery Caves: o caminho à direita funciona; à esquerda, falha. Com um ou dois jogadores, funciona.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/CTR-tools/ctr-native/issues/52",
               "kind": "user_gameplay_report",
-              "observed": "Relato alcança final doscréditos e identifica tela preta posterior, semprovar como créditosforamacessados.",
+              "observed": "Relato chega ao final dos créditos e identifica uma tela preta posterior, sem esclarecer como os créditos foram acessados.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -6088,6 +6473,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -6098,14 +6484,14 @@
             {
               "url": "https://github.com/wipeout-phantom-edition/wipeout-phantom-edition/issues/58",
               "kind": "user_gameplay_report",
-              "observed": "Jogador compara dificuldade dos adversários durante corridas e solicita ghost de melhor tempo.",
+              "observed": "Jogador compara a dificuldade dos adversários durante corridas e solicita ghost do melhor tempo.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/wipeout-phantom-edition/wipeout-phantom-edition/issues/56",
               "kind": "user_gameplay_report",
-              "observed": "Relato com capturas descreve nave presa fora da pista.",
+              "observed": "Relato com capturas mostra uma nave presa fora da pista.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -6168,6 +6554,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -6178,14 +6565,14 @@
             {
               "url": "https://github.com/phoboslab/wipeout-rewrite/issues/138",
               "kind": "user_gameplay_report",
-              "observed": "Jogador relata um mês de corridas e reproduz colisões emAltimaVII comparadas ao original.",
+              "observed": "Jogador relata um mês de corridas e reproduz colisões em Altima VII comparadas ao original.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/phoboslab/wipeout-rewrite/issues/141",
               "kind": "user_gameplay_report",
-              "observed": "Teste repetido trava indicador de mira ao sairdeuma corrida comalvo e iniciara seguinte.",
+              "observed": "Teste repetido mantém o indicador de mira depois de sair de uma corrida com alvo e iniciar outra.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -6248,13 +6635,17 @@
           "schema_version": 5,
           "path": "recipes/driver-2/redriver2/7.4-rc2.json",
           "sha256": "cc78159433c5e42f4b234bdd8b57e0fab51bebb3c8d63acd560351a296c53df2",
-          "status": "experimental",
+          "status": "disabled",
           "has_inputs": false,
-          "has_manual_steps": true
+          "has_manual_steps": true,
+          "disabled_reason": "A compilação oficial copia os mesmos 76 arquivos rastreados data/DRIVER2 ao pacote. Os conversores oficiais geram apenas vídeo e áudio da mídia própria; não fornecem reconstrução dos extras LANG/GFX/GAL/REPLAYS questionados na issue234. Compilar somente o executável não resolve a lacuna de procedência desses dados.",
+          "disabled_at": "2026-11-27",
+          "audit_reference": "docs/validations/official-scope/remaining-official-blockers.json"
         }
       ],
       "main_covered": null,
-      "development_covered": true,
+      "development_covered": false,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -6265,31 +6656,31 @@
             {
               "url": "https://github.com/OpenDriver2/REDRIVER2/issues/192",
               "kind": "user_gameplay_report",
-              "observed": "Windows11/Ryzen5800X3D/RX6800XT: missãoPursueJericho emHavana chegaàtransição seguinte, comcrash/regra incorreta de dano100%reproduzível.",
+              "observed": "Em Windows 11, Ryzen 5800X3D e RX 6800 XT, jogador chega à transição da missão Pursue Jericho em Havana e reproduz crash ou dano incorreto. Isso comprova progressão real; não certifica toda a campanha.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/OpenDriver2/REDRIVER2/issues/234",
-              "kind": "user_gameplay_report",
-              "observed": "Pergunta recente de empacotador sobre proveniência deLANG/GFX/REPLAYS/XA járastreadosnoGit; nenhumcomentário de resposta encontrado.",
+              "kind": "provenance_gap",
+              "observed": "Empacotador pergunta a origem e licença de LANG, GFX/GAL, REPLAYS/ReChases, XA e DATA/CREDITS.ENG rastreados em data/DRIVER2; diz não conseguir reproduzir esses arquivos pela extração dos discos. A issue tinha zero comentários na reconferência. É uma lacuna de procedência, não prova de ilegalidade nem evidência positiva de gameplay.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
           ]
         },
         "automated_installation_implemented": {
-          "status": "implemented",
+          "status": "blocked",
           "evidence": [
             {
-              "path": "docs/audits/source-integrity-20261127/audit-matrix.json",
-              "sha256": "3da81219c18f28e0c7e48cc104979d97b599d385fd34763a34cbd8835d8275c8",
-              "observed": "Row 88 / redriver2: installer route redriver and handler body reviewed; code for preparation/import/build is present. This records implementation only, without asserting end-to-end success.",
+              "path": "docs/validations/official-scope/remaining-official-blockers.json",
+              "sha256": "879bfb3995ed34ab0a498535bbd242fca1b741d201cd957443048ef5a75bde7f",
+              "observed": "A compilação oficial copia os mesmos 76 arquivos rastreados data/DRIVER2 ao pacote. Os conversores oficiais geram apenas vídeo e áudio da mídia própria; não fornecem reconstrução dos extras LANG/GFX/GAL/REPLAYS questionados na issue234. Compilar somente o executável não resolve a lacuna de procedência desses dados. Restoration condition: Documentar a procedência dos extras ou validar uma reconstrução oficial desses dados a partir das mídias próprias, preservando as funcionalidades do upstream.",
               "data_kind": "code_review",
               "scope": "getall"
             }
           ],
-          "reason": "Static review of the installation handler, separate from functional execution."
+          "reason": "A compilação oficial copia os mesmos 76 arquivos rastreados data/DRIVER2 ao pacote. Os conversores oficiais geram apenas vídeo e áudio da mídia própria; não fornecem reconstrução dos extras LANG/GFX/GAL/REPLAYS questionados na issue234. Compilar somente o executável não resolve a lacuna de procedência desses dados."
         },
         "synthetic_validation": {
           "status": "unknown",
@@ -6334,6 +6725,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -6344,14 +6736,14 @@
             {
               "url": "https://github.com/Legend-of-Dragoon-Modding/Severed-Chains/issues/2914",
               "kind": "user_gameplay_report",
-              "observed": "Jogador descreve fimnatural deDragoon deDart, compara comdestransformação antecipada eanexavídeo.",
+              "observed": "Jogador descreve o fim natural da forma Dragoon de Dart e compara com a destransformação antecipada; há vídeo.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/Legend-of-Dragoon-Modding/Severed-Chains/issues/2922",
               "kind": "user_gameplay_report",
-              "observed": "Relato de treino deAddition registra dano aofalhar counter e persistência após fugir.",
+              "observed": "Relato de treino de Addition registra dano ao falhar um counter e persistência após fugir.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -6413,6 +6805,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -6423,14 +6816,14 @@
             {
               "url": "https://github.com/SlickAmogus/silent-hill-decomp/issues/216",
               "kind": "user_gameplay_report",
-              "observed": "Jogador chegaaoprimeiroesgoto/OldSilentHill eAnnie'sBar, relata itens/pickups nãointeragíveis.",
+              "observed": "Jogador chega ao primeiro esgoto, a Old Silent Hill e ao Annie's Bar, relatando itens que não podem ser coletados.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/SlickAmogus/silent-hill-decomp/issues/203",
               "kind": "user_gameplay_report",
-              "observed": "ControleXboxTurtleBeach permite mirar/atirar; usuário descrevefalha detroca dealvo emgrupos deinimigos.",
+              "observed": "Controle Xbox Turtle Beach permite mirar e atirar; o jogador descreve falha ao trocar de alvo em grupos de inimigos.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -6485,13 +6878,17 @@
           "schema_version": 5,
           "path": "recipes/vandal-hearts/vandalhearts-pcport/v2.1.0.json",
           "sha256": "769eb9a2d2d313b8c9a529d3ba53c24654b2d2c9bb3b50e658febc344f76cd67",
-          "status": "experimental",
+          "status": "disabled",
           "has_inputs": true,
-          "has_manual_steps": true
+          "has_manual_steps": true,
+          "disabled_reason": "O NOTICE declara dados do jogo/BIOS incorporados nos binários. A alternativa fonte foi verificada e usa executável PS-X e BIOS próprios; o teste nativo CMake intacto falhou na criação obrigatória de symlinks por falta de privilégio. O procedimento Windows documentado usa cross-compilação Linux/macOS e dependências próprias, ainda sem integração validada no Desktop.",
+          "disabled_at": "2026-11-27",
+          "audit_reference": "docs/validations/official-scope/remaining-official-blockers.json"
         }
       ],
       "main_covered": null,
-      "development_covered": true,
+      "development_covered": false,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -6502,36 +6899,51 @@
             {
               "url": "https://github.com/HalmyLyseas/VandalHearts-PcPort/blob/14552fffa0e0b47e02b57592e274fc6e7a649923/docs/cross-platform.md",
               "kind": "maintainer_gameplay_report",
-              "observed": "Documento devalidação descreveAppImageDebian12 jogadanoArch atébatalhafinal,pósbatalha,FMVs e póscréditos;Windows também informado como fullplaythrough. macOS cobre primeirabatalha/shops/saves, não campanha.",
+              "observed": "Documento de validação relata AppImage Debian 12 jogada no Arch até a batalha final, FMVs e pós-créditos, além de campanha completa em Windows. No macOS, o escopo é primeira batalha, lojas e saves. São relatos do mantenedor, não testes locais GetAll.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_validation_document"
             },
             {
               "url": "https://github.com/HalmyLyseas/VandalHearts-PcPort/blob/14552fffa0e0b47e02b57592e274fc6e7a649923/docs/known_issues.md",
               "kind": "maintainer_gameplay_report",
-              "observed": "Comparação de campo debatallha comVRAMDuckStation e limitações backend documentadas.",
+              "observed": "Documento oficial compara a renderização de um campo de batalha com a VRAM no DuckStation e identifica limitações dos backends.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_validation_document"
+            },
+            {
+              "url": "https://github.com/HalmyLyseas/VandalHearts-PcPort/blob/14552fffa0e0b47e02b57592e274fc6e7a649923/NOTICE",
+              "kind": "official_distribution_scope",
+              "observed": "NOTICE separa o código próprio dos dados derivados. Os binários incluem segmento estático e textos do jogo, tabelas e glifos kanji derivados do BIOS PS1; esses itens não são abrangidos pela GPL do código próprio. A fonte gera executável/dados necessários a partir dos arquivos legítimos do usuário. O HD pack é opcional e contém arte/FMVs derivados.",
+              "source_sha256": "0744b759761907508ce4a24302c0b62b503a2df112cf336d7dd349af3ff5cc60",
+              "source_bytes": 5299
             }
           ]
         },
         "automated_installation_implemented": {
-          "status": "implemented",
+          "status": "blocked",
           "evidence": [
             {
-              "path": "docs/audits/source-integrity-20261127/audit-matrix.json",
-              "sha256": "3da81219c18f28e0c7e48cc104979d97b599d385fd34763a34cbd8835d8275c8",
-              "observed": "Row 91 / vandalhearts-pcport: installer route vandal and handler body reviewed; code for preparation/import/build is present. This records implementation only, without asserting end-to-end success.",
+              "path": "docs/validations/official-scope/remaining-official-blockers.json",
+              "sha256": "879bfb3995ed34ab0a498535bbd242fca1b741d201cd957443048ef5a75bde7f",
+              "observed": "O NOTICE declara dados do jogo/BIOS incorporados nos binários. A alternativa fonte foi verificada e usa executável PS-X e BIOS próprios; o teste nativo CMake intacto falhou na criação obrigatória de symlinks por falta de privilégio. O procedimento Windows documentado usa cross-compilação Linux/macOS e dependências próprias, ainda sem integração validada no Desktop. Restoration condition: Integrar e verificar ambiente oficial de compilação que suporte o staging de symlinks, gerando todos os dados necessários exclusivamente das mídias/BIOS fornecidos pelo usuário. Não substituir por binário que já incorpora esses dados.",
               "data_kind": "code_review",
               "scope": "getall"
             }
           ],
-          "reason": "Static review of the installation handler, separate from functional execution."
+          "reason": "O NOTICE declara dados do jogo/BIOS incorporados nos binários. A alternativa fonte foi verificada e usa executável PS-X e BIOS próprios; o teste nativo CMake intacto falhou na criação obrigatória de symlinks por falta de privilégio. O procedimento Windows documentado usa cross-compilação Linux/macOS e dependências próprias, ainda sem integração validada no Desktop."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "failed",
+          "reason": "The intact native Windows CMake configuration failed on required symlinks and OpenAL; no claim about overall game functionality.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/vandal-native-configure-result.json",
+              "sha256": "0019329d1f86b2815758b566ff975a947083e498b3f3f58311ea5e4302bb8b25",
+              "observed": "Native configuration only: required symbolic links could not be created in this environment; sources remained unchanged and no original media was supplied.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ]
         },
         "original_media_installation": {
           "status": "unknown",
@@ -6571,6 +6983,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -6581,21 +6994,21 @@
             {
               "url": "https://github.com/novapowers0/BloodyRoar2Recomp/issues/3",
               "kind": "user_gameplay_report",
-              "observed": "Anexo inspecionado: lutaAlice×Uriko emandamento, cronômetro51,Uriko jácomvida reduzida, personagens transformadas emataque/defesa; relato trata de21:9. SHA256 daimagem5badc209ea98fe1c1803680e209ad17a9e99c4ed2dec06590895afc59d3911ca.",
+              "observed": "Captura inspecionada da issue mostra luta Alice contra Uriko em andamento, cronômetro em 51, vida reduzida e personagens transformadas em ataque/defesa. O contexto é o formato 21:9; hash da imagem 5badc209ea98fe1c1803680e209ad17a9e99c4ed2dec06590895afc59d3911ca.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/novapowers0/BloodyRoar2Recomp/issues/4",
               "kind": "user_gameplay_report",
-              "observed": "Testador relata áudio danarração pré-luta, demais sonsfuncionais; emcomentário especificaUSA/OpenGL/48000Hz.",
+              "observed": "Jogador relata áudio ausente na narração pré-luta e demais sons funcionais; especifica USA, OpenGL e 48000 Hz.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/novapowers0/BloodyRoar2Recomp/issues/7",
               "kind": "user_gameplay_report",
-              "observed": "Mantenedor reconhecehooksPGXPausentes emreleaseantiga ecorreçãooficial0.7.0.",
+              "observed": "Mantenedor reconhece hooks PGXP ausentes numa release antiga e a correção oficial 0.7.0.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -6658,6 +7071,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -6668,20 +7082,20 @@
             {
               "url": "https://github.com/Comfubar/KnowYourRoleRecomp/blob/32cf0309e85b2a4f504622b507e9d523c3a138bd/docs/STATUS.md",
               "kind": "maintainer_gameplay_report",
-              "observed": "ValidaçãoWindows11NTSC-U diferencia testesmanuais deautomações: luta1P×COM comDualSenseUSBporpessoa; tipos decombate por30s e vários atéfim; sessão67min e saves. SeasonCONTINUE não confirmado.",
+              "observed": "Validação Windows 11/NTSC-U distingue testes humanos das automações: luta 1P contra COM com DualSense USB, vários tipos de luta até o fim, sessão de 67 minutos e saves. Season CONTINUE continua sem confirmação.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_validation_document"
             },
             {
               "url": "https://github.com/Comfubar/KnowYourRoleRecomp/blob/v0.2.0/Launcher/Program.cs",
               "kind": "official_cli_contract",
-              "observed": "CLI oficialconfirmado no tagv0.2.0(eca626b79ffeab146b84e8de260e43713fb9a649),BuildJobretorna0/1e--playverificaestado.",
+              "observed": "CLI oficial confirmada no tag v0.2.0, commit eca626b79ffeab146b84e8de260e43713fb9a649: BuildJob retorna 0 ou 1 e --play verifica o estado.",
               "ref_id_if_web": null
             },
             {
               "url": "https://github.com/Comfubar/KnowYourRoleRecomp/blob/v0.2.0/tools/package-release.ps1",
               "kind": "official_packaging",
-              "observed": "PacoteoficialpubblicaLauncherauto contidoKnowYourRole.exe e runtime; hashasset127898385bytes=5771e291f13c621537301922bb63fbb8e3b9645ec30a7c3bc8359fe978da4e2a.",
+              "observed": "Script oficial empacota o launcher autocontido KnowYourRole.exe e o runtime. O asset observado tem 127898385 bytes e SHA256 5771e291f13c621537301922bb63fbb8e3b9645ec30a7c3bc8359fe978da4e2a.",
               "ref_id_if_web": null
             }
           ]
@@ -6749,6 +7163,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -6759,21 +7174,21 @@
             {
               "url": "https://github.com/Acranon/kf1-enhanced/releases/tag/v0.1.0-pre.3",
               "kind": "maintainer_gameplay_report",
-              "observed": "Notasdeplaytest doautor restringem testes sobretudo aosdoisprimeirosandares e descrevem pontesHarpa,pits,usodechaves/mapa; não alegam campanha validada.",
+              "observed": "Notas de playtest do autor restringem os testes sobretudo aos dois primeiros andares e descrevem pontes, armadilhas, chaves e mapa; não afirmam campanha inteira validada.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_release_playtest"
             },
             {
               "url": "https://github.com/Acranon/kf1-enhanced/blob/ac147450249c95b8d7683300292a2761796cb611/docs/port-notes.md",
               "kind": "maintainer_gameplay_report",
-              "observed": "Notasdetalhamordemdemovimento,colisão,arma/equipamento e efeitosverificados ou pendentes; não tratadas como teste executadoporesta auditoria.",
+              "observed": "Notas detalham movimento, colisão, armas, equipamento e efeitos verificados ou pendentes; são registros upstream, não testes desta auditoria.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_validation_document"
             },
             {
               "url": "https://github.com/Acranon/kf1-enhanced/blob/ac147450249c95b8d7683300292a2761796cb611/tests/runtime_scenarios.py",
               "kind": "official_reproduction_script",
-              "observed": "Procedimento upstreamreproduzível para pisos/save/reentrada comrecursos legítimos; existência doscriptisoladanãoprova aprovação.",
+              "observed": "Script upstream descreve cenários reproduzíveis de andares, save e reentrada usando recursos legítimos; sua existência isolada não comprova aprovação.",
               "ref_id_if_web": null
             }
           ]
@@ -6834,6 +7249,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -6844,14 +7260,14 @@
             {
               "url": "https://github.com/krystalgamer/Yu-Gi-Oh-Forbidden-Memories-Recompiled/issues/229",
               "kind": "user_gameplay_report",
-              "observed": "Jogador distingue falha doBuildDeck apósloadstate de vários duelos decampanha jájogados, nosquaisosstatesfuncionam; vídeoanexado.",
+              "observed": "Jogador distingue falha do BuildDeck após loadstate de vários duelos de campanha já jogados nos quais os estados funcionam; há vídeo.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/krystalgamer/Yu-Gi-Oh-Forbidden-Memories-Recompiled/issues/278",
               "kind": "user_gameplay_report",
-              "observed": "Usuário da0.2.0 carrega estadoemFreeDuel e relata spritesHDdesativados.",
+              "observed": "Na v0.2.0, jogador carrega estado em Free Duel e relata que sprites HD ficam desativados.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -6913,6 +7329,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -6923,14 +7340,14 @@
             {
               "url": "https://github.com/LostArtefacts/TRX/issues/6169",
               "kind": "user_gameplay_report",
-              "observed": "NoWindows10TRX1.9.3, jogadorreproduz interação deobjetos físicos/inimigos comgradesquebráveis deAldwych emjogovanilla.",
+              "observed": "No Windows 10/TRX 1.9.3, jogador reproduz interação de objetos e inimigos com grades quebráveis de Aldwych em jogo vanilla.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/LostArtefacts/TRX/issues/4975",
               "kind": "user_gameplay_report",
-              "observed": "JogadorLinuxcomparatodos níveisoficiaisTR1 e relataqueda apenasemReturntoEgypt comhardwareespecificado.",
+              "observed": "Jogador Linux compara todos os níveis oficiais de TR1 e relata queda apenas em Return to Egypt, com hardware especificado.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -6992,6 +7409,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -7002,14 +7420,14 @@
             {
               "url": "https://github.com/XProger/OpenLara/issues/530",
               "kind": "user_gameplay_report",
-              "observed": "Jogador nolevel12 descreve deslizarporrampa, agarrar beirada e mover lateralmente; capturavinculada e versãoNix1.03.23.",
+              "observed": "Jogador no nível 12 descreve deslizar por uma rampa, agarrar a beirada e mover lateralmente; vincula captura e versão Nix 1.03.23.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/XProger/OpenLara/issues/37",
               "kind": "maintainer_gameplay_report",
-              "observed": "Registrodeplaytestingporfaseenumera gatilhosdefim ebugsdosníveis; históricoéusadocomo execução efetiva,nãopercentualdecomp.",
+              "observed": "Registro de playtesting por fase enumera gatilhos de fim e bugs dos níveis; foi usado como evidência de execução, sem inferência por percentual de decompilação.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_gameplay_test_inventory"
             }
@@ -7072,6 +7490,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -7082,21 +7501,21 @@
             {
               "url": "https://github.com/Drakfix/MML_Modernization-Project/issues/13",
               "kind": "user_gameplay_report",
-              "observed": "Jogador usaLockOn comSpecialWeapons emalvos acima/abaixo e descreve falhadeaimvertical.",
+              "observed": "Jogador utiliza Lock On com Special Weapons em alvos acima ou abaixo e descreve falha na mira vertical.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/Drakfix/MML_Modernization-Project/issues/20",
               "kind": "user_gameplay_report",
-              "observed": "Captura deSharukurusu comproblema gráficodurante encontro.",
+              "observed": "Captura mostra Sharukurusu com problema gráfico durante um encontro.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             },
             {
               "url": "https://github.com/Drakfix/MML_Modernization-Project/issues/12",
               "kind": "user_gameplay_report",
-              "observed": "Relato chegaàcena emqueRollconsertaobarco deWily e detecta legendasausentes.",
+              "observed": "Jogador chega à cena em que Roll conserta o barco de Wily e detecta legendas ausentes.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -7158,6 +7577,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -7168,7 +7588,7 @@
             {
               "url": "https://github.com/hedge-dev/UnleashedRecomp/issues/1573",
               "kind": "user_gameplay_report",
-              "observed": "v1.0.3Windows11, semmods/códigos, jogada atéhourglass deEggmanland, troca paraWerehog eaciona alavanca; efeito sonoroausente comvídeo/hardware.",
+              "observed": "Na v1.0.3 em Windows 11, sem mods ou códigos, o jogador chega ao hourglass de Eggmanland, muda para Werehog e aciona uma alavanca; relata um efeito sonoro ausente com vídeo e hardware.",
               "ref_id_if_web": null,
               "source_evidence_kind": "upstream_issue_execution_report"
             }
@@ -7231,6 +7651,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -7310,6 +7731,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -7390,6 +7812,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -7469,6 +7892,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -7549,6 +7973,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -7629,6 +8054,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -7708,6 +8134,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -7787,6 +8214,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -7857,19 +8285,17 @@
           "tag": "v0.9.5",
           "schema_version": 9,
           "path": "recipes/forza-horizon/pinyon-shift/v0.9.5.json",
-          "sha256": "2f6249960b261bd44075c18d9f47c0f0f005bf4bd8bc50a08dd1039ad69dd9d0",
-          "status": "disabled",
+          "sha256": "ff9e16931df48b3d071a23462e0b963c7abad99bd0d3da87349ba73602e67f47",
+          "status": "experimental",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-REX"
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -7893,14 +8319,37 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for pinyon-shift.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-pinyon-official-kit-final.log",
+              "sha256": "6aaf2616cbd8ac261fb8801dba5effd09d54ff14ec3240a2565c0cbb86acec69",
+              "observed": "Real official kit and embedded scripts verified; cancellation/unsupported extension and missing Microsoft license acceptance stop preparation. No official setup, compiler, original ISO validation, boot or gameplay executed.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -7932,19 +8381,17 @@
           "tag": "v0.3.9",
           "schema_version": 9,
           "path": "recipes/forza-horizon/fh1-reimagined/v0.3.9.json",
-          "sha256": "473c7b331cd973b1ba4ddf42d7310cf309a9bdd3d0a92797b5ee2a1eeab951d5",
-          "status": "disabled",
+          "sha256": "c08776b221a9a0df9404f930a59c1193170e6007eee58861a612b11795ed2550",
+          "status": "experimental",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-REX"
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -7967,14 +8414,37 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for fh1-reimagined.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-fh1-official-kit.log",
+              "sha256": "160d887e95faf7fef2e12d84b5149fda066d649bec7cc6aa7b7da95fc3009327",
+              "observed": "Actual official kit manifest matches; missing/modified files rejected. Kit integrity only, not the complete installer.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -8014,6 +8484,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -8093,6 +8564,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -8172,6 +8644,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -8244,6 +8717,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -8323,6 +8797,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -8403,6 +8878,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -8482,6 +8958,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -8561,6 +9038,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -8640,6 +9118,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -8712,6 +9191,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -8791,6 +9271,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -8871,6 +9352,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -8951,6 +9433,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -9031,6 +9514,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -9119,6 +9603,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -9207,6 +9692,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -9287,6 +9773,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -9356,21 +9843,19 @@
           "project_id": "gt5-recomp",
           "repository": "MormonFTP-hub/gt5-recomp",
           "tag": "build-64ca169",
-          "schema_version": 5,
+          "schema_version": 9,
           "path": "recipes/gran-turismo-5/gt5-recomp/build-64ca169.json",
-          "sha256": "cb0f81d98c3fb07dae5f85c0db0665c02f4add322192f4c21b579b2ef78418f0",
-          "status": "disabled",
+          "sha256": "0faba67a8bb85fc52f8b2216c86c19b52563bf7f9586935234a46b30d8a11b64",
+          "status": "experimental",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-GT5"
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -9390,18 +9875,49 @@
               "observed": "Relato com contadores de threads descreve corrida em Roma com trechos3–4FPS e outros13–40FPS em5600X/RTX2070S; explicitamente não é benchmark uniforme.",
               "ref_id_if_web": null,
               "source_evidence_kind": "player_issue"
+            },
+            {
+              "url": "https://github.com/MormonFTP-hub/gt5-recomp/blob/950f7ce48006b45e0c1391e80ea0071c04cef2cf/STATUS.md",
+              "kind": "maintainer_gameplay_report",
+              "observed": "Mantenedor documenta sessão de corrida de 10 minutos em 9/11/2026 com disco europeu BCES00569 01.00, sem update, e play.bat padrão: 45–58 FPS reais, mediana 47, em i9-14900KF/RTX 4070 Ti SUPER/Windows 11. O registro distingue contagem duplicada antiga dos frames reais. É evidência de execução do jogo base, separada dos relatos com Master Mod.",
+              "source_evidence_kind": "maintainer_measured_gameplay",
+              "source_sha256": "ee72ca70713351abb9ed2c6003aebe1e8e8c07de26c2ec89a60b02376075c879",
+              "source_bytes": 27379
             }
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for gt5-recomp.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-gt5-official-kit-final.log",
+              "sha256": "090b17ef5ed78e9a08777b2cad25d74f33ef76c2e9b75475869a29fbf3fb5fc6",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -9442,6 +9958,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -9530,6 +10047,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -9611,6 +10129,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -9691,6 +10210,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -9764,6 +10284,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -9852,6 +10373,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -9939,6 +10461,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -10018,6 +10541,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -10097,6 +10621,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -10186,6 +10711,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -10265,6 +10791,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -10337,6 +10864,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -10409,6 +10937,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -10495,6 +11024,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": false,
       "preparation_only": false,
       "validated": false,
       "dimensions": {
@@ -10574,11 +11104,25 @@
           "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
           "disabled_at": "2026-11-27",
           "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-REX"
+        },
+        {
+          "game_id": "ssx-2012",
+          "project_id": "ssx-recomp",
+          "repository": "AmarilloNL/ssx-recomp",
+          "tag": "v2.0.1",
+          "schema_version": 9,
+          "path": "recipes/ssx-2012/ssx-recomp/v2.0.1.json",
+          "sha256": "0a6a532a3f41b124922b17eda1fe2c9f6768fe4a0cce2499e4b7272884c0703a",
+          "status": "experimental",
+          "has_inputs": false,
+          "has_manual_steps": true,
+          "min_sdk_version": "1.5.70"
         }
       ],
       "main_covered": null,
-      "development_covered": false,
-      "preparation_only": false,
+      "development_covered": true,
+      "uses_closed_preparation_profiles": true,
+      "preparation_only": true,
       "validated": false,
       "dimensions": {
         "upstream_functional": {
@@ -10602,14 +11146,37 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "blocked",
-          "evidence": [],
-          "reason": "No active installation contract; disabled history is retained"
+          "status": "implemented",
+          "reason": "Official preparation and play contract implemented in the SDK; this dimension does not assert full installation success.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/official-handler-review.json",
+              "sha256": "3bfd9ccb1200a56ab3c754370d24675f54b94143ca603cfe0b690ad82e1bf02c",
+              "observed": "Reviewed closed profile/generic import, source integrity, required original-media validation, official options, output registration and launch dispatch for ssx-recomp.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md",
+              "sha256": "5f0d90a6bb0bb6652fe472a69c6c15e10fdcbf2e6b08bd111866e32dbf6ddff2",
+              "observed": "Official route, preserved defaults and per-project execution limits documented.",
+              "data_kind": "code_review",
+              "scope": "getall"
+            }
+          ]
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/resumed-evidence/desktop/scope-desktop-ssx-official-kit.log",
+              "sha256": "c95b14cfb9b8a74ca0884467520e18b88c6e5974b42249376a2fcbfe97dd6d98",
+              "observed": "Project-specific official kit/native integration checks shown in this log; synthetic invalid or absent media rejected. No completed original-media installation, boot or gameplay.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Current result limited to the named checks, not a full game installation."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -10650,6 +11217,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {
@@ -10754,6 +11322,7 @@
       ],
       "main_covered": null,
       "development_covered": true,
+      "uses_closed_preparation_profiles": true,
       "preparation_only": true,
       "validated": false,
       "dimensions": {

@@ -1,0 +1,10 @@
+PASS MKDD OFFICIAL new official profile is parsed
+PASS MKDD OFFICIAL unreviewed source cannot enter official build
+PASS MKDD OFFICIAL source-only kit cannot claim a finished executable
+PASS MKDD OFFICIAL real source and pinned submodule stage without running game compilation
+PASS MKDD OFFICIAL complete pristine upstream kit has exact reviewed membership
+PASS MKDD OFFICIAL changed upstream source cannot enter compilation
+PASS MKDD OFFICIAL invalid original disc is rejected before Microsoft provisioning or build
+PASS MKDD OFFICIAL negative media check preserves source kit and selected original bytes
+PASS MKDD OFFICIAL negative original-media check creates no build transaction
+MKDD_OFFICIAL_KIT_PASS (identity and negative media; no original-media build, boot or gameplay)

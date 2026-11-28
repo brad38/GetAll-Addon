@@ -1,0 +1,38 @@
+[
+    {
+        "test":  "sm",
+        "exit":  0,
+        "log":  "..\\scope-desktop-sm-official-kit.log",
+        "pass":  11
+    },
+    {
+        "test":  "sm-rewrite",
+        "exit":  0,
+        "log":  "..\\scope-desktop-sm-rewrite-official-kit.log",
+        "pass":  11
+    },
+    {
+        "test":  "sm64plus",
+        "exit":  0,
+        "log":  "..\\scope-desktop-sm64plus-official-kit.log",
+        "pass":  6
+    },
+    {
+        "test":  "sm64ex",
+        "exit":  0,
+        "log":  "..\\scope-desktop-sm64ex-official-kit.log",
+        "pass":  7
+    },
+    {
+        "test":  "render96ex",
+        "exit":  0,
+        "log":  "..\\scope-desktop-render96ex-official-kit.log",
+        "pass":  7
+    },
+    {
+        "test":  "sm64rt",
+        "exit":  0,
+        "log":  "..\\scope-desktop-sm64rt-official-kit.log",
+        "pass":  7
+    }
+]

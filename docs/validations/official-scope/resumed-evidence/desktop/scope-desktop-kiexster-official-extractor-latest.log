@@ -1,0 +1,3 @@
+PASS OFFICIAL SOURCE official KIexster archive hash and size
+PASS OFFICIAL SOURCE unchanged upstream extractor handles authored dual-layer input
+PASS OFFICIAL SOURCE all extracted bytes match the authored ISO and official scripts remain unchanged

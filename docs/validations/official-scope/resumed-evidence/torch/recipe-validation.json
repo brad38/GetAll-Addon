@@ -1,0 +1,17 @@
+{
+  "syntax_parsed": [
+    "build.py",
+    "verify.py"
+  ],
+  "official_archives_verified": {
+    "torch": 764,
+    "libgfxd": 17,
+    "spdlog": 177,
+    "tinyxml2": 273,
+    "yaml-cpp": 394,
+    "zlib": 257
+  },
+  "portable_probe_exit_code": 0,
+  "no_second_build": true,
+  "reason": "The official binary was already built and its source hashes were verified; this checks the portable recipe/probe without repeating compilation."
+}

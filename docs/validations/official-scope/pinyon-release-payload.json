@@ -1,0 +1,58 @@
+{
+  "source_entries": 456,
+  "source_bytes": 6464046,
+  "files": [
+    {
+      "path": "config/release-toolchain.json",
+      "bytes": 13955,
+      "sha256": "bb28e6bd12bab574dcb6ff54a76bc57400fcc68e0e4e5c8c7e54c9b244521719"
+    },
+    {
+      "path": "tools/launch-preview.ps1",
+      "bytes": 18652,
+      "sha256": "713fcdd1e74e3f9b68f72b3ba16110debcc2895fe045d4c55c62b4d61d73fc17"
+    },
+    {
+      "path": "tools/setup-preview.ps1",
+      "bytes": 15650,
+      "sha256": "5e481a0b9d4957ec73a484dcf3ed4c862f3dbd72c73971d89e446e16cd4dd380"
+    }
+  ],
+  "release_config_extra": {
+    "shiftglue_kit": {
+      "linux-x86_64": {
+        "revision": "0c2187cbdc1857029550f510f4d3d5bee36a57a6",
+        "url": "https://github.com/arcanite24/pinyon-shift/releases/download/v0.9.5/shiftglue-kit-0c2187cbdc18-linux-x86_64.tar.xz",
+        "sha256": "B228A8AC7E177ADDDCCE501674F620FC51DBDEACECE4C775B91F35EC0656F22E"
+      },
+      "macos-arm64": {
+        "revision": "0c2187cbdc1857029550f510f4d3d5bee36a57a6",
+        "url": "https://github.com/arcanite24/pinyon-shift/releases/download/v0.9.5/shiftglue-kit-0c2187cbdc18-macos-arm64.tar.xz",
+        "sha256": "CC968C72D911060BDA19037A2C9B9019448929F1F1B058CC54C3A6BEFC4613C3"
+      },
+      "macos-x86_64": {
+        "revision": "0c2187cbdc1857029550f510f4d3d5bee36a57a6",
+        "url": "https://github.com/arcanite24/pinyon-shift/releases/download/v0.9.5/shiftglue-kit-0c2187cbdc18-macos-x86_64.tar.xz",
+        "sha256": "C024EC992BED1BD5ABE0E1564CA84B2BC2BD1019E268ED9F1CD5DF48516EBF26"
+      },
+      "windows-x64": {
+        "revision": "0c2187cbdc1857029550f510f4d3d5bee36a57a6",
+        "url": "https://github.com/arcanite24/pinyon-shift/releases/download/v0.9.5/shiftglue-kit-0c2187cbdc18-windows-x64.zip",
+        "sha256": "83BB8F5406CB11FD13A44BD4FC33BB81C329D66FBB9FAF253DBB9543305854D9"
+      }
+    },
+    "msvc_sysroot": {
+      "comment": "TP-4: opt-in instead of the Build Tools with a prebuilt ShiftGlue kit; xwin fetches the CRT and Windows SDK from Microsoft after the player accepts Microsoft's license",
+      "install_path": ".local/toolchain/msvc-sysroot",
+      "sdk_version": "10.0.22621",
+      "license_url": "https://go.microsoft.com/fwlink/?LinkId=2179911",
+      "xwin": {
+        "version": "0.10.0",
+        "url": "https://github.com/Jake-Shadle/xwin/releases/download/0.10.0/xwin-0.10.0-x86_64-pc-windows-msvc.tar.gz",
+        "sha256": "96E83665EF5C1406AABD0BE603A8D08E67E604F36FDA630B6807EE948A614E26",
+        "install_path": ".local/toolchain/xwin-0.10.0",
+        "executable": "xwin.exe"
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+PASS Shadow of Rome official kit stages with media prompt
+PASS Shadow of Rome cancel preserves official kit
+PASS Shadow of Rome invalid ISO
+PASS Shadow of Rome invalid ISO leaves installation incomplete
+PASS Shadow of Rome synthetic launch delegates defaults and preferences to the intact official GUI
+PASS Shadow of Rome altered ISO

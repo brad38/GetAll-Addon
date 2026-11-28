@@ -1,0 +1,115 @@
+{
+  "scope": "isolated official toolchain bootstrap only; no original media",
+  "stage": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\g-msys-official-test",
+  "owner": "686659b1-9584-4469-9207-270e378c7281",
+  "steps": [
+    {
+      "name": "extract",
+      "arguments": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\sm64plus-msys\\msys2-base-x86_64-20261120.sfx.exe",
+        "-y",
+        "-oC:\\Users\\bradg\\Downloads\\GetAll-R18\\g-msys-official-test"
+      ],
+      "exit_code": 0,
+      "seconds": 8.52,
+      "log": "sm64plus-msys-extract.log",
+      "log_sha256": "d7fa66d052756f32dfb7d144187390d68bf17c2ea4d05f43e150109fcf6df8fd"
+    },
+    {
+      "name": "initialize",
+      "arguments": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\g-msys-official-test\\msys64\\usr\\bin\\bash.exe",
+        "-lc",
+        " "
+      ],
+      "exit_code": 0,
+      "seconds": 0.12,
+      "log": "sm64plus-msys-initialize.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "update-core",
+      "arguments": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\g-msys-official-test\\msys64\\usr\\bin\\bash.exe",
+        "-lc",
+        "pacman --noconfirm -Syuu"
+      ],
+      "exit_code": 1,
+      "seconds": 6.27,
+      "log": "sm64plus-msys-update-core.log",
+      "log_sha256": "46b6db53387e5e40c64034c4cae7c56312e048fcb756e07c7bd0eadaa21db6d3"
+    },
+    {
+      "name": "update-normal",
+      "arguments": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\g-msys-official-test\\msys64\\usr\\bin\\bash.exe",
+        "-lc",
+        "pacman --noconfirm -Syuu"
+      ],
+      "exit_code": 1,
+      "seconds": 4.47,
+      "log": "sm64plus-msys-update-normal.log",
+      "log_sha256": "46b6db53387e5e40c64034c4cae7c56312e048fcb756e07c7bd0eadaa21db6d3"
+    },
+    {
+      "name": "keyring",
+      "arguments": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\g-msys-official-test\\msys64\\usr\\bin\\bash.exe",
+        "-lc",
+        "pacman-key --init && pacman-key --populate msys2"
+      ],
+      "exit_code": 0,
+      "seconds": 3.38,
+      "log": "sm64plus-msys-keyring.log",
+      "log_sha256": "e520496024528121254a31a9bb6400e9931652d253a3ffadb6e83f7cc3e0888f"
+    },
+    {
+      "name": "resume-update-core",
+      "arguments": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\g-msys-official-test\\msys64\\usr\\bin\\bash.exe",
+        "-lc",
+        "pacman --noconfirm -Syuu"
+      ],
+      "exit_code": 0,
+      "seconds": 6.64,
+      "log": "sm64plus-msys-resume-update-core.log",
+      "log_sha256": "88c6f6b78253b7306e778111d0309e7f7d67c511878495368d76cc34fe0f1971"
+    },
+    {
+      "name": "resume-update-normal",
+      "arguments": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\g-msys-official-test\\msys64\\usr\\bin\\bash.exe",
+        "-lc",
+        "pacman --noconfirm -Syuu"
+      ],
+      "exit_code": 0,
+      "seconds": 4.64,
+      "log": "sm64plus-msys-resume-update-normal.log",
+      "log_sha256": "a28c505fbe16c9f25459d27bc0b827c9f8683c84c70f7e4a3ffd4fdc35910e5f"
+    },
+    {
+      "name": "dependencies",
+      "arguments": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\g-msys-official-test\\msys64\\usr\\bin\\bash.exe",
+        "-lc",
+        "pacman -S git make python3 mingw-w64-x86_64-gcc mingw-w64-x86_64-SDL2 mingw-w64-x86_64-glew --noconfirm --needed"
+      ],
+      "exit_code": 0,
+      "seconds": 56.94,
+      "log": "sm64plus-msys-dependencies.log",
+      "log_sha256": "c1de71eeb13609381aacd13c0c1126733541d318a3e86f73b8548af54354d048"
+    },
+    {
+      "name": "versions",
+      "arguments": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\g-msys-official-test\\msys64\\usr\\bin\\bash.exe",
+        "-lc",
+        "pacman -Q; printf '\\nSHELL OPTIONS\\n'; set -o; printf '\\nPATH\\n'; command -v gcc make python git"
+      ],
+      "exit_code": 0,
+      "seconds": 0.56,
+      "log": "sm64plus-msys-versions.log",
+      "log_sha256": "5a149e39fcc7a67ea23daf9ae14deacf74bc0eedfa22c5b6d61e799bc60ce70f"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+
+  Determinando os projetos a serem restaurados...
+  Restaurando o pacote sdl2.nuget.redist.2.26.3 do NuGet.
+  Restaurando o pacote sdl2.nuget.2.26.3 do NuGet.
+  Adicionando pacote 'sdl2.nuget.redist.2.26.3' à pasta 'C:\Users\bradg\Downloads\GetAll-R18\evidence-r18\official-scope-20261127\sm-official\sm-578f90b3cc49557bb70060ad033bb90b8cf8ac50\packages'
+  Pacote 'sdl2.nuget.redist.2.26.3' adicionado à pasta 'C:\Users\bradg\Downloads\GetAll-R18\evidence-r18\official-scope-20261127\sm-official\sm-578f90b3cc49557bb70060ad033bb90b8cf8ac50\packages'
+  Adicionando pacote 'sdl2.nuget.2.26.3' à pasta 'C:\Users\bradg\Downloads\GetAll-R18\evidence-r18\official-scope-20261127\sm-official\sm-578f90b3cc49557bb70060ad033bb90b8cf8ac50\packages'
+  Pacote 'sdl2.nuget.2.26.3' adicionado à pasta 'C:\Users\bradg\Downloads\GetAll-R18\evidence-r18\official-scope-20261127\sm-official\sm-578f90b3cc49557bb70060ad033bb90b8cf8ac50\packages'
+  gl_core_3_1.c
+  config.c
+  glsl_shader.c
+  main.c
+  opengl.c
+  volume_control.c
+  sm_80.c
+  sm_81.c
+  sm_82.c
+  sm_84.c
+  sm_85.c
+  sm_86.c
+  sm_87.c
+  sm_88.c
+  sm_89.c
+  sm_8d.c
+  sm_8f.c
+  sm_90.c
+  sm_91.c
+  sm_92.c
+  Gerando Código...
+  Compilando...
+  sm_93.c
+  sm_94.c
+  sm_9b.c
+  sm_a0.c
+  sm_a2.c
+  sm_a3.c
+  sm_a4.c
+  sm_a5.c
+  sm_a6.c
+  sm_a7.c
+  sm_a8.c
+  sm_a9.c
+  sm_aa.c
+  sm_ad.c
+  sm_b2.c
+  sm_b3.c
+  sm_b4.c
+  sm_cpu_infra.c
+  sm_rtl.c
+  apu.c
+  Gerando Código...
+  Compilando...
+  cart.c
+  cpu.c
+  dma.c
+  dsp.c
+  input.c
+  ppu.c
+  snes.c
+  snes_other.c
+  spc.c
+  spc_player.c
+  tracing.c
+  util.c
+  Gerando Código...
+  sm_8b.c
+  sm.vcxproj -> C:\Users\bradg\Downloads\GetAll-R18\evidence-r18\official-scope-20261127\sm-official\sm-578f90b3cc49557bb70060ad033bb90b8cf8ac50\build\bin-x64-Release\sm.exe

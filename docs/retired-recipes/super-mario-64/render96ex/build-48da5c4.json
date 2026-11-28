@@ -1,0 +1,13 @@
+{
+  "schema_version": 5,
+  "project_id": "render96ex",
+  "tag": "build-48da5c4",
+  "source_url": "https://github.com/Render96/Render96ex/commit/48da5c491c8abfb2f5192b59278c1c269411e533",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Selecione sua ROM original americana de Super Mario 64 (.z64). O motor verifica a midia e compila Render96ex Windows x64 com ferramentas privadas fixadas. Packs opcionais continuam disponiveis. Nenhuma ROM e distribuida."
+}

@@ -1,0 +1,76 @@
+{
+  "scope": "official clone and missing-media negative preflight; no original ROM, game build, boot or gameplay",
+  "commit": "44fccee2fc4bd4768ae4eff1e5c47b21abe5d85d",
+  "steps": [
+    {
+      "name": "clone",
+      "arguments": [
+        "-lc",
+        "git clone --depth 1 --branch master https://github.com/MorsGames/sm64plus.git sm64plus"
+      ],
+      "exit_code": 0,
+      "seconds": 4.89,
+      "log": "sm64plus-official-clone.log",
+      "log_sha256": "2c3a7a0dacbb9f92b4d20b9d6eedb5a2f0f8231e9d36d0686754146d4451f1a1"
+    },
+    {
+      "name": "head",
+      "arguments": [
+        "-lc",
+        "git -C sm64plus rev-parse HEAD"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09,
+      "log": "sm64plus-official-head.log",
+      "log_sha256": "4b0eeb2c8218eea2f48022cf13562c464350c9ce6cb4cb21c2b5d4ae44c56855"
+    },
+    {
+      "name": "syntax-crlf",
+      "arguments": [
+        "-lc",
+        "bash -n build.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09,
+      "log": "sm64plus-official-syntax-crlf.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "syntax-igncr",
+      "arguments": [
+        "-lc",
+        "bash -o igncr -n build.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09,
+      "log": "sm64plus-official-syntax-igncr.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "missing-rom",
+      "arguments": [
+        "-lc",
+        "exec bash -o igncr build.sh 1"
+      ],
+      "exit_code": 1,
+      "seconds": 0.75,
+      "log": "sm64plus-official-missing-rom.log",
+      "log_sha256": "03e438214419c7cd01abb72a6af49dd28dc085a69aa769e93aa63b2b6a17d241"
+    },
+    {
+      "name": "source-integrity",
+      "arguments": [
+        "-lc",
+        "git -C sm64plus diff --exit-code; git -C sm64plus status --porcelain --untracked-files=no"
+      ],
+      "exit_code": 0,
+      "seconds": 0.81,
+      "log": "sm64plus-official-source-integrity.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "missing_rom_rejected": true,
+  "script_sha256_after": "46683247c8d1d4bebcaa69d88924214959f9175ec93d8405dca3cd0ce76d5cd4",
+  "tracked_sources_unchanged": true,
+  "produced_game": false
+}

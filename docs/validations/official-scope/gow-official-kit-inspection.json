@@ -1,0 +1,29 @@
+{
+  "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\God-Of-War-PC-Launcher_0.4.0_x64-portable.zip",
+  "bytes": 19725266,
+  "sha256": "e3583f31d56d175b5aaaf34e4b89465274d77ebdac5259182ddc3a7027a29aa1",
+  "script_equals_tag": false,
+  "script_normalized_equals_tag": true,
+  "members": [
+    {
+      "path": "God Of War - PC Launcher_0.4.0_x64-portable/kit/install.ps1",
+      "bytes": 71380,
+      "sha256": "d15eaac24dd4e0c703f7e846450aca6cfc86b7da57ea52f1008b1a1f7fbe281c"
+    },
+    {
+      "path": "God Of War - PC Launcher_0.4.0_x64-portable/kit/bin/ps2_recomp.exe",
+      "bytes": 1284608,
+      "sha256": "080288c885d0083f8f5faccd6b622b8ff981ea31694b77d33e8d617abff56b7c"
+    },
+    {
+      "path": "God Of War - PC Launcher_0.4.0_x64-portable/kit/bin/ps2-tools.exe",
+      "bytes": 1166336,
+      "sha256": "f519e44f2192b38929d509412426b0acd89c480822de6eba9a3cb745bba247df"
+    },
+    {
+      "path": "God Of War - PC Launcher_0.4.0_x64-portable/kit/RustPortPS2/games/scus-97399/gow-port.toml",
+      "bytes": 66849,
+      "sha256": "858b5877fc64b57290a1fd6aacc87225a63d08a2e0a92348b84297428fc1dd87"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "project": "pinyon",
+    "repository": "arcanite24/pinyon-shift",
+    "commit": "850518ce00c66d65557bcbf190a62d2e2a6bb0e3",
+    "path": "tools/build-preview.ps1",
+    "url": "https://raw.githubusercontent.com/arcanite24/pinyon-shift/850518ce00c66d65557bcbf190a62d2e2a6bb0e3/tools/build-preview.ps1",
+    "bytes": 12411,
+    "sha256": "3c08d33d1438820c17edbbb78d9f258d70d49dc988715474da67cca84885c75f",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\pinyon\\tools\\build-preview.ps1"
+  },
+  {
+    "project": "pinyon",
+    "repository": "arcanite24/pinyon-shift",
+    "commit": "850518ce00c66d65557bcbf190a62d2e2a6bb0e3",
+    "path": "tools/install-build-tools.ps1",
+    "url": "https://raw.githubusercontent.com/arcanite24/pinyon-shift/850518ce00c66d65557bcbf190a62d2e2a6bb0e3/tools/install-build-tools.ps1",
+    "bytes": 2492,
+    "sha256": "25267dc272262b1b3dcbfefb12432970f256b244fd0dc3118675d7baf5546b51",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\pinyon\\tools\\install-build-tools.ps1"
+  },
+  {
+    "project": "pinyon",
+    "repository": "arcanite24/pinyon-shift",
+    "commit": "850518ce00c66d65557bcbf190a62d2e2a6bb0e3",
+    "path": "launcher/PinyonShift.Launcher.Desktop/Installation.cs",
+    "url": "https://raw.githubusercontent.com/arcanite24/pinyon-shift/850518ce00c66d65557bcbf190a62d2e2a6bb0e3/launcher/PinyonShift.Launcher.Desktop/Installation.cs",
+    "bytes": 20314,
+    "sha256": "8452b4795a9c629393e9797cc7fc1a7d6eb154d55dc96473e12601299b64cf5e",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\pinyon\\launcher\\PinyonShift.Launcher.Desktop\\Installation.cs"
+  },
+  {
+    "project": "fh1",
+    "repository": "FH1-ReImagined/ForzaHorizon1-ReImagined",
+    "commit": "46d5ed62866af68700d15c61748df8c29ad0248d",
+    "path": "launcher/forza_launcher/builder.py",
+    "url": "https://raw.githubusercontent.com/FH1-ReImagined/ForzaHorizon1-ReImagined/46d5ed62866af68700d15c61748df8c29ad0248d/launcher/forza_launcher/builder.py",
+    "bytes": 68886,
+    "sha256": "133f2edb89e4afa7e2dd4d0557f96847d7046d7c3d79ffed1976932322981814",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\fh1\\launcher\\forza_launcher\\builder.py"
+  },
+  {
+    "project": "fh1",
+    "repository": "FH1-ReImagined/ForzaHorizon1-ReImagined",
+    "commit": "46d5ed62866af68700d15c61748df8c29ad0248d",
+    "path": "launcher/forza_launcher/installer.py",
+    "url": "https://raw.githubusercontent.com/FH1-ReImagined/ForzaHorizon1-ReImagined/46d5ed62866af68700d15c61748df8c29ad0248d/launcher/forza_launcher/installer.py",
+    "bytes": 29372,
+    "sha256": "7db16af8bbab1ecaae6b3cf28e64c80113ad09bd4fb5daeb4470541e4ee60ba8",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\fh1\\launcher\\forza_launcher\\installer.py"
+  },
+  {
+    "project": "fh1",
+    "repository": "FH1-ReImagined/ForzaHorizon1-ReImagined",
+    "commit": "46d5ed62866af68700d15c61748df8c29ad0248d",
+    "path": "launcher/forza_launcher/game.py",
+    "url": "https://raw.githubusercontent.com/FH1-ReImagined/ForzaHorizon1-ReImagined/46d5ed62866af68700d15c61748df8c29ad0248d/launcher/forza_launcher/game.py",
+    "bytes": 52284,
+    "sha256": "d0f419ba363d31e38c76830f5891b7413d55f3ef736704a786416a0354dda3a0",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\fh1\\launcher\\forza_launcher\\game.py"
+  },
+  {
+    "project": "fh1",
+    "repository": "FH1-ReImagined/ForzaHorizon1-ReImagined",
+    "commit": "46d5ed62866af68700d15c61748df8c29ad0248d",
+    "path": "launcher/forza_launcher/config.py",
+    "url": "https://raw.githubusercontent.com/FH1-ReImagined/ForzaHorizon1-ReImagined/46d5ed62866af68700d15c61748df8c29ad0248d/launcher/forza_launcher/config.py",
+    "bytes": 24613,
+    "sha256": "b07621338673507369fb3da9f5cbff4d7759afdffb820202a4bd3839fb12c21e",
+    "local": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\fh1\\launcher\\forza_launcher\\config.py"
+  }
+]

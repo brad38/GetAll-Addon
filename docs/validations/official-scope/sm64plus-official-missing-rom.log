@@ -1,0 +1,10 @@
+nada para fazer
+The sm64plus folder already exists. Skipping cloning the repository.
+[31mCouldn't move the ROM file.
+atenção: git-2.56.1-1 está atualizado -- ignorando
+atenção: make-4.4.1-3 está atualizado -- ignorando
+atenção: python-3.14.10-3 está atualizado -- ignorando
+atenção: mingw-w64-x86_64-gcc-16.2.0-7 está atualizado -- ignorando
+atenção: mingw-w64-x86_64-sdl2-compat-2.32.74-5 está atualizado -- ignorando
+atenção: mingw-w64-x86_64-glew-2.3.1-4 está atualizado -- ignorando
+mv: não foi possível obter estado de 'C:\Users\bradg\Downloads\GetAll-R18\g-msys-official-test\profile-localappdata\SM64Plus\baserom.us.z64': No such file or directory

@@ -1,0 +1,7 @@
+PASS SSX OFFICIAL real official ZIP stages only the installer kit
+PASS SSX OFFICIAL real kit has exact two pinned upstream members
+PASS SSX OFFICIAL missing licence cannot execute real installer
+PASS SSX OFFICIAL invalid original media rejected before real installer
+PASS SSX OFFICIAL rejection preserves verified installer and original media
+PASS SSX OFFICIAL negative media/consent tests leave no build workspace
+SSX_OFFICIAL_KIT_PASS (no original-media install, boot or gameplay)

@@ -116,14 +116,18 @@ def coverage(catalog, main_index, development_index, *, eligibility=None, exclus
                 item = {"status": "historical", "evidence": item.get("evidence", []),
                         "reason": "Evidence does not validate a currently active recipe version"}
             if name == "automated_installation_implemented" and not usable_pending:
-                item = {"status": "blocked" if pending else "unknown", "evidence": [],
-                        "reason": "No active installation contract; disabled history is retained"}
+                recorded_blocker = item if item["status"] == "blocked" else {}
+                item = {"status": "blocked" if pending else "unknown",
+                        "evidence": recorded_blocker.get("evidence", []),
+                        "reason": recorded_blocker.get("reason", "No active installation contract; disabled history is retained")}
             dimensions[name] = item
         rows.append({
             "game_id": game, "project_id": project, "platform_group": platform,
             "main": public, "development": pending,
             # Legacy names mean indexed contracts only, never functional coverage.
             "main_covered": bool(usable_public), "development_covered": bool(usable_pending),
+            "uses_closed_preparation_profiles": bool(usable_pending) and all(x["schema_version"] == 9 for x in usable_pending),
+            # Deprecated alias: schema 9 can execute complete official preparation in the SDK.
             "preparation_only": bool(usable_pending) and all(x["schema_version"] == 9 for x in usable_pending),
             "validated": any(x["status"] == "validated" for x in usable_pending),
             "dimensions": dimensions,
@@ -140,7 +144,9 @@ def coverage(catalog, main_index, development_index, *, eligibility=None, exclus
         "main_covered": sum(r["main_covered"] for r in rows),
         "development_covered": sum(r["development_covered"] for r in rows),
         "missing": sum(not r["development_covered"] for r in rows),
+        "uses_closed_preparation_profiles": sum(r["uses_closed_preparation_profiles"] for r in rows),
         "preparation_only": sum(r["preparation_only"] for r in rows),
+        "legacy_preparation_only_semantics": "Deprecated alias of uses_closed_preparation_profiles. Schema 9 does not imply manual-only, partial or unavailable automation.",
         "validated": sum(r["validated"] for r in rows),
         "legacy_validated_is_execution_evidence": False,
         "dimension_counts": totals, "historical_excluded_recipes": historical_excluded, "rows": rows,
@@ -169,7 +175,7 @@ def main():
             row["main_covered"] = None
     encoded = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
     if args.output:
-        Path(args.output).write_text(encoded, encoding="utf-8")
+        Path(args.output).write_text(encoded, encoding="utf-8", newline="\n")
     else:
         print(encoded, end="")
 

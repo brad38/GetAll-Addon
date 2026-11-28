@@ -8,19 +8,22 @@ Repositório público de **receitas declarativas** para o motor nativo do AllFix
 - `addons/allfix.install.universal/`: documentos do addon declarativo universal.
 - `docs/`: política de confiança, atualização, migração e rollback.
 
-## Escopo revisado em 27/11/2026
+## Escopo revisado em 28/11/2026
 
 O GetAll automatiza **procedimentos oficiais** de projetos com gameplay
 comprovado. O catálogo de revisão contém **137 projetos em 108 jogos**; 11 IDs
-anteriores ficam em registro separado para reavaliação. O índice conserva 145
-receitas: 123 ativas e 22 desativadas com motivo. A presença de um launcher
-oficial é um caminho válido de instalação e pode dispensar uma automação própria.
+anteriores ficam em registro separado para reavaliação. O índice conserva
+**146 receitas: 134 ativas e 12 desativadas**, com 134 projetos de automação
+implementada e três impedimentos documentados.
 
 A [cobertura em seis dimensões](docs/INSTALLATION-COVERAGE.md) separa upstream
 funcional, implementação, testes sintéticos, instalação com mídia original,
-primeiro boot e gameplay. A revisão não acrescenta uma nova homologação.
-As métricas de rodadas antigas abaixo são históricas e não representam o
-catálogo ou a cobertura atual. Não existe meta obrigatória de manter 148 IDs.
+primeiro boot e gameplay. Os [contratos oficiais restaurados](docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md)
+preservam as funções dos autores e mantêm os perfis antigos rejeitados.
+A revisão não acrescenta homologação nem execução com mídia original.
+
+As métricas de rodadas antigas abaixo são históricas. Não existe meta
+obrigatória de manter 148 IDs.
 
 ## GetAll-Addon v1.0.0 — instalar e usar
 
@@ -37,7 +40,7 @@ As versões de SDK e protocolo são independentes: o addon v1.0.0 utiliza a API 
 ## Canal de desenvolvimento
 
 O ZIP público mantém seu destino legado. Esta revisão usa um complemento
-separado **1.5.75**, requer **SDK 1.5.70** e aponta para os commits revisados de
+separado **1.5.76**, requer **SDK 1.5.70** e aponta para os commits revisados de
 receitas e catálogo. O pacote é declarativo; instruções e comando com os SHAs
 completos estão em [PREVIEW-SDK170.md](docs/PREVIEW-SDK170.md).
 

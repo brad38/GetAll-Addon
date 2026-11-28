@@ -1,0 +1,21 @@
+{
+  "scope": "unmodified native-Windows CMake configuration only; no game/BIOS data or build",
+  "arguments": [
+    "C:\\Program Files\\CMake\\bin\\cmake.EXE",
+    "-S",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\vandal-source\\source\\platform\\pc",
+    "-B",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\g-msys-official-test\\vandal-cmake-configure",
+    "-G",
+    "Ninja",
+    "-DCMAKE_MAKE_PROGRAM=C:\\Users\\bradg\\AppData\\Local\\Microsoft\\WinGet\\Links\\ninja.EXE",
+    "-DCMAKE_C_COMPILER=C:\\Users\\bradg\\Downloads\\GetAll-R18\\g-msys-official-test\\msys64\\mingw64\\bin\\gcc.exe",
+    "-DCMAKE_PREFIX_PATH=C:\\Users\\bradg\\Downloads\\GetAll-R18\\g-msys-official-test\\msys64\\mingw64"
+  ],
+  "exit_code": 1,
+  "seconds": 0.44,
+  "log": "vandal-native-configure.log",
+  "log_sha256": "6dc10fb143082410a1fa8bc44a626695807091d9314fb439fc72308fc8dfe863",
+  "original_log_sha256": "29f1449594748d357b95ed08370376d631f3821a637cb994263a8977620545da",
+  "log_normalization": "CRLF converted to LF without changing text; original bytes retained in log-encoding-normalization.json."
+}

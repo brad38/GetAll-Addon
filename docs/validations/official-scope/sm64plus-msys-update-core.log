@@ -1,0 +1,33 @@
+:: Sincronizando a base de dados de pacotes...
+ clangarm64 sendo baixado...
+ mingw32 sendo baixado...
+ mingw64 sendo baixado...
+ ucrt64 sendo baixado...
+ clang64 sendo baixado...
+ msys sendo baixado...
+atenção: Chaveiro público não encontrado; você chegou a executar "pacman-key --init"?
+erro: clangarm64: a chave "5F944B027F7FE2091985AA2EFA11531AA0AA7F57" é desconhecida
+erro: o chaveiro não pode ser escrito
+erro: mingw32: a chave "5F944B027F7FE2091985AA2EFA11531AA0AA7F57" é desconhecida
+erro: o chaveiro não pode ser escrito
+erro: mingw64: a chave "5F944B027F7FE2091985AA2EFA11531AA0AA7F57" é desconhecida
+erro: o chaveiro não pode ser escrito
+erro: ucrt64: a chave "5F944B027F7FE2091985AA2EFA11531AA0AA7F57" é desconhecida
+erro: o chaveiro não pode ser escrito
+erro: clang64: a chave "5F944B027F7FE2091985AA2EFA11531AA0AA7F57" é desconhecida
+erro: o chaveiro não pode ser escrito
+erro: msys: a chave "5F944B027F7FE2091985AA2EFA11531AA0AA7F57" é desconhecida
+erro: o chaveiro não pode ser escrito
+erro: clangarm64: a chave "5F944B027F7FE2091985AA2EFA11531AA0AA7F57" é desconhecida
+erro: o chaveiro não pode ser escrito
+erro: mingw32: a chave "5F944B027F7FE2091985AA2EFA11531AA0AA7F57" é desconhecida
+erro: o chaveiro não pode ser escrito
+erro: mingw64: a chave "5F944B027F7FE2091985AA2EFA11531AA0AA7F57" é desconhecida
+erro: o chaveiro não pode ser escrito
+erro: ucrt64: a chave "5F944B027F7FE2091985AA2EFA11531AA0AA7F57" é desconhecida
+erro: o chaveiro não pode ser escrito
+erro: clang64: a chave "5F944B027F7FE2091985AA2EFA11531AA0AA7F57" é desconhecida
+erro: o chaveiro não pode ser escrito
+erro: msys: a chave "5F944B027F7FE2091985AA2EFA11531AA0AA7F57" é desconhecida
+erro: o chaveiro não pode ser escrito
+erro: falha ao sincronizar todas as bases de dados (base de dados inválida ou corrompida (assinatura PGP))
