@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "package": "GetAll-Addon-preview-1.5.75.zip",
+  "bytes": 879,
+  "sha256": "d15010f5895e9eb33ca0d158cfe5f8d71b8413b186cfe503c151305fda7814b3",
+  "members": [
+    "addon.json",
+    "responses.json"
+  ],
+  "manifest": {
+    "manifest_version": 1,
+    "id": "allfix.install.universal.preview",
+    "name": "GetAll de desenvolvimento",
+    "version": "1.5.75",
+    "api_version": "1.0",
+    "entrypoint": "responses.json",
+    "capabilities": [
+      "installation.recipe.remote"
+    ],
+    "permissions": [],
+    "priority": 0,
+    "min_sdk_version": "1.5.70"
+  },
+  "origin": {
+    "repository": "brad38/GetAll-Addon",
+    "ref": "0798424195d9e6ddc50d59f7d68b7b298fa10e54",
+    "index_path": "index.json",
+    "catalog_ref": "91bd560fab30f7411b5350abe0ad7103d370a7ce"
+  },
+  "validation": "JSON Schema, exact members, version, minimum SDK and immutable source pins passed",
+  "remote_availability": "Not asserted by this local packaging test",
+  "stage": "preliminary_packaging_proof_before_final_implementation_review"
+}

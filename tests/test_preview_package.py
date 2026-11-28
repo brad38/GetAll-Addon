@@ -41,6 +41,21 @@ class PreviewPackageTests(unittest.TestCase):
                     package(root, "a" * 40, "b" * 40, "1.1.0", output)
             self.assertFalse(output.exists())
 
+    def test_official_scope_package_requires_sdk_with_fidelity_gates(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            output=root/"official.zip"
+            index=b'{"index_format_version":1,"channel":"preview","execution_policy":"official_upstream_only"}'
+            with patch("scripts.package_preview.subprocess.check_output",return_value=index):
+                for minimum in ("1.5.11","1.5.69","1.4.99"):
+                    with self.subTest(minimum=minimum):
+                        with self.assertRaisesRegex(ValueError,"1.5.70"):
+                            package(root,"a"*40,"b"*40,"1.5.75",output,minimum)
+                        self.assertFalse(output.exists())
+                package(root,"a"*40,"b"*40,"1.5.75",output,"1.5.70")
+            with zipfile.ZipFile(output) as archive:
+                self.assertEqual(json.loads(archive.read("addon.json"))["min_sdk_version"],"1.5.70")
+
     def test_rejects_noncanonical_versions_before_reading_git_or_creating_zip(self):
         invalid_versions = ("01.1.0", "1.01.0", "1.1.00", "1.2", "1.2.3.4",
                             "1.2.3-beta", "100000000.1.0", "1.2.3\n")

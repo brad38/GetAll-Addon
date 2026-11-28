@@ -35,7 +35,7 @@ launcher recompilado dentro do Desktop.
 | Dimensão | Resultado registrado | O que o resultado permite concluir |
 |---|---:|---|
 | Upstream funcional | 137 com evidência específica | Gameplay documentado pelas fontes revisadas; limitações e procedimento oficial permanecem no catálogo. |
-| Automação implementada | 118 implementadas; 5 parciais; 14 suspensas | Revisão de rotas e corpos de instalação no código. Não é uma execução ponta a ponta. |
+| Automação implementada | 121 implementadas; 2 parciais; 14 suspensas | Revisão de rotas e corpos de instalação no código. Não é uma execução ponta a ponta. |
 | Validação sintética | 13 relatórios históricos; 124 sem resultado individual transferido | Provas limitadas de ferramentas/transações em SDK anterior. Não foram reaprovadas automaticamente para o SDK 1.5.70. |
 | Instalação com mídia original | 1 relato histórico; 136 desconhecidas | Relato anterior de SM64 Coop Deluxe, sem novo recibo de reprodução nesta rodada. |
 | Primeiro boot pelo GetAll | 1 relato histórico; 136 desconhecidos | O mesmo relato registra importação e execução; não houve nova confirmação. |
@@ -45,9 +45,12 @@ launcher recompilado dentro do Desktop.
 `historical` preserva uma prova anterior sem afirmar que a implementação atual
 passou novamente. `partial` identifica um trecho documentado que ainda depende
 do procedimento manual oficial ou da validação da integração substituída.
-Os cinco parciais desta revisão são os três aliases oficiais citados acima,
-Hookshot e KnowYourRole; estes dois últimos tiveram identidade/CLI revisados,
-sem mídia original ou execução de jogo nesta rodada.
+Os dois parciais desta revisão são SM64Plus LauncherMirror e CTR ci-07d0c49,
+que conservam a preparação manual oficial. MKW v0.1.18, Hookshot e KnowYourRole
+têm rotas oficiais implementadas, confirmadas pela leitura dos handlers e do
+dispatch do SDK 1.5.70. A falta de uma execução atual não muda essa dimensão
+para parcial. As provas de mídia, boot e gameplay continuam independentes;
+veja [a revisão dessas rotas](validations/official-scope/installation-route-refresh.json).
 
 O arquivo [installation-evidence.json](installation-evidence.json) registra cada
 projeto e dimensão. Cada alegação positiva exige tag e SHA-256 exatos da receita,

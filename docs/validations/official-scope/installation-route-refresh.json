@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-11-28",
+  "review": "Static body and dispatch review of the SDK 1.5.70 remediation worktree. Implementation presence is independent of execution.",
+  "implementation_review_only": true,
+  "projects": [
+    {
+      "project_id": "mkw-recomp",
+      "source_path": "Services/GameInstallationMkwBuild.cs",
+      "source_sha256": "c4244cff73f158d656ff171cc6cdc68e45468e97195aaf8d7df744b2779308ad",
+      "methods_read": [
+        "CompleteMkwPreparation",
+        "ValidateMkwSelectionContract",
+        "MkwOfficialSpecArguments",
+        "LaunchMkw"
+      ],
+      "observed": "Official v0.1.18 path validates original media and the user-supplied SM86 specification with the official sass_spec.Spec parser, runs official prepare.py, verifies outputs and registers/launches them transactionally. The retired CLI path is rejected by fidelity gating; no shaderstep.py rewrite occurs on the official path.",
+      "execution_result": "not_run"
+    },
+    {
+      "project_id": "hookshot-zelda-oot-port",
+      "source_path": "Services/GameInstallationHookshotBuild.cs",
+      "source_sha256": "688b7bf0f4ee6f0b3b8a2abd525d9b270729d4b832f240130e6178e089d5c84a",
+      "methods_read": [
+        "StageHookshotBuilderHome",
+        "CompleteHookshotPreparation",
+        "ValidateHookshotOutput",
+        "LaunchHookshot"
+      ],
+      "observed": "Current official Hookshot profile stages pinned builder parts into a portable home, validates media, invokes HookshotBuilder --cli --prepare --game --out, verifies executable/renderer/image/RomFS and uses the shared build transaction. The local bootstrap inspection establishes package identity only.",
+      "execution_result": "not_run"
+    },
+    {
+      "project_id": "knowyourrolerecomp",
+      "source_path": "Services/GameInstallationKnowYourRole.cs",
+      "source_sha256": "962b88ee2d28b91d623d97164693ad895a32819123267d9218a516dbe4961c57",
+      "methods_read": [
+        "ResumeKnowYourRole",
+        "RunKnowYourRoleBuilder",
+        "ValidateKnowYourRoleBuild",
+        "LaunchKnowYourRole"
+      ],
+      "observed": "Current route verifies the official release and original BIN hash, creates its CUE, invokes the package own KnowYourRole.exe --cue --out, checks generated assemblies/build identity, publishes settings transactionally and launches --play. The duplicated embedded builder is no longer used.",
+      "execution_result": "not_run"
+    }
+  ],
+  "limits": [
+    "No original media, local game build, boot or gameplay occurred in this review.",
+    "The source hashes identify the exact handler snapshots read; later source changes require review.",
+    "MKW legacy declarative instructions are overridden by the SDK route instructions; they do not establish the behavior of the current handler."
+  ]
+}

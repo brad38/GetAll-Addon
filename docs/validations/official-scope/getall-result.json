@@ -3,7 +3,7 @@
   "checked_at_utc": "2026-11-28",
   "catalog_commit": "91bd560fab30f7411b5350abe0ad7103d370a7ce",
   "python_tests": {
-    "passed": 73,
+    "passed": 74,
     "failed": 0,
     "command": "python -m unittest discover -s tests -v"
   },
@@ -27,8 +27,8 @@
         "evidenced": 137
       },
       "automated_installation_implemented": {
-        "implemented": 118,
-        "partial": 5,
+        "implemented": 121,
+        "partial": 2,
         "blocked": 14
       },
       "synthetic_validation": {
@@ -56,8 +56,8 @@
   "artifacts": [
     {
       "path": "docs/installation-evidence.json",
-      "bytes": 287685,
-      "sha256": "fd920a6add97ba33aa80c1d729a8f020b48dec0cf4b2eceed412d72d2cd73111"
+      "bytes": 289170,
+      "sha256": "c891b2e80b779f88e66d6efc2b064a449634f5e4cbbb0730d7e267767a6a3b0b"
     },
     {
       "path": "docs/official-install-policy.json",
@@ -66,23 +66,44 @@
     },
     {
       "path": "docs/INSTALLATION-COVERAGE.md",
-      "bytes": 7188,
-      "sha256": "761bd07f6df0466d951f9a168b34d78157cb433c5e0f1225642c8008bb2e258d"
+      "bytes": 7462,
+      "sha256": "28fc3fa6339d4299772675afb1c21ca4895b2052f25302d50c0dc1e8fa201564"
     },
     {
       "path": "docs/validations/official-scope/catalog-coverage.json",
-      "bytes": 465495,
-      "sha256": "d99dfeb3770e80952107d6b43078568ca30d8c736dc805fb0902dc4c6bf83e9a"
+      "bytes": 466980,
+      "sha256": "62fab6657c5c8d4eb571d52188c32c7e852fcc228dc84d1c706d94d27204ecc0"
     },
     {
       "path": "docs/validations/official-scope/getall-tests.log",
-      "bytes": 11793,
-      "sha256": "2a04faad344a483ba94ac113828d1b76c59d578b49cfcaabd2ac0df6d9b88cdb"
+      "bytes": 11965,
+      "sha256": "3563797ff93682007228f6aff0a3f3f70a67d24e89f4805e805b4b7ef0fded15"
     },
     {
       "path": "docs/validations/official-scope/getall-validation.log",
       "bytes": 245,
       "sha256": "351a327bb210567258b1ecf2c5eafe6249e9ec0b673069411a70292f4fd06035"
+    },
+    {
+      "path": "docs/validations/official-scope/preview-addon-1.5.75-preliminary.json",
+      "bytes": 1046,
+      "sha256": "1b9d84958ce828e30824ea2312cc4d66869c0ec2a40f9891a41f6392fec639a4"
+    },
+    {
+      "path": "docs/validations/official-scope/documentation-review.json",
+      "bytes": 2531,
+      "sha256": "b4d3601881eb8b518d1e76ef82223874effe8f11c9286759e7a59d624d82ae08"
+    },
+    {
+      "path": "docs/PREVIEW-SDK170.md",
+      "bytes": 3393,
+      "sha256": "a3d99db01bed7a3ba29686bc95fa066642089a4a0416a95bb9834503590f68fa"
+    },
+    {
+      "path": "docs/validations/official-scope/installation-route-refresh.json",
+      "bytes": 2821,
+      "sha256": "e43ec5b0d90f10a5f8cc00ac83745ee2cc06afa3165d4df1574f21a76a4c2fd7"
     }
-  ]
+  ],
+  "additional_check": "Official-scope preview requires SDK >=1.5.70; preliminary deterministic addon proved locally; final source pin is generated after this commit."
 }

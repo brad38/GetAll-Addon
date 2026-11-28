@@ -36,10 +36,15 @@ As versões de SDK e protocolo são independentes: o addon v1.0.0 utiliza a API 
 
 ## Canal de desenvolvimento
 
-O ZIP público continua apontando para a `main`. Para testar um índice marcado como `preview`, gere um complemento separado com o SDK 1.5.11 ou superior:
+O ZIP público mantém seu destino legado. Esta revisão usa um complemento
+separado **1.5.75**, requer **SDK 1.5.70** e aponta para os commits revisados de
+receitas e catálogo. O pacote é declarativo; instruções e comando com os SHAs
+completos estão em [PREVIEW-SDK170.md](docs/PREVIEW-SDK170.md).
+
+Para outra revisão futura, use o mesmo comando com os commits verificados:
 
 ```text
-python scripts/package_preview.py <commit-getall> <commit-catalogo> <versao-do-addon> <saida.zip>
+python scripts/package_preview.py <commit-getall> <commit-catalogo> <versao-do-addon> <saida.zip> --min-sdk 1.5.70
 ```
 
 Use commits publicados de `GetAll-Addon` e `AllFix-Repo` com SHAs completos. Valide o índice contra o mesmo catálogo antes de gerar o ZIP. A instalação do complemento não ativa o canal automaticamente. Ao ativá-lo em **Gerenciar**, a Loja usa os três documentos do SHA curado e identifica as receitas de desenvolvimento. Ao desativá-lo, volta a consultar a `main`. Para atualizar o complemento, aumente a versão e use novos SHAs. O índice pode exigir `min_sdk_version` por receita. O All-Fix mostra o requisito e bloqueia a receita quando o SDK é mais antigo.
@@ -59,7 +64,10 @@ Versões independentes: `index_format_version` (índice), `schema_version` (rece
 
 ## Segurança
 
-A versão inicial do host aceita somente a origem fixa `https://raw.githubusercontent.com/brad38/GetAll-Addon/main/`, acessada por HTTPS e sem redirecionamentos. O índice não pode definir URLs arbitrárias; caminhos de receitas são relativos a `recipes/` e seguem um formato restrito. O host valida o SHA-256, os metadados, o schema, o conjunto de operações e a segurança de caminhos **antes** de executar a receita, e mantém cache local seguro.
+A origem pública usa a referência pública do repositório oficial. O canal de
+prévia usa um SHA completo de `brad38/GetAll-Addon` e o SHA do catálogo declarado
+no complemento, com as barreiras de canal e fidelidade do SDK atual. O acesso
+usa HTTPS; o índice não pode definir origens de receitas arbitrárias; caminhos de receitas são relativos a `recipes/` e seguem um formato restrito. O host valida o SHA-256, os metadados, o schema, o conjunto de operações e a segurança de caminhos **antes** de executar a receita, e mantém cache local seguro.
 
 **Limitação do modelo de confiança:** um SHA-256 armazenado no mesmo índice comprova consistência, não é uma assinatura independente. A autoridade vem da propriedade e do controle do repositório GitHub fixado; o comprometimento da conta ou da branch pode publicar dados maliciosos. Exija MFA, revisão por pull requests, proteção de branch e privilégios mínimos. Assinaturas digitais independentes ficam para uma evolução posterior.
 

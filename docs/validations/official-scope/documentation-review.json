@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-11-28",
+  "scope": "Active entrypoints and discovery/coverage instructions in the three review worktrees; historical audit bodies are preserved.",
+  "getall": {
+    "corrected": [
+      "README.md: active SDK 1.5.70 preview instructions and pinned package command; public addon preserved.",
+      "docs/COBERTURA-CATALOGO.md: 142/148 integral claim marked superseded, linked to six-dimensional current matrix.",
+      "docs/AUTOMACAO-CI-E-MONITORAMENTO.md: old catalog148 pin/default SDK replaced by current137 scope, review-only exclusions and branch-safe automation.",
+      "docs/SCOPE-CORRECTION-CHECKPOINT.md: starting148 explicitly historical, researched137 scope and integration status recorded.",
+      "scripts/upstream_watch.py: removed unused main URL constant; all actual scope loading selects the channel.",
+      "scripts/package_preview.py: official_upstream_only package requires SDK >= 1.5.70.",
+      "Six-dimensional ledger: MKW official, Hookshot and KnowYourRole handlers confirmed implemented; lack of execution no longer mislabeled as partial. Final counts 121 implemented,2 partial,14 suspended."
+    ],
+    "counts": {
+      "catalog_projects": 137,
+      "catalog_games": 108,
+      "active_recipe_projects": 123,
+      "disabled_variants": 22
+    },
+    "no_execution_inference": true
+  },
+  "catalog": {
+    "commit": "91bd560fab30f7411b5350abe0ad7103d370a7ce",
+    "read": [
+      "README.md",
+      "docs/audits/eligibility-20261127/README.md",
+      "docs/ELIGIBILITY-POLICY.md",
+      "AGENTS.md"
+    ],
+    "observed": "Reviewed137/108 active scope is explicit. The148 figure describes the original research population; no fixed quota is retained. Dates and review-only discovery are distinguished.",
+    "edited": false
+  },
+  "desktop": {
+    "read": [
+      "README.md",
+      "docs/OFFICIAL-FIDELITY-RETIREMENT-20261127.md",
+      "AGENTS.md"
+    ],
+    "observed": "No active148-complete claim in inspected entrypoints. Fidelity retirement instructions are current; README is general/older app documentation and lacks an SDK1.5.70 Store/GetAll entrypoint.",
+    "recommendation_to_root": "Add a concise current Store/GetAll scope section pointing to final evidence and preview instructions.",
+    "edited": false
+  },
+  "limits": [
+    "Not a re-audit of upstream gameplay sources.",
+    "Historical audit bodies, original recipes and proof hashes were not rewritten.",
+    "No remote publication or Windows build result is asserted."
+  ]
+}

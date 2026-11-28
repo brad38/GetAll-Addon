@@ -13,6 +13,7 @@ VERSION = re.compile(r"(?:0|[1-9][0-9]{0,7})(?:\.(?:0|[1-9][0-9]{0,7})){2}")
 REPOSITORY = "brad38/GetAll-Addon"
 PREVIEW_ID = "allfix.install.universal.preview"
 CAPABILITY = "installation.recipe.remote"
+OFFICIAL_SCOPE_MIN_SDK = (1, 5, 70)
 
 
 def package(root: Path, revision: str, catalog: str, version: str, output: Path, min_sdk: str = "1.5.11") -> None:
@@ -25,6 +26,8 @@ def package(root: Path, revision: str, catalog: str, version: str, output: Path,
     ))
     if index.get("channel") != "preview" or index.get("index_format_version") != 1:
         raise ValueError("O commit precisa conter um índice GetAll de desenvolvimento.")
+    if index.get("execution_policy") == "official_upstream_only" and tuple(map(int, min_sdk.split("."))) < OFFICIAL_SCOPE_MIN_SDK:
+        raise ValueError("A prévia de instalações oficiais exige --min-sdk 1.5.70 ou superior.")
 
     manifest = {
         "manifest_version": 1, "id": PREVIEW_ID, "name": "GetAll de desenvolvimento",

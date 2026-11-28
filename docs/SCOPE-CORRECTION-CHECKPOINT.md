@@ -12,7 +12,16 @@
 - Branch catálogo: work/catalog-eligibility-20261127.
 - Espelho editável do Desktop em scratch/desktop-scope; commit e build serão feitos no worktree Windows autenticado. Clone privado via CLI local não possui credencial; acesso Windows funciona.
 
-## Em andamento
+## Etapas e estado de integração
+
+A pesquisa e os registros de catálogo foram concluídos: 108 jogos, 137 projetos
+ativos e 11 excluídos, commit `91bd560fab30f7411b5350abe0ad7103d370a7ce`.
+O GetAll tem 145 receitas preservadas, 123 ativas e 22 desativadas, com matriz
+em [seis dimensões](INSTALLATION-COVERAGE.md). O commit final de receitas e o catálogo são fixados no recibo do complemento
+de prévia depois da última revisão de código e evidências. A integração Windows, o push e o CI
+hospedado são etapas separadas e não se inferem dos testes locais.
+
+Plano da rodada, preservado para rastreabilidade:
 
 1. Pesquisa de elegibilidade em três fatias (IDs1–50,51–100,101–148), usando fontes oficiais e evidência além de README/releases existentes.
 2. Remoção/substituição dos patches próprios e componentes rejeitados; manutenção das capacidades legítimas.

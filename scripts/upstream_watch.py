@@ -34,7 +34,6 @@ import validate_recipes  # noqa: E402
 from catalog_scope import assessments, excluded_identities, is_eligible, load_scope  # noqa: E402
 from validate_ci import select_catalog  # noqa: E402
 
-CATALOG_URL = "https://raw.githubusercontent.com/brad38/AllFix-Repo/main/catalog.json"
 GITHUB_API_BASE = "https://api.github.com"
 MAX_ZIP_BYTES = 250 * 1024 * 1024  # 250 MiB cap for safe CI inspection
 HTTP_TIMEOUT = 25

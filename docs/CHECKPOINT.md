@@ -8,8 +8,8 @@ preservadas**. O índice mantém **145 receitas: 122 experimental, 1 validated
 histórica e 22 disabled**. São **123 IDs com contrato ativo** e **14 elegíveis
 sem automação ativa**. Todas as receitas históricas continuam auditáveis.
 
-A [matriz em seis dimensões](INSTALLATION-COVERAGE.md) registra 118 implementações
-examinadas no código, cinco fluxos parciais e 14 suspensões; 13 provas sintéticas
+A [matriz em seis dimensões](INSTALLATION-COVERAGE.md) registra 121 implementações
+examinadas no código, dois fluxos parciais e 14 suspensões; 13 provas sintéticas
 históricas, um relato histórico de mídia/boot e nenhuma nova prova de gameplay
 pelo GetAll. Esses números medem coisas diferentes. A revisão upstream
 independe da ausência de um teste local com mídia original.
@@ -26,7 +26,7 @@ excluídos geram revisão, nunca admissão automática. As datas do catálogo n�
 são alteradas. CI e monitor da prévia usam o catálogo fixado e não têm main
 como destino de publicação da prévia.
 
-Validação desta alteração: **73 testes Python aprovados**; validador estrito
+Validação desta alteração: **74 testes Python aprovados**; validador estrito
 com JSON Schema e catálogo revisado aprovado para as 145 receitas. Resultados
 e reprodução em [official-scope](validations/official-scope/). Não houve push,
 merge, release nem mudança da instalação corrente por esta etapa.

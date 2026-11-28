@@ -1,4 +1,17 @@
-# Cobertura funcional do catálogo
+# Cobertura do catálogo — ponto de entrada e histórico
+
+## Estado vigente: revisão de elegibilidade e instalações oficiais
+
+A matriz atual está em [INSTALLATION-COVERAGE.md](INSTALLATION-COVERAGE.md):
+**137 projetos elegíveis, 108 jogos, 123 contratos ativos e 22 variantes
+suspensas**. As seis dimensões separam implementação e evidências de execução.
+
+As conclusões abaixo de **142/148 fluxos integrais** foram substituídas pela
+revisão de fontes e elegibilidade. Permanecem aqui como histórico, sem autorizar
+reativação das receitas nem execução dos componentes retirados. O catálogo
+ativo não tem meta de 148 IDs.
+
+---
 
 ## Continuidade — SDK 1.5.69, fontes e prévia verificadas em 27/11/2026
 

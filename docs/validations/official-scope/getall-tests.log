@@ -20,6 +20,7 @@ test_preview_uses_pinned_catalog_for_development_events (test_ci_validation.CiVa
 test_preview_watcher_never_targets_main_or_an_unrelated_review_branch (test_ci_validation.CiValidationTests.test_preview_watcher_never_targets_main_or_an_unrelated_review_branch) ... ok
 test_public_and_legacy_indexes_use_public_catalog (test_ci_validation.CiValidationTests.test_public_and_legacy_indexes_use_public_catalog) ... ok
 test_successful_ci_also_validates_multidimensional_evidence (test_ci_validation.CiValidationTests.test_successful_ci_also_validates_multidimensional_evidence) ... ok
+test_official_scope_package_requires_sdk_with_fidelity_gates (test_preview_package.PreviewPackageTests.test_official_scope_package_requires_sdk_with_fidelity_gates) ... ok
 test_package_pins_both_repositories (test_preview_package.PreviewPackageTests.test_package_pins_both_repositories) ... ok
 test_rejects_mutable_refs_and_public_index (test_preview_package.PreviewPackageTests.test_rejects_mutable_refs_and_public_index) ... ok
 test_rejects_noncanonical_versions_before_reading_git_or_creating_zip (test_preview_package.PreviewPackageTests.test_rejects_noncanonical_versions_before_reading_git_or_creating_zip) ... ok
@@ -78,6 +79,6 @@ test_rejects_unsafe_paths_spaces_and_reserved_names (test_validate_recipes.Valid
 test_retired_contract_cannot_be_reactivated_by_removing_its_reason (test_validate_recipes.ValidateRecipesTests.test_retired_contract_cannot_be_reactivated_by_removing_its_reason) ... ok
 
 ----------------------------------------------------------------------
-Ran 73 tests in 2.828s
+Ran 74 tests in 2.906s
 
 OK

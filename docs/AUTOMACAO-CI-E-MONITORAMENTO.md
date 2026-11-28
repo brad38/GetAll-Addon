@@ -1,93 +1,102 @@
-# Automação de CI e Monitoramento Upstream — GetAll-Addon
+# CI e monitoramento de instalações oficiais
 
-Este documento descreve os dois workflows de automação configurados no repositório, seus scripts locais e as garantias de segurança adotadas.
+Esta rotina valida a elegibilidade, a fidelidade do procedimento e as evidências
+sem usar uma meta numérica de projetos. O relatório vigente é
+[INSTALLATION-COVERAGE.md](INSTALLATION-COVERAGE.md).
 
-## 1. Validação automática em Pull Requests (`validate-recipes.yml`)
+## Validação em PR, push e execução manual
 
-- **Arquivo do workflow:** `.github/workflows/validate-recipes.yml`
-- **Scripts:** `scripts/validate_ci.py` seleciona o catálogo e aplica a barreira de publicação; `scripts/validate_recipes.py` valida os documentos.
-- **Testes:** `tests/test_ci_validation.py`, `tests/test_validate_recipes.py` e a suíte completa de `tests/`.
-- **Gatilhos:** `pull_request`, `push` em `main` e `feat/marathon-xbox-media-import`, e `workflow_dispatch`.
-- **Permissões no GitHub Actions:** `contents: read` (somente leitura).
+O workflow `.github/workflows/validate-recipes.yml` usa
+`scripts/validate_ci.py`, `scripts/validate_recipes.py` e
+`scripts/catalog_coverage.py`. Executa a suíte de `tests/` e preserva o relatório
+textual de cobertura como artifact por 14 dias. As permissões são somente de
+leitura. Os gatilhos incluem PR, execução manual e push em main e nas branches
+de desenvolvimento declaradas, incluindo `work/official-install-scope-20261127`.
 
-### O que é verificado
+O canal `preview` usa o catálogo fixado em
+`91bd560fab30f7411b5350abe0ad7103d370a7ce`, com `eligibility.json` e
+`excluded-projects.json` desse mesmo commit. O canal público/legado mantém a
+origem pública. Índice preview é recusado em push, execução manual ou PR com
+destino main, antes de executar os validadores.
 
-1. Codificação UTF-8 sem BOM e finais de linha `LF` estritos em `index.json` e em todas as receitas (`recipes/**/*.json`).
-2. Validação formal por **JSON Schema Draft 2020-12** (`jsonschema`) contra os contratos de `schemas/`:
-   - `remote-recipe-index-v1.schema.json`
-   - `installation-recipe-v1.schema.json` até `installation-recipe-v9.schema.json`
-3. Correspondência exata de **SHA-256** entre `index.json` e os bytes UTF-8 publicados de cada receita.
-4. Unicidade de `(project_id, tag)` e `path`, além da ausência de arquivos JSON órfãos em `recipes/`.
-5. Consistência de `schema_version`, `project_id`, `tag`, `source_url`, `has_inputs` e `has_manual_steps`.
-6. Segurança de caminhos conforme a versão do contrato, incluindo rejeição de traversal, barras invertidas, caminhos absolutos e nomes reservados do Windows. O schema v5 e posteriores permitem os caracteres adicionais documentados; as versões anteriores mantêm sua gramática.
-7. Integridade semântica de `operations` (`copy`, `move`, `copy_input`, `import_input`, `import_input_set`), `inputs` e `first_run_files`.
-8. Conferência cruzada de `game_id`, `project_id` e `repository` com o catálogo oficial `brad38/AllFix-Repo`.
+A validação verifica UTF-8/LF, schemas, hashes das receitas, identidade, caminhos,
+operações, mídia e contratos fechados do SDK. Todo ID ativo do catálogo deve
+ter avaliação funcional concreta, procedimento oficial e revisão de
+proveniência. Uma receita de um projeto excluído só é aceita como histórico
+`disabled` com a identidade/repositório arquivados. Órfãos ativos falham.
+Receitas desativadas exigem motivo, data e referência. A política de integridade
+impede reativar os contratos retirados apenas apagando seus motivos.
 
-O canal do índice determina o catálogo: `preview` usa o commit fixado
-`3f4603cf42ef43402b4a0a9470232e7d4fcd9eb9` (148 projetos), enquanto `public`
-ou um índice legado sem `channel` usa `main`. Assim, PRs de novas branches para
-desenvolvimento e execuções manuais usam as mesmas identidades. Pushes e
-execuções manuais de `main`, além de todos os PRs destinados a `main`, exigem
-canal público, independentemente da branch de origem. Um índice de prévia é
-rejeitado antes da chamada ao validador.
-
-### Execução local
+O relatório separa upstream funcional, implementação da automação, teste
+sintético, instalação com mídia original, primeiro boot e gameplay. Evidência
+local exige arquivo e SHA-256; alegações positivas exigem tag e SHA-256 exatos
+da receita. Mudança de receita deixa a evidência anterior como histórica.
+Teste sintético e gameplay upstream não preenchem mídia/boot/gameplay GetAll.
+O status legado `validated` não se transforma sozinho em prova de execução.
 
 ```bash
 python scripts/validate_ci.py
 python -m unittest discover -s tests -v
 ```
 
-Para conferir um catálogo local explicitamente:
+Para conferir o checkout local do catálogo revisado:
 
 ```bash
-python scripts/validate_recipes.py --strict-lf --require-jsonschema --check-git-blobs --check-catalog ../allfix-repo/catalog.json
+python scripts/validate_recipes.py --strict-lf --require-jsonschema --check-git-blobs --check-catalog ../catalog-scope/catalog.json
+python scripts/catalog_coverage.py --catalog ../catalog-scope/catalog.json --output catalog-coverage-report.json
 ```
 
-## 2. Monitoramento diário (`upstream-watch.yml`)
+## Monitoramento diário e descobertas
 
-- **Arquivo do workflow:** `.github/workflows/upstream-watch.yml`
-- **Script:** `scripts/upstream_watch.py`
-- **Testes:** `tests/test_upstream_watch.py`
-- **Gatilhos:** agendamento diário (`cron: "0 9 * * *"`, 09:00 UTC / 06:00 BRT) e execução manual (`workflow_dispatch`).
-- **Permissões no GitHub Actions:** `contents: write` e `pull-requests: write` (mínimo necessário para criar a branch `automation/upstream-watch` e abrir o Pull Request).
+O workflow `.github/workflows/upstream-watch.yml` usa
+`scripts/upstream_watch.py`. O agendamento existente é diário às 09:00 UTC;
+`workflow_dispatch` permite uma revisão manual. Não foi criada uma segunda
+rotina de agendamento. GitHub executa o agendamento da branch padrão; a nova
+prévia pode ser verificada por dispatch na sua branch até ser aprovada a
+integração posterior. Este trabalho não faz merge em main.
 
-### Como funciona
+A consulta lê o catálogo e seus registros do mesmo commit selecionado pelo
+canal. A matriz de 22/11 é usada apenas como histórico de tags, nunca como
+lista fixa de 119 projetos nem como critério de elegibilidade.
 
-1. Consulta `catalog.json` no repositório oficial `brad38/AllFix-Repo` e compara com a matriz auditada em `docs/AUDITORIA-CATALOGO-2026-11-22.md` e `docs/RODADA-B-2026-11-23.md`.
-2. Consulta a API oficial de Releases do GitHub para os repositórios mapeados (respeitando `GITHUB_TOKEN` sem expor credenciais e tratando projetos `D` já documentados com repositório 404).
-3. Quando encontra uma nova release estável:
-   - Baixa o `.zip` oficial Windows em pasta temporária (limite de 250 MiB), calcula seu **SHA-256 real** e lê **somente o diretório central do ZIP** (`zipfile.ZipFile.infolist()`), **nunca extraindo ou executando binários**.
-   - **Projetos com alguma receita `validated`, `disabled`, `draft`, de contrato diferente de v3 ou com `inputs`/`operations`:** a nova release é registrada para revisão antes de baixar o pacote, independentemente da ordem das versões no índice. A atualização automática não pode reativar receitas nem remover dependências, assets, launchers Java ou perfis de preparação/compilação ao converter um contrato mais recente em v3.
-   - **Receitas v3 `experimental` com `manual_steps` explícitos (`operations: []`, `inputs: []`):** apenas se todos os `required_files` e `launch_file` forem localizados no ZIP e passarem na gramática de caminhos do SDK 1.2.0, uma nova receita `experimental` é gerada em novo arquivo preservando todas as entradas anteriores em `index.json`.
-   - **Qualquer incompatibilidade (espaços no nome do executável, arquivo ausente, ausência de ZIP Windows):** nenhuma receita inválida é criada; o bloqueio técnico é registrado em `docs/MONITORAMENTO-UPSTREAM.md`.
-4. Antes de publicar qualquer commit, executa `validate_recipes.py` e toda a suíte `unittest`.
-5. Se não houver novidades acionáveis, ou se o mesmo `fingerprint` de novidades já constar em `docs/MONITORAMENTO-UPSTREAM.md` ou em um PR aberto da branch `automation/upstream-watch`, nenhuma alteração nem Pull Request duplicado é criado.
-6. Não executa merge automático: todos os PRs ficam aguardando revisão humana.
+Projetos ativos elegíveis podem receber uma proposta de versão. Para geração
+automática, todas as receitas existentes desse projeto devem ser v3,
+experimentais, com etapas manuais explícitas e sem operações/inputs. Contratos
+estendidos, suspensões de integridade, versões disabled/draft e receitas
+homologadas exigem revisão. A rotina jamais reativa variantes retiradas ou
+promove automaticamente uma receita a validated.
 
-### Permissão necessária no GitHub para criação automática de PRs
+Candidatos sem evidência e projetos do registro de exclusões podem gerar notas
+de reavaliação quando aparece uma release nova. Esse caminho não baixa builds,
+não cria receita ativa, não muda classificação, não altera o catálogo e não
+substitui `added_at` pela data da pesquisa. Uma release sozinha não prova jogo
+funcional. A reentrada exige análise de gameplay e procedimento oficial.
 
-Para que o GitHub Actions consiga abrir o Pull Request na execução diária, verifique no repositório `brad38/GetAll-Addon`:
+A inspeção de ZIP para uma proposta elegível usa pasta temporária, limite de
+250 MiB, SHA-256 calculado e leitura da lista de membros. Não extrai nem executa
+binários. O pacote temporário é descartado; o relatório mantém tamanho, hash,
+URLs e observações. As receitas e evidências antigas são preservadas.
 
-1. **Settings → Actions → General → Workflow permissions**.
-2. Marque **"Allow GitHub Actions to create and approve pull requests"** e salve.
+A branch de automação e a base da PR derivam da branch em que o workflow foi
+iniciado. Revisões diferentes usam branches separadas. A prévia nunca tem main
+como base. Atualizações na branch de automação usam push normal, sem force;
+validação e testes precedem a publicação da proposta. Fingerprints suprimem
+relatórios repetidos. Não existe merge automático.
 
-*(A permissão padrão de workflow do repositório pode permanecer restrita em leitura, pois o `upstream-watch.yml` declara explicitamente `contents: write` e `pull-requests: write` apenas no próprio workflow.)*
+O workflow mantém `contents: write` e `pull-requests: write` para propostas.
+A criação de PR depende da permissão do repositório para o GitHub Actions.
+O código do workflow foi revisado; a existência dessa permissão e uma execução
+hospedada bem-sucedida precisam ser verificadas separadamente na integração.
 
-## 3. Prévia e contagem de cobertura
+## Pacote da prévia
 
-`scripts/package_preview.py` exige SHAs completos para receitas e catálogo.
-As versões do complemento e de `--min-sdk` seguem o schema do manifesto:
-três componentes numéricos, sem zeros iniciais em componentes de mais de um
-dígito. Entradas inválidas são rejeitadas antes de ler o commit ou criar o ZIP.
-O SDK mínimo padrão permanece `1.5.11`; isso não substitui os requisitos
-individuais dos perfis de instalação do Desktop.
+[PREVIEW-SDK170.md](PREVIEW-SDK170.md) contém o comando com commits fixos para
+addon **1.5.75** e SDK **1.5.70**. O empacotador aceita somente SHAs completos,
+índice preview e versões canônicas `x.y.z`. Índices com a política
+`official_upstream_only` exigem no mínimo SDK 1.5.70. O padrão legado do
+empacotador não é suficiente para esta revisão.
 
-`scripts/catalog_coverage.py` conta projetos com pelo menos uma receita
-`experimental` ou `validated`. Um projeto contendo somente `disabled` ou
-`draft` permanece em `missing`. As listas `main` e `development` preservam
-todas as versões; os booleanos `main_covered` e `development_covered` de cada
-linha indicam a existência de receita utilizável. Várias versões do mesmo
-projeto não aumentam a cobertura. A métrica legada `preparation_only` indica
-apenas que todas as receitas utilizáveis daquele projeto são v9; não mede
-instalação integral, registro, lançamento ou primeiro boot.
+O ZIP contém apenas `addon.json` e `responses.json`. Não incorpora runtime,
+launcher, ROM, ISO, fonte do jogo ou ferramenta binária. O pacote universal
+público continua preservado; instalar a prévia não muda automaticamente a
+ativação do canal nem constitui uma release pública.

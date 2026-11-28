@@ -14,8 +14,8 @@
       "evidenced": 137
     },
     "automated_installation_implemented": {
-      "implemented": 118,
-      "partial": 5,
+      "implemented": 121,
+      "partial": 2,
       "blocked": 14
     },
     "synthetic_validation": {
@@ -37,47 +37,24 @@
   "historical_excluded_recipes": [
     {
       "index": "development",
-      "game_id": "sonic-the-hedgehog-1-2-2013",
-      "project_id": "sonic-1-forever-sonic-2-absolute",
+      "game_id": "dr-mario-64",
+      "project_id": "drmario64-recomp",
       "recipes": [
         {
-          "game_id": "sonic-the-hedgehog-1-2-2013",
-          "project_id": "sonic-1-forever-sonic-2-absolute",
-          "repository": "TeamForeverDev/Sonic1Forever",
-          "tag": "v1.5.2-v1.2.2",
-          "schema_version": 9,
-          "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-1-forever-sonic-2-absolute/v1.5.2-v1.2.2.json",
-          "sha256": "c3b2317522899e5e570b7c3509e417818204d81085ccdfa7a355d0de1733c67d",
-          "status": "disabled",
-          "has_inputs": false,
-          "has_manual_steps": true,
-          "min_sdk_version": "1.5.11",
-          "disabled_reason": "Fora do catálogo ativo após revisão de elegibilidade: ID de pacote legado duplicado: manter histórico e os dois IDs individuais, sem contá-lo como projeto ativo independente.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "AllFix-Repo/excluded-projects.json#sonic-1-forever-sonic-2-absolute"
-        }
-      ]
-    },
-    {
-      "index": "development",
-      "game_id": "metroid-prime",
-      "project_id": "metaforce",
-      "recipes": [
-        {
-          "game_id": "metroid-prime",
-          "project_id": "metaforce",
-          "repository": "AxioDL/metaforce",
-          "tag": "build-de8fc69",
+          "game_id": "dr-mario-64",
+          "project_id": "drmario64-recomp",
+          "repository": "AngheloAlf/drmario64_recomp",
+          "tag": "build-7892264",
           "schema_version": 5,
-          "path": "recipes/metroid-prime/metaforce/build-de8fc69.json",
-          "sha256": "8d293603daaded40f3c17cf4574438f55aa9da56970f7a47638b88ecdc0f7df0",
+          "path": "recipes/dr-mario-64/drmario64-recomp/build-7892264.json",
+          "sha256": "edafaace3490267df625b6de87d0fd047b2112c3e6a26d324ea833fa34baa9b5",
           "status": "disabled",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.69",
+          "min_sdk_version": "1.5.67",
           "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
           "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-META"
+          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-DRMARIO"
         }
       ]
     },
@@ -128,24 +105,47 @@
     },
     {
       "index": "development",
-      "game_id": "dr-mario-64",
-      "project_id": "drmario64-recomp",
+      "game_id": "metroid-prime",
+      "project_id": "metaforce",
       "recipes": [
         {
-          "game_id": "dr-mario-64",
-          "project_id": "drmario64-recomp",
-          "repository": "AngheloAlf/drmario64_recomp",
-          "tag": "build-7892264",
+          "game_id": "metroid-prime",
+          "project_id": "metaforce",
+          "repository": "AxioDL/metaforce",
+          "tag": "build-de8fc69",
           "schema_version": 5,
-          "path": "recipes/dr-mario-64/drmario64-recomp/build-7892264.json",
-          "sha256": "edafaace3490267df625b6de87d0fd047b2112c3e6a26d324ea833fa34baa9b5",
+          "path": "recipes/metroid-prime/metaforce/build-de8fc69.json",
+          "sha256": "8d293603daaded40f3c17cf4574438f55aa9da56970f7a47638b88ecdc0f7df0",
           "status": "disabled",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
+          "min_sdk_version": "1.5.69",
           "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
           "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-DRMARIO"
+          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-META"
+        }
+      ]
+    },
+    {
+      "index": "development",
+      "game_id": "sonic-the-hedgehog-1-2-2013",
+      "project_id": "sonic-1-forever-sonic-2-absolute",
+      "recipes": [
+        {
+          "game_id": "sonic-the-hedgehog-1-2-2013",
+          "project_id": "sonic-1-forever-sonic-2-absolute",
+          "repository": "TeamForeverDev/Sonic1Forever",
+          "tag": "v1.5.2-v1.2.2",
+          "schema_version": 9,
+          "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-1-forever-sonic-2-absolute/v1.5.2-v1.2.2.json",
+          "sha256": "c3b2317522899e5e570b7c3509e417818204d81085ccdfa7a355d0de1733c67d",
+          "status": "disabled",
+          "has_inputs": false,
+          "has_manual_steps": true,
+          "min_sdk_version": "1.5.11",
+          "disabled_reason": "Fora do catálogo ativo após revisão de elegibilidade: ID de pacote legado duplicado: manter histórico e os dois IDs individuais, sem contá-lo como projeto ativo independente.",
+          "disabled_at": "2026-11-27",
+          "audit_reference": "AllFix-Repo/excluded-projects.json#sonic-1-forever-sonic-2-absolute"
         }
       ]
     }
@@ -740,8 +740,15 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "partial",
+          "status": "implemented",
           "evidence": [
+            {
+              "path": "docs/validations/official-scope/installation-route-refresh.json",
+              "sha256": "e43ec5b0d90f10a5f8cc00ac83745ee2cc06afa3165d4df1574f21a76a4c2fd7",
+              "data_kind": "code_review",
+              "scope": "getall",
+              "observed": "Current official Hookshot profile stages pinned builder parts into a portable home, validates media, invokes HookshotBuilder --cli --prepare --game --out, verifies executable/renderer/image/RomFS and uses the shared build transaction. The local bootstrap inspection establishes package identity only."
+            },
             {
               "path": "recipes/the-legend-of-zelda-ocarina-of-time/hookshot-zelda-oot-port/v3.0.2.json",
               "sha256": "f92fde813ec44b2975e3da1f63b921da701e3e841a741f6a5892b186da7d457d",
@@ -757,7 +764,7 @@
               "scope": "getall"
             }
           ],
-          "reason": "Official replacement contract reviewed; its current integration still requires execution evidence."
+          "reason": "Current official installation handler and dispatch reviewed; execution is recorded in independent dimensions."
         },
         "synthetic_validation": {
           "status": "unknown",
@@ -6680,8 +6687,15 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "partial",
+          "status": "implemented",
           "evidence": [
+            {
+              "path": "docs/validations/official-scope/installation-route-refresh.json",
+              "sha256": "e43ec5b0d90f10a5f8cc00ac83745ee2cc06afa3165d4df1574f21a76a4c2fd7",
+              "data_kind": "code_review",
+              "scope": "getall",
+              "observed": "Current route verifies the official release and original BIN hash, creates its CUE, invokes the package own KnowYourRole.exe --cue --out, checks generated assemblies/build identity, publishes settings transactionally and launches --play. The duplicated embedded builder is no longer used."
+            },
             {
               "path": "recipes/wwf-smackdown-2-know-your-role/knowyourrolerecomp/v0.2.0.json",
               "sha256": "45a966a851470cf814bf592120bb72a2488e911624755ed1720092ceca4c15a8",
@@ -6690,7 +6704,7 @@
               "scope": "getall"
             }
           ],
-          "reason": "Official replacement contract reviewed; its current integration still requires execution evidence."
+          "reason": "Current official installation handler and dispatch reviewed; execution is recorded in independent dimensions."
         },
         "synthetic_validation": {
           "status": "unknown",
@@ -10764,17 +10778,17 @@
           ]
         },
         "automated_installation_implemented": {
-          "status": "partial",
+          "status": "implemented",
           "evidence": [
             {
-              "path": "recipes/mario-kart-world/mkw-recomp/v0.1.18.json",
-              "sha256": "10fcf81a125218c068c2a8a50b764a61e87da977fab75222ffc4ddd819cf42d6",
-              "observed": "Official package/kit contract retained with manual upstream preparation. The retired custom build does not count as active automation.",
+              "path": "docs/validations/official-scope/installation-route-refresh.json",
+              "sha256": "e43ec5b0d90f10a5f8cc00ac83745ee2cc06afa3165d4df1574f21a76a4c2fd7",
               "data_kind": "code_review",
-              "scope": "getall"
+              "scope": "getall",
+              "observed": "Official v0.1.18 path validates original media and the user-supplied SM86 specification with the official sass_spec.Spec parser, runs official prepare.py, verifies outputs and registers/launches them transactionally. The retired CLI path is rejected by fidelity gating; no shaderstep.py rewrite occurs on the official path."
             }
           ],
-          "reason": "Official launcher or manual procedure remains necessary for media preparation."
+          "reason": "Current official installation handler and dispatch reviewed; execution is recorded in independent dimensions."
         },
         "synthetic_validation": {
           "status": "unknown",
