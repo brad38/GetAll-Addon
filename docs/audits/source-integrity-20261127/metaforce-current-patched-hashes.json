@@ -1,0 +1,34 @@
+[
+  {
+    "Path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\aurora\\lib\\system_info.cpp",
+    "Hash": "250E3A5F777807586F7FEBE717B68EA3CF4B81B06144F974A70FBE9EAE0F095B"
+  },
+  {
+    "Path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\aurora\\cmake\\aurora_core.cmake",
+    "Hash": "ADA033AB2F07C3EE1956A8261354CDBF9D0FC382984780AE3367531DBC148BC6"
+  },
+  {
+    "Path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\aurora\\lib\\webgpu\\gpu.cpp",
+    "Hash": "308D846746C2D4C745CE0F9AD6CF06D95E7ABC09C408B07B49194DA469EA7E60"
+  },
+  {
+    "Path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\deps-build\\nod_prebuilt\\lib\\cmake\\nod\\nodConfig.cmake",
+    "Hash": "3FA2C16E0DE90B414304D064A80545D37D99704C55141E8DF4AEA2F82BADA663"
+  },
+  {
+    "Path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\borealis\\CMakeLists.txt",
+    "Hash": "1E110DCAE63821135DF8C014A99C20A91DBCEC5717101390194B473EFA2CD138"
+  },
+  {
+    "Path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\aurora\\lib\\card\\DolphinCardPath.cpp",
+    "Hash": "6B6FC355DABF2B05D1C5CE0EE58A848A4E8CE9277B056A297F7B96E7971A56ED"
+  },
+  {
+    "Path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\src\\MetroidPrime\\CActorLights.cpp",
+    "Hash": "25236B4772F8836D1E964F218A9D729290D92B15DD5ADC48187EF02A50C237DC"
+  },
+  {
+    "Path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\src\\Kyoto\\Particles\\CElementGen.cpp",
+    "Hash": "01641FA2F435BF1BD3196AB6AF41573A2E1654D0F28AA5B99DAF243E276E78CA"
+  }
+]

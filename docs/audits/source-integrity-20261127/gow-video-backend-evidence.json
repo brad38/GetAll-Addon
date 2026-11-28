@@ -1,0 +1,20 @@
+{
+  "scope": "Tree after official GOW patches; read-only CMake excerpt. Confirms libmpeg2 default, does not prove movie playback.",
+  "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\gow-kiexster-mingw-20261127\\PS2Recomp\\ps2xRuntime\\CMakeLists.txt",
+  "offset": 240,
+  "length": 55,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[Reading 55 lines from line 240 (total: 731 lines, 436 remaining)]\n\n        target_link_libraries(ps2_host_backend INTERFACE log android)\n    endif()\nendif()\n\n# GOW-Port: MPEG video (FMV) is decoded by the vendored libmpeg2 (third_party/libmpeg2, portable C, also builds for\n# the Switch). FFmpeg stays available as an opt-in alternative backend.\nadd_library(libmpeg2 STATIC\n    third_party/libmpeg2/alloc.c\n    third_party/libmpeg2/cpu_accel.c\n    third_party/libmpeg2/cpu_state.c\n    third_party/libmpeg2/decode.c\n    third_party/libmpeg2/header.c\n    third_party/libmpeg2/idct.c\n    third_party/libmpeg2/motion_comp.c\n    third_party/libmpeg2/slice.c\n)\ntarget_include_directories(libmpeg2 PUBLIC third_party/libmpeg2)\nif(MSVC)\n    target_compile_options(libmpeg2 PRIVATE /W0)\nendif()\n\noption(PS2X_ENABLE_FFMPEG \"Decode MPEG video with FFmpeg instead of libmpeg2\" OFF)\n\nif(NOT PS2X_ENABLE_FFMPEG)\n    add_library(ffmpeg INTERFACE)\nelseif(WIN32)\n    include(ExternalProject)\n\n    set(FFMPEG_PREBUILT_TAG \"n7.1-241205\")\n    set(FFMPEG_PREBUILT_URL\n        \"https://github.com/System233/ffmpeg-msvc-prebuilt/releases/download/${FFMPEG_PREBUILT_TAG}/ffmpeg-${FFMPEG_PREBUILT_TAG}-lgpl-amd64-shared.zip\")\n\n    set(FFMPEG_PREFIX_DIR \"${CMAKE_BINARY_DIR}/ThirdParty/ffmpeg-prefix\")\n    set(FFMPEG_SOURCE_DIR \"${FFMPEG_PREFIX_DIR}/src/ffmpeg_external\")\n    set(FFMPEG_INCLUDE_DIR \"${FFMPEG_SOURCE_DIR}/include\")\n    set(FFMPEG_LIB_DIR \"${FFMPEG_SOURCE_DIR}/bin\")\n    set(FFMPEG_BIN_DIR \"${FFMPEG_SOURCE_DIR}/bin\")\n\n    ExternalProject_Add(ffmpeg_external\n        URL \"${FFMPEG_PREBUILT_URL}\"\n        DOWNLOAD_EXTRACT_TIMESTAMP TRUE\n        PREFIX \"${FFMPEG_PREFIX_DIR}\"\n        CONFIGURE_COMMAND \"\"\n        BUILD_COMMAND \"\"\n        INSTALL_COMMAND \"\"\n        BUILD_BYPRODUCTS\n        \"${FFMPEG_LIB_DIR}/avcodec.lib\"\n        \"${FFMPEG_LIB_DIR}/avformat.lib\"\n        \"${FFMPEG_LIB_DIR}/avutil.lib\"\n        \"${FFMPEG_LIB_DIR}/swresample.lib\"\n        \"${FFMPEG_LIB_DIR}/swscale.lib\"\n    )\n\n    # Link against the import libraries shipped with the Windows DLLs.\n    add_library(ffmpeg_avcodec STATIC IMPORTED GLOBAL)"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Bradsson (0b844e62-c362-4290-a398-adf32eeaa8a9)]"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  }
+}

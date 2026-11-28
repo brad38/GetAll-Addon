@@ -1,0 +1,26 @@
+{
+  "source_url": "https://github.com/Drakfix/MML_Modernization-Project/blob/09b8dd326e009e895635e6516ac73e5709db0aec/src/patch_manifest.py",
+  "source_sha256": "282dd443f2574b7ed704b7157696c686645a79a5041e95c80665c5550819d803",
+  "source_git_blob": "b300621c88e1573371f9c91c128981be7e36c55e",
+  "source_git_blob_computed": "b300621c88e1573371f9c91c128981be7e36c55e",
+  "source_blob_verified": true,
+  "profiles": [
+    {
+      "edition": "US",
+      "ranges": 121,
+      "changed_bytes": 247,
+      "tail_bytes": 512,
+      "equal_to_upstream": true,
+      "different_fields": []
+    },
+    {
+      "edition": "JP",
+      "ranges": 121,
+      "changed_bytes": 247,
+      "tail_bytes": 512,
+      "equal_to_upstream": true,
+      "different_fields": []
+    }
+  ],
+  "method": "AST literal evaluation only; compare all plan fields; no upstream module execution or game/media processing"
+}

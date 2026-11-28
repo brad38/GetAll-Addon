@@ -1,0 +1,103 @@
+{
+  "scope": {
+    "desktop_commit": "921295de12349e726f7ca21a5edd8a8ecee123d8",
+    "project_ids": [
+      "mkw-recomp",
+      "metaforce",
+      "savagewindrecomp"
+    ],
+    "mode": "static review plus read-only byte/provenance checks; no game/build execution"
+  },
+  "counts": {
+    "desktop_files_verified": 45,
+    "upstream_selected_blobs_verified": 32,
+    "metaforce_original_files_verified": 2070,
+    "metaforce_current_game_source_changed_files": 2,
+    "metaforce_patch_operations": 12,
+    "metaforce_patched_paths": 8,
+    "mkw_overlay_files": 4,
+    "mkw_added_python_modules": 13
+  },
+  "projects": [
+    {
+      "project_id": "mkw-recomp",
+      "third_party_source_modified": true,
+      "missing_functionality_added": true,
+      "missing_functionality_scope": "shader compiler, LEA/ULEA carry modes rejected or not implemented in original emitter",
+      "new_gameplay_found": false,
+      "classification": "new compiler backend + semantic renderer/compiler fixes + preparation changes",
+      "findings": [
+        "MKW-01",
+        "MKW-02"
+      ],
+      "sources": [
+        "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/lea_overlay.py",
+        "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/memory_overlay.py",
+        "Services/GameInstallationMkwCliBackend.cs",
+        "Services/GameInstallationMkwBuild.cs"
+      ],
+      "commercial_boot_proven": false,
+      "limits": [
+        "99 mnemonics do not prove all encoding variants or commercial shaders",
+        "arithmetic tests execute CPU expressions, not commercial GPU workloads",
+        "unknown adapter forms fail rather than becoming placeholders"
+      ]
+    },
+    {
+      "project_id": "metaforce",
+      "third_party_source_modified": true,
+      "missing_functionality_added": false,
+      "new_gameplay_found": false,
+      "classification": "portability/ABI/build options and removal of optional native diagnostic descriptor",
+      "findings": [
+        "META-01"
+      ],
+      "sources": [
+        "Services/GameInstallationMetaforcePatches.cs",
+        "Services/GameInstallationMetaforceNative.cs"
+      ],
+      "commercial_boot_proven": false,
+      "limits": [
+        "help, ABI and packaging checks are not game boot",
+        "eight current patched files matched expected postimages; main game tree comparison covered2070 files",
+        "not a whole upstream gameplay completeness review"
+      ]
+    },
+    {
+      "project_id": "savagewindrecomp",
+      "third_party_source_modified": false,
+      "missing_functionality_added": false,
+      "new_gameplay_found": false,
+      "classification": "orchestration of official generator/compiler plus changed settings/launch options",
+      "findings": [
+        "SW-01"
+      ],
+      "sources": [
+        "Services/GameInstallationSavageWindBuild.cs",
+        "Services/GameInstallationSavageWindNative.cs",
+        "Services/GameInstallationSavageWindOutput.cs"
+      ],
+      "settings_changes": {
+        "dlss_download": 0,
+        "precompile_shaders": 0,
+        "check_updates": 0,
+        "start_in_config": 0,
+        "launch_argument": "--no-launch-flags"
+      },
+      "commercial_boot_proven": false,
+      "limits": [
+        "authored NSO library fixture is not a commercial game installation",
+        "compiled game code produced by official generator from media is not authored gameplay implementation"
+      ]
+    }
+  ],
+  "report": "mkw-metaforce-review.md",
+  "evidence": [
+    "mkw-metaforce-byte-verification.json",
+    "mkw-metaforce-local-pin-check.json",
+    "mkw-metaforce-upstream-trees.json",
+    "metaforce-source-tree-recheck.json",
+    "metaforce-current-game-tree-diff.json",
+    "metaforce-current-patched-hashes.json"
+  ]
+}

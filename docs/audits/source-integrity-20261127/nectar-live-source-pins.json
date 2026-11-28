@@ -1,0 +1,36 @@
+{
+  "upstream": "SSunnKing/Open-Nectar---Pikmin-Native-PC-Mobile-Port",
+  "commit": "c0ceb05eb8cebfc7d25ee0834c8ebc1a6b20226c",
+  "files": [
+    {
+      "path": "games/pikmin1/pc_port/launcher/cp932_table.h",
+      "git_blob": "aba9806a0984a7e3ad51e93bb7d61b9e9fb1b68f",
+      "size": 93349,
+      "html_url": "https://github.com/SSunnKing/Open-Nectar---Pikmin-Native-PC-Mobile-Port/blob/c0ceb05eb8cebfc7d25ee0834c8ebc1a6b20226c/games/pikmin1/pc_port/launcher/cp932_table.h"
+    },
+    {
+      "path": "games/pikmin1/pc_port/launcher/gamecube_image.cpp",
+      "git_blob": "f1068d89a2ae9ff7d642042a5cabfc4347abe5d8",
+      "size": 24316,
+      "html_url": "https://github.com/SSunnKing/Open-Nectar---Pikmin-Native-PC-Mobile-Port/blob/c0ceb05eb8cebfc7d25ee0834c8ebc1a6b20226c/games/pikmin1/pc_port/launcher/gamecube_image.cpp"
+    },
+    {
+      "path": "games/pikmin1/pc_port/launcher/gamecube_image.h",
+      "git_blob": "653c0a6db734f181a865ba15d2f1fc2479b58866",
+      "size": 4156,
+      "html_url": "https://github.com/SSunnKing/Open-Nectar---Pikmin-Native-PC-Mobile-Port/blob/c0ceb05eb8cebfc7d25ee0834c8ebc1a6b20226c/games/pikmin1/pc_port/launcher/gamecube_image.h"
+    },
+    {
+      "path": "games/pikmin1/pc_port/launcher/sha256.cpp",
+      "git_blob": "b3ae87bbd85c20949dc815930e6224cdb1f4b274",
+      "size": 5083,
+      "html_url": "https://github.com/SSunnKing/Open-Nectar---Pikmin-Native-PC-Mobile-Port/blob/c0ceb05eb8cebfc7d25ee0834c8ebc1a6b20226c/games/pikmin1/pc_port/launcher/sha256.cpp"
+    },
+    {
+      "path": "games/pikmin1/pc_port/launcher/sha256.h",
+      "git_blob": "34f7674df023835b0339e04a0c95dae3c2d458cd",
+      "size": 1030,
+      "html_url": "https://github.com/SSunnKing/Open-Nectar---Pikmin-Native-PC-Mobile-Port/blob/c0ceb05eb8cebfc7d25ee0834c8ebc1a6b20226c/games/pikmin1/pc_port/launcher/sha256.h"
+    }
+  ]
+}

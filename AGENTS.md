@@ -1,73 +1,58 @@
-# AGENTS.md — Instruções Permanentes de Manutenção do GetAll-Addon
+# Regras de manutenção — instalações oficiais e catálogo funcional
 
-## 1. Missão do Projeto
+Estas regras incorporam a instrução do usuário de 27/11/2026, preservada em
+docs/INSTALLATION-SCOPE-REQUEST-20261127.md. Substituem metas numéricas antigas e
+restrições antigas de escrita que conflitem com a autorização desta rodada.
 
-Manter e expandir o **GetAll-Addon** até alcançar a maior cobertura **funcional** possível dos **119 projetos dos 87 jogos** listados no catálogo oficial `brad38/AllFix-Repo`.
+## Objetivo e elegibilidade
 
-- O critério de sucesso é a instalação e inicialização **funcionalmente verificadas** no All-Fix — **nunca** considere uma tarefa concluída apenas porque receitas JSON foram criadas ou bloqueios foram catalogados.
-- Após concluir uma rodada ou projeto, avance automaticamente para o próximo item prioritário sem pedir autorização intermediária (pause apenas se precisar de mídia original legítima ausente no ambiente, credenciais/permissões, aprovação de merge ou decisão ambígua).
-- Se a sessão atingir um limite operacional, registre o estado exato, pendências e próximos passos em [docs/CHECKPOINT.md](docs/CHECKPOINT.md).
+- All-Fix oferece projetos funcionalmente comprovados; GetAll automatiza seus
+  procedimentos oficiais. Não implementar jogos em nome dos autores.
+- Não manter uma meta artificial de 119/148 IDs.
+- Não confundir upstream funcional, receita, preparação sintética, instalação com
+  mídia original, primeiro boot e jogabilidade. Registrar cada dimensão.
+- README, percentual de decompilação, release existente e build isolado não
+  comprovam jogabilidade. Preservar evidência específica e verificável de execução.
+- Projetos sem comprovação após investigação ficam fora do catálogo ativo, em
+  registro reavaliável. Projetos funcionais podem permanecer com automação
+  temporariamente indisponível.
 
-## 2. Escopo Estrito e Restrições de Segurança
+## Fidelidade da instalação
 
-- **Repositório único de escrita:** modifique **exclusivamente** o `GetAll-Addon`.
-- **Somente leitura fora deste repositório:** **nunca** altere o código-fonte ou dados do `AllFix-Repo`, do aplicativo `All-Fix` nem do `All-Fix SDK` (responsabilidades do Codex). Limitações reais do motor devem ser especificadas em [docs/ESPECIFICACAO-CODEX-SDK.md](docs/ESPECIFICACAO-CODEX-SDK.md).
-- **Zero pirataria e zero execução insegura:** nunca distribua ROMs, ISOs, pacotes XBLA ou ativos comerciais; nunca execute binários baixados de releases de terceiros (utilize apenas inspeção estática via `zipfile` e o serviço oficial de instalação da `AllFix.dll` quando aplicável).
-- **Proibido inventar dados:** jamais invente hashes (`sha256`, `sha1`), tamanhos em bytes, caminhos internos de ZIP ou resultados de testes. Toda receita deve refletir exatamente os arquivos e assinaturas verificados nos pacotes e repositórios oficiais.
+- Usar launcher oficial ou reproduzir fielmente suas operações documentadas.
+- Permitir importadores, extratores, formatos de mídia, verificadores, dependências,
+  toolchains, geradores/build oficiais, patches oficiais, staging e rollback.
+- Não aplicar patches próprios a fontes upstream; não implementar shaders,
+  gameplay, renderers ou runtimes faltantes; não desativar recursos para compilar.
+- Uma mudança upstream indispensável exige autorização específica. Até lá,
+  documentar e suspender a automação afetada.
+- Não relaxar identidade/integridade da mídia. Não distribuir ROMs, ISOs ou assets.
+- Preservar automações legítimas. Não reverter indiscriminadamente o desenvolvimento.
+- Não distribuir nem executar componentes rejeitados; o histórico Git preserva
+  as versões anteriores para auditoria.
 
-## 3. Contratos do SDK 1.3.0 e Regras de Receitas
+## Repositórios e entrega
 
-- Utilize apenas contratos suportados pelo All-Fix SDK 1.2.0 / 1.3.0 (`schemas/installation-recipe-v1.schema.json` a `v5.schema.json` e `schemas/remote-recipe-index-v1.schema.json`).
-- Observe os contratos reais verificados na `AllFix.dll` 1.3.0:
-  - Em receitas `v1`–`v4`, `StoreAddonProviders.ParseRecipe` exige `sha256` ou `sha1` em toda entrada de `inputs` referenciada por `import_input`, e `IsSafeRelativePath` restringe caminhos a `[a-zA-Z0-9_.+-]` sem espaços nem parênteses (enquanto o extrator `GameInstallationService` extrai normalmente arquivos auxiliares não declarados do ZIP que contenham espaços).
-  - Em receitas `v5` (SDK 1.3.0), caminhos relativos aceitam espaços ASCII internos, `()` e `+`; `inputs[]` tipadas aceitam `sha256`, `sha1` isolado, `md5 + size + magic_hex`, ou `magic_hex + size/min_size` (incluindo `LIVE`/`PIRS` XBLA sem extensão na raiz); `import_input` suporta `local_app_data`; `prerequisites` aceita `dotnet-desktop-10-x64`, `java-21`, `openal-x64`, `openal-x86`; e `index.json` aceita repositórios `gitlab:<grupo>/<projeto>`.
-  - Em `import_input` no escopo `installation`, `AllFix.dll` 1.3.0 ainda rejeita extensões de console não cadastradas como `.sfc` (`InvalidDataException: O destino da importação precisa ser um arquivo de dados.`).
-- Todos os arquivos versionados (JSON, Markdown, Python, YAML) devem usar **UTF-8 sem BOM** e quebra de linha **`LF`** (`\n`), conforme [.gitattributes](.gitattributes).
+- Esta rodada pode alterar Allfix, GetAll-Addon e AllFix-Repo em branches dedicadas.
+- Conferir status, commits, branches e worktrees; preservar alterações não versionadas.
+- Fazer commits e pushes das alterações verificadas, sem force push.
+- Não fazer merge em main, publicar releases, alterar version.json público,
+  substituir instalação atual nem desenvolver DownloadAll.
+- Addon leve/declarativo; ferramentas específicas obtidas sob demanda quando
+  tecnicamente adequado. Justificar componentes incorporados ao Desktop.
+- Preservar IDs e datas dos mantidos. Data do jogo e data do port são conceitos
+  separados; nunca substituir added_at por data da última pesquisa.
 
-## 4. Separação Rigorosa entre `experimental` e `validated`
+## Verificação e armazenamento
 
-- Toda nova receita nasce obrigatoriamente com `status: "experimental"` em `index.json`.
-- Aprovação em JSON Schema, `scripts/validate_recipes.py`, `ParseRecipe` da `AllFix.dll` ou testes sintéticos **não** autoriza promoção a `validated`.
-- Uma receita só pode ser promovida para `validated` após:
-  1. Teste real de instalação pelo motor oficial do All-Fix com o pacote oficial do projeto e mídia legítima do usuário;
-  2. Inicialização/boot real comprovado do jogo com os arquivos nos locais esperados;
-  3. Registro objetivo das evidências em `docs/validations/<project_id>-<tag>.md`.
+- Executar validadores, regressões relevantes, parser/SDK e build de teste Desktop.
+- Nunca promover receita a validated com schema, build ou fixture sintética.
+- Não inventar hashes, tamanhos, evidências, resultados ou CI.
+- Usar UTF-8 sem BOM e LF para arquivos de texto.
+- Preservar fontes, receitas, scripts, manifests, hashes, logs e resultados.
+- Reutilizar toolchains/caches. Remover somente intermediários e duplicatas
+  comprovadamente descartáveis, após validação, sem pedir autorização repetida.
+- Nunca remover mídia original, fonte não versionado necessário, dependência
+  ativa ou dado pessoal.
+- Registrar progresso real, pendências e comandos de reprodução no checkpoint.
 
-## 5. Controle Permanente de Cobertura (`docs/COBERTURA-CATALOGO.md`)
-
-Mantenha [docs/COBERTURA-CATALOGO.md](docs/COBERTURA-CATALOGO.md) atualizado a cada rodada diferenciando explicitamente o estado de cada um dos **119 projetos**:
-
-- **Receita ausente**
-- **Receita criada, não integrada** (presente na branch de trabalho, ainda não incorporada em `origin/main`)
-- **Experimental publicada** (presente em `origin/main` com `status: "experimental"`)
-- **Instalação testada no motor** (`GameInstallationService` / `AllFix.dll` concluído sobre o pacote real)
-- **Inicialização real comprovada** (boot real do jogo verificado)
-- **Homologada (`validated`)**
-- **Bloqueio técnico comprovado** (nunca contabilizado como instalação concluída)
-
-## 6. Política de Branches, PRs, Validação e Reavaliação de SDK
-
-- Crie uma branch dedicada e um Pull Request por rodada; se o PR anterior ainda estiver aberto, encadeie as branches via **`git merge --no-ff`** (nunca use `rebase`, `--force` ou exclusão/sobrescrita de receitas).
-- **Nunca faça merge automático** de Pull Requests sem autorização explícita do proprietário.
-- Execute sempre antes de publicar e após qualquer merge:
-  - `validate_recipes.py --require-jsonschema --check-git-blobs --check-catalog`
-  - `python -m unittest discover -s tests -v`
-  - Verificação no parser/motor oficial `AllFix.dll` e validação no GitHub Actions (`.github/workflows/validate-recipes.yml`).
-- **Reavaliação contínua de bloqueios e SDK:** sempre que uma nova versão do SDK/All-Fix for disponibilizada, reavalie imediatamente os projetos em [docs/ESPECIFICACAO-CODEX-SDK.md](docs/ESPECIFICACAO-CODEX-SDK.md) ligados às novas capacidades e converta os desbloqueados em receitas funcionais.
-
-## Adendo SDK 1.4.0 / Rodada 10
-
-- Preservar versões anteriores e validar v6/v7 conforme docs/sdk14-instalacao-v6.md e docs/sdk14-instalacao-v7.md. Protocolo público permanece 1.0.
-- v6 assets: nome, target, size, sha256, kind em lista fechada; EXE portátil deve ser PE verificável e corresponder a launch_file e required_files. Payload nunca pode ser script/instalador executável.
-- v7: java_launcher só admite java-21 e -jar sem comandos livres; arcade_romset exige lista fechada de arquivos com tamanho/CRC32 e sufixos numéricos apenas nessa modalidade; .sfc/.smc/.gba e perfis multinível são suportados por import_input.
-- installer_profile/build_profile bloqueados até perfil local auditado; não contornar via copy, move ou shell.
-- Não marcar validated sem instalação e primeiro boot com mídia legítima, evidência em docs/validations. Respeitar branch dedicada, CI e PR sem merge automático.
-
-## Adendo SDK 1.4.1 / Rodada 11B
-
-- O schema v8 amplia o SDK 1.4.0 com Java 25 e classpath declarativo. Preservar v1-v7 sem relaxar seus contratos. A versao SDK de validacao nao e release publica nem deve substituir a DLL instalada.
-- java_launcher v8 aceita jar/runtime/working_directory e modo main_class (nome Java qualificado) + classpath de 1..128 arquivos .jar locais seguros, unicos case-insensitive, todos declarados em required_files. Runtime de java-21 ou java-25 depende de prerequisites correspondente.
-- jvm_options so aceita os seis identificadores documentados em docs/sdk141-instalacao-v8.md, sem argumentos textuais livres. program_arguments_profile so pode ser severed-chains-3 e exige ID severed-chains, fonte HTTPS exata oficial, Java25, legend.game.MainWindows e seis opcoes JVM na ordem do upstream.
-- Proibir scripts, comandos remotos, shell, jar URL/wildcard, caminhos absolutos, traversal, flags arbitrarias, installer_profile e build_profile nao aprovados.
-- O sucesso de parser, hash ou preparo de 96 JARs de Severed Chains nao comprova jogo funcional; imagens NTSC-U e preparo de isos/ sao etapa manual a homologar. Manter experimental ate primeiro boot real com midia legitima e registro de evidencias.
-- Utilizar temporario dedicado, remover scripts/artefatos descartaveis e documentar arquivos preservados em docs/LIMPEZA-RODADA-11B.md. PR para revisao, sem merge/release.

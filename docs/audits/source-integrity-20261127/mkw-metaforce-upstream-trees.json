@@ -1,0 +1,282 @@
+[
+  {
+    "name": "mkw",
+    "sha": "006d48de08849495e01e151602690d0ec322af82",
+    "url": "https://api.github.com/repos/adriadam10/mkw-recomp/git/trees/006d48de08849495e01e151602690d0ec322af82",
+    "truncated": false,
+    "files": [
+      {
+        "path": "sm86/translate/frontend/program.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "260cf90fe36c67ae3f89a54f1d7e051ec82785c6",
+        "size": 3802,
+        "url": "https://api.github.com/repos/adriadam10/mkw-recomp/git/blobs/260cf90fe36c67ae3f89a54f1d7e051ec82785c6"
+      },
+      {
+        "path": "sm86/translate/glsl/alu.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "adfc4785b3f7dc6fb635671191dc983e4b2afd99",
+        "size": 22833,
+        "url": "https://api.github.com/repos/adriadam10/mkw-recomp/git/blobs/adfc4785b3f7dc6fb635671191dc983e4b2afd99"
+      },
+      {
+        "path": "sm86/translate/glsl/mem.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e2aa3da75deb05744630df0357f62a40913547fb",
+        "size": 25781,
+        "url": "https://api.github.com/repos/adriadam10/mkw-recomp/git/blobs/e2aa3da75deb05744630df0357f62a40913547fb"
+      },
+      {
+        "path": "tools/prepare/shaderstep.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2ac8916608db654efe857e2a6c987c84b79a7668",
+        "size": 10309,
+        "url": "https://api.github.com/repos/adriadam10/mkw-recomp/git/blobs/2ac8916608db654efe857e2a6c987c84b79a7668"
+      },
+      {
+        "path": "tools/shaders/extract.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c18cdfe8418d44abc215aed7812cab6eca4dcd10",
+        "size": 17366,
+        "url": "https://api.github.com/repos/adriadam10/mkw-recomp/git/blobs/c18cdfe8418d44abc215aed7812cab6eca4dcd10"
+      },
+      {
+        "path": "tools/shaders/translate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4344f835264e0b988c74654d8eb23000eb2a636c",
+        "size": 15792,
+        "url": "https://api.github.com/repos/adriadam10/mkw-recomp/git/blobs/4344f835264e0b988c74654d8eb23000eb2a636c"
+      }
+    ]
+  },
+  {
+    "name": "aurora",
+    "sha": "40cf48fce6ce85366608596bae018c6188f2b2e7",
+    "url": "https://api.github.com/repos/encounter/aurora/git/trees/40cf48fce6ce85366608596bae018c6188f2b2e7",
+    "truncated": false,
+    "files": [
+      {
+        "path": "cmake/aurora_core.cmake",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a4e97206123c55fe977c8fc175d2766badf4ab54",
+        "size": 4601,
+        "url": "https://api.github.com/repos/encounter/aurora/git/blobs/a4e97206123c55fe977c8fc175d2766badf4ab54"
+      },
+      {
+        "path": "lib/card/DolphinCardPath.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ccec83280509ddf4c7dc2c5d44baeba0bc430fa2",
+        "size": 4296,
+        "url": "https://api.github.com/repos/encounter/aurora/git/blobs/ccec83280509ddf4c7dc2c5d44baeba0bc430fa2"
+      },
+      {
+        "path": "lib/system_info.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d004fbf4cdd3616c277cb26d600b08875959b01b",
+        "size": 10282,
+        "url": "https://api.github.com/repos/encounter/aurora/git/blobs/d004fbf4cdd3616c277cb26d600b08875959b01b"
+      },
+      {
+        "path": "lib/webgpu/gpu.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "16c7038a1c837cf79e6eaff6923a6a58e1224e12",
+        "size": 42898,
+        "url": "https://api.github.com/repos/encounter/aurora/git/blobs/16c7038a1c837cf79e6eaff6923a6a58e1224e12"
+      }
+    ]
+  },
+  {
+    "name": "savagewind",
+    "sha": "02041fdf3f5ee0a1496c4fcc9898162fc362d1df",
+    "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/trees/02041fdf3f5ee0a1496c4fcc9898162fc362d1df",
+    "truncated": false,
+    "files": [
+      {
+        "path": "Makefile",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "92ae8af862523eb3743ebff92f89cd70a378713a",
+        "size": 51331,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/92ae8af862523eb3743ebff92f89cd70a378713a"
+      },
+      {
+        "path": "runtime/cpu.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5c7ad704ac956e1716229ea71a682bc96e2adac3",
+        "size": 19307,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/5c7ad704ac956e1716229ea71a682bc96e2adac3"
+      },
+      {
+        "path": "runtime/gamebuild.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "117f8f93b0d64d21fdb63cd7b970c0df549aa8d2",
+        "size": 29603,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/117f8f93b0d64d21fdb63cd7b970c0df549aa8d2"
+      },
+      {
+        "path": "runtime/gamelib.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "37e5c29e11d1cffee244911f4b8550ac75b60b2c",
+        "size": 8652,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/37e5c29e11d1cffee244911f4b8550ac75b60b2c"
+      },
+      {
+        "path": "runtime/gamelib.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "551680f1e80daa91be507607895ebb8d2a8154d8",
+        "size": 4108,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/551680f1e80daa91be507607895ebb8d2a8154d8"
+      },
+      {
+        "path": "runtime/hle/hle_symbols.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "46e92fb3e8ef94627867a63b7f9ee1abfb31a60d",
+        "size": 180,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/46e92fb3e8ef94627867a63b7f9ee1abfb31a60d"
+      },
+      {
+        "path": "runtime/launch_flags_boot.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3e4387bf458cf60a75ae6286a609371242f8866f",
+        "size": 2225,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/3e4387bf458cf60a75ae6286a609371242f8866f"
+      },
+      {
+        "path": "runtime/simd.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "be88e43671b944473d9ce20987e29d504a16ebbf",
+        "size": 45171,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/be88e43671b944473d9ce20987e29d504a16ebbf"
+      },
+      {
+        "path": "runtime/simd_fp.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4bbff3bc621cf15416304669b8632fae20d86340",
+        "size": 15442,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/4bbff3bc621cf15416304669b8632fae20d86340"
+      },
+      {
+        "path": "runtime/simd_softfma.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9ca6a72eaf63f92a861a964552805e553cb13918",
+        "size": 10826,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/9ca6a72eaf63f92a861a964552805e553cb13918"
+      },
+      {
+        "path": "tools/analyze.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "edb3e485e6863b811d2dfe67527e07f0fec14536",
+        "size": 5645,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/edb3e485e6863b811d2dfe67527e07f0fec14536"
+      },
+      {
+        "path": "tools/flags.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e86e0b4a45b22f6e73d8cc38f68d4b2371fe3ae2",
+        "size": 7695,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/e86e0b4a45b22f6e73d8cc38f68d4b2371fe3ae2"
+      },
+      {
+        "path": "tools/game_sites.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2580c9214741adfa1a4cb851c2ddcbdcf57456a6",
+        "size": 59792,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/2580c9214741adfa1a4cb851c2ddcbdcf57456a6"
+      },
+      {
+        "path": "tools/gamelib_entry.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a3b6621b64186da508b8674c240fe60cd9c494c4",
+        "size": 949,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/a3b6621b64186da508b8674c240fe60cd9c494c4"
+      },
+      {
+        "path": "tools/gen.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5d5c0821b082f01a998a33590bd40e9cb9dbd0aa",
+        "size": 45699,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/5d5c0821b082f01a998a33590bd40e9cb9dbd0aa"
+      },
+      {
+        "path": "tools/layout.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0ecb8022fc986f7265c55c29071dde244204fb09",
+        "size": 6219,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/0ecb8022fc986f7265c55c29071dde244204fb09"
+      },
+      {
+        "path": "tools/lifter.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8a450a515c53baf96e4f904c827c99b9be8e7ffc",
+        "size": 30560,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/8a450a515c53baf96e4f904c827c99b9be8e7ffc"
+      },
+      {
+        "path": "tools/nso.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "69fe5c9c797be197fdef616865a1e3b036c5b171",
+        "size": 6287,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/69fe5c9c797be197fdef616865a1e3b036c5b171"
+      },
+      {
+        "path": "tools/passes.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b67b71a778870c10307accb7fac9bbb85a3795fa",
+        "size": 882,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/b67b71a778870c10307accb7fac9bbb85a3795fa"
+      },
+      {
+        "path": "tools/patches.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b0b675ca91dbe356bc801b1559ef56c89d8b8f41",
+        "size": 65601,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/b0b675ca91dbe356bc801b1559ef56c89d8b8f41"
+      },
+      {
+        "path": "tools/regs.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "78178b1ca5fb9ca52726e1966b28dd857dc396a0",
+        "size": 7298,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/78178b1ca5fb9ca52726e1966b28dd857dc396a0"
+      },
+      {
+        "path": "tools/simd_c.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ab82f3826f68d6eda8e7b651391def8515343a95",
+        "size": 52282,
+        "url": "https://api.github.com/repos/Revivedx/SavageWindRecomp/git/blobs/ab82f3826f68d6eda8e7b651391def8515343a95"
+      }
+    ]
+  }
+]

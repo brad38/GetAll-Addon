@@ -1,0 +1,500 @@
+{
+  "bundle": "Tools/UnleashedHelper/Unleashed-Xex-Helper-Sources.zip",
+  "desktop_commit": "921295de12349e726f7ca21a5edd8a8ecee123d8",
+  "bundle_sha256": "2ee674de1f5134e3b53e3424ec18bf3ca2aae94fe0779aed684dd578a9a4f5f3",
+  "upstream_comparisons": [
+    {
+      "path": "sources/xenon/XenonUtils/xex_patcher.cpp",
+      "upstream_url": "https://github.com/hedge-dev/XenonRecomp/blob/c017eb630ab917bffd3bc6a0a46995b49e7d8049/XenonUtils/xex_patcher.cpp",
+      "upstream_sha256": "dcf0417f0d0d8541ab996160c9b307ae3d4cabbd0fd8be43b20bb9f672b8b1bb",
+      "vendored_sha256": "dcf0417f0d0d8541ab996160c9b307ae3d4cabbd0fd8be43b20bb9f672b8b1bb",
+      "upstream_bytes": 17953,
+      "vendored_bytes": 17953,
+      "bytes_equal": true
+    },
+    {
+      "path": "sources/xenon/XenonUtils/xex_patcher.h",
+      "upstream_url": "https://github.com/hedge-dev/XenonRecomp/blob/c017eb630ab917bffd3bc6a0a46995b49e7d8049/XenonUtils/xex_patcher.h",
+      "upstream_sha256": "32b753dc36d29980a53af2189643755cff63bac05221d6685f90299dac3cf90c",
+      "vendored_sha256": "32b753dc36d29980a53af2189643755cff63bac05221d6685f90299dac3cf90c",
+      "upstream_bytes": 1289,
+      "vendored_bytes": 1289,
+      "bytes_equal": true
+    },
+    {
+      "path": "sources/xenon/XenonUtils/memory_mapped_file.cpp",
+      "upstream_url": "https://github.com/hedge-dev/XenonRecomp/blob/c017eb630ab917bffd3bc6a0a46995b49e7d8049/XenonUtils/memory_mapped_file.cpp",
+      "upstream_sha256": "746d9d48e2dfc47f1b3b03aeb9a2fbaa0f686c7b53e12abc3a13018bdae0ea55",
+      "vendored_sha256": "746d9d48e2dfc47f1b3b03aeb9a2fbaa0f686c7b53e12abc3a13018bdae0ea55",
+      "upstream_bytes": 3865,
+      "vendored_bytes": 3865,
+      "bytes_equal": true
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/lzxd.c",
+      "upstream_url": "https://github.com/kyz/libmspack/blob/305907723a4e7ab2018e58040059ffb5e77db837/libmspack/mspack/lzxd.c",
+      "upstream_sha256": "622183f03bac71a12327bc9f036395dcb5c3b7c6cc7d766785de24ac1354256a",
+      "vendored_sha256": "622183f03bac71a12327bc9f036395dcb5c3b7c6cc7d766785de24ac1354256a",
+      "upstream_bytes": 30015,
+      "vendored_bytes": 30015,
+      "bytes_equal": true
+    },
+    {
+      "path": "sources/aes/aes.c",
+      "upstream_url": "https://github.com/kokke/tiny-AES-c/blob/23856752fbd139da0b8ca6e471a13d5bcc99a08d/aes.c",
+      "upstream_sha256": "f7f78b44654efd3542b6886923dd05194286807ebcfeb078ea05d21fe901ee9e",
+      "vendored_sha256": "f7f78b44654efd3542b6886923dd05194286807ebcfeb078ea05d21fe901ee9e",
+      "upstream_bytes": 19017,
+      "vendored_bytes": 19017,
+      "bytes_equal": true
+    },
+    {
+      "path": "sources/xxhash/xxhash.c",
+      "upstream_url": "https://github.com/Cyan4973/xxHash/blob/2bf8313b934633b2a5b7e8fd239645b85e10c852/xxhash.c",
+      "upstream_sha256": "5c3591fe6e6c86a619eb26760e9520e37a6fd5152882ab5ad93f912e2a855966",
+      "vendored_sha256": "5c3591fe6e6c86a619eb26760e9520e37a6fd5152882ab5ad93f912e2a855966",
+      "upstream_bytes": 1855,
+      "vendored_bytes": 1855,
+      "bytes_equal": true
+    }
+  ],
+  "bundle_manifest": [
+    {
+      "path": "BUILD.md",
+      "bytes": 3147,
+      "sha256": "fcf363f5533e6b0e0710033194510cbe49a24ab75aae982e8aa54d1593266307"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 1676,
+      "sha256": "b81d9fe417884d9e1810f78be9604a9fa2986b6df7c36b600baef96e1c27619a"
+    },
+    {
+      "path": "mspack-lzx.def",
+      "bytes": 82,
+      "sha256": "95b735d6956903f6614ff6a00adc1b4b32704878e057d9aed1b0dabf5e1335d5"
+    },
+    {
+      "path": "msvc-byteswap.h",
+      "bytes": 297,
+      "sha256": "fa2e03b38c7f40e9c43371f64d2e832fe04b992697a429cc6aa4bea938f61ae0"
+    },
+    {
+      "path": "notices/Sonic-Unleashed-Helper-NOTICES.txt",
+      "bytes": 33126,
+      "sha256": "35348bf9f2384703d9eb6221c0afd3bc79ffc5ad7d19f1923a0c2f370f3ac888"
+    },
+    {
+      "path": "notices/Xenia-BSD-3-Clause.txt",
+      "bytes": 1481,
+      "sha256": "369ea6b0f7ba57544067e9d470ca82a927da787fb0a749b11cb55f1fd0ba47ae"
+    },
+    {
+      "path": "provision.py",
+      "bytes": 1763,
+      "sha256": "56249f6ef3034f906fb9a3e21f160efa9c2f0455438d682980397eb4bcfc20b6"
+    },
+    {
+      "path": "sources/aes/aes.c",
+      "bytes": 19017,
+      "sha256": "f7f78b44654efd3542b6886923dd05194286807ebcfeb078ea05d21fe901ee9e"
+    },
+    {
+      "path": "sources/aes/aes.h",
+      "bytes": 2790,
+      "sha256": "9f74a4de3bd11621ff6e8fb9b352b060f699e6c1c67f81a22d104aacad61a23b"
+    },
+    {
+      "path": "sources/aes/aes.hpp",
+      "bytes": 184,
+      "sha256": "d59bcf29c91a796aa735c4ca204e0140f98fac7b68006a78d900c14c344e0883"
+    },
+    {
+      "path": "sources/aes/unlicense.txt",
+      "bytes": 1211,
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+    },
+    {
+      "path": "sources/mspack/libmspack/AUTHORS",
+      "bytes": 490,
+      "sha256": "e56e28aabbcc71dfd30d074fc52601af675eada5612786dcefaa5b5a83893cbb"
+    },
+    {
+      "path": "sources/mspack/libmspack/COPYING.LIB",
+      "bytes": 26430,
+      "sha256": "a190dc9c8043755d90f8b0a75fa66b9e42d4af4c980bf5ddc633f0124db3cee7"
+    },
+    {
+      "path": "sources/mspack/libmspack/README",
+      "bytes": 5386,
+      "sha256": "aafecd31326290bc87337208a4bb9da49ac2899f52f32956bd163debc9c9ceb5"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/cab.h",
+      "bytes": 5655,
+      "sha256": "3e132b386dd241994a79cb9ad03fc8fa5776ed700d598dfc65caa55152bd61c9"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/cabc.c",
+      "bytes": 579,
+      "sha256": "8f29adb5c04394d6e0dae793d3b17d89f57912880d0c67615332699fae97942f"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/cabd.c",
+      "bytes": 50173,
+      "sha256": "de8ac1589ae36bc1ef9e76ba9e5e66c10f94c1bd153caa9f70e28669269ec297"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/chm.h",
+      "bytes": 4012,
+      "sha256": "834ca68536f0b8d7b76a947bb581084d12e95a982095a7affcdbed4f2c0a7cc8"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/chmc.c",
+      "bytes": 579,
+      "sha256": "164a6c1c7d04e45b3a3db05cf9256991be69290b7116a3f63eed7d65a98bdebd"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/chmd.c",
+      "bytes": 48886,
+      "sha256": "58914e999015834e59ba20d3b7915e0793a5fefcd247dd7b3c9f6c936e74c693"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/crc32.c",
+      "bytes": 5745,
+      "sha256": "8cda1a5ecc9d66cddd3df212276d5f52d3a8e46e2471ee2101982267f08edc31"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/crc32.h",
+      "bytes": 377,
+      "sha256": "ea76ff919f61ba5f240337744a01e39e0e976f315280c7301872fcfa6ff2e1d9"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/debug.c",
+      "bytes": 1785,
+      "sha256": "c121effe0b598237fe01cd26ec62afa20c12b69fc2baa59690ede79d8ff82891"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/des.h",
+      "bytes": 402,
+      "sha256": "db18d46b74d0f6e84337693bdd20aae4ec5a5f5e02f4656fdda1940e43eaf0f9"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/hlp.h",
+      "bytes": 699,
+      "sha256": "1438ab16b9993520808a79598f066ee9d1b92a508adf46f3c4a4af6d5440c993"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/hlpc.c",
+      "bytes": 579,
+      "sha256": "0e597148da92d2c9102cec6603c5e19513c79c2b74ba01bf14a0ff23e50baafb"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/hlpd.c",
+      "bytes": 589,
+      "sha256": "8cf593b6b1eb9a113e6411fa9b1f768d6fe5c6b6e7267b176d0498d28cf539f4"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/kwaj.h",
+      "bytes": 3510,
+      "sha256": "6c27a983c242e2e229ff535b22a636c1ff076cae5d7ced9053cf7274028e125c"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/kwajc.c",
+      "bytes": 585,
+      "sha256": "c28d6bacf2f063a6d5a28bbc1d1658da305f57b2dca5561bc844dd35db561937"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/kwajd.c",
+      "bytes": 19010,
+      "sha256": "6aa06d990cec0e112b487514b5dd249d8cbe666dcdbb860f9c36590e752daaeb"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/lit.h",
+      "bytes": 732,
+      "sha256": "8616755fffe0cd473d9b203da20349aa21797d98115423a5a2e91ebd7b9fadc8"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/litc.c",
+      "bytes": 579,
+      "sha256": "94b0b6c7f74c82ec6a3027ee66f1ae097c106dda6b1d9f8975c3bd7eb80bb9de"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/litd.c",
+      "bytes": 589,
+      "sha256": "a4c35eed2336e453272d6e21bdeede782b00f9ed3d8b0da38521cb2b8e25c4fd"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/lzss.h",
+      "bytes": 2384,
+      "sha256": "6eb7a906aecad72e4138a7ca8880ca3fbd6ae2af5e0a87f80e97bbe9322e8b13"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/lzssd.c",
+      "bytes": 3373,
+      "sha256": "71e5f82490a03da517a469f1a044c243c6d685050a3b6c3412adf9991a25d76a"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/lzx.h",
+      "bytes": 10436,
+      "sha256": "22b1ffa9ddc15aa5fac95d4f4f0c60486f590e55636a17ab94f3ad1b770f907f"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/lzxc.c",
+      "bytes": 498,
+      "sha256": "3cc439b8b31e557cde20b591c9594794d4fc304d6c5f7ca3f32c95c97b50e2d3"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/lzxd.c",
+      "bytes": 30015,
+      "sha256": "622183f03bac71a12327bc9f036395dcb5c3b7c6cc7d766785de24ac1354256a"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/macros.h",
+      "bytes": 2076,
+      "sha256": "29a9628cd7a8881bd36defb811209c2a48852e0bf6899d579d6cb80d65337b0d"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/mspack.h",
+      "bytes": 91654,
+      "sha256": "df9e9e2b18cc145e6cf652a43ffbc88bde21bfd6fd3024318fbc2140a4efd059"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/mszip.h",
+      "bytes": 4682,
+      "sha256": "05e153c26abff41ccd5ebfee7587670a2adcb8707bc503de95025de987feaae4"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/mszipc.c",
+      "bytes": 492,
+      "sha256": "ab6fee90e51cb8a8bb07a3e620d5a24b8f1e99dd338253276221336b6c0beaf5"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/mszipd.c",
+      "bytes": 16870,
+      "sha256": "04ba76766f723552df4dc35b455ccdf6f6a795d13a549f68a314a2bae1d277ba"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/oab.h",
+      "bytes": 1594,
+      "sha256": "4e79ab355b0ce6466d8cd73ca899f6abadc1a4f94cecba640708e8bbdc0a7ae2"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/oabc.c",
+      "bytes": 578,
+      "sha256": "d17a53cf05adfda0af6506dd539e57db0288689f7ff76d12fa50813dc3b49f88"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/oabd.c",
+      "bytes": 11331,
+      "sha256": "26795136e275c84e7abdcc652291bcc3c340a40514692b9f66d91916b97b94e2"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/qtm.h",
+      "bytes": 4499,
+      "sha256": "26c66e12cade704e680e8e874562498fe3769cc93be410f65d53d120a762907d"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/qtmc.c",
+      "bytes": 487,
+      "sha256": "958caaad3e32e3c8d57b0c2b812c6813c21c6ea972ffec6e643cc41002f1705f"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/qtmd.c",
+      "bytes": 17683,
+      "sha256": "56b5076da4e8776c4d89810855c5cc6d10c4326b79276bdf2bd5e79e926b856c"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/readbits.h",
+      "bytes": 8621,
+      "sha256": "7c849edb9b939b4eb1e9e2b895b7fee3eb19e23d0a1dab87c6c504cf007010ab"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/readhuff.h",
+      "bytes": 6814,
+      "sha256": "446c7ca1cfb11a80cd1b4e86006abea3f6052059636361ddb1e227f29ccee560"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/sha.h",
+      "bytes": 397,
+      "sha256": "2055c6e18c9a00cadb6f07c6d03c8d424c797c01f69c6c110443280fe7490450"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/system.c",
+      "bytes": 6365,
+      "sha256": "b210cdf97963588a9dc9989846a3283480237c36ab757f093ed43866267102cc"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/system.h",
+      "bytes": 1727,
+      "sha256": "98997127296c7baccd61b5ade9362cab509c9664b00259f9f62e6008b7369e42"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/szdd.h",
+      "bytes": 871,
+      "sha256": "c0978f7890892e847f4b2f9b1e5cb4798d3a1a210ee80cf5241b868a11974d93"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/szddc.c",
+      "bytes": 585,
+      "sha256": "a5850ea5762959d9b36c89e4990ebb708db8c1eb0b7ae32d687e14e65299058e"
+    },
+    {
+      "path": "sources/mspack/libmspack/mspack/szddd.c",
+      "bytes": 7718,
+      "sha256": "6929b26d35e55ed387e86becad531badff4d90f77c7f2647476e468f69b69151"
+    },
+    {
+      "path": "sources/xenon/LICENSE.md",
+      "bytes": 1089,
+      "sha256": "bcb33ae2cbc6c0f2818712d806112e774e684fce01ce80573f92adf80b7487f4"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/byteswap.h",
+      "bytes": 658,
+      "sha256": "e736c4e1386cbdf467cba3938dbd892b6488417700818a80e6ecf0a834e59bbd"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/disasm.cpp",
+      "bytes": 903,
+      "sha256": "c93f894e2f1bde00aa92132d468855af069e512ed011d80d089d455e36c04476"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/disasm.h",
+      "bytes": 1020,
+      "sha256": "aad36f4f3e64bcc803695622d7d64bd7586b96ac7d0b6c2809b453a8fe39adc4"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/elf.h",
+      "bytes": 15919,
+      "sha256": "bea8ba800e45fc33027feaf98051d6c231c00227eb5c30044676091eda12eea7"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/file.h",
+      "bytes": 545,
+      "sha256": "1e5726e311a050e39146a6eaf6398e3f4fee757d646020cf25cb6f3615410290"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/image.cpp",
+      "bytes": 2713,
+      "sha256": "d49c4739b6c7da44e36bbbd1e0483d885d2840c1fd26f85f2110aa42eb4347d8"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/image.h",
+      "bytes": 1234,
+      "sha256": "6d37785a83a9ca42628c26adbf9c748e4f506dddd10b7653c9acf4178768e28d"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/memory_mapped_file.cpp",
+      "bytes": 3865,
+      "sha256": "746d9d48e2dfc47f1b3b03aeb9a2fbaa0f686c7b53e12abc3a13018bdae0ea55"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/memory_mapped_file.h",
+      "bytes": 701,
+      "sha256": "8ea9bc5a51d08cf529eb8edb1d9761f704162f7da7028d914572266e97a02ce8"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/ppc_context.h",
+      "bytes": 20264,
+      "sha256": "d27735587483d6ea1ff71e250a47dd64ac4cb21d5d7c4182662c3f291083a032"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/section.h",
+      "bytes": 969,
+      "sha256": "1d64e3553f528a7645066787b338de59e7f3558ab14c832f3b1f7ba0eb19c0c7"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/symbol.h",
+      "bytes": 850,
+      "sha256": "f4e29d512899132096c876ec39b5162ce8f7063677e616cf5c4148243e1d77b4"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/symbol_table.h",
+      "bytes": 1484,
+      "sha256": "ee26ade300ef601527082cb263e90dc0006b7d438aba3b9677b2e41923abbfa4"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/xbox.h",
+      "bytes": 9707,
+      "sha256": "eba4079e8379bdb138f4da77405a3432df60f8bcdf3f47cbc3ca1c8543cf5814"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/xdbf.h",
+      "bytes": 4010,
+      "sha256": "dc16571f390144b13b14f1617f634505b3f355b6f1c72963b768d23eda0537ee"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/xdbf_wrapper.cpp",
+      "bytes": 4110,
+      "sha256": "2a55a88bbf1dceac08ace3f992b7c2426176a1d9116719de006bb59c99c1881d"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/xdbf_wrapper.h",
+      "bytes": 972,
+      "sha256": "bec0dae07b55dbef0c65c6f8e7b7d9a452fb7e13ddfc8dfe6f18ca45ac00101d"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/xex.cpp",
+      "bytes": 9594,
+      "sha256": "f7d7cffd095e640ce84aca85a51f5a51a64a6dc5034f6a311a80beca6fdabd11"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/xex.h",
+      "bytes": 6160,
+      "sha256": "dbe7b6d4829545385cfe98328d3adb1e77944b49fd9f75c71da35bf441bdd452"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/xex_patcher.cpp",
+      "bytes": 17953,
+      "sha256": "dcf0417f0d0d8541ab996160c9b307ae3d4cabbd0fd8be43b20bb9f672b8b1bb"
+    },
+    {
+      "path": "sources/xenon/XenonUtils/xex_patcher.h",
+      "bytes": 1289,
+      "sha256": "32b753dc36d29980a53af2189643755cff63bac05221d6685f90299dac3cf90c"
+    },
+    {
+      "path": "sources/xenon/thirdparty/TinySHA1/TinySHA1.hpp",
+      "bytes": 6295,
+      "sha256": "54dc7225c1fa3ed9073f6fbec00aa0910ffee3a34347d65e10fac077b69f7a95"
+    },
+    {
+      "path": "sources/xxhash/LICENSE",
+      "bytes": 1389,
+      "sha256": "6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a"
+    },
+    {
+      "path": "sources/xxhash/xxh3.h",
+      "bytes": 2394,
+      "sha256": "a927ee0e6e0800835baed52b16bc981ec39f46287271a1a3f77c22cc48634430"
+    },
+    {
+      "path": "sources/xxhash/xxhash.c",
+      "bytes": 1855,
+      "sha256": "5c3591fe6e6c86a619eb26760e9520e37a6fd5152882ab5ad93f912e2a855966"
+    },
+    {
+      "path": "sources/xxhash/xxhash.h",
+      "bytes": 268031,
+      "sha256": "3157b9252d1ad1fbf81e7d641e8e2af89e8973af5035ba7802d504236d6a7c7a"
+    },
+    {
+      "path": "test_preflight.py",
+      "bytes": 1752,
+      "sha256": "c507ad8d5286f974591380a34acce18f415e8f787958b19bc2c0462e21750448"
+    },
+    {
+      "path": "unleashed-xex-patch.cpp",
+      "bytes": 3302,
+      "sha256": "3704ea0c1018d3712f4c42ec67b4f066497f6f0ab0ba3286be172637e1859d06"
+    },
+    {
+      "path": "verify-adjacent-dll.c",
+      "bytes": 2928,
+      "sha256": "7c2cd53d75e8e881842f54052919ccea43b751478897bd530b870819a2e1eb26"
+    }
+  ],
+  "local_adapter": "unleashed-xex-patch.cpp validates fixed original base/update XXH3 identities then calls XexPatcher::apply and creates patched/default.xex; CMake forces MSVC byteswap shim; no game source in wrapper.",
+  "binary_verification_limit": "No executable rebuilt or compared in this audit. BUILD.md reproducibility statement is historical, not reexecution. Six key compiled dependency/patcher inputs compared against fixed upstream text."
+}

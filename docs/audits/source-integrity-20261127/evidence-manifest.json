@@ -1,0 +1,245 @@
+{
+  "scope": "Audit records only; no game binary/ROM/ISO",
+  "files": [
+    {
+      "path": "MATRIZ-148.md",
+      "bytes": 35797,
+      "sha256": "0f43c4c582fe8e46e9cba4ea1bf0fee007cfde2b537614781ffe01c89731d32b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 22830,
+      "sha256": "be5374a1c743eec09a69b2f4ebdaa1d0da49854f85a481e388c7b49b4145c500"
+    },
+    {
+      "path": "assemble-audit.py",
+      "bytes": 11687,
+      "sha256": "1f267ade44838dea0c2add3cc62064ceaa576d848ebb68c3c912e7dcbf394c52"
+    },
+    {
+      "path": "audit-matrix.json",
+      "bytes": 471247,
+      "sha256": "3da81219c18f28e0c7e48cc104979d97b599d385fd34763a34cbd8835d8275c8"
+    },
+    {
+      "path": "audit-validation.json",
+      "bytes": 255,
+      "sha256": "de5e52da186a5a87f301ec4ef8f009cd077876925fd791dd93fae35a90ee28bb"
+    },
+    {
+      "path": "bluewake-helper-source.json",
+      "bytes": 96827,
+      "sha256": "e5c0970ccb64a488e197abe507d768d5caf3ffc10ea872a449b703c26570bcc9"
+    },
+    {
+      "path": "bluewake-original-importer.json",
+      "bytes": 32923,
+      "sha256": "a856f7ca9c05491d8d3636407d0ce7ac25a7bf853ff6bdba0469fd9804763a7e"
+    },
+    {
+      "path": "catalog-review.json",
+      "bytes": 478243,
+      "sha256": "7fdf881a5289c354d25c272b580a31c11318c5744a88d8a3696a0c2d611a553a"
+    },
+    {
+      "path": "catalog-review.md",
+      "bytes": 20882,
+      "sha256": "607956bb68661596790bdb61071a0223b18779b89663b4965dbe18218fffa749"
+    },
+    {
+      "path": "catalog_inventory.py",
+      "bytes": 17455,
+      "sha256": "447640e64090a67f7c06a0ff4aadfa2cd766329d987f08578c12416143262fc9"
+    },
+    {
+      "path": "desktop-snapshot-manifest.json",
+      "bytes": 175956,
+      "sha256": "dd7a31ecea609ae8f6d08bea2e02b08c35ee1737bca70ad949e3cb0d21d71c70"
+    },
+    {
+      "path": "gow-video-backend-evidence.json",
+      "bytes": 2786,
+      "sha256": "7f98e10bb89bf20099a4a398ae9f78d33d0f1d762bdf3bb7d8e7ebed4e2b036c"
+    },
+    {
+      "path": "handler-findings.md",
+      "bytes": 11517,
+      "sha256": "758a07cf0a6abe6933255805ebae73388cd2aaa5e184e0810596626f19cc3c69"
+    },
+    {
+      "path": "metaforce-current-game-tree-diff.json",
+      "bytes": 619,
+      "sha256": "e138c9d46dbf767a517937d08e6847c54c6f115424bf0d5a3690fb8692fc8989"
+    },
+    {
+      "path": "metaforce-current-patched-hashes.json",
+      "bytes": 1954,
+      "sha256": "63f4c748e3963a873496977914a11d592ffc111289722c242e9a114682f74d60"
+    },
+    {
+      "path": "metaforce-nod-preimage.json",
+      "bytes": 5595,
+      "sha256": "0864e8e23d11d84e49627516dd5d97fca312d67907d0d8f8209bb28fc263f0da"
+    },
+    {
+      "path": "metaforce-source-tree-recheck.json",
+      "bytes": 2741,
+      "sha256": "80feeb0201e43591f2dd9b251d6fc07b129a15c594bb9ff20ea01ef73e07ab34"
+    },
+    {
+      "path": "mkw-metaforce-byte-verification.json",
+      "bytes": 38359,
+      "sha256": "c877b00014350c6c86019e8754c73b66a23b4b586347ea46a937503a1d4761dd"
+    },
+    {
+      "path": "mkw-metaforce-local-pin-check.json",
+      "bytes": 15000,
+      "sha256": "c08b8286671b6088e2e74e3e3dd19758c3681fd6d9214f198e1f5496011a8b2d"
+    },
+    {
+      "path": "mkw-metaforce-published-tree.json",
+      "bytes": 19455,
+      "sha256": "6db48f33739832244abcbb192ec4db846a71ec11e7c2a5d0930dddc9b4e50029"
+    },
+    {
+      "path": "mkw-metaforce-review.json",
+      "bytes": 3763,
+      "sha256": "928d8eb27e3df6940571df7eee14b8f68053096f01b0efeefd4f46c99b1d28dd"
+    },
+    {
+      "path": "mkw-metaforce-review.md",
+      "bytes": 14290,
+      "sha256": "b7aa429ed13f4fbd96501d6962c5d61322cdd6df1c13fae921bf13390d6b80a1"
+    },
+    {
+      "path": "mkw-metaforce-upstream-trees.json",
+      "bytes": 10623,
+      "sha256": "04e88780f1de93dde583073529bbdf6c0d5e543774158b81a8f097bd6abad873"
+    },
+    {
+      "path": "mml-parity-review.json",
+      "bytes": 888,
+      "sha256": "1b25e715bb4367bff4a84167dc51a2b38a71d6bb36a43d26355efe8cae44d2b1"
+    },
+    {
+      "path": "mml-upstream-patch-manifest.py",
+      "bytes": 9074,
+      "sha256": "282dd443f2574b7ed704b7157696c686645a79a5041e95c80665c5550819d803"
+    },
+    {
+      "path": "native-helper-actual-hashes.json",
+      "bytes": 6376,
+      "sha256": "58ae877e8c32762ab491b2952e3a2f892a305154cb8632dab93a5b3170bd6d87"
+    },
+    {
+      "path": "native-helper-build-inputs.json",
+      "bytes": 109113,
+      "sha256": "78cdc176c7773447fdb3842240084a8182968433fbbdccc763252c7e64262a8b"
+    },
+    {
+      "path": "native-helpers-review.json",
+      "bytes": 20545,
+      "sha256": "4c7a809755b0b2905c7b55b15ced1f737190fb3fed4d84d5f1ef6f7684e7c1f1"
+    },
+    {
+      "path": "native-helpers-review.md",
+      "bytes": 14594,
+      "sha256": "a7ee9a90f37aa43b9f867038d5c067727b85c2780fb778565debf78f3d613d88"
+    },
+    {
+      "path": "native-other-source-comparisons.json",
+      "bytes": 7775,
+      "sha256": "e4a7cf84eb1acc4c017f0886cf8a3bc72e80adf80e386bd0cf77badb7746d314"
+    },
+    {
+      "path": "native-soh-provenance-gap.json",
+      "bytes": 2499,
+      "sha256": "99642f8d99d88c12cecf4fd1fbec99aff01cc4fba59c17ddd5533a8cc3984e10"
+    },
+    {
+      "path": "native-torch-tree-comparisons.json",
+      "bytes": 2448,
+      "sha256": "e9e1551c3bf0e2c5de9ae3e8c8504a6dc2daa2337d1cd3ac4e6294232a447eec"
+    },
+    {
+      "path": "native-twoship-comparisons.json",
+      "bytes": 27132,
+      "sha256": "3a552c810c1cc3dc037bc05a64490971299c14bacc72a404cef699443e3b3082"
+    },
+    {
+      "path": "nectar-live-source-pins.json",
+      "bytes": 1848,
+      "sha256": "98b0d12d4d454c37f6c587a723326e93f881ef6deb6a3a5f7862100527e1faae"
+    },
+    {
+      "path": "replay-rex-provenance.py",
+      "bytes": 5492,
+      "sha256": "009f5786c918f1df5ad05adcfb832feb461c0d4d8bb3db704389ce052caf76a4"
+    },
+    {
+      "path": "reviewed-source-manifest.json",
+      "bytes": 17594,
+      "sha256": "96da99c758424410c6156d9325bb841e6e38d045950ae62eda2d7f32bfc443ca"
+    },
+    {
+      "path": "rex-review.json",
+      "bytes": 163868,
+      "sha256": "7ecb7d41494566cdab0c3c805c4724674faa084a1bcb32861f6c6dbf09635bd4"
+    },
+    {
+      "path": "rex-review.md",
+      "bytes": 14833,
+      "sha256": "7aa593f03fc510aa658304fc5d71180bd93f3ee4a5f491d37432620a242cef3f"
+    },
+    {
+      "path": "root-primary-sources.json",
+      "bytes": 3204,
+      "sha256": "c5ffeb9b69ee395eeb5e3f824e40a4b599ffebe0bff6073e938ff39c351ade99"
+    },
+    {
+      "path": "root-review.json",
+      "bytes": 15542,
+      "sha256": "ab758c2749b50bde3d9649752f734450a0368e5df112272f6d46df055f4f24dc"
+    },
+    {
+      "path": "service-routing-review.json",
+      "bytes": 525358,
+      "sha256": "8a6e34699e10906d5d9420736729458f388c1bbc71f7f1db0ce186afaac3646f"
+    },
+    {
+      "path": "service-routing-review.md",
+      "bytes": 46869,
+      "sha256": "0182a3bf24c249e810d90a0ee9ca74273649da3bd9d777118c014e18d5d5ec1c"
+    },
+    {
+      "path": "service_routing_inventory.py",
+      "bytes": 31807,
+      "sha256": "391ae19b09e5a11c8d7b65cc1bde7e72fe4be676cc15ccb2624e10c5e7cf6e20"
+    },
+    {
+      "path": "snapshot-source.py",
+      "bytes": 2297,
+      "sha256": "06cd6ebffa428d5e9dcd8a90bc0700e338bcde818b2a50cfd364f1ac45fac6c8"
+    },
+    {
+      "path": "unleashed-helper-review.json",
+      "bytes": 18206,
+      "sha256": "235920793686bd645ab9ac10362aa9792e7192670b1cd00224723c7bba2962dd"
+    },
+    {
+      "path": "verify-audit.py",
+      "bytes": 5171,
+      "sha256": "78a169051b324950fae3ad96ce8daac5274e74a006d9868460c52673605475d8"
+    },
+    {
+      "path": "verify_mml_parity.py",
+      "bytes": 2873,
+      "sha256": "edc635037748c56db17c7dfba47953c6bcf374be3f332c4176d36a82894a7f66"
+    },
+    {
+      "path": "verify_unleashed_source_manifest.py",
+      "bytes": 1931,
+      "sha256": "7d56e1d270b6ad94359bf1e39d4f0495ee5ac3e093408e62ce5a0176922f4265"
+    }
+  ]
+}

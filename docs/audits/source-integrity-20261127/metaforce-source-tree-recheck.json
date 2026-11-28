@@ -1,0 +1,82 @@
+{
+  "metaforce_tree_recheck": {
+    "entries": 2271,
+    "differences": [],
+    "removed": 0,
+    "truncated": false
+  },
+  "sources": [
+    {
+      "name": "metaforce",
+      "sha": "de8fc69bd7f345d6cf5f0c8fc2798295e22522d3",
+      "url": "https://api.github.com/repos/Antidote/metaforce/git/trees/de8fc69bd7f345d6cf5f0c8fc2798295e22522d3",
+      "files": [
+        {
+          "path": "CMakeLists.txt",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6a1c81992b22fb7ade8287469aaae35a0e941693",
+          "size": 44332,
+          "url": "https://api.github.com/repos/Antidote/metaforce/git/blobs/6a1c81992b22fb7ade8287469aaae35a0e941693"
+        },
+        {
+          "path": "extern/aurora",
+          "mode": "160000",
+          "type": "commit",
+          "sha": "40cf48fce6ce85366608596bae018c6188f2b2e7"
+        },
+        {
+          "path": "extern/borealis",
+          "mode": "160000",
+          "type": "commit",
+          "sha": "d4d7ff146ff4097d64bb24e52459152f1b5e597a"
+        },
+        {
+          "path": "extern/musyx",
+          "mode": "160000",
+          "type": "commit",
+          "sha": "dc56c921528821209a8b53029114e5443435f40d"
+        },
+        {
+          "path": "src/Kyoto/Particles/CElementGen.cpp",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f9e1b58395a3883515d8f548a4f8131a0bc4699a",
+          "size": 87538,
+          "url": "https://api.github.com/repos/Antidote/metaforce/git/blobs/f9e1b58395a3883515d8f548a4f8131a0bc4699a"
+        },
+        {
+          "path": "src/MetroidPrime/CActorLights.cpp",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e370c40bfc8e0476a8a4358173898f2c43fa8b3c",
+          "size": 21523,
+          "url": "https://api.github.com/repos/Antidote/metaforce/git/blobs/e370c40bfc8e0476a8a4358173898f2c43fa8b3c"
+        }
+      ]
+    },
+    {
+      "name": "borealis",
+      "sha": "d4d7ff146ff4097d64bb24e52459152f1b5e597a",
+      "url": "https://api.github.com/repos/encounter/borealis/git/trees/d4d7ff146ff4097d64bb24e52459152f1b5e597a",
+      "files": [
+        {
+          "path": "CMakeLists.txt",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "642b0d4f6c0b46efd771e37b9512b3eabf2a036c",
+          "size": 26505,
+          "url": "https://api.github.com/repos/encounter/borealis/git/blobs/642b0d4f6c0b46efd771e37b9512b3eabf2a036c"
+        },
+        {
+          "path": "src/io.cpp",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "363423bce432ab1e5154d0f72ca223cc77850b69",
+          "size": 22952,
+          "url": "https://api.github.com/repos/encounter/borealis/git/blobs/363423bce432ab1e5154d0f72ca223cc77850b69"
+        }
+      ]
+    }
+  ]
+}

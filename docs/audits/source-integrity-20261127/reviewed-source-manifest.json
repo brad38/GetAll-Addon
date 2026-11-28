@@ -1,0 +1,506 @@
+{
+  "commit": "921295de12349e726f7ca21a5edd8a8ecee123d8",
+  "note": "Named source entrypoints and additional reviewed files. Not a claim that all upstream functions were reviewed.",
+  "files": [
+    {
+      "path": "Services/GameInstallationAdamsAntFarm.cs",
+      "size": 6378,
+      "sha256": "8eadd46c861de9fae139db6f5a27bfa5ab8b1816f1eb05051661e1cac4b4e019"
+    },
+    {
+      "path": "Services/GameInstallationBloodyRoar.cs",
+      "size": 5952,
+      "sha256": "e21e7a501ac53b1075d3260c42dd25ba9cd193e0d729fdb1bceadfae6da593f4"
+    },
+    {
+      "path": "Services/GameInstallationBlueWake.cs",
+      "size": 7718,
+      "sha256": "58260e1f6065939e587ab57d76c75679ffa4fb29dc4f2547abb5e94f1fa4f681"
+    },
+    {
+      "path": "Services/GameInstallationBurnoutNative.cs",
+      "size": 9422,
+      "sha256": "90bdb2629251f853570093a5c5daa5171ee65b82e9c9e352c4479653dfd08c9b"
+    },
+    {
+      "path": "Services/GameInstallationConsoleBuild.cs",
+      "size": 34687,
+      "sha256": "56be844f0385005af85e5bc45e0940718d96562ba49a655b1e62e00d90f67c6e"
+    },
+    {
+      "path": "Services/GameInstallationCtrBuild.cs",
+      "size": 5720,
+      "sha256": "f55829bcc49f0a578594654cb6e639ecd9a9dc0a6bfeca87f545c04f2012dc6d"
+    },
+    {
+      "path": "Services/GameInstallationCtrMedia.cs",
+      "size": 11562,
+      "sha256": "a4d2f435795be7a578ed94c0562f5e5821cba85ca0ad9a74e52a031688538b6a"
+    },
+    {
+      "path": "Services/GameInstallationDirectGameCube.cs",
+      "size": 9745,
+      "sha256": "092c430bdb36f79d5cbc74a46fbb11de44c9943a69388c945d27e74621918612"
+    },
+    {
+      "path": "Services/GameInstallationDirectMedia.cs",
+      "size": 12636,
+      "sha256": "e825819ca91dada045b6f887e24697c4e7c80fc7f3c4f1acbd689ac0b76eb1a0"
+    },
+    {
+      "path": "Services/GameInstallationDkbBuild.cs",
+      "size": 22226,
+      "sha256": "5806d55dc507ca54cc5d0373fef2645d22713617ed179f9a47b4521c042f0ebf"
+    },
+    {
+      "path": "Services/GameInstallationDoaxBuild.cs",
+      "size": 15632,
+      "sha256": "61f1b3d8d1158bb6e932dfafb14137e3626c76213095099a1f257310da396fd9"
+    },
+    {
+      "path": "Services/GameInstallationDrMario64Build.cs",
+      "size": 12283,
+      "sha256": "a93d6a7162b60739ae1214bb7232cc3bb2ad09bbf52647dae4c3ef7fb837f467"
+    },
+    {
+      "path": "Services/GameInstallationDrMario64Native.cs",
+      "size": 7993,
+      "sha256": "a70ede762c540cd9cc4469e01d070583c000bef1cd926ad712a3197f1e1f2ff9"
+    },
+    {
+      "path": "Services/GameInstallationDrMario64Patches.cs",
+      "size": 4698,
+      "sha256": "ff23027aad759d356394dc7dd006cc57b69e35c3ef1e41b49b23ebbc71896708"
+    },
+    {
+      "path": "Services/GameInstallationDrMario64Sources.cs",
+      "size": 7842,
+      "sha256": "a3ed75cf150d8815b55c2625f4628b09ce6425fefa6d83b43a97fa00d3368631"
+    },
+    {
+      "path": "Services/GameInstallationEdgeOfTime.cs",
+      "size": 8547,
+      "sha256": "23eeed5618bcc292f9f72a197aa126dc7521695d5735c82e7daa11057c30a251"
+    },
+    {
+      "path": "Services/GameInstallationForzaNativeGame.cs",
+      "size": 5896,
+      "sha256": "72fd04162582c15a456af3452be04714d8f695667befe363d5972c9ebc1cddd7"
+    },
+    {
+      "path": "Services/GameInstallationForzaNativeSources.cs",
+      "size": 7552,
+      "sha256": "2a237cd7885b3906ef5e0f7a2694f3d6f2977509b75ac7d6e40b098d31438279"
+    },
+    {
+      "path": "Services/GameInstallationForzaXex.cs",
+      "size": 11697,
+      "sha256": "3417f363463101ca10a0e34cdb53cce95a5c94733264ff9c06b98835eabbea69"
+    },
+    {
+      "path": "Services/GameInstallationGoldenSun.cs",
+      "size": 12950,
+      "sha256": "3cc74291d9eb06c6139ae47cefa14e446772f936c861e1bfdd10672d41135c8c"
+    },
+    {
+      "path": "Services/GameInstallationGowBuild.cs",
+      "size": 15486,
+      "sha256": "cd64fdd4624e2df095191ab1289e26d7bc0c5e962610acfcdcba55a85c04e11c"
+    },
+    {
+      "path": "Services/GameInstallationGowKiexsterBuild.cs",
+      "size": 15015,
+      "sha256": "2ec8ae2df16732d0c8436d82faaaa745ce61c290cf87cd0b13787ad0594da2d4"
+    },
+    {
+      "path": "Services/GameInstallationGowKiexsterNative.cs",
+      "size": 13763,
+      "sha256": "bc23ac58112f8c490e916ceb668b2f16abb74373ac229ac1f0ad6a9c6d45cffd"
+    },
+    {
+      "path": "Services/GameInstallationGowNative.cs",
+      "size": 5310,
+      "sha256": "1f4c060384c5865c2082db244791024e4dda2504f9247395eb625e91b538a23c"
+    },
+    {
+      "path": "Services/GameInstallationGt4.cs",
+      "size": 10123,
+      "sha256": "79f30ab0e1f552d12d97562084ffe6de46123513174d76cf82073ddbad07ea1e"
+    },
+    {
+      "path": "Services/GameInstallationGt5Native.cs",
+      "size": 23056,
+      "sha256": "85dabde3ff644f8503178a1ddfa930ec892e2223c8ec9757b15252ca37876890"
+    },
+    {
+      "path": "Services/GameInstallationGtaRuntime.cs",
+      "size": 10368,
+      "sha256": "4cac9051681fd8ec9858a4df69509fc897b4e0679ff64f0753d7bb8807f45acd"
+    },
+    {
+      "path": "Services/GameInstallationGtaStoriesBuild.cs",
+      "size": 7540,
+      "sha256": "125e5ff95a63579e59f66a1a40509a5863d3ce71d549b4c7c66fb18b4cb41722"
+    },
+    {
+      "path": "Services/GameInstallationHookshotBuild.cs",
+      "size": 17196,
+      "sha256": "10dae483ba185a5fd3907601c50a20e27f83da65954da92827b4cc1681e5fd11"
+    },
+    {
+      "path": "Services/GameInstallationKingsField.cs",
+      "size": 7214,
+      "sha256": "4f9bc37687d2ea00eba1d0b6cbfa77948fa78bf5825b534acaf9c8dc37c646c2"
+    },
+    {
+      "path": "Services/GameInstallationKnowYourRole.cs",
+      "size": 12304,
+      "sha256": "17eea1622b3b004178d9a8b620918d8d64bff7df4160bcfefb3e13519c24b8b8"
+    },
+    {
+      "path": "Services/GameInstallationLasBuild.cs",
+      "size": 15455,
+      "sha256": "2417d5fc66de9ee3813eb98d3c32b7fffffd1a2051f8cb6042228a1861a37044"
+    },
+    {
+      "path": "Services/GameInstallationLighthouse.cs",
+      "size": 5449,
+      "sha256": "87e249d0f5cbdfaf9d2ad8c644b082551f69e6150e0cd8e2c1fc79342e39403d"
+    },
+    {
+      "path": "Services/GameInstallationLinkedPs4Ports.cs",
+      "size": 12464,
+      "sha256": "30fb1de6839ab9322caf6c72e63f91148046974bf754cdcf5c97d098845089d0"
+    },
+    {
+      "path": "Services/GameInstallationMarioBuild.cs",
+      "size": 20514,
+      "sha256": "c9a78aab5b777c1028c47c1cb769111ca2d0c982581f18e99e5cd05042df2f6b"
+    },
+    {
+      "path": "Services/GameInstallationMarioNativeBuild.cs",
+      "size": 10806,
+      "sha256": "6db0b8037bbff19c03f3185d8f139f8137d5516eb192323272acf9df6300fab7"
+    },
+    {
+      "path": "Services/GameInstallationMarioNativePreflight.cs",
+      "size": 4651,
+      "sha256": "f6addda2b2e5cd6fbc8e748253e3b0551354598ebd8fb70d95a25dd36e01f12a"
+    },
+    {
+      "path": "Services/GameInstallationMarioNativeSource.cs",
+      "size": 5032,
+      "sha256": "8d2a48d73f163d1f24b87553de8850d3b64896d19b4d0295617a85cbaf6c05bb"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceBuild.cs",
+      "size": 13788,
+      "sha256": "bc3b4418aa9081be01946ebc39be86c756dadc78214ec1155a038460ccd6dec5"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceNative.cs",
+      "size": 17582,
+      "sha256": "575ba34e5a6e68720cbeff6d1750944e9fe418a9cf3b6810536e60562d4cf210"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceRuntime.cs",
+      "size": 8353,
+      "sha256": "2e2ea42e6e00579e82634a906af0f79883a7b83c3c1c01b7fb7c2d8793145aa2"
+    },
+    {
+      "path": "Services/GameInstallationMkddAltBuild.cs",
+      "size": 11595,
+      "sha256": "0fa980862c4bc4353d6c220dbff8eefc701df8f4ff86cb228bb1e58cc1a898f7"
+    },
+    {
+      "path": "Services/GameInstallationMkddBuild.cs",
+      "size": 13182,
+      "sha256": "a628a2889d9c15eb31e7c8dde4d8e5769b03a77b0f4d1a8d0e38f8a12d348fd4"
+    },
+    {
+      "path": "Services/GameInstallationMkddToolchain.cs",
+      "size": 9329,
+      "sha256": "3e1ef32b9298c0da3213de18f5155ac14fbf9bb16e5e15666e2d9ca30155563d"
+    },
+    {
+      "path": "Services/GameInstallationMkwBuild.cs",
+      "size": 17399,
+      "sha256": "4aedc9fa0eb7dbff4f8cd628f4ade0e7d12e530909b99e0b76c689adef1976c5"
+    },
+    {
+      "path": "Services/GameInstallationMkwCliBackend.cs",
+      "size": 11407,
+      "sha256": "637452bed83f338bc3be98ff42811e4e98f1e1a75c1972058e215877c4b7a15d"
+    },
+    {
+      "path": "Services/GameInstallationMmlResume.cs",
+      "size": 14086,
+      "sha256": "522bed3864af650dc239f78c98fe72f57784bd0e5a21431962442af2e1f80acc"
+    },
+    {
+      "path": "Services/GameInstallationN64Portable.cs",
+      "size": 26984,
+      "sha256": "57ec20496fa32534ce71cff69a2270807b33a02bfbdd0a1273578c1a09600f19"
+    },
+    {
+      "path": "Services/GameInstallationNectar.cs",
+      "size": 11882,
+      "sha256": "55dc8c5fa516e8e3596eceec316eacff2ef9c0b5ef28c8451427207b1c048ddf"
+    },
+    {
+      "path": "Services/GameInstallationOdysseyBuild.cs",
+      "size": 20200,
+      "sha256": "203cd50e185d5457b0a60cd5f0609fca8ddbda0a7c97c769e350683c42dd9a01"
+    },
+    {
+      "path": "Services/GameInstallationOpenGoal.cs",
+      "size": 7822,
+      "sha256": "bde583247a3ad04d31ba99411a69e1cecf8ab07576e1b0f17810c816e0da8f0c"
+    },
+    {
+      "path": "Services/GameInstallationPaperboat.cs",
+      "size": 16074,
+      "sha256": "26e719fcd79bb1ff5b79d6ee78e97a3cc0c05bc6958a04f19fc568986000b8ad"
+    },
+    {
+      "path": "Services/GameInstallationPhaseDistorter.cs",
+      "size": 7852,
+      "sha256": "0f6534cbb00a67032a2d5c1843550de831c2d2024a7b1b3829faab18f1d8e129"
+    },
+    {
+      "path": "Services/GameInstallationPicori.cs",
+      "size": 13276,
+      "sha256": "267c3a86d1265a674c8442060d5a32aaa34298c6e851f645744af21539916d48"
+    },
+    {
+      "path": "Services/GameInstallationPinyonBuild.cs",
+      "size": 20387,
+      "sha256": "f021a5da48f3a53f7a2f9360ad34b0c8e0788b4da069fd12d1c220426840a3cb"
+    },
+    {
+      "path": "Services/GameInstallationPinyonNative.cs",
+      "size": 13492,
+      "sha256": "a5a277d32d5706448f03e112d5fcf014ad51fa5c187f94495484691a3ae8cdcb"
+    },
+    {
+      "path": "Services/GameInstallationPinyonNativeSources.cs",
+      "size": 6897,
+      "sha256": "3d7e626c1f9945cbecab51a781bf57995e85cb7105d4c6659b783bf75685386b"
+    },
+    {
+      "path": "Services/GameInstallationPs4Build.cs",
+      "size": 15724,
+      "sha256": "d290680f899153c270865aee579028e0df7a019dbb262707b4d313ca6858d453"
+    },
+    {
+      "path": "Services/GameInstallationPs4Native.cs",
+      "size": 3992,
+      "sha256": "8e7ca99ddf3fa1aa3699781e90b2f23bd619e2b05f9803d98a8220bacd8fc9cb"
+    },
+    {
+      "path": "Services/GameInstallationPs4SpartanNative.cs",
+      "size": 3270,
+      "sha256": "e8d5c06fe2b76d4e6fdb51d34e2f21cc85dc23961c764b44dd7c88eda22dbf4e"
+    },
+    {
+      "path": "Services/GameInstallationPt.cs",
+      "size": 9143,
+      "sha256": "03dfcacc4703e2fdc3c726091136e69b43f2d9ff2a8193183b24e2bf5901d3d8"
+    },
+    {
+      "path": "Services/GameInstallationRadzLauncher.cs",
+      "size": 14257,
+      "sha256": "f21cb54beb06601269999c6ae54477f9938ce38b82ef78c13a7a4e477916cd78"
+    },
+    {
+      "path": "Services/GameInstallationRedriver.cs",
+      "size": 12850,
+      "sha256": "86b44b0197720c495c2abd23286f9b93987bb37554d49061050b2a9162ba745d"
+    },
+    {
+      "path": "Services/GameInstallationRsdk.cs",
+      "size": 5959,
+      "sha256": "aebaecf0d15d84cc6f8493526852f6f1aefa0e77352a674cf102b6788042a2bf"
+    },
+    {
+      "path": "Services/GameInstallationSavageWindBuild.cs",
+      "size": 10668,
+      "sha256": "52ab3a70d6ca3a534ba56f96e822b20fb8c3a89a5cb5fa0d480c48aab1292893"
+    },
+    {
+      "path": "Services/GameInstallationSavageWindNative.cs",
+      "size": 10690,
+      "sha256": "e99a70635fe26854f0b895915bbbcfd8293ce7c3d27b100a24d33c5492be2f0a"
+    },
+    {
+      "path": "Services/GameInstallationService.cs",
+      "size": 89374,
+      "sha256": "e975e5e54266aad76aa57ac8f5a9af6370caa462b4452009a4aa5c2d65d23f8b"
+    },
+    {
+      "path": "Services/GameInstallationSevered.cs",
+      "size": 7867,
+      "sha256": "748554dd28681235c06e222e38e42779a5c6f0406a53f0744390f9620b1c99b3"
+    },
+    {
+      "path": "Services/GameInstallationShadowOfRome.cs",
+      "size": 10437,
+      "sha256": "be7e806fee734d55c6225a38c8a5e4354b7901d3339276d67fbed103771bbf40"
+    },
+    {
+      "path": "Services/GameInstallationSilentHill.cs",
+      "size": 5458,
+      "sha256": "88171a17752200d7b6be04ad06213c91cc7cd83defd97eac941a589793310733"
+    },
+    {
+      "path": "Services/GameInstallationSm64PlusBuild.cs",
+      "size": 6998,
+      "sha256": "f247161b85d24972bca3b471638253cfe9e3e29540edbc5f08f78cc829112478"
+    },
+    {
+      "path": "Services/GameInstallationSm64PlusSource.cs",
+      "size": 4394,
+      "sha256": "5a5c704c1fc388842e31c2bb9ad1608c37f921fdd162c6fb18a2e3d6ec4f598c"
+    },
+    {
+      "path": "Services/GameInstallationSmBuild.cs",
+      "size": 7572,
+      "sha256": "4b575e84310066a6a0760d6f84d1156798b9b69e94d220530c8f22148155487d"
+    },
+    {
+      "path": "Services/GameInstallationSmRewriteBuild.cs",
+      "size": 6689,
+      "sha256": "05a6d9c04d08b0771144027821c42b9e4fcf20c4ea54a83e7f68c1f0ef8675f8"
+    },
+    {
+      "path": "Services/GameInstallationSoh.cs",
+      "size": 7117,
+      "sha256": "949ee0212090b89f3efbca707a5fc8b5f46e7dceb92767b34b573166b05a53c1"
+    },
+    {
+      "path": "Services/GameInstallationSonicContent.cs",
+      "size": 17329,
+      "sha256": "95a1059de2de3dc434d853556cad697a684c6925ff09079639bfffe3f6df7eed"
+    },
+    {
+      "path": "Services/GameInstallationSotcBuild.cs",
+      "size": 8256,
+      "sha256": "831d826dccee0be20fa8f29ec24d983bf35c9633c1ae76bc113260cdde168cda"
+    },
+    {
+      "path": "Services/GameInstallationSotcOutput.cs",
+      "size": 16941,
+      "sha256": "07a4f89181019782bfbebfe27734e335c16c3d52408122aeb8b2b00a35b74831"
+    },
+    {
+      "path": "Services/GameInstallationSpaghetti.cs",
+      "size": 7934,
+      "sha256": "6561e981f7faba47d65495b7f30b3f3516a835ce4bd066e63b90bfecdab9f480"
+    },
+    {
+      "path": "Services/GameInstallationSsxBuild.cs",
+      "size": 16210,
+      "sha256": "17a8849414352f331f2ded77eb158f5b4e668329adafed87c02bb51325ac40f3"
+    },
+    {
+      "path": "Services/GameInstallationSsxCache.cs",
+      "size": 9752,
+      "sha256": "2b0842ff430bfc750c7f63b3891f4626c4f7d24f03d471df87cf22be54a49b0f"
+    },
+    {
+      "path": "Services/GameInstallationSsxNativeSources.cs",
+      "size": 10906,
+      "sha256": "eb1ed105bcf93b7eeded1c42fd11611470c5b751cad9a1628ad9853c5f84db0f"
+    },
+    {
+      "path": "Services/GameInstallationStarship.cs",
+      "size": 6172,
+      "sha256": "9652fa15cf6c99e65a5f34804b2747eed7c986ec5601efe8fe80de146d2e4e6e"
+    },
+    {
+      "path": "Services/GameInstallationStrikersGcBuildSupport.cs",
+      "size": 11647,
+      "sha256": "5f65c8d2a93151a73d4febf799bb787f3176c264667006ab1f713b927d213d4e"
+    },
+    {
+      "path": "Services/GameInstallationStrikersGcRuntime.cs",
+      "size": 7178,
+      "sha256": "ae5203fd6777ff09c83ffe73c729f31d255a7d077398f9cbd3905583756ec644"
+    },
+    {
+      "path": "Services/GameInstallationStrikersRecompBuild.cs",
+      "size": 8399,
+      "sha256": "567081e3407efe9f1321c8e4fb6fff98db7d369b48a57ad2d5b22c4e042ec8a8"
+    },
+    {
+      "path": "Services/GameInstallationStrikersWiiBuild.cs",
+      "size": 12237,
+      "sha256": "5948e9931b7ecd53467f4092c053fab0f4ed873778593be200e07638fa1b8807"
+    },
+    {
+      "path": "Services/GameInstallationStrikersWiiToolchain.cs",
+      "size": 8527,
+      "sha256": "678b4cbc28701eeeeb9dc24986e8a511595088e18aa5b8c0f89e9c114460f0df"
+    },
+    {
+      "path": "Services/GameInstallationSymphony.cs",
+      "size": 5968,
+      "sha256": "7a7a9120ea80a6e3af99cc54fedfde9f1b1494ef1590aad7e35afd924ec51f86"
+    },
+    {
+      "path": "Services/GameInstallationTeamForeverBuild.cs",
+      "size": 16656,
+      "sha256": "013237ccf0221ef5c25442556713f54ede81fea8a04e4ea2049df0c8298fdff2"
+    },
+    {
+      "path": "Services/GameInstallationTotkBuild.cs",
+      "size": 21382,
+      "sha256": "824ca6556c65ca212737dfd5d2fc450b5299455a5a39e5a0bbbb8f518dd503a6"
+    },
+    {
+      "path": "Services/GameInstallationTrx.cs",
+      "size": 11856,
+      "sha256": "3ed212a33e4f1fc8693523aa1eded9dd68b129ccb944cfd7cda00b0bbf327a34"
+    },
+    {
+      "path": "Services/GameInstallationTwoShip.cs",
+      "size": 10092,
+      "sha256": "d3e0dea18a2dbc469c082f530224c6a70354c5366390bbe8d2f9ff08965b2196"
+    },
+    {
+      "path": "Services/GameInstallationVandal.cs",
+      "size": 4784,
+      "sha256": "3fbb8c3c5479c1573d6e19be43dbe7fc118e215ccc9365b89124e9719bdd954d"
+    },
+    {
+      "path": "Services/GameInstallationWindWakerHd.cs",
+      "size": 7441,
+      "sha256": "d9565c16e8647d352298da95fff9e591be1c97da2d487904d4723b869abba463"
+    },
+    {
+      "path": "Services/GameInstallationWipeoutBuild.cs",
+      "size": 10819,
+      "sha256": "65508f0ca32d1caafb24c95ed55153b5f6a78bf9aaed5c8708159ff563022eff"
+    },
+    {
+      "path": "Services/GameInstallationWipeoutNative.cs",
+      "size": 6056,
+      "sha256": "20364bfbd4840e3b91f9989528f6201e85664d0a36969e78b07bd5b3e6982fe6"
+    },
+    {
+      "path": "Services/GameInstallationWipeoutPhantom.cs",
+      "size": 11320,
+      "sha256": "765de63da1f8e5ab8ecd4ee7fbb94315b64040bfc6ffa627a4321a2608f1c09f"
+    },
+    {
+      "path": "Services/GameInstallationXboxImport.cs",
+      "size": 6159,
+      "sha256": "5691c8af0e0ad26d53f293e05b1b161772940d96a98ffb5399d90af3b8674725"
+    },
+    {
+      "path": "Services/GameInstallationXboxPortable.cs",
+      "size": 37434,
+      "sha256": "35d2a23e41b0313cfb2c8e953d682253b473a16658372ee8d1c2638b6bb70b53"
+    }
+  ]
+}

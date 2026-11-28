@@ -1,0 +1,57 @@
+[
+  {
+    "name": "paperboat",
+    "archive": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\paperboat-torch-72960ca.zip",
+    "directory": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-source\\paperboat-torch-72960ca\\Torch-72960ca16f4723f96aaf4037b76072c230af8c11",
+    "changed": [],
+    "missing": [],
+    "files": 770,
+    "archive_sha256": "5dae2b476c21c806e1fc68028abe1bae4cc056d556c2f401642be894a7ee9f6f",
+    "archive_bytes": 1899045,
+    "extra_source_files": []
+  },
+  {
+    "name": "ghostship",
+    "archive": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ghostship-torch-106621f.zip",
+    "directory": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-source\\ghostship-torch-106621f\\Torch-106621f0f0f9731b8739bec95227c2c5887492df",
+    "changed": [],
+    "missing": [],
+    "files": 768,
+    "archive_sha256": "9033f989c92ba6db02d047a8f09d2f0b190fa016569eb2a48dd7ceffbf24e7f7",
+    "archive_bytes": 1893427,
+    "extra_source_files": []
+  },
+  {
+    "name": "starship",
+    "archive": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\starship-torch-f75facb.zip",
+    "directory": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-source\\starship-torch\\Torch-f75facb20883570ed091e8ae733ec0539f606e57",
+    "changed": [],
+    "missing": [],
+    "files": 598,
+    "archive_sha256": "25330fff4058ba084dfe0d73b3bb7e5205064fb2658d0d4ef07c9e3cb1b13c3d",
+    "archive_bytes": 1427302,
+    "extra_source_files": []
+  },
+  {
+    "name": "lighthouse",
+    "archive": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\lighthouse-torch-source.tar.gz",
+    "directory": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\Torch-7f5d55f9de53f96e61c11399cb3066f8dd8e835e",
+    "changed": [],
+    "missing": [],
+    "files": 776,
+    "archive_sha256": "ab0baa4345cefd661d2e65ccc475b09323ce37ef8fbc9933b867808aa15b101e",
+    "archive_bytes": 1455857,
+    "extra_source_files": []
+  },
+  {
+    "name": "spaghetti",
+    "archive": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\spaghetti-torch-source.tar.gz",
+    "directory": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\Torch-2d474ddb8da8b213fbdbb49d0273ce31fa955f35",
+    "changed": [],
+    "missing": [],
+    "files": 638,
+    "archive_sha256": "5d57aac6d7051485207a049eb385c9eeb71d013240720fbd17a35522e0ae4aa0",
+    "archive_bytes": 1114055,
+    "extra_source_files": []
+  }
+]

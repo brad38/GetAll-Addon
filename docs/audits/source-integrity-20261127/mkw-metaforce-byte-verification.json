@@ -1,0 +1,544 @@
+{
+  "published_commit": "921295de12349e726f7ca21a5edd8a8ecee123d8",
+  "upstream_local_blob_checks": [
+    {
+      "source": "mkw",
+      "path": "sm86/translate/frontend/program.py",
+      "expected_git_blob": "260cf90fe36c67ae3f89a54f1d7e051ec82785c6",
+      "actual_git_blob": "260cf90fe36c67ae3f89a54f1d7e051ec82785c6",
+      "match": true
+    },
+    {
+      "source": "mkw",
+      "path": "sm86/translate/glsl/alu.py",
+      "expected_git_blob": "adfc4785b3f7dc6fb635671191dc983e4b2afd99",
+      "actual_git_blob": "adfc4785b3f7dc6fb635671191dc983e4b2afd99",
+      "match": true
+    },
+    {
+      "source": "mkw",
+      "path": "sm86/translate/glsl/mem.py",
+      "expected_git_blob": "e2aa3da75deb05744630df0357f62a40913547fb",
+      "actual_git_blob": "e2aa3da75deb05744630df0357f62a40913547fb",
+      "match": true
+    },
+    {
+      "source": "mkw",
+      "path": "tools/prepare/shaderstep.py",
+      "expected_git_blob": "2ac8916608db654efe857e2a6c987c84b79a7668",
+      "actual_git_blob": "2ac8916608db654efe857e2a6c987c84b79a7668",
+      "match": true
+    },
+    {
+      "source": "mkw",
+      "path": "tools/shaders/extract.py",
+      "expected_git_blob": "c18cdfe8418d44abc215aed7812cab6eca4dcd10",
+      "actual_git_blob": "c18cdfe8418d44abc215aed7812cab6eca4dcd10",
+      "match": true
+    },
+    {
+      "source": "mkw",
+      "path": "tools/shaders/translate.py",
+      "expected_git_blob": "4344f835264e0b988c74654d8eb23000eb2a636c",
+      "actual_git_blob": "4344f835264e0b988c74654d8eb23000eb2a636c",
+      "match": true
+    },
+    {
+      "source": "aurora",
+      "path": "cmake/aurora_core.cmake",
+      "expected_git_blob": "a4e97206123c55fe977c8fc175d2766badf4ab54",
+      "actual_git_blob": "a4e97206123c55fe977c8fc175d2766badf4ab54",
+      "match": true
+    },
+    {
+      "source": "aurora",
+      "path": "lib/card/DolphinCardPath.cpp",
+      "expected_git_blob": "ccec83280509ddf4c7dc2c5d44baeba0bc430fa2",
+      "actual_git_blob": "ccec83280509ddf4c7dc2c5d44baeba0bc430fa2",
+      "match": true
+    },
+    {
+      "source": "aurora",
+      "path": "lib/system_info.cpp",
+      "expected_git_blob": "d004fbf4cdd3616c277cb26d600b08875959b01b",
+      "actual_git_blob": "d004fbf4cdd3616c277cb26d600b08875959b01b",
+      "match": true
+    },
+    {
+      "source": "aurora",
+      "path": "lib/webgpu/gpu.cpp",
+      "expected_git_blob": "16c7038a1c837cf79e6eaff6923a6a58e1224e12",
+      "actual_git_blob": "16c7038a1c837cf79e6eaff6923a6a58e1224e12",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "Makefile",
+      "expected_git_blob": "92ae8af862523eb3743ebff92f89cd70a378713a",
+      "actual_git_blob": "92ae8af862523eb3743ebff92f89cd70a378713a",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "runtime/cpu.h",
+      "expected_git_blob": "5c7ad704ac956e1716229ea71a682bc96e2adac3",
+      "actual_git_blob": "5c7ad704ac956e1716229ea71a682bc96e2adac3",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "runtime/gamebuild.c",
+      "expected_git_blob": "117f8f93b0d64d21fdb63cd7b970c0df549aa8d2",
+      "actual_git_blob": "117f8f93b0d64d21fdb63cd7b970c0df549aa8d2",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "runtime/gamelib.c",
+      "expected_git_blob": "37e5c29e11d1cffee244911f4b8550ac75b60b2c",
+      "actual_git_blob": "37e5c29e11d1cffee244911f4b8550ac75b60b2c",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "runtime/gamelib.h",
+      "expected_git_blob": "551680f1e80daa91be507607895ebb8d2a8154d8",
+      "actual_git_blob": "551680f1e80daa91be507607895ebb8d2a8154d8",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "runtime/hle/hle_symbols.txt",
+      "expected_git_blob": "46e92fb3e8ef94627867a63b7f9ee1abfb31a60d",
+      "actual_git_blob": "46e92fb3e8ef94627867a63b7f9ee1abfb31a60d",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "runtime/launch_flags_boot.c",
+      "expected_git_blob": "3e4387bf458cf60a75ae6286a609371242f8866f",
+      "actual_git_blob": "3e4387bf458cf60a75ae6286a609371242f8866f",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "runtime/simd.h",
+      "expected_git_blob": "be88e43671b944473d9ce20987e29d504a16ebbf",
+      "actual_git_blob": "be88e43671b944473d9ce20987e29d504a16ebbf",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "runtime/simd_fp.h",
+      "expected_git_blob": "4bbff3bc621cf15416304669b8632fae20d86340",
+      "actual_git_blob": "4bbff3bc621cf15416304669b8632fae20d86340",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "runtime/simd_softfma.h",
+      "expected_git_blob": "9ca6a72eaf63f92a861a964552805e553cb13918",
+      "actual_git_blob": "9ca6a72eaf63f92a861a964552805e553cb13918",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "tools/analyze.py",
+      "expected_git_blob": "edb3e485e6863b811d2dfe67527e07f0fec14536",
+      "actual_git_blob": "edb3e485e6863b811d2dfe67527e07f0fec14536",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "tools/flags.py",
+      "expected_git_blob": "e86e0b4a45b22f6e73d8cc38f68d4b2371fe3ae2",
+      "actual_git_blob": "e86e0b4a45b22f6e73d8cc38f68d4b2371fe3ae2",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "tools/game_sites.py",
+      "expected_git_blob": "2580c9214741adfa1a4cb851c2ddcbdcf57456a6",
+      "actual_git_blob": "2580c9214741adfa1a4cb851c2ddcbdcf57456a6",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "tools/gamelib_entry.c",
+      "expected_git_blob": "a3b6621b64186da508b8674c240fe60cd9c494c4",
+      "actual_git_blob": "a3b6621b64186da508b8674c240fe60cd9c494c4",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "tools/gen.py",
+      "expected_git_blob": "5d5c0821b082f01a998a33590bd40e9cb9dbd0aa",
+      "actual_git_blob": "5d5c0821b082f01a998a33590bd40e9cb9dbd0aa",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "tools/layout.py",
+      "expected_git_blob": "0ecb8022fc986f7265c55c29071dde244204fb09",
+      "actual_git_blob": "0ecb8022fc986f7265c55c29071dde244204fb09",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "tools/lifter.py",
+      "expected_git_blob": "8a450a515c53baf96e4f904c827c99b9be8e7ffc",
+      "actual_git_blob": "8a450a515c53baf96e4f904c827c99b9be8e7ffc",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "tools/nso.py",
+      "expected_git_blob": "69fe5c9c797be197fdef616865a1e3b036c5b171",
+      "actual_git_blob": "69fe5c9c797be197fdef616865a1e3b036c5b171",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "tools/passes.py",
+      "expected_git_blob": "b67b71a778870c10307accb7fac9bbb85a3795fa",
+      "actual_git_blob": "b67b71a778870c10307accb7fac9bbb85a3795fa",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "tools/patches.py",
+      "expected_git_blob": "b0b675ca91dbe356bc801b1559ef56c89d8b8f41",
+      "actual_git_blob": "b0b675ca91dbe356bc801b1559ef56c89d8b8f41",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "tools/regs.py",
+      "expected_git_blob": "78178b1ca5fb9ca52726e1966b28dd857dc396a0",
+      "actual_git_blob": "78178b1ca5fb9ca52726e1966b28dd857dc396a0",
+      "match": true
+    },
+    {
+      "source": "savagewind",
+      "path": "tools/simd_c.py",
+      "expected_git_blob": "ab82f3826f68d6eda8e7b651391def8515343a95",
+      "actual_git_blob": "ab82f3826f68d6eda8e7b651391def8515343a95",
+      "match": true
+    }
+  ],
+  "mkw_package_members": [
+    {
+      "path": "configuration/instructions.json",
+      "bytes": 288,
+      "sha256": "3407e0837c09cbba2a4cff95405431288d915bc660c869c35b84070c5e88bd2d",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "files/sm86/translate/frontend/allfix_sm86/__init__.py",
+      "bytes": 67,
+      "sha256": "7f1f0b419ea7b5cb2b0913ac43acb6f8e35fee4fe657f8a1f8c4f48029b104cb",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "files/sm86/translate/frontend/allfix_sm86/adapter_fields.py",
+      "bytes": 6897,
+      "sha256": "87aac4051216cddb58c57c06098d415d48c6ab4e0e7c0b47d67a1a6b00ae82e2",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "files/sm86/translate/frontend/allfix_sm86/adapter_model.py",
+      "bytes": 1833,
+      "sha256": "d4870950d1f8d28afeb23453a3648c3164e6cf24a9bb49ac80729e150850bbf4",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "files/sm86/translate/frontend/allfix_sm86/backend.py",
+      "bytes": 1791,
+      "sha256": "199e21cfe58b48d16ececc34928227cc3a8f9901f47ee95fe79b68fe09d1b1b4",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "files/sm86/translate/frontend/allfix_sm86/cli_decoder.py",
+      "bytes": 6478,
+      "sha256": "ef2238afdc34da77750274eb066be65d04001275d6d17ac76fb4bf17de84c7aa",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "files/sm86/translate/frontend/allfix_sm86/cli_parse.py",
+      "bytes": 3523,
+      "sha256": "c19a3eb60d4c68c738ca88de1669c3477867583ecc195c436529f47789431eae",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "files/sm86/translate/frontend/allfix_sm86/control_adapter.py",
+      "bytes": 3789,
+      "sha256": "0f3f698b2b7cb26fc44708808992c7ceecf08a2922b0e28273a0b6f1cf7780bf",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "files/sm86/translate/frontend/allfix_sm86/lea_overlay.py",
+      "bytes": 4866,
+      "sha256": "4cd9116ccdcd178ee25cdad773f6f92990da2f7a917040bf73da2dfd38ccec66",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "files/sm86/translate/frontend/allfix_sm86/memory_adapter.py",
+      "bytes": 10345,
+      "sha256": "14ad35ac42009159faf4db0ce4e7039f220b012172ab06312882406b92f729d5",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "files/sm86/translate/frontend/allfix_sm86/memory_overlay.py",
+      "bytes": 1849,
+      "sha256": "af2167733fadfd8e5e835719e952bc1182bb4833bf662fac6e0ddd9c06f99a8c",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "files/sm86/translate/frontend/allfix_sm86/scalar_adapter.py",
+      "bytes": 12508,
+      "sha256": "39e8e228efd9d6b0113ec43cb5e340825593e83bc7be5f4d5370578e106127c7",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "files/sm86/translate/frontend/allfix_sm86/texture_adapter.py",
+      "bytes": 8188,
+      "sha256": "567dc19396163f1a21eb88df684b216e9a5cf448ca132df362482ea091068b76",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "files/sm86/translate/frontend/allfix_sm86/vendor/nv_isa_parser.py",
+      "bytes": 20903,
+      "sha256": "4db3ec6bcfab76f0480250183148b8c0b2357187a7bb6684dd92d99f9b00068e",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "notices/CuAssembler-MIT.txt",
+      "bytes": 1102,
+      "sha256": "2e4a290cc86b2ed281cc200b00a8ef8d13afaf26207f6b857bc330c555d91b23",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "notices/Mesa-NAK-MIT.txt",
+      "bytes": 1442,
+      "sha256": "8875c84633d4d2e3794a11cc8d4a74731ada2c53cc6437644f6201c3628ad8ed",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "notices/ORIGIN.txt",
+      "bytes": 597,
+      "sha256": "0d4884e85ddc077e9b2db69e70108858a595e07d23a381ebf8c1b60f09fb6035",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "notices/mkw-MIT.txt",
+      "bytes": 1063,
+      "sha256": "458bc459b303410a4cbed893a9a76affd0beada85a8d381e0f147b106ec450a7",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "notices/nv-isa-solver-MIT.txt",
+      "bytes": 1068,
+      "sha256": "6f9eba9d8bab25327120b41a6cf101596d58b44cbd31c51091408bb77c69191a",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "overlays/sm86/translate/frontend/program.py",
+      "bytes": 2551,
+      "sha256": "93050ad0c4eee1908eca71cae5f586133f29ab9e0ced6bf4937a2c2246ec74a2",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "overlays/tools/prepare/shaderstep.py",
+      "bytes": 9113,
+      "sha256": "4ffba8c1d68599ca841fb128e1d02b55cd4f8d987858da7c5a16d278112a6d66",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "overlays/tools/shaders/extract.py",
+      "bytes": 19438,
+      "sha256": "855b4b9e4a8d1301ebfca7ccd86378131f4910eb9dfbbfe523f6a520d14d331f",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "overlays/tools/shaders/translate.py",
+      "bytes": 16120,
+      "sha256": "dcb01d55d36ba0cf2dae4cfab57976eb9739723a70b1c5ff3938a19af3c0434c",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "proof/fixtures.json",
+      "bytes": 9271,
+      "sha256": "bb0e63a228af27a78c391fa5f4367dadcc7170dbea74c9a4aa09e34a71e3ea6e",
+      "manifest_match": true,
+      "published_literal_match": true
+    },
+    {
+      "path": "proof/prove_backend.py",
+      "bytes": 19703,
+      "sha256": "6e5a755a317472cc03e263c36c067c5c0c2a2a6eec391042163636d77bd405a4",
+      "manifest_match": true,
+      "published_literal_match": true
+    }
+  ],
+  "mkw_overlays": [
+    {
+      "after_sha256": "93050ad0c4eee1908eca71cae5f586133f29ab9e0ced6bf4937a2c2246ec74a2",
+      "before_sha256": "4e96445c14206a44ce4531ab5688c035de651981fa896b0441507d57db8e6a36",
+      "path": "sm86/translate/frontend/program.py",
+      "preimage_match": true,
+      "postimage_match": true,
+      "unified_diff": "--- upstream/sm86/translate/frontend/program.py\n+++ allfix/sm86/translate/frontend/program.py\n@@ -78,32 +78,5 @@\n         return name in self.f\n \n \n-CACHE_WORDS = 20_000  # per process (~2 KB each: 200 000 x 16 processes ran out of 6.7 GB); cleared when full\n-\n-\n-class Decoder:\n-    def __init__(self, spec_path: Path) -> None:\n-        self.spec = sass_spec.Spec(str(spec_path))\n-        self.cache: dict[int, object] = {}  # word -> decoded: 1.8 M distinct words in 4.7 M (30/10/2026)\n-\n-    def program(self, code: bytes, stage: str) -> tuple[Sph | None, list[Insn]]:\n-        sph = None\n-        if stage != \"cs\":\n-            words = struct.unpack_from(\"<32I\", code)\n-            sph = Sph(STAGES.get((words[0] >> 10) & 0xF, stage), words)\n-            code = code[SPH_SIZE:]\n-        out = []\n-        for pc in range(0, len(code) - 15, 16):\n-            word = int.from_bytes(code[pc : pc + 16], \"little\")\n-            d = self.cache.get(word)\n-            if d is None:\n-                d = sass_decode.decode(self.spec, word)\n-                # the fields by name once per word, not per instruction (the translator only reads them)\n-                d.fields = {getattr(v.item, \"name\", str(v.item)): v for v in d.values}\n-                if len(self.cache) >= CACHE_WORDS:\n-                    self.cache.clear()\n-                self.cache[word] = d\n-            if d.cls is None:\n-                break  # data after the code (constants), never executed\n-            out.append(Insn(pc, word, d, d.fields))\n-        return sph, out\n+# Closed All-Fix profile: normal NVIDIA CLI; no encoding-table extraction.\n+from allfix_sm86.backend import Decoder\n"
+    },
+    {
+      "after_sha256": "4ffba8c1d68599ca841fb128e1d02b55cd4f8d987858da7c5a16d278112a6d66",
+      "before_sha256": "1b5e8a528ff37163ed43381ff223108d0e91471c92c9698e988702572e9df788",
+      "path": "tools/prepare/shaderstep.py",
+      "preimage_match": true,
+      "postimage_match": true,
+      "unified_diff": "--- upstream/tools/prepare/shaderstep.py\n+++ allfix/tools/prepare/shaderstep.py\n@@ -11,7 +11,7 @@\n from pathlib import Path\n \n from beside import Beside\n-from machine import Failed, crt_spec, run, tool_env\n+from machine import Failed, run, tool_env\n \n ROOT = Path(__file__).resolve().parents[2]  # the repository, or the package's setup/src\n SHIPPED = ROOT / \"FILES\"  # the package's sources, one relative path per line (tools/build/dist.py)\n@@ -80,34 +80,15 @@\n         print(f\"warm: {n} programs packed, {size / 2**20:.0f} MiB\", file=sys.stderr)\n \n \n-def spec_loads(spec: Path) -> bool:\n-    \"\"\"Whether the decoder accepts this spec (0.3 s). Until 0.1.12 a capture the parser rejected still left its\n-    instructions.json behind, and every later setup failed on it in translate.py (issue #325).\"\"\"\n-    sys.path.insert(0, str(ROOT / \"sm86/decode\"))\n-    import sass_spec  # noqa: PLC0415 - sm86/decode is not a package\n+def sm86_spec(game: Path, work: Path, cc: list[str]) -> Path:\n+    \"\"\"Validate the internal normal-CLI backend; never invoke spec.py.\"\"\"\n+    sys.path.insert(0, str(ROOT / \"sm86/translate/frontend\"))\n+    sys.path.insert(0, str(ROOT / \"sm86/translate\"))\n+    from program import Decoder\n \n-    try:\n-        sass_spec.Spec(str(spec))\n-    except (ValueError, KeyError, TypeError) as e:\n-        print(f\"{spec} is broken ({type(e).__name__}: {str(e)[:200]}): building it again\", flush=True)\n-        return False\n-    return True\n-\n-\n-def sm86_spec(game: Path, work: Path, cc: list[str]) -> Path:\n-    \"\"\"The spec translate.py decodes with: a source checkout's own build/sm86, else built once into <game>/sm86.\"\"\"\n-    for spec in (ROOT / \"build/sm86/instructions.json\", game / \"sm86/instructions.json\"):\n-        if spec.is_file() and spec_loads(spec):\n-            return spec\n-    crt = crt_spec(game, cc)  # spec.py links a DLL too on Windows: without it, zig builds its libc there (issue #2)\n-    run(spec_command(game, work, cc, crt))\n-    return game / \"sm86/instructions.json\"\n-\n-\n-def spec_command(game: Path, work: Path, cc: list[str], crt: Path | None) -> list[str]:\n-    \"\"\"spec.py's command line; the compiler goes as JSON, whose paths may have spaces (issue #29).\"\"\"\n-    return [sys.executable, str(ROOT / \"sm86/spec/spec.py\"), \"--out\", str(game / \"sm86\"), \"--cache\",\n-            str(work / \"nvidia\"), \"--cc\", json.dumps(cc), *([\"--crt\", str(crt)] if crt else [])]  # fmt: skip\n+    descriptor = game / \"sm86/instructions.json\"\n+    Decoder(descriptor)\n+    return descriptor\n \n \n def tonemap_key(shaders_key: str) -> str:\n@@ -173,7 +154,7 @@\n     while True:\n         try:\n             run([sys.executable, str(ROOT / \"tools/shaders/translate.py\"), \"--shaders\", str(sh),\n-                 \"--out\", str(dest / \"spirv\"), \"--glslc\", glslc, \"--no-validate\", \"--progress\", \"--jobs\", str(n),\n+                 \"--out\", str(dest / \"spirv\"), \"--glslc\", glslc, \"--progress\", \"--jobs\", str(n),\n                  \"--spec\", str(spec), *base], env=tool_env(glslc), progress_prefix=\"progress\",\n                 on_progress=on_progress)  # fmt: skip\n             break\n"
+    },
+    {
+      "after_sha256": "855b4b9e4a8d1301ebfca7ccd86378131f4910eb9dfbbfe523f6a520d14d331f",
+      "before_sha256": "aed28f031c1af522d2c212c0119d844ad912a32803fce454601ced30ebcbc7e0",
+      "path": "tools/shaders/extract.py",
+      "preimage_match": true,
+      "postimage_match": true,
+      "unified_diff": "--- upstream/tools/shaders/extract.py\n+++ allfix/tools/shaders/extract.py\n@@ -54,37 +54,72 @@\n     return SPH_STAGES.get((w >> 10) & 0xF)\n \n \n-def trim(code: bytes, stage: str) -> bytes:\n-    \"\"\"Cut a program where it ends: at its first all-zero 128-bit word (no SASS instruction encodes as zero), or at a\n-    program header right after NOP padding (agl packages lay programs back to back, so the next one's SPH follows).\"\"\"\n+def trim(code: bytes, stage: str, control: bytes = b\"\") -> bytes:\n+    \"\"\"Use explicit constant-data bounds; reject ambiguous instruction tails.\"\"\"\n     start = 0 if stage == \"cs\" else SPH_SIZE\n+    if control:\n+        if len(control) != CONTROL_SIZE:\n+            raise ValueError(\"All-Fix: invalid shader control bounds\")\n+        size, offset = struct.unpack_from(\"<2I\", control, C1_AT)\n+        if size:\n+            declared = struct.unpack_from(\"<I\", control, CODE_SIZE_AT)[0]\n+            if offset < start or offset % 16 or (declared and offset + size > declared):\n+                raise ValueError(\"All-Fix: ambiguous shader constant-data bounds\")\n+            # extract.py already removed the declared constants on a second\n+            # pass through translate.py.work; this operation is idempotent.\n+            if offset < len(code):\n+                if offset + size > len(code) or any(code[offset + size:]):\n+                    raise ValueError(\"All-Fix: ambiguous shader constant-data tail\")\n+                code = code[:offset]\n+    if len(code) < start or (len(code) - start) % 16:\n+        raise ValueError(\"All-Fix: truncated shader instruction buffer\")\n     for at in range(start, len(code), 16):\n-        word = code[at : at + 16]\n+        word = code[at:at + 16]\n         if word == bytes(16):\n+            if any(code[at:]):\n+                raise ValueError(\"All-Fix: nonzero shader data after zero terminator\")\n             return code[:at]\n-        after_nop = at > start and int.from_bytes(code[at - 16 : at - 14], \"little\") == NOP_LOW16\n+        after_nop = at > start and int.from_bytes(code[at - 16:at - 14], \"little\") == NOP_LOW16\n         if after_nop and sph_stage(word):\n-            return code[:at]\n+            raise ValueError(\"All-Fix: ambiguous second shader header inside declared program\")\n     return code\n \n \n+def bounded_slice(data: bytes, offset: int, size: int, label: str) -> bytes:\n+    if offset < 0 or size < 0 or offset > len(data) or size > len(data) - offset:\n+        raise ValueError(\"All-Fix: truncated \" + label)\n+    return data[offset:offset + size]\n+\n+\n def bnsh_stages(bnsh: bytes):\n-    \"\"\"(program index, slot stage, control, code) for every stage of one BNSH.\"\"\"\n+    \"\"\"Read complete, explicitly bounded BNSH records before decoding any code.\"\"\"\n+    bounded_slice(bnsh, 0, 0x88, \"BNSH header\")\n     if bnsh[:4] != b\"BNSH\" or bnsh[12:14] != b\"\\xff\\xfe\" or bnsh[0x60:0x64] != b\"grsc\":\n         raise ValueError(\"unsupported BNSH header\")\n-    bnsh = bnsh[: struct.unpack_from(\"<I\", bnsh, 28)[0]]\n+    declared = struct.unpack_from(\"<I\", bnsh, 28)[0]\n+    if declared < 0x88:\n+        raise ValueError(\"All-Fix: invalid BNSH declared size\")\n+    bnsh = bounded_slice(bnsh, 0, declared, \"BNSH container\")\n     count, variations = struct.unpack_from(\"<IQ\", bnsh, 124)\n+    bounded_slice(bnsh, variations, count * 64, \"BNSH variation table\")\n     for i in range(count):\n         program = struct.unpack_from(\"<Q\", bnsh, variations + i * 64 + 16)[0]\n+        bounded_slice(bnsh, program, 64, \"BNSH program record\")\n         for rel, stage in SLOT_STAGES.items():\n             rec = struct.unpack_from(\"<Q\", bnsh, program + rel)[0]\n             if not rec:\n                 continue\n+            bounded_slice(bnsh, rec, 32, \"BNSH stage record\")\n             ctl_off, code_off, code_size, ctl_size = struct.unpack_from(\"<QQII\", bnsh, rec + 8)\n-            ctl = bnsh[ctl_off : ctl_off + ctl_size]\n+            if ctl_size != CONTROL_SIZE or not code_size:\n+                raise ValueError(\"All-Fix: invalid BNSH shader sizes\")\n+            ctl = bounded_slice(bnsh, ctl_off, ctl_size, \"BNSH shader control\")\n             if ctl[:4] != CONTROL_MAGIC:\n                 raise ValueError(f\"program {i} {stage}: control without magic\")\n-            yield i, stage, ctl, bnsh[code_off : code_off + code_size]\n+            if struct.unpack_from(\"<I\", ctl, CODE_SIZE_AT)[0] != code_size:\n+                raise ValueError(\"All-Fix: inconsistent BNSH code size\")\n+            code = bounded_slice(bnsh, code_off, code_size, \"BNSH shader code\")\n+            yield i, stage, ctl, code\n \n \n def bahs_variations(data: bytes, entries: set[int]) -> dict[int, str]:\n@@ -140,6 +175,7 @@\n     \"\"\"Stages of an agl package (BAHS): records <u64 code offset in pool, u32 control size, i32 control offset>. The\n     program index is \"program.variation\" (bahs_variations) when the package's arrays read back, else a running number.\"\"\"\n     start, pool_size, pool = struct.unpack_from(\"<3I\", data, 20)\n+    bounded_slice(data, pool, pool_size, \"BAHS code pool\")\n     at, found, entry_of = start, {}, {}\n     size_word = struct.pack(\"<I\", CONTROL_SIZE)\n     while (at := data.find(size_word, at, pool)) >= 0:\n@@ -150,7 +186,7 @@\n         ctl_at = rec + struct.unpack_from(\"<i\", data, rec + 12)[0]\n         if not start <= ctl_at <= pool - CONTROL_SIZE or code_off >= pool_size:\n             continue\n-        ctl = data[ctl_at : ctl_at + CONTROL_SIZE]\n+        ctl = bounded_slice(data, ctl_at, CONTROL_SIZE, \"shader control\")\n         if ctl[:4] == CONTROL_MAGIC and code_off not in found:\n             found[code_off], entry_of[code_off] = ctl, rec\n     # Records carry no code size; the control section does at +0x44 (equal to the BNSH record's size in all 3,238\n@@ -160,7 +196,7 @@\n         size = struct.unpack_from(\"<I\", ctl, CODE_SIZE_AT)[0]\n         if code_off + size > pool_size:\n             raise ValueError(f\"agl program {n}: code past the pool\")\n-        yield variation.get(entry_of[code_off], n), None, ctl, data[pool + code_off : pool + code_off + size]\n+        yield variation.get(entry_of[code_off], n), None, ctl, bounded_slice(data, pool + code_off, size, \"BAHS shader code\")\n \n \n def ndsr_stages(data: bytes):\n@@ -176,8 +212,8 @@\n         if rec < 0 or rec % 4:\n             continue\n         code_off = struct.unpack_from(\"<I\", data, rec + 8)[0]\n-        ctl = data[ctl_at : ctl_at + CONTROL_SIZE]\n-        yield n, None, ctl, data[code_off : code_off + struct.unpack_from(\"<I\", ctl, CODE_SIZE_AT)[0]]\n+        ctl = bounded_slice(data, ctl_at, CONTROL_SIZE, \"shader control\")\n+        yield n, None, ctl, bounded_slice(data, code_off, struct.unpack_from(\"<I\", ctl, CODE_SIZE_AT)[0], \"NDSR shader code\")\n \n \n def sarc_members(data: bytes) -> dict[str, bytes]:\n@@ -304,10 +340,7 @@\n         sources = itertools.chain(sources, everywhere(args.romfs, args.exefs, args.everything))\n     for name, data in sources:\n         if data[:4] == b\"FSHA\":\n-            try:\n-                found = list(bnsh_stages(data[4:]))\n-            except ValueError, struct.error:\n-                continue\n+            found = list(bnsh_stages(data[4:]))\n         elif data[:4] == b\"BAHS\":\n             found = sharcb_stages(data)\n         elif data[:4] == b\"NDSR\":\n@@ -318,7 +351,7 @@\n         for index, slot_stage, ctl, code in found:\n             stage = sph_stage(code) or slot_stage or \"cs\"\n             c1 = constants(ctl, code)\n-            code = trim(code, stage)\n+            code = trim(code, stage, ctl)\n             key = hashlib.sha1(ctl + code).hexdigest()\n             if data[:4] == b\"NDSR\":  # a vertex record is followed by its pixel record (nxnative ndsr_shaders)\n                 last_vs = index if stage == \"vs\" else last_vs\n"
+    },
+    {
+      "after_sha256": "dcb01d55d36ba0cf2dae4cfab57976eb9739723a70b1c5ff3938a19af3c0434c",
+      "before_sha256": "f4a58cf8751925e8eb756e479c952bd3134c7ebdf29bc6ea0a7cc0eba415708b",
+      "path": "tools/shaders/translate.py",
+      "preimage_match": true,
+      "postimage_match": true,
+      "unified_diff": "--- upstream/tools/shaders/translate.py\n+++ allfix/tools/shaders/translate.py\n@@ -86,7 +86,7 @@\n     files = sorted((ROOT / \"sm86/translate\").rglob(\"*.py\")) + sorted((ROOT / \"sm86/decode\").rglob(\"*.py\"))\n     for f in [*files, ROOT / \"tools/shaders/extract.py\", ROOT / \"tools/shaders/translate.py\"]:\n         h.update(f.read_bytes())\n-    h.update(f\"{spec.stat().st_size} {spec.stat().st_mtime_ns}\".encode())\n+    h.update(spec.read_bytes())\n     h.update(str(os.environ.get(\"SM86_SPEC\", \"0\") == \"1\").encode())  # glsl/core.py SPEC_ON\n     return h.hexdigest()\n \n@@ -103,10 +103,10 @@\n def work(job: tuple[str, str, str, str, bool, str]) -> tuple[str, str]:\n     \"\"\"(sha1, 'ok' or the reason it failed).\"\"\"\n     sha, stage, shaders, out, full, th = job\n-    code = trim(Path(shaders, f\"{sha}.code\").read_bytes(), stage)  # a no-op on extract.py's output; cuts dumps\n+    ctl = Path(shaders, f\"{sha}.ctl\").read_bytes()\n+    code = trim(Path(shaders, f\"{sha}.code\").read_bytes(), stage, ctl)\n     # File name = the key the runtime computes (runtime/gfx/nvn/procs/nvn2.c nvn2_program_key): sha256 of the 0xd8-byte\n     # control section and the code as extract.py cut it.\n-    ctl = Path(shaders, f\"{sha}.ctl\").read_bytes()\n     key = hashlib.sha256(ctl + code).hexdigest()\n     done = Path(out, f\"{key}.done\")\n     if BASE and not done.exists():\n@@ -115,7 +115,7 @@\n     if not full and done.exists():\n         # \"<translator hash>\\n<verdict>[\\n<GLSL sha256>]\": verdicts are one line; files of older passes have no sum\n         prev_th, why, prev_sum = (done.read_text().split(\"\\n\") + [\"\"])[:3]\n-        if prev_th == th and (why != \"ok\" or Path(out, f\"{key}.spv\").exists()):\n+        if prev_th == th and (why != \"ok\" or all(Path(out, f\"{key}{suffix}\").is_file() for suffix in (\".spv\", \".res.json\", \".result\"))):\n             return sha, why\n     c1 = Path(shaders, f\"{sha}.c1\")\n     why, glsl_sum = translate_one(\n@@ -190,7 +190,7 @@\n     if not VALIDATE:\n         return \"ok\"\n     v = subprocess.run(\n-        [\"spirv-val\", \"--target-env\", \"vulkan1.3\", str(spv)], capture_output=True, text=True, check=False\n+        [str(Path(GLSLC).with_name(\"spirv-val.exe\" if os.name == \"nt\" else \"spirv-val\")), \"--target-env\", \"vulkan1.3\", str(spv)], capture_output=True, text=True, check=False\n     )\n     return \"ok\" if not v.returncode else f\"spirv-val: {v.stderr.strip()[:100]}\"\n \n@@ -200,12 +200,15 @@\n     from glsl.head import MESH_CS_VS, MESH_CS_VS_KEY\n \n     gl, spv = Path(out, f\"{MESH_CS_VS_KEY}.glsl\"), Path(out, f\"{MESH_CS_VS_KEY}.spv\")\n-    if spv.exists() and gl.exists() and gl.read_text() == MESH_CS_VS:\n+    if (spv.exists() and gl.exists() and gl.read_text() == MESH_CS_VS\n+            and (out / f\"{MESH_CS_VS_KEY}.res.json\").is_file()\n+            and (out / f\"{MESH_CS_VS_KEY}.result\").is_file()):\n         return\n     put(gl, MESH_CS_VS)\n     refl = {\"stage\": \"vs\", \"cbufs\": [], \"sbufs\": [], \"textures\": [], \"images\": [], \"spec\": []}\n     put(Path(out, f\"{MESH_CS_VS_KEY}.res.json\"), json.dumps(refl, indent=1))\n     why = compile_check(gl, spv, \"vs\")\n+    put(out / f\"{MESH_CS_VS_KEY}.result\", why)\n     if why != \"ok\":\n         raise SystemExit(f\"mesh-as-compute vertex shader: {why}\")\n \n@@ -284,6 +287,8 @@\n     print(f\"{len(jobs)} programs: {ok} valid SPIR-V ({ok / max(1, len(jobs)):.1%})\")\n     for why, n in results.most_common(args.top):\n         print(f\"{n:>6}  {why}\")\n+    if failed or not jobs:\n+        raise SystemExit(\"All-Fix: shader preparation is incomplete; see failed.tsv\")\n \n \n if __name__ == \"__main__\":\n"
+    }
+  ],
+  "metaforce_patches": [
+    {
+      "path": "extern/aurora/lib/system_info.cpp",
+      "before_sha256": "a8027dfbe3b80283f24b135347dc64f39909949b7c917c7961a35da0aa6253eb",
+      "after_sha256": "f779b45a6da6e3f3dec3d5df9cde29abaa11bd80d8dc7ab95f34b627cf77a752",
+      "before": "#include <comutil.h>\n",
+      "after": "#include <oleauto.h>\n#include <memory>\nusing WmiString = std::unique_ptr<OLECHAR, decltype(&SysFreeString)>;\n",
+      "occurrences": 1
+    },
+    {
+      "path": "extern/aurora/lib/system_info.cpp",
+      "before_sha256": "f779b45a6da6e3f3dec3d5df9cde29abaa11bd80d8dc7ab95f34b627cf77a752",
+      "after_sha256": "d25dd22bc8264975f6ec87f17f053f4c0b1aa888048c4ac17d5bb194f2826950",
+      "before": "  hres = pLoc->ConnectServer(_bstr_t(L\"ROOT\\\\CIMV2\"), // Object path of WMI namespace",
+      "after": "  const WmiString namespaceName(SysAllocString(L\"ROOT\\\\CIMV2\"), &SysFreeString);\n  if (!namespaceName) return Unknown;\n  hres = pLoc->ConnectServer(namespaceName.get(), // Object path of WMI namespace",
+      "occurrences": 1
+    },
+    {
+      "path": "extern/aurora/lib/system_info.cpp",
+      "before_sha256": "d25dd22bc8264975f6ec87f17f053f4c0b1aa888048c4ac17d5bb194f2826950",
+      "after_sha256": "250e3a5f777807586f7febe717b68ea3cf4b81b06144f974a70fbe9eae0f095b",
+      "before": "  hres = pSvc->ExecQuery(bstr_t(L\"WQL\"), bstr_t(L\"select Name from Win32_Processor\"),",
+      "after": "  const WmiString queryLanguage(SysAllocString(L\"WQL\"), &SysFreeString);\n  const WmiString queryText(SysAllocString(L\"select Name from Win32_Processor\"), &SysFreeString);\n  if (!queryLanguage || !queryText) return Unknown;\n  hres = pSvc->ExecQuery(queryLanguage.get(), queryText.get(),",
+      "occurrences": 1
+    },
+    {
+      "path": "extern/aurora/cmake/aurora_core.cmake",
+      "before_sha256": "b1a4cba9634ea28d98fa9d2bb0f21e4039ea5500230580624134b62a383fe80a",
+      "after_sha256": "ada033ab2f07c3ee1956a8261354cdbf9d0fc382984780ae3367531dbc148bc6",
+      "before": "target_link_libraries(aurora_core PRIVATE wbemuuid.lib comsuppw.lib ntdll.lib DXGI.lib)",
+      "after": "target_link_libraries(aurora_core PRIVATE wbemuuid ole32 oleaut32 ntdll dxgi)",
+      "occurrences": 1
+    },
+    {
+      "path": "extern/aurora/lib/webgpu/gpu.cpp",
+      "before_sha256": "f4d3dc1fcfdad1431b687e1d7acd8fc2d192e2d537e12ff4ddaf55e579393ef2",
+      "after_sha256": "591ec1a0b69ef2d650dd11ce1e1df9e148df1a4e05fb06765bbde3802c80a352",
+      "before": "    dawn::native::DawnInstanceDescriptor dawnInstanceDescriptor{};\n",
+      "after": "#if defined(__MINGW32__)\n    instanceDescriptor.nextInChain = &instanceTogglesDescriptor;\n#else\n    dawn::native::DawnInstanceDescriptor dawnInstanceDescriptor{};\n",
+      "occurrences": 1
+    },
+    {
+      "path": "extern/aurora/lib/webgpu/gpu.cpp",
+      "before_sha256": "591ec1a0b69ef2d650dd11ce1e1df9e148df1a4e05fb06765bbde3802c80a352",
+      "after_sha256": "308d846746c2d4c745ce0f9ad6cf06d95e7abc09c408b07b49194da469ea7e60",
+      "before": "    instanceDescriptor.nextInChain = &dawnInstanceDescriptor;\n#endif\n",
+      "after": "    instanceDescriptor.nextInChain = &dawnInstanceDescriptor;\n#endif // native diagnostic descriptor\n#endif\n",
+      "occurrences": 1
+    },
+    {
+      "path": "nod_prebuilt/lib/cmake/nod/nodConfig.cmake",
+      "before_sha256": "d7fc28f8323dcc1184a09d7b73471d550d4d965374c5bcf24d3a4f82cbd1df56",
+      "after_sha256": "ce8d3356b1a20dd770917d6dc6834b0f2b0a12727132965b5d6cf188c297dfca",
+      "before": "set(_nod_dll \"${PACKAGE_PREFIX_DIR}/bin/${CMAKE_SHARED_LIBRARY_PREFIX}nod${CMAKE_SHARED_LIBRARY_SUFFIX}\")",
+      "after": "set(_nod_dll \"${PACKAGE_PREFIX_DIR}/bin/nod.dll\")",
+      "occurrences": 1
+    },
+    {
+      "path": "nod_prebuilt/lib/cmake/nod/nodConfig.cmake",
+      "before_sha256": "ce8d3356b1a20dd770917d6dc6834b0f2b0a12727132965b5d6cf188c297dfca",
+      "after_sha256": "3fa2c16e0de90b414304d064a80545d37d99704c55141e8df4aea2f82bada663",
+      "before": "set(_nod_implib \"${_nod_libdir}/${CMAKE_IMPORT_LIBRARY_PREFIX}nod${CMAKE_IMPORT_LIBRARY_SUFFIX}\")",
+      "after": "set(_nod_implib \"${_nod_libdir}/nod.lib\")",
+      "occurrences": 1
+    },
+    {
+      "path": "extern/borealis/CMakeLists.txt",
+      "before_sha256": "98a81577a68e01be5221c1303340708e6c439305a602bb35cf8477c3be1eb224",
+      "after_sha256": "1e110dcae63821135df8c014a99c20a91dbcec5717101390194b473efa2cd138",
+      "before": "    add_library(borealis::io ALIAS borealis_io)\n",
+      "after": "    add_library(borealis::io ALIAS borealis_io)\n    if (WIN32)\n        # FileRenameInfoEx is the API already used by io.cpp.\n        target_compile_definitions(borealis_io PRIVATE _WIN32_WINNT=0x0A00 NTDDI_VERSION=0x0A000002)\n    endif ()\n",
+      "occurrences": 1
+    },
+    {
+      "path": "extern/aurora/lib/card/DolphinCardPath.cpp",
+      "before_sha256": "8983926f1218e08a7e28042643a83a2c96e8de23ef01235a41ab7a21323d97c5",
+      "after_sha256": "6b6fc355dabf2b05d1c5ce0ee58a848a4e8ce9277b056a297f7b96e7971a56ed",
+      "before": "#include <shlobj_core.h>\n",
+      "after": "#if defined(__MINGW32__)\n#include <shlobj.h>\n#include <knownfolders.h>\n#else\n#include <shlobj_core.h>\n#endif\n",
+      "occurrences": 1
+    },
+    {
+      "path": "src/MetroidPrime/CActorLights.cpp",
+      "before_sha256": "a553fbbe22f5f5d8d346b4419c4dc2d2d75f85af56720cbe7492004e59e1a079",
+      "after_sha256": "25236b4772f8836d1e964f218a9d729290d92b15dd5adc48187ef02a50c237dc",
+      "before": "#if defined(_MSC_VER)\n#include <malloc.h>\n",
+      "after": "#if defined(_MSC_VER) || defined(__MINGW32__)\n#include <malloc.h>\n",
+      "occurrences": 1
+    },
+    {
+      "path": "src/Kyoto/Particles/CElementGen.cpp",
+      "before_sha256": "533b0cf79a61a7707d731e60a931cc84853cf175806c079d8e1da6dfc25219f0",
+      "after_sha256": "01641fa2f435bf1bd3196ab6af41573a2e1654d0f28aa5b99daf243e276e78ca",
+      "before": "#if defined(TARGET_PC) && defined(_MSC_VER)\n#include <malloc.h>\n",
+      "after": "#if defined(TARGET_PC) && (defined(_MSC_VER) || defined(__MINGW32__))\n#include <malloc.h>\n",
+      "occurrences": 1
+    }
+  ],
+  "metaforce_original_zip": {
+    "sha256": "e130131a1a41e8599541d8ab3dd2f31c6d8abaa9af03411f8bba25c3f5b63f21",
+    "git_blob_matches": 2070,
+    "mismatches": [],
+    "normalization": "raw bytes; CRLF -> LF fallback allowed only when it matches Git blob"
+  }
+}

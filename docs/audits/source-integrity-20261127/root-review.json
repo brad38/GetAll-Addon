@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "audit_date_local": "2026-11-27",
+  "timezone": "America/Fortaleza",
+  "scope": "Alterações introduzidas pela integração publicada, seus caminhos de produção e evidências preservadas. Não é revisão integral de cada upstream nem homologação de gameplay.",
+  "desktop_commit": "921295de12349e726f7ca21a5edd8a8ecee123d8",
+  "getall_commit": "ceaa962fe1a2088a7f3900509b856743ff4b6672",
+  "catalog_commit": "3f4603cf42ef43402b4a0a9470232e7d4fcd9eb9",
+  "source_change_groups": [
+    {
+      "id": "SRC-MKW",
+      "project_ids": ["mkw-recomp"],
+      "classification": "funcionalidade nova em compilador; mudanças semânticas",
+      "summary": "Backend CLI próprio de nvdisasm, quatro overlays e 13 módulos. Implementa carry/HI de LEA/ULEA que upstream rejeitava, e corrige cálculo de endereço. Isso ultrapassa instalar launcher. Não foram encontradas mecânicas/fases novas nem prova de boot comercial.",
+      "sources": ["Services/GameInstallationMkwCliBackend.cs", "Services/GameInstallationMkwBuild.cs"],
+      "detail_report": "mkw-metaforce-review.md"
+    },
+    {
+      "id": "SRC-GOW",
+      "project_ids": ["god-of-war-recomp", "god-of-war-native-pc-port-gow-pc-port"],
+      "classification": "correção semântica no runtime de disco e ajustes de build",
+      "summary": "ApplyGowDiscSourceContract altera ps2xIOP/src/disc_source.cpp para limitar o lote antes do próximo setor com override, permitindo processá-lo separadamente. Modifica comportamento de I/O; não aborta a leitura inteira. Além disso há include cstdlib; remoção de IPO/GL/LTCG replica compilar.ps1 oficial. Os 55 patches de KIexster já são do upstream. Não foram encontradas fases/mecânicas criadas pela integração nesses diffs.",
+      "sources": ["Services/GameInstallationGowKiexsterNative.cs", "Services/GameInstallationGowKiexsterBuild.cs", "Services/GameInstallationGowBuild.cs", "Services/GameInstallationGowNative.cs"],
+      "before_sha256": "beb181051a7706342fada1554e10a1dc4c30327ec2ac23f12096ec002923cc0a",
+      "after_sha256": "a03fa022c829a884d084addfc1731b74b2580e89b5b4d867c0c9b8d088825ae6"
+    },
+    {
+      "id": "SRC-REX",
+      "project_ids": ["fh1-reimagined", "pinyon-shift", "ssx-recomp"],
+      "classification": "SDK/runtime personalizados, bridges C ABI e build",
+      "summary": "86 entradas verificadas, 32 textos exatamente atribuídos a patches oficiais; 54 entradas próprias (50 textos e quatro binários), três mutações CMake adicionais e fontes de bridges. Modificações reais de ABI, caminhos, NGX/ETW e ligação gráfica. Não foi encontrada implementação de gameplay faltante nos diffs. Pinyon perde FSR2/3 temporal e FG FidelityFX; FH1 omite ReGPU.",
+      "sources": ["Services/GameInstallationForzaNativeSources.cs", "Services/GameInstallationForzaNativeGame.cs", "Services/GameInstallationPinyonNativeSources.cs", "Services/GameInstallationPinyonNative.cs", "Services/GameInstallationSsxNativeSources.cs", "Services/GameInstallationSsxCache.cs"],
+      "detail_report": "rex-review.md"
+    },
+    {
+      "id": "SRC-META",
+      "project_ids": ["metaforce"],
+      "classification": "compatibilidade de compilação e ABI; diagnóstico Dawn",
+      "summary": "12 substituições em oito arquivos. Nos dois arquivos do jogo, apenas habilita malloc.h sob MinGW. WMI/COM usa BSTR RAII; ajustes de link e headers; descritor C++ Dawn omitido no MinGW. Todos os 2070 arquivos de jogo do ZIP foram comparados com a árvore e a cópia usada na compilação. Sem gameplay faltante implementado nos diffs.",
+      "sources": ["Services/GameInstallationMetaforceNative.cs", "Services/GameInstallationMetaforceBuild.cs", "Services/GameInstallationMetaforceRuntime.cs"],
+      "detail_report": "mkw-metaforce-review.md"
+    },
+    {
+      "id": "SRC-DRMARIO",
+      "project_ids": ["drmario64-recomp"],
+      "classification": "compatibilidade de compilação e integração de geração",
+      "summary": "Headers C++, hash de 64 bits, conversão JSON para string, importação de DLL, inicialização de texto ImGui e fmt checker. PatchesBin é dispensado somente depois de gerar e verificar os cinco produtos oficiais; dummy.c é fonte oficial do pacote. Não foi encontrada substituição de gameplay por dummy.",
+      "sources": ["Services/GameInstallationDrMario64Native.cs", "Services/GameInstallationDrMario64Sources.cs", "Services/GameInstallationDrMario64Patches.cs", "Services/GameInstallationDrMario64Build.cs"]
+    },
+    {
+      "id": "SRC-STRIKERS",
+      "project_ids": ["strikersrecomp"],
+      "classification": "Windows/MinGW, ABI gráfica e diagnósticos",
+      "summary": "Guardas de sinais POSIX de snapshot/PC dump, mkdir Windows, WMI/BSTR, CMake e imports. Omite descritor C++ Dawn no MinGW e mantém interface C WebGPU. Probe Dawn é executado também na preparação real e fica como executável diagnóstico; não é o jogo nem seu launch_file.",
+      "sources": ["Services/GameInstallationStrikersGcBuildSupport.cs", "Services/GameInstallationStrikersGcRuntime.cs", "Services/GameInstallationStrikersRecompBuild.cs"]
+    },
+    {
+      "id": "SRC-SM64PLUS",
+      "project_ids": ["sm64plus"],
+      "classification": "mudança de comportamento de diretório e build",
+      "summary": "Altera src/pc/pc_main.c: deixa de escolher LOCALAPPDATA/SM64Plus e muda para a pasta do executável com GetModuleFileNameW/SetCurrentDirectoryW. Isso afeta a localização usada para dados/configurações/saves relativos. Também muda Makefile e mensagem de erro. Não é apenas compilação.",
+      "sources": ["Services/GameInstallationSm64PlusSource.cs", "Services/GameInstallationSm64PlusBuild.cs"]
+    },
+    {
+      "id": "SRC-MARIO",
+      "project_ids": ["sm64ex", "render96ex", "sm64rt"],
+      "classification": "Makefile, host tools e compilação",
+      "summary": "Adapta ferramentas host, flags SDL/compilador, bibliotecas estáticas/dinâmicas, headers e paths. DISCORDRPC=0 e renderer fixado por perfil. Há também um caminho Docker antigo com patch de Makefile. Não foi encontrada implementação de gameplay ausente.",
+      "sources": ["Services/GameInstallationMarioNativeSource.cs", "Services/GameInstallationMarioNativeBuild.cs", "Services/GameInstallationMarioBuild.cs", "Services/GameInstallationMarioNativePreflight.cs"]
+    },
+    {
+      "id": "SRC-SM",
+      "project_ids": ["sm", "sm-rewrite"],
+      "classification": "compatibilidade de fonte e novo argumento de diagnóstico",
+      "summary": "Corrige tamanho de array/include em config.c, GUIDs/casts do mixer e acrescenta --allfix-runtime-check em main.c. Esse ramo verifica SDL e retorna somente quando a flag é passada; o caminho normal entra no jogo original. CMake próprio para composição Windows.",
+      "sources": ["Services/GameInstallationSmRewriteBuild.cs", "Services/GameInstallationSmBuild.cs"]
+    },
+    {
+      "id": "SRC-CTR",
+      "project_ids": ["crash-team-racing-turbocharged"],
+      "classification": "novo argumento de validação de mídia",
+      "summary": "Na receita build acrescenta --allfix-validate-disc chamando NativeDiscSetup_ValidateImage já existente. O ramo não cria gameplay. A receita ci é um alias distinto do mesmo ID.",
+      "sources": ["Services/GameInstallationCtrMedia.cs", "Services/GameInstallationCtrBuild.cs"]
+    },
+    {
+      "id": "SRC-MKDDCPP",
+      "project_ids": ["mariokartdd-recomp"],
+      "classification": "CMake e headers de compilação",
+      "summary": "Troca download SDL por cópia de cache verificada e acrescenta cstdlib a runtime.h/platform.cpp. Probe nativo fica na verificação; produção usa geração a partir da mídia original. Este ID é diferente da decompilação doldecomp e do port Rust.",
+      "sources": ["Services/GameInstallationMkddBuild.cs", "Services/GameInstallationMkddToolchain.cs"]
+    },
+    {
+      "id": "SRC-BURNOUT",
+      "project_ids": ["burnout3-recomp"],
+      "classification": "CMake/compilador/linker",
+      "summary": "Altera src/game/CMakeLists.txt para MinGW, flags de imagem/stack, símbolos/mapa e link. O pipeline usa o parser, lifter, ABI e recomp_manual.c oficiais. O probe GetCurrentProcessId está no preflight; não é substituto do jogo.",
+      "sources": ["Services/GameInstallationBurnoutNative.cs", "Services/GameInstallationConsoleBuild.cs"]
+    },
+    {
+      "id": "SRC-GT5",
+      "project_ids": ["gt5-recomp"],
+      "classification": "build/ABI e redução de renderers/opções",
+      "summary": "Após ps3recomp.patch oficial, muda CMake, spelling forceinline, include Windows e alias getenv que chama cached_getenv original. Força Vulkan OFF e não executa staging oficial de FSR3/DLSS. --hle-stubs e --allow-partial já estão no relift.ps1 oficial, não foram inventados por AllFix.",
+      "sources": ["Services/GameInstallationGt5Native.cs", "Services/GameInstallationConsoleBuild.cs"],
+      "upstream_repository": "MormonFTP-hub/gt5-recomp",
+      "upstream_commit": "64ca1697c5f9bb513bfe0414d9a36c10dafd0a37",
+      "upstream_paths": ["setup.ps1", "GT5/scripts/relift.ps1"]
+    }
+  ],
+  "other_reviewed_build_groups": [
+    {"project_ids":["wipeout-rewrite"],"sources":["Services/GameInstallationWipeoutNative.cs","Services/GameInstallationWipeoutBuild.cs"],"summary":"Compila fonte oficial com SDL2/OpenGL e toolchain privada. Sem patch próprio de fonte observado nesses métodos."},
+    {"project_ids":["mkdd-recomp"],"sources":["Services/GameInstallationMkddAltBuild.cs"],"summary":"Invoca scripts Ghidra/pcode/gen_rust oficiais e compila mkdd-bevy. Sem patch próprio de gameplay observado; HLE/cheats do projeto original não são adições da integração."},
+    {"project_ids":["strikers-wiicompiled"],"sources":["Services/GameInstallationStrikersWiiBuild.cs","Services/GameInstallationStrikersWiiToolchain.cs"],"summary":"Pipeline oficial e compilador privado; global.json/NuGet.Config e portable/configuração próprios. Sem alteração de fonte do jogo observada."},
+    {"project_ids":["doaxvb-re"],"sources":["Services/GameInstallationDoaxBuild.cs"],"summary":"Wrapper Python chama funções do build_game oficial; geração exige total traduzido e zero falhas; Vulkan/RTGI são opções explícitas. Sem gameplay próprio observado."},
+    {"project_ids":["rygt-gt7","spartanport"],"sources":["Services/GameInstallationPs4Build.cs","Services/GameInstallationPs4Native.cs","Services/GameInstallationPs4SpartanNative.cs"],"summary":"Produção usa mídia original e pipeline fixado; fixtures ELF/SFO autorais têm hashes fechados e consumidores de teste. Sem patch de gameplay observado."},
+    {"project_ids":["lasrecomp","super-odyssey-pc-recomp"],"sources":["Services/GameInstallationLasBuild.cs","Services/GameInstallationOdysseyBuild.cs"],"summary":"Geração e link oficiais exigem módulos da mídia; tabelas de função vazias/DLL de retorno constante aparecem em fixtures de teste, não no caminho real de preparação."},
+    {"project_ids":["gta-stories-recompiled"],"sources":["Services/GameInstallationGtaStoriesBuild.cs","Services/GameInstallationGtaRuntime.cs"],"summary":"Pipeline LCS/VCS oficial; configuração portátil e flags para não importar starter saves/sincronização. Sem alteração de código de gameplay observada."},
+    {"project_ids":["hookshot-zelda-oot-port"],"sources":["Services/GameInstallationHookshotBuild.cs"],"summary":"Invoca CLI oficial do builder fixado; configura home portátil e opcionais DLSS/XeSS. Sem alteração dos fontes do builder/jogo observada."},
+    {"project_ids":["totk-pc-recomp"],"sources":["Services/GameInstallationTotkBuild.cs"],"summary":"Adapter próprio substitui Reporter do instalador e filtra mensagens/stderr; conserva resultado e falha por exceção. É alteração do comportamento do instalador, não de gameplay."},
+    {"project_ids":["dkb-pc-recomp"],"sources":["Services/GameInstallationDkbBuild.cs"],"summary":"Pipeline oficial com --fsr4off --dlssoff --no-update-check fixos; revisão de checkpoint para regeneração. Configuração funcional diferente; sem fonte de gameplay implementado."},
+    {"project_ids":["shadow-of-the-colossus-pc"],"sources":["Services/GameInstallationSotcBuild.cs","Services/GameInstallationSotcOutput.cs"],"summary":"Scripts oficiais e patch POOL_FIX oficial; cvars de index-buffer culling zeradas, configuração/launcher e recálculo do stamp após mover pasta. Não foi encontrado preenchimento próprio de gameplay."},
+    {"project_ids":["savagewindrecomp"],"sources":["Services/GameInstallationSavageWindBuild.cs","Services/GameInstallationSavageWindNative.cs"],"summary":"Reproduz preparação oficial, muda opções e ignora launch options salvas. Não escreve fontes oficiais. Ver mkw-metaforce-review.md."}
+  ],
+  "test_boundaries": [
+    {"name":"Pinyon facades","test_consumer":"Tests/AddonInfrastructure/R18PinyonIntegration.cs","production":"Services/GameInstallationPinyonBuild.cs","conclusion":"DLLs com retorno 0x27 provam carga/ABI apenas; não foram encontradas no estágio de produção."},
+    {"name":"GT5/Burnout runtime probes","test_consumer":"Tests/AddonInfrastructure/R18ConsoleIntegration.cs","production":"Services/GameInstallationConsoleBuild.cs","conclusion":"ConsoleBuildPreflight chama provas autorais; BuildConsoleGame usa módulos da mídia e geração oficial."},
+    {"name":"LAS/Odyssey","test_consumer":"Tests/AddonInfrastructure/R18LasIntegration.cs; Tests/AddonInfrastructure/SwitchGeneratorIntegration.cs; Tests/AddonInfrastructure/R18OdysseyIntegration.cs","production":"Services/GameInstallationLasBuild.cs; Services/GameInstallationOdysseyBuild.cs","conclusion":"Zero function tables e DLL de retorno fixo são fixtures; não são a geração real."},
+    {"name":"PS4 e Switch","test_consumer":"Tests/AddonInfrastructure/Ps4NativeIntegration.cs; Tests/AddonInfrastructure/SpartanNativeIntegration.cs; Tests/AddonInfrastructure/SwitchNativeIntegration.cs","production":"Services/GameInstallationPs4Build.cs; Services/GameInstallationSwitchNativeBuild.cs","conclusion":"ELF/SFO/NSO autorais têm allowlist por hash e são consumidos pelos testes. Não demonstram boot comercial."},
+    {"name":"Mario","test_consumer":"Tests/AddonInfrastructure/Program.cs","production":"Services/GameInstallationMarioNativeBuild.cs","conclusion":"ROM sintética deve ser rejeitada; preflight não deve produzir executável do jogo."},
+    {"name":"Strikers GC Dawn","test_consumer":"Também chamado na preparação de produção","production":"Services/GameInstallationStrikersGcRuntime.cs","conclusion":"Probe real cria instância WebGPU e verifica C ABI. Fica no output, mas não é launch_file nem substitui jogo; não é teste de gameplay."}
+  ],
+  "limitations": [
+    "Não se executaram jogos ou compilações nesta auditoria; nenhuma mídia original foi alterada.",
+    "Não se revisou cada função de todos os upstreams, nem todos os estados históricos transitórios do Desktop. A conclusão principal vale para os pins e artefatos identificados.",
+    "A ausência de source edits nos handlers não prova pureza de todos os binários upstream ou auxiliares. Fronteiras de proveniência são registradas separadamente.",
+    "Os 97 estados históricos do índice foram auditados para status; isso não equivale a revisar todos os diffs históricos dos jogos.",
+    "Nenhuma evidência nova de boot comercial foi produzida. O único validated é um registro histórico de SM64 Coop Deluxe; os outros 141 IDs têm status experimental."
+  ]
+}

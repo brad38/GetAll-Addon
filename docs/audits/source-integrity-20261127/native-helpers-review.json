@@ -1,0 +1,451 @@
+{
+  "scope": "Native helpers older than the 114-project boundary plus GT4; read-only forensic follow-up, 2026-11-28 UTC",
+  "pinned_desktop": "921295de12349e726f7ca21a5edd8a8ecee123d8",
+  "method": [
+    "Read actual helper wrapper/build inputs and source patches.",
+    "Compared every original archive member in the specified preserved trees, hashing actual files and reporting differences.",
+    "Independently checked selected live GitHub blob identities for BlueWake and Nectar.",
+    "Hashed actual Windows helper binaries, without rebuilding or running commercial games."
+  ],
+  "findings": [
+    {
+      "id": "H01-bluewake",
+      "projects": [
+        "bluewake"
+      ],
+      "classification": "importer_source_modified_wrapper_added",
+      "source_pins": [
+        "chrissotraidis/bluewake@v0.12.0; tree df9e46fe0be5c0f95d46a3b194f59a4b96186640"
+      ],
+      "verified": [
+        "Official disc_import.c Git blob d76654f46af92041371528c61fff6360ac2c5d46 fetched and independently hashed.",
+        "10 copied header/compatibility/license files match live upstream Git blobs.",
+        "Actual helper ZIP 5dd29c5f689f55135a9b1591525cfb9ff917c1b5ee699c71629fcc671400a6df includes all reviewed source and build script."
+      ],
+      "changes": [
+        "read_at rejects allocations >64 MiB.",
+        "write_rel rejects size<0x44, long names and characters outside ASCII alphanumeric/underscore/hyphen/dot.",
+        "BLUEWAKE_ACCEPT_DOL_SHA1 override disabled by setting also=NULL.",
+        "Own main.c checks full-size GZLE01 rev0, calls bluewake_disc_prepare, then requires main.dol and 415 aligned RELs.",
+        "REL header alignment rewriting already exists in official importer; not added by AllFix."
+      ],
+      "limits": [
+        "The helper is a modified importer, not an unmodified official executable.",
+        "No ISO extraction/boot validated with commercial media.",
+        "Read-only source review is not independent binary rebuild."
+      ],
+      "evidence": [
+        "bluewake-helper-source.json",
+        "bluewake-original-importer.json",
+        "Services/GameInstallationBlueWake.cs"
+      ]
+    },
+    {
+      "id": "H02-nectar",
+      "projects": [
+        "open-nectar"
+      ],
+      "classification": "extractor_wrapper_added_upstream_reader_unchanged",
+      "source_pins": [
+        "SSunnKing/Open-Nectar---Pikmin-Native-PC-Mobile-Port@c0ceb05eb8cebfc7d25ee0834c8ebc1a6b20226c"
+      ],
+      "verified": [
+        "13 preserved reader/support files match preserved Git tree blob hashes.",
+        "The 5 Pikmin1 files used by the build independently match current GitHub directory blobs at the pin.",
+        "57-line extract.cpp and 9-line build script read in full."
+      ],
+      "changes": [
+        "Own wrapper handles args, full disc size, empty destination, accepted identities, progress and errors.",
+        "Compiles official Pikmin1 GameCube reader and sha256, uses same reader for Pikmin2.",
+        "verifyWrites=true retains original per-file readback checking.",
+        "Desktop validates complete disc hash before extraction and writes upstream-compatible asset/build marker files."
+      ],
+      "limits": [
+        "Using the Pikmin1 reader for Pikmin2 is an AllFix integration decision; reviewed source does not prove successful real Pikmin2 installation.",
+        "Official runtime executables copied from fixed release, not compiled by this helper."
+      ],
+      "evidence": [
+        "native-helper-build-inputs.json",
+        "native-other-source-comparisons.json",
+        "nectar-live-source-pins.json",
+        "Services/GameInstallationNectar.cs"
+      ],
+      "binary": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\nectar-extract.exe",
+        "bytes": 3039134,
+        "sha256": "59318b0d29b1df3766c8863b4d3aebc59501a24358690e309a964b54058d4e90"
+      }
+    },
+    {
+      "id": "H03-kingsfield",
+      "projects": [
+        "kf1-enhanced"
+      ],
+      "classification": "importer_wrapper_compatibility_and_japanese_only_profile",
+      "source_pins": [
+        "kf1-enhanced@ac147450249c95b8d7683300292a2761796cb611"
+      ],
+      "verified": [
+        "346 archive files compared with actual helper-a source; only translation_ppf.cpp changed.",
+        "Actual generated english_patch.inc contains std::array<unsigned char,0>.",
+        "Own import wrapper and pinned build recipe read in full."
+      ],
+      "changes": [
+        "NOMINMAX macro wrapped by #ifndef guard.",
+        "Own wmain invokes disc_extract/disc_verify_directory with Language::Japanese.",
+        "Official english_patch.py embed --optional uses nonexistent absent.kfdelta to generate empty optional English table."
+      ],
+      "limits": [
+        "This helper omits embedded English translation; it does not remove English from the separately downloaded game runtime.",
+        "Japanese resource-preparation path only; do not represent as full multilingual importer.",
+        "No original disc/boot test."
+      ],
+      "evidence": [
+        "native-other-source-comparisons.json",
+        "native-twoship-comparisons.json",
+        "Tools/NativeExtractors/build-kingsfield-import.ps1",
+        "Tools/NativeExtractors/kingsfield-import.cpp"
+      ],
+      "binary": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\kingsfield-helper-a\\kingsfield-import.exe",
+        "bytes": 1334272,
+        "sha256": "dac0fc40078e219d5468e8a0663eb38b6e78e5c0313aee6f1a8febd0978607f6"
+      }
+    },
+    {
+      "id": "H04-know-your-role",
+      "projects": [
+        "knowyourrolerecomp"
+      ],
+      "classification": "official_launcher_builder_republished_with_locked_dependencies",
+      "source_pins": [
+        "KnowYourRoleRecomp@eca626b79ffeab146b84e8de260e43713fb9a649",
+        "RecompOne-PS1Ports@d54b944fd3a7e3eaaac4cd7e62ea460440c3f9e7"
+      ],
+      "verified": [
+        "51 preserved project files match source ZIP, no changed/missing files.",
+        "Pinned build script read: source/dependency ZIP hash checks, copy dependency, copy 3 package locks, dotnet restore locked and publish official Launcher project."
+      ],
+      "changes": [
+        "Build/dependency packaging: locks, source mapping and self-contained compressed executable; no game-source rewrite in the reviewed recipe."
+      ],
+      "limits": [
+        "51-file comparison is the preserved project source tree, not proof of all dependency files or source-to-binary equivalence.",
+        "No complete RecompOne dependency tree or decompilation/runtime semantic audit performed here.",
+        "Actual binary hash established; no rebuild."
+      ],
+      "evidence": [
+        "native-other-source-comparisons.json",
+        "Tools/NativeExtractors/build-know-your-role.ps1",
+        "Tools/NativeExtractors/KnowYourRole"
+      ],
+      "binary": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\know-role-builder\\KnowYourRole.exe",
+        "bytes": 76668714,
+        "sha256": "ff0ef87da4887fa3164070ea0b853b09f65e5f3a539cfdc27c066d181b36964b"
+      }
+    },
+    {
+      "id": "H05-soh",
+      "projects": [
+        "ship-of-harkinian-soh"
+      ],
+      "classification": "acknowledged_cli_source_change_incomplete_provenance",
+      "source_pins": [
+        "HarbourMasters/Shipwright@f0599f96f8d442f26d0fa1c5cedafddacd56633f",
+        "HarbourMasters/Torch@2ab12fe9660aec04e02ee89fe81baed304a1a1d6"
+      ],
+      "verified": [
+        "AddonSdk/INSTALACAO-V9.md line40 explicitly records correction of CLI entry to call SohTorch::Extract with ROM bytes.",
+        "Actual console-cache/soh-torch.exe is 1,804,288 bytes and matches expected SHA256.",
+        "recover-soh-resource.py reads an older AllFix.exe bundle and recovers the resource matching this hash; it is not a rebuild recipe."
+      ],
+      "changes": [
+        "CLI entry correction is acknowledged in repository documentation; exact patch/preimage/postimage not recovered in this slice."
+      ],
+      "limits": [
+        "Inconclusive source integrity for this helper: binary identity does not establish source identity.",
+        "Do not classify SoH as audited source-unchanged.",
+        "Bounded searches in available R18/R17/R16 evidence did not locate patch; no claim of exhaustive device search.",
+        "No original ROM/boot test."
+      ],
+      "evidence": [
+        "AddonSdk/INSTALACAO-V9.md:40",
+        "native-helper-actual-hashes.json",
+        "native-soh-provenance-gap.json"
+      ],
+      "binary": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\soh-torch.exe",
+        "bytes": 1804288,
+        "sha256": "e1d221f2a58ad56581b85da752e0bc236e577a26a2e145404764ca836779be02"
+      }
+    },
+    {
+      "id": "H06-twoship",
+      "projects": [
+        "2-ship-2-harkinian-2s2h"
+      ],
+      "classification": "extractor_build_reconfiguration_official_parsers_unchanged",
+      "source_pins": [
+        "2ship@8a24047",
+        "OTRExporter@32e088e28c8cdd055d4bb8f3f219d33ad37963f3",
+        "ZAPDTR@ee3397a365c5f350a60538c88f0643f155944836",
+        "libultraship@7cb10226e7875ec48ceec2f841d00afd84eef964"
+      ],
+      "verified": [
+        "232 ZAPDTR files and 176 OTRExporter files match preserved source ZIPs exactly.",
+        "430 libultraship files compared; only common.cmake changed (line endings plus STB download replaced with local copy).",
+        "prepare-deps.py read in full; ImGui and StormLib patches are copied from the unchanged upstream libultraship tree."
+      ],
+      "changes": [
+        "Own top-level CMake selects GAME_STR=MM, includes libultraship/ZAPD/OTRExporter only, disables automatic vcpkg and scripting for helper build.",
+        "STB source obtained from fixed pin/copy rather than configure-time download.",
+        "Build uses official ImGui/StormLib patches, not evidence of new AllFix gameplay patches."
+      ],
+      "limits": [
+        "This does not prove all transitive dependency build outputs byte-equivalent.",
+        "No full game rebuilt by this recipe; helper must not be represented as official release binary.",
+        "No original ROM extraction/boot test."
+      ],
+      "evidence": [
+        "native-helper-build-inputs.json",
+        "native-twoship-comparisons.json"
+      ],
+      "binary": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\2ship-zapd.exe",
+        "bytes": 1858048,
+        "sha256": "b781f9c605a7a566b1b149b789e8f28f9e1c317b9bb71898609346bfebfaee33"
+      }
+    },
+    {
+      "id": "H07-starship",
+      "projects": [
+        "starship"
+      ],
+      "classification": "official_extractor_source_compiled_with_profile_options",
+      "source_pins": [
+        "Torch@f75facb20883570ed091e8ae733ec0539f606e57"
+      ],
+      "verified": [
+        "598 preserved Torch files compared to original source ZIP; no changes, missing files or extra C/C++ source."
+      ],
+      "changes": [
+        "Helper build selects SF64/NAUDIO format support; formats for other games are excluded from this helper."
+      ],
+      "limits": [
+        "No independent reproducible binary rebuild; dependency tree not wholly compared.",
+        "Official negative CLI can return zero without output; output validation remains required, so exit code alone is not success.",
+        "No original ROM/boot test."
+      ],
+      "evidence": [
+        "native-torch-tree-comparisons.json",
+        "Tools/NativeExtractors/README.md"
+      ],
+      "binary": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\starship-torch.exe",
+        "bytes": 1951744,
+        "sha256": "b40e1e78aa31a6035b89d82d2563f9f1906a3518d924b087666cb42542d10081"
+      }
+    },
+    {
+      "id": "H08-paperboat",
+      "projects": [
+        "paperboat"
+      ],
+      "classification": "official_extractor_source_compiled_with_profile_options",
+      "source_pins": [
+        "Torch@72960ca16f4723f96aaf4037b76072c230af8c11",
+        "PaperBoat@7f038b8552b1bf5c297a5fd06738d8f245851833"
+      ],
+      "verified": [
+        "770 preserved Torch files match original source ZIP; no changes/missing/extra C/C++ source."
+      ],
+      "changes": [
+        "Documented helper build enables PM64/NAUDIO, disables unrelated game formats, UI, StormLib, PORT_VERSION_ENDIANNESS."
+      ],
+      "limits": [
+        "Profile options apply to extractor, not game runtime.",
+        "No complete dependency-tree or source-to-binary equivalence proof.",
+        "No original ROM/boot test."
+      ],
+      "evidence": [
+        "native-torch-tree-comparisons.json",
+        "Tools/NativeExtractors/README.md"
+      ],
+      "binary": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\paperboat-torch.exe",
+        "bytes": 2383872,
+        "sha256": "5211b9d2041fbb0ef6e712692a99bec9b045d985cf6a2c4a30d54fb42641ef99"
+      }
+    },
+    {
+      "id": "H09-ghostship",
+      "projects": [
+        "ghostship"
+      ],
+      "classification": "official_extractor_source_compiled_with_profile_options",
+      "source_pins": [
+        "Torch@106621f0f0f9731b8739bec95227c2c5887492df",
+        "Ghostship@deb091c29caff57dd986398087b058f16b11911e"
+      ],
+      "verified": [
+        "768 preserved Torch files match original source ZIP; no changes/missing/extra C/C++ source."
+      ],
+      "changes": [
+        "Documented helper build selects SM64/NAUDIO, excludes unrelated game formats and UI/StormLib."
+      ],
+      "limits": [
+        "Profile options apply to extractor, not game runtime.",
+        "No complete dependency-tree or source-to-binary equivalence proof.",
+        "No original ROM/boot test."
+      ],
+      "evidence": [
+        "native-torch-tree-comparisons.json",
+        "Tools/NativeExtractors/README.md"
+      ],
+      "binary": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ghostship-torch.exe",
+        "bytes": 2473984,
+        "sha256": "e51c4e6e801173e978156631fa01f1741d890d8f84a8ab500e73106fb3344e8d"
+      }
+    },
+    {
+      "id": "H10-spaghetti",
+      "projects": [
+        "spaghettikart"
+      ],
+      "classification": "official_extractor_source_compiled",
+      "source_pins": [
+        "Torch@2d474ddb8da8b213fbdbb49d0273ce31fa955f35"
+      ],
+      "verified": [
+        "638 preserved Torch files match original tarball; no changes/missing/extra C/C++ source."
+      ],
+      "changes": [
+        "AllFix supplies CLI extraction orchestration and staged defines.h input; no rewrite of Torch source found."
+      ],
+      "limits": [
+        "No complete dependency-tree or source-to-binary equivalence proof.",
+        "This slice did not independently prove provenance of every generated build/config input, including defines.h.",
+        "No original ROM/boot test."
+      ],
+      "evidence": [
+        "native-torch-tree-comparisons.json",
+        "native-helper-build-inputs.json"
+      ],
+      "binary": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\spaghetti-torch-build\\Release\\torch.exe",
+        "bytes": 2518528,
+        "sha256": "e5423dd886c578a550a57a103e53045880f59efd2aec5bf4ea1447e7ef018e55"
+      }
+    },
+    {
+      "id": "H11-lighthouse",
+      "projects": [
+        "lighthouse"
+      ],
+      "classification": "official_extractor_source_compiled_no_runtime_patch_attribution",
+      "source_pins": [
+        "HarbourMasters/Torch@7f5d55f9de53f96e61c11399cb3066f8dd8e835e",
+        "HarbourMasters/Lighthouse@1.2.2"
+      ],
+      "verified": [
+        "776 preserved Torch files match original tarball; no changes/missing/extra C/C++ source.",
+        "The source pin matches preserved Lighthouse 1.2.2 submodule descriptor.",
+        "Production handler stages fixed official Lighthouse ZIP and executes separate Torch helper."
+      ],
+      "changes": [
+        "No source rewrite in actual Torch tree found.",
+        "lighthouse-cli.patch is a research file containing 5 upstream Jeod commits, starting ee95c850... and ending 339b695b...; its presence is not evidence it was applied by AllFix."
+      ],
+      "limits": [
+        "Do not attribute upstream thread/game-state/menu edits in that research patch to AllFix without an application path.",
+        "No complete dependency-tree or source-to-binary equivalence proof.",
+        "No original ROM/boot test."
+      ],
+      "evidence": [
+        "native-torch-tree-comparisons.json",
+        "native-helper-build-inputs.json",
+        "Services/GameInstallationLighthouse.cs"
+      ],
+      "binary": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\lighthouse-torch-build\\Release\\torch.exe",
+        "bytes": 4266496,
+        "sha256": "91f20508aac740058b8bf540d5c5dd72b7792ad9d2959e53544c271ceaae5147"
+      }
+    },
+    {
+      "id": "H12-picori",
+      "projects": [
+        "project-picori-999sian-tmc"
+      ],
+      "classification": "official_asset_extractor_standalone_build",
+      "source_pins": [
+        "999sian/tmc@d377558d973c648e8d0dc491bf99af9aaa0d8067"
+      ],
+      "verified": [
+        "2397 preserved project files match source tarball; no changes/missing/extra C/C++ source.",
+        "Build script read in full: compiles 7 original C/C++ inputs, generates sounds.json.h from original sounds.json."
+      ],
+      "changes": [
+        "Own build recipe chooses PC_PORT,NON_MATCHING,USA,ENGLISH,REVISION=0, static runtime and header-only fmt.",
+        "Compiles extractor API/main/embedded sounds and original asset pipeline/log/pak/index; does not implement missing game logic."
+      ],
+      "limits": [
+        "These are extractor compile definitions, not evidence of entire game completion.",
+        "Transitive headers/toolchain not independently recreated.",
+        "No original ROM/boot test."
+      ],
+      "evidence": [
+        "native-other-source-comparisons.json",
+        "native-helper-build-inputs.json"
+      ],
+      "binary": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\picori-helper-win-x64\\asset_extractor.exe",
+        "bytes": 4958840,
+        "sha256": "b7c1172179af87050b7b6037a4e5ed0677818e7082c38de59a25e1ea3e338599"
+      }
+    },
+    {
+      "id": "H13-gt4",
+      "projects": [
+        "gt4recomp"
+      ],
+      "classification": "official_disc_library_wrapper_added",
+      "source_pins": [
+        "moesuito/gt4-staticrecomp@7e069b4b9a9939cda48942994aa2e509c95a00ff"
+      ],
+      "verified": [
+        "16 original gt4l-disc crate files match preserved source ZIP in actual helper-production-4 build source.",
+        "Own 84-line Rust wrapper read in full; added src/bin/getall-gt4-disc.rs hash 4d37840b5a096a790356cbe06c585697d71b7717972eaab55fdfafb7119823bb.",
+        "Pinned build script uses cargo --locked and adds wrapper without rewriting original library."
+      ],
+      "changes": [
+        "Wrapper loads official Pins/Spec2Pins, identifies disc, invokes official setup::run/spec2::run, requires official check_installed==Installed::Ready.",
+        "Own path/staging/exit/progress handling; no decompiler/emulator/gameplay additions."
+      ],
+      "limits": [
+        "16-file comparison is only gt4l-disc crate, not all GT4 runtime or Cargo dependencies.",
+        "No independent binary rebuild or commercial disc execution."
+      ],
+      "evidence": [
+        "Tools/Gt4Disc/getall-gt4-disc.rs",
+        "Tools/Gt4Disc/build-gt4-disc.ps1",
+        "native-other-source-comparisons.json",
+        "native-helper-actual-hashes.json"
+      ],
+      "binary": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\gt4-setup-contract\\helper-production-4\\getall-gt4-disc.exe",
+        "bytes": 1090560,
+        "sha256": "db97432b10b5a196dd63f713e748c71815b2fdeb8b3065b59821a7615cbb2f82"
+      }
+    }
+  ],
+  "global_limits": [
+    "Hashes identify inspected binaries; hashes do not prove that binaries were compiled from inspected source.",
+    "Preserved archive equality is distinct from independent live upstream proof for every dependency.",
+    "No audit here proves completed gameplay, correctness of all upstream code, all 148 projects, or successful boot with original media.",
+    "Some source trees are archived evidence rather than complete original build environments; SoH specifically lacks the actual changed CLI source/patch.",
+    "No product files, recipes, sources, binaries or user media modified."
+  ]
+}

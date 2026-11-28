@@ -1,0 +1,74 @@
+{
+  "audit_date_local": "2026-11-27",
+  "deleted_local_transfer_artifacts": [
+    {
+      "path": "/workspace/scratch/c9d7f8c70c77/audit-transfer/part-0.b64",
+      "bytes": 120001,
+      "sha256": "776170afb71455575a08491a9e07c315abc673f3aedfd48a81c11b65d2b75ec9",
+      "reason": "Audit-only transfer encoding or compressed duplicate; decoded sources/reports and manifests verified and preserved"
+    },
+    {
+      "path": "/workspace/scratch/c9d7f8c70c77/audit-transfer/large-0.b64",
+      "bytes": 600001,
+      "sha256": "41b3ed0180959e923770c081629d0409722a58264b77d7ed26e18021a87b3714",
+      "reason": "Audit-only transfer encoding or compressed duplicate; decoded sources/reports and manifests verified and preserved"
+    },
+    {
+      "path": "/workspace/scratch/c9d7f8c70c77/audit-transfer/large-1.b64",
+      "bytes": 600001,
+      "sha256": "45f1f879ae540b59f3536993d30c994293ed1988d1620ad9d30442200766cf49",
+      "reason": "Audit-only transfer encoding or compressed duplicate; decoded sources/reports and manifests verified and preserved"
+    },
+    {
+      "path": "/workspace/scratch/c9d7f8c70c77/audit-transfer/large-2.b64",
+      "bytes": 600001,
+      "sha256": "bdf554880d32b63b003df83f44eb3e98bab2c2a97105682148823a8c841d83a9",
+      "reason": "Audit-only transfer encoding or compressed duplicate; decoded sources/reports and manifests verified and preserved"
+    },
+    {
+      "path": "/workspace/scratch/c9d7f8c70c77/audit-transfer/large-3.b64",
+      "bytes": 600001,
+      "sha256": "e7ba3406df4e570c2baee1a4f2ecec8192142d0e483109a4afb7ce4818a3b6d0",
+      "reason": "Audit-only transfer encoding or compressed duplicate; decoded sources/reports and manifests verified and preserved"
+    },
+    {
+      "path": "/workspace/scratch/c9d7f8c70c77/audit-transfer/large-4.b64",
+      "bytes": 600001,
+      "sha256": "27d99a46e42cde4df09350eb2c3884281367af9ca48f166a1febf8112c9dcc28",
+      "reason": "Audit-only transfer encoding or compressed duplicate; decoded sources/reports and manifests verified and preserved"
+    },
+    {
+      "path": "/workspace/scratch/c9d7f8c70c77/audit-transfer/large-5.b64",
+      "bytes": 600001,
+      "sha256": "e9d71d4a529ba5eeb524eadf1467e976420d8e0258a32f32de8f959e1a94fb3f",
+      "reason": "Audit-only transfer encoding or compressed duplicate; decoded sources/reports and manifests verified and preserved"
+    },
+    {
+      "path": "/workspace/scratch/c9d7f8c70c77/audit-transfer/large-6.b64",
+      "bytes": 600001,
+      "sha256": "1a7e9e88ccbec3794c65a9dc14a8e0be01b356e31cb225d1fc2113240ab3efbf",
+      "reason": "Audit-only transfer encoding or compressed duplicate; decoded sources/reports and manifests verified and preserved"
+    },
+    {
+      "path": "/workspace/scratch/c9d7f8c70c77/audit-transfer/large-7.b64",
+      "bytes": 6225,
+      "sha256": "7ca4e3151b9aecf63fb35fdbcc4eca0ac00882a802f65889b5180498d14f508d",
+      "reason": "Audit-only transfer encoding or compressed duplicate; decoded sources/reports and manifests verified and preserved"
+    },
+    {
+      "path": "/workspace/scratch/c9d7f8c70c77/audit-transfer/source-integrity-report.zip",
+      "bytes": 445374,
+      "sha256": "9d80c72fb67795a2daee9aff80667656b352f0f2a93ffdfae7c9f0748cc07307",
+      "reason": "Audit-only transfer encoding or compressed duplicate; decoded sources/reports and manifests verified and preserved"
+    }
+  ],
+  "deleted_local_bytes": 4771607,
+  "remote_report_transfer_base64_removed_bytes": 593832,
+  "preserved_windows_report": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\source-integrity-audit-20261127\\report",
+  "windows_report_verification": {
+    "files": 49,
+    "manifest_records_verified": 48,
+    "archive_sha256": "9d80c72fb67795a2daee9aff80667656b352f0f2a93ffdfae7c9f0748cc07307"
+  },
+  "policy": "Only demonstrably disposable audit transfer copies removed. Original media, source, active dependencies and personal files not deleted. No new game builds."
+}

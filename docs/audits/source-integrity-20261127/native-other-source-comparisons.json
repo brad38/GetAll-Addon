@@ -1,0 +1,157 @@
+[
+  {
+    "name": "kingsfield-helper-a",
+    "archive": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\kingsfield-source.zip",
+    "directory": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\kingsfield-helper-a\\source\\kf1-enhanced-ac147450249c95b8d7683300292a2761796cb611",
+    "subtree": "",
+    "changed": [
+      {
+        "path": "src/platform/translation_ppf.cpp",
+        "before_sha256": "8b1a8399e90ecfee589cb9e0e6b036411ffd36ea30ba20747d8cc3dd05623fa9",
+        "after_sha256": "e47850b0f019adc80cf532bb57205cbf27d3a04e8a8f565317f1a93aa005f6f7",
+        "lineendings_only": false,
+        "diff": "--- src/platform/translation_ppf.cpp upstream\n+++ src/platform/translation_ppf.cpp actual\n@@ -8,7 +8,9 @@\n #include <fstream>\n #ifdef _WIN32\n #define WIN32_LEAN_AND_MEAN\n+#ifndef NOMINMAX\n #define NOMINMAX\n+#endif\n #include <windows.h>\n #else\n #include <cstdlib>\n"
+      }
+    ],
+    "missing": [],
+    "files": 346,
+    "archive_sha256": "66e8872ad2c67dafecfb1ab10c0e933b8720e7bfab31316703f881546aa40e11",
+    "archive_bytes": 1697434,
+    "extra_source_files": [
+      "kingsfield-import.cpp"
+    ]
+  },
+  {
+    "name": "know-your-role",
+    "archive": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\know-role-source.zip",
+    "directory": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\know-role-src\\KnowYourRoleRecomp-eca626b79ffeab146b84e8de260e43713fb9a649",
+    "subtree": "",
+    "changed": [],
+    "missing": [],
+    "files": 51,
+    "archive_sha256": "9c2f1109a2944c09b386a52660b08705d8777cd5b1aaaf5ebe8a7b41e39b89b5",
+    "archive_bytes": 309991,
+    "extra_source_files": []
+  },
+  {
+    "name": "picori",
+    "archive": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\picori-src-d377558.tar.gz",
+    "directory": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\picori-src-d377558\\tmc-d377558d973c648e8d0dc491bf99af9aaa0d8067",
+    "subtree": "",
+    "changed": [],
+    "missing": [],
+    "files": 2397,
+    "archive_sha256": "766881448db71ef048cd84065255a7cba5d22c2d7445b451fb38b06c58b63442",
+    "archive_bytes": 5136418,
+    "extra_source_files": []
+  },
+  {
+    "name": "gt4-disc-crate",
+    "archive": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\gt4-setup-contract\\source-7e069b4b9a9939cda48942994aa2e509c95a00ff.zip",
+    "directory": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\gt4-setup-contract\\helper-production-4\\build-4e6e048840534f52a0ad082a1e080014\\gt4-staticrecomp-7e069b4b9a9939cda48942994aa2e509c95a00ff\\launcher\\crates\\gt4l-disc",
+    "subtree": "launcher/crates/gt4l-disc/",
+    "changed": [],
+    "missing": [],
+    "files": 16,
+    "archive_sha256": "aa3e5a9ba250fa204978e5da79eea101d544ecba389fdf4f43e1a1153c08d865",
+    "archive_bytes": 21853141,
+    "extra_source_files": []
+  },
+  {
+    "name": "nectar",
+    "source_commit": "c0ceb05eb8cebfc7d25ee0834c8ebc1a6b20226c",
+    "files": [
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\pikmin1\\cp932_table.h",
+        "original_path": "games/pikmin1/pc_port/launcher/cp932_table.h",
+        "blob": "aba9806a0984a7e3ad51e93bb7d61b9e9fb1b68f",
+        "expected": "aba9806a0984a7e3ad51e93bb7d61b9e9fb1b68f",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\pikmin1\\gamecube_image.cpp",
+        "original_path": "games/pikmin1/pc_port/launcher/gamecube_image.cpp",
+        "blob": "f1068d89a2ae9ff7d642042a5cabfc4347abe5d8",
+        "expected": "f1068d89a2ae9ff7d642042a5cabfc4347abe5d8",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\pikmin1\\gamecube_image.h",
+        "original_path": "games/pikmin1/pc_port/launcher/gamecube_image.h",
+        "blob": "653c0a6db734f181a865ba15d2f1fc2479b58866",
+        "expected": "653c0a6db734f181a865ba15d2f1fc2479b58866",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\pikmin1\\gamecube_image_test.cpp",
+        "original_path": "games/pikmin1/pc_port/launcher/gamecube_image_test.cpp",
+        "blob": "5e1ebfccb2de442d5facdbfeb0b2ddd637bbebc0",
+        "expected": "5e1ebfccb2de442d5facdbfeb0b2ddd637bbebc0",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\pikmin1\\LICENSE.MD",
+        "original_path": "games/pikmin1/LICENSE.MD",
+        "blob": "0e259d42c996742e9e3cba14c677129b2c1b6311",
+        "expected": "0e259d42c996742e9e3cba14c677129b2c1b6311",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\pikmin1\\sha256.cpp",
+        "original_path": "games/pikmin1/pc_port/launcher/sha256.cpp",
+        "blob": "b3ae87bbd85c20949dc815930e6224cdb1f4b274",
+        "expected": "b3ae87bbd85c20949dc815930e6224cdb1f4b274",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\pikmin1\\sha256.h",
+        "original_path": "games/pikmin1/pc_port/launcher/sha256.h",
+        "blob": "34f7674df023835b0339e04a0c95dae3c2d458cd",
+        "expected": "34f7674df023835b0339e04a0c95dae3c2d458cd",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\pikmin2\\gamecube_image.cpp",
+        "original_path": "games/pikmin2/pc_port/launcher/gamecube_image.cpp",
+        "blob": "c3035fb8245c9b8b14992cefefe97c620c9ae241",
+        "expected": "c3035fb8245c9b8b14992cefefe97c620c9ae241",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\pikmin2\\gamecube_image.h",
+        "original_path": "games/pikmin2/pc_port/launcher/gamecube_image.h",
+        "blob": "eb0a32c52841a0d990552ff0022c479bf505a2f2",
+        "expected": "eb0a32c52841a0d990552ff0022c479bf505a2f2",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\pikmin2\\gamecube_image_test.cpp",
+        "original_path": "games/pikmin2/pc_port/launcher/gamecube_image_test.cpp",
+        "blob": "5e1ebfccb2de442d5facdbfeb0b2ddd637bbebc0",
+        "expected": "5e1ebfccb2de442d5facdbfeb0b2ddd637bbebc0",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\pikmin2\\LICENSE.MD",
+        "original_path": "games/pikmin2/LICENSE.MD",
+        "blob": "0e259d42c996742e9e3cba14c677129b2c1b6311",
+        "expected": "0e259d42c996742e9e3cba14c677129b2c1b6311",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\pikmin2\\sha256.cpp",
+        "original_path": "games/pikmin2/pc_port/launcher/sha256.cpp",
+        "blob": "b3ae87bbd85c20949dc815930e6224cdb1f4b274",
+        "expected": "b3ae87bbd85c20949dc815930e6224cdb1f4b274",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\pikmin2\\sha256.h",
+        "original_path": "games/pikmin2/pc_port/launcher/sha256.h",
+        "blob": "34f7674df023835b0339e04a0c95dae3c2d458cd",
+        "expected": "34f7674df023835b0339e04a0c95dae3c2d458cd",
+        "match": true
+      }
+    ]
+  }
+]

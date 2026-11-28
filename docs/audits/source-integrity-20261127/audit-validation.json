@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "kind": "audit_artifact_consistency_not_gameplay_test",
+  "catalog_ids": 148,
+  "recipe_entries_verified": 145,
+  "snapshot_files_blob_and_sha256_verified": 521,
+  "source_change_ids": 19,
+  "other_build_ids": 14,
+  "errors": []
+}

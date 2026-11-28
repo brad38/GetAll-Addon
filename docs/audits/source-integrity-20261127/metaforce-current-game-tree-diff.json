@@ -1,0 +1,18 @@
+{
+  "verified_original_files": 2070,
+  "original_errors": [],
+  "changes": [
+    {
+      "path": "src/Kyoto/Particles/CElementGen.cpp",
+      "before_sha256": "533b0cf79a61a7707d731e60a931cc84853cf175806c079d8e1da6dfc25219f0",
+      "after_sha256": "01641fa2f435bf1bd3196ab6af41573a2e1654d0f28aa5b99daf243e276e78ca"
+    },
+    {
+      "path": "src/MetroidPrime/CActorLights.cpp",
+      "before_sha256": "a553fbbe22f5f5d8d346b4419c4dc2d2d75f85af56720cbe7492004e59e1a079",
+      "after_sha256": "25236b4772f8836d1e964f218a9d729290d92b15dd5adc48187ef02a50c237dc"
+    }
+  ],
+  "missing": [],
+  "extra_outside_extern": []
+}

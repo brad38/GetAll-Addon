@@ -1,0 +1,1819 @@
+{
+  "schema_version": 1,
+  "kind": "read_only_source_integrity_audit",
+  "desktop_commit": "921295de12349e726f7ca21a5edd8a8ecee123d8",
+  "getall_commit": "ceaa962fe1a2088a7f3900509b856743ff4b6672",
+  "scope_project_ids": [
+    "fh1-reimagined",
+    "pinyon-shift",
+    "ssx-recomp"
+  ],
+  "method": [
+    "Read final Git-pinned Desktop snapshot and support ZIP entries.",
+    "Compare every declared source preimage with the actual cached upstream archive, including pinned dependencies.",
+    "Apply all 22 official patch files in memory and compare the resulting text with the support overlay; normalize only CRLF to LF for semantic comparison. Original and replacement SHA-256 checks use raw bytes.",
+    "Trace production write/build/copy call sites and distinguish qualification probe consumers.",
+    "Inspect actual production CMake cache for the Pinyon feature flags. No builds or game execution in this audit."
+  ],
+  "overlay_entries": 86,
+  "text_overlay_entries": 82,
+  "binary_overlay_entries": 4,
+  "upstream_exact_text_entries": 32,
+  "allfix_modified_or_added_overlay_entries": 54,
+  "inline_mutation_paths_outside_overlays": 3,
+  "upstream_patch_replays": 22,
+  "patch_replay_errors": 0,
+  "gameplay_completion_found": false,
+  "production_gameplay_stubs_added_found": false,
+  "commercial_boot_verified_in_this_audit": false,
+  "projects": {
+    "fh1-reimagined": {
+      "support_zip": {
+        "path": "Tools/ForzaNative/source-support.zip",
+        "bytes": 198786,
+        "sha256": "2ba46f15ed7092eb250c47d8616684cea535a25e43fbe2aa0eb8208f8c76617f"
+      },
+      "source_archive": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip",
+        "sha256": "e0d27948ac36bdd1499182d1f75910e3e8805e2c984f0a8042b27bad6ed3826d",
+        "matches": true
+      },
+      "game_archive": null,
+      "overlay_entries": [
+        {
+          "group": "files",
+          "path": "CMakeLists.txt",
+          "before_sha256": "33f75f5525e6d37247ca01b53a47dac90019d458bc549ace4922e7ce762a2857",
+          "declared_before": "33f75f5525e6d37247ca01b53a47dac90019d458bc549ace4922e7ce762a2857",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "ea595da9fd057fbfb1a30e994116790a2682d6da864c4aafd3606e89083e001c",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "cmake/rexglueConfig.cmake.in",
+          "before_sha256": "da50cfe388e375185d6225cfacf48ab5c099b764fa8438236416ddb337c63498",
+          "declared_before": "da50cfe388e375185d6225cfacf48ab5c099b764fa8438236416ddb337c63498",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "02d6d4381ab48d7b445bee070a5d45b2eb4b5b6eacb769dd9846c267998892c9",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/cmake/rexglueConfig.cmake.in",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "cmake/rexglue_export_targets.cmake",
+          "before_sha256": "1bec9f510dbecdec0d1931d48ed1c9628db8411d773cb021c30e0d1b096e1509",
+          "declared_before": "1bec9f510dbecdec0d1931d48ed1c9628db8411d773cb021c30e0d1b096e1509",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "82ae7135e860ddb05be842f3cf21c3cb84f3d85300505c2f389ecdda02698bb4",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/cmake/rexglue_export_targets.cmake",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "cmake/rexglue_fidelityfx.cmake",
+          "before_sha256": "197ee41ddecb20c1828b8d58e84ab85bea9503da54ef621da08f5ca98b718e62",
+          "declared_before": "197ee41ddecb20c1828b8d58e84ab85bea9503da54ef621da08f5ca98b718e62",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "4de3de0939efea515c3aad42167392083f55c30a9891f496660621aab9c60863",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/cmake/rexglue_fidelityfx.cmake",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "cmake/rexglue_install.cmake",
+          "before_sha256": "8fa5089cd1671ddaabfff765ed76c71b04b8d9a16970403c8eef3b69ceadc3ac",
+          "declared_before": "8fa5089cd1671ddaabfff765ed76c71b04b8d9a16970403c8eef3b69ceadc3ac",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "1d3b6404d19796fa045c8994b77513bb04a2f9957c10b984117199aa100ce9c0",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/cmake/rexglue_install.cmake",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/ui/d3d12/d3d12_api.h",
+          "before_sha256": "94ded4173faa857d9725f7c9debac5d2cdab00cc647c263a2c8a2c55bd48149f",
+          "declared_before": "94ded4173faa857d9725f7c9debac5d2cdab00cc647c263a2c8a2c55bd48149f",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "002cc4fc0ce80bf0bc5c23d3aa400f331ab2b97c359e6be92c6477a3abf287da",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/include/rex/ui/d3d12/d3d12_api.h",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/ui/vulkan/allfix_ngx_bridge.h",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "f9c2ffeb913bfd446a832013f1558cb79aff5e37d2c1a152a4868c02b2fb7b26",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/core/filesystem_win.cpp",
+          "before_sha256": "4b8b3e0becd17d631d11693b9ccf264a20268e8286dbeb48b95bc03a33effb74",
+          "declared_before": "4b8b3e0becd17d631d11693b9ccf264a20268e8286dbeb48b95bc03a33effb74",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "e3742399f84881721f855ed2c65aa2488f2a1cde81286111a5de9631dd6ee040",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/src/core/filesystem_win.cpp",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/CMakeLists.txt",
+          "before_sha256": "fe0e8ef5bbab6ede80e5998d230d580c02d2fc24196b4d3357e47c2d2fd37d09",
+          "declared_before": "fe0e8ef5bbab6ede80e5998d230d580c02d2fc24196b4d3357e47c2d2fd37d09",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "b50443094c93eb0faaf3e9e7d8232f4f58bf19d6955b65781dc3d1e3572a0dbd",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/src/graphics/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/vulkan/fh1_dlss.cpp",
+          "before_sha256": "856048ae27c41928a2ad95b980b4aadfed548dbd778fd4b14382d2d3ee083b30",
+          "declared_before": "856048ae27c41928a2ad95b980b4aadfed548dbd778fd4b14382d2d3ee083b30",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "1cf585448d50bffb78e919f225b50c00d6db294fa275156365d30e5b16b2d60f",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/src/graphics/vulkan/fh1_dlss.cpp",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/input/xinput/xinput_input_driver.cpp",
+          "before_sha256": "e23d72749446229b97c370669e507410d5d2715a5417232428dc0cef30b5e088",
+          "declared_before": "e23d72749446229b97c370669e507410d5d2715a5417232428dc0cef30b5e088",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "5d2c2fec4b5a3d369de10071354f7b9ac38d365c5a6546db768b78bbcbe088c6",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/src/input/xinput/xinput_input_driver.cpp",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/system/CMakeLists.txt",
+          "before_sha256": "1b41bd4f16df7c74e32379207601e3403264e388e0f1370f7c55237e3d7ca4a8",
+          "declared_before": "1b41bd4f16df7c74e32379207601e3403264e388e0f1370f7c55237e3d7ca4a8",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "9e2c55bf00c4dbff05802a1a51a9d1cb6a09c90f2bb96a5c4f98b690a839a072",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/src/system/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/ui/CMakeLists.txt",
+          "before_sha256": "f82252f6ae69adff9006bdf224029a337b0193f1b5e10e2c165232afe51ff9bb",
+          "declared_before": "f82252f6ae69adff9006bdf224029a337b0193f1b5e10e2c165232afe51ff9bb",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "1c9a400dbbd11c14b48129315aab11c34a34f31e9e79d93e873f1375a6e488ef",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/src/ui/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/ui/d3d12/d3d12_provider.cpp",
+          "before_sha256": "13689452c2f4d9a1aa2ba828390110d3992a3c068ea35067070a54f8b9df94fc",
+          "declared_before": "13689452c2f4d9a1aa2ba828390110d3992a3c068ea35067070a54f8b9df94fc",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "4017c5fd787911c1c7bb500fe122443121e321e5fb4db9d06e0048ee7162ff04",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/src/ui/d3d12/d3d12_provider.cpp",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "thirdparty/CMakeLists.txt",
+          "before_sha256": "cc359aeb413f58be3ba7d69893e6d551a4d0d650b17721f08e88e8398415e551",
+          "declared_before": "cc359aeb413f58be3ba7d69893e6d551a4d0d650b17721f08e88e8398415e551",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "102efccf5450f365697617af4a322ef0a649331d4f1fa4be6d2147f2a147c06f",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/thirdparty/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "thirdparty/FFmpeg/libavcodec/wmaprodec.c",
+          "before_sha256": "0f9e7ff65ce590cce0c007d1831c9dc8b922599e8d543563fdaaa55980cb55f2",
+          "declared_before": "0f9e7ff65ce590cce0c007d1831c9dc8b922599e8d543563fdaaa55980cb55f2",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "74f708485a0a591c9bda1b76fa07b4587f6085557ad4394aa01ed4900c32df50",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\dependencies\\wmarti-FFmpeg-0604b464c7cb.zip!FFmpeg-0604b464c7cb4ebc94940cf1f324a3b26b87717c/libavcodec/wmaprodec.c",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "thirdparty/FFmpeg/libavutil/internal.h",
+          "before_sha256": "151ab64199c4108d1a70b5234ae786f1aecce18036daa3d8ac744f188740f132",
+          "declared_before": "151ab64199c4108d1a70b5234ae786f1aecce18036daa3d8ac744f188740f132",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "45994c715eaa57bf80d02ca48c5191d0cb6fe1f6991f8f02b5678baaf8ef4edc",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\dependencies\\wmarti-FFmpeg-0604b464c7cb.zip!FFmpeg-0604b464c7cb4ebc94940cf1f324a3b26b87717c/libavutil/internal.h",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "thirdparty/sdl3/src/haptic/darwin/SDL_syshaptic.c",
+          "before_sha256": "a386eec6590fa7d65e6fd84110cefb01141aa3e60ec0abc381534727ead9251c",
+          "declared_before": "a386eec6590fa7d65e6fd84110cefb01141aa3e60ec0abc381534727ead9251c",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "1b765984bacc687862eb7a2a0e751b3173c001f586c67edaf89b028c484a3b0a",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\dependencies\\libsdl-org-SDL-147a8ee32dbf.zip!SDL-147a8ee32dbf9ac02f3794964490687b6bbda1bc/src/haptic/darwin/SDL_syshaptic.c",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "thirdparty/sdl3/src/haptic/hidapi/SDL_hidapihaptic_lg4ff.c",
+          "before_sha256": "bfa9bd7b54b8903e32ca4a6378933cbf620f4c8850b71d960c281cce572382ab",
+          "declared_before": "bfa9bd7b54b8903e32ca4a6378933cbf620f4c8850b71d960c281cce572382ab",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "75892281fce0bbdd647c872f6dc2437619e5dbe7c99a913e2a8439f311830816",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\dependencies\\libsdl-org-SDL-147a8ee32dbf.zip!SDL-147a8ee32dbf9ac02f3794964490687b6bbda1bc/src/haptic/hidapi/SDL_hidapihaptic_lg4ff.c",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "thirdparty/sdl3/src/haptic/windows/SDL_dinputhaptic.c",
+          "before_sha256": "be35495f8c8847e2b2bca8d790fefc92b9132c7bc4bc0a2ba8c49f169a51b94f",
+          "declared_before": "be35495f8c8847e2b2bca8d790fefc92b9132c7bc4bc0a2ba8c49f169a51b94f",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "e4a80c633ec592a11c89bab5f27f82d2deee6e97aadff6039b95508cb744334f",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\dependencies\\libsdl-org-SDL-147a8ee32dbf.zip!SDL-147a8ee32dbf9ac02f3794964490687b6bbda1bc/src/haptic/windows/SDL_dinputhaptic.c",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        }
+      ],
+      "upstream_patch_files": [
+        {
+          "name": "patches/sdl3/0147-sdl-haptic-endless-effects.patch",
+          "sha256": "89461a3f59016f63df916b240bf2c17b296274bc1cc72c966ba905f50a951cd5",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/patches/sdl3/0147-sdl-haptic-endless-effects.patch"
+        },
+        {
+          "name": "patches/ffmpeg/0413-xmaframes-frame-skips.patch",
+          "sha256": "f3995a848895a48796d3b5531d6655166e606c1ede22bb830a7b8d9325298b01",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\FH1-ReImagined-ReIGlue-18fa1cc468d4.zip!ReIGlue-18fa1cc468d4d8b3a2ee5aa8f0480bae68e734b9/patches/ffmpeg/0413-xmaframes-frame-skips.patch"
+        }
+      ],
+      "official_patch_replay_errors": [],
+      "allfix_residual_diffs": [
+        {
+          "path": "CMakeLists.txt",
+          "diff_sha256": "42badc93f24da41a85b3b4bc63331f5bb705820e6a3202315aca94a4d3166282",
+          "diff_characters": 427,
+          "diff": "--- upstream_patched/CMakeLists.txt\n+++ allfix/CMakeLists.txt\n@@ -12,6 +12,10 @@\n     LANGUAGES ${REXGLUE_LANGUAGES}\n     DESCRIPTION \"Xbox 360 Recompilation SDK\"\n )\n+if(MINGW)\n+    set(CMAKE_SHARED_LIBRARY_PREFIX \"\")\n+    add_compile_definitions(_WIN32_WINNT=0x0A00 WINVER=0x0A00)\n+endif()\n # Floor only: bump MAJOR.MINOR for API changes. Patch is derived from git tags\n # in cmake/rex_version.cmake. See docs/RELEASING.md.\n \n"
+        },
+        {
+          "path": "cmake/rexglueConfig.cmake.in",
+          "diff_sha256": "dd6016fa11af005d81789ded1a9c32b4f95a045274f375d2f25f96b123a7777a",
+          "diff_characters": 667,
+          "diff": "--- upstream_patched/cmake/rexglueConfig.cmake.in\n+++ allfix/cmake/rexglueConfig.cmake.in\n@@ -36,6 +36,12 @@\n     endif()\n endif()\n \n+if(@ALLFIX_FH1_FFX_CAPI@ AND NOT TARGET rex::amd_fidelityfx_dx12)\n+    add_library(rex::amd_fidelityfx_dx12 SHARED IMPORTED)\n+    set_target_properties(rex::amd_fidelityfx_dx12 PROPERTIES\n+        IMPORTED_LOCATION \"${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_BINDIR@/amd_fidelityfx_dx12.dll\"\n+        IMPORTED_IMPLIB \"${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_LIBDIR@/amd_fidelityfx_dx12.lib\")\n+endif()\n include(\"${CMAKE_CURRENT_LIST_DIR}/rexglueTargets.cmake\")\n \n # Only Release rexglue is installed, so every consumer config has to reach it.\n"
+        },
+        {
+          "path": "cmake/rexglue_export_targets.cmake",
+          "diff_sha256": "58516940dd46d38f6d09cc33df0d2b708c4b7c0d2989e6518da956426a23c4c0",
+          "diff_characters": 376,
+          "diff": "--- upstream_patched/cmake/rexglue_export_targets.cmake\n+++ allfix/cmake/rexglue_export_targets.cmake\n@@ -34,6 +34,6 @@\n     list(APPEND REXGLUE_INSTALL_FIDELITYFX_TARGETS amd_fidelityfx_vk)\n endif()\n \n-if(TARGET amd_fidelityfx_dx12)\n+if(TARGET amd_fidelityfx_dx12 AND NOT ALLFIX_FH1_FFX_CAPI)\n     list(APPEND REXGLUE_INSTALL_FIDELITYFX_TARGETS amd_fidelityfx_dx12)\n endif()\n"
+        },
+        {
+          "path": "cmake/rexglue_fidelityfx.cmake",
+          "diff_sha256": "0452702d3e3af16327304ce4e9307227bea9ea9884120fbc1c8a943ad1b15f73",
+          "diff_characters": 6868,
+          "diff": "--- upstream_patched/cmake/rexglue_fidelityfx.cmake\n+++ allfix/cmake/rexglue_fidelityfx.cmake\n@@ -1,133 +1,25 @@\n-# rexglue_fidelityfx.cmake — Optional AMD FidelityFX integration via FetchContent\n-#\n-# Expects REXGLUE_ENABLE_FIDELITYFX to be set before inclusion.\n-# On success, creates amd_fidelityfx_vk and/or amd_fidelityfx_dx12 targets\n-# and sets REXGLUE_FIDELITYFX_SOURCE_DIR to the fetched SDK root.\n-\n+# AllFix FH1 private SDK: preserve the shipped FidelityFX C ABI.\n if(NOT REXGLUE_ENABLE_FIDELITYFX)\n     return()\n endif()\n-\n-# ── Dependency validation ────────────────────────────────────────────────\n-if(NOT WIN32)\n-    find_package(Vulkan QUIET)\n-    if(NOT Vulkan_FOUND)\n-        message(WARNING\n-            \"REXGLUE_ENABLE_FIDELITYFX requires the Vulkan SDK but it was not found.\\n\"\n-            \"Install the LunarG Vulkan SDK: https://vulkan.lunarg.com/sdk/home\\n\"\n-            \"Disabling FidelityFX.\")\n-        set(REXGLUE_ENABLE_FIDELITYFX OFF CACHE BOOL \"\" FORCE)\n-        return()\n-    elseif(Vulkan_VERSION VERSION_LESS \"1.3.250\")\n-        message(WARNING\n-            \"REXGLUE_ENABLE_FIDELITYFX requires Vulkan SDK >= 1.3.250 \"\n-            \"(found ${Vulkan_VERSION}).\\n\"\n-            \"Update via: https://vulkan.lunarg.com/sdk/home\\n\"\n-            \"Disabling FidelityFX.\")\n-        set(REXGLUE_ENABLE_FIDELITYFX OFF CACHE BOOL \"\" FORCE)\n-        return()\n-    else()\n-        find_program(_rexglue_glslc glslc)\n-        find_program(_rexglue_glslang glslangValidator)\n-        if(NOT _rexglue_glslc AND NOT _rexglue_glslang)\n-            message(WARNING\n-                \"REXGLUE_ENABLE_FIDELITYFX requires Vulkan shader tools \"\n-                \"(glslc or glslangValidator) but neither was found.\\n\"\n-                \"Install the full LunarG Vulkan SDK: https://vulkan.lunarg.com/sdk/home\\n\"\n-                \"Disabling FidelityFX.\")\n-            set(REXGLUE_ENABLE_FIDELITYFX OFF CACHE BOOL \"\" FORCE)\n-            unset(_rexglue_glslc CACHE)\n-            unset(_rexglue_glslang CACHE)\n-            return()\n-        endif()\n-        unset(_rexglue_glslc CACHE)\n-        unset(_rexglue_glslang CACHE)\n-    endif()\n+if(NOT WIN32 OR NOT MINGW OR NOT REXGLUE_USE_D3D12 OR NOT ALLFIX_FFX_ROOT)\n+    message(FATAL_ERROR \"FH1 FidelityFX requires the verified Windows C API payload\")\n endif()\n-\n-# ── Fetch FidelityFX SDK ─────────────────────────────────────────────────\n-include(FetchContent)\n-FetchContent_Declare(\n-    fidelityfx\n-    GIT_REPOSITORY https://github.com/rexglue/FidelityFX-SDK.git\n-    GIT_TAG        eee08db1688ac3d1275a70b728f4a8ba22914213\n-    GIT_SHALLOW    OFF\n-)\n-FetchContent_GetProperties(fidelityfx)\n-if(NOT fidelityfx_POPULATED)\n-    FetchContent_Populate(fidelityfx)\n+set(ALLFIX_FH1_FFX_CAPI ON CACHE INTERNAL \"\")\n+set(REXGLUE_FIDELITYFX_SOURCE_DIR \"${ALLFIX_FFX_ROOT}/ffx-capi-source\" CACHE INTERNAL \"\")\n+set(_ffx_dll \"${ALLFIX_FFX_ROOT}/ffx-capi-binary/bin/amd_fidelityfx_dx12.dll\")\n+set(_ffx_lib \"${ALLFIX_FFX_ROOT}/ffx-capi-binary/lib/amd_fidelityfx_dx12.lib\")\n+file(SHA256 \"${_ffx_dll}\" _dll_hash)\n+file(SHA256 \"${_ffx_lib}\" _lib_hash)\n+if(NOT _dll_hash STREQUAL \"12a5081257ec95b0b53ad51b4a87fb3c03f97fe0bbb59f9496968f8d50ef93a6\"\n+   OR NOT _lib_hash STREQUAL \"88e94e20bf96889e362a121c8f85df61ba2087124ebd2617475685b29e4f8c1f\")\n+    message(FATAL_ERROR \"FH1 FidelityFX payload differs from SDK10\")\n endif()\n-\n-set(REXGLUE_FIDELITYFX_SOURCE_DIR \"${fidelityfx_SOURCE_DIR}\" CACHE INTERNAL\n-    \"Root of the fetched FidelityFX SDK source tree\")\n-\n-# ── Backend selection ────────────────────────────────────────────────────\n-set(REXGLUE_FIDELITYFX_BACKEND \"auto\" CACHE STRING\n-    \"FidelityFX backend to build (auto, vk, dx12)\")\n-set_property(CACHE REXGLUE_FIDELITYFX_BACKEND PROPERTY STRINGS auto vk dx12)\n-set(_rexglue_fidelityfx_backend \"${REXGLUE_FIDELITYFX_BACKEND}\")\n-string(TOLOWER \"${_rexglue_fidelityfx_backend}\" _rexglue_fidelityfx_backend)\n-\n-if(_rexglue_fidelityfx_backend STREQUAL \"auto\")\n-    if(WIN32 AND REXGLUE_USE_D3D12)\n-        set(_rexglue_fidelityfx_backend \"dx12\")\n-    elseif(REXGLUE_USE_VULKAN)\n-        set(_rexglue_fidelityfx_backend \"vk\")\n-    elseif(REXGLUE_USE_D3D12)\n-        set(_rexglue_fidelityfx_backend \"dx12\")\n-    endif()\n-endif()\n-\n-if(_rexglue_fidelityfx_backend STREQUAL \"vk\")\n-    if(NOT REXGLUE_USE_VULKAN)\n-        message(FATAL_ERROR\n-            \"REXGLUE_FIDELITYFX_BACKEND=vk requires REXGLUE_USE_VULKAN=ON\")\n-    endif()\n-    set(FFX_API_BACKEND VK_X64 CACHE STRING \"\" FORCE)\n-elseif(_rexglue_fidelityfx_backend STREQUAL \"dx12\")\n-    if(NOT REXGLUE_USE_D3D12)\n-        message(FATAL_ERROR\n-            \"REXGLUE_FIDELITYFX_BACKEND=dx12 requires REXGLUE_USE_D3D12=ON\")\n-    endif()\n-    set(FFX_API_BACKEND DX12_X64 CACHE STRING \"\" FORCE)\n-elseif(_rexglue_fidelityfx_backend STREQUAL \"\")\n-    message(FATAL_ERROR \"FidelityFX requires a supported graphics backend\")\n-else()\n-    message(FATAL_ERROR\n-        \"Invalid REXGLUE_FIDELITYFX_BACKEND='${REXGLUE_FIDELITYFX_BACKEND}' \"\n-        \"(expected auto, vk, or dx12)\")\n-endif()\n-\n-if(REXGLUE_USE_VULKAN AND REXGLUE_USE_D3D12)\n-    message(STATUS\n-        \"FidelityFX backend selected for this build: ${_rexglue_fidelityfx_backend}\")\n-endif()\n-\n-# ── Build FidelityFX ─────────────────────────────────────────────────────\n-set(FFX_API_ENABLE_FRAMEGEN_PROVIDER OFF CACHE BOOL \"\" FORCE)\n-if(WIN32)\n-    set(FFX_API_AUTO_COMPILE_SHADERS ON CACHE BOOL \"\" FORCE)\n-else()\n-    set(FFX_API_AUTO_COMPILE_SHADERS OFF CACHE BOOL \"\" FORCE)\n-endif()\n-add_subdirectory(\"${fidelityfx_SOURCE_DIR}/ffx-api\" \"${fidelityfx_BINARY_DIR}/ffx-api\" EXCLUDE_FROM_ALL)\n-\n-# The upstream FidelityFX targets expose source-tree include paths in\n-# INTERFACE_INCLUDE_DIRECTORIES, which breaks our install export checks.\n-# We only link against these targets internally, so no public includes are\n-# needed on the exported interface.\n-if(TARGET amd_fidelityfx_vk)\n-    set_target_properties(amd_fidelityfx_vk PROPERTIES\n-        INTERFACE_INCLUDE_DIRECTORIES \"\"\n-    )\n-endif()\n-if(TARGET amd_fidelityfx_dx12)\n-    set_target_properties(amd_fidelityfx_dx12 PROPERTIES\n-        INTERFACE_INCLUDE_DIRECTORIES \"\"\n-    )\n-endif()\n-\n-# FidelityFX's toolchain.cmake force-sets CMAKE_GENERATOR_PLATFORM (for VS generators).\n-# With Ninja this variable is invalid and poisons every subsequent try_compile() call.\n-# Clear it from the cache.\n-unset(CMAKE_GENERATOR_PLATFORM CACHE)\n+add_library(rex::amd_fidelityfx_dx12 SHARED IMPORTED GLOBAL)\n+set_target_properties(rex::amd_fidelityfx_dx12 PROPERTIES\n+    IMPORTED_LOCATION \"${_ffx_dll}\"\n+    IMPORTED_IMPLIB \"${_ffx_lib}\")\n+add_library(amd_fidelityfx_dx12 ALIAS rex::amd_fidelityfx_dx12)\n+install(FILES \"${_ffx_dll}\" DESTINATION \"${CMAKE_INSTALL_BINDIR}\")\n+install(FILES \"${_ffx_lib}\" DESTINATION \"${CMAKE_INSTALL_LIBDIR}\")\n+install(DIRECTORY \"${ALLFIX_FFX_ROOT}/ffx-capi-binary/licenses/\" DESTINATION licenses)\n"
+        },
+        {
+          "path": "cmake/rexglue_install.cmake",
+          "diff_sha256": "2ae4e05f22f2850e5c81fb122c449b00aa99d7df2d7f9f748c0623a4ba82693f",
+          "diff_characters": 1617,
+          "diff": "--- upstream_patched/cmake/rexglue_install.cmake\n+++ allfix/cmake/rexglue_install.cmake\n@@ -144,33 +144,4 @@\n     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/rexglue\n )\n \n-# Register in the CMake User Package Registry after install.\n-# This makes find_package(rexglue) work with no REXSDK env var or CMAKE_PREFIX_PATH.\n-# Multiple SxS installs coexist. Each prefix gets a unique hash entry.\n-#\n-# Windows: HKCU\\Software\\Kitware\\CMake\\Packages\\rexglue  (REG_SZ, value name = MD5 hash)\n-# Unix:    ~/.cmake/packages/rexglue/<hash>               (file containing prefix path)\n-install(CODE [[\n-    # Normalize path casing on Windows before hashing to avoid duplicate entries\n-    if(CMAKE_HOST_WIN32)\n-        string(TOLOWER \"${CMAKE_INSTALL_PREFIX}\" _reg_key)\n-    else()\n-        set(_reg_key \"${CMAKE_INSTALL_PREFIX}\")\n-    endif()\n-    string(MD5 _hash \"${_reg_key}\")\n-\n-    if(CMAKE_HOST_WIN32)\n-        # Windows CMake User Package Registry lives in HKCU (not the filesystem)\n-        set(_reg_root \"HKCU\\\\Software\\\\Kitware\\\\CMake\\\\Packages\\\\rexglue\")\n-        execute_process(\n-            COMMAND reg add \"${_reg_root}\" /v \"${_hash}\" /t REG_SZ /d \"${CMAKE_INSTALL_PREFIX}\" /f\n-            OUTPUT_QUIET ERROR_QUIET\n-        )\n-    else()\n-        set(_reg_dir \"$ENV{HOME}/.cmake/packages/rexglue\")\n-        file(MAKE_DIRECTORY \"${_reg_dir}\")\n-        file(WRITE \"${_reg_dir}/${_hash}\" \"${CMAKE_INSTALL_PREFIX}\")\n-    endif()\n-    message(STATUS \"Registered rexglue in CMake user package registry\")\n-    message(STATUS \"  -> ${CMAKE_INSTALL_PREFIX}\")\n-]])\n+# AllFix private SDK: no user/global package registration.\n"
+        },
+        {
+          "path": "include/rex/ui/d3d12/d3d12_api.h",
+          "diff_sha256": "15bbdccf08be2fc0a0e84ef1b1fdc6a55869316c96ce6980a3ea5862ac397fd9",
+          "diff_characters": 1250,
+          "diff": "--- upstream_patched/include/rex/ui/d3d12/d3d12_api.h\n+++ allfix/include/rex/ui/d3d12/d3d12_api.h\n@@ -21,7 +21,17 @@\n #include <windows.h>\n #include <ObjBase.h>\n \n+#if defined(__MINGW32__)\n+// Public COM contract from DXProgrammableCapture.h, Windows SDK 10.0.26100.0.\n+MIDL_INTERFACE(\"9f251514-9d4d-4902-9d60-18988ab7d4b5\")\n+IDXGraphicsAnalysis : public IUnknown {\n+  virtual void STDMETHODCALLTYPE BeginCapture() = 0;\n+  virtual void STDMETHODCALLTYPE EndCapture() = 0;\n+};\n+__CRT_UUID_DECL(IDXGraphicsAnalysis, 0x9f251514, 0x9d4d, 0x4902, 0x9d, 0x60, 0x18, 0x98, 0x8a, 0xb7, 0xd4, 0xb5)\n+#else\n #include <DXProgrammableCapture.h>\n+#endif\n #include <d3d12.h>\n #include <d3d12sdklayers.h>\n #include <d3dcompiler.h>\n@@ -31,5 +41,11 @@\n #include <wrl/client.h>\n #include <dxcapi.h>\n #include \"DxbcConverter.h\"\n+#if defined(__MINGW32__)\n+// MinGW GUID traits from the official DXC header declarations.\n+__CRT_UUID_DECL(IDxbcConverter, 0x5f956ed5, 0x78d1, 0x4b15, 0x82, 0x47, 0xf7, 0x18, 0x76, 0x14, 0xa0, 0x41)\n+__CRT_UUID_DECL(IDxcUtils, 0x4605c4cb, 0x2019, 0x492a, 0xad, 0xa4, 0x65, 0xf2, 0x0b, 0xb7, 0xd6, 0x7f)\n+__CRT_UUID_DECL(IDxcCompiler, 0x8c210bf3, 0x011f, 0x4422, 0x8d, 0x70, 0x6f, 0x9a, 0xcb, 0x8d, 0xb6, 0x17)\n+#endif\n \n // clang-format on\n"
+        },
+        {
+          "path": "include/rex/ui/vulkan/allfix_ngx_bridge.h",
+          "diff_sha256": "34b4e0c0823270b682f01b066b82bf4e288e40d5538fc1213babc1855b98b85b",
+          "diff_characters": 16920,
+          "review_reference": "Full added source is retained in the pinned source-support.zip; see the reviewed bridge/header description in rex-review.md."
+        },
+        {
+          "path": "src/core/filesystem_win.cpp",
+          "diff_sha256": "1d39357241fb129a9a93b71818db796ba0b41ae89ec9a06816018171ed1b5a5d",
+          "diff_characters": 958,
+          "diff": "--- upstream_patched/src/core/filesystem_win.cpp\n+++ allfix/src/core/filesystem_win.cpp\n@@ -43,9 +43,25 @@\n namespace filesystem {\n \n std::filesystem::path GetExecutablePath() {\n+#if defined(__MINGW32__)\n+  // A narrow main() does not initialize the CRT's wide program-path slot.\n+  // The Windows process image path is independent of that CRT entry point.\n+  std::wstring path(260, L'\\0');\n+  for (;;) {\n+    const DWORD length = GetModuleFileNameW(nullptr, path.data(), static_cast<DWORD>(path.size()));\n+    if (length == 0) return {};\n+    if (length < path.size()) {\n+      path.resize(length);\n+      return std::filesystem::path(path);\n+    }\n+    if (path.size() == 32768) return {};\n+    path.resize(path.size() < 16384 ? path.size() * 2 : 32768);\n+  }\n+#else\n   wchar_t* path;\n   auto error = _get_wpgmptr(&path);\n   return !error ? std::filesystem::path(path) : std::filesystem::path();\n+#endif\n }\n \n std::filesystem::path GetExecutableFolder() {\n"
+        },
+        {
+          "path": "src/graphics/CMakeLists.txt",
+          "diff_sha256": "5a9d9d9a9e32b7f762e7d20865941c504254a917507f5023bdf7bf4d4221a471",
+          "diff_characters": 1868,
+          "diff": "--- upstream_patched/src/graphics/CMakeLists.txt\n+++ allfix/src/graphics/CMakeLists.txt\n@@ -164,8 +164,23 @@\n     include(${REXGLUE_ROOT}/cmake/ForzaDlssSdk.cmake)\n     target_compile_definitions(rexgpu-xenos PRIVATE REX_FH1_NGX=1)\n     target_include_directories(rexgpu-xenos SYSTEM PRIVATE \"${REXGLUE_DLSS_SDK}/include\")\n-    target_link_libraries(rexgpu-xenos PRIVATE\n-        \"${REXGLUE_DLSS_SDK}/lib/Windows_x86_64/x64/nvsdk_ngx_d.lib\")\n+    if(NOT MINGW OR NOT ALLFIX_FH1_NGX_ROOT)\n+        message(FATAL_ERROR \"FH1 private source requires the verified NGX C ABI bridge\")\n+    endif()\n+    set(_allfix_ngx_dll \"${ALLFIX_FH1_NGX_ROOT}/bin/allfix-ngx-fh1.dll\")\n+    set(_allfix_ngx_lib \"${ALLFIX_FH1_NGX_ROOT}/bin/allfix-ngx-fh1.lib\")\n+    file(SHA256 \"${_allfix_ngx_dll}\" _allfix_ngx_dll_hash)\n+    file(SHA256 \"${_allfix_ngx_lib}\" _allfix_ngx_lib_hash)\n+    if(NOT _allfix_ngx_dll_hash STREQUAL \"548976161a6793bdd847f51d3b151902cfe667fa83213bb5c04af34515c7dd58\" OR NOT _allfix_ngx_lib_hash STREQUAL \"8e742d45ea8b9224717eca9bbf19c6f0bfd20160d4c618b3a1e7be4cdc16e864\")\n+        message(FATAL_ERROR \"FH1 NGX C ABI payload differs from the reviewed build\")\n+    endif()\n+    add_library(AllFixNgxFH1 SHARED IMPORTED)\n+    set_target_properties(AllFixNgxFH1 PROPERTIES IMPORTED_LOCATION \"${_allfix_ngx_dll}\" IMPORTED_IMPLIB \"${_allfix_ngx_lib}\")\n+    target_link_libraries(rexgpu-xenos PRIVATE AllFixNgxFH1)\n+    add_custom_command(TARGET rexgpu-xenos POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different\n+        \"${_allfix_ngx_dll}\" \"$<TARGET_FILE_DIR:rexgpu-xenos>/allfix-ngx-fh1.dll\")\n+    install(FILES \"${_allfix_ngx_dll}\" DESTINATION bin)\n+\n     add_custom_command(TARGET rexgpu-xenos POST_BUILD\n         COMMAND ${CMAKE_COMMAND} -E copy_if_different \"${REXGLUE_DLSS_SDK}/LICENSE.txt\"\n             \"$<TARGET_FILE_DIR:rexgpu-xenos>/NVIDIA-DLSS-LICENSE.txt\"\n"
+        },
+        {
+          "path": "src/graphics/vulkan/fh1_dlss.cpp",
+          "diff_sha256": "bcc2ceed986eccfa62ba13025e43a3113ff52ce9fe41ac098397563a5405ef9b",
+          "diff_characters": 6863,
+          "diff": "--- upstream_patched/src/graphics/vulkan/fh1_dlss.cpp\n+++ allfix/src/graphics/vulkan/fh1_dlss.cpp\n@@ -15,8 +15,7 @@\n #include <rex/graphics/vulkan/fh1_metalfx.h>\n #endif\n #if defined(REX_FH1_NGX)\n-#include <nvsdk_ngx_helpers_vk.h>\n-#include <nvsdk_ngx_helpers.h>\n+#include <rex/ui/vulkan/allfix_ngx_bridge.h>\n #endif\n \n namespace rex::graphics::vulkan {\n@@ -46,8 +45,8 @@\n   bool dlaa = false;\n   const char* test_failure = std::getenv(\"FORZA_DLSS_TEST_FAILURE\");\n #if defined(REX_FH1_NGX)\n-  NVSDK_NGX_Parameter* parameters = nullptr;\n-  NVSDK_NGX_Handle* feature = nullptr;\n+  AllfixNgxParameters* parameters = nullptr;\n+  AllfixNgxFeature* feature = nullptr;\n #endif\n   // AMD FidelityFX FSR 3 backend: the same inputs, a different reconstruction.\n   bool smaa_mode = false;\n@@ -109,7 +108,7 @@\n     // The scene is already tonemapped; floating-point storage isn't HDR input.\n     create.InFeatureCreateFlags = NVSDK_NGX_DLSS_Feature_Flags_MVLowRes |\n         NVSDK_NGX_DLSS_Feature_Flags_AutoExposure | NVSDK_NGX_DLSS_Feature_Flags_DepthInverted;\n-    auto result = NGX_VULKAN_CREATE_DLSS_EXT1(d, command, 1, 1, &feature, parameters, &create);\n+    auto result = allfix_ngx_create_dlss1(d, command, 1, 1, &feature, parameters, &create);\n     if (test_failure && std::string_view(test_failure) == \"create\") result = NVSDK_NGX_Result_FAIL_PlatformError;\n     if (NVSDK_NGX_FAILED(result)) { cleanup(); return false; }\n     for (auto& image : images) {\n@@ -134,7 +133,7 @@\n     eval.pInDepth = &resources[2]; eval.pInMotionVectors = &resources[3];\n     eval.InRenderSubrectDimensions = {width, height}; eval.InMVScaleX = eval.InMVScaleY = 1.0f;\n     eval.InReset = true; eval.InPreExposure = eval.InExposureScale = 1.0f;\n-    result = NGX_VULKAN_EVALUATE_DLSS_EXT(command, feature, parameters, &eval);\n+    result = allfix_ngx_evaluate_dlss(command, feature, parameters, &eval);\n     if (NVSDK_NGX_FAILED(result) || f.vkEndCommandBuffer(command) != VK_SUCCESS) { cleanup(); return false; }\n     VkFenceCreateInfo fence_info{VK_STRUCTURE_TYPE_FENCE_CREATE_INFO};\n     if (f.vkCreateFence(d, &fence_info, nullptr, &fence) != VK_SUCCESS) { cleanup(); return false; }\n@@ -319,9 +318,9 @@\n   s.metalfx.reset();\n #endif\n #if defined(REX_FH1_NGX)\n-  if (s.feature) NVSDK_NGX_VULKAN_ReleaseFeature(s.feature);\n-  if (s.parameters) NVSDK_NGX_VULKAN_DestroyParameters(s.parameters);\n-  if (s.initialized) NVSDK_NGX_VULKAN_Shutdown1(s.device->device());\n+  if (s.feature) allfix_ngx_release_feature(s.feature);\n+  if (s.parameters) allfix_ngx_destroy_parameters(s.parameters);\n+  if (s.initialized) allfix_ngx_shutdown(s.device->device());\n #endif\n   for (auto& image : s.images) {\n     const auto& f = s.device->functions(); const auto d = s.device->device();\n@@ -378,6 +377,7 @@\n   if (s.metalfx_mode) return s.InitializeMetalFx();\n #endif\n #if defined(REX_FH1_NGX)\n+  if (!allfix_ngx_compatible()) { REXGPU_ERROR(\"DLSS: private NVIDIA ABI mismatch\"); return false; }\n #if defined(_WIN32)\n   const wchar_t* root = _wgetenv(L\"FORZA_DLSS_RUNTIME\");\n #else\n@@ -388,26 +388,26 @@\n   const std::wstring path = folder.wstring(); const wchar_t* search = path.c_str();\n   NVSDK_NGX_FeatureCommonInfo common{};\n   common.PathListInfo = {&search, 1};\n-  common.LoggingInfo.LoggingCallback = [](const char* message, NVSDK_NGX_Logging_Level, NVSDK_NGX_Feature) {\n-    REXGPU_INFO(\"NGX: {}\", message);\n+  common.LoggingInfo.LoggingCallback = [](const char* message, NVSDK_NGX_Logging_Level, NVSDK_NGX_Feature) noexcept {\n+    try { const std::string copy(message ? message : \"\"); REXGPU_INFO(\"NGX: {}\", copy); } catch (...) {}\n   };\n   common.LoggingInfo.MinimumLoggingLevel = NVSDK_NGX_LOGGING_LEVEL_OFF;\n   const auto* instance = s.device->vulkan_instance();\n   const auto& functions = instance->functions();\n-  auto result = NVSDK_NGX_VULKAN_Init_with_ProjectID(\"34a624c1-4bc3-4c46-923e-e986268895f7\",\n+  auto result = allfix_ngx_init_project(\"34a624c1-4bc3-4c46-923e-e986268895f7\",\n       NVSDK_NGX_ENGINE_TYPE_CUSTOM, \"ReImagined-native\", path.c_str(), instance->instance(),\n       s.device->physical_device(), s.device->device(), functions.vkGetInstanceProcAddr,\n       functions.vkGetDeviceProcAddr, &common);\n   if (NVSDK_NGX_FAILED(result)) { REXGPU_ERROR(\"DLSS: NGX initialization failed: {:08X}\", uint32_t(result)); return false; }\n   s.initialized = true;\n-  result = NVSDK_NGX_VULKAN_GetCapabilityParameters(&s.parameters);\n+  result = allfix_ngx_capability_parameters(&s.parameters);\n   int available = 0;\n   int updated_driver = 0, feature_result = 0;\n   if (s.parameters) {\n-    s.parameters->Get(NVSDK_NGX_Parameter_SuperSampling_NeedsUpdatedDriver, &updated_driver);\n-    s.parameters->Get(NVSDK_NGX_Parameter_SuperSampling_FeatureInitResult, &feature_result);\n-  }\n-  if (NVSDK_NGX_FAILED(result) || !s.parameters || NVSDK_NGX_FAILED(s.parameters->Get(NVSDK_NGX_Parameter_SuperSampling_Available, &available)) || !available) {\n+    allfix_ngx_get_i(s.parameters, NVSDK_NGX_Parameter_SuperSampling_NeedsUpdatedDriver, &updated_driver);\n+    allfix_ngx_get_i(s.parameters, NVSDK_NGX_Parameter_SuperSampling_FeatureInitResult, &feature_result);\n+  }\n+  if (NVSDK_NGX_FAILED(result) || !s.parameters || NVSDK_NGX_FAILED(allfix_ngx_get_i(s.parameters, NVSDK_NGX_Parameter_SuperSampling_Available, &available)) || !available) {\n     REXGPU_ERROR(\"DLSS: unavailable (capabilities={:08X}, feature={:08X}, needs_driver={})\",\n         uint32_t(result), uint32_t(feature_result), updated_driver); return false;\n   }\n@@ -416,7 +416,7 @@\n   else if (s.mode == \"dlaa\") s.quality = NVSDK_NGX_PerfQuality_Value_DLAA;\n   else if (s.mode != \"dlss\" && s.mode != \"performance\") return false;\n   unsigned max_w = 0, max_h = 0, min_w = 0, min_h = 0; float sharpness = 0;\n-  result = NGX_DLSS_GET_OPTIMAL_SETTINGS(s.parameters, s.output_width, s.output_height,\n+  result = allfix_ngx_optimal_settings(s.parameters, s.output_width, s.output_height,\n       s.quality, &s.width, &s.height, &max_w, &max_h, &min_w, &min_h, &sharpness);\n   if (NVSDK_NGX_FAILED(result) || !s.width || !s.height || s.width > s.output_width ||\n       s.height > s.output_height || (s.dlaa && (s.width != s.output_width || s.height != s.output_height))) {\n@@ -520,7 +520,7 @@\n     ngx_dependency.dstAccessMask = VK_ACCESS_MEMORY_READ_BIT | VK_ACCESS_MEMORY_WRITE_BIT;\n     f.vkCmdPipelineBarrier(command, VK_PIPELINE_STAGE_ALL_COMMANDS_BIT,\n         VK_PIPELINE_STAGE_ALL_COMMANDS_BIT, 0, 1, &ngx_dependency, 0, nullptr, 0, nullptr);\n-    auto result = NGX_VULKAN_EVALUATE_DLSS_EXT(command, s.feature, s.parameters, &eval);\n+    auto result = allfix_ngx_evaluate_dlss(command, s.feature, s.parameters, &eval);\n     if (s.test_failure && std::string_view(s.test_failure) == \"evaluate\" && s.frames >= 8) result = NVSDK_NGX_Result_FAIL_PlatformError;\n     rendered = NVSDK_NGX_SUCCEED(result);\n     if (!rendered) {\n"
+        },
+        {
+          "path": "src/input/xinput/xinput_input_driver.cpp",
+          "diff_sha256": "ce6769fe802a382d7052f278ed0c879964f44092f0d9d6745974dde5864bbcdc",
+          "diff_characters": 695,
+          "diff": "--- upstream_patched/src/input/xinput/xinput_input_driver.cpp\n+++ allfix/src/input/xinput/xinput_input_driver.cpp\n@@ -115,12 +115,12 @@\n   }\n \n   module_ = module;\n-  XInputGetCapabilities_ = xigc;\n-  XInputGetState_ = xigs;\n-  XInputGetStateEx_ = xigsEx;\n-  XInputGetKeystroke_ = xigk;\n-  XInputSetState_ = xiss;\n-  XInputEnable_ = xie;\n+  XInputGetCapabilities_ = reinterpret_cast<void*>(xigc);\n+  XInputGetState_ = reinterpret_cast<void*>(xigs);\n+  XInputGetStateEx_ = reinterpret_cast<void*>(xigsEx);\n+  XInputGetKeystroke_ = reinterpret_cast<void*>(xigk);\n+  XInputSetState_ = reinterpret_cast<void*>(xiss);\n+  XInputEnable_ = reinterpret_cast<void*>(xie);\n \n   return X_STATUS_SUCCESS;\n }\n"
+        },
+        {
+          "path": "src/system/CMakeLists.txt",
+          "diff_sha256": "af541f74a2331f96c575dc39aec2718286c1c142ec8a803165aa3f477d787217",
+          "diff_characters": 570,
+          "diff": "--- upstream_patched/src/system/CMakeLists.txt\n+++ allfix/src/system/CMakeLists.txt\n@@ -54,6 +54,11 @@\n add_library(rex::kernel ALIAS rexruntime)\n \n set_target_properties(rexruntime PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)\n+# MinGW disables implicit auto-export when an object has explicit dllexport\n+# declarations. Mirror the upstream WINDOWS_EXPORT_ALL_SYMBOLS contract.\n+if(MINGW)\n+    target_link_options(rexruntime PRIVATE \"-Wl,--export-all-symbols\")\n+endif()\n rexglue_add_version_resource(rexruntime DESCRIPTION \"ReXGlue runtime\")\n \n rex_target_pch(rexruntime\n"
+        },
+        {
+          "path": "src/ui/CMakeLists.txt",
+          "diff_sha256": "736bed734d705ac47f038dfb4f294fa273cbf926e0ca3ea32a25794b789c3e1a",
+          "diff_characters": 685,
+          "diff": "--- upstream_patched/src/ui/CMakeLists.txt\n+++ allfix/src/ui/CMakeLists.txt\n@@ -119,7 +119,7 @@\n # REX_HAS_FIDELITYFX_SDK (the spatial effects, CAS and FSR 1) is defined for the whole SDK in\n # the top-level CMakeLists.txt; only the temporal upscaler (REX_HAS_FIDELITYFX_RUNTIME below)\n # needs the FidelityFX SDK.\n-if(REXGLUE_FIDELITYFX_SOURCE_DIR AND EXISTS \"${REXGLUE_FIDELITYFX_SOURCE_DIR}/sdk/include\")\n+if(REXGLUE_FIDELITYFX_SOURCE_DIR AND EXISTS \"${REXGLUE_FIDELITYFX_SOURCE_DIR}/ffx-api/include/ffx_api/ffx_api.h\")\n     target_include_directories(rexui PRIVATE\n         \"${REXGLUE_FIDELITYFX_SOURCE_DIR}/sdk/include\"\n         \"${REXGLUE_FIDELITYFX_SOURCE_DIR}/ffx-api/include\"\n"
+        },
+        {
+          "path": "src/ui/d3d12/d3d12_provider.cpp",
+          "diff_sha256": "41d63f06b1cfd04a99e538b796818691dad696d96c450c4bd373bd66a7a11109",
+          "diff_characters": 678,
+          "diff": "--- upstream_patched/src/ui/d3d12/d3d12_provider.cpp\n+++ allfix/src/ui/d3d12/d3d12_provider.cpp\n@@ -276,7 +276,7 @@\n       bool keep = false;\n       if (SUCCEEDED(candidate->GetDesc1(&desc)) &&\n           SUCCEEDED(pfn_d3d12_create_device_(candidate, D3D_FEATURE_LEVEL_11_0,\n-                                             _uuidof(ID3D12Device), nullptr))) {\n+                                             __uuidof(ID3D12Device), nullptr))) {\n         const bool software = (desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE) != 0;\n         REXLOG_INFO(\"DXGI adapter {}: vendor 0x{:04X}, device 0x{:04X}, {} MB dedicated{}\",\n                     adapter_index, desc.VendorId, desc.DeviceId,\n"
+        },
+        {
+          "path": "thirdparty/CMakeLists.txt",
+          "diff_sha256": "ee18053693ed211e8c35baa1d0ca7ad552983870d0da32e52bb681d51da85360",
+          "diff_characters": 479,
+          "diff": "--- upstream_patched/thirdparty/CMakeLists.txt\n+++ allfix/thirdparty/CMakeLists.txt\n@@ -64,7 +64,7 @@\n endif()\n \n foreach(submodule ${REQUIRED_SUBMODULES})\n-    if(NOT EXISTS \"${CMAKE_CURRENT_SOURCE_DIR}/${submodule}/.git\")\n+    if(NOT EXISTS \"${CMAKE_CURRENT_SOURCE_DIR}/${submodule}/allfix-source-identity.json\")\n         message(FATAL_ERROR\n             \"Git submodule '${submodule}' is not initialized.\\n\"\n             \"Please run: git submodule update --init --recursive\\n\"\n"
+        },
+        {
+          "path": "thirdparty/FFmpeg/libavutil/internal.h",
+          "diff_sha256": "a52238a91bfea9fbd9c0c2012faccf18d35aab1a5ae2cfbdb3f84fea697fa67c",
+          "diff_characters": 513,
+          "diff": "--- upstream_patched/thirdparty/FFmpeg/libavutil/internal.h\n+++ allfix/thirdparty/FFmpeg/libavutil/internal.h\n@@ -178,7 +178,9 @@\n                            const char *msg, ...) av_printf_format(2, 3);\n \n #if HAVE_LIBC_MSVCRT\n+#if defined(_MSC_VER) && !defined(__MINGW32__)\n #include <crtversion.h>\n+#endif\n #if defined(_VC_CRT_MAJOR_VERSION) && _VC_CRT_MAJOR_VERSION < 14\n #pragma comment(linker, \"/include:\" EXTERN_PREFIX \"avpriv_strtod\")\n #pragma comment(linker, \"/include:\" EXTERN_PREFIX \"avpriv_snprintf\")\n"
+        }
+      ],
+      "all_preimages_and_replacements_match": true,
+      "all_declared_new_paths_absent_from_original": true
+    },
+    "pinyon-shift": {
+      "support_zip": {
+        "path": "Tools/PinyonNative/source-support.zip",
+        "bytes": 175161,
+        "sha256": "cc77d46b575da64c3c66e50d5306cd4e12c9cd45f2dc42738b09e614367bcfc6"
+      },
+      "source_archive": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip",
+        "sha256": "aa1d44cb4110953d53e7693021949dcbcc69429b09f15e78bd753169e2169f96",
+        "matches": true
+      },
+      "game_archive": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\pinyon-engine\\games\\Pinyon - pinyon-shift v0.9.5\\pinyon-shift-source.zip",
+        "sha256": "0d0ef7fc980366c2564128f619aee2ecc859bd4fd2723c0dc32ab55769df3f81"
+      },
+      "overlay_entries": [
+        {
+          "group": "files",
+          "path": "CMakeLists.txt",
+          "before_sha256": "100b337e22eadf5ecf91750738ba11402de42b6eeaef15f5b4a8aeaac0bd8c71",
+          "declared_before": "100b337e22eadf5ecf91750738ba11402de42b6eeaef15f5b4a8aeaac0bd8c71",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "58d4ca8d5868b365fd59e8a26b79ef770d04862ea21fd166e5413f390ac07592",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip!shiftglue-sdk-0c2187cbdc1857029550f510f4d3d5bee36a57a6/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "cmake/rexglue_dlss.cmake",
+          "before_sha256": "b7a00c37b817a3147fa625f29c195edf52e356ec44941cd05b1fb2cc27282e62",
+          "declared_before": "b7a00c37b817a3147fa625f29c195edf52e356ec44941cd05b1fb2cc27282e62",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "b964c74d3b1dee3df2d7a2d45703295445d1dc01dd778ad713dcd00233db5c60",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip!shiftglue-sdk-0c2187cbdc1857029550f510f4d3d5bee36a57a6/cmake/rexglue_dlss.cmake",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "cmake/rexglue_helpers.cmake",
+          "before_sha256": "0e9b3b06284bbafded73312ad447d6d9410b355267a0d4f7a53201a035356137",
+          "declared_before": "0e9b3b06284bbafded73312ad447d6d9410b355267a0d4f7a53201a035356137",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "28194a6e5c5650e310b55d7cdd987056f7f15cbc9a14d502622538feb755fd9b",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip!shiftglue-sdk-0c2187cbdc1857029550f510f4d3d5bee36a57a6/cmake/rexglue_helpers.cmake",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/ui/d3d11/d3d11_api.h",
+          "before_sha256": "2b25dfda3b4f8eaf987594da0f567003ecf7c32b114915310faa16e4e0b4afa3",
+          "declared_before": "2b25dfda3b4f8eaf987594da0f567003ecf7c32b114915310faa16e4e0b4afa3",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "5a05e2edce0017fdbe50c050dd619c7843bbb162a228292360dd1d8e260e25d9",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip!shiftglue-sdk-0c2187cbdc1857029550f510f4d3d5bee36a57a6/include/rex/ui/d3d11/d3d11_api.h",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/ui/d3d12/d3d12_api.h",
+          "before_sha256": "fce1f7f225fb1ff574192d07ea8bfb855c9f3a88def0848b40dfa1be91be6c68",
+          "declared_before": "fce1f7f225fb1ff574192d07ea8bfb855c9f3a88def0848b40dfa1be91be6c68",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "99e29aa37707ddd0a666c57483bee1fdb5ebc30378d4753cf2b3ec27bb7a2094",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip!shiftglue-sdk-0c2187cbdc1857029550f510f4d3d5bee36a57a6/include/rex/ui/d3d12/d3d12_api.h",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/core/CMakeLists.txt",
+          "before_sha256": "d2fa92c185defbb558f3ee7e6d52a4e586215717ec4d234e547f62903ef182b6",
+          "declared_before": "d2fa92c185defbb558f3ee7e6d52a4e586215717ec4d234e547f62903ef182b6",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "d743d11b2a67585375db70dbac7e9524c29fffc6e3ff6855219f58d91105d83f",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip!shiftglue-sdk-0c2187cbdc1857029550f510f4d3d5bee36a57a6/src/core/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/core/perf/counter.cpp",
+          "before_sha256": "c183ea28c602fbf4a010328bf427c1c78436dd500471e679845c2b3de14f0a93",
+          "declared_before": "c183ea28c602fbf4a010328bf427c1c78436dd500471e679845c2b3de14f0a93",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "a7f4bdc87dcdef4374a4f9e2dfad69952edd80fa115b114c62a6a1714db4dce3",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip!shiftglue-sdk-0c2187cbdc1857029550f510f4d3d5bee36a57a6/src/core/perf/counter.cpp",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/input/xinput/xinput_input_driver.cpp",
+          "before_sha256": "b582b4a67fa6f867ba6372e6bfe8fcf6927d1fe5f85ea65a891f7672eb37308b",
+          "declared_before": "b582b4a67fa6f867ba6372e6bfe8fcf6927d1fe5f85ea65a891f7672eb37308b",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "97158233dc348960accc30889201a211568c6d1adbefa3514d9f3c21e9fcb10e",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip!shiftglue-sdk-0c2187cbdc1857029550f510f4d3d5bee36a57a6/src/input/xinput/xinput_input_driver.cpp",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/system/CMakeLists.txt",
+          "before_sha256": "70aa89f2853fc87b4eeb68fc8a672264039dcce39a3202e9d7ed58c07cabc2c2",
+          "declared_before": "70aa89f2853fc87b4eeb68fc8a672264039dcce39a3202e9d7ed58c07cabc2c2",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "ed8637984fa2a769b24009689c7c5d6d4f2cf02178fd058c889aa157f88a764f",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip!shiftglue-sdk-0c2187cbdc1857029550f510f4d3d5bee36a57a6/src/system/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/ui/CMakeLists.txt",
+          "before_sha256": "e8ca70ec6e0675ed2c0aa5b7034e6299df0b19213cdc5197a7c1112de8031c91",
+          "declared_before": "e8ca70ec6e0675ed2c0aa5b7034e6299df0b19213cdc5197a7c1112de8031c91",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "447280c71ef8ecb74dd6de547c46664bfdef602293f34eaffb515e756064bdd6",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip!shiftglue-sdk-0c2187cbdc1857029550f510f4d3d5bee36a57a6/src/ui/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/ui/d3d12/d3d12_provider.cpp",
+          "before_sha256": "1f64ea37cb7c05e15c73ab1201ac4e16b7f38fece27a43fd75be3398ea8da7f8",
+          "declared_before": "1f64ea37cb7c05e15c73ab1201ac4e16b7f38fece27a43fd75be3398ea8da7f8",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "1f4db19e345bde5604bcc1e1eb2c220ab0d4f4366e9389d3b925495e13a421f6",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip!shiftglue-sdk-0c2187cbdc1857029550f510f4d3d5bee36a57a6/src/ui/d3d12/d3d12_provider.cpp",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/ui/vulkan/vulkan_dlss_upscaler.cpp",
+          "before_sha256": "03636f2c9d8d7a065dab9d62aaf7173508a7ecaf1762ec28d8e9995cdaace6c7",
+          "declared_before": "03636f2c9d8d7a065dab9d62aaf7173508a7ecaf1762ec28d8e9995cdaace6c7",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "eaf0e43d0f20aef73024236046f9fd5c47b5055fe39070760ede15d3abb156e7",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip!shiftglue-sdk-0c2187cbdc1857029550f510f4d3d5bee36a57a6/src/ui/vulkan/vulkan_dlss_upscaler.cpp",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "thirdparty/CMakeLists.txt",
+          "before_sha256": "eae0b5f946ec0fa9a46b48f3c2914b5e999cab2100285327b5f90ce9005b6f77",
+          "declared_before": "eae0b5f946ec0fa9a46b48f3c2914b5e999cab2100285327b5f90ce9005b6f77",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "2c2846f26bec16e07811732e17ece3997597ce6508b47e087641cff70cbb31d3",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\shiftglue-0c2187c.zip!shiftglue-sdk-0c2187cbdc1857029550f510f4d3d5bee36a57a6/thirdparty/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "thirdparty/FFmpeg/libavutil/internal.h",
+          "before_sha256": "151ab64199c4108d1a70b5234ae786f1aecce18036daa3d8ac744f188740f132",
+          "declared_before": "151ab64199c4108d1a70b5234ae786f1aecce18036daa3d8ac744f188740f132",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "45994c715eaa57bf80d02ca48c5191d0cb6fe1f6991f8f02b5678baaf8ef4edc",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\dependencies\\wmarti-FFmpeg-0604b464c7cb.zip!FFmpeg-0604b464c7cb4ebc94940cf1f324a3b26b87717c/libavutil/internal.h",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "allfix-native/allfix-ngx-vulkan.dll",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "81cff2ca6bb16ec4c8cc8c17aa60c7241228318a26d45734bbe602c01b37e680",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "allfix_overlay",
+          "is_binary": true
+        },
+        {
+          "group": "files",
+          "path": "allfix-native/allfix-ngx-vulkan.lib",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "4464594c9887ea121f186427af73cf95cd86f9f3e5a449ac8c912e312d7486f3",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "allfix_overlay",
+          "is_binary": true
+        },
+        {
+          "group": "files",
+          "path": "allfix-native/allfix-rex-etw.dll",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "6d7b4415b73644382cdba2c9bf5a4ff45838aad47272f292f8ed268399f5bfe9",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "allfix_overlay",
+          "is_binary": true
+        },
+        {
+          "group": "files",
+          "path": "allfix-native/allfix-rex-etw.lib",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "09deacac392e4921414f8685af7b0d7c0a0a2bb86931632815372736e614c451",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "allfix_overlay",
+          "is_binary": true
+        },
+        {
+          "group": "files",
+          "path": "allfix-native/allfix_ngx_bridge.h",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "e5d78a312bee09239dfb6ce11280e8d80c691f282a0366bddff225b1a81adbf8",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "allfix-native/allfix_rex_etw.h",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "6bd7b55fb9c4d134298d9fdbfd88698463f7d2a45419c8f326a40c002ca2ade1",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "allfix-native/bridges.cmake",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "1ea82c95956dca6e1e364d40754b8b70ecff2180a6ced2ab1cad8373cad10b3f",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/ui/d3d11/allfix_d3d11sdklayers.h",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "b2f68092248cc8396f538c9533abdd48fbb9e117188a2009c6bef49e5b08cd59",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "game_files",
+          "path": "cmake/PinyonShiftRexGlue.cmake",
+          "before_sha256": "78f4b075179c902edb1a105eb90a067c1e3575ec6e92e8251c20f682d027fccd",
+          "declared_before": "78f4b075179c902edb1a105eb90a067c1e3575ec6e92e8251c20f682d027fccd",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "1ce86413a0e357bfda900a1701eab2ffa94055c69f7fb0385d14a9c46d285aed",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\pinyon-engine\\games\\Pinyon - pinyon-shift v0.9.5\\pinyon-shift-source.zip!cmake/PinyonShiftRexGlue.cmake",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        }
+      ],
+      "upstream_patch_files": [],
+      "official_patch_replay_errors": [],
+      "allfix_residual_diffs": [
+        {
+          "path": "CMakeLists.txt",
+          "diff_sha256": "c353cb140e456dc9d7f1745d06a9215dfd88cb920fa29131b5949eaffbef312d",
+          "diff_characters": 729,
+          "diff": "--- upstream_patched/CMakeLists.txt\n+++ allfix/CMakeLists.txt\n@@ -12,6 +12,11 @@\n     LANGUAGES ${REXGLUE_LANGUAGES}\n     DESCRIPTION \"Xbox 360 Recompilation SDK\"\n )\n+if(MINGW)\n+    # Runtime/plugin filenames follow the Windows loader contract.\n+    set(CMAKE_SHARED_LIBRARY_PREFIX \"\")\n+    add_compile_definitions(_WIN32_WINNT=0x0A00 WINVER=0x0A00)\n+endif()\n # Floor only: bump MAJOR.MINOR for API changes. Patch is derived from git tags\n # in cmake/rex_version.cmake. See docs/RELEASING.md.\n \n@@ -273,6 +278,8 @@\n     list(APPEND CMAKE_MODULE_PATH \"${REXGLUE_ROOT}/thirdparty/catch2/extras\")\n endif()\n \n+include(allfix-native/bridges.cmake)\n+\n # Third-party dependencies (vendored sources only)\n add_subdirectory(thirdparty)\n \n"
+        },
+        {
+          "path": "cmake/rexglue_dlss.cmake",
+          "diff_sha256": "b2ff5ab02c1e6559c8e27e3617af82069070e9c22e952fb4ed35268c7eb30934",
+          "diff_characters": 822,
+          "diff": "--- upstream_patched/cmake/rexglue_dlss.cmake\n+++ allfix/cmake/rexglue_dlss.cmake\n@@ -113,6 +113,9 @@\n \n _rexglue_dlss_fetch(_rexglue_dlss_ok ${_rexglue_dlss_files})\n if(NOT _rexglue_dlss_ok)\n+    if(MINGW)\n+        message(FATAL_ERROR \"All-Fix Pinyon requires the complete pinned DLSS SDK.\")\n+    endif()\n     message(WARNING \"The DLSS provider is left out.\")\n     return()\n endif()\n@@ -133,3 +136,11 @@\n else()\n     message(WARNING \"The DLSS runtime is not staged; DLSS shows as unavailable.\")\n endif()\n+\n+if(MINGW)\n+    if(NOT _rexglue_dlss_ok OR NOT REXGLUE_DLSS_RUNTIME_DIR)\n+        message(FATAL_ERROR \"All-Fix Pinyon requires the complete pinned DLSS SR/FG runtime.\")\n+    endif()\n+    set(REXGLUE_DLSS_LIBRARY \"${PROJECT_SOURCE_DIR}/allfix-native/allfix-ngx-vulkan.lib\"\n+        CACHE INTERNAL \"\" FORCE)\n+endif()\n"
+        },
+        {
+          "path": "cmake/rexglue_helpers.cmake",
+          "diff_sha256": "c3a1a670a4ce7d9abe2248d7c55c3a49c834a21951e286a30eec6b2da8b01c0a",
+          "diff_characters": 926,
+          "diff": "--- upstream_patched/cmake/rexglue_helpers.cmake\n+++ allfix/cmake/rexglue_helpers.cmake\n@@ -242,6 +242,10 @@\n \n function(rexglue_configure_target target_name)\n     cmake_parse_arguments(ARG \"\" \"\" \"GPU_PLUGINS\" ${ARGN})\n+    if(MINGW)\n+        # The official SDL wrapper exports wWinMain, including for GNU Clang.\n+        target_link_options(${target_name} PRIVATE -municode)\n+    endif()\n \n     target_sources(${target_name} PRIVATE\n         ${REXGLUE_SHARE_DIR}/windowed_app_main_sdl.cpp\n@@ -361,6 +365,10 @@\n #==========================================================\n function(rexglue_configure_module_target target_name)\n     cmake_parse_arguments(ARG \"\" \"HOST\" \"\" ${ARGN})\n+    if(MINGW)\n+        # LoadUserModule uses the same unprefixed module names as MSVC.\n+        set_target_properties(${target_name} PROPERTIES PREFIX \"\")\n+    endif()\n \n     if(ARG_HOST)\n         set_target_properties(${target_name} PROPERTIES\n"
+        },
+        {
+          "path": "include/rex/ui/d3d11/d3d11_api.h",
+          "diff_sha256": "982d29c8c306d6dbad6f3d82bf62e290040b227e216e1715dfbac3ea07de922d",
+          "diff_characters": 475,
+          "diff": "--- upstream_patched/include/rex/ui/d3d11/d3d11_api.h\n+++ allfix/include/rex/ui/d3d11/d3d11_api.h\n@@ -18,8 +18,13 @@\n #include <windows.h>\n #include <ObjBase.h>\n \n+#if defined(__MINGW32__)\n+// Include the completed SDK enum before d3d11.h includes its legacy version.\n+#include \"allfix_d3d11sdklayers.h\"\n+#else\n+#include <d3d11sdklayers.h>\n+#endif\n #include <d3d11.h>\n-#include <d3d11sdklayers.h>\n #include <dxgi1_6.h>\n #include <dxgidebug.h>\n // For Microsoft::WRL::ComPtr.\n"
+        },
+        {
+          "path": "include/rex/ui/d3d12/d3d12_api.h",
+          "diff_sha256": "1ad0bc440d4b7bb07e0cc7714590afb7a770b9d642bc8f848233bc06d7509e6f",
+          "diff_characters": 1310,
+          "diff": "--- upstream_patched/include/rex/ui/d3d12/d3d12_api.h\n+++ allfix/include/rex/ui/d3d12/d3d12_api.h\n@@ -21,7 +21,18 @@\n #include <windows.h>\n #include <ObjBase.h>\n \n+#if defined(__MINGW32__)\n+// Public COM contract from DXProgrammableCapture.h (Windows SDK 10.0.26100.0).\n+// The interface preserves the optional graphics debugger capture callbacks.\n+MIDL_INTERFACE(\"9f251514-9d4d-4902-9d60-18988ab7d4b5\")\n+IDXGraphicsAnalysis : public IUnknown {\n+  virtual void STDMETHODCALLTYPE BeginCapture() = 0;\n+  virtual void STDMETHODCALLTYPE EndCapture() = 0;\n+};\n+__CRT_UUID_DECL(IDXGraphicsAnalysis, 0x9f251514, 0x9d4d, 0x4902, 0x9d, 0x60, 0x18, 0x98, 0x8a, 0xb7, 0xd4, 0xb5)\n+#else\n #include <DXProgrammableCapture.h>\n+#endif\n #include <d3d12.h>\n #include <d3d12sdklayers.h>\n #include <d3dcompiler.h>\n@@ -32,4 +43,11 @@\n #include <dxcapi.h>\n #include \"DxbcConverter.h\"\n \n+#if defined(__MINGW32__)\n+// GUID traits for the official DXC COM declarations used by MinGW.\n+__CRT_UUID_DECL(IDxbcConverter, 0x5f956ed5, 0x78d1, 0x4b15, 0x82, 0x47, 0xf7, 0x18, 0x76, 0x14, 0xa0, 0x41)\n+__CRT_UUID_DECL(IDxcUtils, 0x4605c4cb, 0x2019, 0x492a, 0xad, 0xa4, 0x65, 0xf2, 0x0b, 0xb7, 0xd6, 0x7f)\n+__CRT_UUID_DECL(IDxcCompiler, 0x8c210bf3, 0x011f, 0x4422, 0x8d, 0x70, 0x6f, 0x9a, 0xcb, 0x8d, 0xb6, 0x17)\n+#endif\n+\n // clang-format on\n"
+        },
+        {
+          "path": "src/core/CMakeLists.txt",
+          "diff_sha256": "270a765222e1b942c6222077516c574b089c6e7fe9fea876b32da2e18e313541",
+          "diff_characters": 508,
+          "diff": "--- upstream_patched/src/core/CMakeLists.txt\n+++ allfix/src/core/CMakeLists.txt\n@@ -151,3 +151,9 @@\n     target_compile_definitions(rexcore PUBLIC\n         $<$<NOT:$<CONFIG:Release>>:REXGLUE_ENABLE_PERF_COUNTERS>)\n endif()\n+\n+# All-Fix: preserve ETW through an independently built, pinned C ABI DLL.\n+if(MINGW)\n+    target_include_directories(rexcore PRIVATE \"${PROJECT_SOURCE_DIR}/allfix-native\")\n+    target_link_libraries(rexcore PRIVATE \"${PROJECT_SOURCE_DIR}/allfix-native/allfix-rex-etw.lib\")\n+endif()\n"
+        },
+        {
+          "path": "src/core/perf/counter.cpp",
+          "diff_sha256": "9e0e5423ed9c2470356ac06ccde3946c12bab75284fe28e9ff2a4f25e8daabb3",
+          "diff_characters": 1440,
+          "diff": "--- upstream_patched/src/core/perf/counter.cpp\n+++ allfix/src/core/perf/counter.cpp\n@@ -30,7 +30,11 @@\n #include <share.h>\n #include <windows.h>\n #include <psapi.h>\n+#if defined(__MINGW32__)\n+#include \"allfix_rex_etw.h\"\n+#else\n #include <TraceLoggingProvider.h>\n+#endif\n #if defined(_M_X64) || defined(__x86_64__)\n #include <intrin.h>\n #endif\n@@ -71,7 +75,14 @@\n \n namespace {\n \n-#if REX_PLATFORM_WIN32\n+#if REX_PLATFORM_WIN32 && defined(__MINGW32__)\n+struct CriticalPathProviderRegistration {\n+  CriticalPathProviderRegistration() { allfix_etw_register(); }\n+  ~CriticalPathProviderRegistration() { allfix_etw_unregister(); }\n+};\n+CriticalPathProviderRegistration g_critical_path_provider_registration;\n+bool CriticalPathEtwEnabled() { return allfix_etw_enabled() != 0; }\n+#elif REX_PLATFORM_WIN32\n TRACELOGGING_DEFINE_PROVIDER(\n     g_critical_path_provider, \"PinyonShift-CriticalPath\",\n     (0xf36ab1a6, 0x80bb, 0x4482, 0xb1, 0xb9, 0x92, 0xa6, 0xec, 0x87, 0x02,\n@@ -795,7 +806,10 @@\n   if (!CriticalPathTraceEnabled()) {\n     return;\n   }\n-#if REX_PLATFORM_WIN32\n+#if REX_PLATFORM_WIN32 && defined(__MINGW32__)\n+  allfix_etw_write(event.data(), static_cast<uint32_t>(event.size()),\n+                   source_frame, value0, value1, value2);\n+#elif REX_PLATFORM_WIN32\n   if (event == \"source_frame\") {\n     TraceLoggingWrite(g_critical_path_provider, \"SourceFrame\",\n                       TraceLoggingInt64(source_frame, \"SourceFrame\"));\n"
+        },
+        {
+          "path": "src/input/xinput/xinput_input_driver.cpp",
+          "diff_sha256": "1dd1885448d07ab74dfac21ad1913d5a65674d84060a3a41e1dad6e2d4fd4d1e",
+          "diff_characters": 695,
+          "diff": "--- upstream_patched/src/input/xinput/xinput_input_driver.cpp\n+++ allfix/src/input/xinput/xinput_input_driver.cpp\n@@ -116,12 +116,12 @@\n   }\n \n   module_ = module;\n-  XInputGetCapabilities_ = xigc;\n-  XInputGetState_ = xigs;\n-  XInputGetStateEx_ = xigsEx;\n-  XInputGetKeystroke_ = xigk;\n-  XInputSetState_ = xiss;\n-  XInputEnable_ = xie;\n+  XInputGetCapabilities_ = reinterpret_cast<void*>(xigc);\n+  XInputGetState_ = reinterpret_cast<void*>(xigs);\n+  XInputGetStateEx_ = reinterpret_cast<void*>(xigsEx);\n+  XInputGetKeystroke_ = reinterpret_cast<void*>(xigk);\n+  XInputSetState_ = reinterpret_cast<void*>(xiss);\n+  XInputEnable_ = reinterpret_cast<void*>(xie);\n \n   return X_STATUS_SUCCESS;\n }\n"
+        },
+        {
+          "path": "src/system/CMakeLists.txt",
+          "diff_sha256": "9f7de5bd28b0322c4a218562297258c62d4001a90158b6d16d622337c51b06a5",
+          "diff_characters": 1366,
+          "diff": "--- upstream_patched/src/system/CMakeLists.txt\n+++ allfix/src/system/CMakeLists.txt\n@@ -59,6 +59,10 @@\n add_library(rex::kernel ALIAS rexruntime)\n \n set_target_properties(rexruntime PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)\n+if(MINGW)\n+    # Preserve the upstream all-symbol DLL contract alongside explicit exports.\n+    target_link_options(rexruntime PRIVATE -Wl,--export-all-symbols)\n+endif()\n # Exporting all symbols covers data as well, but a consumer must declare that\n # data dllimport to link it. REX_RUNTIME_DATA (rex/runtime_api.h) does so for\n # the targets linking rexruntime; rexruntime and the object libraries built\n@@ -122,7 +126,13 @@\n     # FFmpeg and SDL still reference the pre-UCRT spellings of a few CRT\n     # helpers when built with clang's GNU-style driver. oldnames provides the\n     # canonical aliases and keeps clean Windows links reproducible.\n-    target_link_libraries(rexruntime PRIVATE ws2_32 oldnames)\n+    target_link_libraries(rexruntime PRIVATE ws2_32)\n+    if(MINGW)\n+        # MinGW supplies the same legacy CRT aliases in moldname.\n+        target_link_libraries(rexruntime PRIVATE moldname)\n+    else()\n+        target_link_libraries(rexruntime PRIVATE oldnames)\n+    endif()\n     target_link_libraries(rexruntime PUBLIC dxgi dxguid)\n     target_compile_definitions(rexruntime PUBLIC NOMINMAX WIN32_LEAN_AND_MEAN)\n endif()\n"
+        },
+        {
+          "path": "src/ui/CMakeLists.txt",
+          "diff_sha256": "3d007019a6893bd08207d2c9972253c4ff22a351a3283ba7741336ee25ed71e1",
+          "diff_characters": 581,
+          "diff": "--- upstream_patched/src/ui/CMakeLists.txt\n+++ allfix/src/ui/CMakeLists.txt\n@@ -178,6 +178,9 @@\n # The DLSS provider, when the build opted in (cmake/rexglue_dlss.cmake).\n if(REXGLUE_USE_VULKAN AND REXGLUE_DLSS_INCLUDE_DIR AND REXGLUE_DLSS_LIBRARY)\n     target_include_directories(rexui PRIVATE \"${REXGLUE_DLSS_INCLUDE_DIR}\")\n+    if(MINGW)\n+        target_include_directories(rexui PRIVATE \"${PROJECT_SOURCE_DIR}/allfix-native\")\n+    endif()\n     target_compile_definitions(rexui PRIVATE REX_HAS_DLSS=1)\n     target_link_libraries(rexui PRIVATE \"${REXGLUE_DLSS_LIBRARY}\")\n endif()\n"
+        },
+        {
+          "path": "src/ui/d3d12/d3d12_provider.cpp",
+          "diff_sha256": "031841856bc1993bc1f94ccc8916c8d2827ac3083913ee878e8e3c9a6fcc0127",
+          "diff_characters": 1135,
+          "diff": "--- upstream_patched/src/ui/d3d12/d3d12_provider.cpp\n+++ allfix/src/ui/d3d12/d3d12_provider.cpp\n@@ -265,7 +265,7 @@\n         if (SUCCEEDED(adapter->GetDesc1(&adapter_desc)) &&\n             !(adapter_desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE) &&\n             SUCCEEDED(pfn_d3d12_create_device_(adapter, D3D_FEATURE_LEVEL_11_0,\n-                                               _uuidof(ID3D12Device), nullptr))) {\n+                                               __uuidof(ID3D12Device), nullptr))) {\n           break;\n         }\n         adapter->Release();\n@@ -276,7 +276,7 @@\n   while (adapter == nullptr && dxgi_factory->EnumAdapters1(adapter_index, &adapter) == S_OK) {\n     DXGI_ADAPTER_DESC1 adapter_desc;\n     if (SUCCEEDED(adapter->GetDesc1(&adapter_desc))) {\n-      if (SUCCEEDED(pfn_d3d12_create_device_(adapter, D3D_FEATURE_LEVEL_11_0, _uuidof(ID3D12Device),\n+      if (SUCCEEDED(pfn_d3d12_create_device_(adapter, D3D_FEATURE_LEVEL_11_0, __uuidof(ID3D12Device),\n                                              nullptr))) {\n         if (REXCVAR_GET(d3d12_adapter) >= 0) {\n           if (adapter_index == REXCVAR_GET(d3d12_adapter)) {\n"
+        },
+        {
+          "path": "src/ui/vulkan/vulkan_dlss_upscaler.cpp",
+          "diff_sha256": "0bee9fa38982b9501f90098735a7ff01880539f463e249cf1fd27b1b60b94589",
+          "diff_characters": 2885,
+          "diff": "--- upstream_patched/src/ui/vulkan/vulkan_dlss_upscaler.cpp\n+++ allfix/src/ui/vulkan/vulkan_dlss_upscaler.cpp\n@@ -30,8 +30,28 @@\n #include <rex/ui/vulkan/instance.h>\n \n #if defined(REX_HAS_DLSS) && REX_HAS_DLSS\n+#if defined(__MINGW32__)\n+// NVIDIA virtual C++ parameters stay inside the pinned MSVC C bridge.\n+#include \"allfix_ngx_bridge.h\"\n+#define NVSDK_NGX_Parameter AllfixNgxParameters\n+#define NVSDK_NGX_Handle AllfixNgxFeature\n+#define NVSDK_NGX_VULKAN_Init_with_ProjectID allfix_ngx_init_project\n+#define NVSDK_NGX_VULKAN_Shutdown1 allfix_ngx_shutdown\n+#define NVSDK_NGX_VULKAN_GetCapabilityParameters allfix_ngx_capability_parameters\n+#define NVSDK_NGX_VULKAN_DestroyParameters allfix_ngx_destroy_parameters\n+#define NVSDK_NGX_VULKAN_ReleaseFeature allfix_ngx_release_feature\n+#define NVSDK_NGX_VULKAN_GetFeatureInstanceExtensionRequirements allfix_ngx_instance_extensions\n+#define NVSDK_NGX_VULKAN_GetFeatureDeviceExtensionRequirements allfix_ngx_device_extensions\n+#define NVSDK_NGX_Parameter_GetI allfix_ngx_get_i\n+#define NVSDK_NGX_Parameter_SetUI allfix_ngx_set_ui\n+#define NGX_VULKAN_CREATE_DLSS_EXT allfix_ngx_create_dlss\n+#define NGX_VULKAN_EVALUATE_DLSS_EXT allfix_ngx_evaluate_dlss\n+#define NGX_VK_CREATE_DLSSG allfix_ngx_create_dlssg\n+#define NGX_VK_EVALUATE_DLSSG allfix_ngx_evaluate_dlssg\n+#else\n #include <nvsdk_ngx_helpers_dlssg_vk.h>\n #include <nvsdk_ngx_helpers_vk.h>\n+#endif\n #endif\n \n REXCVAR_DEFINE_STRING(present_dlss_runtime, \"\", \"UI/Presenter\",\n@@ -82,13 +102,15 @@\n }\n \n void NVSDK_CONV LogNgxMessage(const char* message, NVSDK_NGX_Logging_Level,\n-                              NVSDK_NGX_Feature) {\n+                              NVSDK_NGX_Feature) noexcept {\n+  try {\n   std::string text = message ? message : \"\";\n   while (!text.empty() && (text.back() == '\\n' || text.back() == '\\r')) {\n     text.pop_back();\n   }\n   // NGX logs every path it probes; the provider logs what matters.\n   REXLOG_DEBUG(\"NGX: {}\", text);\n+  } catch (...) { /* No C++ exception crosses the C callback ABI. */ }\n }\n \n // What NGX is told about the application, shared by the extension queries\n@@ -108,6 +130,12 @@\n   static NgxSetup setup;\n   static std::once_flag once;\n   std::call_once(once, [] {\n+#if defined(__MINGW32__)\n+    if (!allfix_ngx_compatible()) {\n+      REXLOG_ERROR(\"DLSS bridge layout or SDK revision mismatch\");\n+      return;\n+    }\n+#endif\n     constexpr const char* kRuntime = \"nvngx_dlss.dll\";\n     std::vector<std::filesystem::path> folders;\n     const std::string configured = REXCVAR_GET(present_dlss_runtime);\n@@ -172,6 +200,9 @@\n VkDevice g_ngx_device = VK_NULL_HANDLE;\n \n NVSDK_NGX_Result AcquireNgx(const VulkanDevice* device) {\n+#if defined(__MINGW32__)\n+  if (!allfix_ngx_compatible()) return NVSDK_NGX_Result_Fail;\n+#endif\n   std::lock_guard<std::mutex> lock(g_ngx_mutex);\n   if (g_ngx_users) {\n     if (g_ngx_device != device->device()) {\n"
+        },
+        {
+          "path": "thirdparty/CMakeLists.txt",
+          "diff_sha256": "4ab80e029db0e1fb1dbba8d273f601e9505737e3fd1b2ce888adb5d14dffe07c",
+          "diff_characters": 803,
+          "diff": "--- upstream_patched/thirdparty/CMakeLists.txt\n+++ allfix/thirdparty/CMakeLists.txt\n@@ -64,7 +64,7 @@\n endif()\n \n foreach(submodule ${REQUIRED_SUBMODULES})\n-    if(NOT EXISTS \"${CMAKE_CURRENT_SOURCE_DIR}/${submodule}/.git\")\n+    if(NOT EXISTS \"${CMAKE_CURRENT_SOURCE_DIR}/${submodule}/allfix-source-identity.json\")\n         message(FATAL_ERROR\n             \"Git submodule '${submodule}' is not initialized.\\n\"\n             \"Please run: git submodule update --init --recursive\\n\"\n@@ -282,7 +282,7 @@\n set(SDL_TRAY OFF CACHE BOOL \"\" FORCE)\n set(SDL_CAMERA OFF CACHE BOOL \"\" FORCE)\n \n-# Disable graphics APIs (unused without video) — only on non-Apple\n+# Disable graphics APIs (unused without video) � only on non-Apple\n set(SDL_OPENGL OFF CACHE BOOL \"\" FORCE)\n set(SDL_OPENGLES OFF CACHE BOOL \"\" FORCE)\n \n"
+        },
+        {
+          "path": "thirdparty/FFmpeg/libavutil/internal.h",
+          "diff_sha256": "a52238a91bfea9fbd9c0c2012faccf18d35aab1a5ae2cfbdb3f84fea697fa67c",
+          "diff_characters": 513,
+          "diff": "--- upstream_patched/thirdparty/FFmpeg/libavutil/internal.h\n+++ allfix/thirdparty/FFmpeg/libavutil/internal.h\n@@ -178,7 +178,9 @@\n                            const char *msg, ...) av_printf_format(2, 3);\n \n #if HAVE_LIBC_MSVCRT\n+#if defined(_MSC_VER) && !defined(__MINGW32__)\n #include <crtversion.h>\n+#endif\n #if defined(_VC_CRT_MAJOR_VERSION) && _VC_CRT_MAJOR_VERSION < 14\n #pragma comment(linker, \"/include:\" EXTERN_PREFIX \"avpriv_strtod\")\n #pragma comment(linker, \"/include:\" EXTERN_PREFIX \"avpriv_snprintf\")\n"
+        },
+        {
+          "path": "allfix-native/allfix_ngx_bridge.h",
+          "diff_sha256": "73d7619293f94070108a6f01e7befd009c521f87e4c0b1e695418a8718a92ec5",
+          "diff_characters": 16431,
+          "review_reference": "Full added source is retained in the pinned source-support.zip; see the reviewed bridge/header description in rex-review.md."
+        },
+        {
+          "path": "allfix-native/allfix_rex_etw.h",
+          "diff_sha256": "1cc927a4f7a06da57be37bf758c513f8465cb48ed7152adbb2a3f223cf075030",
+          "diff_characters": 657,
+          "diff": "--- upstream_patched/allfix-native/allfix_rex_etw.h\n+++ allfix/allfix-native/allfix_rex_etw.h\n@@ -0,0 +1,14 @@\n+// Pinyon CriticalPath ETW adapter; protocol preserves the upstream provider/events.\n+#pragma once\n+#include <stdint.h>\n+#if defined(ALLFIX_ETW_BUILD)\n+#define ALLFIX_ETW_API __declspec(dllexport)\n+#else\n+#define ALLFIX_ETW_API __declspec(dllimport)\n+#endif\n+extern \"C\" {\n+ALLFIX_ETW_API uint32_t allfix_etw_register() noexcept;\n+ALLFIX_ETW_API void allfix_etw_unregister() noexcept;\n+ALLFIX_ETW_API int allfix_etw_enabled() noexcept;\n+ALLFIX_ETW_API void allfix_etw_write(const char*, uint32_t, int64_t, int64_t, int64_t, int64_t) noexcept;\n+}\n"
+        },
+        {
+          "path": "allfix-native/bridges.cmake",
+          "diff_sha256": "7b8931ef9806e4bbc9a98a96e1399103f72f5a9cddb8f3b084b7fae20839cfee",
+          "diff_characters": 1824,
+          "diff": "--- upstream_patched/allfix-native/bridges.cmake\n+++ allfix/allfix-native/bridges.cmake\n@@ -0,0 +1,28 @@\n+# All-Fix Pinyon native bridges: C ABI only, exact artifact hashes.\n+if(NOT MINGW)\n+    return()\n+endif()\n+set(_allfix_bridge \"${PROJECT_SOURCE_DIR}/allfix-native/allfix-ngx-vulkan.dll\")\n+file(SHA256 \"${_allfix_bridge}\" _allfix_bridge_hash)\n+if(NOT _allfix_bridge_hash STREQUAL \"81cff2ca6bb16ec4c8cc8c17aa60c7241228318a26d45734bbe602c01b37e680\")\n+    message(FATAL_ERROR \"Pinned Pinyon bridge changed: allfix-ngx-vulkan.dll\")\n+endif()\n+file(COPY \"${_allfix_bridge}\" DESTINATION \"${CMAKE_RUNTIME_OUTPUT_DIRECTORY}\")\n+install(FILES \"${_allfix_bridge}\" DESTINATION \"${CMAKE_INSTALL_BINDIR}\")\n+set(_allfix_bridge \"${PROJECT_SOURCE_DIR}/allfix-native/allfix-ngx-vulkan.lib\")\n+file(SHA256 \"${_allfix_bridge}\" _allfix_bridge_hash)\n+if(NOT _allfix_bridge_hash STREQUAL \"4464594c9887ea121f186427af73cf95cd86f9f3e5a449ac8c912e312d7486f3\")\n+    message(FATAL_ERROR \"Pinned Pinyon bridge changed: allfix-ngx-vulkan.lib\")\n+endif()\n+set(_allfix_bridge \"${PROJECT_SOURCE_DIR}/allfix-native/allfix-rex-etw.dll\")\n+file(SHA256 \"${_allfix_bridge}\" _allfix_bridge_hash)\n+if(NOT _allfix_bridge_hash STREQUAL \"6d7b4415b73644382cdba2c9bf5a4ff45838aad47272f292f8ed268399f5bfe9\")\n+    message(FATAL_ERROR \"Pinned Pinyon bridge changed: allfix-rex-etw.dll\")\n+endif()\n+file(COPY \"${_allfix_bridge}\" DESTINATION \"${CMAKE_RUNTIME_OUTPUT_DIRECTORY}\")\n+install(FILES \"${_allfix_bridge}\" DESTINATION \"${CMAKE_INSTALL_BINDIR}\")\n+set(_allfix_bridge \"${PROJECT_SOURCE_DIR}/allfix-native/allfix-rex-etw.lib\")\n+file(SHA256 \"${_allfix_bridge}\" _allfix_bridge_hash)\n+if(NOT _allfix_bridge_hash STREQUAL \"09deacac392e4921414f8685af7b0d7c0a0a2bb86931632815372736e614c451\")\n+    message(FATAL_ERROR \"Pinned Pinyon bridge changed: allfix-rex-etw.lib\")\n+endif()\n"
+        },
+        {
+          "path": "include/rex/ui/d3d11/allfix_d3d11sdklayers.h",
+          "diff_sha256": "e9142ebebaa6a9a4afd51919e26594e928b4ad3f51b47bfa5f553f762803662c",
+          "diff_characters": 111281,
+          "review_reference": "Full added source is retained in the pinned source-support.zip; see the reviewed bridge/header description in rex-review.md."
+        },
+        {
+          "path": "game/cmake/PinyonShiftRexGlue.cmake",
+          "diff": "--- original/cmake/PinyonShiftRexGlue.cmake\n+++ allfix/cmake/PinyonShiftRexGlue.cmake\n@@ -139,7 +139,11 @@\n         # LLD otherwise writes the wall clock into each PE/COFF image. Combined\n         # with the wrapper's locked SOURCE_DATE_EPOCH, /Brepro makes identical\n         # source and generated trees produce byte-identical linked artifacts.\n-        add_link_options(\"LINKER:/Brepro\")\n+        if(MINGW)\n+            add_link_options(\"LINKER:--no-insert-timestamp\")\n+        else()\n+            add_link_options(\"LINKER:/Brepro\")\n+        endif()\n     endif()\n endif()\n \n"
+        }
+      ],
+      "all_preimages_and_replacements_match": true,
+      "all_declared_new_paths_absent_from_original": true
+    },
+    "ssx-recomp": {
+      "support_zip": {
+        "path": "Tools/SsxNative/source-support.zip",
+        "bytes": 601221,
+        "sha256": "054ae3be11679a61050033ccae491883c10b223c40fdd4a96512859b4e23715a"
+      },
+      "source_archive": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip",
+        "sha256": "e9678e260713a11d716f7870547f53c6e7fcae8eb979f6ab78c1c96dcdcaecfe",
+        "matches": true
+      },
+      "game_archive": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip",
+        "sha256": "1b48d42db48d3eff77ed0dbabac4ecb7e572421afa536c0611190748ec6e7327"
+      },
+      "overlay_entries": [
+        {
+          "group": "files",
+          "path": "CMakeLists.txt",
+          "before_sha256": "ad3b3efe58a419af74bc0d50f88f9ac0b9866c02d2d6d76c2b151df34e3a4443",
+          "declared_before": "ad3b3efe58a419af74bc0d50f88f9ac0b9866c02d2d6d76c2b151df34e3a4443",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "928f7c2803ddd5a78784d63e975d7a8412b485e8ceac3040461c411ee75e00f8",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "cmake/rexglueConfig.cmake.in",
+          "before_sha256": "da50cfe388e375185d6225cfacf48ab5c099b764fa8438236416ddb337c63498",
+          "declared_before": "da50cfe388e375185d6225cfacf48ab5c099b764fa8438236416ddb337c63498",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "bc4062372515359090d43c188485621827fe8697c12cfecb70a211e23d47909d",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/cmake/rexglueConfig.cmake.in",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "cmake/rexglue_export_targets.cmake",
+          "before_sha256": "1bec9f510dbecdec0d1931d48ed1c9628db8411d773cb021c30e0d1b096e1509",
+          "declared_before": "1bec9f510dbecdec0d1931d48ed1c9628db8411d773cb021c30e0d1b096e1509",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "9c02c3113d6d977a0026ace2af904202560efcfcf1fe8241dda037a0b54f4b00",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/cmake/rexglue_export_targets.cmake",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "cmake/rexglue_fidelityfx.cmake",
+          "before_sha256": "197ee41ddecb20c1828b8d58e84ab85bea9503da54ef621da08f5ca98b718e62",
+          "declared_before": "197ee41ddecb20c1828b8d58e84ab85bea9503da54ef621da08f5ca98b718e62",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "ce5e37881b4a9c2f24e6fae69da5817088f62c4f61ae2e9dd53a2e33c2061869",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/cmake/rexglue_fidelityfx.cmake",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "cmake/rexglue_install.cmake",
+          "before_sha256": "8fa5089cd1671ddaabfff765ed76c71b04b8d9a16970403c8eef3b69ceadc3ac",
+          "declared_before": "8fa5089cd1671ddaabfff765ed76c71b04b8d9a16970403c8eef3b69ceadc3ac",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "1d3b6404d19796fa045c8994b77513bb04a2f9957c10b984117199aa100ce9c0",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/cmake/rexglue_install.cmake",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/chrono/chrono.h",
+          "before_sha256": "619856510c02c07dda1e476e51acc2f152131425ca33de4960c49af11d51bd31",
+          "declared_before": "619856510c02c07dda1e476e51acc2f152131425ca33de4960c49af11d51bd31",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "804a426fb091220d8720cd875d2cb56eda8ae41d3d9b510ec5a84b8fd6555f85",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/include/rex/chrono/chrono.h",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/graphics/d3d12/command_processor.h",
+          "before_sha256": "646460362f1b15e3a1309b669d799b582fe7bf57e050fabc2c5be65ec516bcb2",
+          "declared_before": "646460362f1b15e3a1309b669d799b582fe7bf57e050fabc2c5be65ec516bcb2",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "b4cd54b88a559f51e0e5f15e31c7cb8c46be92a4353ae92de677a6fdd3dc5fb5",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/include/rex/graphics/d3d12/command_processor.h",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/graphics/d3d12/pipeline_cache.h",
+          "before_sha256": "a7d297d6cd2ac5f16d6cfa7c24a321f1929b4f25688dc3f64298f032a92c8c6e",
+          "declared_before": "a7d297d6cd2ac5f16d6cfa7c24a321f1929b4f25688dc3f64298f032a92c8c6e",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "f8d47be9a7442035e3096fcd256582a50cfab2ae84c21bfd1516545b7e7f4a6b",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/include/rex/graphics/d3d12/pipeline_cache.h",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/graphics/d3d12/render_target_cache.h",
+          "before_sha256": "7933dd49bb409393300872b88aaef6c076226a9d3bd02164ecdd8a43a1c52321",
+          "declared_before": "7933dd49bb409393300872b88aaef6c076226a9d3bd02164ecdd8a43a1c52321",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "8aa42021be46e30bbf19c5475f1d98ffaa8819b9ddc232bce79cc22d452710d9",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/include/rex/graphics/d3d12/render_target_cache.h",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/graphics/d3d12/texture_cache.h",
+          "before_sha256": "13573c8c5668eb1167494591b939c86969f50709588707a420a75e1ed205e15f",
+          "declared_before": "13573c8c5668eb1167494591b939c86969f50709588707a420a75e1ed205e15f",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "526c90baf267174bf071274ce24ee0a22199642cef545fa8447ab19334d78383",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/include/rex/graphics/d3d12/texture_cache.h",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/graphics/format/dxbc.h",
+          "before_sha256": "dee8cf8d3b32db2c118ccd30b632caf76b89adbef5ba5e2252d47a82fb640ef6",
+          "declared_before": "dee8cf8d3b32db2c118ccd30b632caf76b89adbef5ba5e2252d47a82fb640ef6",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "41be6c3abcc5d063d7acb841cf200a65bdb79354970407d2a6d128cf7d3f40c3",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/include/rex/graphics/format/dxbc.h",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/graphics/pipeline/shader/dxbc_translator.h",
+          "before_sha256": "028b628282398eb1b2a44e9afc03ac8fc235a538ebe923c34e13f0881738da4c",
+          "declared_before": "028b628282398eb1b2a44e9afc03ac8fc235a538ebe923c34e13f0881738da4c",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "6806221e7c25622eb84d24bccc45966684d881c2694460fcbb5eea7d37cac7f1",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/include/rex/graphics/pipeline/shader/dxbc_translator.h",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/graphics/pipeline/texture/cache.h",
+          "before_sha256": "b1d7a9019f1896498372d15827bd8d09a09eb150b54e554ae98678e465394a89",
+          "declared_before": "b1d7a9019f1896498372d15827bd8d09a09eb150b54e554ae98678e465394a89",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "9fabe7a8deb3fbcd7a098ffb844346a90f81bfb269c5077a9551bb4e958e021d",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/include/rex/graphics/pipeline/texture/cache.h",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "include/rex/ui/d3d12/d3d12_api.h",
+          "before_sha256": "94ded4173faa857d9725f7c9debac5d2cdab00cc647c263a2c8a2c55bd48149f",
+          "declared_before": "94ded4173faa857d9725f7c9debac5d2cdab00cc647c263a2c8a2c55bd48149f",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "5b3a6737b8b427e513705141c0c92c4b03eb8bb1491f42ce823434adf0cf807d",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/include/rex/ui/d3d12/d3d12_api.h",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/codegen/builders/vector.cpp",
+          "before_sha256": "b92df5f348f0253e5c8318c4f328caa365542230fb07cc7999bee233da89d2ca",
+          "declared_before": "b92df5f348f0253e5c8318c4f328caa365542230fb07cc7999bee233da89d2ca",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "77ad4c3cba5242422159b3f09e8b8d57725088362f675304915278d0bf2b39f4",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/codegen/builders/vector.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/core/filesystem_win.cpp",
+          "before_sha256": "4b8b3e0becd17d631d11693b9ccf264a20268e8286dbeb48b95bc03a33effb74",
+          "declared_before": "4b8b3e0becd17d631d11693b9ccf264a20268e8286dbeb48b95bc03a33effb74",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "ccb40ef0b849b65832095c7893b60ce6266333368ce79650c01dbca6f9c87a79",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/core/filesystem_win.cpp",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/core/memory_posix.cpp",
+          "before_sha256": "10b907c821f4f1cab93c67cc292e06a27a9abfec5316047645e8a68cd153cbe7",
+          "declared_before": "10b907c821f4f1cab93c67cc292e06a27a9abfec5316047645e8a68cd153cbe7",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "37fc4343ac16b8c4f6839bddcb872483b822f22d88b8579a823c9ce74b1c8673",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/core/memory_posix.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/core/threading_posix.cpp",
+          "before_sha256": "f60dfd4dc854f61c989bb68ba9dbc3c4cc6d3f58a6f2f00a19b2019538447fa9",
+          "declared_before": "f60dfd4dc854f61c989bb68ba9dbc3c4cc6d3f58a6f2f00a19b2019538447fa9",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "c5332661faef440a25828bb86cf7c0a0f7296d2c874270d75ebc3b31a3f3c2f7",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/core/threading_posix.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/command_processor.cpp",
+          "before_sha256": "53a982be7550aee8aa3194eb0741d69b55af41ab2db65e611cdacec42a67a125",
+          "declared_before": "53a982be7550aee8aa3194eb0741d69b55af41ab2db65e611cdacec42a67a125",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "093e5210a2d697214cdcb2cd0beb53567f83102941f994a6dd50f25cb7531d50",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/graphics/command_processor.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/d3d12/command_processor.cpp",
+          "before_sha256": "aeb26127de7b9dd0b797d6430187540e9b7ef970f2171e80a1819165318bdc58",
+          "declared_before": "aeb26127de7b9dd0b797d6430187540e9b7ef970f2171e80a1819165318bdc58",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "7e480840212257e6991ef1917600b2f8cac84a7bbb4da700683a8e14e1cb282d",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/graphics/d3d12/command_processor.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/d3d12/pipeline_cache.cpp",
+          "before_sha256": "6a4bc1393947ef6124d0a39f44ab332bb8620a4652d81af233b7186530833a9e",
+          "declared_before": "6a4bc1393947ef6124d0a39f44ab332bb8620a4652d81af233b7186530833a9e",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "8871ad5f32d3da341b5ee22f857dbbd10ff82d09494abe80bda8137575d8cc50",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/graphics/d3d12/pipeline_cache.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/d3d12/render_target_cache.cpp",
+          "before_sha256": "7bc68f0891b9ec0a108a3e1b34e980619245d28ab86f201846b40230760b1dd0",
+          "declared_before": "7bc68f0891b9ec0a108a3e1b34e980619245d28ab86f201846b40230760b1dd0",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "5d61cba3c0493bddbb6c15b6b08d8eda72beb8708df7bf764f5568d44d7d4375",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/graphics/d3d12/render_target_cache.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/d3d12/texture_cache.cpp",
+          "before_sha256": "72ebe63457e42e1e11354e386635431a4be48a8239b0188bf6e82aaf4b114470",
+          "declared_before": "72ebe63457e42e1e11354e386635431a4be48a8239b0188bf6e82aaf4b114470",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "602a6c2104bd3a753957ff907c36d12290fc66e511529665bb83060bb69126aa",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/graphics/d3d12/texture_cache.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/pipeline/render_target/cache.cpp",
+          "before_sha256": "cf6539a76788b32262359bd0aa9da80503b641b2e4cecdec4a0e2dccc1e8052e",
+          "declared_before": "cf6539a76788b32262359bd0aa9da80503b641b2e4cecdec4a0e2dccc1e8052e",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "573d93285b46343639aacdf4838f917bac1f742e15fc1bf99f677417de4675ef",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/graphics/pipeline/render_target/cache.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/pipeline/shader/dxbc_translator.cpp",
+          "before_sha256": "03d2cb7b240e80f4cf0c09cde2d6155e1bd891f1b305ef6d57178a2a8db2c98f",
+          "declared_before": "03d2cb7b240e80f4cf0c09cde2d6155e1bd891f1b305ef6d57178a2a8db2c98f",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "e47116576bb08440245a3e96cb0cd687d3ade5e871ce37c1506245c9a45e96f2",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/graphics/pipeline/shader/dxbc_translator.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/pipeline/shader/dxbc_translator_om.cpp",
+          "before_sha256": "d8704c6bcc04da97a7250f768e65c9f0b25e8ecbce378142722c28a07a046677",
+          "declared_before": "d8704c6bcc04da97a7250f768e65c9f0b25e8ecbce378142722c28a07a046677",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "29cf6bf901ee0825ec354395b797c7a328f06534c4b17426561e2b923d167b6c",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/graphics/pipeline/shader/dxbc_translator_om.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/pipeline/shader/spirv_translator_fetch.cpp",
+          "before_sha256": "b4cba3533cb7f5bdf92206493b49ded9e4e781194a23d363ffabd06ebda77e39",
+          "declared_before": "b4cba3533cb7f5bdf92206493b49ded9e4e781194a23d363ffabd06ebda77e39",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "865768f88485a0bfef0c4e5104c9bfae93d99bfaca9a3aa678ffd214be30d84d",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/graphics/pipeline/shader/spirv_translator_fetch.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/pipeline/texture/cache.cpp",
+          "before_sha256": "d365a4d8d7f2361244ddd6db02984e1a003cf323b40cc90c63c36af7a1d7d26e",
+          "declared_before": "d365a4d8d7f2361244ddd6db02984e1a003cf323b40cc90c63c36af7a1d7d26e",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "c09b66dd86cb18f17541dc33608f51ce9bc3a71c8b9f3e7d7da38df03d9c0fd3",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/graphics/pipeline/texture/cache.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/shaders/bytecode/d3d12_5_1/texture_load_direct_depth_float_scaled_cs.h",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "a26ce5ffe9f8e1f4a4e7448bdcf508c38a25b5f1f752585800169e6da8e6f531",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/shaders/bytecode/d3d12_5_1/texture_load_direct_rgba16f_scaled_cs.h",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "e9e0f1359386047c907d684e3789cb23398fa7e3c9cc7965eeeab0ca285ee57e",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/shaders/bytecode/d3d12_5_1/texture_load_direct_rgba8_scaled_cs.h",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "95e2baa88d1096f3643a8c2fabdaa2aa845c0560547961524b9c7aaecddce6e8",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/shaders/bytecode/d3d12_5_1/texture_mip_fit_scaled_cs.h",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "5bd9ad36ec6ef85a77f40ee9ee39d4abe3e13d187efd576bd6b88f1d515fb48a",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/shaders/texture_load_direct_scaled.cs.hlsl",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "cbed8db9aa3ca99de844e99372b273cc8ac3c9c782bf942d76d799b6021ddbd1",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/shaders/texture_mip_fit_scaled.cs.hlsl",
+          "before_sha256": null,
+          "declared_before": null,
+          "before_matches": true,
+          "new_absent": true,
+          "after_sha256": "c54c9509af0b7b72fcb495640e7a04e05cc4376230f6363b062177fcd1a82751",
+          "after_matches": true,
+          "source": "new file",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/graphics/vulkan/command_processor.cpp",
+          "before_sha256": "4335110822d13947338efd7e773bd99266633d7083dfae9c9680034c0799dc77",
+          "declared_before": "4335110822d13947338efd7e773bd99266633d7083dfae9c9680034c0799dc77",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "a1d454ba3a49a266f29e24d62b7d64e2879ddcaa89620121cfe9c828006dde37",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/graphics/vulkan/command_processor.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/input/xinput/xinput_input_driver.cpp",
+          "before_sha256": "e23d72749446229b97c370669e507410d5d2715a5417232428dc0cef30b5e088",
+          "declared_before": "e23d72749446229b97c370669e507410d5d2715a5417232428dc0cef30b5e088",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "5d2c2fec4b5a3d369de10071354f7b9ac38d365c5a6546db768b78bbcbe088c6",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/input/xinput/xinput_input_driver.cpp",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/system/user_module.cpp",
+          "before_sha256": "43505572e7c6a1deefa051e1eb4307db57c0823f4a7f00424a33841c12f325c6",
+          "declared_before": "43505572e7c6a1deefa051e1eb4307db57c0823f4a7f00424a33841c12f325c6",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "682c09958e1d5ea39abde38711b23a8eb18de0d358f94fe02fd330f7cd73a7b1",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/system/user_module.cpp",
+          "attribution": "upstream_patch_exact_after_crlf_normalization",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/ui/CMakeLists.txt",
+          "before_sha256": "96e13ce0b2a76c253171cf65cbe59d071756d09fe8149428579bd4ca0e859955",
+          "declared_before": "96e13ce0b2a76c253171cf65cbe59d071756d09fe8149428579bd4ca0e859955",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "fe0973af25b3b1e5b280d1db4975a95858b3315f52b9e4e5f9ef79affb416e3b",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/ui/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "src/ui/d3d12/d3d12_provider.cpp",
+          "before_sha256": "b5d7b7eb02d495a343e3a1df02d3aff892294d501e859e99bc622c1b4cbe7d64",
+          "declared_before": "b5d7b7eb02d495a343e3a1df02d3aff892294d501e859e99bc622c1b4cbe7d64",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "409acaa5595a54ce35199cffdf39c5db48d178ab3d90757f116fb888183da8ed",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/src/ui/d3d12/d3d12_provider.cpp",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "thirdparty/CMakeLists.txt",
+          "before_sha256": "5a8e14e4e3ce27da385c7a7d629accb59a84e1b8e81b97c79bcc994ca9d005ea",
+          "declared_before": "5a8e14e4e3ce27da385c7a7d629accb59a84e1b8e81b97c79bcc994ca9d005ea",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "1b7e50efcebb790fd8594763e7c161996883cf0026e684a69b95d3adf817ad75",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\rexglue-bd833a2.zip!rexglue-sdk-bd833a2ab69d305f99ddf57418fc38ffec8af93d/thirdparty/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "files",
+          "path": "thirdparty/FFmpeg/libavutil/internal.h",
+          "before_sha256": "151ab64199c4108d1a70b5234ae786f1aecce18036daa3d8ac744f188740f132",
+          "declared_before": "151ab64199c4108d1a70b5234ae786f1aecce18036daa3d8ac744f188740f132",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "45994c715eaa57bf80d02ca48c5191d0cb6fe1f6991f8f02b5678baaf8ef4edc",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\dependencies\\wmarti-FFmpeg-0604b464c7cb.zip!FFmpeg-0604b464c7cb4ebc94940cf1f324a3b26b87717c/libavutil/internal.h",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "game_files",
+          "path": "src/ssx_profile.cpp",
+          "before_sha256": "66784517403c35f801c915b96189b277f2a00c0359531b60a4d6ff48f1668289",
+          "declared_before": "66784517403c35f801c915b96189b277f2a00c0359531b60a4d6ff48f1668289",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "72d3f2427e9180ad8732156716b2a13fe51d9db8b389f0ac2632bc71822a0cc8",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/src/ssx_profile.cpp",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        },
+        {
+          "group": "game_files",
+          "path": "CMakeLists.txt",
+          "before_sha256": "397bdaf52599e693aaeb8d23191022bf22ce678670ce38af7389bbc201f0eba1",
+          "declared_before": "397bdaf52599e693aaeb8d23191022bf22ce678670ce38af7389bbc201f0eba1",
+          "before_matches": true,
+          "new_absent": null,
+          "after_sha256": "dbde328a5d5b99de5932ebdc893f831cfa14b617842ee0b43348e4d6cbc9b55e",
+          "after_matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/CMakeLists.txt",
+          "attribution": "allfix_overlay",
+          "is_binary": false
+        }
+      ],
+      "upstream_patch_files": [
+        {
+          "name": "rexglue-0001-d3d12-clamp-scaled-mip-copies.patch",
+          "sha256": "317c92697240184b5e12fbfba2f36953edd244691d5d9f45d488219009166972",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0001-d3d12-clamp-scaled-mip-copies.patch"
+        },
+        {
+          "name": "rexglue-0002-fidelityfx-skip-utf16-rc.patch",
+          "sha256": "0addb8dff597d04a8c25ece47aff870e8a7f7ae0c2de8826d90148c6cfc097c8",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0002-fidelityfx-skip-utf16-rc.patch"
+        },
+        {
+          "name": "rexglue-0003-texture-cache-drop-reused-scaled-resolve-regions.patch",
+          "sha256": "0464407ff7a620a513a6e2481460fc66a2e4cb7ddd45a9c6ede04cc1e4c8a83c",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0003-texture-cache-drop-reused-scaled-resolve-regions.patch"
+        },
+        {
+          "name": "rexglue-0004-d3d12-3d-as-2d-wrapper-scale-and-reload.patch",
+          "sha256": "0b4345b4a8e1c5385e6b85cdba5cdb063820e1715dbb242195d8a042cdba5c75",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0004-d3d12-3d-as-2d-wrapper-scale-and-reload.patch"
+        },
+        {
+          "name": "rexglue-0005-texture-cache-partial-volume-reload.patch",
+          "sha256": "98441b33a1fd6b32ca1070833a4bcac4d3ad1ba75885e95f7bb8ed1d5319d67c",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0005-texture-cache-partial-volume-reload.patch"
+        },
+        {
+          "name": "rexglue-0006-d3d12-safe-delayed-resolve-readback.patch",
+          "sha256": "956d4f1041985f4937be93eec2a0ecd4ae5b59d3c580217cc04d61cfc00022dd",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0006-d3d12-safe-delayed-resolve-readback.patch"
+        },
+        {
+          "name": "rexglue-0007-codegen-vexptefp-out-of-range.patch",
+          "sha256": "26537917070525816915d6d06aba26c031f6e36e51d7afa77fb349227bec2cb4",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0007-codegen-vexptefp-out-of-range.patch"
+        },
+        {
+          "name": "rexglue-0008-d3d12-scaled-resolve-upload-pending-cpu-writes.patch",
+          "sha256": "422d7bfc93c8d70bde76157d12c14cf7c916ccc56d8d6639a384fd83550c6b78",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0008-d3d12-scaled-resolve-upload-pending-cpu-writes.patch"
+        },
+        {
+          "name": "rexglue-0009-d3d12-unscaled-shadow-passes-and-one-off-resolve-readback.patch",
+          "sha256": "f3aaa32dc8a76cf126beabaa251d7f57dc02efb19818106b221066932b088497",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0009-d3d12-unscaled-shadow-passes-and-one-off-resolve-readback.patch"
+        },
+        {
+          "name": "rexglue-0010-d3d12-defer-evicted-readback-buffer-release.patch",
+          "sha256": "84a77e06ffa40d8542c55610a87ad3f09e8a39114d6a04065192f786e9d57c8b",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0010-d3d12-defer-evicted-readback-buffer-release.patch"
+        },
+        {
+          "name": "rexglue-0011-d3d12-shadow-depth-passes-compare-exchange.patch",
+          "sha256": "6a130870c260de5e9ca01b9893dd6ff32e11b0716076f11a9003cdaa68ac024a",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0011-d3d12-shadow-depth-passes-compare-exchange.patch"
+        },
+        {
+          "name": "rexglue-0012-d3d12-direct-scaled-texture-loads.patch",
+          "sha256": "33263e63bbbf7b2927de9ac6926fa9f5be2eeb0b6d67a68efef88ed204a8e8cc",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0012-d3d12-direct-scaled-texture-loads.patch"
+        },
+        {
+          "name": "rexglue-0013-d3d12-depth-only-passes-compare-exchange.patch",
+          "sha256": "e7ac264a976600960236179405a9ae5435b7094e7575d2b0789a887edb7b4f69",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0013-d3d12-depth-only-passes-compare-exchange.patch"
+        },
+        {
+          "name": "rexglue-0014-d3d12-fit-scaled-mips.patch",
+          "sha256": "93e7f7813c68d2f08a8f827ae492331e145aa1b0d656f8005bdf25defdbbad33",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0014-d3d12-fit-scaled-mips.patch"
+        },
+        {
+          "name": "rexglue-0015-system-title-update-xexp-from-update-device.patch",
+          "sha256": "90ef6f532ae0a1f4deb18d033dcd885bd917f6774c1e4e4c6a46cc2167ab6419",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0015-system-title-update-xexp-from-update-device.patch"
+        },
+        {
+          "name": "rexglue-0016-vulkan-exp-adjust-from-fetch-word-3.patch",
+          "sha256": "25e9a68d61bb3a52587c1654ab285dbd752544c03010833b8d831802dfc06c2d",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0016-vulkan-exp-adjust-from-fetch-word-3.patch"
+        },
+        {
+          "name": "rexglue-0017-render-targets-never-pass-depth-leaves-edram.patch",
+          "sha256": "87e1d0b3edddc58baca1280b091eeb06604248d48c122684670075f4e7aec9e8",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0017-render-targets-never-pass-depth-leaves-edram.patch"
+        },
+        {
+          "name": "rexglue-0018-vulkan-readback-resolve-max-size.patch",
+          "sha256": "ac33e4dc702ea1ca04282e582966d54907cda84f0c3780943ebdee0e6396d057",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0018-vulkan-readback-resolve-max-size.patch"
+        },
+        {
+          "name": "rexglue-0019-posix-unlink-guest-memory-shm.patch",
+          "sha256": "5e48b97a57610333b4f58f38539b9ddb92b99deee0bd0f421bc4e1c538c103ec",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0019-posix-unlink-guest-memory-shm.patch"
+        },
+        {
+          "name": "rexglue-0020-posix-multi-handle-waits-block.patch",
+          "sha256": "01c4f8177f144b9647405baec23b59f9f084f6e493d6e12fc2c59c4f8b06cf47",
+          "matches": true,
+          "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ssx-717a7a9.zip!ssx-recomp-717a7a93e1ca652b046f4f76ec46ab8758c5d80f/patches/rexglue-0020-posix-multi-handle-waits-block.patch"
+        }
+      ],
+      "official_patch_replay_errors": [],
+      "allfix_residual_diffs": [
+        {
+          "path": "CMakeLists.txt",
+          "diff_sha256": "42badc93f24da41a85b3b4bc63331f5bb705820e6a3202315aca94a4d3166282",
+          "diff_characters": 427,
+          "diff": "--- upstream_patched/CMakeLists.txt\n+++ allfix/CMakeLists.txt\n@@ -12,6 +12,10 @@\n     LANGUAGES ${REXGLUE_LANGUAGES}\n     DESCRIPTION \"Xbox 360 Recompilation SDK\"\n )\n+if(MINGW)\n+    set(CMAKE_SHARED_LIBRARY_PREFIX \"\")\n+    add_compile_definitions(_WIN32_WINNT=0x0A00 WINVER=0x0A00)\n+endif()\n # Floor only: bump MAJOR.MINOR for API changes. Patch is derived from git tags\n # in cmake/rex_version.cmake. See docs/RELEASING.md.\n \n"
+        },
+        {
+          "path": "cmake/rexglueConfig.cmake.in",
+          "diff_sha256": "a1d0b742ce681ecc06fcfa684602363e33b306fa069e3479ffa6015a017c0c14",
+          "diff_characters": 667,
+          "diff": "--- upstream_patched/cmake/rexglueConfig.cmake.in\n+++ allfix/cmake/rexglueConfig.cmake.in\n@@ -36,6 +36,12 @@\n     endif()\n endif()\n \n+if(@ALLFIX_SSX_FFX_CAPI@ AND NOT TARGET rex::amd_fidelityfx_dx12)\n+    add_library(rex::amd_fidelityfx_dx12 SHARED IMPORTED)\n+    set_target_properties(rex::amd_fidelityfx_dx12 PROPERTIES\n+        IMPORTED_LOCATION \"${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_BINDIR@/amd_fidelityfx_dx12.dll\"\n+        IMPORTED_IMPLIB \"${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_LIBDIR@/amd_fidelityfx_dx12.lib\")\n+endif()\n include(\"${CMAKE_CURRENT_LIST_DIR}/rexglueTargets.cmake\")\n \n # Only Release rexglue is installed, so every consumer config has to reach it.\n"
+        },
+        {
+          "path": "cmake/rexglue_export_targets.cmake",
+          "diff_sha256": "e0771bdf4543ac833a6a60f5f03e6216924d1e3aa1f3f9026f92ce52a45f05d7",
+          "diff_characters": 376,
+          "diff": "--- upstream_patched/cmake/rexglue_export_targets.cmake\n+++ allfix/cmake/rexglue_export_targets.cmake\n@@ -34,6 +34,6 @@\n     list(APPEND REXGLUE_INSTALL_FIDELITYFX_TARGETS amd_fidelityfx_vk)\n endif()\n \n-if(TARGET amd_fidelityfx_dx12)\n+if(TARGET amd_fidelityfx_dx12 AND NOT ALLFIX_SSX_FFX_CAPI)\n     list(APPEND REXGLUE_INSTALL_FIDELITYFX_TARGETS amd_fidelityfx_dx12)\n endif()\n"
+        },
+        {
+          "path": "cmake/rexglue_fidelityfx.cmake",
+          "diff_sha256": "bfebb4469f356ec0349e9dc1e7edf18dbf88a61350500e6dd4fe41635850984b",
+          "diff_characters": 7392,
+          "diff": "--- upstream_patched/cmake/rexglue_fidelityfx.cmake\n+++ allfix/cmake/rexglue_fidelityfx.cmake\n@@ -1,144 +1,25 @@\n-# rexglue_fidelityfx.cmake — Optional AMD FidelityFX integration via FetchContent\n-#\n-# Expects REXGLUE_ENABLE_FIDELITYFX to be set before inclusion.\n-# On success, creates amd_fidelityfx_vk and/or amd_fidelityfx_dx12 targets\n-# and sets REXGLUE_FIDELITYFX_SOURCE_DIR to the fetched SDK root.\n-\n+# AllFix SSX source pilot: preserve the shipped FidelityFX C ABI.\n if(NOT REXGLUE_ENABLE_FIDELITYFX)\n     return()\n endif()\n-\n-# ── Dependency validation ────────────────────────────────────────────────\n-if(NOT WIN32)\n-    find_package(Vulkan QUIET)\n-    if(NOT Vulkan_FOUND)\n-        message(WARNING\n-            \"REXGLUE_ENABLE_FIDELITYFX requires the Vulkan SDK but it was not found.\\n\"\n-            \"Install the LunarG Vulkan SDK: https://vulkan.lunarg.com/sdk/home\\n\"\n-            \"Disabling FidelityFX.\")\n-        set(REXGLUE_ENABLE_FIDELITYFX OFF CACHE BOOL \"\" FORCE)\n-        return()\n-    elseif(Vulkan_VERSION VERSION_LESS \"1.3.250\")\n-        message(WARNING\n-            \"REXGLUE_ENABLE_FIDELITYFX requires Vulkan SDK >= 1.3.250 \"\n-            \"(found ${Vulkan_VERSION}).\\n\"\n-            \"Update via: https://vulkan.lunarg.com/sdk/home\\n\"\n-            \"Disabling FidelityFX.\")\n-        set(REXGLUE_ENABLE_FIDELITYFX OFF CACHE BOOL \"\" FORCE)\n-        return()\n-    else()\n-        find_program(_rexglue_glslc glslc)\n-        find_program(_rexglue_glslang glslangValidator)\n-        if(NOT _rexglue_glslc AND NOT _rexglue_glslang)\n-            message(WARNING\n-                \"REXGLUE_ENABLE_FIDELITYFX requires Vulkan shader tools \"\n-                \"(glslc or glslangValidator) but neither was found.\\n\"\n-                \"Install the full LunarG Vulkan SDK: https://vulkan.lunarg.com/sdk/home\\n\"\n-                \"Disabling FidelityFX.\")\n-            set(REXGLUE_ENABLE_FIDELITYFX OFF CACHE BOOL \"\" FORCE)\n-            unset(_rexglue_glslc CACHE)\n-            unset(_rexglue_glslang CACHE)\n-            return()\n-        endif()\n-        unset(_rexglue_glslc CACHE)\n-        unset(_rexglue_glslang CACHE)\n-    endif()\n+if(NOT WIN32 OR NOT MINGW OR NOT REXGLUE_USE_D3D12 OR NOT ALLFIX_FFX_ROOT)\n+    message(FATAL_ERROR \"SSX FidelityFX requires the verified Windows C API payload\")\n endif()\n-\n-# ── Fetch FidelityFX SDK ─────────────────────────────────────────────────\n-include(FetchContent)\n-FetchContent_Declare(\n-    fidelityfx\n-    GIT_REPOSITORY https://github.com/rexglue/FidelityFX-SDK.git\n-    GIT_TAG        eee08db1688ac3d1275a70b728f4a8ba22914213\n-    GIT_SHALLOW    OFF\n-)\n-FetchContent_GetProperties(fidelityfx)\n-if(NOT fidelityfx_POPULATED)\n-    FetchContent_Populate(fidelityfx)\n+set(ALLFIX_SSX_FFX_CAPI ON CACHE INTERNAL \"\")\n+set(REXGLUE_FIDELITYFX_SOURCE_DIR \"${ALLFIX_FFX_ROOT}/ffx-capi-source\" CACHE INTERNAL \"\")\n+set(_ffx_dll \"${ALLFIX_FFX_ROOT}/ffx-capi-binary/bin/amd_fidelityfx_dx12.dll\")\n+set(_ffx_lib \"${ALLFIX_FFX_ROOT}/ffx-capi-binary/lib/amd_fidelityfx_dx12.lib\")\n+file(SHA256 \"${_ffx_dll}\" _dll_hash)\n+file(SHA256 \"${_ffx_lib}\" _lib_hash)\n+if(NOT _dll_hash STREQUAL \"12a5081257ec95b0b53ad51b4a87fb3c03f97fe0bbb59f9496968f8d50ef93a6\"\n+   OR NOT _lib_hash STREQUAL \"88e94e20bf96889e362a121c8f85df61ba2087124ebd2617475685b29e4f8c1f\")\n+    message(FATAL_ERROR \"SSX FidelityFX payload differs from SDK10\")\n endif()\n-\n-set(REXGLUE_FIDELITYFX_SOURCE_DIR \"${fidelityfx_SOURCE_DIR}\" CACHE INTERNAL\n-    \"Root of the fetched FidelityFX SDK source tree\")\n-\n-# ── Backend selection ────────────────────────────────────────────────────\n-set(REXGLUE_FIDELITYFX_BACKEND \"auto\" CACHE STRING\n-    \"FidelityFX backend to build (auto, vk, dx12)\")\n-set_property(CACHE REXGLUE_FIDELITYFX_BACKEND PROPERTY STRINGS auto vk dx12)\n-set(_rexglue_fidelityfx_backend \"${REXGLUE_FIDELITYFX_BACKEND}\")\n-string(TOLOWER \"${_rexglue_fidelityfx_backend}\" _rexglue_fidelityfx_backend)\n-\n-if(_rexglue_fidelityfx_backend STREQUAL \"auto\")\n-    if(WIN32 AND REXGLUE_USE_D3D12)\n-        set(_rexglue_fidelityfx_backend \"dx12\")\n-    elseif(REXGLUE_USE_VULKAN)\n-        set(_rexglue_fidelityfx_backend \"vk\")\n-    elseif(REXGLUE_USE_D3D12)\n-        set(_rexglue_fidelityfx_backend \"dx12\")\n-    endif()\n-endif()\n-\n-if(_rexglue_fidelityfx_backend STREQUAL \"vk\")\n-    if(NOT REXGLUE_USE_VULKAN)\n-        message(FATAL_ERROR\n-            \"REXGLUE_FIDELITYFX_BACKEND=vk requires REXGLUE_USE_VULKAN=ON\")\n-    endif()\n-    set(FFX_API_BACKEND VK_X64 CACHE STRING \"\" FORCE)\n-elseif(_rexglue_fidelityfx_backend STREQUAL \"dx12\")\n-    if(NOT REXGLUE_USE_D3D12)\n-        message(FATAL_ERROR\n-            \"REXGLUE_FIDELITYFX_BACKEND=dx12 requires REXGLUE_USE_D3D12=ON\")\n-    endif()\n-    set(FFX_API_BACKEND DX12_X64 CACHE STRING \"\" FORCE)\n-elseif(_rexglue_fidelityfx_backend STREQUAL \"\")\n-    message(FATAL_ERROR \"FidelityFX requires a supported graphics backend\")\n-else()\n-    message(FATAL_ERROR\n-        \"Invalid REXGLUE_FIDELITYFX_BACKEND='${REXGLUE_FIDELITYFX_BACKEND}' \"\n-        \"(expected auto, vk, or dx12)\")\n-endif()\n-\n-if(REXGLUE_USE_VULKAN AND REXGLUE_USE_D3D12)\n-    message(STATUS\n-        \"FidelityFX backend selected for this build: ${_rexglue_fidelityfx_backend}\")\n-endif()\n-\n-# ── Build FidelityFX ─────────────────────────────────────────────────────\n-set(FFX_API_ENABLE_FRAMEGEN_PROVIDER OFF CACHE BOOL \"\" FORCE)\n-if(WIN32)\n-    set(FFX_API_AUTO_COMPILE_SHADERS ON CACHE BOOL \"\" FORCE)\n-else()\n-    set(FFX_API_AUTO_COMPILE_SHADERS OFF CACHE BOOL \"\" FORCE)\n-endif()\n-add_subdirectory(\"${fidelityfx_SOURCE_DIR}/ffx-api\" \"${fidelityfx_BINARY_DIR}/ffx-api\" EXCLUDE_FROM_ALL)\n-\n-# The ffx-api DLL's version resource is UTF-16, which llvm-rc can't read; it only\n-# carries version info, so build the DLL without it.\n-foreach(_rexglue_ffx_target amd_fidelityfx_vk amd_fidelityfx_dx12)\n-    if(TARGET ${_rexglue_ffx_target})\n-        get_target_property(_rexglue_ffx_sources ${_rexglue_ffx_target} SOURCES)\n-        list(FILTER _rexglue_ffx_sources EXCLUDE REGEX \"[.]rc$\")\n-\n-        set_target_properties(${_rexglue_ffx_target} PROPERTIES SOURCES \"${_rexglue_ffx_sources}\")\n-    endif()\n-endforeach()\n-\n-# The upstream FidelityFX targets expose source-tree include paths in\n-# INTERFACE_INCLUDE_DIRECTORIES, which breaks our install export checks.\n-# We only link against these targets internally, so no public includes are\n-# needed on the exported interface.\n-if(TARGET amd_fidelityfx_vk)\n-    set_target_properties(amd_fidelityfx_vk PROPERTIES\n-        INTERFACE_INCLUDE_DIRECTORIES \"\"\n-    )\n-endif()\n-if(TARGET amd_fidelityfx_dx12)\n-    set_target_properties(amd_fidelityfx_dx12 PROPERTIES\n-        INTERFACE_INCLUDE_DIRECTORIES \"\"\n-    )\n-endif()\n-\n-# FidelityFX's toolchain.cmake force-sets CMAKE_GENERATOR_PLATFORM (for VS generators).\n-# With Ninja this variable is invalid and poisons every subsequent try_compile() call.\n-# Clear it from the cache.\n-unset(CMAKE_GENERATOR_PLATFORM CACHE)\n+add_library(rex::amd_fidelityfx_dx12 SHARED IMPORTED GLOBAL)\n+set_target_properties(rex::amd_fidelityfx_dx12 PROPERTIES\n+    IMPORTED_LOCATION \"${_ffx_dll}\"\n+    IMPORTED_IMPLIB \"${_ffx_lib}\")\n+add_library(amd_fidelityfx_dx12 ALIAS rex::amd_fidelityfx_dx12)\n+install(FILES \"${_ffx_dll}\" DESTINATION \"${CMAKE_INSTALL_BINDIR}\")\n+install(FILES \"${_ffx_lib}\" DESTINATION \"${CMAKE_INSTALL_LIBDIR}\")\n+install(DIRECTORY \"${ALLFIX_FFX_ROOT}/ffx-capi-binary/licenses/\" DESTINATION licenses)\n"
+        },
+        {
+          "path": "cmake/rexglue_install.cmake",
+          "diff_sha256": "2ae4e05f22f2850e5c81fb122c449b00aa99d7df2d7f9f748c0623a4ba82693f",
+          "diff_characters": 1617,
+          "diff": "--- upstream_patched/cmake/rexglue_install.cmake\n+++ allfix/cmake/rexglue_install.cmake\n@@ -144,33 +144,4 @@\n     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/rexglue\n )\n \n-# Register in the CMake User Package Registry after install.\n-# This makes find_package(rexglue) work with no REXSDK env var or CMAKE_PREFIX_PATH.\n-# Multiple SxS installs coexist. Each prefix gets a unique hash entry.\n-#\n-# Windows: HKCU\\Software\\Kitware\\CMake\\Packages\\rexglue  (REG_SZ, value name = MD5 hash)\n-# Unix:    ~/.cmake/packages/rexglue/<hash>               (file containing prefix path)\n-install(CODE [[\n-    # Normalize path casing on Windows before hashing to avoid duplicate entries\n-    if(CMAKE_HOST_WIN32)\n-        string(TOLOWER \"${CMAKE_INSTALL_PREFIX}\" _reg_key)\n-    else()\n-        set(_reg_key \"${CMAKE_INSTALL_PREFIX}\")\n-    endif()\n-    string(MD5 _hash \"${_reg_key}\")\n-\n-    if(CMAKE_HOST_WIN32)\n-        # Windows CMake User Package Registry lives in HKCU (not the filesystem)\n-        set(_reg_root \"HKCU\\\\Software\\\\Kitware\\\\CMake\\\\Packages\\\\rexglue\")\n-        execute_process(\n-            COMMAND reg add \"${_reg_root}\" /v \"${_hash}\" /t REG_SZ /d \"${CMAKE_INSTALL_PREFIX}\" /f\n-            OUTPUT_QUIET ERROR_QUIET\n-        )\n-    else()\n-        set(_reg_dir \"$ENV{HOME}/.cmake/packages/rexglue\")\n-        file(MAKE_DIRECTORY \"${_reg_dir}\")\n-        file(WRITE \"${_reg_dir}/${_hash}\" \"${CMAKE_INSTALL_PREFIX}\")\n-    endif()\n-    message(STATUS \"Registered rexglue in CMake user package registry\")\n-    message(STATUS \"  -> ${CMAKE_INSTALL_PREFIX}\")\n-]])\n+# AllFix private SDK: no user/global package registration.\n"
+        },
+        {
+          "path": "include/rex/chrono/chrono.h",
+          "diff_sha256": "5d5877e098aa3987b8f89529e47afdf7034d728baa7651a90866a22874c813cc",
+          "diff_characters": 402,
+          "diff": "--- upstream_patched/include/rex/chrono/chrono.h\n+++ allfix/include/rex/chrono/chrono.h\n@@ -116,8 +116,8 @@\n \n namespace std::chrono {\n \n-#ifdef __APPLE__\n-// Apple libc++ does not expose clock_time_conversion or clock_cast.\n+#if defined(__APPLE__) || defined(_LIBCPP_VERSION)\n+// libc++ does not expose clock_time_conversion or clock_cast.\n template <class, class>\n struct clock_time_conversion {};\n \n"
+        },
+        {
+          "path": "include/rex/ui/d3d12/d3d12_api.h",
+          "diff_sha256": "1ad0bc440d4b7bb07e0cc7714590afb7a770b9d642bc8f848233bc06d7509e6f",
+          "diff_characters": 1310,
+          "diff": "--- upstream_patched/include/rex/ui/d3d12/d3d12_api.h\n+++ allfix/include/rex/ui/d3d12/d3d12_api.h\n@@ -21,7 +21,18 @@\n #include <windows.h>\n #include <ObjBase.h>\n \n+#if defined(__MINGW32__)\n+// Public COM contract from DXProgrammableCapture.h (Windows SDK 10.0.26100.0).\n+// The interface preserves the optional graphics debugger capture callbacks.\n+MIDL_INTERFACE(\"9f251514-9d4d-4902-9d60-18988ab7d4b5\")\n+IDXGraphicsAnalysis : public IUnknown {\n+  virtual void STDMETHODCALLTYPE BeginCapture() = 0;\n+  virtual void STDMETHODCALLTYPE EndCapture() = 0;\n+};\n+__CRT_UUID_DECL(IDXGraphicsAnalysis, 0x9f251514, 0x9d4d, 0x4902, 0x9d, 0x60, 0x18, 0x98, 0x8a, 0xb7, 0xd4, 0xb5)\n+#else\n #include <DXProgrammableCapture.h>\n+#endif\n #include <d3d12.h>\n #include <d3d12sdklayers.h>\n #include <d3dcompiler.h>\n@@ -32,4 +43,11 @@\n #include <dxcapi.h>\n #include \"DxbcConverter.h\"\n \n+#if defined(__MINGW32__)\n+// GUID traits for the official DXC COM declarations used by MinGW.\n+__CRT_UUID_DECL(IDxbcConverter, 0x5f956ed5, 0x78d1, 0x4b15, 0x82, 0x47, 0xf7, 0x18, 0x76, 0x14, 0xa0, 0x41)\n+__CRT_UUID_DECL(IDxcUtils, 0x4605c4cb, 0x2019, 0x492a, 0xad, 0xa4, 0x65, 0xf2, 0x0b, 0xb7, 0xd6, 0x7f)\n+__CRT_UUID_DECL(IDxcCompiler, 0x8c210bf3, 0x011f, 0x4422, 0x8d, 0x70, 0x6f, 0x9a, 0xcb, 0x8d, 0xb6, 0x17)\n+#endif\n+\n // clang-format on\n"
+        },
+        {
+          "path": "src/core/filesystem_win.cpp",
+          "diff_sha256": "268854caf083f7e50e4462aa3251859da8261bb751f8fe048fe6b5fee8a99bfe",
+          "diff_characters": 910,
+          "diff": "--- upstream_patched/src/core/filesystem_win.cpp\n+++ allfix/src/core/filesystem_win.cpp\n@@ -10,6 +10,7 @@\n  */\n \n #include <string>\n+#include <algorithm>\n \n #include <io.h>\n #include <shlobj.h>\n@@ -43,9 +44,23 @@\n namespace filesystem {\n \n std::filesystem::path GetExecutablePath() {\n+#if defined(__MINGW32__)\n+  std::wstring path(260, L'\\0');\n+  for (;;) {\n+    const auto length = GetModuleFileNameW(nullptr, path.data(), static_cast<DWORD>(path.size()));\n+    if (length == 0) return {};\n+    if (length < path.size()) {\n+      path.resize(length);\n+      return std::filesystem::path(path);\n+    }\n+    if (path.size() >= 32768) return {};\n+    path.resize(std::min<std::size_t>(path.size() * 2, 32768));\n+  }\n+#else\n   wchar_t* path;\n   auto error = _get_wpgmptr(&path);\n   return !error ? std::filesystem::path(path) : std::filesystem::path();\n+#endif\n }\n \n std::filesystem::path GetExecutableFolder() {\n"
+        },
+        {
+          "path": "src/input/xinput/xinput_input_driver.cpp",
+          "diff_sha256": "ce6769fe802a382d7052f278ed0c879964f44092f0d9d6745974dde5864bbcdc",
+          "diff_characters": 695,
+          "diff": "--- upstream_patched/src/input/xinput/xinput_input_driver.cpp\n+++ allfix/src/input/xinput/xinput_input_driver.cpp\n@@ -115,12 +115,12 @@\n   }\n \n   module_ = module;\n-  XInputGetCapabilities_ = xigc;\n-  XInputGetState_ = xigs;\n-  XInputGetStateEx_ = xigsEx;\n-  XInputGetKeystroke_ = xigk;\n-  XInputSetState_ = xiss;\n-  XInputEnable_ = xie;\n+  XInputGetCapabilities_ = reinterpret_cast<void*>(xigc);\n+  XInputGetState_ = reinterpret_cast<void*>(xigs);\n+  XInputGetStateEx_ = reinterpret_cast<void*>(xigsEx);\n+  XInputGetKeystroke_ = reinterpret_cast<void*>(xigk);\n+  XInputSetState_ = reinterpret_cast<void*>(xiss);\n+  XInputEnable_ = reinterpret_cast<void*>(xie);\n \n   return X_STATUS_SUCCESS;\n }\n"
+        },
+        {
+          "path": "src/ui/CMakeLists.txt",
+          "diff_sha256": "7e81b8cadfbc0803ae3237df8e38994606f4fc3f77ea4af807b609f8173b80a4",
+          "diff_characters": 517,
+          "diff": "--- upstream_patched/src/ui/CMakeLists.txt\n+++ allfix/src/ui/CMakeLists.txt\n@@ -116,7 +116,7 @@\n )\n target_link_libraries(rexui PRIVATE utf8cpp)\n \n-if(REXGLUE_FIDELITYFX_SOURCE_DIR AND EXISTS \"${REXGLUE_FIDELITYFX_SOURCE_DIR}/sdk/include\")\n+if(REXGLUE_FIDELITYFX_SOURCE_DIR AND EXISTS \"${REXGLUE_FIDELITYFX_SOURCE_DIR}/ffx-api/include/ffx_api/ffx_api.h\")\n     target_include_directories(rexui PRIVATE\n         \"${REXGLUE_FIDELITYFX_SOURCE_DIR}/sdk/include\"\n         \"${REXGLUE_FIDELITYFX_SOURCE_DIR}/ffx-api/include\"\n"
+        },
+        {
+          "path": "src/ui/d3d12/d3d12_provider.cpp",
+          "diff_sha256": "e906bee4c50c5ef51dcaeebffbf076c35f20bcdb18eb50f5bd5b51dfdcb309ca",
+          "diff_characters": 658,
+          "diff": "--- upstream_patched/src/ui/d3d12/d3d12_provider.cpp\n+++ allfix/src/ui/d3d12/d3d12_provider.cpp\n@@ -256,7 +256,7 @@\n   while (dxgi_factory->EnumAdapters1(adapter_index, &adapter) == S_OK) {\n     DXGI_ADAPTER_DESC1 adapter_desc;\n     if (SUCCEEDED(adapter->GetDesc1(&adapter_desc))) {\n-      if (SUCCEEDED(pfn_d3d12_create_device_(adapter, D3D_FEATURE_LEVEL_11_0, _uuidof(ID3D12Device),\n+      if (SUCCEEDED(pfn_d3d12_create_device_(adapter, D3D_FEATURE_LEVEL_11_0, __uuidof(ID3D12Device),\n                                              nullptr))) {\n         if (REXCVAR_GET(d3d12_adapter) >= 0) {\n           if (adapter_index == REXCVAR_GET(d3d12_adapter)) {\n"
+        },
+        {
+          "path": "thirdparty/CMakeLists.txt",
+          "diff_sha256": "b2283716f891c581e6ef4231da7e5319fa821ddd921b9c677baa8ceea6b2479e",
+          "diff_characters": 803,
+          "diff": "--- upstream_patched/thirdparty/CMakeLists.txt\n+++ allfix/thirdparty/CMakeLists.txt\n@@ -64,7 +64,7 @@\n endif()\n \n foreach(submodule ${REQUIRED_SUBMODULES})\n-    if(NOT EXISTS \"${CMAKE_CURRENT_SOURCE_DIR}/${submodule}/.git\")\n+    if(NOT EXISTS \"${CMAKE_CURRENT_SOURCE_DIR}/${submodule}/allfix-source-identity.json\")\n         message(FATAL_ERROR\n             \"Git submodule '${submodule}' is not initialized.\\n\"\n             \"Please run: git submodule update --init --recursive\\n\"\n@@ -279,7 +279,7 @@\n set(SDL_TRAY OFF CACHE BOOL \"\" FORCE)\n set(SDL_CAMERA OFF CACHE BOOL \"\" FORCE)\n \n-# Disable graphics APIs (unused without video) — only on non-Apple\n+# Disable graphics APIs (unused without video) � only on non-Apple\n set(SDL_OPENGL OFF CACHE BOOL \"\" FORCE)\n set(SDL_OPENGLES OFF CACHE BOOL \"\" FORCE)\n \n"
+        },
+        {
+          "path": "thirdparty/FFmpeg/libavutil/internal.h",
+          "diff_sha256": "a52238a91bfea9fbd9c0c2012faccf18d35aab1a5ae2cfbdb3f84fea697fa67c",
+          "diff_characters": 513,
+          "diff": "--- upstream_patched/thirdparty/FFmpeg/libavutil/internal.h\n+++ allfix/thirdparty/FFmpeg/libavutil/internal.h\n@@ -178,7 +178,9 @@\n                            const char *msg, ...) av_printf_format(2, 3);\n \n #if HAVE_LIBC_MSVCRT\n+#if defined(_MSC_VER) && !defined(__MINGW32__)\n #include <crtversion.h>\n+#endif\n #if defined(_VC_CRT_MAJOR_VERSION) && _VC_CRT_MAJOR_VERSION < 14\n #pragma comment(linker, \"/include:\" EXTERN_PREFIX \"avpriv_strtod\")\n #pragma comment(linker, \"/include:\" EXTERN_PREFIX \"avpriv_snprintf\")\n"
+        },
+        {
+          "path": "game/src/ssx_profile.cpp",
+          "diff": "--- original/src/ssx_profile.cpp\n+++ allfix/src/ssx_profile.cpp\n@@ -11,6 +11,10 @@\n #include <wincodec.h>\n #include <wrl/client.h>\n #pragma comment(lib, \"windowscodecs.lib\")\n+#if defined(__MINGW32__)\n+// Windows SDK 10.0.26100: preserve the HighQualityCubic WIC mode.\n+constexpr auto WICBitmapInterpolationModeHighQualityCubic = static_cast<WICBitmapInterpolationMode>(4);\n+#endif\n #endif\n \n #include <rex/cvar.h>\n"
+        },
+        {
+          "path": "game/CMakeLists.txt",
+          "diff": "--- original/CMakeLists.txt\n+++ allfix/CMakeLists.txt\n@@ -55,7 +55,7 @@\n rexglue_setup_target(ssx GPU_PLUGINS xenos)\n if(WIN32)\n     # Your own music (src/ssx_music.cpp): Media Foundation decodes it.\n-    target_link_libraries(ssx PRIVATE mfplat mfreadwrite mfuuid)\n+    target_link_libraries(ssx PRIVATE mfplat mfreadwrite mfuuid windowscodecs)\n endif()\n if(SSX_GAME_VERSION STREQUAL \"0.0.3.2\")\n     target_compile_definitions(ssx PRIVATE SSX_TITLE_UPDATE=1)\n"
+        }
+      ],
+      "all_preimages_and_replacements_match": true,
+      "all_declared_new_paths_absent_from_original": true
+    }
+  },
+  "additional_source_evidence": {
+    "source_excerpts": {
+      "src/core/perf/counter.cpp": {
+        "sha256": "c183ea28c602fbf4a010328bf427c1c78436dd500471e679845c2b3de14f0a93",
+        "ranges": [
+          {
+            "start": 70,
+            "end": 110,
+            "text": "namespace rex::perf {\n\nnamespace {\n\n#if REX_PLATFORM_WIN32\nTRACELOGGING_DEFINE_PROVIDER(\n    g_critical_path_provider, \"PinyonShift-CriticalPath\",\n    (0xf36ab1a6, 0x80bb, 0x4482, 0xb1, 0xb9, 0x92, 0xa6, 0xec, 0x87, 0x02,\n     0x58));\n\nstruct CriticalPathProviderRegistration {\n  CriticalPathProviderRegistration() {\n    TraceLoggingRegister(g_critical_path_provider);\n  }\n  ~CriticalPathProviderRegistration() {\n    TraceLoggingUnregister(g_critical_path_provider);\n  }\n};\n\nCriticalPathProviderRegistration g_critical_path_provider_registration;\n\nbool CriticalPathEtwEnabled() {\n  return TraceLoggingProviderEnabled(g_critical_path_provider, 0, 0) != FALSE;\n}\n#else\nconstexpr bool CriticalPathEtwEnabled() { return false; }\n#endif\n\nconstexpr size_t kNumCounters = static_cast<size_t>(CounterId::kCount);\n\n// Values written with SetCounter; increments live in per-thread blocks.\nstd::array<std::atomic<int64_t>, kNumCounters> g_counters{};\nstd::array<std::atomic<int64_t>, kNumCounters> g_snapshot{};\n\n// Increments go to a block owned by the calling thread: one writer per\n// block, so an increment is a plain load and store with no locked\n// instruction and no cache line shared with other threads. Readers sum the\n// blocks. Blocks are never freed, so totals survive thread exit.\nstruct alignas(64) ThreadCounterBlock {\n  std::array<std::atomic<int64_t>, kNumCounters> totals{};\n  ThreadCounterBlock* next = nullptr;"
+          },
+          {
+            "start": 790,
+            "end": 840,
+            "text": "  return log_enabled || CriticalPathEtwEnabled();\n}\n\nvoid TraceCriticalPath(std::string_view event, int64_t source_frame,\n                       int64_t value0, int64_t value1, int64_t value2) {\n  if (!CriticalPathTraceEnabled()) {\n    return;\n  }\n#if REX_PLATFORM_WIN32\n  if (event == \"source_frame\") {\n    TraceLoggingWrite(g_critical_path_provider, \"SourceFrame\",\n                      TraceLoggingInt64(source_frame, \"SourceFrame\"));\n  }\n  TraceLoggingWrite(g_critical_path_provider, \"CriticalPath\",\n                    TraceLoggingCountedUtf8String(event.data(),\n                                                  static_cast<ULONG>(event.size()),\n                                                  \"Event\"),\n                    TraceLoggingInt64(source_frame, \"SourceFrame\"),\n                    TraceLoggingInt64(value0, \"Value0\"),\n                    TraceLoggingInt64(value1, \"Value1\"),\n                    TraceLoggingInt64(value2, \"Value2\"));\n#endif\n  static const bool log_enabled = REXCVAR_GET(perf_critical_path_trace);\n  if (!log_enabled) {\n    return;\n  }\n  const int64_t time_ns = std::chrono::duration_cast<std::chrono::nanoseconds>(\n                              std::chrono::steady_clock::now().time_since_epoch())\n                              .count();\n  REXLOG_INFO(\n      \"CRITICAL_PATH {{\\\"event\\\":\\\"{}\\\",\\\"time_ns\\\":{},\\\"thread\\\":{},\"\n      \"\\\"source_frame\\\":{},\\\"value0\\\":{},\\\"value1\\\":{},\\\"value2\\\":{}}}\",\n      event, time_ns, std::hash<std::thread::id>{}(std::this_thread::get_id()),\n      source_frame, value0, value1, value2);\n}\n\nvoid Init() {\n  for (auto& c : g_counters)\n    c.store(0, std::memory_order_relaxed);\n  for (auto& s : g_snapshot)\n    s.store(0, std::memory_order_relaxed);\n  for (size_t i = 0; i < kNumCounters; ++i) {\n    const int64_t totals = SumThreadTotals(i);\n    g_init_totals[i].store(totals, std::memory_order_relaxed);\n    g_snapshot_totals[i].store(totals, std::memory_order_relaxed);\n  }\n}\n\nvoid SetCsvLogPath(const std::string& path) {\n  if (g_csv_file) {\n    std::fflush(g_csv_file);"
+          }
+        ]
+      },
+      "src/ui/vulkan/vulkan_ffx_upscaler.cpp": {
+        "sha256": "0b8a79315a6ca50cd54cdfc60167cd953c65c8183c53187c3f8a555114d76e9d",
+        "ranges": [
+          {
+            "start": 757,
+            "end": 780,
+            "text": "#endif  // defined(REX_HAS_FFX_API) && REX_HAS_FFX_API\n\nstd::vector<std::unique_ptr<VulkanUpscaler>> CreateVulkanUpscalers(\n    [[maybe_unused]] const VulkanDevice* device) {\n  std::vector<std::unique_ptr<VulkanUpscaler>> upscalers;\n  if (std::unique_ptr<VulkanUpscaler> dlss = CreateVulkanDlssUpscaler(device)) {\n    upscalers.push_back(std::move(dlss));\n  }\n#if defined(REX_HAS_FFX_API) && REX_HAS_FFX_API\n  upscalers.push_back(std::make_unique<VulkanFfxUpscaler>(device, 3));\n  upscalers.push_back(std::make_unique<VulkanFfxUpscaler>(device, 2));\n#endif\n  return upscalers;\n}\n\nstd::unique_ptr<VulkanFrameGenerator> CreateVulkanFfxFrameGenerator(\n    [[maybe_unused]] const VulkanDevice* device) {\n#if defined(REX_HAS_FFX_API) && REX_HAS_FFX_API\n  return std::make_unique<VulkanFfxFrameGenerator>(device);\n#else\n  return nullptr;\n#endif\n}\n"
+          }
+        ]
+      },
+      "cmake/rexglue_ffx_api_headers.cmake": {
+        "sha256": "18f26bd7e18fdbfdba87bf55350a78779f5c2b9462f843916b5935fa564cf860",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 29,
+            "text": "# rexglue_ffx_api_headers.cmake — the FidelityFX API headers (MIT), without\n# the SDK build.\n#\n# The FSR 2/3 provider (src/ui/vulkan/ffx_upscaler.cpp) calls the FidelityFX\n# API through five entry points. Without REXGLUE_ENABLE_FIDELITYFX (the SDK\n# built from source), it loads them at run time: on Windows from AMD's signed\n# runtime (amd_fidelityfx_vk.dll, SDK 1.1.4), downloaded here from the same\n# pinned fork commit, which carries it in PrebuiltSignedDLL/; elsewhere from\n# the library thirdparty/fidelityfx-vk builds from source. The headers come\n# from that commit too.\n#\n# Sets REXGLUE_FFX_API_INCLUDE_DIR when the headers are present, and on\n# Windows REXGLUE_FFX_RUNTIME_DLL when the signed runtime is (the game\n# stages it in upscalers/fidelityfx/1.1.4/, rexglue_helpers.cmake).\n\noption(REXGLUE_FFX_API_LOADER\n    \"Build the FSR 2/3 provider that loads the FidelityFX runtime at run time\" ON)\n\nset(REXGLUE_FFX_API_INCLUDE_DIR \"\" CACHE INTERNAL \"\")\nset(REXGLUE_FFX_RUNTIME_DLL \"\" CACHE INTERNAL \"\")\nif(REXGLUE_FIDELITYFX_SOURCE_DIR)\n    set(REXGLUE_FFX_API_INCLUDE_DIR \"${REXGLUE_FIDELITYFX_SOURCE_DIR}/ffx-api/include\"\n        CACHE INTERNAL \"\")\n    return()\nendif()\nif(NOT REXGLUE_FFX_API_LOADER OR NOT REXGLUE_USE_VULKAN)\n    return()\nendif()\n"
+          }
+        ]
+      },
+      "cmake/rexglue_helpers.cmake": {
+        "sha256": "0e9b3b06284bbafded73312ad447d6d9410b355267a0d4f7a53201a035356137",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 15,
+            "text": "#==========================================================\n# rexglue_helpers.cmake\n#\n# Three helpers, each with a single responsibility:\n#   rexglue_apply_target_settings(<target>)        - common compile/platform flags\n#   rexglue_configure_target(<target>)             - host application\n#   rexglue_configure_module_target(<target> ...)  - guest DLL module\n#==========================================================\ninclude_guard(GLOBAL)\n\noption(REXGLUE_FIDELITYFX_RUNTIME\n    \"Stage AMD's FidelityFX library (FSR 2 and 3) beside the game: built from source on Linux and macOS, AMD's signed DLL on Windows\"\n    ON)\n\n# Copies files into upscalers/<subdirectory>/ beside the executable whenever"
+          }
+        ]
+      }
+    },
+    "build_cache": {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\rex-native-source\\pinyon-production27\\preflight\\native-sdk-build\\CMakeCache.txt",
+      "sha256": "9cf5a23bde5633945efdd2574adbfcf79f4f9839fc392077d7e9870f75fd0697",
+      "settings": [
+        "REXGLUE_DLSS_PROVIDER:BOOL=ON",
+        "REXGLUE_ENABLE_FIDELITYFX:BOOL=OFF",
+        "REXGLUE_FFX_API_LOADER:BOOL=OFF",
+        "REXGLUE_FIDELITYFX_RUNTIME:BOOL=OFF",
+        "REXGLUE_USE_D3D11:BOOL=ON",
+        "REXGLUE_USE_D3D12:BOOL=ON",
+        "REXGLUE_USE_VULKAN:BOOL=ON"
+      ]
+    },
+    "d3d11_header_comparison": {
+      "original_path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\fh1-production-27\\fn-llvm\\llvm-mingw-20261020-ucrt-x86_64\\include\\d3d11sdklayers.h",
+      "original_sha256": "daedc20a0c189a76369c59e9dc58da5d0efb804fed99befd819d59fa58019ce5",
+      "replacement_path": "Tools/PinyonNative/source-support.zip!sdk/include/rex/ui/d3d11/allfix_d3d11sdklayers.h",
+      "replacement_sha256": "b2f68092248cc8396f538c9533abdd48fbb9e117188a2009c6bef49e5b08cd59",
+      "normalized_diff": "D3D11_RLDO_DETAIL = 2 becomes D3D11_RLDO_DETAIL = 2, followed by D3D11_RLDO_IGNORE_INTERNAL = 4; no other textual changes."
+    }
+  },
+  "fh1_official_launcher": {
+    "repository": "FH1-ReImagined/ForzaHorizon1-ReImagined",
+    "commit": "46d5ed62866af68700d15c61748df8c29ad0248d",
+    "blob": {
+      "path": "launcher/forza_launcher/builder.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94f132bf0d142d52f37b788ad316764da2e2cd61",
+      "size": 68886,
+      "url": "https://api.github.com/repos/FH1-ReImagined/ForzaHorizon1-ReImagined/git/blobs/94f132bf0d142d52f37b788ad316764da2e2cd61"
+    },
+    "excerpt_lines": [
+      1298,
+      1316,
+      1324,
+      1327
+    ],
+    "retrieval": "GitHub connector immutable raw file and tree",
+    "sha256": "133f2edb89e4afa7e2dd4d0557f96847d7046d7c3d79ffed1976932322981814",
+    "git_blob_observed": "94f132bf0d142d52f37b788ad316764da2e2cd61",
+    "git_blob_matches": true
+  },
+  "limitations": [
+    "The result classifies modifications present in the pinned integration; it is not a gameplay completeness review of each entire upstream repository.",
+    "Byte hashes and replay establish overlay provenance, not proof that the custom runtime matches upstream behavior in a commercial playthrough.",
+    "Bridge binary source correspondence was not rebuilt in this audit; source, fixed binary hashes, retained build provenance and production call sites were inspected.",
+    "Existing successful host, ABI, DLL-loader and synthetic-image tests do not establish commercial boot, real guest facade correctness or gameplay."
+  ],
+  "findings": [
+    {
+      "id": "REX-01",
+      "severity": "high_product_scope",
+      "project_id": "pinyon-shift",
+      "title": "Temporal FSR2/3 and FidelityFX frame generation disabled by AllFix build configuration",
+      "evidence": [
+        "Services/GameInstallationPinyonNative.cs:159",
+        "Services/GameInstallationPinyonBuild.cs:116",
+        "shiftglue-sdk@0c2187c/cmake/rexglue_ffx_api_headers.cmake:16-27",
+        "shiftglue-sdk@0c2187c/cmake/rexglue_helpers.cmake:11-13",
+        "shiftglue-sdk@0c2187c/src/ui/vulkan/vulkan_ffx_upscaler.cpp:765-777"
+      ],
+      "actual_cache_sha256": "9cf5a23bde5633945efdd2574adbfcf79f4f9839fc392077d7e9870f75fd0697",
+      "preserved_distinct_features": [
+        "D3D11",
+        "D3D12",
+        "Vulkan",
+        "CAS",
+        "FSR1",
+        "DLSS as optional user choice",
+        "LSFG"
+      ],
+      "consequence": "Feature loss relative to original SDK defaults; not merely a source-compatibility patch."
+    },
+    {
+      "id": "REX-02",
+      "severity": "medium_product_scope",
+      "project_id": "fh1-reimagined",
+      "title": "AllFix unconditionally omits experimental ReGPU renderer that the official Windows launcher normally builds",
+      "evidence": [
+        "Services/GameInstallationForzaNativeGame.cs:95",
+        "Services/GameInstallationForzaNative.cs:11-16",
+        "ForzaHorizon1-ReImagined@46d5ed6/launcher/forza_launcher/builder.py:1298,1316,1324-1327"
+      ],
+      "consequence": "The xenos runtime remains; the extra ReGPU plugin is omitted without attempting the official conditional build."
+    },
+    {
+      "id": "REX-03",
+      "severity": "medium_custom_runtime",
+      "project_ids": [
+        "fh1-reimagined",
+        "pinyon-shift",
+        "ssx-recomp"
+      ],
+      "title": "AllFix maintains modified SDK/runtime copies and custom NGX/ETW bridges",
+      "consequence": "This exceeds installation-only orchestration. No added missing gameplay was found in these reviewed diffs, but runtime semantic equivalence is not established by compilation."
+    },
+    {
+      "id": "REX-04",
+      "severity": "validation_limit",
+      "project_id": "pinyon-shift",
+      "title": "Facade test DLLs are synthetic and are not the real generated guest facades",
+      "evidence": [
+        "Tools/PinyonNative/source-support.zip!probe/facade.cpp",
+        "Tools/PinyonNative/source-support.zip!probe/entry-CMakeLists.txt",
+        "Services/GameInstallationPinyonNativeProof.cs:38-66",
+        "Tests/AddonInfrastructure/R18PinyonIntegration.cs:86",
+        "Services/GameInstallationPinyonBuild.cs:196-225"
+      ],
+      "production_injection_found": false,
+      "consequence": "The test proves entrypoint/loader/naming behavior. It cannot be used as proof that the commercial modules execute."
+    },
+    {
+      "id": "REX-05",
+      "severity": "attribution_correction",
+      "project_ids": [
+        "fh1-reimagined",
+        "ssx-recomp"
+      ],
+      "title": "Large SDL/FFmpeg and graphics/codegen patches already belong to the upstream projects",
+      "official_patch_count": 22,
+      "exact_overlay_text_files": 32,
+      "consequence": "Do not attribute those gameplay-adjacent engine changes to AllFix authors; the actual AllFix residual changes are separately recorded."
+    }
+  ]
+}

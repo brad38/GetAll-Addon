@@ -1,0 +1,317 @@
+[
+  {
+    "published_path": "Services/GameInstallationMetaforceBuild.cs",
+    "local_path": "metaforce-implementation/GameInstallationMetaforceBuild.cs",
+    "expected_blob": "0c51e1d56e8872935b6cf1e1ef9bd958a8e8f3b5",
+    "actual_blob": "0c51e1d56e8872935b6cf1e1ef9bd958a8e8f3b5",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationMetaforceDependencies.cs",
+    "local_path": "metaforce-implementation/GameInstallationMetaforceDependencies.cs",
+    "expected_blob": "bbeb2ff12bf53a9b4bb1bf3e1ac0a5a9e4cb4758",
+    "actual_blob": "bbeb2ff12bf53a9b4bb1bf3e1ac0a5a9e4cb4758",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationMetaforceMedia.cs",
+    "local_path": "metaforce-implementation/GameInstallationMetaforceMedia.cs",
+    "expected_blob": "758f8db53d68049f1c80d51679fe83b628de0111",
+    "actual_blob": "758f8db53d68049f1c80d51679fe83b628de0111",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationMetaforceNative.cs",
+    "local_path": "metaforce-implementation/GameInstallationMetaforceNative.cs",
+    "expected_blob": "7170f22e4747920c536a36acb07c303b14b131b2",
+    "actual_blob": "7170f22e4747920c536a36acb07c303b14b131b2",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationMetaforcePatches.cs",
+    "local_path": "metaforce-implementation/GameInstallationMetaforcePatches.cs",
+    "expected_blob": "4ca508573d5d1a80980d47b2671ca55d16bd10a2",
+    "actual_blob": "4ca508573d5d1a80980d47b2671ca55d16bd10a2",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationMetaforceResources.cs",
+    "local_path": "metaforce-implementation/GameInstallationMetaforceResources.cs",
+    "expected_blob": "130c5f295690b638a9f8558e285f0cdcbe3919cf",
+    "actual_blob": "130c5f295690b638a9f8558e285f0cdcbe3919cf",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationMetaforceRuntime.cs",
+    "local_path": "metaforce-implementation/GameInstallationMetaforceRuntime.cs",
+    "expected_blob": "b713fbe9d3e06bb1071d0a3aca973e41f4b68dc9",
+    "actual_blob": "b713fbe9d3e06bb1071d0a3aca973e41f4b68dc9",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationMkwBuild.cs",
+    "local_path": "mkw-sdk169-integration/GameInstallationMkwBuild.cs",
+    "expected_blob": "c8e9a35bb538ece69a20c62d4dc2eb990aa3bca2",
+    "actual_blob": "c8e9a35bb538ece69a20c62d4dc2eb990aa3bca2",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationMkwCliBackend.cs",
+    "local_path": "mkw-independent-draft/csharp/GameInstallationMkwCliBackend.cs",
+    "expected_blob": "dfc93fc853cffe9e5fce320d1e92ec7c69c41ec2",
+    "actual_blob": "dfc93fc853cffe9e5fce320d1e92ec7c69c41ec2",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationMkwCliRelease.cs",
+    "local_path": "mkw-sdk169-integration/GameInstallationMkwCliRelease.cs",
+    "expected_blob": "ea9bbd09d39812e72e66032cebb561f82643fb01",
+    "actual_blob": "ea9bbd09d39812e72e66032cebb561f82643fb01",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationMkwLogs.cs",
+    "local_path": "mkw-sdk169-integration/GameInstallationMkwLogs.cs",
+    "expected_blob": "5d9968d966a2c030de3583675a14c4c9fe93e979",
+    "actual_blob": "5d9968d966a2c030de3583675a14c4c9fe93e979",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationSavageWindBuild.cs",
+    "local_path": "savagewind-implementation/GameInstallationSavageWindBuild.cs",
+    "expected_blob": "3e9a6f1ac4af851b4eed01896fa31e892f6752a0",
+    "actual_blob": "3e9a6f1ac4af851b4eed01896fa31e892f6752a0",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationSavageWindMedia.cs",
+    "local_path": "savagewind-implementation/GameInstallationSavageWindMedia.cs",
+    "expected_blob": "e72769c577d49636742c1fd7526eb34fb06b35db",
+    "actual_blob": "e72769c577d49636742c1fd7526eb34fb06b35db",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationSavageWindNative.cs",
+    "local_path": "savagewind-implementation/GameInstallationSavageWindNative.cs",
+    "expected_blob": "a2bdfae3c6584c32b8b9a2a5195fdc28b979be25",
+    "actual_blob": "a2bdfae3c6584c32b8b9a2a5195fdc28b979be25",
+    "match": true
+  },
+  {
+    "published_path": "Services/GameInstallationSavageWindOutput.cs",
+    "local_path": "savagewind-implementation/GameInstallationSavageWindOutput.cs",
+    "expected_blob": "d166b86264c977fc6482ce40dfbe7d47b74d5399",
+    "actual_blob": "d166b86264c977fc6482ce40dfbe7d47b74d5399",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/README.md",
+    "local_path": "sdk169-integration/Tools/MkwSm86/README.md",
+    "expected_blob": "7b49ae7a1c1d3123b62598962059ff1ab82952f5",
+    "actual_blob": "7b49ae7a1c1d3123b62598962059ff1ab82952f5",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/mkw-sm86-cli-support-v1.zip",
+    "local_path": "sdk169-integration/Tools/MkwSm86/mkw-sm86-cli-support-v1.zip",
+    "expected_blob": "93feb3114e529ab83bbb53da3d3d74455e2cf18a",
+    "actual_blob": "93feb3114e529ab83bbb53da3d3d74455e2cf18a",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/package.json",
+    "local_path": "sdk169-integration/Tools/MkwSm86/package.json",
+    "expected_blob": "f47028e8b008d5c0c8ee5f585c22a1115c887257",
+    "actual_blob": "f47028e8b008d5c0c8ee5f585c22a1115c887257",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/repack.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/repack.py",
+    "expected_blob": "6652ba8de657219db838c31a198e626df312c1e0",
+    "actual_blob": "6652ba8de657219db838c31a198e626df312c1e0",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/configuration/instructions.json",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/configuration/instructions.json",
+    "expected_blob": "2aaf83c618c7f78159729eaabe07b80ac0ddedd9",
+    "actual_blob": "2aaf83c618c7f78159729eaabe07b80ac0ddedd9",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/__init__.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/__init__.py",
+    "expected_blob": "af6cff29d30c878a124661ad739892a63081c4c4",
+    "actual_blob": "af6cff29d30c878a124661ad739892a63081c4c4",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/adapter_fields.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/adapter_fields.py",
+    "expected_blob": "66e237f4e09d65f644f2d7ee6a9b78f0ef7367eb",
+    "actual_blob": "66e237f4e09d65f644f2d7ee6a9b78f0ef7367eb",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/adapter_model.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/adapter_model.py",
+    "expected_blob": "1e7345566f87bbf874d6c2f38f7e11e784cf4be7",
+    "actual_blob": "1e7345566f87bbf874d6c2f38f7e11e784cf4be7",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/backend.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/backend.py",
+    "expected_blob": "522f19490b19f700268d51dee062366919e8675a",
+    "actual_blob": "522f19490b19f700268d51dee062366919e8675a",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/cli_decoder.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/cli_decoder.py",
+    "expected_blob": "88e0eb55a5be59aae746cf0caee387ca00d9dca2",
+    "actual_blob": "88e0eb55a5be59aae746cf0caee387ca00d9dca2",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/cli_parse.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/cli_parse.py",
+    "expected_blob": "e251381cf2b556ee604f5dac5c3d97dbb34ed5e7",
+    "actual_blob": "e251381cf2b556ee604f5dac5c3d97dbb34ed5e7",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/control_adapter.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/control_adapter.py",
+    "expected_blob": "edd6be2e19de12e7505864f58395d564e44cf8d9",
+    "actual_blob": "edd6be2e19de12e7505864f58395d564e44cf8d9",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/lea_overlay.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/lea_overlay.py",
+    "expected_blob": "210faed5f25eb4418cfa397b9ac1de68de1987d6",
+    "actual_blob": "210faed5f25eb4418cfa397b9ac1de68de1987d6",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/memory_adapter.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/memory_adapter.py",
+    "expected_blob": "f517a06d5fb6423d932c40d33e8b3392e5d12813",
+    "actual_blob": "f517a06d5fb6423d932c40d33e8b3392e5d12813",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/memory_overlay.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/memory_overlay.py",
+    "expected_blob": "6ec8765a0222347b25ae7eefee7633b0b3b363d1",
+    "actual_blob": "6ec8765a0222347b25ae7eefee7633b0b3b363d1",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/scalar_adapter.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/scalar_adapter.py",
+    "expected_blob": "c381e95dfdc86d69d07c6ec3f8391f29ebc1327f",
+    "actual_blob": "c381e95dfdc86d69d07c6ec3f8391f29ebc1327f",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/texture_adapter.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/texture_adapter.py",
+    "expected_blob": "60bc10610939155f2c15b57c647cd9f9ed338a3a",
+    "actual_blob": "60bc10610939155f2c15b57c647cd9f9ed338a3a",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/vendor/nv_isa_parser.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/vendor/nv_isa_parser.py",
+    "expected_blob": "1f1bf14e69c3c9f86456bdca714d4a95e82d2557",
+    "actual_blob": "1f1bf14e69c3c9f86456bdca714d4a95e82d2557",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/manifest.json",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/manifest.json",
+    "expected_blob": "66472f174e88dd94e008059f890826ef79d27ffb",
+    "actual_blob": "66472f174e88dd94e008059f890826ef79d27ffb",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/notices/CuAssembler-MIT.txt",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/notices/CuAssembler-MIT.txt",
+    "expected_blob": "c9867e2a26bbc45cbad907afa218f97eaf2ce399",
+    "actual_blob": "c9867e2a26bbc45cbad907afa218f97eaf2ce399",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/notices/Mesa-NAK-MIT.txt",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/notices/Mesa-NAK-MIT.txt",
+    "expected_blob": "d5c3c55b8878f97437cedb5812a6626445661ad5",
+    "actual_blob": "d5c3c55b8878f97437cedb5812a6626445661ad5",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/notices/ORIGIN.txt",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/notices/ORIGIN.txt",
+    "expected_blob": "09c033dcd1a699b4e8ab897562ae12be293c8397",
+    "actual_blob": "09c033dcd1a699b4e8ab897562ae12be293c8397",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/notices/mkw-MIT.txt",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/notices/mkw-MIT.txt",
+    "expected_blob": "dca5a9ceb66e424fd00b467dc09e5b82fa8132a3",
+    "actual_blob": "dca5a9ceb66e424fd00b467dc09e5b82fa8132a3",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/notices/nv-isa-solver-MIT.txt",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/notices/nv-isa-solver-MIT.txt",
+    "expected_blob": "00c7b761d6a09576cbbd3c0d9e74b5ba36ee6493",
+    "actual_blob": "00c7b761d6a09576cbbd3c0d9e74b5ba36ee6493",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/overlays/sm86/translate/frontend/program.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/overlays/sm86/translate/frontend/program.py",
+    "expected_blob": "57a94f2f226c97edf6e67feab1325397f838ed6e",
+    "actual_blob": "57a94f2f226c97edf6e67feab1325397f838ed6e",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/overlays/tools/prepare/shaderstep.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/overlays/tools/prepare/shaderstep.py",
+    "expected_blob": "611523e806a42c761bfc63caa1abde4d40750b33",
+    "actual_blob": "611523e806a42c761bfc63caa1abde4d40750b33",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/overlays/tools/shaders/extract.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/overlays/tools/shaders/extract.py",
+    "expected_blob": "1cec360a5c1666596fea320f6da9787a4e377029",
+    "actual_blob": "1cec360a5c1666596fea320f6da9787a4e377029",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/overlays/tools/shaders/translate.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/overlays/tools/shaders/translate.py",
+    "expected_blob": "57eed207a20927b80daf03b49d8ca88afb7d196e",
+    "actual_blob": "57eed207a20927b80daf03b49d8ca88afb7d196e",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/proof/fixtures.json",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/proof/fixtures.json",
+    "expected_blob": "3a694e44d8fe72ae04e6af02f9445f4119d1dd79",
+    "actual_blob": "3a694e44d8fe72ae04e6af02f9445f4119d1dd79",
+    "match": true
+  },
+  {
+    "published_path": "Tools/MkwSm86/support-src/proof/prove_backend.py",
+    "local_path": "sdk169-integration/Tools/MkwSm86/support-src/proof/prove_backend.py",
+    "expected_blob": "20f6d4c41f2ce31639f9c6c4a656e20acbee4efc",
+    "actual_blob": "20f6d4c41f2ce31639f9c6c4a656e20acbee4efc",
+    "match": true
+  }
+]

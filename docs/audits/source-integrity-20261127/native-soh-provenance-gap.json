@@ -1,0 +1,52 @@
+{
+  "project": "ship-of-harkinian-soh",
+  "status": "inconclusive_source_provenance",
+  "admission": {
+    "desktop_commit": "921295de12349e726f7ca21a5edd8a8ecee123d8",
+    "path": "AddonSdk/INSTALACAO-V9.md",
+    "line": 40,
+    "excerpt": "O alvo foi compilado a partir de Shipwright f0599f96f8d442f26d0fa1c5cedafddacd56633f e Torch 2ab12fe9660aec04e02ee89fe81baed304a1a1d6, corrigindo a entrada do CLI para chamar SohTorch::Extract com os bytes da ROM."
+  },
+  "actual_binary": {
+    "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\soh-torch.exe",
+    "bytes": 1804288,
+    "sha256": "e1d221f2a58ad56581b85da752e0bc236e577a26a2e145404764ca836779be02"
+  },
+  "recovery_scripts": {
+    "paths": [
+      "C:\\Users\\bradg\\Downloads\\GetAll-R18\\recover-soh-resource.py",
+      "C:\\Users\\bradg\\Downloads\\GetAll-R18\\verify-soh-resource.py"
+    ],
+    "inspected_behavior": "Both parse a preexisting .NET single-file AllFix.exe bundle, read AllFix.dll embedded resources, find an MZ payload of expected SHA256 and write console-cache/soh-torch.exe. The scripts were READ, NOT EXECUTED during the audit.",
+    "source_equivalence": "Binary resource recovery provides identity but not a source-to-binary or patch proof."
+  },
+  "search": {
+    "local": "rg across available local source/report .py/.ps1/.cpp/.json/.md/.log/.cs files found the explicit documentation admission, not exact CLI patch.",
+    "windows": {
+      "R18": {
+        "directories_scanned": 51781,
+        "deadline_hit": true,
+        "filename_matches": [
+          "recover-soh-resource.py",
+          "verify-soh-resource.py"
+        ]
+      },
+      "R17": {
+        "directories_scanned": 3660,
+        "deadline_hit": false,
+        "filename_matches": [
+          "getall/docs/validations/ship-of-harkinian-soh-9.3.1.md"
+        ]
+      },
+      "R16": {
+        "directories_scanned": 336,
+        "deadline_hit": false,
+        "filename_matches": [
+          "getall/docs/validations/ship-of-harkinian-soh-9.3.1.md"
+        ]
+      },
+      "method": "Bounded filename search for soh/shipwright with source/script/report extensions; skips .git,node_modules,obj,bin,vcpkg_installed,_deps,CMakeFiles,target,rust,toolchain,toolchains,mingw64,ucrt64. Not an exhaustive disk or content search."
+    }
+  },
+  "conclusion": "Do not represent this helper as source-unchanged or completely audited. Exact preimage/postimage and reproducible build inputs of acknowledged CLI correction remain unverified."
+}
