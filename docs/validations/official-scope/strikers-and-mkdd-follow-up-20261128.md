@@ -103,3 +103,20 @@ pendentes.
 - [Recibo Windows com hashes](strikers-recompcore-headless-result-20261128.json)
 - [Script de reprodução](strikers-recompcore-headless-probe.py)
 - [Procedimento oficial RecompCore](https://github.com/aharonahdoot/RecompCore/blob/283baee01e54b6c3f71e441bb78fc77b260512fa/CHASSIS.md)
+
+### Empacotamento local do host
+
+O pacote de teste reúne o executável do build anterior, a árvore oficial
+Sys, COPYING e LICENSES. O script verifica que o checkout corresponde
+ao commit fixado e que a árvore rastreada está intacta. O manifesto local
+verifica os 2.635 arquivos por caminho, tamanho e SHA-256. As duas provas
+headless passaram novamente usando o executável da pasta empacotada.
+
+O pacote é local. Para distribuí-lo, ainda é necessário preparar a oferta
+de fontes correspondentes com os submódulos fixados e instruções de build.
+O GetAll ainda precisa de uma rota fechada para gerar o módulo G4QE01
+a partir da ISO verificada, fornecer a pasta de usuário isolada ao host
+e registrar o lançamento após validação da mídia original.
+
+- [Script de empacotamento local](strikers-stage-recompcore-host.py)
+- [Recibo do pacote de teste](strikers-staged-host-result-20261128.json)

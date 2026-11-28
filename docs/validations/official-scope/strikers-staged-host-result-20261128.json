@@ -1,0 +1,26 @@
+{
+  "scope": "local pinned build layout, no public host distribution or commercial ISO",
+  "revision": "283baee01e54b6c3f71e441bb78fc77b260512fa",
+  "files": 2635,
+  "bytes": 22891291,
+  "host_sha256": "79e5871bc8d1dc4eb0c4eb03b8f9adc8bb3b124d770c6d0ac5aafc5fac355fd0",
+  "runtime_manifest_sha256": "0a85e43700c1490592163121c2137a720b971e1c68aee424098730682ea6bb72",
+  "headless_checks": [
+    {
+      "case": "mismatch",
+      "module_sha256": "7097c8f66647b030c0995c00d63ac20994bbc2a0506fd6005af45e7c34df9650",
+      "stopped_by_probe": true,
+      "static_core_started": true,
+      "title_rejected": true,
+      "module_loaded": false
+    },
+    {
+      "case": "match",
+      "module_sha256": "1b65154405684de00662657b475b3ed138c06908a2c7aa0d28cfc0fa59e9b645",
+      "stopped_by_probe": true,
+      "static_core_started": true,
+      "title_rejected": false,
+      "module_loaded": true
+    }
+  ]
+}
