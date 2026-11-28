@@ -34,6 +34,33 @@ class PreparationContractTests(unittest.TestCase):
             bad["preparation_media"][0]["command"] = "run"
             self.assertTrue(validate_recipe_semantics(bad, entry, "test"))
 
+    def test_reject_changed_preparation_media_contract(self):
+        for entry in self.entries:
+            recipe = json.loads((ROOT / entry["path"]).read_text(encoding="utf-8"))
+            for position, media in enumerate(recipe["preparation_media"]):
+                for field, value in {
+                    "id": "unapproved-input",
+                    "kind": "unapproved",
+                    "extensions": [".unapproved"],
+                    "version": "unapproved edition",
+                }.items():
+                    with self.subTest(project=entry["project_id"], media=media["id"], field=field):
+                        bad = copy.deepcopy(recipe)
+                        bad["preparation_media"][position][field] = value
+                        self.assertTrue(validate_recipe_semantics(bad, entry, "test"))
+            media = recipe["preparation_media"]
+            changes = {
+                "missing": media[:-1],
+                "duplicate": media + [copy.deepcopy(media[-1])],
+            }
+            if len(media) > 1:
+                changes["reordered"] = media[1:] + media[:1]
+            for change, value in changes.items():
+                with self.subTest(project=entry["project_id"], media_list=change):
+                    bad = copy.deepcopy(recipe)
+                    bad["preparation_media"] = value
+                    self.assertTrue(validate_recipe_semantics(bad, entry, "test"))
+
     def test_reject_wrong_index_identity_and_status(self):
         for entry in self.entries:
             recipe = json.loads((ROOT / entry["path"]).read_text(encoding="utf-8"))

@@ -1,0 +1,66 @@
+{
+  "reviewed_at": "2026-11-28",
+  "scope": "Official-procedure gaps, never a determination of illegality or lack of upstream gameplay",
+  "projects": [
+    {
+      "project_id": "strikersrecomp",
+      "decision": "blocked",
+      "source_commit": "cd88f71f5a836c103484c038454b4143000d883c",
+      "reason": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão.",
+      "official_alternative": "Procedimento upstream: bootstrap.sh, tools/generate.py com ISO própria; módulo RecompCore ou build standalone nos hosts oficialmente documentados. Não foi afirmado que o projeto seja impossível de compilar no Windows.",
+      "restore_when": "Validar uma combinação oficial compatível de dependências e embalagem Windows, ou integrar um ambiente oficialmente suportado sem modificar código/runtime do jogo.",
+      "receipts": [
+        "strikers-official-procedure-review.json",
+        "strikers-gxruntime-v0.1.0-sources.json"
+      ],
+      "receipt_hashes": {
+        "strikers-official-procedure-review.json": "df5fb4e41fb76eda058cf86f2b13cff0b2825c94d20cc85c1e7d8c7bc26f7d99",
+        "strikers-gxruntime-v0.1.0-sources.json": "e284a519891213ae939c31416932a37aeb036fa648da5e9c33bec24cb7aec50d"
+      }
+    },
+    {
+      "project_id": "vandalhearts-pcport",
+      "decision": "blocked",
+      "source_commit": "14552fffa0e0b47e02b57592e274fc6e7a649923",
+      "release_tag_commit": "7450a2462c0d437740da2ec438a7d8d55c27fadf",
+      "reason": "O NOTICE declara dados do jogo/BIOS incorporados nos binários. A alternativa fonte foi verificada e usa executável PS-X e BIOS próprios; o teste nativo CMake intacto falhou na criação obrigatória de symlinks por falta de privilégio. O procedimento Windows documentado usa cross-compilação Linux/macOS e dependências próprias, ainda sem integração validada no Desktop.",
+      "official_alternative": "CMake VH_PSX_EXE + VH_KROM_SOURCE, mantendo VH_WEBP/VH_HDVIDEO ligados. A fonte atual pode ler diretamente PS-X EXE sem ELF/PsyQ; o gerador aceita BIOS próprio e valida o hash da região de fonte. A embalagem unificada oficial compila os dois cores regionais US/JP e usa libav estático.",
+      "restore_when": "Integrar e verificar ambiente oficial de compilação que suporte o staging de symlinks, gerando todos os dados necessários exclusivamente das mídias/BIOS fornecidos pelo usuário. Não substituir por binário que já incorpora esses dados.",
+      "native_configuration_exit": 1,
+      "source_files_checked": 505,
+      "source_files_unchanged": true,
+      "receipts": [
+        "payload-provenance-review.json",
+        "vandal-official-source-review.json",
+        "vandal-native-configure-result.json",
+        "vandal-native-configure.log"
+      ],
+      "receipt_hashes": {
+        "payload-provenance-review.json": "71d289b0aac8b57d8f3d1c5e87489bf6221bc2e803a3e73655613fcb2933cfcf",
+        "vandal-official-source-review.json": "25d34652874ed8fa69d323ca6a0cf272bcae6fcbe66c34976285ed30b7cb41d9",
+        "vandal-native-configure-result.json": "0019329d1f86b2815758b566ff975a947083e498b3f3f58311ea5e4302bb8b25",
+        "vandal-native-configure.log": "6dc10fb143082410a1fa8bc44a626695807091d9314fb439fc72308fc8dfe863"
+      }
+    },
+    {
+      "project_id": "redriver2",
+      "decision": "blocked",
+      "source_commit": "acca6b139302dd72c1fbff52556f3493aafda2dd",
+      "reason": "A compilação oficial copia os mesmos 76 arquivos rastreados data/DRIVER2 ao pacote. Os conversores oficiais geram apenas vídeo e áudio da mídia própria; não fornecem reconstrução dos extras LANG/GFX/GAL/REPLAYS questionados na issue234. Compilar somente o executável não resolve a lacuna de procedência desses dados.",
+      "official_alternative": "Método Windows oficial com ambos CDs próprios, launcher Java ou _convert_cd_fmv_xa.bat. A via de fonte VS2019/premake permanece documentada, porém sua embalagem usa o mesmo diretório de dados; não foi verificada uma rota que derive todos os extras dos discos.",
+      "restore_when": "Documentar a procedência dos extras ou validar uma reconstrução oficial desses dados a partir das mídias próprias, preservando as funcionalidades do upstream.",
+      "receipts": [
+        "payload-provenance-review.json",
+        "redriver2-official-data-tree-review.json",
+        "redriver2-packaging-conversion-sources.json",
+        "redriver2-wiki-procedure-sources.json"
+      ],
+      "receipt_hashes": {
+        "payload-provenance-review.json": "71d289b0aac8b57d8f3d1c5e87489bf6221bc2e803a3e73655613fcb2933cfcf",
+        "redriver2-official-data-tree-review.json": "270cc642457eb7f38488008a2fc4e080deb6dda16f93de7293a3711d623f18e5",
+        "redriver2-packaging-conversion-sources.json": "3561fd80decdcb030616bac11d8406110165a9b4e764660bb0825a42d71f61bb",
+        "redriver2-wiki-procedure-sources.json": "f00e009b49eb6be240421143eefaf6d849ef76fffced2a35542d0101cdca4b01"
+      }
+    }
+  ]
+}

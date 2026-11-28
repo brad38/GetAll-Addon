@@ -1,0 +1,162 @@
+{
+  "reviewed_at": "2026-11-28T06:11:23.440552+00:00",
+  "sdk_version": "1.5.72",
+  "desktop_version": "3.0.0",
+  "scope": "Local technical validation of final two implementation contracts, before immutable integration commits and hosted CI.",
+  "tests": [
+    {
+      "started_at": "2026-11-28T06:07:05.603289+00:00",
+      "exit_code": 0,
+      "seconds": 4.91,
+      "command": [
+        "dotnet",
+        "build",
+        "Tests/AddonInfrastructure/AddonInfrastructure.csproj",
+        "-c",
+        "Release",
+        "--nologo",
+        "-v:minimal",
+        "-p:SohTorchPath=C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261127\\soh-official\\torch-build\\torch.exe",
+        "-p:TwoShipZapdPath=C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261127\\2ship-intact\\2ship-zapd.exe",
+        "-p:PaperboatTorchPath=C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\paperboat-torch.exe",
+        "-p:GhostshipTorchPath=C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\ghostship-torch.exe",
+        "-p:StarshipTorchPath=C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\starship-torch.exe",
+        "-p:SpaghettiTorchPath=C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\spaghetti-torch-build\\Release\\torch.exe",
+        "-p:SpaghettiDefinesPath=C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\spaghetti-defines.h",
+        "-p:LighthouseTorchPath=C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\lighthouse-torch-build\\Release\\torch.exe",
+        "-p:PicoriExtractorPath=C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\picori-helper-win-x64\\asset_extractor.exe",
+        "-p:NectarExtractorPath=C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\after-1.5.31\\nectar-1.3-native\\nectar-extract.exe",
+        "-p:Gt4DiscHelperPath=C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\gt4-setup-contract\\helper-production-4\\getall-gt4-disc.exe"
+      ],
+      "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261128\\final-two-sdk172\\harness-build.log"
+    },
+    {
+      "test": "desktop-regression",
+      "exit_code": 0,
+      "seconds": 10.7,
+      "harness_sha256": "5ec0853556b38a1832f2bd576c80680ebbe7a771cb007264fde0ca8b2e300b27",
+      "sdk": "1.5.72",
+      "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261128\\final-two-sdk172\\desktop-regression.log",
+      "log_sha256": "27f2e87b2452c98997c06270232b22ef893db79604aff608234a788264861f06",
+      "pass_lines": 2372,
+      "tail": "ivate private tools precede only the Windows system directory\r\nPASS CTR/SM private command processor and home are explicit and isolated\r\nPASS CTR/SM private CTR x86 compiler and resource architecture are fixed\r\nPASS CTR/SM private SM x64 compiler and resource architecture are fixed\r\nPASS CTR/SM private ctr accepts the automatic private-toolchain instructions\r\nPASS CTR/SM private ctr preserves the exact historical recipe\r\nPASS CTR/SM private ctr refuses arbitrary instruction text\r\nPASS CTR/SM private sm accepts the automatic private-toolchain instructions\r\nPASS CTR/SM private sm preserves the exact historical recipe\r\nPASS CTR/SM private sm refuses arbitrary instruction text\r\nPASS CTR/SM private smr accepts the automatic private-toolchain instructions\r\nPASS CTR/SM private smr preserves the exact historical recipe\r\nPASS CTR/SM private smr refuses arbitrary instruction text\r\nPASS package exposes the remote origin before approval\r\nPASS authorized test origin\r\nPASS warm-up downloads only the index\r\nPASS authorized test origin\r\n[Addon org.example.remote] Receita remota verificada: recipes/fixture/v1.json, SHA-256 57DFE06001055060DAC740F17CDC8479D7F4D8EE3D445140FB69CD69072D7748.\r\nPASS discover and verify recipe of the requested project\r\nPASS winning provider exposed for destination resolution\r\nPASS prepare exact recipe from verified cache\r\nPASS do not use a remote recipe for another tag\r\nPASS winning provider exposed for destination resolution\r\nPASS local recipe takes precedence over remote\r\nPASS authorized test origin\r\n[Addon org.example.remote] index.json: offline test\r\nPASS persisted cache serves a verified recipe offline\r\nPASS authorized test origin\r\n[Addon org.example.remote] index.json: Caminho inv�lido no pacote.\r\nPASS path traversal index is rejected and last valid cache is preserved\r\nPASS authorized test origin\r\nPASS authorized test origin\r\n[Addon org.example.remote] recipes/fixture/v1.json: SHA-256 da receita n�o confere com o �ndice.\r\nPASS hash mismatch cannot authorize new recipe bytes\r\nPASS invalid recipe is not cached\r\nPASS authorized test origin\r\nPASS disabled index entry rolls back availability\r\nPASS authorized test origin\r\nPASS authorized test origin\r\n[Addon org.example.remote] Receita remota verificada: recipes/fixture/v1.json, SHA-256 5D4CFF3CE080399848ABB1BC020784EEDEF102F7AC7006B91A2F167590DD96C8.\r\nPASS remote index and provider accept verified v4 recipe\r\nPASS authorized test origin\r\nPASS newer SDK version is reported without a recommendation\r\nPASS newer SDK blocks installation without downloading recipe bytes\r\nPASS authorized test origin\r\nPASS explicit refresh replaces a fresh incompatible snapshot with a disabled update\r\nPASS preview addon resolves an immutable GetAll reference\r\nPASS preview addon can pin the matching curated catalog\r\n[Addon allfix.install.universal] index.json: O �ndice de receitas n�o pertence ao canal autorizado.\r\nPASS preview index is invisible from the public source\r\nPASS disabled addon cannot request network\r\nPASS blocked non-public IP 127.0.0.1\r\nPASS blocked non-public IP 169.254.169.254\r\nPASS blocked non-public IP 10.0.0.1\r\nPASS blocked non-public IP 192.168.1.1\r\nPASS blocked non-public IP ::1\r\nPASS blocked non-public IP ::ffff:100.64.0.1\r\nPASS blocked non-public IP fc00::1\r\nPASS blocked non-public IP fe80::1\r\nPASS public address permitted\r\nPASS invalid HTTPS origins rejected\r\nPASS default uses configured folder with no picker\r\nPASS changed folder is picked up despite previous root and quick mode\r\nPASS installation identifies the actual third-party provider\r\nPASS real installation creates and uses the new default destination\r\nPASS Jogar agora resolves verified executable\r\nPASS preference survives restart and addon update\r\nPASS picker starts in current configured folder\r\nPASS picker starts in current configured folder\r\nPASS ask opens picker on every installation, including quick setup\r\nPASS picker starts in current configured folder\r\nPASS picker cancellation leaves no installation files\r\n"
+    },
+    {
+      "test": "desktop-parser",
+      "exit_code": 0,
+      "seconds": 11.58,
+      "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261128\\final-two-sdk172\\desktop-parser.log",
+      "log_sha256": "2c5ac5d3d5b40bbf1f662945e906c141eccad584d985113dec14d15cecbca852",
+      "command": [
+        "dotnet",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-scope-20261127\\Tests\\AddonInfrastructure\\bin\\Release\\net8.0\\AddonInfrastructure.dll",
+        "--parse-getall",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261128\\final-two-sdk172\\parser-detail.json"
+      ],
+      "tail": "6\r\nGETALL_PARSER_PASS ACTIVE thesimpsonsgamerecomp v0.0.7.1\r\nGETALL_PARSER_PASS ACTIVE dead-rising-2-case-zero-xenon-recomp v1.1.3\r\nGETALL_PARSER_PASS ACTIVE dead-rising-2-case-west-xenon-recomp v1.1.2\r\nGETALL_PARSER_PASS ACTIVE 3on3nhl-recomp v0.1.1\r\nGETALL_PARSER_PASS ACTIVE project-midas 1.0.2b\r\nGETALL_PARSER_PASS ACTIVE shadow-of-rome-recompiled v2.9.5\r\nGETALL_PARSER_PASS ACTIVE zelda3 v0.3\r\nGETALL_PARSER_PASS ACTIVE smw v0.1\r\nGETALL_PARSER_PASS ACTIVE silent-hill-native-pc-port crossplatform-beta\r\nGETALL_PARSER_PASS RETIRED_SOURCE_REJECTED sm64plus build-85c3e51\r\nGETALL_PARSER_PASS ACTIVE sm64plus LauncherMirror\r\nGETALL_PARSER_PASS ACTIVE drmario64-recomp-plus 1.0.0\r\nGETALL_PARSER_PASS ACTIVE zelda-3-launcher v1.3.7.0\r\nGETALL_PARSER_PASS ACTIVE super-metroid-launcher v1.0.1\r\nGETALL_PARSER_PASS ACTIVE phase-distorter 0.5\r\nGETALL_PARSER_PASS ACTIVE gsrecomp 0.8.4\r\nGETALL_PARSER_PASS ACTIVE crash-team-racing-high-octane v.1.5\r\nGETALL_PARSER_PASS ACTIVE zeldawwhdrecomp v0.5.1\r\nGETALL_PARSER_PASS ACTIVE extremegrecomp v1.0.0\r\nGETALL_PARSER_PASS RETIRED_SOURCE_REJECTED vandalhearts-pcport v2.1.0\r\nGETALL_PARSER_PASS ACTIVE vandalhearts-pcport build-14552ff\r\nGETALL_PARSER_PASS ACTIVE wipeout-phantom-edition v1.2.256\r\nGETALL_PARSER_PASS ACTIVE cannonball v0.34\r\nGETALL_PARSER_PASS ACTIVE symphonyrecomp v1.2.0p\r\nGETALL_PARSER_PASS ACTIVE redriver2 7.4-rc2\r\nGETALL_PARSER_PASS ACTIVE autotmc-auto-tmc 1.0.2\r\nGETALL_PARSER_PASS ACTIVE severed-chains release-3.0.0\r\nGETALL_PARSER_PASS ACTIVE project-picori-999sian-tmc v0.9.6\r\nGETALL_PARSER_PASS ACTIVE crash-team-racing-turbocharged ci-07d0c49\r\nGETALL_PARSER_PASS ACTIVE savagewindrecomp v0.6.0-alpha.6\r\nGETALL_PARSER_PASS ACTIVE shadow-of-the-colossus-pc v0.77\r\nGETALL_PARSER_PASS ACTIVE foxhollow v1.0.30\r\nGETALL_PARSER_PASS ACTIVE god-of-war-native-pc-port-gow-pc-port launcher-v0.4.0\r\nGETALL_PARSER_PASS ACTIVE totk-pc-recomp v0.5.0\r\nGETALL_PARSER_PASS ACTIVE pinyon-shift v0.9.5\r\nGETALL_PARSER_PASS ACTIVE doaxvb-re v0.8.0\r\nGETALL_PARSER_PASS ACTIVE gt4recomp v1.3.0-rc16\r\nGETALL_PARSER_PASS ACTIVE god-hand-rearmed v0.6.9.5\r\nGETALL_PARSER_PASS ACTIVE pgr4-recomp v2.0.2\r\nGETALL_PARSER_PASS ACTIVE opence build-387\r\nGETALL_PARSER_PASS RETIRED_SOURCE_REJECTED ssx-recomp v2.0.0\r\nGETALL_PARSER_PASS ACTIVE lasrecomp v0.6.1\r\nGETALL_PARSER_PASS ACTIVE gears-of-war-2-pc-port v0.4.8\r\nGETALL_PARSER_PASS ACTIVE gta-stories-recompiled v0.3.2\r\nGETALL_PARSER_PASS ACTIVE rygt-gt7 rygt-2026-11-23\r\nGETALL_PARSER_PASS ACTIVE spartanport windows-v3.2.1\r\nGETALL_PARSER_PASS ACTIVE tlg-pc v2026.11.14-ee3327d\r\nGETALL_PARSER_PASS ACTIVE ng2recomp v0.7.5\r\nGETALL_PARSER_PASS ACTIVE iss-pc v1.0\r\nGETALL_PARSER_PASS ACTIVE lost-odyssey-recomp v1.1.0\r\nGETALL_PARSER_PASS ACTIVE super-odyssey-pc-recomp v1.0.0\r\nGETALL_PARSER_PASS ACTIVE dkb-pc-recomp v0.5.1\r\nGETALL_PARSER_PASS ACTIVE mkw-recomp v0.1.18\r\nGETALL_PARSER_PASS ACTIVE pt-pc v1.1.1\r\nGETALL_PARSER_PASS ACTIVE sarecomp-sonic-adventure-recompiled v0.52.0\r\nGETALL_PARSER_PASS ACTIVE fh1-reimagined v0.3.9\r\nGETALL_PARSER_PASS ACTIVE mega-man-legends-modernization-project v0.9.6-beta\r\nGETALL_PARSER_PASS RETIRED_SOURCE_REJECTED crash-team-racing-turbocharged build-07d0c49\r\nGETALL_PARSER_PASS ACTIVE sm build-578f90b\r\nGETALL_PARSER_PASS ACTIVE sm-rewrite build-5237873\r\nGETALL_PARSER_PASS ACTIVE mariokartdd-recomp build-bd36eb9\r\nGETALL_PARSER_PASS ACTIVE sm64ex build-d7ca2c0\r\nGETALL_PARSER_PASS ACTIVE render96ex build-48da5c4\r\nGETALL_PARSER_PASS ACTIVE sm64rt build-20e618b\r\nGETALL_PARSER_PASS RETIRED_SOURCE_REJECTED burnout3-recomp build-3c85ed7\r\nGETALL_PARSER_PASS ACTIVE gt5-recomp build-64ca169\r\nGETALL_PARSER_PASS ACTIVE god-of-war-recomp build-d1d11ec\r\nGETALL_PARSER_PASS ACTIVE strikers-wiicompiled build-451e06b\r\nGETALL_PARSER_PASS ACTIVE strikersrecomp build-cd88f71\r\nGETALL_PARSER_PASS ACTIVE mkdd-recomp build-e173ce4\r\nGETALL_PARSER_PASS ACTIVE wipeout-rewrite build-b425ecb\r\nGETALL_PARSER_PASS ACTIVE hookshot-zelda-oot-port v3.0.2\r\nGETALL_PARSER_PASS HISTORICAL_DISABLED sonic-1-forever-sonic-2-absolute v1.5.2-v1.2.2\r\nGETALL_PARSER_PASS ACTIVE sonic-1-forever v1.5.2\r\nGETALL_PARSER_PASS ACTIVE sonic-2-absolute v1.2.2\r\nGETALL_PARSER_PASS ACTIVE edge-of-time-recomp v1.1\r\nGETALL_PARSER_PASS RETIRED_SOURCE_REJECTED drmario64-recomp build-7892264\r\nGETALL_PARSER_PASS RETIRED_SOURCE_REJECTED metaforce build-de8fc69\r\nGETALL_PARSER_PASS RETIRED_SOURCE_REJECTED mkw-recomp v0.1.18-allfix-cli\r\nGETALL_PARSER_PASS ACTIVE ssx-recomp v2.0.1\r\nGETALL_PARSER_RESULT passed=147 failed=0\r\n"
+    },
+    {
+      "test": "getall-python",
+      "exit_code": 0,
+      "seconds": 69.64,
+      "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261128\\final-two-sdk172\\getall-python.log",
+      "log_sha256": "6798be3c9f87d8563df1875551613f9b78fe4893b8d7f5cd9da591a8528208da",
+      "command": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\.venv-validation-r18\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "tail": "_publication) ... ok\r\ntest_does_not_downgrade_extended_contracts_or_reactivate_recipes (test_upstream_watch.UpstreamWatchTests.test_does_not_downgrade_extended_contracts_or_reactivate_recipes) ... ok\r\ntest_eligible_update_preserves_catalog_dates_and_eligibility_decisions (test_upstream_watch.UpstreamWatchTests.test_eligible_update_preserves_catalog_dates_and_eligibility_decisions) ... ok\r\ntest_mixed_project_versions_require_review_in_any_index_order (test_upstream_watch.UpstreamWatchTests.test_mixed_project_versions_require_review_in_any_index_order) ... ok\r\ntest_never_auto_updates_validated_recipe_and_blocks_incompatible_zip (test_upstream_watch.UpstreamWatchTests.test_never_auto_updates_validated_recipe_and_blocks_incompatible_zip) ... ok\r\ntest_selects_stable_release_over_prerelease (test_upstream_watch.UpstreamWatchTests.test_selects_stable_release_over_prerelease) ... ok\r\ntest_stages_compatible_experimental_update_and_preserves_existing_recipes (test_upstream_watch.UpstreamWatchTests.test_stages_compatible_experimental_update_and_preserves_existing_recipes) ... ok\r\ntest_unproven_and_excluded_projects_only_create_review_notes (test_upstream_watch.UpstreamWatchTests.test_unproven_and_excluded_projects_only_create_review_notes) ... ok\r\ntest_accepts_valid_v4_recipe_and_rejects_v4_without_manual_steps (test_validate_recipes.ValidateRecipesTests.test_accepts_valid_v4_recipe_and_rejects_v4_without_manual_steps) ... ok\r\ntest_accepts_valid_v5_recipe_features (test_validate_recipes.ValidateRecipesTests.test_accepts_valid_v5_recipe_features) ... ok\r\ntest_ctr_native_verified_disc_import_v5 (test_validate_recipes.ValidateRecipesTests.test_ctr_native_verified_disc_import_v5)\r\nImport only the canonical, cryptographically verified NTSC-U CTR BIN. ... ok\r\ntest_disabled_history_still_requires_provenance_and_valid_hash (test_validate_recipes.ValidateRecipesTests.test_disabled_history_still_requires_provenance_and_valid_hash) ... ok\r\ntest_ggarecomp_sha1_local_app_data_import_v5 (test_validate_recipes.ValidateRecipesTests.test_ggarecomp_sha1_local_app_data_import_v5)\r\nThe verified original US Goemon ROM is imported under LocalAppData. ... ok\r\ntest_high_octane_ctr_native_canonical_disc_v5 (test_validate_recipes.ValidateRecipesTests.test_high_octane_ctr_native_canonical_disc_v5)\r\nThe common upstream CTR NTSC-U 926 image can be imported in High Octane. ... ok\r\ntest_lamborghini_verified_sha256_import_v5 (test_validate_recipes.ValidateRecipesTests.test_lamborghini_verified_sha256_import_v5)\r\nA canonical USA cart is verified and copied to the filename the port loads. ... ok\r\ntest_perfect_dark_verified_md5_import_v5 (test_validate_recipes.ValidateRecipesTests.test_perfect_dark_verified_md5_import_v5)\r\nUpgrading a manual US ROM copy must preserve exact MD5, size and path. ... ok\r\ntest_real_repository_passes (test_validate_recipes.ValidateRecipesTests.test_real_repository_passes) ... ok\r\ntest_rejects_import_input_without_sha1_or_sha256 (test_validate_recipes.ValidateRecipesTests.test_rejects_import_input_without_sha1_or_sha256) ... ok\r\ntest_rejects_invalid_v5_contracts (test_validate_recipes.ValidateRecipesTests.test_rejects_invalid_v5_contracts) ... ok\r\ntest_rejects_launch_file_missing_from_required_files (test_validate_recipes.ValidateRecipesTests.test_rejects_launch_file_missing_from_required_files) ... ok\r\ntest_rejects_orphan_recipe_file (test_validate_recipes.ValidateRecipesTests.test_rejects_orphan_recipe_file) ... ok\r\ntest_rejects_sha256_mismatch (test_validate_recipes.ValidateRecipesTests.test_rejects_sha256_mismatch) ... ok\r\ntest_rejects_unsafe_paths_spaces_and_reserved_names (test_validate_recipes.ValidateRecipesTests.test_rejects_unsafe_paths_spaces_and_reserved_names) ... ok\r\ntest_replacement_hash_does_not_allow_another_profile (test_validate_recipes.ValidateRecipesTests.test_replacement_hash_does_not_allow_another_profile) ... ok\r\ntest_replacement_requires_preserved_retired_bytes (test_validate_recipes.ValidateRecipesTests.test_replacement_requires_preserved_retired_bytes) ... ok\r\ntest_retired_contract_cannot_be_reactivated_by_removing_its_reason (test_validate_recipes.ValidateRecipesTests.test_retired_contract_cannot_be_reactivated_by_removing_its_reason) ... ok\r\ntest_reviewed_replacements_bind_exact_bytes_and_profile (test_validate_recipes.ValidateRecipesTests.test_reviewed_replacements_bind_exact_bytes_and_profile) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 82 tests in 69.367s\r\n\r\nOK\r\n"
+    },
+    {
+      "test": "getall-recipes",
+      "exit_code": 0,
+      "seconds": 0.51,
+      "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261128\\final-two-sdk172\\getall-recipes.log",
+      "log_sha256": "e87980e521eed6c710d5f3ee2b5c8810fde2e9942e1504468a0779b407faa618",
+      "command": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\.venv-validation-r18\\Scripts\\python.exe",
+        "-B",
+        "scripts/validate_recipes.py",
+        "--strict-lf",
+        "--require-jsonschema",
+        "--check-catalog",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\catalog-scope-20261127\\catalog.json",
+        "--eligibility",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\catalog-scope-20261127\\eligibility.json",
+        "--excluded-projects",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\catalog-scope-20261127\\excluded-projects.json"
+      ],
+      "tail": "Validation summary: recipes=147, statuses={'validated': 1, 'experimental': 136, 'disabled': 10}, schema_versions={'3': 67, '9': 37, '5': 37, '7': 4, '6': 1, '8': 1}, jsonschema=True\r\nOK: all recipes, schemas, paths, and SHA-256 hashes are valid.\r\n"
+    },
+    {
+      "test": "vandal-official-kit",
+      "exit_code": 0,
+      "seconds": 0.47,
+      "command": [
+        "dotnet",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-scope-20261127\\Tests\\AddonInfrastructure\\bin\\Release\\net8.0\\AddonInfrastructure.dll",
+        "--vandal-official-kit",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\docs\\validations\\official-scope\\research-cache\\vandal-source\\source.zip",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\getall-scope-20261127\\recipes\\vandal-hearts\\vandalhearts-pcport\\build-14552ff.json"
+      ],
+      "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261128\\final-two-sdk172\\vandal-official-kit.log",
+      "log_sha256": "a4a0fcbfffae3e60cf51b8e197499d413a9f80c51300a073417595a0b038882f",
+      "pass_lines": 12,
+      "tail": "PASS VANDAL OFFICIAL recipe chooses only the reviewed immutable source archive\r\nPASS VANDAL OFFICIAL an unapproved source origin cannot use the build profile\r\nPASS VANDAL OFFICIAL official source preparation does not claim a playable installation\r\nPASS VANDAL OFFICIAL a source kit cannot be played\r\nPASS VANDAL OFFICIAL the shared picker starts with the US source disc\r\nPASS VANDAL OFFICIAL closing the picker cancels without provisioning\r\nPASS VANDAL OFFICIAL picker cancellation keeps the verified source checkpoint\r\nPASS VANDAL OFFICIAL early cancellation never asks for a disc\r\nPASS VANDAL OFFICIAL an invalid first disc does not ask for JP or BIOS\r\nPASS VANDAL OFFICIAL incompatible media fails before WSL or toolchain work\r\nPASS VANDAL OFFICIAL invalid media leaves no build transaction or playable state\r\nPASS VANDAL OFFICIAL tampered prepared source is rejected before asking for original data\r\nVANDAL_OFFICIAL_KIT_PASS (real source kit, picker/cancellation/rejection; no original-media build or boot)\r\n"
+    },
+    {
+      "test": "vandal-official-preflight",
+      "exit_code": 0,
+      "seconds": 0.28,
+      "command": [
+        "dotnet",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-scope-20261127\\Tests\\AddonInfrastructure\\bin\\Release\\net8.0\\AddonInfrastructure.dll",
+        "--vandal-official-preflight"
+      ],
+      "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261128\\final-two-sdk172\\vandal-official-preflight.log",
+      "log_sha256": "347498c47de99a9cb7ec14818b1a0733426de88299f1404dd4b155b0dc20b499",
+      "pass_lines": 0,
+      "tail": "{\"ok\": true, \"python\": \"3.14.4\", \"architecture\": \"x86_64\", \"linux_release\": \"6.18.33.1-microsoft-standard-WSL2\", \"os_release\": {\"ID\": \"ubuntu\", \"VERSION_ID\": \"26.04\", \"PRETTY_NAME\": \"Ubuntu 26.04 LTS\"}, \"libc\": \"glibc\", \"libc_version\": \"2.43\", \"required_tools\": {\"/usr/bin/cmake\": true, \"/usr/bin/ninja\": true, \"/usr/bin/make\": true, \"/usr/bin/gcc\": true, \"/usr/bin/dpkg-deb\": true, \"/usr/bin/bash\": true}, \"libzstd\": \"libzstd.so.1\", \"errors\": []}\n\r\n"
+    }
+  ],
+  "source_hashes": {
+    "AddonSdk/Contracts.cs": "212a628e2fa079dbd768ea49e1fbd9f0720b95c2f8dffc3d0ad44c5103589d44",
+    "AddonSdk/AllFix.Addons.Sdk.csproj": "7b6021f52dc4eb37553176a02e0910d796fb7e792ccdd3939b0f810753b75c20",
+    "Services/GameInstallationVandalOfficialBuild.cs": "8be0fe8ca91c3ff70140301e4a257af64a72b13ad842957b5d7a3c7bed710334",
+    "Services/GameInstallationVandalOfficialWsl.cs": "d18acf98c721e8b9838861da5d50135c19c08ad191e2e8c7a681c82a7ad9d3f9",
+    "Services/GameInstallationRedriver.cs": "3874f266a2448307ac9c8804daca3467e756108353c1580f7b020a9eed714d97",
+    "Services/GameInstallationFidelity.cs": "17c7ec37d39c5d8caf22e86dd228641cb360cba1c157ce4df0eb902e7e0fb967",
+    "Services/GameInstallationOfficialSourceKit.cs": "c2a31a1b0a837e8cb7d2c85807debcc6981990fc4cb3fdb489522b48d81a8a4d",
+    "Services/GameInstallationPreparedBuildTransaction.cs": "0e2cd4d214dc376ee1c109350d954cd07c308a2948082e695348a7603ed6b32a",
+    "Tools/OfficialBuilders/vandal_wsl.py": "68f409dcb002e3f12c064cafdbfbe4aac76c26bd9e947a1a627964dd9f519911"
+  },
+  "summary": {
+    "desktop_regression_checks": 2372,
+    "python_tests": 82,
+    "parser_recipes": 147,
+    "parser_failed": 0,
+    "vandal_source_kit_checks": 12,
+    "vandal_wsl_preflight": "passed",
+    "original_media_installations": 0,
+    "full_vandal_game_builds": 0,
+    "first_boots": 0,
+    "gameplay_sessions": 0
+  },
+  "intermediate_failures": {
+    "retained_at": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\official-scope-20261128\\final-two-sdk172",
+    "attempt-1": "Six reflection-based transaction tests required the new optional cleanup callback argument; updated without weakening assertions.",
+    "attempt-2": "SDK protocol constant and reflection expectation were advanced to match assembly1.5.72; final suite passed."
+  },
+  "limits": [
+    "Synthetic tools and verified source/release kits are not a complete installation with original game media.",
+    "No game media, BIOS, runtime changes, public main merge or public version promotion."
+  ],
+  "source_hash_note": "Hashes use UTF-8 LF bytes to match Git blobs. Local tests preceded an EOL-only normalization of the same C# source; no statements changed. Hosted CI will validate the immutable committed snapshot."
+}

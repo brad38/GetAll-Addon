@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_at": "2026-11-27",
+  "reviewed_at": "2026-11-28",
   "policy": "official_upstream_only",
   "source": "docs/INSTALLATION-SCOPE-REQUEST-20261127.md",
   "blocked_recipes": [
@@ -330,6 +330,18 @@
       "retired_build_profile": null,
       "upstream_commit": "cd88f71f5a836c103484c038454b4143000d883c",
       "audit_reference": "docs/validations/official-scope/strikers-and-mkdd-follow-up-20261128.md"
+    },
+    {
+      "project_id": "redriver2",
+      "tag": "7.4-rc2",
+      "path": "recipes/driver-2/redriver2/7.4-rc2.json",
+      "sha256": "495f85a654986a8b76bdcac52a34b2ec01b3ad88262d0b8413e6c3d02e951274",
+      "build_profile": "redriver2-7.4-rc2-official-media",
+      "retired_path": "docs/retired-recipes/driver-2/redriver2/7.4-rc2.json",
+      "retired_sha256": "cc78159433c5e42f4b234bdd8b57e0fab51bebb3c8d63acd560351a296c53df2",
+      "retired_build_profile": null,
+      "upstream_commit": "acca6b139302dd72c1fbff52556f3493aafda2dd",
+      "audit_reference": "docs/validations/official-scope/redriver2-provenance-20261128.md"
     }
   ]
 }

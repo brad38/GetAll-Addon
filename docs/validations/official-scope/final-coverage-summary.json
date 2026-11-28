@@ -1,32 +1,39 @@
 {
   "reviewed_at": "2026-11-28",
-  "catalog_commit": "e4fdde9d7c128f79eb19cf99ea07e2e9b628127a",
-  "index_sha256": "deb759f53fbbbdbc40f712542d28de4990756bf752048dde1284ae0611f132dd",
+  "catalog_commit": "6407730f9708de995175cd757ec41e871c3ebc62",
+  "catalog_ci": {
+    "id": 46115153161,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/brad38/AllFix-Repo/actions/runs/46115153161"
+  },
+  "catalog_public_documents_verified": true,
+  "catalog_pin_verification": "docs/validations/official-scope/catalog-pin-verification.json",
+  "index_sha256": "05b0f66a63a8cd4aa4e87ef82896192252847faddabd1556870ce0d84ac4d1df",
   "games": 108,
   "eligible_projects": 137,
   "archived_catalog_projects": 11,
-  "recipes": 146,
+  "recipes": 147,
   "recipe_statuses": {
     "validated": 1,
-    "experimental": 133,
-    "disabled": 12
+    "experimental": 136,
+    "disabled": 10
   },
-  "active_recipes": 134,
-  "projects_with_active_contract": 134,
-  "manual_only_projects": 3,
+  "active_recipes": 137,
+  "projects_with_active_contract": 137,
+  "manual_only_projects": 0,
+  "closed_preparation_profile_projects": 34,
   "dimensions": {
     "upstream_functional": {
       "evidenced": 137
     },
     "automated_installation_implemented": {
-      "implemented": 134,
-      "blocked": 3
+      "implemented": 137
     },
     "synthetic_validation": {
-      "unknown": 72,
-      "passed": 51,
-      "historical": 13,
-      "failed": 1
+      "unknown": 70,
+      "passed": 54,
+      "historical": 13
     },
     "original_media_installation": {
       "unknown": 136,
@@ -52,18 +59,49 @@
     "limit": "Prior user report of original-ROM import and launch; not reproduced in this resumed work; no specific gameplay sequence."
   },
   "validation": {
-    "python_tests": 81,
-    "local_ci_exit": 0,
-    "desktop_suite_passes": 2322,
-    "desktop_parser_recipes": 146
+    "python_tests": 82,
+    "python_test_seconds": 69.367,
+    "python_exit_code": 0,
+    "recipe_validator_recipes": 147,
+    "recipe_validator_exit_code": 0,
+    "recipe_validator_scope": [
+      "JSON Schema",
+      "strict LF",
+      "catalog",
+      "eligibility",
+      "exclusions"
+    ],
+    "desktop_parser_passed": 147,
+    "desktop_parser_failed": 0,
+    "desktop_parser_exit_code": 0,
+    "evidence_directory": "evidence-r18/official-scope-20261128/final-two-sdk172",
+    "source": "Final integration-owner results reported after executing these gates; no original-media completion, boot or gameplay.",
+    "desktop_suite_passes": 2372,
+    "harness_build_errors": 0,
+    "harness_build_warnings": 0,
+    "vandal_source_kit_checks": 12,
+    "vandal_helper_tests": 19,
+    "redriver_official_kit": "passed",
+    "redriver_private_java_synthetic_conversion": "passed",
+    "consolidated_evidence": "docs/validations/official-scope/final-two-desktop-validation-20261128.json",
+    "consolidated_evidence_sha256": "32b0d2cb372b9962d16bd7da4d283ae52f7212fbfa1e725a41d8015838d37e63",
+    "counts_not_additive": "Global regression, project checks, parser checks and helper tests have separate scopes; do not sum duplicates or infer commercial-media execution."
   },
   "preview": {
-    "addon_version": "1.5.76",
-    "min_sdk_version": "1.5.70",
-    "getall_commit": "Exact final local commit recorded with the subsequently generated ZIP."
+    "addon_version": "1.5.78",
+    "min_sdk_version": "1.5.72",
+    "getall_commit": "Pending integration-owner commit and subsequent preview packaging; not inferred from the index."
   },
   "publication": {
+    "catalog_pushed": true,
     "catalog_public_documents_verified": true,
-    "getall_publication": "Pending exact work-branch push by integration owner at the time of this local summary; no hosted GetAll CI inferred."
-  }
+    "catalog_hosted_ci": "success",
+    "getall_committed": false,
+    "getall_pushed": false,
+    "public_release_or_version_json_changed": false
+  },
+  "activation_review": "docs/validations/official-scope/vandal-redriver2-sdk172-review-20261128.json",
+  "activation_review_sha256": "6237c674402f0e90ad42e5489ff308ff1c6504aa766531ef051c252ab9c87d53",
+  "coverage_sha256": "43642996d5349f8cfbe57d2bc496b7654bcabe64ffd2240b38412cf25884628b",
+  "ledger_sha256": "d1119ae19ab3a3ebee4f7c32e8c3d93f462d30f0e2b55e093b63ef2f80209f89"
 }

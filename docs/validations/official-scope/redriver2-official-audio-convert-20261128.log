@@ -1,0 +1,26 @@
+jPSXdec: PSX media decoder (non-commercial) v1.05 (beta)
+Reading index file synthetic.idx
+Using source file synthetic.bin
+1 items loaded.
+Saving #:0|ID:?[0]|Sectors:24-200|Type:XA|File:1|Channel:0|Stereo?:Yes|Samples/Sec:37800|Bits/Sample:4|Sector stride:8|Disc speed:2x
+
+Format: wav
+Volume: 100%
+Filename: synthetic.bin[0].wav
+[....................] 0%
+[===.................] 10%
+[=====...............] 20%
+[=======.............] 31%
+[=========...........] 40%
+[===========.........] 50%
+[=============.......] 60%
+[===============.....] 70%
+[=================...] 80%
+[===================.] 90%
+[====================] 100%
+1 file created
+Time: 0,06 sec
+Disc decoding/extracting complete.
+Item complete.
+
+All index items complete.

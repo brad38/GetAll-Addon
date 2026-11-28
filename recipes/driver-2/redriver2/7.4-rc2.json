@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 9,
   "project_id": "redriver2",
   "tag": "7.4-rc2",
   "source_url": "https://github.com/OpenDriver2/REDRIVER2/releases/tag/7.4-rc2",
@@ -13,9 +13,24 @@
     "install/jpsxdec.jar"
   ],
   "inputs": [],
-  "manual_steps": "No SDK 1.5.35, selecione os dois discos originais em BIN MODE2/2352 da mesma região e revisão (PAL ou NTSC-U). O All-Fix verifica e converte a mídia usando Java 21. Mantenha os dois arquivos nos locais escolhidos. Em SDKs anteriores, use o assistente do Launcher.exe.",
-  "launch_file": "Launcher.exe",
-  "prerequisites": [
-    "java-21"
+  "manual_steps": "Selecione os discos 1 e 2 originais de Driver 2 em BIN MODE2/2352, da mesma região e revisão PAL ou NTSC-U. O All-Fix usa o pacote oficial REDRIVER2 7.4-rc2 e o jPSXdec incluído para converter seus vídeos e áudio, preservando galeria, idiomas, replays, legendas e créditos. O All-Fix prepara um Java 21 privado para a conversão. Mantenha as imagens originais no local selecionado para jogar. Nenhum disco do jogo está incluído.",
+  "build_profile": "redriver2-7.4-rc2-official-media",
+  "preparation_media": [
+    {
+      "id": "disc-1",
+      "kind": "file",
+      "extensions": [
+        ".bin"
+      ],
+      "version": "Disco 1 original de Driver 2, PAL ou NTSC-U, imagem BIN MODE2/2352."
+    },
+    {
+      "id": "disc-2",
+      "kind": "file",
+      "extensions": [
+        ".bin"
+      ],
+      "version": "Disco 2 original da mesma região e revisão do disco 1, imagem BIN MODE2/2352."
+    }
   ]
 }

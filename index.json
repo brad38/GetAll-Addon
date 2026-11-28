@@ -1061,6 +1061,19 @@
       "audit_reference": "docs/validations/official-scope/remaining-official-blockers.json"
     },
     {
+      "game_id": "vandal-hearts",
+      "project_id": "vandalhearts-pcport",
+      "repository": "HalmyLyseas/VandalHearts-PcPort",
+      "tag": "build-14552ff",
+      "schema_version": 9,
+      "path": "recipes/vandal-hearts/vandalhearts-pcport/build-14552ff.json",
+      "sha256": "711942df423664d1de0335656a53519bbc0d38c3beddabae6f6dd199c828eec5",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.72"
+    },
+    {
       "game_id": "wipeout",
       "project_id": "wipeout-phantom-edition",
       "repository": "wipeout-phantom-edition/wipeout-phantom-edition",
@@ -1101,15 +1114,13 @@
       "project_id": "redriver2",
       "repository": "OpenDriver2/REDRIVER2",
       "tag": "7.4-rc2",
-      "schema_version": 5,
+      "schema_version": 9,
       "path": "recipes/driver-2/redriver2/7.4-rc2.json",
-      "sha256": "cc78159433c5e42f4b234bdd8b57e0fab51bebb3c8d63acd560351a296c53df2",
-      "status": "disabled",
+      "sha256": "495f85a654986a8b76bdcac52a34b2ec01b3ad88262d0b8413e6c3d02e951274",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "disabled_reason": "A compilação oficial copia os mesmos 76 arquivos rastreados data/DRIVER2 ao pacote. Os conversores oficiais geram apenas vídeo e áudio da mídia própria; não fornecem reconstrução dos extras LANG/GFX/GAL/REPLAYS questionados na issue234. Compilar somente o executável não resolve a lacuna de procedência desses dados.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/validations/official-scope/remaining-official-blockers.json"
+      "min_sdk_version": "1.5.72"
     },
     {
       "game_id": "the-legend-of-zelda-the-minish-cap",

@@ -16,7 +16,7 @@ PUBLIC_CATALOG = "https://raw.githubusercontent.com/brad38/AllFix-Repo/main/cata
 # Reviewed eligibility scope committed on 2026-11-28 (137 projects, 11 exclusions).
 PREVIEW_CATALOG = (
     "https://raw.githubusercontent.com/brad38/AllFix-Repo/"
-    "b816345f811547cc04f6150faf16548c26b7409b/catalog.json"
+    "6407730f9708de995175cd757ec41e871c3ebc62/catalog.json"
 )
 
 

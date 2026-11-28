@@ -533,7 +533,90 @@ def validate_recipe_semantics(
         profiles.append(json.loads('''{"schema_version": 9, "project_id": "god-of-war-recomp", "tag": "build-d1d11ec", "source_url": "https://github.com/KIexster/god-of-war-recomp/commit/d1d11ec545c3baf2f3fc17e2df4247ac4b732d5c", "operations": [], "required_files": ["source.zip", "README.md"], "inputs": [], "manual_steps": "Selecione sua ISO original americana de God of War para PS2 (SCUS_973.99). O All-Fix executa os scripts oficiais de extração, compilação e execução da KIexster, sem alterar os fontes do projeto. Se faltarem ferramentas Microsoft, o download exige aceite explícito dos termos. A primeira compilação pode demorar; nenhum jogo está incluído.", "build_profile": "god-of-war-kiexster-d1d11ec-official-installer", "preparation_media": [{"id": "original-disc", "kind": "file", "extensions": [".iso"], "version": "ISO original americana de God of War PS2 (SCUS_973.99)."}]}'''))
         profiles.append(json.loads('''{"schema_version": 9, "project_id": "mariokartdd-recomp", "tag": "build-bd36eb9", "source_url": "https://github.com/ethannicholas/mariokartdd-recomp/commit/bd36eb982ea58c6651584cc48264876d1aba9546", "operations": [], "required_files": ["CMakeLists.txt", "build.ps1", "LICENSE", "README.md", "gcn-recomp/CMakeLists.txt", "gcn-recomp/LICENSE", "gcn-recomp/recomp/extract_dol.py", "gcn-recomp/recomp/recomp.py"], "inputs": [], "manual_steps": "Selecione sua ISO original americana de Mario Kart: Double Dash!! (GM4E01). O All-Fix executa build.ps1 oficial com Clang, Visual Studio 2022 e o submódulo fixado pelo autor, preservando OpenXR e as opções do projeto. Ferramentas Microsoft ausentes exigem aceite explícito antes da instalação. Primeiro boot ainda não homologado.", "build_profile": "mariokartdd-bd36eb9-official-msvc-clang", "preparation_media": [{"id": "original-disc", "kind": "file", "extensions": [".iso"], "version": "GameCube USA GM4E01; main.dol SHA-1 e389e50357d4a5076ab3d38672204658f411123d"}]}'''))
         profiles.append(json.loads('''{"schema_version": 9, "project_id": "strikersrecomp", "tag": "build-cd88f71", "source_url": "https://github.com/aharonahdoot/StrikersRecomp/commit/cd88f71f5a836c103484c038454b4143000d883c", "operations": [], "required_files": ["source.zip", "README.md"], "inputs": [], "manual_steps": "Selecione a ISO original americana de Super Mario Strikers. O All-Fix compila o RecompCore e o módulo oficial e registra o jogo. Primeiro boot ainda não homologado.", "build_profile": "strikersrecomp-cd88f71-recompcore", "preparation_media": [{"id": "original-disc", "kind": "file", "extensions": [".iso"], "version": "Disco original de Super Mario Strikers para GameCube, edição americana G4QE01 Rev 0."}]}'''))
+        profiles.append(
+            {
+                "schema_version": 9,
+                "project_id": "vandalhearts-pcport",
+                "tag": "build-14552ff",
+                "source_url": "https://github.com/HalmyLyseas/VandalHearts-PcPort/commit/14552fffa0e0b47e02b57592e274fc6e7a649923",
+                "operations": [],
+                "required_files": [
+                    "source.zip",
+                    "README.md"
+                ],
+                "inputs": [],
+                "manual_steps": "Selecione os discos originais US e JP de Vandal Hearts em BIN MODE2/2352 e seu BIOS PlayStation ou KROMDAT.BIN compatível. É necessário Ubuntu x64 no WSL2, com Python 3.12+, glibc 2.38+, CMake, Ninja, Make, GCC, dpkg-deb, Bash e libzstd já disponíveis. O All-Fix prepara as dependências privadas de compilação para Windows e compila a versão unificada oficial. Primeiro boot ainda não homologado.",
+                "build_profile": "vandal-14552fff-official-wsl",
+                "preparation_media": [
+                    {
+                        "id": "us-disc",
+                        "kind": "file",
+                        "extensions": [
+                            ".bin"
+                        ],
+                        "version": "Disco original de Vandal Hearts dos EUA (SLUS-00447), em BIN MODE2/2352."
+                    },
+                    {
+                        "id": "jp-disc",
+                        "kind": "file",
+                        "extensions": [
+                            ".bin"
+                        ],
+                        "version": "Disco original de Vandal Hearts do Japão (SLPM-86007), em BIN MODE2/2352."
+                    },
+                    {
+                        "id": "font-source",
+                        "kind": "file",
+                        "extensions": [
+                            ".bin",
+                            ".rom"
+                        ],
+                        "version": "BIOS PlayStation japonês de 512 KiB ou KROMDAT.BIN compatível com os caracteres US e JP."
+                    }
+                ]
+            }
+        )
+        profiles.append(
+            {
+                "schema_version": 9,
+                "project_id": "redriver2",
+                "tag": "7.4-rc2",
+                "source_url": "https://github.com/OpenDriver2/REDRIVER2/releases/tag/7.4-rc2",
+                "operations": [],
+                "required_files": [
+                    "Launcher.exe",
+                    "REDRIVER2.exe",
+                    "SDL2.dll",
+                    "OpenAL32.dll",
+                    "config.ini",
+                    "install/jpsxdec.jar"
+                ],
+                "inputs": [],
+                "manual_steps": "Selecione os discos 1 e 2 originais de Driver 2 em BIN MODE2/2352, da mesma região e revisão PAL ou NTSC-U. O All-Fix usa o pacote oficial REDRIVER2 7.4-rc2 e o jPSXdec incluído para converter seus vídeos e áudio, preservando galeria, idiomas, replays, legendas e créditos. O All-Fix prepara um Java 21 privado para a conversão. Mantenha as imagens originais no local selecionado para jogar. Nenhum disco do jogo está incluído.",
+                "build_profile": "redriver2-7.4-rc2-official-media",
+                "preparation_media": [
+                    {
+                        "id": "disc-1",
+                        "kind": "file",
+                        "extensions": [
+                            ".bin"
+                        ],
+                        "version": "Disco 1 original de Driver 2, PAL ou NTSC-U, imagem BIN MODE2/2352."
+                    },
+                    {
+                        "id": "disc-2",
+                        "kind": "file",
+                        "extensions": [
+                            ".bin"
+                        ],
+                        "version": "Disco 2 original da mesma região e revisão do disco 1, imagem BIN MODE2/2352."
+                    }
+                ]
+            }
+        )
         identities = {
+            "redriver2-7.4-rc2-official-media": ("driver-2", "OpenDriver2/REDRIVER2"),
+            "vandal-14552fff-official-wsl": ("vandal-hearts", "HalmyLyseas/VandalHearts-PcPort"),
             "strikersrecomp-cd88f71-recompcore": ("super-mario-strikers", "aharonahdoot/StrikersRecomp"),
             "mariokartdd-bd36eb9-official-msvc-clang": ("mario-kart-double-dash", "ethannicholas/mariokartdd-recomp"),
             "god-of-war-kiexster-d1d11ec-official-installer": ("god-of-war-2005", "KIexster/god-of-war-recomp"),

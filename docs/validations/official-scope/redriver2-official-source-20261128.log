@@ -1,0 +1,5 @@
+PASS REDRIVER2 official schema 9 selects the exact reviewed profile and instructions
+PASS REDRIVER2 official required files retain the original release layout
+PASS REDRIVER2 official remote recipe contains no execution commands or source alterations
+PASS REDRIVER2 official only the reviewed replacement recipe hash is admitted
+REDRIVER_OFFICIAL_SOURCE_PASS

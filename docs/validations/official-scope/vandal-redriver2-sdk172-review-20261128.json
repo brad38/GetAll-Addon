@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-28",
+  "scope": "Two experimental official-installation contracts; availability and implementation are separate from original-media completion, first boot and gameplay.",
+  "sdk_minimum": "1.5.72",
+  "planned_test_addon_version": "1.5.78",
+  "catalog_revision": {
+    "state": "committed_pushed_and_publicly_verified",
+    "commit": "6407730f9708de995175cd757ec41e871c3ebc62",
+    "previous_commit": "b816345f811547cc04f6150faf16548c26b7409b",
+    "catalog_sha256": "eea17e83d83dae3d86ce78ce80c14c78583694b4fd90ea0a5486a4bfdb195e8e",
+    "eligibility_sha256": "11113d8353e567c2ed8c84fc99939cedd56af482b95fa1ef9f0abebc0ce87e7c"
+  },
+  "index_sha256": "05b0f66a63a8cd4aa4e87ef82896192252847faddabd1556870ce0d84ac4d1df",
+  "recipes": [
+    {
+      "game_id": "vandal-hearts",
+      "project_id": "vandalhearts-pcport",
+      "repository": "HalmyLyseas/VandalHearts-PcPort",
+      "tag": "build-14552ff",
+      "schema_version": 9,
+      "path": "recipes/vandal-hearts/vandalhearts-pcport/build-14552ff.json",
+      "sha256": "711942df423664d1de0335656a53519bbc0d38c3beddabae6f6dd199c828eec5",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.72"
+    },
+    {
+      "game_id": "driver-2",
+      "project_id": "redriver2",
+      "repository": "OpenDriver2/REDRIVER2",
+      "tag": "7.4-rc2",
+      "schema_version": 9,
+      "path": "recipes/driver-2/redriver2/7.4-rc2.json",
+      "sha256": "495f85a654986a8b76bdcac52a34b2ec01b3ad88262d0b8413e6c3d02e951274",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.72"
+    }
+  ],
+  "vandal": {
+    "profile": "vandal-14552fff-official-wsl",
+    "source_commit": "14552fffa0e0b47e02b57592e274fc6e7a649923",
+    "source_zip_sha256": "e7c50aaddf57c05df97eee50c9355473a1a4ea6d8354fe719c9450f89b14160f",
+    "source_zip_bytes": 21396545,
+    "inputs": [
+      "us-disc",
+      "jp-disc",
+      "font-source"
+    ],
+    "implementation_review": "Closed source receipt and ordered media contracts; original-disc identities and BIOS/KROM glyph hashes; intact upstream unified CMake build with private dependencies and WebP/HD video enabled; Linux-owned process groups and receipt acknowledgement; manifest-based transaction publication and launch.",
+    "source_zip_audit": {
+      "entries": 562,
+      "unix_symlinks": [
+        "jp/tools/maspsx"
+      ],
+      "windows_improper_paths": 0,
+      "method": "Read immutable ZIP metadata without extracting on Windows; preserve the upstream link in owned Linux staging."
+    },
+    "limitations": [
+      "The precompiled v2.1.0 route remains disabled and its old profile retired.",
+      "Host Ubuntu/WSL tools and ABI prerequisites are required; a generic fresh WSL installation is not sufficient.",
+      "No original disc or BIOS was used to compile a complete game, launch it or play it in this review."
+    ]
+  },
+  "redriver2": {
+    "profile": "redriver2-7.4-rc2-official-media",
+    "release_sha256": "92c20bf6194af715a84c058783fa3095ed09d3aeeb4c41485b11c984d14d276c",
+    "release_bytes": 9772801,
+    "baseline_files": 93,
+    "ancillary_files_preserved": 76,
+    "inputs": [
+      "disc-1",
+      "disc-2"
+    ],
+    "runtime": "Private Java 21",
+    "implementation_review": "Closed direct-upstream release receipt, both original same-region/revision discs, pinned jPSXdec conversion, unchanged baseline/extras, manifests and launch verification. The old native profile remains retired; replacement approval binds only the exact new recipe bytes.",
+    "provenance_reference": {
+      "path": "docs/validations/official-scope/redriver2-provenance-20261128.json",
+      "sha256": "07f875b12dd19550c68cba8f592269753bca8c38c7b7163ec8c664ee14e92a84"
+    },
+    "licence_limit": "Documented mixed origins do not declare all third-party assets MIT-licensed; GetAll does not host, mirror or repackage the publisher's payload."
+  },
+  "new_original_media_installations": 0,
+  "new_first_boots": 0,
+  "new_gameplay_sessions": 0,
+  "validation_scope": {
+    "schema9_contracts": "Exact local JSON Schema and independent semantic profile definitions.",
+    "integration_evidence": {
+      "vandalhearts-pcport": {
+        "status": "passed",
+        "reason": "The current WSL helper passed 19 tests; private SDK and official FFmpeg preparation, non-game AMD64 dependency linking/audit, and intact US/JP configuration passed with WebP/HD video enabled. No complete game was built or launched.",
+        "evidence": [
+          {
+            "path": "docs/validations/official-scope/vandal-official-wsl-20261128-result.json",
+            "sha256": "d569a40e9f338a128d0016a1d39938cbfa27fb3050ace837def5d6bd07c2ed01",
+            "scope": "getall",
+            "data_kind": "synthetic",
+            "observed": "19 helper tests passed, including rejection, real Linux process-group termination and staging safety; pinned dependencies were prepared privately and upstream US/JP CMake configuration passed. The dependency PE probe was linked/audited but not executed; original-media installation, first boot and gameplay were not run."
+          },
+          {
+            "path": "docs/validations/official-scope/final-two-desktop-validation-20261128.json",
+            "sha256": "32b0d2cb372b9962d16bd7da4d283ae52f7212fbfa1e725a41d8015838d37e63",
+            "scope": "getall",
+            "data_kind": "synthetic",
+            "observed": "The actual shared SDK engine prepared the pinned Vandal source archive and passed 12 kit/selector/cancellation/rejection checks; the Windows-to-WSL prerequisite probe passed. Consolidated gates also record 2372 C# regression checks, 82 Python tests and 147 accepted recipes, without any original-media build, first boot or gameplay."
+          }
+        ]
+      },
+      "redriver2": {
+        "status": "passed",
+        "reason": "The current exact recipe and real official kit passed the SDK source/kit checks. The pinned jPSXdec converter decoded authored 96-frame STR and XA fixtures using private Java 21, with SDK merge and cancellation checks.",
+        "evidence": [
+          {
+            "path": "docs/validations/official-scope/redriver2-official-integration-result-20261128.json",
+            "sha256": "839f6c026e193501598e113884c6c95980fb5c5b7d606d37dd4382d6035f78ab",
+            "scope": "getall",
+            "data_kind": "synthetic",
+            "observed": "Source/Official tests passed for the exact new recipe and 93-file kit; wrong media, changed ZIP/receipt/jars/gallery/credits and retired profile were rejected. Real conversion of authored STR/XA fixtures passed with private Java 21. No complete original-media installation, first boot or gameplay was tested."
+          }
+        ]
+      }
+    },
+    "desktop_sdk172_results": {
+      "path": "docs/validations/official-scope/final-two-desktop-validation-20261128.json",
+      "sha256": "32b0d2cb372b9962d16bd7da4d283ae52f7212fbfa1e725a41d8015838d37e63",
+      "desktop_regression_checks": 2372,
+      "harness_build_errors": 0,
+      "harness_build_warnings": 0,
+      "vandal_source_kit_checks": 12,
+      "vandal_wsl_preflight": "passed",
+      "original_media_installation": false,
+      "first_boot": false,
+      "gameplay": false
+    },
+    "getall_final_suite": {
+      "python_tests": 82,
+      "python_test_seconds": 69.367,
+      "python_exit_code": 0,
+      "recipe_validator_recipes": 147,
+      "recipe_validator_exit_code": 0,
+      "recipe_validator_scope": [
+        "JSON Schema",
+        "strict LF",
+        "catalog",
+        "eligibility",
+        "exclusions"
+      ],
+      "desktop_parser_passed": 147,
+      "desktop_parser_failed": 0,
+      "desktop_parser_exit_code": 0,
+      "evidence_directory": "evidence-r18/official-scope-20261128/final-two-sdk172",
+      "source": "Final integration-owner results reported after executing these gates; no original-media completion, boot or gameplay."
+    }
+  },
+  "previous_route_records": {
+    "vandalhearts-pcport": {
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "v2.1.0",
+          "sha256": "769eb9a2d2d313b8c9a529d3ba53c24654b2d2c9bb3b50e658febc344f76cd67"
+        }
+      ],
+      "dimensions": {
+        "automated_installation_implemented": {
+          "status": "blocked",
+          "reason": "Official unified source build requires the exact US and JP PS-X executables extracted from the original discs plus a compatible BIOS or KROM source. The private WSL cross-build reached the original-input gate.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/remaining-official-blockers-before-final-two-20261128.json",
+              "sha256": "879bfb3995ed34ab0a498535bbd242fca1b741d201cd957443048ef5a75bde7f",
+              "observed": "O NOTICE declara dados do jogo/BIOS incorporados nos binários. A alternativa fonte foi verificada e usa executável PS-X e BIOS próprios; o teste nativo CMake intacto falhou na criação obrigatória de symlinks por falta de privilégio. O procedimento Windows documentado usa cross-compilação Linux/macOS e dependências próprias, ainda sem integração validada no Desktop. Restoration condition: Integrar e verificar ambiente oficial de compilação que suporte o staging de symlinks, gerando todos os dados necessários exclusivamente das mídias/BIOS fornecidos pelo usuário. Não substituir por binário que já incorpora esses dados.",
+              "data_kind": "code_review",
+              "scope": "getall",
+              "original_path": "docs/validations/official-scope/remaining-official-blockers.json"
+            },
+            {
+              "path": "docs/validations/official-scope/vandal-cross-build-result-20261128.json",
+              "sha256": "760d7545ea923853a8e5c931240ee64d7c0d57185a07815c7ef0b1954b456998",
+              "data_kind": "synthetic",
+              "scope": "getall",
+              "observed": "Private WSL MinGW x64 linked a dependency probe; untouched upstream configured US and JP with WebP and HD video intact. Both core builds reached the original executable check and stopped. No core or Vandal Hearts EXE was generated."
+            }
+          ]
+        },
+        "synthetic_validation": {
+          "status": "failed",
+          "reason": "The intact native Windows CMake configuration failed on required symlinks and OpenAL; no claim about overall game functionality.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/vandal-native-configure-result.json",
+              "sha256": "0019329d1f86b2815758b566ff975a947083e498b3f3f58311ea5e4302bb8b25",
+              "observed": "Native configuration only: required symbolic links could not be created in this environment; sources remained unchanged and no original media was supplied.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ]
+        },
+        "original_media_installation": {
+          "status": "unknown",
+          "evidence": [],
+          "reason": "No attributable GetAll result with original media was located for this dimension."
+        },
+        "first_boot": {
+          "status": "unknown",
+          "evidence": [],
+          "reason": "No attributable GetAll result with original media was located for this dimension."
+        },
+        "gameplay": {
+          "status": "unknown",
+          "evidence": [],
+          "reason": "No attributable GetAll result with original media was located for this dimension."
+        }
+      },
+      "limits": [
+        "CMake VH_PSX_EXE + VH_KROM_SOURCE, mantendo VH_WEBP/VH_HDVIDEO ligados. A fonte atual pode ler diretamente PS-X EXE sem ELF/PsyQ; o gerador aceita BIOS próprio e valida o hash da região de fonte. A embalagem unificada oficial compila os dois cores regionais US/JP e usa libav estático.",
+        "Integrar e verificar ambiente oficial de compilação que suporte o staging de symlinks, gerando todos os dados necessários exclusivamente das mídias/BIOS fornecidos pelo usuário. Não substituir por binário que já incorpora esses dados.",
+        "Upstream functionality remains distinct from the unavailable official Windows automation."
+      ]
+    },
+    "redriver2": {
+      "reviewed_at": "2026-11-28",
+      "recipe_revisions": [
+        {
+          "tag": "7.4-rc2",
+          "sha256": "cc78159433c5e42f4b234bdd8b57e0fab51bebb3c8d63acd560351a296c53df2"
+        }
+      ],
+      "dimensions": {
+        "automated_installation_implemented": {
+          "status": "blocked",
+          "reason": "A compilação oficial copia os mesmos 76 arquivos rastreados data/DRIVER2 ao pacote. Os conversores oficiais geram apenas vídeo e áudio da mídia própria; não fornecem reconstrução dos extras LANG/GFX/GAL/REPLAYS questionados na issue234. Compilar somente o executável não resolve a lacuna de procedência desses dados.",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/remaining-official-blockers-before-final-two-20261128.json",
+              "sha256": "879bfb3995ed34ab0a498535bbd242fca1b741d201cd957443048ef5a75bde7f",
+              "observed": "A compilação oficial copia os mesmos 76 arquivos rastreados data/DRIVER2 ao pacote. Os conversores oficiais geram apenas vídeo e áudio da mídia própria; não fornecem reconstrução dos extras LANG/GFX/GAL/REPLAYS questionados na issue234. Compilar somente o executável não resolve a lacuna de procedência desses dados. Restoration condition: Documentar a procedência dos extras ou validar uma reconstrução oficial desses dados a partir das mídias próprias, preservando as funcionalidades do upstream.",
+              "data_kind": "code_review",
+              "scope": "getall",
+              "original_path": "docs/validations/official-scope/remaining-official-blockers.json"
+            },
+            {
+              "path": "docs/validations/official-scope/redriver2-synthetic-video-result-20261128.json",
+              "sha256": "b33df9f4e742531b28bc0647d775a9a3f816e03f9560340ffd8b132d23811817",
+              "data_kind": "synthetic",
+              "scope": "getall",
+              "observed": "Pinned jPSXdec on Java 21 converted a 96-frame synthetic STR and the SDK verified the output, cancellation and merge. This does not resolve packaged ancillary-data provenance."
+            }
+          ]
+        },
+        "synthetic_validation": {
+          "status": "unknown",
+          "evidence": [],
+          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+        },
+        "original_media_installation": {
+          "status": "unknown",
+          "evidence": [],
+          "reason": "No attributable GetAll result with original media was located for this dimension."
+        },
+        "first_boot": {
+          "status": "unknown",
+          "evidence": [],
+          "reason": "No attributable GetAll result with original media was located for this dimension."
+        },
+        "gameplay": {
+          "status": "unknown",
+          "evidence": [],
+          "reason": "No attributable GetAll result with original media was located for this dimension."
+        }
+      },
+      "limits": [
+        "Método Windows oficial com ambos CDs próprios, launcher Java ou _convert_cd_fmv_xa.bat. A via de fonte VS2019/premake permanece documentada, porém sua embalagem usa o mesmo diretório de dados; não foi verificada uma rota que derive todos os extras dos discos.",
+        "Documentar a procedência dos extras ou validar uma reconstrução oficial desses dados a partir das mídias próprias, preservando as funcionalidades do upstream.",
+        "Upstream functionality remains distinct from the unavailable official Windows automation."
+      ]
+    }
+  },
+  "publication": {
+    "catalog_commit": "6407730f9708de995175cd757ec41e871c3ebc62",
+    "catalog_pushed": true,
+    "catalog_ci": {
+      "id": 46115153161,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/brad38/AllFix-Repo/actions/runs/46115153161"
+    },
+    "getall_committed": false,
+    "getall_pushed": false,
+    "public_release_changed": false,
+    "catalog_ci_pin_update": "PREVIEW_CATALOG updated after three exact raw documents were verified byte for byte."
+  }
+}

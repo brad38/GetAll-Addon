@@ -1,0 +1,207 @@
+# /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/logs/017-official-ffmpeg.log
+# original SHA256 4cc784bb07528af49e8b31d93e8c020dcdec510c35acdbf5b81078ade49d9c92; original size 28577 bytes
+les/transcode.c
+INSTALL	doc/examples/transcode_aac.c
+INSTALL	doc/examples/vaapi_encode.c
+INSTALL	doc/examples/vaapi_transcode.c
+INSTALL	doc/examples/README
+INSTALL	doc/examples/Makefile
+INSTALL	libavformat/libavformat.a
+INSTALL	libavcodec/libavcodec.a
+INSTALL	libswscale/libswscale.a
+INSTALL	libavutil/libavutil.a
+INSTALL	libavformat/avformat.h
+INSTALL	libavformat/avio.h
+INSTALL	libavformat/version.h
+INSTALL	libavformat/version_major.h
+INSTALL	libavformat/libavformat.pc
+INSTALL	libavcodec/ac3_parser.h
+INSTALL	libavcodec/adts_parser.h
+INSTALL	libavcodec/avcodec.h
+INSTALL	libavcodec/avdct.h
+INSTALL	libavcodec/avfft.h
+INSTALL	libavcodec/bsf.h
+INSTALL	libavcodec/codec.h
+INSTALL	libavcodec/codec_desc.h
+INSTALL	libavcodec/codec_id.h
+INSTALL	libavcodec/codec_par.h
+INSTALL	libavcodec/d3d11va.h
+INSTALL	libavcodec/defs.h
+INSTALL	libavcodec/dirac.h
+INSTALL	libavcodec/dv_profile.h
+INSTALL	libavcodec/dxva2.h
+INSTALL	libavcodec/jni.h
+INSTALL	libavcodec/mediacodec.h
+INSTALL	libavcodec/packet.h
+INSTALL	libavcodec/qsv.h
+INSTALL	libavcodec/vdpau.h
+INSTALL	libavcodec/version.h
+INSTALL	libavcodec/version_major.h
+INSTALL	libavcodec/videotoolbox.h
+INSTALL	libavcodec/vorbis_parser.h
+INSTALL	libavcodec/libavcodec.pc
+INSTALL	libswscale/swscale.h
+INSTALL	libswscale/version.h
+INSTALL	libswscale/version_major.h
+INSTALL	libswscale/libswscale.pc
+INSTALL	libavutil/adler32.h
+INSTALL	libavutil/aes.h
+INSTALL	libavutil/aes_ctr.h
+INSTALL	libavutil/ambient_viewing_environment.h
+INSTALL	libavutil/attributes.h
+INSTALL	libavutil/audio_fifo.h
+INSTALL	libavutil/avassert.h
+INSTALL	libavutil/avstring.h
+INSTALL	libavutil/avutil.h
+INSTALL	libavutil/base64.h
+INSTALL	libavutil/blowfish.h
+INSTALL	libavutil/bprint.h
+INSTALL	libavutil/bswap.h
+INSTALL	libavutil/buffer.h
+INSTALL	libavutil/cast5.h
+INSTALL	libavutil/camellia.h
+INSTALL	libavutil/channel_layout.h
+INSTALL	libavutil/common.h
+INSTALL	libavutil/cpu.h
+INSTALL	libavutil/crc.h
+INSTALL	libavutil/csp.h
+INSTALL	libavutil/des.h
+INSTALL	libavutil/detection_bbox.h
+INSTALL	libavutil/dict.h
+INSTALL	libavutil/display.h
+INSTALL	libavutil/dovi_meta.h
+INSTALL	libavutil/downmix_info.h
+INSTALL	libavutil/encryption_info.h
+INSTALL	libavutil/error.h
+INSTALL	libavutil/eval.h
+INSTALL	libavutil/executor.h
+INSTALL	libavutil/fifo.h
+INSTALL	libavutil/file.h
+INSTALL	libavutil/frame.h
+INSTALL	libavutil/hash.h
+INSTALL	libavutil/hdr_dynamic_metadata.h
+INSTALL	libavutil/hdr_dynamic_vivid_metadata.h
+INSTALL	libavutil/hmac.h
+INSTALL	libavutil/hwcontext.h
+INSTALL	libavutil/hwcontext_cuda.h
+INSTALL	libavutil/hwcontext_d3d11va.h
+INSTALL	libavutil/hwcontext_d3d12va.h
+INSTALL	libavutil/hwcontext_drm.h
+INSTALL	libavutil/hwcontext_dxva2.h
+INSTALL	libavutil/hwcontext_qsv.h
+INSTALL	libavutil/hwcontext_mediacodec.h
+INSTALL	libavutil/hwcontext_opencl.h
+INSTALL	libavutil/hwcontext_vaapi.h
+INSTALL	libavutil/hwcontext_videotoolbox.h
+INSTALL	libavutil/hwcontext_vdpau.h
+INSTALL	libavutil/hwcontext_vulkan.h
+INSTALL	libavutil/iamf.h
+INSTALL	libavutil/imgutils.h
+INSTALL	libavutil/intfloat.h
+INSTALL	libavutil/intreadwrite.h
+INSTALL	libavutil/lfg.h
+INSTALL	libavutil/log.h
+INSTALL	libavutil/lzo.h
+INSTALL	libavutil/macros.h
+INSTALL	libavutil/mathematics.h
+INSTALL	libavutil/mastering_display_metadata.h
+INSTALL	libavutil/md5.h
+INSTALL	libavutil/mem.h
+INSTALL	libavutil/motion_vector.h
+INSTALL	libavutil/murmur3.h
+INSTALL	libavutil/opt.h
+INSTALL	libavutil/parseutils.h
+INSTALL	libavutil/pixdesc.h
+INSTALL	libavutil/pixelutils.h
+INSTALL	libavutil/pixfmt.h
+INSTALL	libavutil/random_seed.h
+INSTALL	libavutil/rc4.h
+INSTALL	libavutil/rational.h
+INSTALL	libavutil/replaygain.h
+INSTALL	libavutil/ripemd.h
+INSTALL	libavutil/samplefmt.h
+INSTALL	libavutil/sha.h
+INSTALL	libavutil/sha512.h
+INSTALL	libavutil/spherical.h
+INSTALL	libavutil/stereo3d.h
+INSTALL	libavutil/threadmessage.h
+INSTALL	libavutil/time.h
+INSTALL	libavutil/timecode.h
+INSTALL	libavutil/timestamp.h
+INSTALL	libavutil/tree.h
+INSTALL	libavutil/twofish.h
+INSTALL	libavutil/uuid.h
+INSTALL	libavutil/version.h
+INSTALL	libavutil/video_enc_params.h
+INSTALL	libavutil/xtea.h
+INSTALL	libavutil/tea.h
+INSTALL	libavutil/tx.h
+INSTALL	libavutil/film_grain_params.h
+INSTALL	libavutil/video_hint.h
+INSTALL	libavutil/avconfig.h
+INSTALL	libavutil/ffversion.h
+INSTALL	libavutil/libavutil.pc
+
+== done: static libav in /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/libav ==
+ 18M /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/libav/lib/libavcodec.a
+2.9M /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/libav/lib/libavformat.a
+3.9M /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/libav/lib/libavutil.a
+3.8M /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/libav/lib/libswscale.a
+configure the port with:  cmake -S . -B build_win \
+    -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-mingw-w64.cmake -DCMAKE_PREFIX_PATH=/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/libav
+
+
+# /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/logs/018-dependency-link-probe.log
+# original SHA256 4a0ba44f9b367a9afdf812a999c80fbcce85f84a9c881954a01223d6a33b9f6e; original size 1076 bytes
+In file included from /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/deps/include/SDL2/SDL.h:32,
+                 from /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/dependency-probe.c:1:
+/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/deps/include/SDL2/SDL_main.h:143:17: error: conflicting types for ‘SDL_main’; have ‘int(void)’
+  143 | #define main    SDL_main
+      |                 ^~~~~~~~
+/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/dependency-probe.c:5:5: note: in expansion of macro ‘main’
+    5 | int main(void){SDL_Init(0);alGetError();WebPGetDecoderVersion();avcodec_version();return 0;}
+      |     ^~~~
+/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/deps/include/SDL2/SDL_main.h:155:29: note: previous declaration of ‘SDL_main’ with type ‘int(int,  char **)’
+  155 | extern SDLMAIN_DECLSPEC int SDL_main(int argc, char *argv[]);
+      |                             ^~~~~~~~
+
+
+# /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/verification-logs/001-dependency-link-probe.log
+# original SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855; original size 0 bytes
+[empty successful command output]
+
+# /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/verification-logs/002-official-configure-us.log
+# original SHA256 aea43e10948b03bc70c1ec2e6a4c12e885c84ec41aebe01dd091e87967ed8685; original size 767 bytes
+-- The C compiler identification is GNU 13.0.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk/usr/bin/x86_64-w64-mingw32-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found OpenGL: opengl32
+-- Found Python3: /usr/bin/python3 (found version "3.14.4") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/configure-us
+
+
+# /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/verification-logs/003-official-configure-jp.log
+# original SHA256 92f796b4c9bb520a5375af0ea0715e3a3019717707561ba9ccff47ff4aabd397; original size 767 bytes
+-- The C compiler identification is GNU 13.0.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk/usr/bin/x86_64-w64-mingw32-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found OpenGL: opengl32
+-- Found Python3: /usr/bin/python3 (found version "3.14.4") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/configure-jp
+

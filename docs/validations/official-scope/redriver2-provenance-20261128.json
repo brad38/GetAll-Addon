@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-11-28",
+  "profile": "redriver2-7.4-rc2-official-media",
+  "retired_profile": "redriver2-7.4-rc2-native",
+  "decision": "Documented upstream provenance supports the fixed official personal-media installation route. This is not an assertion of blanket third-party relicensing or authorization to mirror/repackage the game's resources.",
+  "repository": "OpenDriver2/REDRIVER2",
+  "tag": "7.4-rc2",
+  "commit": "acca6b139302dd72c1fbff52556f3493aafda2dd",
+  "source_url": "https://github.com/OpenDriver2/REDRIVER2/tree/acca6b139302dd72c1fbff52556f3493aafda2dd",
+  "release": {
+    "url": "https://github.com/OpenDriver2/REDRIVER2/releases/download/7.4-rc2/REDRIVER2_Win32_Release.zip",
+    "bytes": 9772801,
+    "sha256": "92c20bf6194af715a84c058783fa3095ed09d3aeeb4c41485b11c984d14d276c"
+  },
+  "baseline": {
+    "files": 93,
+    "bytes": 24350736,
+    "manifest_sha256": "5dbcdaf29e72ba3d3ec20a0804385dde88a42e71540cdff4527319a86872ca55",
+    "extras": 76,
+    "data_git_tree": "5fcf52804a893436476ccdaf92a4deecf1b43386"
+  },
+  "licence": {
+    "name": "MIT",
+    "copyright": "Copyright (c) 2020 SoapyMan",
+    "source_url": "https://github.com/OpenDriver2/REDRIVER2/blob/acca6b139302dd72c1fbff52556f3493aafda2dd/LICENSE",
+    "git_blob": "f4c2e0be02ec8ba69fb2de37571def7f9f4b2afe",
+    "bytes": 1065,
+    "sha256": "db3b97ec54bd96f5219e94039156ed1f05e2c9f1c7284db9c12fc70e1c7a63eb",
+    "scope": "Upstream grant for its software and associated documentation, limited to rights it can grant. Third-party game graphics, dialogue, credits and notices are not declared to have been independently relicensed."
+  },
+  "groups": [
+    {
+      "id": "gallery",
+      "count": 25,
+      "prefix": "DRIVER2/GFX/GAL/",
+      "origin": "Project development-history gallery, March–September 2020. INTRO and sampled slides identify REDRIVER2 progress; screenshots include original-game graphics.",
+      "commits": [
+        "87a7d7783c40d4bb319b68b85cd17b8d9ff0c653",
+        "8400fcc7886a001ca2555416d1d48d9b7df8dbd2",
+        "131ea1ff03eecb12ce90450e8fcb2744780031d6"
+      ],
+      "licence_scope": "Upstream project documentation; no independent relicensing claim over third-party graphics visible in screenshots.",
+      "commit_urls": [
+        "https://github.com/OpenDriver2/REDRIVER2/commit/87a7d7783c40d4bb319b68b85cd17b8d9ff0c653",
+        "https://github.com/OpenDriver2/REDRIVER2/commit/8400fcc7886a001ca2555416d1d48d9b7df8dbd2",
+        "https://github.com/OpenDriver2/REDRIVER2/commit/131ea1ff03eecb12ce90450e8fcb2744780031d6"
+      ]
+    },
+    {
+      "id": "localization",
+      "count": 10,
+      "prefix": "DRIVER2/LANG/",
+      "origin": "Game/source strings externalized to locale files, with maintained translations. The German addition expressly credits @Jordem.",
+      "commits": [
+        "6e895f5877c145ff14283271de605d30cd75eca7",
+        "1e74fc441e8b9288baff14a811746e33f1c56453",
+        "b776719ea3b04b60419e08c724aebdc1273f7e01"
+      ],
+      "licence_scope": "Attributed project contributions with source-game strings; not described as entirely original dialogue or independently relicensed commercial text.",
+      "commit_urls": [
+        "https://github.com/OpenDriver2/REDRIVER2/commit/6e895f5877c145ff14283271de605d30cd75eca7",
+        "https://github.com/OpenDriver2/REDRIVER2/commit/1e74fc441e8b9288baff14a811746e33f1c56453",
+        "https://github.com/OpenDriver2/REDRIVER2/commit/b776719ea3b04b60419e08c724aebdc1273f7e01"
+      ]
+    },
+    {
+      "id": "replays",
+      "count": 14,
+      "prefix": "DRIVER2/REPLAYS/ReChases/",
+      "origin": "Replacement chase recordings maintained by upstream. The Mission 10 update expressly records a new chase recording; official Driver2CutsceneTool assembles REDRIVER2 replay inputs.",
+      "commits": [
+        "726e94d3877320c221d7719a73ab392e270b5ef4",
+        "3d1440cb063baae92731b0b92d45801205b96bb2"
+      ],
+      "licence_scope": "Identified project recordings/fixes. Do not substitute original-disc replays or silently omit the replacements.",
+      "commit_urls": [
+        "https://github.com/OpenDriver2/REDRIVER2/commit/726e94d3877320c221d7719a73ab392e270b5ef4",
+        "https://github.com/OpenDriver2/REDRIVER2/commit/3d1440cb063baae92731b0b92d45801205b96bb2"
+      ]
+    },
+    {
+      "id": "subtitles",
+      "count": 26,
+      "prefix": "DRIVER2/XA/",
+      "origin": "SBN text/timing metadata added by SoapyMan for the official subtitle implementation/exporter. 7384 bytes total; 24 nonempty files and two empty files. The 56-byte record format accounts for 130 subtitle entries; inspected samples contain timed game dialogue, not audio.",
+      "commits": [
+        "a3f81aed0e1178afc103d5bbc9af2c24ab71810c",
+        "eed356479c350d6fa6c5506ce23df8fd6d89446a",
+        "d33b147a751067b7aabc13ebda4a2085f22a708c"
+      ],
+      "licence_scope": "Project formatting/timing contributions reproduce game dialogue. The exporter needs WAV cue/LIST annotations; ordinary PCM conversion alone does not reconstruct these exact subtitles.",
+      "commit_urls": [
+        "https://github.com/OpenDriver2/REDRIVER2/commit/a3f81aed0e1178afc103d5bbc9af2c24ab71810c",
+        "https://github.com/OpenDriver2/REDRIVER2/commit/eed356479c350d6fa6c5506ce23df8fd6d89446a",
+        "https://github.com/OpenDriver2/REDRIVER2/commit/d33b147a751067b7aabc13ebda4a2085f22a708c"
+      ]
+    },
+    {
+      "id": "credits",
+      "count": 1,
+      "path": "DRIVER2/DATA/CREDITS.ENG",
+      "origin": "Original-game credits/notices adapted for the port, with a project-specific final line discussed publicly by a collaborator and subsequently edited.",
+      "commits": [
+        "a0d9368220c39df9b7b614091dbe755e30fdbcda",
+        "53a459d4d5d301cd1c0a589e0a735a1a1db41688"
+      ],
+      "licence_scope": "Preserve original Infogrames/Reflections and music attribution notices. This text file does not contain the credited music recordings.",
+      "comment_url": "https://github.com/OpenDriver2/REDRIVER2/commit/a0d9368220c39df9b7b614091dbe755e30fdbcda#r44023058",
+      "commit_urls": [
+        "https://github.com/OpenDriver2/REDRIVER2/commit/a0d9368220c39df9b7b614091dbe755e30fdbcda",
+        "https://github.com/OpenDriver2/REDRIVER2/commit/53a459d4d5d301cd1c0a589e0a735a1a1db41688"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "path": "install/jpsxdec.jar",
+      "bytes": 1949185,
+      "sha256": "d55b4d23a898a3c168413b0a6bca615806535640412c76dcada5ab27e75c322e"
+    },
+    {
+      "path": "install/jpsxdec-lib.jar",
+      "bytes": 490295,
+      "sha256": "bdfccc48028efb6bfb7e7111033f6fb6a1eb23ffaac28e041cb2eb4361a4b925"
+    }
+  ],
+  "official_instructions": "https://github.com/OpenDriver2/REDRIVER2/wiki/Installation-instructions",
+  "conversion_script": "https://github.com/OpenDriver2/REDRIVER2/blob/acca6b139302dd72c1fbff52556f3493aafda2dd/data/install/conv.bat",
+  "tools_source": {
+    "repository": "OpenDriver2/OpenDriver2Tools",
+    "commit": "89009f7f4f48f37a886b376292432cdffab4a136",
+    "url": "https://github.com/OpenDriver2/OpenDriver2Tools/tree/89009f7f4f48f37a886b376292432cdffab4a136"
+  },
+  "payload_policy": {
+    "download": "Only the fixed unmodified official release, directly from upstream; no GetAll mirror or repackaged game assets.",
+    "media": "The user's separately selected and cryptographically verified pair of supported original discs.",
+    "preserve": "All 93 baseline files, including all 76 extras, remain unchanged through publication. Preserve original notices. Generated AVI/WAV are added locally. Subsequent ordinary config.ini preference edits are allowed; the other 92 baseline files and both added notices remain pinned at launch.",
+    "companion_files": [
+      "installation-logs/REDRIVER2-LICENSE.txt",
+      "installation-logs/REDRIVER2-provenance.json"
+    ],
+    "companion_scope": "Added only to the completed payload, outside the 93-file baseline. Recorded in the final manifest and verified at launch.",
+    "not_permitted": [
+      "upstream source patches",
+      "feature removals",
+      "unversioned fallback downloads",
+      "8.0 HQ assets under this approval",
+      "re-enabling the retired profile"
+    ],
+    "disc_path": "The pinned PC CLI accepts an arbitrary absolute -cdimage path; use selected disc 1. Its DiscSwapped implementation returns CDTYPE_CORRECTDISC, while converted FMV/XA from both discs are local. No imposed original image filename or runtime disc-2 swap is required.",
+    "disc_path_sources": [
+      "https://github.com/OpenDriver2/REDRIVER2/blob/acca6b139302dd72c1fbff52556f3493aafda2dd/src_rebuild/redriver2_psxpc.cpp",
+      "https://github.com/OpenDriver2/REDRIVER2/blob/acca6b139302dd72c1fbff52556f3493aafda2dd/src_rebuild/Game/C/system.c",
+      "https://github.com/OpenDriver2/REDRIVER2/blob/acca6b139302dd72c1fbff52556f3493aafda2dd/src_rebuild/Game/C/E3stuff.c"
+    ]
+  },
+  "evidence_limits": {
+    "real_original_media_tested": false,
+    "first_boot_tested": false,
+    "gameplay_tested": false,
+    "synthetic_conversion": "Existing authored 96-frame STR fixture validates the pinned converter and merge path only; it is not an original disc, completed game installation or boot test.",
+    "issue234": {
+      "url": "https://github.com/OpenDriver2/REDRIVER2/issues/234",
+      "observed_state": "open; no comments",
+      "interpretation": "An unanswered provenance question is not proof of impossibility or illegality."
+    }
+  },
+  "runtime": {
+    "scope": "Private temporary JDK prepared after both original discs are verified; no system installation or global JAVA_HOME changes.",
+    "package": "temurin-jdk-21",
+    "version": "21.0.13.1+2",
+    "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13.1%2B2/OpenJDK21U-jdk_x64_windows_hotspot_21.0.13.1_2.zip",
+    "bytes": 205447663,
+    "sha256": "bbebea1469996b276683c9299c227b294f85c847039c82633218186a4ad4fbf2",
+    "implementation": "Shared MkddAltJdk21 / ExtractConsolePackage cache verification; unchanged runtime archive."
+  }
+}

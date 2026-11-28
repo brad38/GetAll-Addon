@@ -1,0 +1,25 @@
+PASS REDRIVER2 official schema 9 selects the exact reviewed profile and instructions
+PASS REDRIVER2 official required files retain the original release layout
+PASS REDRIVER2 official remote recipe contains no execution commands or source alterations
+PASS REDRIVER2 official only the reviewed replacement recipe hash is admitted
+REDRIVER_OFFICIAL_SOURCE_PASS
+PASS REDRIVER2 official test input is the pinned original ZIP
+PASS REDRIVER2 official official ZIP enters the new media flow without claiming a completed installation
+PASS REDRIVER2 official the untouched 93-file kit has no added provenance files
+PASS REDRIVER2 official cancelling the second selection preserves the kit
+PASS REDRIVER2 official duplicate disc paths are rejected
+PASS REDRIVER2 official synthetic disc sizes are rejected before Java or conversion
+PASS REDRIVER2 official invalid media does not download or provision a JDK
+PASS REDRIVER2 official changed download provenance is rejected before selecting media
+PASS REDRIVER2 official same-size tampered ZIP is rejected by its measured hash
+PASS REDRIVER2 official modified DRIVER2/DATA/CREDITS.ENG is rejected
+PASS REDRIVER2 official kit integrity is checked before the media selector
+PASS REDRIVER2 official modified install/jpsxdec.jar is rejected
+PASS REDRIVER2 official kit integrity is checked before the media selector
+PASS REDRIVER2 official restoring a retired cached profile cannot execute the new route
+PASS REDRIVER2 official resume observes cancellation before work
+PASS REDRIVER2 official negative cases preserve original ZIP and synthetic inputs without registering a game
+PASS REDRIVER2 official ordinary config.ini edits are allowed without changing the pinned historical baseline
+PASS REDRIVER2 official gallery remains immutable when config edits are allowed
+PASS REDRIVER2 official missing configuration cannot satisfy the launch payload contract
+REDRIVER_OFFICIAL_KIT_PASS; original-media installation, first boot and gameplay were not tested.

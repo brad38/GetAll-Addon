@@ -1,5 +1,41 @@
 # Checkpoint do GetAll-Addon
 
+## Preparação Vandal Hearts + REDRIVER2 / SDK 1.5.72 — 28/11/2026
+
+Os dois contratos passam a experimental no checkout de trabalho para a prévia
+TESTE 1.5.78. O índice SHA-256
+05b0f66a63a8cd4aa4e87ef82896192252847faddabd1556870ce0d84ac4d1df
+contém 147 receitas: 136 experimentais,
+uma validated histórica e 10 disabled.
+São 137 IDs com contrato ativo entre 137 projetos elegíveis,
+em 108 jogos. A matriz registra 137 automações implementadas.
+Sintéticos: 54 atuais passaram; 13 históricos; 0 falhas atuais; 70 desconhecidos.
+
+VandalHearts usa o build oficial unificado US/JP via Ubuntu/WSL2, com dois
+discos e BIOS/KROM próprios. O binário v2.1.0 continua desativado.
+REDRIVER2 preserva o pacote oficial 7.4-rc2, baixado diretamente do upstream,
+com Java 21 privado e dois discos próprios; as origens mistas dos 76 extras
+foram documentadas sem declaração de MIT integral nem espelhamento.
+Os contratos antigos continuam aposentados e a receita REDRIVER2 anterior
+foi arquivada byte a byte.
+
+Zero novas instalações com mídia original, primeiros boots ou sessões de
+gameplay foram acrescentados. Mídia e boot mantêm apenas um relato histórico;
+gameplay continua desconhecido nos 137 projetos.
+Os recibos anteriores de cada rota estão preservados na
+[revisão desta ativação](validations/official-scope/vandal-redriver2-sdk172-review-20261128.json).
+
+Catálogo e elegibilidade foram enviados no commit 6407730f9708de995175cd757ec41e871c3ebc62;
+os três documentos públicos foram verificados e o CI Catalog passou.
+PREVIEW_CATALOG aponta para esse commit. O GetAll ainda aguarda commit. A suíte
+final passou: 82 testes Python, 147 receitas no validador e 147 no parser
+Desktop, com zero falhas. A regressão Desktop SDK 1.5.72 passou com
+2372 checks, e o kit Vandal com 12 checks.
+Veja a [matriz em seis dimensões](INSTALLATION-COVERAGE.md).
+As seções seguintes preservam os números e conclusões de cada etapa anterior.
+
+---
+
 ## Prévia StrikersRecomp / SDK 1.5.71 — 28/11/2026
 
 Catálogo fixado em b816345f811547cc04f6150faf16548c26b7409b. O índice

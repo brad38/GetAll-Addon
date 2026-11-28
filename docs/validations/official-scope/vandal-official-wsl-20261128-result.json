@@ -1,0 +1,891 @@
+{
+  "schema_version": 1,
+  "validation_id": "vandal-official-wsl-20261128",
+  "project": "Vandal Hearts PC Port",
+  "recorded_at_utc": "2026-11-28T06:03:09.043Z",
+  "result": "passed_for_helper_and_dependency_preparation",
+  "automation_state": "ready_for_original_media",
+  "scope": [
+    "external official-build helper",
+    "19 Linux/WSL tests",
+    "fresh private MinGW SDK extraction",
+    "official FFmpeg cross-build",
+    "non-game AMD64 dependency-link probe",
+    "US and JP CMake core configuration with all requested features"
+  ],
+  "code": {
+    "repository": "AllFix Desktop",
+    "helper": {
+      "path": "Tools/OfficialBuilders/vandal_wsl.py",
+      "sha256": "68f409dcb002e3f12c064cafdbfbe4aac76c26bd9e947a1a627964dd9f519911"
+    },
+    "tests": {
+      "path": "Tests/AddonInfrastructure/vandal_wsl_test.py",
+      "sha256": "66a6f175bc48bc54be33e19a79079b0f066e70b1b0b6e343db91d895b8885abd"
+    }
+  },
+  "upstream": {
+    "repository": "https://github.com/HalmyLyseas/VandalHearts-PcPort",
+    "commit": "14552fffa0e0b47e02b57592e274fc6e7a649923",
+    "source_url": "https://codeload.github.com/HalmyLyseas/VandalHearts-PcPort/zip/14552fffa0e0b47e02b57592e274fc6e7a649923",
+    "source_size": 21396545,
+    "source_sha256": "e7c50aaddf57c05df97eee50c9355473a1a4ea6d8354fe719c9450f89b14160f",
+    "source_archive_audit": {
+      "entries": 562,
+      "symlinks": [
+        {
+          "path": "jp/tools/maspsx",
+          "target": "../external/maspsx"
+        }
+      ],
+      "legal_files": [
+        {
+          "path": "LICENSE",
+          "size": 17337,
+          "sha256": "aaf135472f81c5b4a0dca9367e5bb5e9750032b5bebe5442b36e4c0a47430df3"
+        },
+        {
+          "path": "NOTICE",
+          "size": 5299,
+          "sha256": "0744b759761907508ce4a24302c0b62b503a2df112cf336d7dd349af3ff5cc60"
+        },
+        {
+          "path": "DISCLAIMER",
+          "size": 3296,
+          "sha256": "f1afbb450ccd984477b7e22d1de12d10e7cc5a6f59e8f76408b184f3a6dfcd16"
+        },
+        {
+          "path": "CREDITS",
+          "size": 1495,
+          "sha256": "381bc1ce3e0647e0586d6572edc3c7a119d859e7bf68c46933f69a6f971ee674"
+        }
+      ],
+      "jp_generated_outputs": [
+        {
+          "path": "jp/assets/801009bc.inc",
+          "present_in_source_archive": false
+        },
+        {
+          "path": "jp/assets/80100e9c.inc",
+          "present_in_source_archive": false
+        },
+        {
+          "path": "jp/assets/8010102c.inc",
+          "present_in_source_archive": false
+        },
+        {
+          "path": "jp/include/assets",
+          "present_in_source_archive": false
+        }
+      ]
+    },
+    "upstream_files_unchanged": true,
+    "private_source_copy_verified_before_extraction": true,
+    "private_font_copy_verified_before_build": true
+  },
+  "prerequisites": {
+    "platform": "Linux x86_64",
+    "validated_distribution": "WSL2 Ubuntu 26.04",
+    "minimum_python": "3.12",
+    "minimum_glibc": "2.38",
+    "host_tools": [
+      "/usr/bin/cmake",
+      "/usr/bin/ninja",
+      "/usr/bin/make",
+      "/usr/bin/gcc",
+      "/usr/bin/dpkg-deb",
+      "/usr/bin/bash"
+    ],
+    "host_library": "libzstd",
+    "network": "HTTPS access to the pinned dependency URLs when no valid read-only archive cache is supplied",
+    "no_elevation": true,
+    "no_system_package_installation": true,
+    "no_windows_developer_mode_change": true,
+    "probe_command": "python3 vandal_wsl.py --probe"
+  },
+  "environment": {
+    "ok": true,
+    "python": "3.14.4",
+    "architecture": "x86_64",
+    "linux_release": "6.18.33.1-microsoft-standard-WSL2",
+    "os_release": {
+      "ID": "ubuntu",
+      "VERSION_ID": "26.04",
+      "PRETTY_NAME": "Ubuntu 26.04 LTS"
+    },
+    "libc": "glibc",
+    "libc_version": "2.43",
+    "required_tools": {
+      "/usr/bin/cmake": true,
+      "/usr/bin/ninja": true,
+      "/usr/bin/make": true,
+      "/usr/bin/gcc": true,
+      "/usr/bin/dpkg-deb": true,
+      "/usr/bin/bash": true
+    },
+    "libzstd": "libzstd.so.1",
+    "errors": []
+  },
+  "dimensions": {
+    "helper_tests": {
+      "status": "passed",
+      "count": 19,
+      "failures": 0,
+      "skipped": 0,
+      "elapsed_seconds": 3.308,
+      "log": "vandal-official-wsl-20261128-tests.log"
+    },
+    "synthetic_validation": {
+      "status": "passed",
+      "scope": "installer safety, input rejection, real Linux process supervision, staging/finalization, source archive and dependency preparation"
+    },
+    "private_toolchain": {
+      "status": "passed",
+      "built_sdk_reused": false,
+      "pinned_archive_cache_reused": true
+    },
+    "official_ffmpeg_cross_build": {
+      "status": "passed",
+      "version": "7.1",
+      "script": "platform/pc/tools/build-ffmpeg-static.sh",
+      "script_patched": false
+    },
+    "dependency_probe": {
+      "status": "linked_and_audited",
+      "kind": "non-game Windows AMD64 executable",
+      "executed": false,
+      "sha256": "e45f02b15765d756445cfd3a896d1e3b47a8fa6d166a8b2abb9f47fb638527ea",
+      "imports": [
+        "KERNEL32.dll",
+        "libwebp-7.dll",
+        "msvcrt.dll",
+        "OpenAL32.dll",
+        "SDL2.dll"
+      ]
+    },
+    "regional_configure": {
+      "status": "passed",
+      "regions": [
+        "us",
+        "jp"
+      ],
+      "flags": {
+        "VH_BLOB": "ON",
+        "VH_UNIFIED_CORE": "ON",
+        "VH_WEBP": "ON",
+        "VH_HDVIDEO": "ON"
+      }
+    },
+    "full_game_build": {
+      "status": "not_run",
+      "reason": "Original US disc, JP disc and valid BIOS/KROM were not available for this validation."
+    },
+    "original_media_installation": {
+      "status": "not_run"
+    },
+    "first_boot": {
+      "status": "not_run"
+    },
+    "gameplay": {
+      "status": "not_run"
+    }
+  },
+  "supervisor": {
+    "status": "passed",
+    "process_groups_reaped": true,
+    "tests": [
+      "real child and grandchild ignoring SIGTERM are killed and reaped on cancellation",
+      "unrelated process group remains alive",
+      "real timeout and heartbeat expiration stop owned children",
+      "normal parent exit reaps orphan grandchild",
+      "log overflow bounds output and terminates group"
+    ],
+    "cancel_exit_code": 4,
+    "timeout_exit_code": 5,
+    "heartbeat_expiry_seconds": 60,
+    "default_timeout_seconds": 3600,
+    "max_log_bytes": 104857600,
+    "request_id_required": true,
+    "receipt_written_after_owned_groups_are_reaped": true,
+    "wsl_distribution_stopped": false
+  },
+  "integrity": {
+    "source_pin_is_constant": true,
+    "source_hash_bypass": false,
+    "full_original_disc_identity": "Desktop validates OriginalPsxDisc and SHA1; helper revalidates the staged SHA256 supplied by Desktop, exact original PS-X executable hashes and official layout.",
+    "original_executables": {
+      "us": {
+        "name": "SLUS_004.47",
+        "lba": 23,
+        "md5": "596bb082a2de5f1fe977dd3d7e160b03",
+        "sha256": "351daaf337cdfd4c00e8abde694f6d0dcbc8b3dcd5e69a411f6d30b8446dfbb4"
+      },
+      "jp": {
+        "name": "SLPM_860.07",
+        "lba": 15200,
+        "md5": "53849277b08184863bd45f10925995a6"
+      }
+    },
+    "font": {
+      "maximum_input_bytes": 1048576,
+      "bios_offset": 417792,
+      "required_prefix_sha256": {
+        "6270": "19b1dd839020e62a8a0f6dfc673c320da36105d9bc9bbce876aa151b7bd927a7",
+        "104670": "014313b691fa9caf95239400653ff61ca90fae8d481e79fa8fc571c7cdf13a86"
+      }
+    },
+    "invalid_inputs_rejected_before_dependency_download": true,
+    "original_media_downloaded": false,
+    "original_media_distributed": false,
+    "raw_bios_published": false
+  },
+  "pipeline_review": {
+    "jp_original_path": "<source>/jp/SLPM_860.07",
+    "us_original_path": "<source>/SLUS_004.47",
+    "jp_generator": "jp/tools/gen_assets_inc.py",
+    "jp_generated_paths_absent_from_source_zip": true,
+    "source_snapshot_checks_original_files_and_symlinks_after_build": true,
+    "final_link_without_explicit_psx_override": "The generators and source-object lists are inside if(NOT VH_UNIFIED_CORES), CMakeLists.txt lines 128-454. The unified branch at lines 488-491 links pc_region_main.c plus the two core objects. The remaining buildinfo PSX/KROM use at lines 617-640 is APPLE-only. The staged US original also satisfies the default VH_PSX_EXE.",
+    "legal_files_present": [
+      "LICENSE",
+      "NOTICE",
+      "DISCLAIMER",
+      "CREDITS"
+    ],
+    "official_sources_modified": false
+  },
+  "payload_contract": {
+    "output_directory": "absent or empty transaction-owned directory",
+    "atomic_sibling_staging": true,
+    "copy_discs_default": false,
+    "desktop_disc_paths": [
+      "game/vandalhearts-us.bin",
+      "game/vandalhearts-jp.bin"
+    ],
+    "raw_bios_in_payload": false,
+    "required_files": [
+      "vandalhearts_pc.exe",
+      "vandalhearts.ini",
+      "SDL2.dll",
+      "OpenAL32.dll"
+    ],
+    "additional_dlls": "resolved recursively from actual PE imports using only verified private dependency trees",
+    "manifest": "relative path, byte size, SHA256; AMD64 machine and imports for every EXE/DLL",
+    "receipt_schema_version": 1,
+    "request_id_echoed": true,
+    "logs": "work/logs/vandal-<token>-*.log and vandal-<token>-receipt.log; exclusive names preserve existing files"
+  },
+  "dependency_archives": [
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/b/binutils-mingw-w64/binutils-mingw-w64-base_2.45.90.20260125-1ubuntu1+13.3_amd64.deb",
+      "sha256": "f3dbbe4aec206d7078987c9ba3286df20a5fab4ed8c63b0f0d31969c26bdfcbf"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/b/binutils-mingw-w64/binutils-mingw-w64-x86-64_2.45.90.20260125-1ubuntu1+13.3_amd64.deb",
+      "sha256": "f835050ed5b7fedf8f3242610fda1eb55b5472b72624f9a88de90c610b465552"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-mingw-w64/gcc-mingw-w64-base_13.2.0-6ubuntu1+26.1_amd64.deb",
+      "sha256": "a30c07e807e9874ea93909448c5d6d37f9569ebe60ad32de8e490aad198538a3"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-mingw-w64/gcc-mingw-w64-x86-64-posix-runtime_13.2.0-6ubuntu1+26.1_amd64.deb",
+      "sha256": "aca6b438e0b55b11cedcf1170a1ee26e7979e34192e34f6e6389e560908a5bfc"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-mingw-w64/gcc-mingw-w64-x86-64-posix_13.2.0-6ubuntu1+26.1_amd64.deb",
+      "sha256": "0855fa1d4a618550faac3a3e4352aa3226833b28184ad3c3b496a68a22c4eda2"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/m/mingw-w64/mingw-w64-common_13.0.0-2ubuntu1_all.deb",
+      "sha256": "da9b2cb14134ca0ef3a31302df50295a2dd6fee7aa4fd888b11c6f72f8ab939e"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/m/mingw-w64/mingw-w64-x86-64-dev_13.0.0-2ubuntu1_all.deb",
+      "sha256": "da40b9e2ae89d98d44b547a9e4fd01862858edb176bade9f12ad143e7ae7efe4"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/n/nasm/nasm_3.01-1_amd64.deb",
+      "sha256": "a611d0d8f35d49e8c9f4b76ff6ef77fba2183ef1b46d0699431a848ba8d2cb46"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/g/gmp/libgmp10_6.3.0+dfsg-5ubuntu2_amd64.deb",
+      "sha256": "a9bbe9d4a4bcd5875bbd0f53e67c379bc881d1c1a80522d51dfb4b107cc31819"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/i/isl/libisl23_0.27-1build1_amd64.deb",
+      "sha256": "02ea5de2ab6ddba978606ad58647bf6371ea68c0ed63aa5d6d0d3b8c1fe77ea3"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/m/mpclib3/libmpc3_1.3.1-3_amd64.deb",
+      "sha256": "a95c75b486f26fe8b140a632fd9e2883b7e2efc21f7586e155d27d2d2ff0ddc0"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/m/mpfr4/libmpfr6_4.2.2-3_amd64.deb",
+      "sha256": "74defa71b7f81d66b103afccfce750ad356976696b40c96c846ddc956fcfe937"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd1_1.5.7+dfsg-3_amd64.deb",
+      "sha256": "34365d611ccf1f717f90a92fbe52ed96ae1829ab9be363c68a83563322797f8f"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib1g_1.3.dfsg+really1.3.1-1ubuntu3_amd64.deb",
+      "sha256": "c45bbbf9c87457d90b8ba38720c5f01b9388c380d40f303c26f5c4953932da26"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/g/gcc-16/libgcc-s1_16-20260322-1ubuntu1_amd64.deb",
+      "sha256": "2fb4d81c14fdf34251639ae82f5181f9f98480ea16125d535571ac1be9db3065"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/g/gcc-16/libstdc++6_16-20260322-1ubuntu1_amd64.deb",
+      "sha256": "a32b9ad585e39bdc7bd15d1eae6293461e6d466859a1dd2f7862d1e40f89b9d8"
+    },
+    {
+      "url": "https://github.com/libsdl-org/SDL/releases/download/release-2.30.11/SDL2-devel-2.30.11-mingw.tar.gz",
+      "sha256": "0590db0a47b564aab92499ed03eaa75db9aee17c371080caa3b05df9d49d9ff9"
+    },
+    {
+      "url": "https://openal-soft.org/openal-binaries/openal-soft-1.25.2-bin.zip",
+      "sha256": "67a0c4b800bd860c93c04f38caf8cbe4875f9c84700ac430efc451f70e265434"
+    },
+    {
+      "url": "https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-libwebp-1.6.0-1-any.pkg.tar.zst",
+      "sha256": "360b1690d41eb497dfe50526460a2424600a6a806cbb76c5b0fec9f14623ac59"
+    },
+    {
+      "url": "https://ffmpeg.org/releases/ffmpeg-7.1.tar.xz",
+      "sha256": "40973d44970dbc83ef302b0609f2e74982be2d85916dd2ee7472d30678a7abe6"
+    }
+  ],
+  "compiled_libav_sha256": {
+    "libavutil.a": "48b8dd73d2d8345b561de94757a4d7ef53dd037e38b6710bc61dcae8d0b76d79",
+    "libswscale.a": "41401263f1f2e9065cc3a17e3f11df61e6ee1d86482c8ff125a3c0c9ce1f6949",
+    "libavcodec.a": "674e987db78abc074dce414b5fc3835f5059cf8d54a8e42b878a6064ee98310c",
+    "libavformat.a": "cd26bd91afedd496eb819515e8274dce776e82ae2fe332eee90f13eafc6c4bcd"
+  },
+  "probe_dependency_closure": {
+    "dependency-probe.exe": {
+      "sha256": "e45f02b15765d756445cfd3a896d1e3b47a8fa6d166a8b2abb9f47fb638527ea",
+      "imports": [
+        "KERNEL32.dll",
+        "libwebp-7.dll",
+        "msvcrt.dll",
+        "OpenAL32.dll",
+        "SDL2.dll"
+      ],
+      "size": 141351
+    },
+    "sdl2.dll": {
+      "sha256": "735e828f77918fb4067641b92d527761540755592e0999191f12c103bb300a70",
+      "imports": [
+        "ADVAPI32.dll",
+        "GDI32.dll",
+        "IMM32.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "ole32.dll",
+        "OLEAUT32.dll",
+        "SETUPAPI.dll",
+        "SHELL32.dll",
+        "USER32.dll",
+        "VERSION.dll",
+        "WINMM.dll"
+      ],
+      "size": 1764864
+    },
+    "openal32.dll": {
+      "sha256": "3963b06e319180700be0bcc0d027336664bb3a4975876b4a5442f10746fab5b4",
+      "imports": [
+        "AVRT.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "ole32.dll",
+        "SHELL32.dll",
+        "USER32.dll",
+        "WINMM.dll"
+      ],
+      "size": 3834368
+    },
+    "libwebp-7.dll": {
+      "sha256": "c6c21a10f8cfe13270832e64640b82709e1d87b956b5f15af435a6c25acd6bbf",
+      "imports": [
+        "KERNEL32.dll",
+        "libsharpyuv-0.dll",
+        "msvcrt.dll"
+      ],
+      "size": 749724
+    },
+    "libsharpyuv-0.dll": {
+      "sha256": "ab0c9f61dc69b6bcdff1011e215f8d5fd6e5096aba9be3386ab87f217fbbeffe",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ],
+      "size": 53757
+    }
+  },
+  "test_cases": [
+    {
+      "name": "test_arbitrary_bios_rejected",
+      "status": "passed"
+    },
+    {
+      "name": "test_cancel_reaps_child_and_grandchild_without_touching_unrelated_group",
+      "status": "passed"
+    },
+    {
+      "name": "test_checked_copy_never_deletes_an_existing_destination",
+      "status": "passed"
+    },
+    {
+      "name": "test_cleanup_requires_exact_marker",
+      "status": "passed"
+    },
+    {
+      "name": "test_digest_rejects_modified_bytes",
+      "status": "passed"
+    },
+    {
+      "name": "test_heartbeat_expiration_stops_real_process",
+      "status": "passed"
+    },
+    {
+      "name": "test_log_limit_kills_process_and_keeps_bounded_log",
+      "status": "passed"
+    },
+    {
+      "name": "test_payload_finalization_with_spaces_is_exact_and_refuses_overwrite",
+      "status": "passed"
+    },
+    {
+      "name": "test_pe_import_parser_checks_architecture",
+      "status": "passed"
+    },
+    {
+      "name": "test_preflight_error_writes_identifiable_receipt",
+      "status": "passed"
+    },
+    {
+      "name": "test_real_source_and_synthetic_media_rejected_before_provisioning",
+      "status": "passed"
+    },
+    {
+      "name": "test_source_identity_cannot_be_overridden_and_receipt_has_request_id",
+      "status": "passed"
+    },
+    {
+      "name": "test_source_modification_rejected",
+      "status": "passed"
+    },
+    {
+      "name": "test_successful_parent_exit_reaps_leftover_grandchild",
+      "status": "passed"
+    },
+    {
+      "name": "test_synthetic_raw_sector_projection_and_executable_rejection",
+      "status": "passed"
+    },
+    {
+      "name": "test_timeout_reaps_owned_process",
+      "status": "passed"
+    },
+    {
+      "name": "test_wrong_layout_and_truncated_disc_rejected",
+      "status": "passed"
+    },
+    {
+      "name": "test_zip_traversal_rejected",
+      "status": "passed"
+    },
+    {
+      "name": "test_zstandard_unknown_size_stream_is_bounded_and_detects_truncation",
+      "status": "passed"
+    }
+  ],
+  "evidence": {
+    "linux_directory": "/tmp/allfix-vandal-helper-validation-20261128-9a61b4",
+    "private_provision_stage": "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_",
+    "unit_log": "vandal-official-wsl-20261128-tests.log",
+    "smoke_log": "vandal-official-wsl-20261128-smoke.log",
+    "full_original_command_logs": [
+      {
+        "path": "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/logs/017-official-ffmpeg.log",
+        "sha256": "4cc784bb07528af49e8b31d93e8c020dcdec510c35acdbf5b81078ade49d9c92",
+        "size": 28577
+      },
+      {
+        "path": "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/logs/018-dependency-link-probe.log",
+        "sha256": "4a0ba44f9b367a9afdf812a999c80fbcce85f84a9c881954a01223d6a33b9f6e",
+        "size": 1076
+      },
+      {
+        "path": "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/verification-logs/001-dependency-link-probe.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      },
+      {
+        "path": "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/verification-logs/002-official-configure-us.log",
+        "sha256": "aea43e10948b03bc70c1ec2e6a4c12e885c84ec41aebe01dd091e87967ed8685",
+        "size": 767
+      },
+      {
+        "path": "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/verification-logs/003-official-configure-jp.log",
+        "sha256": "92f796b4c9bb520a5375af0ea0715e3a3019717707561ba9ccff47ff4aabd397",
+        "size": 767
+      }
+    ]
+  },
+  "command_history": [
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/binutils-mingw-w64-base_2.45.90.20260125-1ubuntu1+13.3_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "001-extract-binutils-mingw-w64-base_2_45_90_20260125.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.105
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/binutils-mingw-w64-x86-64_2.45.90.20260125-1ubuntu1+13.3_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "002-extract-binutils-mingw-w64-x86-64_2_45_90_202601.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.104
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/gcc-mingw-w64-base_13.2.0-6ubuntu1+26.1_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "003-extract-gcc-mingw-w64-base_13_2_0-6ubuntu1_26_1_.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.104
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/gcc-mingw-w64-x86-64-posix-runtime_13.2.0-6ubuntu1+26.1_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "004-extract-gcc-mingw-w64-x86-64-posix-runtime_13_2_.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.305
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/gcc-mingw-w64-x86-64-posix_13.2.0-6ubuntu1+26.1_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "005-extract-gcc-mingw-w64-x86-64-posix_13_2_0-6ubunt.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.505
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/mingw-w64-common_13.0.0-2ubuntu1_all.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "006-extract-mingw-w64-common_13_0_0-2ubuntu1_all_deb.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.304
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/mingw-w64-x86-64-dev_13.0.0-2ubuntu1_all.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "007-extract-mingw-w64-x86-64-dev_13_0_0-2ubuntu1_all.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.505
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/nasm_3.01-1_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "008-extract-nasm_3_01-1_amd64_deb.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.104
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/libgmp10_6.3.0+dfsg-5ubuntu2_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "009-extract-libgmp10_6_3_0_dfsg-5ubuntu2_amd64_deb.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.104
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/libisl23_0.27-1build1_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "010-extract-libisl23_0_27-1build1_amd64_deb.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.104
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/libmpc3_1.3.1-3_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "011-extract-libmpc3_1_3_1-3_amd64_deb.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.105
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/libmpfr6_4.2.2-3_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "012-extract-libmpfr6_4_2_2-3_amd64_deb.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.104
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/libzstd1_1.5.7+dfsg-3_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "013-extract-libzstd1_1_5_7_dfsg-3_amd64_deb.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.105
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/zlib1g_1.3.dfsg+really1.3.1-1ubuntu3_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "014-extract-zlib1g_1_3_dfsg_really1_3_1-1ubuntu3_amd.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.104
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/libgcc-s1_16-20260322-1ubuntu1_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "015-extract-libgcc-s1_16-20260322-1ubuntu1_amd64_deb.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.104
+    },
+    {
+      "argv": [
+        "/usr/bin/dpkg-deb",
+        "--extract",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/downloads/libstdc++6_16-20260322-1ubuntu1_amd64.deb",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk"
+      ],
+      "cwd": null,
+      "log": "016-extract-libstdc__6_16-20260322-1ubuntu1_amd64_de.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.104
+    },
+    {
+      "argv": [
+        "/usr/bin/bash",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/source/VandalHearts-PcPort-14552fffa0e0b47e02b57592e274fc6e7a649923/platform/pc/tools/build-ffmpeg-static.sh"
+      ],
+      "cwd": "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/source/VandalHearts-PcPort-14552fffa0e0b47e02b57592e274fc6e7a649923/platform/pc",
+      "log": "017-official-ffmpeg.log",
+      "exit_code": 0,
+      "elapsed_seconds": 97.275
+    },
+    {
+      "argv": [
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk/usr/bin/x86_64-w64-mingw32-gcc",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/dependency-probe.c",
+        "-I/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/deps/include",
+        "-I/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/libav/include",
+        "-L/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/deps/lib",
+        "-L/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/libav/lib",
+        "-lSDL2",
+        "-lOpenAL32",
+        "-lwebp",
+        "-Wl,--start-group",
+        "-lavformat",
+        "-lavcodec",
+        "-lswscale",
+        "-lavutil",
+        "-Wl,--end-group",
+        "-lbcrypt",
+        "-lwinpthread",
+        "-o",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/dependency-probe.exe"
+      ],
+      "cwd": null,
+      "log": "018-dependency-link-probe.log",
+      "exit_code": 1,
+      "elapsed_seconds": 0.404
+    },
+    {
+      "argv": [
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk/usr/bin/x86_64-w64-mingw32-gcc",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/dependency-probe.c",
+        "-I/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/deps/include",
+        "-I/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/libav/include",
+        "-L/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/deps/lib",
+        "-L/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/libav/lib",
+        "-lSDL2",
+        "-lOpenAL32",
+        "-lwebp",
+        "-Wl,--start-group",
+        "-lavformat",
+        "-lavcodec",
+        "-lswscale",
+        "-lavutil",
+        "-Wl,--end-group",
+        "-lbcrypt",
+        "-lwinpthread",
+        "-o",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/dependency-probe.exe"
+      ],
+      "cwd": null,
+      "log": "001-dependency-link-probe.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.506
+    },
+    {
+      "argv": [
+        "/usr/bin/cmake",
+        "-S",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/source/VandalHearts-PcPort-14552fffa0e0b47e02b57592e274fc6e7a649923/platform/pc",
+        "-G",
+        "Ninja",
+        "-DCMAKE_TOOLCHAIN_FILE=/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/source/VandalHearts-PcPort-14552fffa0e0b47e02b57592e274fc6e7a649923/platform/pc/cmake/toolchain-mingw-w64.cmake",
+        "-DCMAKE_C_FLAGS=-O2",
+        "-DVH_MINGW_ROOT=/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk/usr/x86_64-w64-mingw32",
+        "-DVH_MINGW_PREFIX=/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/deps",
+        "-DVH_MINGW_FFMPEG=/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/libav",
+        "-DVH_WEBP=ON",
+        "-DVH_HDVIDEO=ON",
+        "-B",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/configure-us",
+        "-DVH_REGION=us",
+        "-DVH_UNIFIED_CORE=ON",
+        "-DVH_BLOB=ON"
+      ],
+      "cwd": null,
+      "log": "002-official-configure-us.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.607
+    },
+    {
+      "argv": [
+        "/usr/bin/cmake",
+        "-S",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/source/VandalHearts-PcPort-14552fffa0e0b47e02b57592e274fc6e7a649923/platform/pc",
+        "-G",
+        "Ninja",
+        "-DCMAKE_TOOLCHAIN_FILE=/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/source/VandalHearts-PcPort-14552fffa0e0b47e02b57592e274fc6e7a649923/platform/pc/cmake/toolchain-mingw-w64.cmake",
+        "-DCMAKE_C_FLAGS=-O2",
+        "-DVH_MINGW_ROOT=/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/sdk/usr/x86_64-w64-mingw32",
+        "-DVH_MINGW_PREFIX=/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/deps",
+        "-DVH_MINGW_FFMPEG=/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/libav",
+        "-DVH_WEBP=ON",
+        "-DVH_HDVIDEO=ON",
+        "-B",
+        "/tmp/allfix-vandal-helper-validation-20261128-9a61b4/private-provision-jghwqpy_/configure-jp",
+        "-DVH_REGION=jp",
+        "-DVH_UNIFIED_CORE=ON",
+        "-DVH_BLOB=ON"
+      ],
+      "cwd": null,
+      "log": "003-official-configure-jp.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.506
+    }
+  ],
+  "reproduction": {
+    "probe": "wsl.exe --distribution Ubuntu --exec python3 <helper-linux-path> --probe",
+    "tests": "wsl.exe --distribution Ubuntu --exec env VANDAL_SOURCE_ZIP=<pinned-source-zip-linux-path> python3 <tests-linux-path>",
+    "actual_build": "wsl.exe --distribution Ubuntu --exec python3 <helper-linux-path> --request <request-json-path>",
+    "production_launcher": "Desktop writes the embedded helper to its own work directory and uses a fixed SHA256-verifying python -c loader with --request-base64.",
+    "official_build_stages": [
+      "Run jp/tools/gen_assets_inc.py against the verified original JP executable.",
+      "Configure/build US with VH_REGION=us, VH_UNIFIED_CORE=ON, VH_BLOB=ON, VH_PSX_EXE and VH_KROM_SOURCE.",
+      "Configure/build JP with VH_REGION=jp and the same official options.",
+      "Configure/build final with VH_UNIFIED_CORES=<core_us.o>;<core_jp.o>."
+    ],
+    "all_stages_features": {
+      "VH_WEBP": "ON",
+      "VH_HDVIDEO": "ON"
+    }
+  },
+  "limitations": [
+    "The actual game cannot be built, installed or booted here without the user's original US/JP discs and valid font source.",
+    "The Windows dependency probe was linked and PE-audited, never executed; it is not a substitute for game boot or gameplay.",
+    "The successful dependency smoke preceded the final private input-copy and diagnostic-location hardening; those final helper bytes passed the 19-test WSL suite. Dependency pins and the official FFmpeg/CMake build commands are unchanged.",
+    "Pinned Ubuntu/MSYS2 release URLs may eventually disappear; a missing archive fails safely, without changing pins or bypassing SHA256.",
+    "The helper's manifest and full runtime DLL closure are checked again after a real game build; that complete payload is not claimed by this preparation test.",
+    "Compiled archive and probe SHA256 values identify this exact run; the official build includes paths/debug metadata, so byte-identical rebuilds across different staging paths are not asserted."
+  ],
+  "corrections_observed": [
+    {
+      "issue": "zlib Ubuntu update URL returned HTTP404",
+      "resolution": "Pinned available base version 1.3.dfsg+really1.3.1-1ubuntu3 from official Ubuntu package metadata, SHA256 c45bbbf9c87457d90b8ba38720c5f01b9388c380d40f303c26f5c4953932da26; successfully downloaded and extracted."
+    },
+    {
+      "issue": "MSYS2 WebP Zstandard frame omits uncompressed content size",
+      "resolution": "Bounded libzstd streaming decompression; tested with the actual archive and a synthetic unknown-size/truncated frame."
+    },
+    {
+      "issue": "First non-game probe fixture declared main incompatible with SDL_main",
+      "resolution": "Added SDL_MAIN_HANDLED only to the disposable probe source. No upstream source was changed; the corrected real dependency link passed."
+    }
+  ],
+  "references": [
+    "https://github.com/HalmyLyseas/VandalHearts-PcPort/blob/14552fffa0e0b47e02b57592e274fc6e7a649923/platform/pc/CMakeLists.txt",
+    "https://github.com/HalmyLyseas/VandalHearts-PcPort/blob/14552fffa0e0b47e02b57592e274fc6e7a649923/platform/pc/packaging/build-unified-win.sh",
+    "https://github.com/HalmyLyseas/VandalHearts-PcPort/blob/14552fffa0e0b47e02b57592e274fc6e7a649923/platform/pc/tools/build-ffmpeg-static.sh",
+    "https://github.com/HalmyLyseas/VandalHearts-PcPort/blob/14552fffa0e0b47e02b57592e274fc6e7a649923/jp/tools/gen_assets_inc.py",
+    "https://github.com/HalmyLyseas/VandalHearts-PcPort/blob/14552fffa0e0b47e02b57592e274fc6e7a649923/NOTICE"
+  ]
+}

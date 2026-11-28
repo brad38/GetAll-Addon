@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-11-28",
+  "profile": "redriver2-7.4-rc2-official-media",
+  "retired_profile_still_blocked": "redriver2-7.4-rc2-native",
+  "upstream_commit": "acca6b139302dd72c1fbff52556f3493aafda2dd",
+  "scope": "Original official release staging, exact recipe/profile validation, negative media/integrity tests and actual authored STR/XA conversion with the pinned private JDK; no original commercial-disc installation, first boot or gameplay.",
+  "recipe": {
+    "path": "{GetAll-R18}/getall-scope-20261127/recipes/driver-2/redriver2/7.4-rc2.json",
+    "bytes": 1274,
+    "sha256": "495f85a654986a8b76bdcac52a34b2ec01b3ad88262d0b8413e6c3d02e951274"
+  },
+  "archive": {
+    "path": "{GetAll-R18}/console-cache/REDRIVER2_Win32_Release_7.4-rc2.zip",
+    "bytes": 9772801,
+    "sha256": "92c20bf6194af715a84c058783fa3095ed09d3aeeb4c41485b11c984d14d276c",
+    "upstream_url": "https://github.com/OpenDriver2/REDRIVER2/releases/download/7.4-rc2/REDRIVER2_Win32_Release.zip"
+  },
+  "harness": {
+    "path": "{GetAll-R18}/desktop-scope-20261127/Tests/AddonInfrastructure/bin/Release/net8.0/AddonInfrastructure.dll",
+    "sha256": "80692632579d2fce692abe1d785afbf1003c3d8f55cf2e92da4b11c8b8fdc5d2"
+  },
+  "code": [
+    {
+      "path": "{GetAll-R18}/desktop-scope-20261127/Services/GameInstallationRedriver.cs",
+      "sha256": "3874f266a2448307ac9c8804daca3467e756108353c1580f7b020a9eed714d97"
+    },
+    {
+      "path": "{GetAll-R18}/desktop-scope-20261127/Tests/AddonInfrastructure/RedriverOfficialIntegration.cs",
+      "sha256": "6e323df5f81ed82693949031f1f67457c7af032439d0f5888539743d6ab8d395"
+    }
+  ],
+  "provenance": {
+    "path": "{GetAll-R18}/getall-scope-20261127/docs/validations/official-scope/redriver2-provenance-20261128.json",
+    "bytes": 10064,
+    "sha256": "07f875b12dd19550c68cba8f592269753bca8c38c7b7163ec8c664ee14e92a84"
+  },
+  "baseline": {
+    "files": 93,
+    "bytes": 24350736,
+    "extras": 76,
+    "manifest_sha256": "5dbcdaf29e72ba3d3ec20a0804385dde88a42e71540cdff4527319a86872ca55"
+  },
+  "tests": {
+    "source": {
+      "exit_code": 0,
+      "checks": [
+        "PASS REDRIVER2 official schema 9 selects the exact reviewed profile and instructions",
+        "PASS REDRIVER2 official required files retain the original release layout",
+        "PASS REDRIVER2 official remote recipe contains no execution commands or source alterations",
+        "PASS REDRIVER2 official only the reviewed replacement recipe hash is admitted",
+        "REDRIVER_OFFICIAL_SOURCE_PASS"
+      ]
+    },
+    "official_kit": {
+      "exit_code": 0,
+      "checks": [
+        "PASS REDRIVER2 official schema 9 selects the exact reviewed profile and instructions",
+        "PASS REDRIVER2 official required files retain the original release layout",
+        "PASS REDRIVER2 official remote recipe contains no execution commands or source alterations",
+        "PASS REDRIVER2 official only the reviewed replacement recipe hash is admitted",
+        "REDRIVER_OFFICIAL_SOURCE_PASS",
+        "PASS REDRIVER2 official test input is the pinned original ZIP",
+        "PASS REDRIVER2 official official ZIP enters the new media flow without claiming a completed installation",
+        "PASS REDRIVER2 official the untouched 93-file kit has no added provenance files",
+        "PASS REDRIVER2 official cancelling the second selection preserves the kit",
+        "PASS REDRIVER2 official duplicate disc paths are rejected",
+        "PASS REDRIVER2 official synthetic disc sizes are rejected before Java or conversion",
+        "PASS REDRIVER2 official invalid media does not download or provision a JDK",
+        "PASS REDRIVER2 official changed download provenance is rejected before selecting media",
+        "PASS REDRIVER2 official same-size tampered ZIP is rejected by its measured hash",
+        "PASS REDRIVER2 official modified DRIVER2/DATA/CREDITS.ENG is rejected",
+        "PASS REDRIVER2 official kit integrity is checked before the media selector",
+        "PASS REDRIVER2 official modified install/jpsxdec.jar is rejected",
+        "PASS REDRIVER2 official kit integrity is checked before the media selector",
+        "PASS REDRIVER2 official restoring a retired cached profile cannot execute the new route",
+        "PASS REDRIVER2 official resume observes cancellation before work",
+        "PASS REDRIVER2 official negative cases preserve original ZIP and synthetic inputs without registering a game",
+        "PASS REDRIVER2 official ordinary config.ini edits are allowed without changing the pinned historical baseline",
+        "PASS REDRIVER2 official gallery remains immutable when config edits are allowed",
+        "PASS REDRIVER2 official missing configuration cannot satisfy the launch payload contract",
+        "REDRIVER_OFFICIAL_KIT_PASS; original-media installation, first boot and gameplay were not tested."
+      ]
+    },
+    "private_synthetic_conversion": {
+      "exit_code": 0,
+      "result": {
+        "scope": "Actual private JDK 21 and pinned jPSXdec decode authored STR/XA fixtures; no original commercial discs, completed game installation, first boot or gameplay.",
+        "jdk": {
+          "archive": "{GetAll-R18}/console-cache/OpenJDK21U-jdk_x64_windows_hotspot_21.0.13.1_2.zip",
+          "bytes": 205447663,
+          "sha256": "bbebea1469996b276683c9299c227b294f85c847039c82633218186a4ad4fbf2",
+          "private_java": "{GetAll-R18}/evidence-r18/official-scope-20261128/redriver-official-media-7ce3d39f63eb45248da65e6cd01e74d2/private-jdk21/jdk-21.0.13.1+2/bin/java.exe",
+          "java_sha256": "780196e053dbbcedd94682aa755d6af037a8fe844ae7e687f4ec10c109cbbcd0",
+          "version": [
+            "openjdk version \"21.0.13.1\" 2026-11-17 LTS",
+            "OpenJDK Runtime Environment Temurin-21.0.13.1+2 (build 21.0.13.1+2-LTS)",
+            "OpenJDK 64-Bit Server VM Temurin-21.0.13.1+2 (build 21.0.13.1+2-LTS, mixed mode, sharing)"
+          ]
+        },
+        "converter": {
+          "path": "{GetAll-R18}/evidence-r18/official-scope-20261128/redriver-official-media-7ce3d39f63eb45248da65e6cd01e74d2/redriver-official-1c54d549311842ce80f071f305131dd7/games/Driver 2 - REDRIVER2 7.4-rc2/install/jpsxdec.jar",
+          "sha256": {
+            "jpsxdec.jar": "d55b4d23a898a3c168413b0a6bca615806535640412c76dcada5ab27e75c322e",
+            "jpsxdec-lib.jar": "bdfccc48028efb6bfb7e7111033f6fb6a1eb23ffaac28e041cb2eb4361a4b925"
+          }
+        },
+        "harness": {
+          "path": "{GetAll-R18}/desktop-scope-20261127/Tests/AddonInfrastructure/bin/Release/net8.0/AddonInfrastructure.dll",
+          "sha256": "80692632579d2fce692abe1d785afbf1003c3d8f55cf2e92da4b11c8b8fdc5d2"
+        },
+        "video": {
+          "scope": "Authored 96-frame STR, pinned converter and SDK merge; no original media, installation or boot",
+          "java": "openjdk version \"21.0.13.1\" 2026-11-17 LTS",
+          "input_sha256": "490797fd339bf73218dd67ec81844bd71b8e6ea2c2b4a39d9db94722869eb128",
+          "input_bytes": 282240,
+          "output_path": "DRIVER2/FMV/2/RENDER20.STR[0].avi",
+          "output_sha256": "86446cda170a9709c5c2c37bcd95bfc419c7d3130986b8a9625d791cbf17d2fb",
+          "output_bytes": 65988,
+          "converter_sha256": {
+            "jpsxdec.jar": "d55b4d23a898a3c168413b0a6bca615806535640412c76dcada5ab27e75c322e",
+            "jpsxdec-lib.jar": "bdfccc48028efb6bfb7e7111033f6fb6a1eb23ffaac28e041cb2eb4361a4b925"
+          },
+          "checks": [
+            "PASS REDRIVER2 jPSXdec MJPEG AVI accepted at the genuine runtime path",
+            "PASS REDRIVER2 cancelled merge leaves destination empty",
+            "PASS REDRIVER2 real converter output is merged byte for byte"
+          ]
+        },
+        "audio": {
+          "fixture_source": "{GetAll-R18}/evidence-r18/after-1.5.31/redriver2-jar-evidence/fixture/synthetic.bin",
+          "fixture_copy": "{GetAll-R18}/evidence-r18/official-scope-20261128/redriver-official-media-7ce3d39f63eb45248da65e6cd01e74d2/synthetic-audio/synthetic.bin",
+          "input_bytes": 752640,
+          "input_sha256": "83ff8072c000859c1f8e60f8f35d8db5525079c74de1c62f7674a9beea46789b",
+          "outputs": [
+            {
+              "path": "{GetAll-R18}/evidence-r18/official-scope-20261128/redriver-official-media-7ce3d39f63eb45248da65e6cd01e74d2/synthetic-audio/synthetic.bin[0].wav",
+              "bytes": 185516,
+              "sha256": "7ef4bbe089160bb1f44075adcbe7e29b391f54d717062f2c14abe95eb90858a8"
+            }
+          ],
+          "source_and_copy_preserved": true
+        },
+        "network_downloads": 0,
+        "global_java_home_changed": false,
+        "original_media_tested": false,
+        "first_boot_tested": false,
+        "gameplay_tested": false
+      }
+    }
+  },
+  "evidence_directory": "{GetAll-R18}/evidence-r18/official-scope-20261128/redriver-official-media-7ce3d39f63eb45248da65e6cd01e74d2",
+  "reproduction_script": {
+    "path": "{GetAll-R18}/evidence-r18/official-scope-20261128/redriver-official-media-7ce3d39f63eb45248da65e6cd01e74d2/run_redriver_synthetic.py",
+    "sha256": "7ca21489727f72e25b83be8fe06c3671e48abdb10e1e00ff8a8bf1c6346cb54a"
+  },
+  "logs": [
+    {
+      "path": "docs/validations/official-scope/redriver2-official-source-20261128.log",
+      "bytes": 358,
+      "sha256": "2c46c780adc047637aab5670dbe22016157b31c7ef26c9413b768144027514bd"
+    },
+    {
+      "path": "docs/validations/official-scope/redriver2-official-kit-20261128.log",
+      "bytes": 1987,
+      "sha256": "194230679f27ce32f3f169e23a2a987b679070098a423ab736e589b58f012db4"
+    },
+    {
+      "path": "docs/validations/official-scope/redriver2-official-video-engine-20261128.log",
+      "bytes": 187,
+      "sha256": "d34915967324df41bdf973599b9f242dd1ee4e33db184612dd7855436add2420"
+    },
+    {
+      "path": "docs/validations/official-scope/redriver2-official-audio-index-20261128.log",
+      "bytes": 859,
+      "sha256": "e03229ec6a438dcfb2be92bf097a2028743657130508b6225b2a071bdf6b4802"
+    },
+    {
+      "path": "docs/validations/official-scope/redriver2-official-audio-convert-20261128.log",
+      "bytes": 732,
+      "sha256": "b0c47e7381efd943f6b5246111cf70b27d135fb3787845285f546cdf0a6ab167"
+    },
+    {
+      "path": "docs/validations/official-scope/redriver2-official-private-java-20261128.log",
+      "bytes": 205,
+      "sha256": "8a710a5f14701a0b8dd97ae64ae9e2e7951078fe036190b0b59d37a51fb9ef7c"
+    }
+  ],
+  "commands": [
+    [
+      "dotnet",
+      "{GetAll-R18}/desktop-scope-20261127/Tests/AddonInfrastructure/bin/Release/net8.0/AddonInfrastructure.dll",
+      "--redriver-official-source",
+      "{GetAll-R18}/getall-scope-20261127/recipes/driver-2/redriver2/7.4-rc2.json"
+    ],
+    [
+      "dotnet",
+      "{GetAll-R18}/desktop-scope-20261127/Tests/AddonInfrastructure/bin/Release/net8.0/AddonInfrastructure.dll",
+      "--redriver-official-kit",
+      "{GetAll-R18}/getall-scope-20261127/recipes/driver-2/redriver2/7.4-rc2.json",
+      "{GetAll-R18}/console-cache/REDRIVER2_Win32_Release_7.4-rc2.zip",
+      "<new-evidence-directory>"
+    ],
+    [
+      "python",
+      "{GetAll-R18}/desktop-scope-20261127/Tests/AddonInfrastructure/redriver_video_probe.py",
+      "<verified-private-jdk>/bin/java.exe",
+      "<verified-7.4-rc2-kit>/install/jpsxdec.jar",
+      "{GetAll-R18}/desktop-scope-20261127/Tests/AddonInfrastructure/bin/Release/net8.0/AddonInfrastructure.dll",
+      "<new-synthetic-video-directory>"
+    ]
+  ],
+  "status_dimensions": {
+    "official_source_reviewed": true,
+    "fixed_recipe_tested": true,
+    "original_release_kit_tested": true,
+    "synthetic_conversion_tested": true,
+    "original_media_installation_tested": false,
+    "first_boot_tested": false,
+    "gameplay_tested": false
+  },
+  "mutation_checks": {
+    "config_ini_edit_allowed": true,
+    "gallery_mutation_rejected": true,
+    "missing_config_rejected": true,
+    "credits_mutation_rejected": true,
+    "converter_mutation_rejected": true,
+    "same_size_zip_mutation_rejected": true
+  },
+  "no_game_assets_copied_to_repository": true
+}

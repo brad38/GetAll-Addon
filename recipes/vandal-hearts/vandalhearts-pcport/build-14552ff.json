@@ -1,0 +1,41 @@
+{
+  "schema_version": 9,
+  "project_id": "vandalhearts-pcport",
+  "tag": "build-14552ff",
+  "source_url": "https://github.com/HalmyLyseas/VandalHearts-PcPort/commit/14552fffa0e0b47e02b57592e274fc6e7a649923",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Selecione os discos originais US e JP de Vandal Hearts em BIN MODE2/2352 e seu BIOS PlayStation ou KROMDAT.BIN compatível. É necessário Ubuntu x64 no WSL2, com Python 3.12+, glibc 2.38+, CMake, Ninja, Make, GCC, dpkg-deb, Bash e libzstd já disponíveis. O All-Fix prepara as dependências privadas de compilação para Windows e compila a versão unificada oficial. Primeiro boot ainda não homologado.",
+  "build_profile": "vandal-14552fff-official-wsl",
+  "preparation_media": [
+    {
+      "id": "us-disc",
+      "kind": "file",
+      "extensions": [
+        ".bin"
+      ],
+      "version": "Disco original de Vandal Hearts dos EUA (SLUS-00447), em BIN MODE2/2352."
+    },
+    {
+      "id": "jp-disc",
+      "kind": "file",
+      "extensions": [
+        ".bin"
+      ],
+      "version": "Disco original de Vandal Hearts do Japão (SLPM-86007), em BIN MODE2/2352."
+    },
+    {
+      "id": "font-source",
+      "kind": "file",
+      "extensions": [
+        ".bin",
+        ".rom"
+      ],
+      "version": "BIOS PlayStation japonês de 512 KiB ou KROMDAT.BIN compatível com os caracteres US e JP."
+    }
+  ]
+}

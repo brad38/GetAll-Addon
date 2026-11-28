@@ -1,0 +1,24 @@
+test_arbitrary_bios_rejected (__main__.VandalHelperTests.test_arbitrary_bios_rejected) ... ok
+test_cancel_reaps_child_and_grandchild_without_touching_unrelated_group (__main__.VandalHelperTests.test_cancel_reaps_child_and_grandchild_without_touching_unrelated_group) ... ok
+test_checked_copy_never_deletes_an_existing_destination (__main__.VandalHelperTests.test_checked_copy_never_deletes_an_existing_destination) ... ok
+test_cleanup_requires_exact_marker (__main__.VandalHelperTests.test_cleanup_requires_exact_marker) ... ok
+test_digest_rejects_modified_bytes (__main__.VandalHelperTests.test_digest_rejects_modified_bytes) ... ok
+test_heartbeat_expiration_stops_real_process (__main__.VandalHelperTests.test_heartbeat_expiration_stops_real_process) ... ok
+test_log_limit_kills_process_and_keeps_bounded_log (__main__.VandalHelperTests.test_log_limit_kills_process_and_keeps_bounded_log) ... ok
+test_payload_finalization_with_spaces_is_exact_and_refuses_overwrite (__main__.VandalHelperTests.test_payload_finalization_with_spaces_is_exact_and_refuses_overwrite) ... ok
+test_pe_import_parser_checks_architecture (__main__.VandalHelperTests.test_pe_import_parser_checks_architecture) ... ok
+test_preflight_error_writes_identifiable_receipt (__main__.VandalHelperTests.test_preflight_error_writes_identifiable_receipt) ... ok
+test_real_source_and_synthetic_media_rejected_before_provisioning (__main__.VandalHelperTests.test_real_source_and_synthetic_media_rejected_before_provisioning) ... ok
+test_source_identity_cannot_be_overridden_and_receipt_has_request_id (__main__.VandalHelperTests.test_source_identity_cannot_be_overridden_and_receipt_has_request_id) ... ok
+test_source_modification_rejected (__main__.VandalHelperTests.test_source_modification_rejected) ... ok
+test_successful_parent_exit_reaps_leftover_grandchild (__main__.VandalHelperTests.test_successful_parent_exit_reaps_leftover_grandchild) ... ok
+test_synthetic_raw_sector_projection_and_executable_rejection (__main__.VandalHelperTests.test_synthetic_raw_sector_projection_and_executable_rejection) ... ok
+test_timeout_reaps_owned_process (__main__.VandalHelperTests.test_timeout_reaps_owned_process) ... ok
+test_wrong_layout_and_truncated_disc_rejected (__main__.VandalHelperTests.test_wrong_layout_and_truncated_disc_rejected) ... ok
+test_zip_traversal_rejected (__main__.VandalHelperTests.test_zip_traversal_rejected) ... ok
+test_zstandard_unknown_size_stream_is_bounded_and_detects_truncation (__main__.VandalHelperTests.test_zstandard_unknown_size_stream_is_bounded_and_detects_truncation) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 3.308s
+
+OK

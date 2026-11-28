@@ -1,31 +1,95 @@
 {
-  "checked_at": "2026-11-28T03:27:41.571824+00:00",
-  "catalog_commit": "e4fdde9d7c128f79eb19cf99ea07e2e9b628127a",
+  "checked_at": "2026-11-28 06:09:35 UTC",
+  "catalog_commit": "6407730f9708de995175cd757ec41e871c3ebc62",
+  "branch": "work/catalog-eligibility-20261127",
+  "remote_head_verified": true,
   "files": [
     {
       "path": "catalog.json",
-      "url": "https://raw.githubusercontent.com/brad38/AllFix-Repo/e4fdde9d7c128f79eb19cf99ea07e2e9b628127a/catalog.json",
+      "url": "https://raw.githubusercontent.com/brad38/AllFix-Repo/6407730f9708de995175cd757ec41e871c3ebc62/catalog.json",
       "http_status": 200,
-      "bytes": 169050,
-      "sha256": "f78f5072128dd00d3d9e85974a285c4151e180a0d5008c6b7ffdb984cd130a75",
-      "matches_local": true
+      "resolved_url": "https://raw.githubusercontent.com/brad38/AllFix-Repo/6407730f9708de995175cd757ec41e871c3ebc62/catalog.json",
+      "bytes": 169267,
+      "sha256": "eea17e83d83dae3d86ce78ce80c14c78583694b4fd90ea0a5486a4bfdb195e8e",
+      "matches_commit_blob": true,
+      "games": 108,
+      "projects": 137
     },
     {
       "path": "eligibility.json",
-      "url": "https://raw.githubusercontent.com/brad38/AllFix-Repo/e4fdde9d7c128f79eb19cf99ea07e2e9b628127a/eligibility.json",
+      "url": "https://raw.githubusercontent.com/brad38/AllFix-Repo/6407730f9708de995175cd757ec41e871c3ebc62/eligibility.json",
       "http_status": 200,
-      "bytes": 879832,
-      "sha256": "97523b88f7efadfac63cb5ecde42016a2de5964a8cdbb7207e9652220d7e2189",
-      "matches_local": true
+      "resolved_url": "https://raw.githubusercontent.com/brad38/AllFix-Repo/6407730f9708de995175cd757ec41e871c3ebc62/eligibility.json",
+      "bytes": 881443,
+      "sha256": "11113d8353e567c2ed8c84fc99939cedd56af482b95fa1ef9f0abebc0ce87e7c",
+      "matches_commit_blob": true,
+      "games": null,
+      "projects": 137
     },
     {
       "path": "excluded-projects.json",
-      "url": "https://raw.githubusercontent.com/brad38/AllFix-Repo/e4fdde9d7c128f79eb19cf99ea07e2e9b628127a/excluded-projects.json",
+      "url": "https://raw.githubusercontent.com/brad38/AllFix-Repo/6407730f9708de995175cd757ec41e871c3ebc62/excluded-projects.json",
       "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/brad38/AllFix-Repo/6407730f9708de995175cd757ec41e871c3ebc62/excluded-projects.json",
       "bytes": 113550,
       "sha256": "194a830b63fbc0577d8a6ec58d2e01848ece19b36c4bfb91e26abbb1ba679a7a",
-      "matches_local": true
+      "matches_commit_blob": true,
+      "games": null,
+      "projects": 11
     }
   ],
-  "scope": "Read-only public commit verification; no publication action performed by this script."
+  "hosted_ci": {
+    "id": 46115153161,
+    "name": "Validar catálogo AllFix",
+    "event": "push",
+    "head_sha": "6407730f9708de995175cd757ec41e871c3ebc62",
+    "head_branch": "work/catalog-eligibility-20261127",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/brad38/AllFix-Repo/actions/runs/46115153161"
+  },
+  "local_validation": {
+    "tests": 12,
+    "exit_code": 0,
+    "validator": "scripts/validate_catalog.py --require-dates --compare-with b816345f811547cc04f6150faf16548c26b7409b",
+    "validator_exit": 0,
+    "diff_check_exit": 0,
+    "changed_files": [
+      "catalog.json",
+      "eligibility.json"
+    ],
+    "protected_untracked_sha256": "a6b3003aaab05fd2495818b17496385fcd15cfc0603bc728360b2e8df32ea6c2"
+  },
+  "scope": "The three public raw documents at the exact pushed work-branch commit were compared byte for byte with their committed Git blobs. No main merge, public release or version.json change.",
+  "previous_verification": {
+    "checked_at": "2026-11-28T03:27:41.571824+00:00",
+    "catalog_commit": "e4fdde9d7c128f79eb19cf99ea07e2e9b628127a",
+    "files": [
+      {
+        "path": "catalog.json",
+        "url": "https://raw.githubusercontent.com/brad38/AllFix-Repo/e4fdde9d7c128f79eb19cf99ea07e2e9b628127a/catalog.json",
+        "http_status": 200,
+        "bytes": 169050,
+        "sha256": "f78f5072128dd00d3d9e85974a285c4151e180a0d5008c6b7ffdb984cd130a75",
+        "matches_local": true
+      },
+      {
+        "path": "eligibility.json",
+        "url": "https://raw.githubusercontent.com/brad38/AllFix-Repo/e4fdde9d7c128f79eb19cf99ea07e2e9b628127a/eligibility.json",
+        "http_status": 200,
+        "bytes": 879832,
+        "sha256": "97523b88f7efadfac63cb5ecde42016a2de5964a8cdbb7207e9652220d7e2189",
+        "matches_local": true
+      },
+      {
+        "path": "excluded-projects.json",
+        "url": "https://raw.githubusercontent.com/brad38/AllFix-Repo/e4fdde9d7c128f79eb19cf99ea07e2e9b628127a/excluded-projects.json",
+        "http_status": 200,
+        "bytes": 113550,
+        "sha256": "194a830b63fbc0577d8a6ec58d2e01848ece19b36c4bfb91e26abbb1ba679a7a",
+        "matches_local": true
+      }
+    ],
+    "scope": "Read-only public commit verification; no publication action performed by this script."
+  }
 }
