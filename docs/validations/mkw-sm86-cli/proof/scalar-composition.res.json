@@ -1,0 +1,52 @@
+{
+  "stage": "cs",
+  "cbufs": [
+    {
+      "binding": 1,
+      "slot": 0
+    }
+  ],
+  "sbufs": [
+    {
+      "binding": 2,
+      "slot": 0,
+      "cb_slot": 0,
+      "cb_offset": 384,
+      "flags": 1
+    }
+  ],
+  "textures": [
+    {
+      "binding": 3,
+      "type": 3,
+      "format": "Unknown",
+      "cbuf_slot": 0,
+      "handle": 88,
+      "array": 1,
+      "separate": false,
+      "flags": 0
+    },
+    {
+      "binding": 4,
+      "type": 3,
+      "format": "Unknown",
+      "cbuf_slot": 0,
+      "handle": 98,
+      "array": 1,
+      "separate": false,
+      "flags": 0
+    },
+    {
+      "binding": 5,
+      "type": 1,
+      "format": "Unknown",
+      "cbuf_slot": 0,
+      "handle": 100,
+      "array": 1,
+      "separate": false,
+      "flags": 0
+    }
+  ],
+  "images": [],
+  "spec": []
+}

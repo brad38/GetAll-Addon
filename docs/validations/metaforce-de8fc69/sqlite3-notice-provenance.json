@@ -1,0 +1,13 @@
+{
+  "source_url": "https://sqlite.org/2026/sqlite-amalgamation-3510300.zip",
+  "archive_bytes": 2876305,
+  "archive_sha256": "acb1e6f5d832484bf6d32b681e858c38add8b2acdfd42ac5df24b8afb46552b4",
+  "member": "sqlite-amalgamation-3510300/sqlite3.h",
+  "derivation": "Complete first /* ... */ comment, inclusive, plus final newline. No translated or omitted sentence.",
+  "file": "sqlite3-header-notice.txt",
+  "bytes": 1517,
+  "sha256": "5ece2a55359a6b882311a46822119776901ab87a23d70eb189c7fb71799e1f9f",
+  "line_endings": "CRLF",
+  "lf_bytes": 1485,
+  "lf_sha256": "85806d613cfda5901f848b3b5b4b04396c8c64e89c97c0af3706c42b0c44bb47"
+}

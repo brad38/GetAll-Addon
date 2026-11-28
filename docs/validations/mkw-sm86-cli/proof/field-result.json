@@ -1,0 +1,16 @@
+{
+  "status": "DRAFT_GRAPHICS_FIELDS_PASS",
+  "cases": 159,
+  "by_opcode": {
+    "ALD": 36,
+    "AST": 36,
+    "IPA": 24,
+    "FADD": 30,
+    "FMUL": 30,
+    "EXIT": 3
+  },
+  "input_sha256": "3fca27c6a037ce2d65839fff70cef29566a64f4a80bf3591f45b6acbc3368e77",
+  "nvdisasm_exit": 0,
+  "reference": "nv_isa_solver parser, ordinary nvdisasm text, Mesa-authored encodings",
+  "global_model": false
+}

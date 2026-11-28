@@ -1,0 +1,23 @@
+#version 460
+#extension GL_EXT_mesh_shader : require
+#extension GL_ARB_gpu_shader_int64 : require
+#define LOOP_CAP 0x1000u
+layout(local_size_x = 32) in;
+taskPayloadSharedEXT uint tp[1024];
+shared uint task_count;
+#define WG_INDEX gl_WorkGroupID.x
+void sm_main() {
+    precise uint r0 = 0u;
+    bool p0 = false, p1 = false, p2 = false, p3 = false, p4 = false, p5 = false, p6 = false, up0 = false, up1 = false, up2 = false, up3 = false, up4 = false, up5 = false, up6 = false;
+    uint loops = 0u;
+        r0 = WG_INDEX;
+        task_count = r0;
+        return;
+}
+void main() {
+    if (gl_LocalInvocationIndex == 0u) task_count = 0u;
+    barrier();
+    sm_main();
+    barrier();
+    EmitMeshTasksEXT(task_count, 1u, 1u);
+}

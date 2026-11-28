@@ -1,0 +1,66 @@
+#version 460
+#extension GL_EXT_mesh_shader : require
+#extension GL_ARB_gpu_shader_int64 : require
+#define LOOP_CAP 0x1000u
+layout(local_size_x = 32) in;
+layout(triangles, max_vertices = 32, max_primitives = 64) out;
+#define WG_INDEX gl_WorkGroupID.x
+const uint MESH_PRIMS = 64u;
+const uint MV_WORDS = 2176u;
+taskPayloadSharedEXT uint tp[1024];
+shared uint mv[MV_WORDS];
+shared uint mib[MESH_PRIMS * 3u];
+shared uint mprims;
+layout(location = 0) out vec4 out_attr0[];
+layout(location = 1) out vec4 out_attr1[];
+layout(location = 2) out vec4 out_attr2[];
+layout(location = 3) out vec4 out_attr3[];
+layout(location = 4) out vec4 out_attr4[];
+layout(location = 5) out vec4 out_attr5[];
+layout(location = 6) out vec4 out_attr6[];
+layout(location = 7) out vec4 out_attr7[];
+layout(location = 8) out vec4 out_attr8[];
+layout(location = 9) out vec4 out_attr9[];
+layout(location = 10) out vec4 out_attr10[];
+layout(location = 11) out vec4 out_attr11[];
+layout(location = 12) out vec4 out_attr12[];
+layout(location = 13) out vec4 out_attr13[];
+layout(location = 14) out vec4 out_attr14[];
+layout(location = 15) out vec4 out_attr15[];
+void sm_main() {
+    precise uint r0 = 0u;
+    bool p0 = false, p1 = false, p2 = false, p3 = false, p4 = false, p5 = false, p6 = false, up0 = false, up1 = false, up2 = false, up3 = false, up4 = false, up5 = false, up6 = false;
+    uint loops = 0u;
+        r0 = WG_INDEX;
+        { uint w = 0x0u >> 2; if (w < MV_WORDS) mv[w] = r0; }
+        mprims = r0;
+        return;
+}
+void main() {
+    if (gl_LocalInvocationIndex == 0u) mprims = 0u;
+    for (uint k = gl_LocalInvocationIndex; k < MV_WORDS; k += 32u) mv[k] = 0u;
+    for (uint k = gl_LocalInvocationIndex; k < MESH_PRIMS * 3u; k += 32u) mib[k] = 0u;
+    barrier();
+    sm_main();
+    barrier();
+    uint np = min(mprims, MESH_PRIMS), v = gl_LocalInvocationIndex;
+    SetMeshOutputsEXT(32u, np);
+    gl_MeshVerticesEXT[v].gl_Position = uintBitsToFloat(uvec4(mv[v], mv[32u + v], mv[64u + v], mv[96u + v]));
+    out_attr0[v] = uintBitsToFloat(uvec4(mv[128u + v], mv[160u + v], mv[192u + v], mv[224u + v]));
+    out_attr1[v] = uintBitsToFloat(uvec4(mv[256u + v], mv[288u + v], mv[320u + v], mv[352u + v]));
+    out_attr2[v] = uintBitsToFloat(uvec4(mv[384u + v], mv[416u + v], mv[448u + v], mv[480u + v]));
+    out_attr3[v] = uintBitsToFloat(uvec4(mv[512u + v], mv[544u + v], mv[576u + v], mv[608u + v]));
+    out_attr4[v] = uintBitsToFloat(uvec4(mv[640u + v], mv[672u + v], mv[704u + v], mv[736u + v]));
+    out_attr5[v] = uintBitsToFloat(uvec4(mv[768u + v], mv[800u + v], mv[832u + v], mv[864u + v]));
+    out_attr6[v] = uintBitsToFloat(uvec4(mv[896u + v], mv[928u + v], mv[960u + v], mv[992u + v]));
+    out_attr7[v] = uintBitsToFloat(uvec4(mv[1024u + v], mv[1056u + v], mv[1088u + v], mv[1120u + v]));
+    out_attr8[v] = uintBitsToFloat(uvec4(mv[1152u + v], mv[1184u + v], mv[1216u + v], mv[1248u + v]));
+    out_attr9[v] = uintBitsToFloat(uvec4(mv[1280u + v], mv[1312u + v], mv[1344u + v], mv[1376u + v]));
+    out_attr10[v] = uintBitsToFloat(uvec4(mv[1408u + v], mv[1440u + v], mv[1472u + v], mv[1504u + v]));
+    out_attr11[v] = uintBitsToFloat(uvec4(mv[1536u + v], mv[1568u + v], mv[1600u + v], mv[1632u + v]));
+    out_attr12[v] = uintBitsToFloat(uvec4(mv[1664u + v], mv[1696u + v], mv[1728u + v], mv[1760u + v]));
+    out_attr13[v] = uintBitsToFloat(uvec4(mv[1792u + v], mv[1824u + v], mv[1856u + v], mv[1888u + v]));
+    out_attr14[v] = uintBitsToFloat(uvec4(mv[1920u + v], mv[1952u + v], mv[1984u + v], mv[2016u + v]));
+    out_attr15[v] = uintBitsToFloat(uvec4(mv[2048u + v], mv[2080u + v], mv[2112u + v], mv[2144u + v]));
+    for (uint p = v; p < np; p += 32u) gl_PrimitiveTriangleIndicesEXT[p] = uvec3(mib[3u * p], mib[3u * p + 1u], mib[3u * p + 2u]);
+}

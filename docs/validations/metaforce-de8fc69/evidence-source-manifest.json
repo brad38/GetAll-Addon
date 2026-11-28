@@ -1,0 +1,118 @@
+{
+  "schema": 1,
+  "description": "Public-source native proof, reproduction scripts, package and source manifests. Original evidence remains on the development workstation. No game content or compiler objects.",
+  "files": [
+    {
+      "path": "README-METAFORCE.md",
+      "original_bytes": 8328,
+      "original_sha256": "581d5990b2625e71a8938c497fb923e2012b03622e94114e39a3c96b4ac66989",
+      "bytes": 8328,
+      "sha256": "581d5990b2625e71a8938c497fb923e2012b03622e94114e39a3c96b4ac66989",
+      "normalization": "none"
+    },
+    {
+      "path": "metaforce-source-receipt.json",
+      "original_bytes": 924,
+      "original_sha256": "97f79039f41dd3c0d6b32944eaea5a69fd82eb650caacb80627bda2291c9027e",
+      "bytes": 924,
+      "sha256": "97f79039f41dd3c0d6b32944eaea5a69fd82eb650caacb80627bda2291c9027e",
+      "normalization": "none"
+    },
+    {
+      "path": "metaforce-source-zip-receipt.json",
+      "original_bytes": 482,
+      "original_sha256": "13c2a049aa8cc9559bdd4918356a30e6130bf97f3914ea4f77ca3614cac10a29",
+      "bytes": 482,
+      "sha256": "13c2a049aa8cc9559bdd4918356a30e6130bf97f3914ea4f77ca3614cac10a29",
+      "normalization": "none"
+    },
+    {
+      "path": "metaforce-source-files.json",
+      "original_bytes": 578928,
+      "original_sha256": "90787da3b69701e5e8bb857e849b6baf60f37a8337f0b93f300e40c76f9764b3",
+      "bytes": 578928,
+      "sha256": "90787da3b69701e5e8bb857e849b6baf60f37a8337f0b93f300e40c76f9764b3",
+      "normalization": "none"
+    },
+    {
+      "path": "dependency-results.json",
+      "original_bytes": 16904,
+      "original_sha256": "29059269144f566ddfe7e15904de283ff28da26a54ade1764589f40083017b00",
+      "bytes": 16904,
+      "sha256": "29059269144f566ddfe7e15904de283ff28da26a54ade1764589f40083017b00",
+      "normalization": "none"
+    },
+    {
+      "path": "metaforce-native-handoff.json",
+      "original_bytes": 14277,
+      "original_sha256": "dbb3ab18794544c133b2cdba463a368016e1192d0719d06d3494a759753437b7",
+      "bytes": 14277,
+      "sha256": "dbb3ab18794544c133b2cdba463a368016e1192d0719d06d3494a759753437b7",
+      "normalization": "none"
+    },
+    {
+      "path": "metaforce-native-pins.json",
+      "original_bytes": 8729,
+      "original_sha256": "8ab7bc5ac46acf700fcb567dbbd2c57ea77486c70a3e391b731671767ac61a66",
+      "bytes": 8729,
+      "sha256": "8ab7bc5ac46acf700fcb567dbbd2c57ea77486c70a3e391b731671767ac61a66",
+      "normalization": "none"
+    },
+    {
+      "path": "metaforce-notice-pins.json",
+      "original_bytes": 1056,
+      "original_sha256": "05000030d8cac3a71d1f7e37d5448b9ded90af26abc60904e969465581c98456",
+      "bytes": 1056,
+      "sha256": "05000030d8cac3a71d1f7e37d5448b9ded90af26abc60904e969465581c98456",
+      "normalization": "none"
+    },
+    {
+      "path": "metaforce-runtime-proof.json",
+      "original_bytes": 28823,
+      "original_sha256": "e84d98f3a0200d4fac2ba3b0ead3784667d4937df8f389414525b135cef5dd2c",
+      "bytes": 28823,
+      "sha256": "e84d98f3a0200d4fac2ba3b0ead3784667d4937df8f389414525b135cef5dd2c",
+      "normalization": "none"
+    },
+    {
+      "path": "build_metaforce.py",
+      "original_bytes": 14154,
+      "original_sha256": "178ce9b95c1cdadffd77b47d8e1231d3a2b218864d6782b884177771e9953f29",
+      "bytes": 14154,
+      "sha256": "178ce9b95c1cdadffd77b47d8e1231d3a2b218864d6782b884177771e9953f29",
+      "normalization": "none"
+    },
+    {
+      "path": "prepare_native_dependencies.py",
+      "original_bytes": 7856,
+      "original_sha256": "ede32832643c06d16c04a44626bd26893a3a8d2ff9c4f40ff063acdb4a71535e",
+      "bytes": 7856,
+      "sha256": "ede32832643c06d16c04a44626bd26893a3a8d2ff9c4f40ff063acdb4a71535e",
+      "normalization": "none"
+    },
+    {
+      "path": "prove_metaforce_runtime.py",
+      "original_bytes": 15371,
+      "original_sha256": "9a7008c3f73e12cae2fe52c98cd217b729dc62300b24fde1c9b88c3912d1aade",
+      "bytes": 15371,
+      "sha256": "9a7008c3f73e12cae2fe52c98cd217b729dc62300b24fde1c9b88c3912d1aade",
+      "normalization": "none"
+    },
+    {
+      "path": "sqlite3-notice-provenance.json",
+      "original_bytes": 631,
+      "original_sha256": "6464fc1de585d2f8e30658b264157a9d03223c1e627e2497232ec8ab22ec735f",
+      "bytes": 631,
+      "sha256": "6464fc1de585d2f8e30658b264157a9d03223c1e627e2497232ec8ab22ec735f",
+      "normalization": "none"
+    },
+    {
+      "path": "nod-notice-provenance.json",
+      "original_bytes": 1038,
+      "original_sha256": "4ddc567e045573098dcce97fd4416789f22ebcabce0ca6774b10457160103f3b",
+      "bytes": 1038,
+      "sha256": "4ddc567e045573098dcce97fd4416789f22ebcabce0ca6774b10457160103f3b",
+      "normalization": "none"
+    }
+  ]
+}

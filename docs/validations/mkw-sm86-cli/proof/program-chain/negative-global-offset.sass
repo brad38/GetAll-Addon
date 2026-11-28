@@ -1,0 +1,7 @@
+	.headerflags	@"EF_CUDA_64BIT_ADDRESS EF_CUDA_SM86 EF_CUDA_VIRTUAL_SM(EF_CUDA_SM86)"
+        /*0000*/                   ULDC.64 UR4, c[0x0][0x200] ;
+        /*0010*/                   ATOMG.E.ADD PT, R6, [UR4], R4 ;
+        /*0020*/                   MOV R4, 0x100 ;
+        /*0030*/                   MOV R5, 0x1 ;
+        /*0040*/                   LDG.E R6, [R4+-0x100] ;
+        /*0050*/                   EXIT ;

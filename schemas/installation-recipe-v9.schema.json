@@ -991,6 +991,35 @@
           }
         ]
       }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "mkw-recomp",
+        "tag": "v0.1.18-allfix-cli",
+        "source_url": "https://github.com/adriadam10/mkw-recomp/releases/tag/v0.1.18",
+        "operations": [],
+        "required_files": [
+          "mkw-recomp/mkw.exe",
+          "mkw-recomp/SDL3.dll",
+          "mkw-recomp/recomplauncher.json",
+          "mkw-recomp/setup/clang/clang.exe",
+          "mkw-recomp/setup/python/python.exe",
+          "mkw-recomp/setup/src/recomp/gen.py",
+          "mkw-recomp/setup/src/tools/build/build.py"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione a pasta original de Mario Kart World para Nintendo Switch 2, versão 1.0.0 ou 1.8.0, com ExeFS e RomFS completos. O All-Fix prepara as ferramentas privadas e recompila o jogo automaticamente. Mantenha a pasta original no local selecionado. Ao concluir, use Jogar.",
+        "build_profile": "mkw-0.1.18-cli-prepare",
+        "preparation_media": [
+          {
+            "id": "original-game",
+            "kind": "directory",
+            "extensions": [],
+            "version": "MKW Switch 2 ExeFS/RomFS completas (1.0.0/1.8.0)"
+          }
+        ]
+      }
     }
   ]
 }

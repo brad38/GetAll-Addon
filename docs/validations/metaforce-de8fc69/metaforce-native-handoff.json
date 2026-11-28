@@ -1,0 +1,201 @@
+{
+  "adapters": [
+    {
+      "receipt": "source-adapters.json",
+      "changes": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\aurora\\lib\\system_info.cpp",
+          "original_sha256": "a8027dfbe3b80283f24b135347dc64f39909949b7c917c7961a35da0aa6253eb",
+          "adapted_sha256": "f779b45a6da6e3f3dec3d5df9cde29abaa11bd80d8dc7ab95f34b627cf77a752",
+          "before": "#include <comutil.h>\n",
+          "after": "#include <oleauto.h>\n#include <memory>\nusing WmiString = std::unique_ptr<OLECHAR, decltype(&SysFreeString)>;\n"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\aurora\\lib\\system_info.cpp",
+          "original_sha256": "f779b45a6da6e3f3dec3d5df9cde29abaa11bd80d8dc7ab95f34b627cf77a752",
+          "adapted_sha256": "d25dd22bc8264975f6ec87f17f053f4c0b1aa888048c4ac17d5bb194f2826950",
+          "before": "  hres = pLoc->ConnectServer(_bstr_t(L\"ROOT\\\\CIMV2\"), // Object path of WMI namespace",
+          "after": "  const WmiString namespaceName(SysAllocString(L\"ROOT\\\\CIMV2\"), &SysFreeString);\n  if (!namespaceName) return Unknown;\n  hres = pLoc->ConnectServer(namespaceName.get(), // Object path of WMI namespace"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\aurora\\lib\\system_info.cpp",
+          "original_sha256": "d25dd22bc8264975f6ec87f17f053f4c0b1aa888048c4ac17d5bb194f2826950",
+          "adapted_sha256": "250e3a5f777807586f7febe717b68ea3cf4b81b06144f974a70fbe9eae0f095b",
+          "before": "  hres = pSvc->ExecQuery(bstr_t(L\"WQL\"), bstr_t(L\"select Name from Win32_Processor\"),",
+          "after": "  const WmiString queryLanguage(SysAllocString(L\"WQL\"), &SysFreeString);\n  const WmiString queryText(SysAllocString(L\"select Name from Win32_Processor\"), &SysFreeString);\n  if (!queryLanguage || !queryText) return Unknown;\n  hres = pSvc->ExecQuery(queryLanguage.get(), queryText.get(),"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\aurora\\cmake\\aurora_core.cmake",
+          "original_sha256": "b1a4cba9634ea28d98fa9d2bb0f21e4039ea5500230580624134b62a383fe80a",
+          "adapted_sha256": "ada033ab2f07c3ee1956a8261354cdbf9d0fc382984780ae3367531dbc148bc6",
+          "before": "target_link_libraries(aurora_core PRIVATE wbemuuid.lib comsuppw.lib ntdll.lib DXGI.lib)",
+          "after": "target_link_libraries(aurora_core PRIVATE wbemuuid ole32 oleaut32 ntdll dxgi)"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\aurora\\lib\\webgpu\\gpu.cpp",
+          "original_sha256": "f4d3dc1fcfdad1431b687e1d7acd8fc2d192e2d537e12ff4ddaf55e579393ef2",
+          "adapted_sha256": "591ec1a0b69ef2d650dd11ce1e1df9e148df1a4e05fb06765bbde3802c80a352",
+          "before": "    dawn::native::DawnInstanceDescriptor dawnInstanceDescriptor{};\n",
+          "after": "#if defined(__MINGW32__)\n    instanceDescriptor.nextInChain = &instanceTogglesDescriptor;\n#else\n    dawn::native::DawnInstanceDescriptor dawnInstanceDescriptor{};\n"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\aurora\\lib\\webgpu\\gpu.cpp",
+          "original_sha256": "591ec1a0b69ef2d650dd11ce1e1df9e148df1a4e05fb06765bbde3802c80a352",
+          "adapted_sha256": "308d846746c2d4c745ce0f9ad6cf06d95e7abc09c408b07b49194da469ea7e60",
+          "before": "    instanceDescriptor.nextInChain = &dawnInstanceDescriptor;\n#endif\n",
+          "after": "    instanceDescriptor.nextInChain = &dawnInstanceDescriptor;\n#endif // native diagnostic descriptor\n#endif\n"
+        }
+      ]
+    },
+    {
+      "receipt": "nod-import-adapter.json",
+      "changes": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\deps-build\\nod_prebuilt\\lib\\cmake\\nod\\nodConfig.cmake",
+          "original_sha256": "d7fc28f8323dcc1184a09d7b73471d550d4d965374c5bcf24d3a4f82cbd1df56",
+          "adapted_sha256": "ce8d3356b1a20dd770917d6dc6834b0f2b0a12727132965b5d6cf188c297dfca",
+          "before": "set(_nod_dll \"${PACKAGE_PREFIX_DIR}/bin/${CMAKE_SHARED_LIBRARY_PREFIX}nod${CMAKE_SHARED_LIBRARY_SUFFIX}\")",
+          "after": "set(_nod_dll \"${PACKAGE_PREFIX_DIR}/bin/nod.dll\")"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\deps-build\\nod_prebuilt\\lib\\cmake\\nod\\nodConfig.cmake",
+          "original_sha256": "ce8d3356b1a20dd770917d6dc6834b0f2b0a12727132965b5d6cf188c297dfca",
+          "adapted_sha256": "3fa2c16e0de90b414304d064a80545d37d99704c55141e8df4aea2f82bada663",
+          "before": "set(_nod_implib \"${_nod_libdir}/${CMAKE_IMPORT_LIBRARY_PREFIX}nod${CMAKE_IMPORT_LIBRARY_SUFFIX}\")",
+          "after": "set(_nod_implib \"${_nod_libdir}/nod.lib\")"
+        }
+      ]
+    },
+    {
+      "receipt": "borealis-windows-api-adapter.json",
+      "changes": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\borealis\\CMakeLists.txt",
+          "original_sha256": "98a81577a68e01be5221c1303340708e6c439305a602bb35cf8477c3be1eb224",
+          "adapted_sha256": "1e110dcae63821135df8c014a99c20a91dbcec5717101390194b473efa2cd138",
+          "before": "    add_library(borealis::io ALIAS borealis_io)\n",
+          "after": "    add_library(borealis::io ALIAS borealis_io)\n    if (WIN32)\n        # FileRenameInfoEx is the API already used by io.cpp.\n        target_compile_definitions(borealis_io PRIVATE _WIN32_WINNT=0x0A00 NTDDI_VERSION=0x0A000002)\n    endif ()\n"
+        }
+      ]
+    },
+    {
+      "receipt": "aurora-card-windows-header-adapter.json",
+      "changes": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\aurora\\lib\\card\\DolphinCardPath.cpp",
+          "original_sha256": "8983926f1218e08a7e28042643a83a2c96e8de23ef01235a41ab7a21323d97c5",
+          "adapted_sha256": "6b6fc355dabf2b05d1c5ce0ee58a848a4e8ce9277b056a297f7b96e7971a56ed",
+          "before": "#include <shlobj_core.h>\n",
+          "after": "#if defined(__MINGW32__)\n#include <shlobj.h>\n#include <knownfolders.h>\n#else\n#include <shlobj_core.h>\n#endif\n"
+        }
+      ]
+    },
+    {
+      "receipt": "metaforce-alloca-windows-header-adapter.json",
+      "changes": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\src\\MetroidPrime\\CActorLights.cpp",
+          "original_sha256": "a553fbbe22f5f5d8d346b4419c4dc2d2d75f85af56720cbe7492004e59e1a079",
+          "adapted_sha256": "25236b4772f8836d1e964f218a9d729290d92b15dd5adc48187ef02a50c237dc",
+          "before": "#if defined(_MSC_VER)\n#include <malloc.h>\n",
+          "after": "#if defined(_MSC_VER) || defined(__MINGW32__)\n#include <malloc.h>\n"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\src\\Kyoto\\Particles\\CElementGen.cpp",
+          "original_sha256": "533b0cf79a61a7707d731e60a931cc84853cf175806c079d8e1da6dfc25219f0",
+          "adapted_sha256": "01641fa2f435bf1bd3196ab6af41573a2e1654d0f28aa5b99daf243e276e78ca",
+          "before": "#if defined(TARGET_PC) && defined(_MSC_VER)\n#include <malloc.h>\n",
+          "after": "#if defined(TARGET_PC) && (defined(_MSC_VER) || defined(__MINGW32__))\n#include <malloc.h>\n"
+        }
+      ]
+    }
+  ],
+  "final_build": [
+    {
+      "step": "configure",
+      "argv": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\gta-engine\\preflight\\cmake\\bin\\cmake.exe",
+        "-S",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src",
+        "-B",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_COMPILER=C:/Users/bradg/Downloads/GetAll-R18/gta-engine/preflight/llvm/llvm-mingw-20261020-ucrt-x86_64/bin/clang.exe",
+        "-DCMAKE_CXX_COMPILER=C:/Users/bradg/Downloads/GetAll-R18/gta-engine/preflight/llvm/llvm-mingw-20261020-ucrt-x86_64/bin/clang++.exe",
+        "-DCMAKE_RC_COMPILER=C:/Users/bradg/Downloads/GetAll-R18/gta-engine/preflight/llvm/llvm-mingw-20261020-ucrt-x86_64/bin/x86_64-w64-mingw32-windres.exe",
+        "-DCMAKE_AR=C:/Users/bradg/Downloads/GetAll-R18/gta-engine/preflight/llvm/llvm-mingw-20261020-ucrt-x86_64/bin/llvm-ar.exe",
+        "-DCMAKE_RANLIB=C:/Users/bradg/Downloads/GetAll-R18/gta-engine/preflight/llvm/llvm-mingw-20261020-ucrt-x86_64/bin/llvm-ranlib.exe",
+        "-DCMAKE_MAKE_PROGRAM=C:/Users/bradg/Downloads/GetAll-R18/gta-engine/preflight/ninja/ninja.exe",
+        "-DCMAKE_EXE_LINKER_FLAGS=-static",
+        "-DBUILD_SHARED_LIBS=OFF",
+        "-DBUILD_TESTING=OFF",
+        "-DAURORA_ENABLE_TESTS=OFF",
+        "-DAURORA_ENABLE_EXAMPLES=OFF",
+        "-DBOREALIS_BUILD_TESTS=OFF",
+        "-DBOREALIS_ENABLE_SENTRY=OFF",
+        "-DBOREALIS_APP_VERSION_OVERRIDE=de8fc69-allfix",
+        "-DTRACY_ENABLE=OFF",
+        "-DFT_DISABLE_BZIP2=ON",
+        "-DZSTD_BUILD_TESTS=OFF",
+        "-DZSTD_BUILD_PROGRAMS=OFF",
+        "-DZSTD_BUILD_CONTRIB=OFF",
+        "-DAURORA_DAWN_PROVIDER=package",
+        "-DAURORA_DAWN_LINKAGE=shared",
+        "-DAURORA_SDL3_PROVIDER=package",
+        "-DAURORA_SDL3_LINKAGE=shared",
+        "-DAURORA_NOD_PROVIDER=package",
+        "-DAURORA_NOD_LINKAGE=shared",
+        "-DAURORA_DAWN_PACKAGE_URL=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/archives/dawn-windows-amd64.tar.gz",
+        "-DAURORA_SDL3_PACKAGE_URL=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/archives/SDL3-devel-3.4.10-mingw.tar.gz",
+        "-DAURORA_NOD_PACKAGE_URL=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/archives/libnod-windows-x86_64.tar.gz",
+        "-DFETCHCONTENT_FULLY_DISCONNECTED=ON",
+        "-DFETCHCONTENT_UPDATES_DISCONNECTED=ON",
+        "-DCMAKE_DISABLE_FIND_PACKAGE_Git=ON",
+        "-DCMAKE_FIND_USE_PACKAGE_REGISTRY=OFF",
+        "-DCMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY=OFF",
+        "-DCMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH=OFF",
+        "-DCMAKE_FIND_USE_CMAKE_SYSTEM_PATH=OFF",
+        "-DFETCHCONTENT_SOURCE_DIR_ABSEIL-CPP=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/abseil-cpp",
+        "-DFETCHCONTENT_SOURCE_DIR_XXHASH=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/xxhash",
+        "-DFETCHCONTENT_SOURCE_DIR_FMT=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/fmt",
+        "-DFETCHCONTENT_SOURCE_DIR_ZLIB=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/ZLIB",
+        "-DFETCHCONTENT_SOURCE_DIR_PNG=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/PNG",
+        "-DFETCHCONTENT_SOURCE_DIR_FREETYPE=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/Freetype",
+        "-DFETCHCONTENT_SOURCE_DIR_IMGUI=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/imgui",
+        "-DFETCHCONTENT_SOURCE_DIR_SQLITE3=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/sqlite3",
+        "-DFETCHCONTENT_SOURCE_DIR_ZSTD=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/zstd",
+        "-DFETCHCONTENT_SOURCE_DIR_RMLUI=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/rmlui",
+        "-DFETCHCONTENT_SOURCE_DIR_TRACY=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/tracy",
+        "-DFETCHCONTENT_SOURCE_DIR_CXXOPTS=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/cxxopts",
+        "-DFETCHCONTENT_SOURCE_DIR_NLOHMANN_JSON=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/nlohmann_json",
+        "-DFETCHCONTENT_SOURCE_DIR_DAWN_PREBUILT=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/dawn_prebuilt",
+        "-DFETCHCONTENT_SOURCE_DIR_NOD_PREBUILT=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/nod_prebuilt",
+        "-DFETCHCONTENT_SOURCE_DIR_SDL3_PREBUILT=C:/Users/bradg/Downloads/GetAll-R18/evidence-r18/three-upstreams-20261127/native-1/deps-build/sdl3_prebuilt"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src",
+      "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\metaforce-configure-20261127T212731Z-a7e68b.log",
+      "exit": 0,
+      "seconds": 1.594
+    },
+    {
+      "step": "build",
+      "argv": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\gta-engine\\preflight\\cmake\\bin\\cmake.exe",
+        "--build",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\build",
+        "--target",
+        "metaforce",
+        "--parallel",
+        "2"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src",
+      "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\metaforce-build-20261127T212731Z-a7e68b.log",
+      "exit": 0,
+      "seconds": 87.265
+    }
+  ],
+  "runtime_receipt": "portable-check-1/runtime-proof.json",
+  "result": "METAFORCE_PUBLIC_NATIVE_RUNTIME_PASS"
+}

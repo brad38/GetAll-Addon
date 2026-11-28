@@ -1,0 +1,261 @@
+{
+  "programs": [
+    {
+      "name": "branch",
+      "stage": "cs",
+      "words": 3,
+      "sha256": "814de38385e7e4f18fb8950e2c0b0dda5f48bc6b36172ebbfbde2373abde018a",
+      "authored_words": [
+        "000fc400038000000000001000007947",
+        "000fc400000000000000000000007918",
+        "000fc40003800000000000000000794d"
+      ],
+      "decoded": [
+        "BRA",
+        "NOP",
+        "EXIT"
+      ],
+      "status": "GLSL_PASS",
+      "glsl_sha256": "b6d719e6873d25de5ca8f333fb2d6ba15f08d649a9cff1e62db7c3a590089d71",
+      "glsl_bytes": 416
+    },
+    {
+      "name": "branch-register",
+      "stage": "cs",
+      "words": 4,
+      "sha256": "24f0864d0eb75f2e4bf95e249901d717f77c9e748f9b5b46b95111b6c946b1ab",
+      "authored_words": [
+        "000fc40000000f000000001000007802",
+        "000fc400038000000000000000007949",
+        "000fc400000000000000000000007918",
+        "000fc40003800000000000000000794d"
+      ],
+      "decoded": [
+        "MOV",
+        "BRX",
+        "NOP",
+        "EXIT"
+      ],
+      "status": "GLSL_PASS",
+      "glsl_sha256": "ed00d1c3ae29c30ead270afe068f01657b47240ba4ebec709db47db583f0bbfa",
+      "glsl_bytes": 633
+    },
+    {
+      "name": "branch-uniform",
+      "stage": "cs",
+      "words": 4,
+      "sha256": "8f3a5c0bf5d38d271880a240ced1fdfa93eb08366202729d9808cfc0b4dfddeb",
+      "authored_words": [
+        "000fc400000000000000001000007882",
+        "000fc4000b8000000000000000007958",
+        "000fc400000000000000000000007918",
+        "000fc40003800000000000000000794d"
+      ],
+      "decoded": [
+        "UMOV",
+        "BRXU",
+        "NOP",
+        "EXIT"
+      ],
+      "status": "GLSL_PASS",
+      "glsl_sha256": "47791230701f4f628716ac886a4f620cd3506f5880f36030e5ea89b03eef2e20",
+      "glsl_bytes": 636
+    },
+    {
+      "name": "call-return",
+      "stage": "cs",
+      "words": 5,
+      "sha256": "19f5fb061e60de992ec7a05fe3340e9c4c5e720e4cb054ee58528337451db2ea",
+      "authored_words": [
+        "000fc40000000f000000002000007802",
+        "000fc40003c000000000001000007944",
+        "000fc40003800000000000000000794d",
+        "000fc40000000f000000000700017802",
+        "000fc40003c3ffffffffffb000007950"
+      ],
+      "decoded": [
+        "MOV",
+        "CALL",
+        "EXIT",
+        "MOV",
+        "RET"
+      ],
+      "status": "GLSL_PASS",
+      "glsl_sha256": "60d09b18ea25bd9ab8df8e7c76045c54f4a1199b9f81820b6bb33e90eb4a0ee0",
+      "glsl_bytes": 460
+    },
+    {
+      "name": "return-dispatch",
+      "stage": "cs",
+      "words": 4,
+      "sha256": "550069f41803be4d643399dba026e832c8a3ba9e984324a92564a8f246bb8b91",
+      "authored_words": [
+        "000fc40000000f000000003000007802",
+        "000fc40003c3ffffffffffe000007950",
+        "000fc400000000000000000000007918",
+        "000fc40003800000000000000000794d"
+      ],
+      "decoded": [
+        "MOV",
+        "RET",
+        "NOP",
+        "EXIT"
+      ],
+      "status": "GLSL_PASS",
+      "glsl_sha256": "2dcb95a882400b747c7cc37e50a7ecf9b0fd4fdf4056d8bb108e05c860715fb1",
+      "glsl_bytes": 604
+    },
+    {
+      "name": "atomics",
+      "stage": "cs",
+      "words": 4,
+      "sha256": "8877c9751a7a9d7c3e0142e62923cc8fd405320c680e55c37c7feb5beeb294d0",
+      "authored_words": [
+        "000fc40000000a000000800000047ab9",
+        "000fc400081e010400000004ff0679a8",
+        "000fc4000810010400000004ffff798e",
+        "000fc40003800000000000000000794d"
+      ],
+      "decoded": [
+        "ULDC",
+        "ATOMG",
+        "RED",
+        "EXIT"
+      ],
+      "status": "GLSL_PASS",
+      "glsl_sha256": "03c1c54cc4239bc9ec4460af85ab9365b67ff202b292cf5410d89d4ad84a0156",
+      "glsl_bytes": 706
+    },
+    {
+      "name": "negative-global-offset",
+      "stage": "cs",
+      "words": 6,
+      "sha256": "5f816ee4ce333f856011d54e6075a7ed34357af907a3ae859c14261bbdef7820",
+      "authored_words": [
+        "000fc40000000a000000800000047ab9",
+        "000fc400081e010400000004ff0679a8",
+        "000fc40000000f000000010000047802",
+        "000fc40000000f000000000100057802",
+        "000fc400001e0900ffff000004067381",
+        "000fc40003800000000000000000794d"
+      ],
+      "decoded": [
+        "ULDC",
+        "ATOMG",
+        "MOV",
+        "MOV",
+        "LDG",
+        "EXIT"
+      ],
+      "status": "GLSL_PASS",
+      "glsl_sha256": "31bad8ba0d36e8ebb0686e0ce3c68d4addad696db4738c650678a97becdeb7db",
+      "glsl_bytes": 1203
+    },
+    {
+      "name": "task",
+      "stage": "vs",
+      "words": 3,
+      "sha256": "a2652d699c46667540ea538ab4fbf579e7d68df262757abaa970f0e5271abbc4",
+      "authored_words": [
+        "000fc4000000380000000000ff007923",
+        "000fc4000000b80000000400ff007927",
+        "000fc40003800000000000000000794d"
+      ],
+      "decoded": [
+        "ISBERD",
+        "ISBEWR",
+        "EXIT"
+      ],
+      "status": "GLSL_PASS",
+      "glsl_sha256": "e93ccfef78c45e8d843bd37d91038d04e32ac4ad22627619426123680180a146",
+      "glsl_bytes": 720
+    },
+    {
+      "name": "mesh",
+      "stage": "tes?",
+      "words": 4,
+      "sha256": "1b5c1159edc22167a815fa4a75cc7976b8d7106855a97504d4f7f27258409f1c",
+      "authored_words": [
+        "000fc4000000380000000000ff007923",
+        "000fc4000000f80000000000ff007927",
+        "000fc4000000880000000300ff007927",
+        "000fc40003800000000000000000794d"
+      ],
+      "decoded": [
+        "ISBERD",
+        "ISBEWR",
+        "ISBEWR",
+        "EXIT"
+      ],
+      "status": "GLSL_PASS",
+      "glsl_sha256": "481cae318b11b237923665e50ed550d214a4094db8292b3f442d636b02d27d79",
+      "glsl_bytes": 3742
+    },
+    {
+      "name": "kill",
+      "stage": "ps",
+      "words": 2,
+      "sha256": "fc9052bfb477a40dfc166d668ab26309b278373326e645b616bf466e7e0ac772",
+      "authored_words": [
+        "000fc40003800000000000000000795b",
+        "000fc40003800000000000000000794d"
+      ],
+      "decoded": [
+        "KILL",
+        "EXIT"
+      ],
+      "status": "GLSL_PASS",
+      "glsl_sha256": "f0d3bd7eff76ab4e3c938d468b8e6899d6f30131e2b9df49fa17a67d65d65378",
+      "glsl_bytes": 645
+    },
+    {
+      "name": "attributes",
+      "stage": "vs",
+      "words": 5,
+      "sha256": "aca1a978e9117301eb94e0d342f8034b0c66a973a1ad9b9a5595ef66e2865ca8",
+      "authored_words": [
+        "000fc40000000c00000080ffff007321",
+        "000fc400004000ff0000000100007220",
+        "000fc40000000cff00007000ff007322",
+        "000fc40000000cff00008000ff007322",
+        "000fc40003800000000000000000794d"
+      ],
+      "decoded": [
+        "ALD",
+        "FMUL",
+        "AST",
+        "AST",
+        "EXIT"
+      ],
+      "status": "GLSL_PASS",
+      "glsl_sha256": "b04c0e61059363011db1266239acc61dcfbf70aec9345c44ad9d778fd4491a23",
+      "glsl_bytes": 1160
+    },
+    {
+      "name": "interpolation",
+      "stage": "ps",
+      "words": 6,
+      "sha256": "4c9860d72482139de07c1565f742cce31201d6511c9160a0e06211d63355b271",
+      "authored_words": [
+        "000fc400000e0020000000ff00007326",
+        "000fc400000e0021000000ff00017326",
+        "000fc400000e0022000000ff00027326",
+        "000fc400000e0023000000ff00037326",
+        "000fc400000000ff0000000100007221",
+        "000fc40003800000000000000000794d"
+      ],
+      "decoded": [
+        "IPA",
+        "IPA",
+        "IPA",
+        "IPA",
+        "FADD",
+        "EXIT"
+      ],
+      "status": "GLSL_PASS",
+      "glsl_sha256": "d9f3ff3ba84690f06d8c10fa524c9ff34f14a6bd78d84fbe3d381e52b39ce2aa",
+      "glsl_bytes": 925
+    }
+  ],
+  "production_ready": false
+}

@@ -1,0 +1,340 @@
+{
+  "format": 1,
+  "base_commit": "8ba34eb51ee0ab93accef3da5e1689c68825977d",
+  "sdk_version": "1.5.69",
+  "mkw_support_sha256": "1c79d30594951495f210a349da05aabe0e240f0189dba87c95a78da73a4500ce",
+  "files": [
+    {
+      "path": "AddonSdk/AllFix.Addons.Sdk.csproj",
+      "bytes": 211,
+      "sha256": "5787bb4e4c5a381b84b87ecf18cf8a67c2407cba5c7a54c911c2ec6366254c0c"
+    },
+    {
+      "path": "AddonSdk/Contracts.cs",
+      "bytes": 4409,
+      "sha256": "d9755527625bf070d47555aca891ac96681ee014e9c8d307d702373d89895ea8"
+    },
+    {
+      "path": "AddonSdk/SDK169-NATIVE-PROFILES.md",
+      "bytes": 3767,
+      "sha256": "b5d9897db83e8386574380efdee316054c68049e101caf531db7877a29e3cb89"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v9.schema.json",
+      "bytes": 27417,
+      "sha256": "cc76e1fc73bd75a8a5668d87fada3dd7b65b7fc9f704b063ec4db8400cac6092"
+    },
+    {
+      "path": "AllFix.Desktop.csproj",
+      "bytes": 11021,
+      "sha256": "82de3bbd7708b786259600576fc97f8d07494204740f9dc33d1b57ae4ac8886a"
+    },
+    {
+      "path": "Services/GameInstallationDkbBuild.cs",
+      "bytes": 22226,
+      "sha256": "5806d55dc507ca54cc5d0373fef2645d22713617ed179f9a47b4521c042f0ebf"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceBuild.cs",
+      "bytes": 13788,
+      "sha256": "bc3b4418aa9081be01946ebc39be86c756dadc78214ec1155a038460ccd6dec5"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceDependencies.cs",
+      "bytes": 6085,
+      "sha256": "5ccffcd9f28c3715cccf98e96a564c686522880261b55e18ea40940dd4b5182b"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceMedia.cs",
+      "bytes": 7130,
+      "sha256": "2190faee02f564d36a8602438054aebc677aa6a6eb553135b93ce901016d7d4e"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceNative.cs",
+      "bytes": 17582,
+      "sha256": "575ba34e5a6e68720cbeff6d1750944e9fe418a9cf3b6810536e60562d4cf210"
+    },
+    {
+      "path": "Services/GameInstallationMetaforcePatches.cs",
+      "bytes": 5322,
+      "sha256": "9c041d53dec10be6feb51833bfb123b9812e51791e9df0565019f6776df2bcd1"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceResources.cs",
+      "bytes": 2461,
+      "sha256": "b0e1ca9e628e1086b2fb820a21c6493acbd38079324e00a0ed2c563eb2de801f"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceRuntime.cs",
+      "bytes": 8353,
+      "sha256": "2e2ea42e6e00579e82634a906af0f79883a7b83c3c1c01b7fb7c2d8793145aa2"
+    },
+    {
+      "path": "Services/GameInstallationMkwBuild.cs",
+      "bytes": 17399,
+      "sha256": "4aedc9fa0eb7dbff4f8cd628f4ade0e7d12e530909b99e0b76c689adef1976c5"
+    },
+    {
+      "path": "Services/GameInstallationMkwCliBackend.cs",
+      "bytes": 11407,
+      "sha256": "637452bed83f338bc3be98ff42811e4e98f1e1a75c1972058e215877c4b7a15d"
+    },
+    {
+      "path": "Services/GameInstallationMkwCliRelease.cs",
+      "bytes": 2112,
+      "sha256": "322e61a7804c6edb6092650274b03fb857e089fd3314d7324ee28e3cf85f810a"
+    },
+    {
+      "path": "Services/GameInstallationMkwLogs.cs",
+      "bytes": 2030,
+      "sha256": "71fb368883bf33c10348a3efd0bfeb813d7c7b178f05b0b456787ae0b8955730"
+    },
+    {
+      "path": "Services/GameInstallationPreparationResume.cs",
+      "bytes": 30661,
+      "sha256": "eee0c2aef213bad9bdbbbeff6ac39dfdf343533eceae99aac360b6c6ab57bbfe"
+    },
+    {
+      "path": "Services/GameInstallationRecovery.cs",
+      "bytes": 6340,
+      "sha256": "c3a16551553dd577f85ff25bb7ce024c31438d62483a7623616d15510aa34028"
+    },
+    {
+      "path": "Services/GameInstallationService.cs",
+      "bytes": 89374,
+      "sha256": "e975e5e54266aad76aa57ac8f5a9af6370caa462b4452009a4aa5c2d65d23f8b"
+    },
+    {
+      "path": "Services/PreparedToolProfiles.cs",
+      "bytes": 25675,
+      "sha256": "270b0468fe27f651d897255e8f691a19826519109728950f621a09ddc1fa5b9d"
+    },
+    {
+      "path": "Services/StoreAddonProviders.cs",
+      "bytes": 33890,
+      "sha256": "5127e43847113f934d38e1bf8878ad17d07c524b2a14cd92ade94f51948965a3"
+    },
+    {
+      "path": "Services/StoreCatalogService.cs",
+      "bytes": 15800,
+      "sha256": "a2e57d3621915d192158a9b9d935cef62abc64eeacae7377e3583c43a60033f5"
+    },
+    {
+      "path": "Services/StoreDownloadService.cs",
+      "bytes": 14670,
+      "sha256": "9a2207aca9cc3385c242d3d1b8a2356e6da63dee7522e73bda473c9192e63d4a"
+    },
+    {
+      "path": "Services/StoreTrustedExtraBuilds.cs",
+      "bytes": 19147,
+      "sha256": "f06807d663b21a56ccc9ead13f7e85d9fcac91ec229f44f7027667a376371522"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/AddonInfrastructure.csproj",
+      "bytes": 8417,
+      "sha256": "6b5f26dea572b5b68491fee6c769fc986b301d31af1e45f9cb4ad78d59dfa28d"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/ContractReflectionIntegration.cs",
+      "bytes": 2047,
+      "sha256": "e7ab0558ad99edf6373262c72254c32e53dae947c13395e1c781f0d86c95c33f"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MetaforceBuildIntegration.cs",
+      "bytes": 25869,
+      "sha256": "bce02aac733b05ac998f7b85ac46c63ff4e1837f82d81fb91e65259607a7c23e"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MetaforceMediaIntegration.cs",
+      "bytes": 12748,
+      "sha256": "07d280352814f35212923738466701a82f5d5b8deebffb23027dd9f68eaa4135"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MetaforceNativeStageIntegration.cs",
+      "bytes": 12245,
+      "sha256": "b0fa793280d2fabc13304373f885fb9f17e75ff013cc82c9ff4cbfd8a9bd8c2c"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MkwCliIntegration.cs",
+      "bytes": 12434,
+      "sha256": "39c54d95b2b68c4b91ae160b3bdb5aa010c7198b38954307b24e2f9d51af01ea"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MkwCliReleaseIntegration.cs",
+      "bytes": 10339,
+      "sha256": "bf5e5a626f7ed84ba3eaa03dbadb072caaf0a22abbbb07140d87da735c08f1a2"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/Program.cs",
+      "bytes": 48149,
+      "sha256": "bc3d4f91e86259e2ee31619653a878284cea339561f2f2d99d325dd349789c64"
+    },
+    {
+      "path": "Tools/MkwSm86/README.md",
+      "bytes": 1704,
+      "sha256": "a85f8de621384437e45ac4043ddf1400a120da1e4fd9d63e29142c5eb42ad23f"
+    },
+    {
+      "path": "Tools/MkwSm86/mkw-sm86-cli-support-v1.zip",
+      "bytes": 63227,
+      "sha256": "1c79d30594951495f210a349da05aabe0e240f0189dba87c95a78da73a4500ce"
+    },
+    {
+      "path": "Tools/MkwSm86/package.json",
+      "bytes": 1156,
+      "sha256": "484ccd088f0ef608ac1d5688ae359ca7096848677535f3e65779759a044cfa6a"
+    },
+    {
+      "path": "Tools/MkwSm86/repack.py",
+      "bytes": 1797,
+      "sha256": "56272a96c48c96e8f9a6fb33e12b730597103bf2fcdc8b943d25bbba2978572a"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/configuration/instructions.json",
+      "bytes": 288,
+      "sha256": "3407e0837c09cbba2a4cff95405431288d915bc660c869c35b84070c5e88bd2d"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/__init__.py",
+      "bytes": 67,
+      "sha256": "7f1f0b419ea7b5cb2b0913ac43acb6f8e35fee4fe657f8a1f8c4f48029b104cb"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/adapter_fields.py",
+      "bytes": 6897,
+      "sha256": "87aac4051216cddb58c57c06098d415d48c6ab4e0e7c0b47d67a1a6b00ae82e2"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/adapter_model.py",
+      "bytes": 1833,
+      "sha256": "d4870950d1f8d28afeb23453a3648c3164e6cf24a9bb49ac80729e150850bbf4"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/backend.py",
+      "bytes": 1791,
+      "sha256": "199e21cfe58b48d16ececc34928227cc3a8f9901f47ee95fe79b68fe09d1b1b4"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/cli_decoder.py",
+      "bytes": 6478,
+      "sha256": "ef2238afdc34da77750274eb066be65d04001275d6d17ac76fb4bf17de84c7aa"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/cli_parse.py",
+      "bytes": 3523,
+      "sha256": "c19a3eb60d4c68c738ca88de1669c3477867583ecc195c436529f47789431eae"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/control_adapter.py",
+      "bytes": 3789,
+      "sha256": "0f3f698b2b7cb26fc44708808992c7ceecf08a2922b0e28273a0b6f1cf7780bf"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/lea_overlay.py",
+      "bytes": 4866,
+      "sha256": "4cd9116ccdcd178ee25cdad773f6f92990da2f7a917040bf73da2dfd38ccec66"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/memory_adapter.py",
+      "bytes": 10345,
+      "sha256": "14ad35ac42009159faf4db0ce4e7039f220b012172ab06312882406b92f729d5"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/memory_overlay.py",
+      "bytes": 1849,
+      "sha256": "af2167733fadfd8e5e835719e952bc1182bb4833bf662fac6e0ddd9c06f99a8c"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/scalar_adapter.py",
+      "bytes": 12508,
+      "sha256": "39e8e228efd9d6b0113ec43cb5e340825593e83bc7be5f4d5370578e106127c7"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/texture_adapter.py",
+      "bytes": 8188,
+      "sha256": "567dc19396163f1a21eb88df684b216e9a5cf448ca132df362482ea091068b76"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/vendor/nv_isa_parser.py",
+      "bytes": 20903,
+      "sha256": "4db3ec6bcfab76f0480250183148b8c0b2357187a7bb6684dd92d99f9b00068e"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/manifest.json",
+      "bytes": 7020,
+      "sha256": "549aaa37ac928d921cd4f2d382df84c824480c9d64b5ca2f23ef0ea3aca06325"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/notices/CuAssembler-MIT.txt",
+      "bytes": 1102,
+      "sha256": "2e4a290cc86b2ed281cc200b00a8ef8d13afaf26207f6b857bc330c555d91b23"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/notices/Mesa-NAK-MIT.txt",
+      "bytes": 1442,
+      "sha256": "8875c84633d4d2e3794a11cc8d4a74731ada2c53cc6437644f6201c3628ad8ed"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/notices/ORIGIN.txt",
+      "bytes": 597,
+      "sha256": "0d4884e85ddc077e9b2db69e70108858a595e07d23a381ebf8c1b60f09fb6035"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/notices/mkw-MIT.txt",
+      "bytes": 1063,
+      "sha256": "458bc459b303410a4cbed893a9a76affd0beada85a8d381e0f147b106ec450a7"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/notices/nv-isa-solver-MIT.txt",
+      "bytes": 1068,
+      "sha256": "6f9eba9d8bab25327120b41a6cf101596d58b44cbd31c51091408bb77c69191a"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/overlays/sm86/translate/frontend/program.py",
+      "bytes": 2551,
+      "sha256": "93050ad0c4eee1908eca71cae5f586133f29ab9e0ced6bf4937a2c2246ec74a2"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/overlays/tools/prepare/shaderstep.py",
+      "bytes": 9113,
+      "sha256": "4ffba8c1d68599ca841fb128e1d02b55cd4f8d987858da7c5a16d278112a6d66"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/overlays/tools/shaders/extract.py",
+      "bytes": 19438,
+      "sha256": "855b4b9e4a8d1301ebfca7ccd86378131f4910eb9dfbbfe523f6a520d14d331f"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/overlays/tools/shaders/translate.py",
+      "bytes": 16120,
+      "sha256": "dcb01d55d36ba0cf2dae4cfab57976eb9739723a70b1c5ff3938a19af3c0434c"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/proof/fixtures.json",
+      "bytes": 9271,
+      "sha256": "bb0e63a228af27a78c391fa5f4367dadcc7170dbea74c9a4aa09e34a71e3ea6e"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/proof/prove_backend.py",
+      "bytes": 19703,
+      "sha256": "6e5a755a317472cc03e263c36c067c5c0c2a2a6eec391042163636d77bd405a4"
+    }
+  ],
+  "original_manifest_sha256": "dff6cec713d1224367b16f0e272bea24be436a743781b13856bb3a8d515e570e",
+  "corrections": [
+    {
+      "path": "Tests/AddonInfrastructure/MkwCliIntegration.cs",
+      "change": "Add missing AllFix.Addons namespace import in test only",
+      "before_sha256": "22440e4665572c1730dcff832814c39a4a9d069f09dd1d2bea8336731999612c",
+      "after_sha256": "39c54d95b2b68c4b91ae160b3bdb5aa010c7198b38954307b24e2f9d51af01ea",
+      "build_attempt": "31c"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MkwCliReleaseIntegration.cs",
+      "change": "Test distinguishes unchanged legacy wire media from its historical extra local shader-spec requirement; CLI wire/resume remains identical",
+      "before_sha256": "ff7c928dec2e9e7a8c814fb35164a19545e7a83354240c41194e4c2039a0e2db",
+      "after_sha256": "bf5e5a626f7ed84ba3eaa03dbadb072caaf0a22abbbb07140d87da735c08f1a2",
+      "build_attempt": "31d"
+    }
+  ]
+}

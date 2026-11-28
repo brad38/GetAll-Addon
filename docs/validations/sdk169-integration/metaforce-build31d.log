@@ -1,0 +1,53 @@
+PASS Metaforce exact archived public source ZIP and fixed profile
+PASS Metaforce store describes the fixed Metaforce tag as a resumable compiled profile
+PASS Metaforce real Run stages the source kit without building a game
+PASS Metaforce pending kit retains the fixed profile and cannot launch
+PASS Metaforce kit and README are revalidated against the pinned ZIP contents
+PASS Metaforce rejects profile mutation before recovery
+PASS Metaforce rejects changed kit README
+PASS Metaforce rejects additional kit member
+PASS Metaforce external authored disc fingerprint agrees without copying its data
+PASS Metaforce rejects same-size disc change with original timestamp
+PASS Metaforce rejects directory substituted for the external image
+PASS Metaforce rejects inconsistent media member count
+PASS Metaforce rejects another media selector
+PASS Metaforce rejects altered full-image hash
+PASS Metaforce fingerprint cancellation
+PASS Metaforce real Resume refuses authored media before consent or any native build
+PASS Metaforce rejected commercial identity leaves state and external media unchanged
+PASS Metaforce direct completion also requires the commercial DOL hash
+PASS Metaforce invalid media creates no build staging
+PASS Metaforce real transaction rolls back build failure
+PASS Metaforce real transaction rolls back late cancellation
+PASS Metaforce registry failure after the real atomic move restores and removes owned output
+PASS Metaforce successful real transaction publishes a new authored product and retains the source kit
+PASS Metaforce userdata is separate from output and distinct for every installation id
+PASS Metaforce production process configuration replaces stale arguments with the fixed Unicode contract
+PASS Metaforce real process receives the production Unicode ArgumentList unchanged
+PASS Metaforce transaction manifest has neither userdata nor a copy of the external ISO
+PASS Metaforce rejects unverified installation cannot configure Play
+PASS Metaforce rejects Play requires exactly one recorded image
+PASS Metaforce rejects recovery cannot select the current product
+PASS Metaforce rejects recovery cannot select the installation root
+PASS Metaforce rejects recovery package identity mismatch
+PASS Metaforce rejects recovery receipt URL mutation
+PASS Metaforce rejects recovery kit corruption
+PASS Metaforce recovery cancellation before state mutation
+PASS Metaforce rejects recovery registry write failure
+PASS Metaforce failed recovery preserves the previous record, image and save
+PASS Metaforce recovery restores only the verified source-kit record without requiring the external image
+PASS Metaforce successful recovery leaves the authored product, saves and image untouched
+PASS Metaforce real shared-tool provider extracts the cached authored ZIP to its SHA directory
+PASS Metaforce shared tool is verified and reused without another extraction
+PASS Metaforce rejects same-size mutation of an expanded shared tool
+PASS Metaforce refusing an altered shared tool never deletes or replaces its tree
+PASS Metaforce rejects unexpected file inside a shared tool
+PASS Metaforce refusing an extra shared-tool file preserves every existing member
+PASS Metaforce shared-tool cancellation
+PASS Metaforce cancelled shared-tool access leaves the verified tree and no owned staging
+PASS Metaforce rejects log retention without the work owner
+PASS Metaforce log retention is capped at 64 bounded tails
+PASS Metaforce log manifest records truncation and excludes binaries and nested trees
+PASS Metaforce retaining logs does not modify their source bytes
+PASS Metaforce all policy, rollback and logging checks preserve original media, save and pinned source
+METAFORCE_BUILD_POLICY_PASS checks=52

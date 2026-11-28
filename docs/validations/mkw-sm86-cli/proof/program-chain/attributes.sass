@@ -1,0 +1,6 @@
+	.headerflags	@"EF_CUDA_64BIT_ADDRESS EF_CUDA_SM86 EF_CUDA_VIRTUAL_SM(EF_CUDA_SM86)"
+        /*0000*/                   ALD.128 R0, a[0x80] ;
+        /*0010*/                   FMUL R0, R0, R1 ;
+        /*0020*/                   AST.128 a[0x70], R0 ;
+        /*0030*/                   AST.128 a[0x80], R0 ;
+        /*0040*/                   EXIT ;

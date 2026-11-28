@@ -1,0 +1,2694 @@
+{
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 81,
+      "sha256": "23a87d74d485a40015b068aff7f901276334459fa86d7072b85b09e21c429dcf"
+    },
+    {
+      "path": ".github/workflows/windows-ci.yml",
+      "bytes": 4164,
+      "sha256": "ec00e764ddbf85cfafb0580c884ff08992f11004641c8f8ff0ada66e1dd73551"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 33,
+      "sha256": "ff52c8cd94b0baa6255c30c3ee0d2f0ca6c8a83b1f38f51805c109e76bbf166a"
+    },
+    {
+      "path": "AddonSdk/AllFix.Addons.Sdk.csproj",
+      "bytes": 211,
+      "sha256": "5787bb4e4c5a381b84b87ecf18cf8a67c2407cba5c7a54c911c2ec6366254c0c"
+    },
+    {
+      "path": "AddonSdk/CONTRATOS.md",
+      "bytes": 5807,
+      "sha256": "54da5796292cf03412b0997e8e51b6043dd69bc950eb657e1d7e694d8b2767df"
+    },
+    {
+      "path": "AddonSdk/Contracts.cs",
+      "bytes": 4409,
+      "sha256": "d9755527625bf070d47555aca891ac96681ee014e9c8d307d702373d89895ea8"
+    },
+    {
+      "path": "AddonSdk/GUIA-PUBLICO.md",
+      "bytes": 6209,
+      "sha256": "5062cbf49076cf3516544a9c3694081ca0255dd1153ff7ae187a06bbd284b349"
+    },
+    {
+      "path": "AddonSdk/IMPORTACAO-V3.md",
+      "bytes": 3191,
+      "sha256": "c5074fa8298f9f48c75d7ee563c23ef844ed0b7183d1924976c9e82a1bf1c1f6"
+    },
+    {
+      "path": "AddonSdk/INSTALACAO-V4.md",
+      "bytes": 4301,
+      "sha256": "f4f0ddc28fe52ce666d46d9296378d80cdacb7ab4b860ff6ecb49f77a35ac6c3"
+    },
+    {
+      "path": "AddonSdk/INSTALACAO-V5.md",
+      "bytes": 7268,
+      "sha256": "ad6242f53de4582d98fbb1d607eac3d70cd31635a0ef5841d196af93979aaaf0"
+    },
+    {
+      "path": "AddonSdk/INSTALACAO-V6.md",
+      "bytes": 1054,
+      "sha256": "9312ad8a6ba999aad7cbc011d2b5e2f7357f2192fdc370b499e2890880b66649"
+    },
+    {
+      "path": "AddonSdk/INSTALACAO-V7.md",
+      "bytes": 8222,
+      "sha256": "954f03357e46d1c9709583fc7fd59e670c3c4ee3db10adcbcd0c4b5b1876d2b6"
+    },
+    {
+      "path": "AddonSdk/INSTALACAO-V8.md",
+      "bytes": 5784,
+      "sha256": "fe849d309603d75c6546721535d5b0d71751e5b59570bd49a935464480008337"
+    },
+    {
+      "path": "AddonSdk/INSTALACAO-V9.md",
+      "bytes": 7467,
+      "sha256": "91b410de1e6d1daff53f0f0891a7e677e89ef9b39274db736bf4f8f6e00c4286"
+    },
+    {
+      "path": "AddonSdk/MATRIZ-CAPACIDADES-GETALL.md",
+      "bytes": 34456,
+      "sha256": "27eec1b4065d78ea5cccc6cee67752dbd7abf7b49d715421256ae960180fdde7"
+    },
+    {
+      "path": "AddonSdk/N64-PORTABLE.md",
+      "bytes": 2854,
+      "sha256": "6678b5ac639e761d315bb635e16127d7a7a121bcfb11ea9f56dc4eeaed19d2ef"
+    },
+    {
+      "path": "AddonSdk/RECEITAS-V2.md",
+      "bytes": 3140,
+      "sha256": "b348bdcaebe5c221a6dd13f23dc205ed9a0a5781fa5aaf358387cf28f77b84d8"
+    },
+    {
+      "path": "AddonSdk/SDK169-NATIVE-PROFILES.md",
+      "bytes": 3767,
+      "sha256": "b5d9897db83e8386574380efdee316054c68049e101caf531db7877a29e3cb89"
+    },
+    {
+      "path": "AddonSdk/StfsTitleUpdateReader.cs",
+      "bytes": 13903,
+      "sha256": "e73c5e95bbd2d083f7220ea0cf5aa1d9c39b342a62a5b9654eef34d7cd4ef4d8"
+    },
+    {
+      "path": "AddonSdk/SvodImageReader.cs",
+      "bytes": 10085,
+      "sha256": "20bed0dd7c26cc5ea0a1b38a4452b7a69ffd269cde9ad8aa1f85b85180b636eb"
+    },
+    {
+      "path": "AddonSdk/VerifiedBinaryPatch.cs",
+      "bytes": 4194,
+      "sha256": "bc2324ee5517766cf1157e1b0dbf232c2e3a053df65c5798ef8e2a71ba04f7af"
+    },
+    {
+      "path": "AddonSdk/VerifiedPackageComponents.cs",
+      "bytes": 2675,
+      "sha256": "5197bc556f339a3666179805f08e165306ab5a4b26a942aaa86691732f946356"
+    },
+    {
+      "path": "AddonSdk/addon-manifest-v1.schema.json",
+      "bytes": 1611,
+      "sha256": "f441e444037afb802788adf52dd352f7068502dfcbbc774bc4fd5748a0f834e0"
+    },
+    {
+      "path": "AddonSdk/addon-responses-v1.schema.json",
+      "bytes": 3371,
+      "sha256": "234ecde83c2909e48645a46f440d713127cc117266c061d26bbe953c4f945c67"
+    },
+    {
+      "path": "AddonSdk/exemplo-terceiros/addon.json",
+      "bytes": 404,
+      "sha256": "b36f04db789ffb25c5c88acd2c63cb961ad9b83e9c79e28b7cbc19775616e911"
+    },
+    {
+      "path": "AddonSdk/exemplo-terceiros/responses.json",
+      "bytes": 553,
+      "sha256": "9754b3d2393c2f2651ef032699758b0c24ef19438738d8abfc36570fb8c16ca2"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v1.schema.json",
+      "bytes": 3345,
+      "sha256": "efee0a8b78ef93ce0183bcefd84f059f9105e4a07b5c7d9ddd8917f0e7af2574"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v2.schema.json",
+      "bytes": 3574,
+      "sha256": "d176f066e3bb572260deb81a70b73b7c4af7a3cb11be50d22a5e1b5e4a97b73b"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v3.schema.json",
+      "bytes": 5663,
+      "sha256": "ee83ac37a514f7666635531aa3b0d26a812a32da54e0dc3503f75041207e967e"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v4.example.json",
+      "bytes": 1208,
+      "sha256": "3fc6c5c8ef6be5c1612e33585e4fb378bdf59161be99dda02d6481f91b93bb84"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v4.schema.json",
+      "bytes": 6426,
+      "sha256": "0c2c2d6cb50b181b5f44577528c566a078e3fc5c3f5d1e1e592f5aa86fd7abfa"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v5.example.json",
+      "bytes": 1470,
+      "sha256": "47157320a4708d50a39447066a26c1a823a8f048313f7b256873859299063c1e"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v5.schema.json",
+      "bytes": 16892,
+      "sha256": "e91a7f9971a9bf3845b7dfde21342ab5c6b8a741b933984c1b7b78f93e06f664"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v6.schema.json",
+      "bytes": 19055,
+      "sha256": "e11f45660e6b24d83adcbbae0ce48dd159268513c22d78abf51c761a011b6980"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v7.example.json",
+      "bytes": 348,
+      "sha256": "89dba917bf373b0da0a488c1f0a3b216bd6431a864d05aa227f991ee712381c8"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v7.schema.json",
+      "bytes": 23047,
+      "sha256": "3c5dd036f84e42a36cc922013b40f9d7d7b15deeb910c9997284d5c11732a212"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v8.example.json",
+      "bytes": 680,
+      "sha256": "112105de8e843e18f9296f572eb39b38e3fb59fea4fcef83f20ee7b185d0dd1a"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v8.schema.json",
+      "bytes": 25473,
+      "sha256": "c197ae602c7a1e0e7389a8814a2c648fd816702c0aed22cad985a4735092f3e4"
+    },
+    {
+      "path": "AddonSdk/installation-recipe-v9.schema.json",
+      "bytes": 27417,
+      "sha256": "cc76e1fc73bd75a8a5668d87fada3dd7b65b7fc9f704b063ec4db8400cac6092"
+    },
+    {
+      "path": "AddonSdk/remote-recipe-index-v1.schema.json",
+      "bytes": 2376,
+      "sha256": "820d03a645f049ba64b1107b43f3f3129e22b3eb6e3c1b57e1e596d75c6cf0c0"
+    },
+    {
+      "path": "AddonSdk/sm64coopdx-v2.example.json",
+      "bytes": 920,
+      "sha256": "47dc879d0965af07a9b29f05f97916f6d0f8703475554b511d3f4eb1c9ec04d4"
+    },
+    {
+      "path": "AddonSdk/sm64coopdx-v3.example.json",
+      "bytes": 1030,
+      "sha256": "37d24b4bc601c9cebd26931d0eabfc789cde30ee9768141424b700111a778f02"
+    },
+    {
+      "path": "AllFix.Desktop.csproj",
+      "bytes": 11021,
+      "sha256": "82de3bbd7708b786259600576fc97f8d07494204740f9dc33d1b57ae4ac8886a"
+    },
+    {
+      "path": "AllFixDesktop.sln",
+      "bytes": 901,
+      "sha256": "f6bd7005b7d27f42e21b69e16cadb432699f95d801ded9cb41108ae984c56063"
+    },
+    {
+      "path": "AllFixSteam/LICENSE_HXCOOP_MIT.txt",
+      "bytes": 1106,
+      "sha256": "26a4d8c82346980aeca9ee638c057cb63c7e32eeede0280b90ba3da42023421c"
+    },
+    {
+      "path": "AllFixSteam/Native/build-manifest.json",
+      "bytes": 148,
+      "sha256": "5c6349a9cae980b594012b26291a518548e7c52552f3f797e07d3ea0cec9ef76"
+    },
+    {
+      "path": "AllFixSteam/Native/build_adapter.py",
+      "bytes": 3315,
+      "sha256": "1150d2d4fbe3f6223102d604eb126c97661b299dd7d88cb9000a8afdec7b3cc5"
+    },
+    {
+      "path": "AllFixSteam/Native/winmm_allfix.c",
+      "bytes": 17214,
+      "sha256": "adfb0c5ca79033b272e62df23e3abf07e6245f1835ac1121dfc43920f1446ce7"
+    },
+    {
+      "path": "AllFixSteam/Native/winmm_exports.def",
+      "bytes": 7577,
+      "sha256": "4f4962fe9b159371047056301179b631252fd142a8c97498f1ebb815f27e82f4"
+    },
+    {
+      "path": "AllFixSteam/Native/winmm_exports.inc",
+      "bytes": 3693,
+      "sha256": "bdfe0757f88392e1a924af73da3f7423db815dcab3ac6e224b5d2293bf26f8e7"
+    },
+    {
+      "path": "AllFixSteam/Native/winmm_forward.S",
+      "bytes": 128693,
+      "sha256": "67fd5c7b7d27f2bf780d020de4ed786d825e5cb2c75a40fff069a2b3853602f4"
+    },
+    {
+      "path": "AllFixSteam/README.md",
+      "bytes": 2549,
+      "sha256": "7734be0b9091915027a2281971bfdc344afe25a08360a08376c14aac4307c243"
+    },
+    {
+      "path": "AllFixSteam/allfix-steam-bridge.exe",
+      "bytes": 65056,
+      "sha256": "cf7666d7b9610add83ffbfd01b73b9cdbc86c341eb3e19e6b3014ab2080b98f7"
+    },
+    {
+      "path": "AllFixSteam/game_profiles.json",
+      "bytes": 707,
+      "sha256": "96a1ed8ff9285e95afa9f57352a2195d22b1184f24a42892cbcfca522e9b2855"
+    },
+    {
+      "path": "AllFixSteam/winmm.dll",
+      "bytes": 104382,
+      "sha256": "ce462937bdb90d6234c55028adb694c9a668b92659cb0b378704accdc7653d8d"
+    },
+    {
+      "path": "App.xaml",
+      "bytes": 282,
+      "sha256": "05177d60af30edf0debd23595a02c945dea1567fd9d968d4114bb2c77dbaf9e6"
+    },
+    {
+      "path": "App.xaml.cs",
+      "bytes": 294,
+      "sha256": "adab1f761689926c10964a111e87cd96d0c80185cd5feefec673ebf937333b7e"
+    },
+    {
+      "path": "GlobalUsings.cs",
+      "bytes": 186,
+      "sha256": "630c26afd97290510824707e1a50801a7082fafdcecd52d9ef6f7e16220968a3"
+    },
+    {
+      "path": "MainWindow.Addons.cs",
+      "bytes": 3980,
+      "sha256": "7a07bef49b36c5b16ea420722664ceb819650f2caee4c63b2cc333590ea1d05f"
+    },
+    {
+      "path": "MainWindow.Chrome.cs",
+      "bytes": 7847,
+      "sha256": "94808f7a6b806f7b2a3b4b7690a21779079bd144ca4c19c8c97e22c986201c18"
+    },
+    {
+      "path": "MainWindow.Dialogs.cs",
+      "bytes": 4028,
+      "sha256": "a1206ad39da29cd2d386b1b0df6603a610f1a3e4f2f74b6886df9d211aef36df"
+    },
+    {
+      "path": "MainWindow.StoreDownloads.cs",
+      "bytes": 18505,
+      "sha256": "fe9a57ddac932f4c90fe2cd6b6ac73bd336b5e60f1636190267624df5b37e2e4"
+    },
+    {
+      "path": "MainWindow.StoreGameInstallation.cs",
+      "bytes": 41137,
+      "sha256": "a54a01843649fd0dfc2ac8240153447eff9af0f69af51d76e29d8cf2e8d88775"
+    },
+    {
+      "path": "MainWindow.xaml",
+      "bytes": 4059,
+      "sha256": "63d2c2f95cfff34a7ad51d6b4f70214c5f9b2bbd206dc62f69b1d613c799bc19"
+    },
+    {
+      "path": "MainWindow.xaml.cs",
+      "bytes": 80011,
+      "sha256": "8bfd7647f3ce2926b050aedc2e9f9b21fabf29f1eb6b77ba536fcb8f18dde0f8"
+    },
+    {
+      "path": "Models/AllFixSteamModels.cs",
+      "bytes": 790,
+      "sha256": "9f9d24f47beb8523c50ac43e45699049eea8fbb8162af30a7807da115e1ba13d"
+    },
+    {
+      "path": "Models/CatalogGame.cs",
+      "bytes": 545,
+      "sha256": "c69dac8a2644c424ad10cfed7829ada53450fe8d75deacff6ac79fec69693140"
+    },
+    {
+      "path": "Models/CatalogPage.cs",
+      "bytes": 678,
+      "sha256": "fb741f719920fffc08c5b233064d4b9c9e5ae39bf4378b197026bb8eac9c2b86"
+    },
+    {
+      "path": "Models/Models.cs",
+      "bytes": 4293,
+      "sha256": "4ea4fd3af58d3b2cc41bc23c041928c93d0a49c2632b16431a081e6216935cff"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8172,
+      "sha256": "c2c8905411f8c239e6a62f3c29679767ad6920c939c8351f4f035d6b49db9d9c"
+    },
+    {
+      "path": "RENDER96-PACKS.md",
+      "bytes": 2193,
+      "sha256": "8260fbf9a965a8fc8316ef2bd0e2f8e10ef52967e80450d4734578301efc5f3f"
+    },
+    {
+      "path": "Services/AddonRegistry.cs",
+      "bytes": 20824,
+      "sha256": "d5835592c2487322f9ec4b20921f942bfb19c879f70f51e23b34f2bcc8ce94d0"
+    },
+    {
+      "path": "Services/AllFixLogger.cs",
+      "bytes": 672,
+      "sha256": "f5e6bbbdaf22f84a20fd6a6d5eda944de8a28703ab7855254995867e278f86c4"
+    },
+    {
+      "path": "Services/AllFixSteamService.cs",
+      "bytes": 35115,
+      "sha256": "b73dd783804c285f01f4e88ad3a13d19d38809196da52da81f4ef4689cc4a0c9"
+    },
+    {
+      "path": "Services/AppPaths.cs",
+      "bytes": 1663,
+      "sha256": "d55a25a1ca9ef5280afcd67e5e45bfb0dd0a12aaaef98ff2b23ff6e8620d6234"
+    },
+    {
+      "path": "Services/ApprovedExecutionProfiles.cs",
+      "bytes": 1291,
+      "sha256": "03abb663beb1b35cda6a914b0f18c80d1c760d8f86c8702a6a638f7965d7286a"
+    },
+    {
+      "path": "Services/DefenderService.cs",
+      "bytes": 2688,
+      "sha256": "f6fd7cdbb1205815b3f9b812c8c9f73c9d121c591495bd9361280e558aa5087b"
+    },
+    {
+      "path": "Services/DnsService.cs",
+      "bytes": 10677,
+      "sha256": "57b3671119db9fc8a96a22e2aa15a6ad5c2c4bf18abe726929f231a80e63af81"
+    },
+    {
+      "path": "Services/EmbeddedResourceExtractor.cs",
+      "bytes": 7727,
+      "sha256": "51871a694a091f475b56387c5fbee1513370ea980817619864bc9719fbdbe233"
+    },
+    {
+      "path": "Services/FixService.cs",
+      "bytes": 19779,
+      "sha256": "54bc9ffb85476bdd7508a52cbf1a35a6cf79b51666b6d75bf69b34fd24636cd1"
+    },
+    {
+      "path": "Services/GameInstallationAdamsAntFarm.cs",
+      "bytes": 6478,
+      "sha256": "0317943808af9c4f8cd75ae869c09d103aad1ee33fb76c9faf5f96adb2fc7570"
+    },
+    {
+      "path": "Services/GameInstallationBloodyRoar.cs",
+      "bytes": 6047,
+      "sha256": "a06e3805829efd7ce0da05278501cb99612db4f28cfcc5b3cf4d87381d16eb5a"
+    },
+    {
+      "path": "Services/GameInstallationBlueWake.cs",
+      "bytes": 7845,
+      "sha256": "673707ea96ce7fd7b3564c8f94997189c5e6c9f35c4027c7f0911bb299379239"
+    },
+    {
+      "path": "Services/GameInstallationBurnoutNative.cs",
+      "bytes": 9422,
+      "sha256": "90bdb2629251f853570093a5c5daa5171ee65b82e9c9e352c4479653dfd08c9b"
+    },
+    {
+      "path": "Services/GameInstallationCdda.cs",
+      "bytes": 1725,
+      "sha256": "97b6195164c071f14835500e221f93d55fc9bf9d0fbea0ff592fea97e1af5f4e"
+    },
+    {
+      "path": "Services/GameInstallationConsoleBuild.cs",
+      "bytes": 34687,
+      "sha256": "56be844f0385005af85e5bc45e0940718d96562ba49a655b1e62e00d90f67c6e"
+    },
+    {
+      "path": "Services/GameInstallationControlledBuild.cs",
+      "bytes": 10979,
+      "sha256": "6a815eea8f0c797d664e9d61cf73d5c2e477383e69d6e7656e79f8a58df2610a"
+    },
+    {
+      "path": "Services/GameInstallationCtrBuild.cs",
+      "bytes": 5812,
+      "sha256": "761814d96b88422438dd92f9b8cbde62af0d68e87231d182efac648e25f3e107"
+    },
+    {
+      "path": "Services/GameInstallationCtrMedia.cs",
+      "bytes": 11757,
+      "sha256": "5f4a90208e834f21220802b52f78c32615c6856ae8f1099ea544b1f4716e174e"
+    },
+    {
+      "path": "Services/GameInstallationCtrSmToolchain.cs",
+      "bytes": 2550,
+      "sha256": "f4d75e8337eb0e1ac9469aa17d6ee5048a32a66da7cc998e47d06aa3d254d70c"
+    },
+    {
+      "path": "Services/GameInstallationDeadRisingArcade.cs",
+      "bytes": 6110,
+      "sha256": "5ea85f95bf52ab7fc2c90120e6c07c96224afb9d234d72dd608b72e195e7398f"
+    },
+    {
+      "path": "Services/GameInstallationDeadlyPremonition.cs",
+      "bytes": 2891,
+      "sha256": "a8510f311809498a4db208228bcbb74a91ada22b739078438465adbca81ac6e2"
+    },
+    {
+      "path": "Services/GameInstallationDirectGameCube.cs",
+      "bytes": 9890,
+      "sha256": "02a44df788eae0874a15008206164710d0effb53961505176cea993bd64888f9"
+    },
+    {
+      "path": "Services/GameInstallationDirectMedia.cs",
+      "bytes": 12823,
+      "sha256": "07c88fd12b2cae20daa7deeeabc62ac23085999e8f4afe94975958d247559f8a"
+    },
+    {
+      "path": "Services/GameInstallationDkbBuild.cs",
+      "bytes": 22226,
+      "sha256": "5806d55dc507ca54cc5d0373fef2645d22713617ed179f9a47b4521c042f0ebf"
+    },
+    {
+      "path": "Services/GameInstallationDoaxBuild.cs",
+      "bytes": 15632,
+      "sha256": "61f1b3d8d1158bb6e932dfafb14137e3626c76213095099a1f257310da396fd9"
+    },
+    {
+      "path": "Services/GameInstallationDoaxToolchain.cs",
+      "bytes": 11712,
+      "sha256": "0ee8eb2265eac5bbcbbc06091d80b2642390df5c8ea745535e55e161823ee2b5"
+    },
+    {
+      "path": "Services/GameInstallationDrMario64Build.cs",
+      "bytes": 12283,
+      "sha256": "a93d6a7162b60739ae1214bb7232cc3bb2ad09bbf52647dae4c3ef7fb837f467"
+    },
+    {
+      "path": "Services/GameInstallationDrMario64Native.cs",
+      "bytes": 7993,
+      "sha256": "a70ede762c540cd9cc4469e01d070583c000bef1cd926ad712a3197f1e1f2ff9"
+    },
+    {
+      "path": "Services/GameInstallationDrMario64Output.cs",
+      "bytes": 8374,
+      "sha256": "53ca8e1ffc4aa6a46ecafa18a9937a7fbf4839655bda0768d8bf86fd97c0f3fe"
+    },
+    {
+      "path": "Services/GameInstallationDrMario64Packages.cs",
+      "bytes": 16800,
+      "sha256": "926707ca7983c1c0cdb3bf0ec9c2fd59afbc3c2d1a9bd33fcfdd9b2ceb1939eb"
+    },
+    {
+      "path": "Services/GameInstallationDrMario64Patches.cs",
+      "bytes": 4698,
+      "sha256": "ff23027aad759d356394dc7dd006cc57b69e35c3ef1e41b49b23ebbc71896708"
+    },
+    {
+      "path": "Services/GameInstallationDrMario64Resources.cs",
+      "bytes": 1802,
+      "sha256": "ad55e20ecf7c6a2f45e6b41aa91712b66b70507c1ff1ec4c54cdf8dd2148c181"
+    },
+    {
+      "path": "Services/GameInstallationDrMario64Sources.cs",
+      "bytes": 7842,
+      "sha256": "a3ed75cf150d8815b55c2625f4628b09ce6425fefa6d83b43a97fa00d3368631"
+    },
+    {
+      "path": "Services/GameInstallationDrMario64Toolchain.cs",
+      "bytes": 10047,
+      "sha256": "4aebe6136b242327d2b93a1dfd47336d278eb27c8170fe3902eb9cc0e9bec817"
+    },
+    {
+      "path": "Services/GameInstallationDrMario64Validation.cs",
+      "bytes": 3488,
+      "sha256": "6992ad48f35a35a03e9fb89afbcb8f280820794f525d8e4ae9bea81df8a8b9fd"
+    },
+    {
+      "path": "Services/GameInstallationEdgeOfTime.cs",
+      "bytes": 8683,
+      "sha256": "87f860006f8865b1c6c47a89abbd0ae440f45de56b02d37e6a79a881179ef30f"
+    },
+    {
+      "path": "Services/GameInstallationForzaBuild.cs",
+      "bytes": 12941,
+      "sha256": "9dfdbb7f90a7a66a9368b1f496e91e4317c236964cedb793571c44892ba2f689"
+    },
+    {
+      "path": "Services/GameInstallationForzaData.cs",
+      "bytes": 5432,
+      "sha256": "6883616cb64ce291c36eae42ef54d23d58ab1a77a8a93cdd47fcd7eb9214ac8b"
+    },
+    {
+      "path": "Services/GameInstallationForzaMedia.cs",
+      "bytes": 11014,
+      "sha256": "92a7a99089b484c9f34122e792d10f7ea221527e24798661628438373b4f14a3"
+    },
+    {
+      "path": "Services/GameInstallationForzaNative.cs",
+      "bytes": 12326,
+      "sha256": "c97292dc8cd2a32ab4c3d1629966f9a707e59748fd9be9a01fa4a2451bb241b6"
+    },
+    {
+      "path": "Services/GameInstallationForzaNativeGame.cs",
+      "bytes": 5896,
+      "sha256": "72fd04162582c15a456af3452be04714d8f695667befe363d5972c9ebc1cddd7"
+    },
+    {
+      "path": "Services/GameInstallationForzaNativeSources.cs",
+      "bytes": 7552,
+      "sha256": "2a237cd7885b3906ef5e0f7a2694f3d6f2977509b75ac7d6e40b098d31438279"
+    },
+    {
+      "path": "Services/GameInstallationForzaSdk.cs",
+      "bytes": 7228,
+      "sha256": "2e80b98ab000351b740658c76e45fdd72d1a7665ee436889cde5e3dac27516c7"
+    },
+    {
+      "path": "Services/GameInstallationForzaToolchain.cs",
+      "bytes": 8420,
+      "sha256": "7d80f51e1e735da87df6e4d68906f8e437a556351b3493f36daf28baf68d2d3f"
+    },
+    {
+      "path": "Services/GameInstallationForzaXex.cs",
+      "bytes": 11895,
+      "sha256": "cd93746c4a81cc4734f61e8b630018e320880d582f27c2d8b786a5292dfb3ef0"
+    },
+    {
+      "path": "Services/GameInstallationGoldenSun.cs",
+      "bytes": 13162,
+      "sha256": "5b2c128acd7997081b50608e15b65d1f950cf9d0d5c81484a3f869549d71bda3"
+    },
+    {
+      "path": "Services/GameInstallationGowBuild.cs",
+      "bytes": 15486,
+      "sha256": "cd64fdd4624e2df095191ab1289e26d7bc0c5e962610acfcdcba55a85c04e11c"
+    },
+    {
+      "path": "Services/GameInstallationGowKiexsterBuild.cs",
+      "bytes": 15015,
+      "sha256": "2ec8ae2df16732d0c8436d82faaaa745ce61c290cf87cd0b13787ad0594da2d4"
+    },
+    {
+      "path": "Services/GameInstallationGowKiexsterDisc.cs",
+      "bytes": 10301,
+      "sha256": "efc10e43c4282b1ce809170978bca3e8fb5a1a0a935bc816cbd9bf8e68002c22"
+    },
+    {
+      "path": "Services/GameInstallationGowKiexsterNative.cs",
+      "bytes": 13763,
+      "sha256": "bc23ac58112f8c490e916ceb668b2f16abb74373ac229ac1f0ad6a9c6d45cffd"
+    },
+    {
+      "path": "Services/GameInstallationGowNative.cs",
+      "bytes": 5310,
+      "sha256": "1f4c060384c5865c2082db244791024e4dda2504f9247395eb625e91b538a23c"
+    },
+    {
+      "path": "Services/GameInstallationGt4.cs",
+      "bytes": 10288,
+      "sha256": "c77493c8bd980f5704f7139bf9d1a8e56cf7fa0f327b47c60f413ca250d65d29"
+    },
+    {
+      "path": "Services/GameInstallationGt5Native.cs",
+      "bytes": 23056,
+      "sha256": "85dabde3ff644f8503178a1ddfa930ec892e2223c8ec9757b15252ca37876890"
+    },
+    {
+      "path": "Services/GameInstallationGtaCombined.cs",
+      "bytes": 9092,
+      "sha256": "8f9a35dd464f9dcffc0e971cd8f19dbf26c6f9bff9ceec5b19d89af91d2b152f"
+    },
+    {
+      "path": "Services/GameInstallationGtaRuntime.cs",
+      "bytes": 10568,
+      "sha256": "e330acf4d33310f22d80ff41a8814c17057cb3c3165aec79ffcd22628463b19f"
+    },
+    {
+      "path": "Services/GameInstallationGtaStoriesBuild.cs",
+      "bytes": 7540,
+      "sha256": "125e5ff95a63579e59f66a1a40509a5863d3ce71d549b4c7c66fb18b4cb41722"
+    },
+    {
+      "path": "Services/GameInstallationHookshotBuild.cs",
+      "bytes": 17492,
+      "sha256": "04ff4a7f3ae0b51b25111b15b71100b35c1555350cf41f8b281fec0d17131584"
+    },
+    {
+      "path": "Services/GameInstallationIso9660.cs",
+      "bytes": 23062,
+      "sha256": "e05f6b3f2c2a149ba4a56f1aedc728b7dfa4735f9c418786fa1e79772e96aa94"
+    },
+    {
+      "path": "Services/GameInstallationKingsField.cs",
+      "bytes": 7324,
+      "sha256": "73bcf213006fec638a8944df5583392f7088ce8cb48f7d713cbd6955e3f744cc"
+    },
+    {
+      "path": "Services/GameInstallationKnowYourRole.cs",
+      "bytes": 12506,
+      "sha256": "67af0532e080a87798e6e3d0b1bb9182ff4f1106dfaab54421b4001ba4a98978"
+    },
+    {
+      "path": "Services/GameInstallationLasBuild.cs",
+      "bytes": 15699,
+      "sha256": "af647193fd3562911d481617a8343810ecc546ef7e63a89fa72e21ec37cfda0d"
+    },
+    {
+      "path": "Services/GameInstallationLighthouse.cs",
+      "bytes": 5532,
+      "sha256": "ca3f3d7d3b791de897c339cdcb4460e0ee09c5e385c61cab74a217d782de75e5"
+    },
+    {
+      "path": "Services/GameInstallationLinkedPs4Ports.cs",
+      "bytes": 12658,
+      "sha256": "82079c4920bce8010736c92e7ed7d3bdfce533b0b001f57de388a10834333844"
+    },
+    {
+      "path": "Services/GameInstallationMarioBuild.cs",
+      "bytes": 20862,
+      "sha256": "f2017ce728aa4040b769447d35ce90fc4e868d28e12b009dfe02a2b94b9f4eb0"
+    },
+    {
+      "path": "Services/GameInstallationMarioNativeBuild.cs",
+      "bytes": 10806,
+      "sha256": "6db0b8037bbff19c03f3185d8f139f8137d5516eb192323272acf9df6300fab7"
+    },
+    {
+      "path": "Services/GameInstallationMarioNativeMsvc.cs",
+      "bytes": 8827,
+      "sha256": "b87fc933665abe2418214aa9cba57480cae62b39eb28dafb2bb33a8c3d0e1208"
+    },
+    {
+      "path": "Services/GameInstallationMarioNativePreflight.cs",
+      "bytes": 4651,
+      "sha256": "f6addda2b2e5cd6fbc8e748253e3b0551354598ebd8fb70d95a25dd36e01f12a"
+    },
+    {
+      "path": "Services/GameInstallationMarioNativeSource.cs",
+      "bytes": 5032,
+      "sha256": "8d2a48d73f163d1f24b87553de8850d3b64896d19b4d0295617a85cbaf6c05bb"
+    },
+    {
+      "path": "Services/GameInstallationMediaProfiles.cs",
+      "bytes": 8989,
+      "sha256": "17f94dd898508c6c37af9934278b59867864fb5612b51a2ce8bb6759bf7fd303"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceBuild.cs",
+      "bytes": 13788,
+      "sha256": "bc3b4418aa9081be01946ebc39be86c756dadc78214ec1155a038460ccd6dec5"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceDependencies.cs",
+      "bytes": 6085,
+      "sha256": "5ccffcd9f28c3715cccf98e96a564c686522880261b55e18ea40940dd4b5182b"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceMedia.cs",
+      "bytes": 7130,
+      "sha256": "2190faee02f564d36a8602438054aebc677aa6a6eb553135b93ce901016d7d4e"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceNative.cs",
+      "bytes": 17582,
+      "sha256": "575ba34e5a6e68720cbeff6d1750944e9fe418a9cf3b6810536e60562d4cf210"
+    },
+    {
+      "path": "Services/GameInstallationMetaforcePatches.cs",
+      "bytes": 5322,
+      "sha256": "9c041d53dec10be6feb51833bfb123b9812e51791e9df0565019f6776df2bcd1"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceResources.cs",
+      "bytes": 2461,
+      "sha256": "b0e1ca9e628e1086b2fb820a21c6493acbd38079324e00a0ed2c563eb2de801f"
+    },
+    {
+      "path": "Services/GameInstallationMetaforceRuntime.cs",
+      "bytes": 8353,
+      "sha256": "2e2ea42e6e00579e82634a906af0f79883a7b83c3c1c01b7fb7c2d8793145aa2"
+    },
+    {
+      "path": "Services/GameInstallationMkddAltBuild.cs",
+      "bytes": 11595,
+      "sha256": "0fa980862c4bc4353d6c220dbff8eefc701df8f4ff86cb228bb1e58cc1a898f7"
+    },
+    {
+      "path": "Services/GameInstallationMkddBuild.cs",
+      "bytes": 13388,
+      "sha256": "9d292cf8d36a2616323e2bbc3b7098c0f8db52efe143066e8c6cff5f651cea3d"
+    },
+    {
+      "path": "Services/GameInstallationMkddGhidra.cs",
+      "bytes": 6772,
+      "sha256": "2ddb717904cf82612cf235ca0da590de0c96cd7edee5504c6a2297319ba29dd2"
+    },
+    {
+      "path": "Services/GameInstallationMkddMedia.cs",
+      "bytes": 7144,
+      "sha256": "00aa6a8f5c922281e2826b8b45175ac25ce60255dd8a9e9f35d223a8007e07cd"
+    },
+    {
+      "path": "Services/GameInstallationMkddRustNotices.cs",
+      "bytes": 7007,
+      "sha256": "9263dc8e4aead4d1520af2eeb9b724d3329e5ae98405db78ff0fe4e872d4d4c4"
+    },
+    {
+      "path": "Services/GameInstallationMkddToolchain.cs",
+      "bytes": 9329,
+      "sha256": "3e1ef32b9298c0da3213de18f5155ac14fbf9bb16e5e15666e2d9ca30155563d"
+    },
+    {
+      "path": "Services/GameInstallationMkwBuild.cs",
+      "bytes": 17399,
+      "sha256": "4aedc9fa0eb7dbff4f8cd628f4ade0e7d12e530909b99e0b76c689adef1976c5"
+    },
+    {
+      "path": "Services/GameInstallationMkwCliBackend.cs",
+      "bytes": 11407,
+      "sha256": "637452bed83f338bc3be98ff42811e4e98f1e1a75c1972058e215877c4b7a15d"
+    },
+    {
+      "path": "Services/GameInstallationMkwCliRelease.cs",
+      "bytes": 2112,
+      "sha256": "322e61a7804c6edb6092650274b03fb857e089fd3314d7324ee28e3cf85f810a"
+    },
+    {
+      "path": "Services/GameInstallationMkwLogs.cs",
+      "bytes": 2030,
+      "sha256": "71fb368883bf33c10348a3efd0bfeb813d7c7b178f05b0b456787ae0b8955730"
+    },
+    {
+      "path": "Services/GameInstallationMmlResume.cs",
+      "bytes": 14322,
+      "sha256": "181271fe9f7faebf5e8a41f96c9d74de4c2d2e938e2537bc01ecbdfd384ebb00"
+    },
+    {
+      "path": "Services/GameInstallationN64Portable.cs",
+      "bytes": 27345,
+      "sha256": "dfd62e5120dc850cf9d4ada011017abff2136f13b21a0a38c919961dc3cfc4e7"
+    },
+    {
+      "path": "Services/GameInstallationNativeBuild.cs",
+      "bytes": 16124,
+      "sha256": "ac8c72f5bd97442adaccb3f8679045f79426e33b59a15e49706dd61047fdc8aa"
+    },
+    {
+      "path": "Services/GameInstallationNectar.cs",
+      "bytes": 12076,
+      "sha256": "de45dd2db08c25309770641d120b803241bd096c399abbc19135bcd0517f2421"
+    },
+    {
+      "path": "Services/GameInstallationOdysseyBuild.cs",
+      "bytes": 20498,
+      "sha256": "c25c4207c1ac042ea4868ec4164ecfc03fe5a54cacaad78c38add3b210c5b2ac"
+    },
+    {
+      "path": "Services/GameInstallationOfflineInno.cs",
+      "bytes": 8034,
+      "sha256": "7b9a134c25c20abf364d95aeacfe4e44b8fffaac873d472f1aec95b835fb6e4a"
+    },
+    {
+      "path": "Services/GameInstallationOfflineNsis.cs",
+      "bytes": 11047,
+      "sha256": "ab5126ba10e10d2b12bf765522e7b57a80b8da58855d4bade152dc360caa36e0"
+    },
+    {
+      "path": "Services/GameInstallationOfflinePyInstaller.cs",
+      "bytes": 5400,
+      "sha256": "aa851c31e894da4277de1597bbc63859aac17f7fc9e6ba520e993def64f0ebcf"
+    },
+    {
+      "path": "Services/GameInstallationOpenCe.cs",
+      "bytes": 4931,
+      "sha256": "e078d85645d59ec53361feff422e2746b13db147dee87727d15f11ed606284a5"
+    },
+    {
+      "path": "Services/GameInstallationOpenGoal.cs",
+      "bytes": 7943,
+      "sha256": "e5c97412a737d35637ee8c2bc0981722b06e0df9f2ac0da1365bcac741c3f4c1"
+    },
+    {
+      "path": "Services/GameInstallationOpenLara.cs",
+      "bytes": 3337,
+      "sha256": "5a2dba83e11ebef49797e966c73720473368e18ff1c0531dffc2607912334a94"
+    },
+    {
+      "path": "Services/GameInstallationPaperboat.cs",
+      "bytes": 16300,
+      "sha256": "38f62d98cd266cb3ed81ba841bc69298463d0b26a1fea1b0f8f9c6c5e2a03150"
+    },
+    {
+      "path": "Services/GameInstallationPgr4.cs",
+      "bytes": 5918,
+      "sha256": "1f4a67cfa8b945664d8cfd9358fbb7fd2c043004c4b7daf6eb51ac7cde9ac9e1"
+    },
+    {
+      "path": "Services/GameInstallationPhaseDistorter.cs",
+      "bytes": 7977,
+      "sha256": "1b90b6f21074b304ecea68a0c3e73458578fb4c83737dac588654a611580c765"
+    },
+    {
+      "path": "Services/GameInstallationPicori.cs",
+      "bytes": 13481,
+      "sha256": "c21dd8a5463fd906569ab4ec11d9e1e8290c70942f45abc78d71fe15ee356802"
+    },
+    {
+      "path": "Services/GameInstallationPinyonBuild.cs",
+      "bytes": 20387,
+      "sha256": "f021a5da48f3a53f7a2f9360ad34b0c8e0788b4da069fd12d1c220426840a3cb"
+    },
+    {
+      "path": "Services/GameInstallationPinyonCache.cs",
+      "bytes": 6353,
+      "sha256": "d40c566d87359b149be1c5de5e02423b397c40f8209884635d8b080ac484eaab"
+    },
+    {
+      "path": "Services/GameInstallationPinyonNative.cs",
+      "bytes": 13492,
+      "sha256": "a5a277d32d5706448f03e112d5fcf014ad51fa5c187f94495484691a3ae8cdcb"
+    },
+    {
+      "path": "Services/GameInstallationPinyonNativeProof.cs",
+      "bytes": 5110,
+      "sha256": "869d3e15315ebc0b77c70c9bce07b494a6dba847eae2449c27b1e337865844d9"
+    },
+    {
+      "path": "Services/GameInstallationPinyonNativeSources.cs",
+      "bytes": 6897,
+      "sha256": "3d7e626c1f9945cbecab51a781bf57995e85cb7105d4c6659b783bf75685386b"
+    },
+    {
+      "path": "Services/GameInstallationPinyonUpdate.cs",
+      "bytes": 2484,
+      "sha256": "0f23b64e15868840de1301896b28277a678d926610824e2be2b31498e6a489fe"
+    },
+    {
+      "path": "Services/GameInstallationPreparationResume.cs",
+      "bytes": 30661,
+      "sha256": "eee0c2aef213bad9bdbbbeff6ac39dfdf343533eceae99aac360b6c6ab57bbfe"
+    },
+    {
+      "path": "Services/GameInstallationPreparedBuildTransaction.cs",
+      "bytes": 3556,
+      "sha256": "1e8664c81ea04a88f8ca08bc7643ed3a577c57a4e11550619543426a50492f3a"
+    },
+    {
+      "path": "Services/GameInstallationPs3Support.cs",
+      "bytes": 18264,
+      "sha256": "5f40237b0b71b8ccbf2685741f5725ec64cbe3b84e9910e678e801ab5d6aa445"
+    },
+    {
+      "path": "Services/GameInstallationPs4Build.cs",
+      "bytes": 15955,
+      "sha256": "545dbfbd675233609ccb6dd3d6f34a67948da0a0613f2e9ee93d44ad112dce73"
+    },
+    {
+      "path": "Services/GameInstallationPs4LinkedImage.cs",
+      "bytes": 3102,
+      "sha256": "e470cc8ac894e178b159e2ef981a05350b82b5ed423a73700f14c9d2eeff153b"
+    },
+    {
+      "path": "Services/GameInstallationPs4Native.cs",
+      "bytes": 3992,
+      "sha256": "8e7ca99ddf3fa1aa3699781e90b2f23bd619e2b05f9803d98a8220bacd8fc9cb"
+    },
+    {
+      "path": "Services/GameInstallationPs4SpartanNative.cs",
+      "bytes": 3270,
+      "sha256": "e8d5c06fe2b76d4e6fdb51d34e2f21cc85dc23961c764b44dd7c88eda22dbf4e"
+    },
+    {
+      "path": "Services/GameInstallationPsxMedia.cs",
+      "bytes": 780,
+      "sha256": "e7d925f8bb1d416d3351745b7f8c1852131308e84a358b411b70f2b8b7d4d8bd"
+    },
+    {
+      "path": "Services/GameInstallationPsxMode2.cs",
+      "bytes": 4609,
+      "sha256": "0b41d97e9b6a3963da87451890714ac95d589a823b1a77a4613167fb75d995a4"
+    },
+    {
+      "path": "Services/GameInstallationPt.cs",
+      "bytes": 9310,
+      "sha256": "ac15023a52b2ca74fce42363b0329f0ceb3191c0689695cdae495f24dffaee29"
+    },
+    {
+      "path": "Services/GameInstallationRadzLauncher.cs",
+      "bytes": 14474,
+      "sha256": "15804886eba264cff4c24d46b3854cc017d5259ba7ba674d323e484fd8314355"
+    },
+    {
+      "path": "Services/GameInstallationReBlue.cs",
+      "bytes": 17074,
+      "sha256": "de49de7dce4627d710ea731eb9780dd615a0353766aae6d5a89ea8c2b275a07e"
+    },
+    {
+      "path": "Services/GameInstallationRecovery.cs",
+      "bytes": 6340,
+      "sha256": "c3a16551553dd577f85ff25bb7ce024c31438d62483a7623616d15510aa34028"
+    },
+    {
+      "path": "Services/GameInstallationRedriver.cs",
+      "bytes": 13057,
+      "sha256": "b2617a97f5b4a3b3176ab959bc29bdc436ae9a4c17457d30767b1ee537b056c7"
+    },
+    {
+      "path": "Services/GameInstallationRender96Packs.cs",
+      "bytes": 4868,
+      "sha256": "b7e9a39a2b906b4e6bc6d55da62a36269b98f695882021464605f0b6fd48563e"
+    },
+    {
+      "path": "Services/GameInstallationRetailArcade.cs",
+      "bytes": 4978,
+      "sha256": "5d9c1397cfa479c44e21a0147e52c919a4c0b453b77210b4e36499985e7f43d6"
+    },
+    {
+      "path": "Services/GameInstallationRsdk.cs",
+      "bytes": 6085,
+      "sha256": "4876c1078b3cf8b47961e95803e40f28ff014576c34a708e182ee3d80cc4b7a7"
+    },
+    {
+      "path": "Services/GameInstallationRustToolchain.cs",
+      "bytes": 12263,
+      "sha256": "bb117758f3119542c10012485b2a261f2b2ad89d5ddca6078c19c5b3fdd9a035"
+    },
+    {
+      "path": "Services/GameInstallationSavageWindBuild.cs",
+      "bytes": 10668,
+      "sha256": "52ab3a70d6ca3a534ba56f96e822b20fb8c3a89a5cb5fa0d480c48aab1292893"
+    },
+    {
+      "path": "Services/GameInstallationSavageWindMedia.cs",
+      "bytes": 8035,
+      "sha256": "c941a8a8d85cab823c688ea7b9d6cc720298b0e6fea03d005aff8ee8886f9202"
+    },
+    {
+      "path": "Services/GameInstallationSavageWindNative.cs",
+      "bytes": 10690,
+      "sha256": "e99a70635fe26854f0b895915bbbcfd8293ce7c3d27b100a24d33c5492be2f0a"
+    },
+    {
+      "path": "Services/GameInstallationSavageWindOutput.cs",
+      "bytes": 10524,
+      "sha256": "bdc733deab8dbf681204425e69b9f6b02efd8755b36f07445f75543271719918"
+    },
+    {
+      "path": "Services/GameInstallationService.cs",
+      "bytes": 89374,
+      "sha256": "e975e5e54266aad76aa57ac8f5a9af6370caa462b4452009a4aa5c2d65d23f8b"
+    },
+    {
+      "path": "Services/GameInstallationSevered.cs",
+      "bytes": 8002,
+      "sha256": "63fd402112067cb0e4324e8a2314907bfb702836618ed2cf3259365ec7b77b5f"
+    },
+    {
+      "path": "Services/GameInstallationShadowOfRome.cs",
+      "bytes": 10610,
+      "sha256": "b17cc77aefc1d328208dfbcd50879d5469e4de014c52e68a66635d6fe8fda06f"
+    },
+    {
+      "path": "Services/GameInstallationSilentHill.cs",
+      "bytes": 5546,
+      "sha256": "0da75eb9038c081034a142bf54787f9d91a3e98e995e89199594e9d8ec12c3aa"
+    },
+    {
+      "path": "Services/GameInstallationSimpsons.cs",
+      "bytes": 3591,
+      "sha256": "a3e844a0cf766afba6d0fce33f32af2564b0599d5f575bed1d80b693cb1d6ef8"
+    },
+    {
+      "path": "Services/GameInstallationSm64PlusBuild.cs",
+      "bytes": 7129,
+      "sha256": "80a285147448fcc344b3906d3d3b17d61ee376ae8297aeb58d083b811d3e4fb3"
+    },
+    {
+      "path": "Services/GameInstallationSm64PlusSource.cs",
+      "bytes": 4470,
+      "sha256": "53b6fe3846d49b88bb159d557b7ff584336a5374b2bf214939af0f74c1261f4e"
+    },
+    {
+      "path": "Services/GameInstallationSm64PlusToolchain.cs",
+      "bytes": 10335,
+      "sha256": "78b040d3ec2c42538de8cae0c5c0ef11f6e5beaa3018d9a1f83b47b10f91fd77"
+    },
+    {
+      "path": "Services/GameInstallationSmBuild.cs",
+      "bytes": 7686,
+      "sha256": "3ce40fb6b0c1b9df82cb6348e5f0d0d4c1e8b59e77f92d86980b07f2f64021e1"
+    },
+    {
+      "path": "Services/GameInstallationSmRewriteBuild.cs",
+      "bytes": 6689,
+      "sha256": "05a6d9c04d08b0771144027821c42b9e4fcf20c4ea54a83e7f68c1f0ef8675f8"
+    },
+    {
+      "path": "Services/GameInstallationSoh.cs",
+      "bytes": 7233,
+      "sha256": "853d94af4bc369c19fe85c0cea9365932cac3eca568cc19acc54a58319349ff5"
+    },
+    {
+      "path": "Services/GameInstallationSonicContent.cs",
+      "bytes": 17619,
+      "sha256": "0de94b6c39d33ea769309f8ae6b91454b045a472ac9f5536ce3d05605e4fad57"
+    },
+    {
+      "path": "Services/GameInstallationSotcBuild.cs",
+      "bytes": 8256,
+      "sha256": "831d826dccee0be20fa8f29ec24d983bf35c9633c1ae76bc113260cdde168cda"
+    },
+    {
+      "path": "Services/GameInstallationSotcMedia.cs",
+      "bytes": 9882,
+      "sha256": "c7b1bb8ecb0978cd397f7a5f7c32381a3bb487fb9147ce30f7c16ccf5ac21263"
+    },
+    {
+      "path": "Services/GameInstallationSotcOutput.cs",
+      "bytes": 16941,
+      "sha256": "07a4f89181019782bfbebfe27734e335c16c3d52408122aeb8b2b00a35b74831"
+    },
+    {
+      "path": "Services/GameInstallationSpaghetti.cs",
+      "bytes": 8056,
+      "sha256": "c31de968492a587e50de463b231394872fda1896e4e710a6e825493907d56f98"
+    },
+    {
+      "path": "Services/GameInstallationSsxBuild.cs",
+      "bytes": 16210,
+      "sha256": "17a8849414352f331f2ded77eb158f5b4e668329adafed87c02bb51325ac40f3"
+    },
+    {
+      "path": "Services/GameInstallationSsxCache.cs",
+      "bytes": 9752,
+      "sha256": "2b0842ff430bfc750c7f63b3891f4626c4f7d24f03d471df87cf22be54a49b0f"
+    },
+    {
+      "path": "Services/GameInstallationSsxNative.cs",
+      "bytes": 10582,
+      "sha256": "0636e256c40b1fa358000432d757121637ba13c53d1f9c1eafb5091b2e5ca0fb"
+    },
+    {
+      "path": "Services/GameInstallationSsxNativeProof.cs",
+      "bytes": 5356,
+      "sha256": "50f69da7b664bd346ce7495a06d7e020320b8735d87632ff0180571e23b26de3"
+    },
+    {
+      "path": "Services/GameInstallationSsxNativeSources.cs",
+      "bytes": 10906,
+      "sha256": "eb1ed105bcf93b7eeded1c42fd11611470c5b751cad9a1628ad9853c5f84db0f"
+    },
+    {
+      "path": "Services/GameInstallationStarship.cs",
+      "bytes": 6271,
+      "sha256": "e574aa4483135a81c86aa4a084a2a5e249e4b9572b5620f60cd31a6619573e66"
+    },
+    {
+      "path": "Services/GameInstallationStateStore.cs",
+      "bytes": 5055,
+      "sha256": "be6e762ab407d09b37d1425cfadb0aa4dd428ea418b626af898f8d9cdeb2e847"
+    },
+    {
+      "path": "Services/GameInstallationStfs.cs",
+      "bytes": 5544,
+      "sha256": "8690b2785b9f1f000ba72ec7fd7786005439b4200dd55bf19e74fb47b2b7fef6"
+    },
+    {
+      "path": "Services/GameInstallationStrikersGcBuildSupport.cs",
+      "bytes": 11647,
+      "sha256": "5f65c8d2a93151a73d4febf799bb787f3176c264667006ab1f713b927d213d4e"
+    },
+    {
+      "path": "Services/GameInstallationStrikersGcRuntime.cs",
+      "bytes": 7178,
+      "sha256": "ae5203fd6777ff09c83ffe73c729f31d255a7d077398f9cbd3905583756ec644"
+    },
+    {
+      "path": "Services/GameInstallationStrikersMedia.cs",
+      "bytes": 6160,
+      "sha256": "1a8b6940027a34c80293e96ef1f88da6802094361b0fddb617052fa0c50f6490"
+    },
+    {
+      "path": "Services/GameInstallationStrikersRecompBuild.cs",
+      "bytes": 8399,
+      "sha256": "567081e3407efe9f1321c8e4fb6fff98db7d369b48a57ad2d5b22c4e042ec8a8"
+    },
+    {
+      "path": "Services/GameInstallationStrikersWiiBuild.cs",
+      "bytes": 12438,
+      "sha256": "e22db0528f2e9c70ee8d734bfa30eb229f1cb0a04b2be23b1f35e45106a8ca7b"
+    },
+    {
+      "path": "Services/GameInstallationStrikersWiiToolchain.cs",
+      "bytes": 8527,
+      "sha256": "678b4cbc28701eeeeb9dc24986e8a511595088e18aa5b8c0f89e9c114460f0df"
+    },
+    {
+      "path": "Services/GameInstallationSvod.cs",
+      "bytes": 2088,
+      "sha256": "11d96efb043b42bbd88360887b5f26a8b595368a311d016f97b241460aa1951e"
+    },
+    {
+      "path": "Services/GameInstallationSwitchNativeBuild.cs",
+      "bytes": 7641,
+      "sha256": "6e10942d06e09a9b9e9a77150d7fb79d22e077c91eb3c5eb5d0eef7b758ffe03"
+    },
+    {
+      "path": "Services/GameInstallationSymphony.cs",
+      "bytes": 6071,
+      "sha256": "85e60b1d3631e0bb7746eef37ae80d269612981ae8d46ddcc1c6d5185b79a518"
+    },
+    {
+      "path": "Services/GameInstallationTeamForeverBuild.cs",
+      "bytes": 16970,
+      "sha256": "fe4092c60bc3117686d7c4c6149b9ea06bd15ce4f3cae1a82911caab1f99a4b8"
+    },
+    {
+      "path": "Services/GameInstallationTotkBuild.cs",
+      "bytes": 21732,
+      "sha256": "f61b11bb308357ead183eb89c77e692b2619c92ce64218baf36dbb4e8332defa"
+    },
+    {
+      "path": "Services/GameInstallationTotkCache.cs",
+      "bytes": 21328,
+      "sha256": "6d8e2b46c64ebd9dcfd8069c78e84d99d144f3417a1482fd177676373928d860"
+    },
+    {
+      "path": "Services/GameInstallationTrx.cs",
+      "bytes": 12057,
+      "sha256": "f940b0e61b80fb96cfd639aec134be84dc37051a2609bb18c206bcc5f7022654"
+    },
+    {
+      "path": "Services/GameInstallationTwoShip.cs",
+      "bytes": 10263,
+      "sha256": "3cf8dc379542feb1cd4e808c1f4463780e908c4a44bcb605f4b4b3357f3a55ff"
+    },
+    {
+      "path": "Services/GameInstallationUnleashed.cs",
+      "bytes": 10035,
+      "sha256": "8a124fe2ed10f6cc0d7de84d9e4e650520bc0a3b3820d85870692889b9bf5192"
+    },
+    {
+      "path": "Services/GameInstallationVandal.cs",
+      "bytes": 4863,
+      "sha256": "a8b8d870031d6fa69b6a53bd6b6e6fa880d343fc495968c8906ea053552d8115"
+    },
+    {
+      "path": "Services/GameInstallationVerifiedPatch.cs",
+      "bytes": 4850,
+      "sha256": "bec03279b0296e7f4be2460fa718dff8a4a2c9aea23f77142bd896f9c6ef2156"
+    },
+    {
+      "path": "Services/GameInstallationWindWakerHd.cs",
+      "bytes": 7553,
+      "sha256": "ffe55ba07b0d75775a14c5928274b04a326db5d3e9edae84a801780bba9a1d48"
+    },
+    {
+      "path": "Services/GameInstallationWipeoutBuild.cs",
+      "bytes": 10819,
+      "sha256": "65508f0ca32d1caafb24c95ed55153b5f6a78bf9aaed5c8708159ff563022eff"
+    },
+    {
+      "path": "Services/GameInstallationWipeoutComposition.cs",
+      "bytes": 10784,
+      "sha256": "20b18db76c30bc7540315207ee5c223308a8a0a098118fe9ac8d6a11e233c5b6"
+    },
+    {
+      "path": "Services/GameInstallationWipeoutNative.cs",
+      "bytes": 6056,
+      "sha256": "20364bfbd4840e3b91f9989528f6201e85664d0a36969e78b07bd5b3e6982fe6"
+    },
+    {
+      "path": "Services/GameInstallationWipeoutPhantom.cs",
+      "bytes": 11508,
+      "sha256": "8c0e3d3bd8154150a291a095cb3f0b8c8d5d410502f7ae86bc62b867af231728"
+    },
+    {
+      "path": "Services/GameInstallationXboxImport.cs",
+      "bytes": 6277,
+      "sha256": "59713f9a23a12bff3185c86d510afd1310ffd446d44effe4668e4848574e6320"
+    },
+    {
+      "path": "Services/GameInstallationXboxPortable.cs",
+      "bytes": 38075,
+      "sha256": "8c08af1a1133f147e5518f7e9485ebf58618eb7823c575d86f7023b904c88ea2"
+    },
+    {
+      "path": "Services/GameInstallationXboxRetail.cs",
+      "bytes": 8595,
+      "sha256": "b22ba960ff00e75ff28b772ac8972fdf042112828d7ed4f2924dd545a111ece3"
+    },
+    {
+      "path": "Services/HttpExtensions.cs",
+      "bytes": 9650,
+      "sha256": "f019daf68905675da4a32a2941fb4cc4232cd39a1e70d9000c801b3ba054eaed"
+    },
+    {
+      "path": "Services/JavaJarLauncher.cs",
+      "bytes": 7961,
+      "sha256": "5ea62d1e946232d869759d90e1ca5effb486ec0454ea617030c4009c1dfddc0e"
+    },
+    {
+      "path": "Services/OnlineCatalogCoverCache.cs",
+      "bytes": 5171,
+      "sha256": "225386f9f2e83ad68a4e9f3577e0089a14c3c5a46df6d11e6ee003e2286f0db2"
+    },
+    {
+      "path": "Services/OnlineCatalogParser.cs",
+      "bytes": 10760,
+      "sha256": "10cd5614439da8cd244c28bddd0a05ed5158b7699ea3d4bedb14588cfdd80334"
+    },
+    {
+      "path": "Services/OnlineCatalogService.cs",
+      "bytes": 4971,
+      "sha256": "68e0fcda2ce1a700cb0c5edf82bb78a26a07e76ee5228ec7fe0325cb85a7b6df"
+    },
+    {
+      "path": "Services/OnlineFixAutomationService.cs",
+      "bytes": 23491,
+      "sha256": "5764696d5c4ed71ac1c1df73cc6f9cf7ab4f0851c170b810643a866133fde653"
+    },
+    {
+      "path": "Services/OnlineFixService.cs",
+      "bytes": 59582,
+      "sha256": "86df8fe20c01b564b331f9b06b3dc6267d1d50a729261d3bbfad2674298abfc3"
+    },
+    {
+      "path": "Services/OriginalMediaVerification.cs",
+      "bytes": 3711,
+      "sha256": "0eb00643eef7e2bd9130a8adc7340940ba13ecc2604e76ed91ec6d87c40e02e9"
+    },
+    {
+      "path": "Services/PortableExecutableVerifier.cs",
+      "bytes": 1308,
+      "sha256": "19d0d3a23fe3ebd3bba8e60e29f70a46927cc154d712d240c24d3e97eff62e72"
+    },
+    {
+      "path": "Services/PreparedToolProfiles.cs",
+      "bytes": 25675,
+      "sha256": "270b0468fe27f651d897255e8f691a19826519109728950f621a09ddc1fa5b9d"
+    },
+    {
+      "path": "Services/RemoteRecipeCatalog.cs",
+      "bytes": 21737,
+      "sha256": "60d27bb179c9412a222861964dd5104e0927e398224e264fdd465bef44663f00"
+    },
+    {
+      "path": "Services/SequenceMatcher.cs",
+      "bytes": 2225,
+      "sha256": "4dba2de4f83a02b4bd969e37e68125f3fbd2c5d620abb206b59504ffe2f9f6e8"
+    },
+    {
+      "path": "Services/SettingsService.cs",
+      "bytes": 4821,
+      "sha256": "e4c80b5da1b9f9cad4fe114e64100825f390462645859c32a55448df246eba4b"
+    },
+    {
+      "path": "Services/SteamCoverService.cs",
+      "bytes": 3717,
+      "sha256": "3a0b80fea7fa57a4791eef52d47191a3c6d4e1d40eec307e86e12a9e038dd922"
+    },
+    {
+      "path": "Services/SteamService.cs",
+      "bytes": 5445,
+      "sha256": "730f4deb039badbbeb6b65afc11fe5396f392142f1019990730175ac169a2cc9"
+    },
+    {
+      "path": "Services/StoreAddonProviders.cs",
+      "bytes": 33890,
+      "sha256": "5127e43847113f934d38e1bf8878ad17d07c524b2a14cd92ade94f51948965a3"
+    },
+    {
+      "path": "Services/StoreCatalogService.cs",
+      "bytes": 15800,
+      "sha256": "a2e57d3621915d192158a9b9d935cef62abc64eeacae7377e3583c43a60033f5"
+    },
+    {
+      "path": "Services/StoreDownloadService.cs",
+      "bytes": 14670,
+      "sha256": "9a2207aca9cc3385c242d3d1b8a2356e6da63dee7522e73bda473c9192e63d4a"
+    },
+    {
+      "path": "Services/StoreGitLabReleases.cs",
+      "bytes": 5808,
+      "sha256": "c4a082f4c2119ede52176b9b5ec8a5a1442f890833345260c11aac532f5d8e99"
+    },
+    {
+      "path": "Services/StoreImageCacheService.cs",
+      "bytes": 13913,
+      "sha256": "6f9f41ab2b0acd084757137a22d43a021cf9c24f8d12fd3beb925964cdb651b6"
+    },
+    {
+      "path": "Services/StoreInstallationDestination.cs",
+      "bytes": 891,
+      "sha256": "2fe0273cfc97d790baca467395f3586f876bc2eef3a4ee82f2b59a32ac61ea83"
+    },
+    {
+      "path": "Services/StoreTrustedCiArtifacts.cs",
+      "bytes": 15044,
+      "sha256": "ff4dcfc329ffa4239e67c65ed93bf7f49830c6edbfed04c6ad93254b4af27e09"
+    },
+    {
+      "path": "Services/StoreTrustedConsoleBuild.cs",
+      "bytes": 3377,
+      "sha256": "13183f83fd823fb9ae5a208408c1baa15eb796c9eee44f0bfbce3da35f0bf15f"
+    },
+    {
+      "path": "Services/StoreTrustedExtraBuilds.cs",
+      "bytes": 19147,
+      "sha256": "f06807d663b21a56ccc9ead13f7e85d9fcac91ec229f44f7027667a376371522"
+    },
+    {
+      "path": "Services/StoreTrustedMarioBuild.cs",
+      "bytes": 2741,
+      "sha256": "10a4748709769d84b11af4e58055837c51d2ebeda2a801b185acd5a27565a15d"
+    },
+    {
+      "path": "Services/UpdateService.cs",
+      "bytes": 13212,
+      "sha256": "45234e4cbb2fc2a659cf0dbfaddc88b967415001f934ab717ed5fe1aea692492"
+    },
+    {
+      "path": "Services/VerifiedAssetBundle.cs",
+      "bytes": 6307,
+      "sha256": "46cd765368e2686eba3a38426d37d32c7fb1b67edf21ab1f505e52491f29586e"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/AdamsAntFarmIntegration.cs",
+      "bytes": 3925,
+      "sha256": "8cf56caee0cf47cb4e50a4234001ac8002e6ef67db501f548285d05b4fa4c65f"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/AddonInfrastructure.csproj",
+      "bytes": 8417,
+      "sha256": "6b5f26dea572b5b68491fee6c769fc986b301d31af1e45f9cb4ad78d59dfa28d"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/BattleshipIntegration.cs",
+      "bytes": 4746,
+      "sha256": "78c3f4360ad2312afb233cd8d3141738ec0af4ee057cec6ca3f2f935996a03d9"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/BloodyRoarIntegration.cs",
+      "bytes": 4073,
+      "sha256": "2a36670ea80d503dff62506260b3087c4c725cebd9a9a941e1eada930174f5c0"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/BlueWakeIntegration.cs",
+      "bytes": 4709,
+      "sha256": "ea66042ff7da0da125864d4b8159e366ec2d20d536675650e582fc354c636a1b"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/BurnoutNativeIntegration.cs",
+      "bytes": 4316,
+      "sha256": "1024a42eaffd3692b013b22aa84dbb90af31437eaba4a49a70396c282f3665c7"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/CiArtifactIntegration.cs",
+      "bytes": 4800,
+      "sha256": "2c09918bf216adfc641c48ec87fff5c08d5e0201383a9cac1299b5257f039ffc"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/ContractReflectionIntegration.cs",
+      "bytes": 2047,
+      "sha256": "e7ab0558ad99edf6373262c72254c32e53dae947c13395e1c781f0d86c95c33f"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/CtrSmPrivateToolchainIntegration.cs",
+      "bytes": 14550,
+      "sha256": "a5eff88037d33d1ae63788a913e3deaeb9f7d8a616f47b119f2dbc5b241b98c0"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/CtrTurbochargedMediaFixture.cs",
+      "bytes": 8571,
+      "sha256": "d61047e7aec5357e1b1a48b9fa7377644c78df95f15a5de25d4a1e4dcac6c06c"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/DeadRisingArcadeIntegration.cs",
+      "bytes": 7885,
+      "sha256": "590cece14c1e0f6d25927bbc5776ca71452272d267c1d6c5ca2ca86c144bfc02"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/DeclarativeMediaIntegration.cs",
+      "bytes": 8575,
+      "sha256": "35dafb966dbfe1eeca2a6bee37f696a0c8cd9342e21f4ed5c3b6916fe964549a"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/DestinationIntegration.cs",
+      "bytes": 5780,
+      "sha256": "f0fa869923bbfda355c2cde8f40b6ad97d01af012d1ca47511c71cd65c242b31"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/DirectMediaIntegration.cs",
+      "bytes": 17541,
+      "sha256": "17eb7aed43cb4a8cb1a5953a23340ce438ed11692642951049561fa0695c6a3d"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/ExtendedSdkIntegration.cs",
+      "bytes": 18053,
+      "sha256": "2e86c89e1faf01d4b5979311c187b38a8db2f59ca743178d92cba632b5376f36"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/ForzaNativeIntegration.cs",
+      "bytes": 17201,
+      "sha256": "ecfb50d2ff155099fa932c7da7c7ae600f160f804479c63eb6cbdf39a1a1adb0"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/ForzaSvodIntegration.cs",
+      "bytes": 7894,
+      "sha256": "8f6d4e082f34a55cb5979509c4c6526005a7b5380bd869e27c8d5aeb43e979fa"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/FoxhollowIntegration.cs",
+      "bytes": 8390,
+      "sha256": "bd0fa3247dd93be0eaaadc4b76816adcc9eab3e5cc3c34a0e7dd069ab125cb0e"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/GhostshipIntegration.cs",
+      "bytes": 5334,
+      "sha256": "6761e9357ebc26f2626e225c15506a7e58b6711f768f1a6967e9183787422846"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/GoldenSunIntegration.cs",
+      "bytes": 7261,
+      "sha256": "b2d194ce381d5c40926b409c03aa059d213698b611428f1937088f94a4c1e8b2"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/Gt4Integration.cs",
+      "bytes": 6708,
+      "sha256": "5db11d88cd677797075f7c3e391d878d0ab9726f503880a98664c2a25b8b05b5"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/Gt5NativeIntegration.cs",
+      "bytes": 3929,
+      "sha256": "464e136451e7a4ef6cd6967bb1faa377ad970c82133d68bb3f4ad14be97e6908"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/HookshotBuildIntegration.cs",
+      "bytes": 8467,
+      "sha256": "4314a3e82959618012dbda415d3649f31b318efa322b7747b38c09a8d6be753b"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/Java25Integration.cs",
+      "bytes": 11045,
+      "sha256": "60b0093d4d89ce8f86a589b956acf18603b567e623cef540fa446deed1d94f05"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/KingsFieldIntegration.cs",
+      "bytes": 5789,
+      "sha256": "855e0630a9b9559790ab575fff5b85bf4b6f5c54221e6da5d1dd407d056bf2a8"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/KnowYourRoleIntegration.cs",
+      "bytes": 6944,
+      "sha256": "36c1dd4ed77e8200fa30ecc87bf9adf24cbfe51316ef1c1abedb5206a6734b58"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/LinkedPs4Integration.cs",
+      "bytes": 5336,
+      "sha256": "fff5727aab5661c63d6d4c0134ae12be6749c79387d1a587f0881350cc981317"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MarioNativeIntegration.cs",
+      "bytes": 19405,
+      "sha256": "344f8d30ea6e1fc9d156a203a6b8bc49c715b91c1bf01e48282933fd27418b6f"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MetaforceBuildIntegration.cs",
+      "bytes": 25869,
+      "sha256": "bce02aac733b05ac998f7b85ac46c63ff4e1837f82d81fb91e65259607a7c23e"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MetaforceMediaIntegration.cs",
+      "bytes": 12748,
+      "sha256": "07d280352814f35212923738466701a82f5d5b8deebffb23027dd9f68eaa4135"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MetaforceNativeStageIntegration.cs",
+      "bytes": 12245,
+      "sha256": "b0fa793280d2fabc13304373f885fb9f17e75ff013cc82c9ff4cbfd8a9bd8c2c"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MkddAltMediaIntegration.cs",
+      "bytes": 6639,
+      "sha256": "653d9295a4c32203d84a664a2ece47c18556aa3720f4c024c55ad104dbc3d3ca"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MkddGhidraIntegration.cs",
+      "bytes": 8050,
+      "sha256": "68d7c196ac26fa9a62d47e3702f76b6f02d427ea071ea5e892e3e7728a797b09"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MkddMingwIntegration.cs",
+      "bytes": 3756,
+      "sha256": "c4a871be276680ec2e7bfed6d57c33305c67aa34358f2431fb7e6db1015a302c"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MkddRustNoticesIntegration.cs",
+      "bytes": 6011,
+      "sha256": "a6391b3994a1114aa35c45274b9e1ee7f100f215498d97d5474a8a85140e57eb"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MkddRustSourceIntegration.cs",
+      "bytes": 11756,
+      "sha256": "40b449d9fef379d3e549b55dde78a9a3230795b2573e3c2fd26089d1e3dfe531"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MkwCliIntegration.cs",
+      "bytes": 12434,
+      "sha256": "39c54d95b2b68c4b91ae160b3bdb5aa010c7198b38954307b24e2f9d51af01ea"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/MkwCliReleaseIntegration.cs",
+      "bytes": 10339,
+      "sha256": "bf5e5a626f7ed84ba3eaa03dbadb072caaf0a22abbbb07140d87da735c08f1a2"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/N64PortableIntegration.cs",
+      "bytes": 15491,
+      "sha256": "e64cf4e9822f381c2004d7ceff698d55da8237dcab4ba2fcd8a01cb16ec4dd7b"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/NectarIntegration.cs",
+      "bytes": 7728,
+      "sha256": "88e9298688696cdb804ab3b0a95a5db25758ca71811bb74cab8aaf8a3f99c4d9"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/OfficialClasspathAudit.cs",
+      "bytes": 3650,
+      "sha256": "f5067502c96bdc7cb6e8a49673ffb28332d1f53f406f197a33c0bd576f7599c5"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/OfficialReleaseStaging.cs",
+      "bytes": 9663,
+      "sha256": "384b6817786241d36b62449bedf9ad4fb9ea244c5ae44bcc8286cadc410ef378"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/OpenGoalIntegration.cs",
+      "bytes": 5726,
+      "sha256": "03341203f6c88fb78488a76a3cf377922718961ebc261da8f06f5382ac5f60e1"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/PaperboatIntegration.cs",
+      "bytes": 5330,
+      "sha256": "f09431505dd73d428c7003e16fde95e285768dd486c300e281408b10efcc145b"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/Pgr4Integration.cs",
+      "bytes": 7301,
+      "sha256": "bfeb5a16a665264899d48735e87e9ca9a1858dbf105df017f14efa266c1aae01"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/PhaseDistorterIntegration.cs",
+      "bytes": 4505,
+      "sha256": "5b16594c520613f668d4009f72cbac2f91cf864c876cc85526ca612f0f429b17"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/PicoriIntegration.cs",
+      "bytes": 9495,
+      "sha256": "6c9ee1211d970d38a5e6e6530d014c06656c24897f47b3af41d85acbd78da4e5"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/PinyonNativeIntegration.cs",
+      "bytes": 7621,
+      "sha256": "38dcfb0f1b3f4e23f4eaad300c45e5155d7b30a473040bc53178dc7defa7ae6c"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/PreparationProfileIntegration.cs",
+      "bytes": 15868,
+      "sha256": "273635ccc661b8e2ef4432e9afd27acdc09971effc8d71c29db8c2fd461d4614"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/Program.cs",
+      "bytes": 48149,
+      "sha256": "bc3d4f91e86259e2ee31619653a878284cea339561f2f2d99d325dd349789c64"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/Ps4NativeIntegration.cs",
+      "bytes": 6758,
+      "sha256": "b3a6f0d66863c8e6dcd97f35e760f601106731b3784dac5df1f836aaa6b91a4b"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/PtIntegration.cs",
+      "bytes": 6986,
+      "sha256": "b00cd19acf97e5f1169cece92f67dbea75b9c38214a23661532a1e8092a3d6aa"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R17CIntegration.cs",
+      "bytes": 14559,
+      "sha256": "b5578fc07f0791379752f927f937610172727ec0c7fd76e1b4e81e9af8069b71"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R17DIntegration.cs",
+      "bytes": 9181,
+      "sha256": "4bc3d0648c0f365da9c93ec14e63cadd854f6ac87d4116228cc457cb198cadb0"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R17EIntegration.cs",
+      "bytes": 9000,
+      "sha256": "5a4bbc27b600c6a788d2f2d9869837a69cb685279d0af70663c07d7a1da0de0d"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R17FIntegration.cs",
+      "bytes": 8136,
+      "sha256": "35453cd7e308a422e55553108b51516406b712a9f9df3979e8905743e225d4c5"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R17GIntegration.cs",
+      "bytes": 5120,
+      "sha256": "3db9aec0ed99257874db0ca26594590d15043afa720702cf96be73f403f085fd"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R17LocalIntegration.cs",
+      "bytes": 10100,
+      "sha256": "5d0586ade4f734f225d77ff4b4f4ed67005a8cb65538fc69b498d6eef746c219"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18ConsoleIntegration.cs",
+      "bytes": 8204,
+      "sha256": "69a945ae3ca62a011b44e68f39c0a2a211e7ea0a15876a3ff4c4f9b30f79f479"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18CoopIntegration.cs",
+      "bytes": 4042,
+      "sha256": "57aae7c48b9d18025d210a9fbbdd4ba8d6830513a2079d82de8ea893196853d8"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18DkbIntegration.cs",
+      "bytes": 14313,
+      "sha256": "933bab336375f81cea4851874a43b4346938b784c22d169b8ff37447c2cf6683"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18DoaxIntegration.cs",
+      "bytes": 7852,
+      "sha256": "60f164351b238b35c100a4395a3da94f8850f77d916952a9a356f3f2ce542b66"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18DrMario64Integration.cs",
+      "bytes": 24742,
+      "sha256": "a305d380007e8f1e0fb47eaac00335578a054bf4e9bc1f3f44a7f3805122b96a"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18GowIntegration.cs",
+      "bytes": 17881,
+      "sha256": "6d4c6efd41084f03becca0ed3bd31475311fcf1c0918e41279bd7e0533e2f166"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18GowKiexsterIntegration.cs",
+      "bytes": 26647,
+      "sha256": "21d390cac2dc1b0713723d1990137bfa97d1ecc505982d108469cc482f89eaa4"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18GtaIntegration.cs",
+      "bytes": 19405,
+      "sha256": "cf5ad95aa18231e69f838ab00771357e166a9ccd2efb00436a6e34f3bbe41707"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18GtaNativeIntegration.cs",
+      "bytes": 16418,
+      "sha256": "3f06c666b1274febe1389a2cbec0303fe24082000676e5912a1166a7ff51fe1e"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18IsoIntegration.cs",
+      "bytes": 13831,
+      "sha256": "46310010e488c2c8ff61faaa6d697d54c6c4253b9c55b79bad3b482d8ac1f148"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18LasIntegration.cs",
+      "bytes": 6409,
+      "sha256": "e05a4b3d30cddf6e3271a2f0d22ff1afa9f706cee017fd19c703ed2957205587"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18MarioIntegration.cs",
+      "bytes": 6105,
+      "sha256": "b38d5f2244115a3f327dc704211b8266e0702cce5c744a02765b75c19139f778"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18MkwIntegration.cs",
+      "bytes": 7495,
+      "sha256": "4882eeee78b4e4792199c30f48e8ace42d9649d5689cc10080a5b5f8f3f5a2fd"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18OdysseyIntegration.cs",
+      "bytes": 7032,
+      "sha256": "3930b7c264bc99b9ad040e7a019d803709a3accf528552ac23e05ef3f76ecb36"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18PinyonIntegration.cs",
+      "bytes": 9181,
+      "sha256": "1be1d2cc3009d7eedacd9315406177db1637bce12019fbae3767ef986ef75928"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18Ps4Integration.cs",
+      "bytes": 9196,
+      "sha256": "b3296b537854c7f3d23cf3051a48cb3e6737309cebc558d8d9848bf01ed45413"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18Render96Integration.cs",
+      "bytes": 3282,
+      "sha256": "58feffbe9e604ba1a22a9b446318b890a44171021c499bd2d40e8634dbb029c6"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18SsxCacheIntegration.cs",
+      "bytes": 17864,
+      "sha256": "8fa1d4936e39d80e7cc94218f7de828489985ccfd392f23f0bc8fe320f55c23e"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18SsxIntegration.cs",
+      "bytes": 4835,
+      "sha256": "2d063bfd5556cd51f7de9386bf259f5aac61e23d2f6993b5fccadb7646d1d367"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R18TotkIntegration.cs",
+      "bytes": 5889,
+      "sha256": "6d0abe87cbadce8f1baa7ce6d5cb08b06d0676a1b6f95f38293f51256ae337cd"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/R19NewPipelinesIntegration.cs",
+      "bytes": 32370,
+      "sha256": "523fe8ef725f93676436db0fa48591c940f969812a62c2de24da07f1a52b1f96"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/RadzLauncherIntegration.cs",
+      "bytes": 9523,
+      "sha256": "b7442e9ea1ac6210db203eaf283bedc6bac62af53ed31fc92350a0e7e1f9dc45"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/ReBlueIntegration.cs",
+      "bytes": 12496,
+      "sha256": "874ad5becadab6a85e3cc96e304b3e03a4a63c04de9c954c47a4bd66e2016c68"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/RedriverIntegration.cs",
+      "bytes": 6155,
+      "sha256": "df4db74765093abd8f3a79e46beee7e9981112ae020f1c8ca1baaa99a78fce3d"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/RemoteIntegration.cs",
+      "bytes": 18774,
+      "sha256": "09277f2b6f770835bb061d183a89cfd87c759032b409631350eae0239bfebeeb"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/RetailArcadeIntegration.cs",
+      "bytes": 9189,
+      "sha256": "578a371bb986f63cc7c47390ccf286bacd7157f609d5daed147f9526315936bb"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/RetailStfsIntegration.cs",
+      "bytes": 15051,
+      "sha256": "31f03cffab4717b0d719bff5f9458eb83a1bda6f8c055c18c3edec5ccc46a3ad"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/RustToolchainIntegration.cs",
+      "bytes": 14054,
+      "sha256": "7dcf84a43ba28de4eed4cd682fe29f263c76c4d32ef727702e8e43ef508e275c"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SavageWindIntegration.cs",
+      "bytes": 24689,
+      "sha256": "8ef6317e4bb8cf7bf198d7edd8931849dfbe0d465d8d99129f3a07ca7e107df8"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SchemaParityRunner.cs",
+      "bytes": 3917,
+      "sha256": "5940adfed77f5ba188f286dc3573e840fcfc59f0d1de73c39498ad9d00878b2d"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SeveredIntegration.cs",
+      "bytes": 4922,
+      "sha256": "ffd51e1b15bfa0821daaeada53ea3111452c0621bc78888d2cda57dae2853853"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/ShadowRomeIntegration.cs",
+      "bytes": 5589,
+      "sha256": "41816d698cbf9d453e861f3284e69aa72525366821083a996769e1cc0387600d"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SilentHillIntegration.cs",
+      "bytes": 4036,
+      "sha256": "0e43cd3402cf2c799e451dfd88466220c842f2a598abd85125b30f37368190f7"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SimpsonsIntegration.cs",
+      "bytes": 7215,
+      "sha256": "c1cc9b42ae204940def9286f0af9e756211c198e53042876ef05fd0059cc8095"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/Sm64PlusIntegration.cs",
+      "bytes": 7135,
+      "sha256": "a945387bccd963a3e3dc62a97d932a24f922260a57dd0f3d17a2a57861283375"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SonicAirIntegration.cs",
+      "bytes": 4143,
+      "sha256": "3510fb559a7f5d657f8f7ca9b1e6df6f50fbd153278833aab659800c200a3b5b"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SotcIntegration.cs",
+      "bytes": 31204,
+      "sha256": "44347dd6a88f906e016f9ffcaf6337335fbefa811f4a4e21fc498cc553cb7395"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SpaghettiIntegration.cs",
+      "bytes": 6592,
+      "sha256": "13d294de884529ce5139f000f064bff54bfbab4a96e53deb9ce3ebd61ceaa9a1"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SpartanNativeIntegration.cs",
+      "bytes": 10104,
+      "sha256": "30a2cd06c1515369255b91fa3d1376a020cfd8a5eb0d59c63fdc5708a85af6f0"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SsxNativeIntegration.cs",
+      "bytes": 9579,
+      "sha256": "669f89ed5f7acd12501cdc4a965e6ad301ba0b1b72ec5072f68cb4d95174ef7b"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/StageAIntegration.cs",
+      "bytes": 6948,
+      "sha256": "824d20a9d971d4c2f1e37dd3103e5cad3d98b15f18ee9fd558457faafc0c6332"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/StarshipIntegration.cs",
+      "bytes": 3926,
+      "sha256": "ee3541a02c25d9d35dd22eb7ac3405b1569fc93c2b3dbe3811de1c3e143d55b4"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/StfsIntegration.cs",
+      "bytes": 8043,
+      "sha256": "3606c3ac1dbefc73e4122f8c63dc2892a796e30a7d404686d52ba3d33b451c8d"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/StrikersGcFlowIntegration.cs",
+      "bytes": 6291,
+      "sha256": "dc55a5b057b96f9bb8b3ae96ba361250f867e19b495c2864e54abd876aae317b"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/StrikersWiiFlowIntegration.cs",
+      "bytes": 21509,
+      "sha256": "4f5c7d86221d83f8a4c7bd6092a4e57fdab2750576acbfe92c4ff46e2bd3cfd9"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SuperMetroidSourceLaunchIntegration.cs",
+      "bytes": 4007,
+      "sha256": "c97a4f1ff383d8438bdc6e68946a27d9fd17d331dc1e4cbeb6b7250be2f4dc7e"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SvodIntegration.cs",
+      "bytes": 10432,
+      "sha256": "918a00051a6a65da1b81df0591b8dbb503303e67262c25cd2ff9f856d66ff0cd"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SwitchGeneratorIntegration.cs",
+      "bytes": 8976,
+      "sha256": "c02c3555273944eb2647311c85597ddfc86a81674e240d31eaaf502209bf9fde"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SwitchNativeIntegration.cs",
+      "bytes": 5186,
+      "sha256": "b004ebb7a5f662e173173d6e24f9f219ce2dfd8d01fb4c1e83426bb9789ef4e4"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/SymphonyIntegration.cs",
+      "bytes": 2935,
+      "sha256": "4ed68c044bac4dc980b736d359021f497463fe6102a6a4013541ca5b2671e458"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/TotkCacheIntegration.cs",
+      "bytes": 28051,
+      "sha256": "85b4ffc7795007c8423fae2abaae6c34826e904c29ebde03a6d41fabfd4faa45"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/TrxIntegration.cs",
+      "bytes": 8152,
+      "sha256": "823155ed7df944bb30f038bd24f38d299e8da7383e40818aca36675b146a1b31"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/TwoShipIntegration.cs",
+      "bytes": 4555,
+      "sha256": "c1b1a5d7fa5fcc42f1fb19d8dc081a018764c50a466a69f492e8973d70cddc46"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/UiFixtureSeeder.cs",
+      "bytes": 8350,
+      "sha256": "de5c417df53d69782b1805c57f9ed599ab0bc497e7e40ca9262528bc5492b153"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/UnleashedIntegration.cs",
+      "bytes": 9149,
+      "sha256": "acf569b0e492a2a35a3f6fa4546e28e75c828329e8643846ee5852a772eaa763"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/V5Integration.cs",
+      "bytes": 12453,
+      "sha256": "02de9bef79ca2ca2eb887a6942fc97d4da1b578c1e576b944f86062d51aa9814"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/VandalIntegration.cs",
+      "bytes": 3940,
+      "sha256": "d539ef9f76e6d90936dcefddea4980553caa8679f3b2a51bd336c271acb34261"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/WindWakerHdIntegration.cs",
+      "bytes": 5069,
+      "sha256": "9c436c87671f1df4a9817e659fc5c3ca60d78537c43011fc0dfcb240dec09be3"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/WipeoutCompositionIntegration.cs",
+      "bytes": 6163,
+      "sha256": "cee861f2ce42cf92a13ae7219ff482cccc45326b5bd89b5a56f46f401327ce93"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/WipeoutInstallIntegration.cs",
+      "bytes": 7623,
+      "sha256": "0477bcb02b4964af4cf1fd60b1ed5101b7f9fd1342abed68d82ad3ce425965ae"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/WipeoutPhantomIntegration.cs",
+      "bytes": 6188,
+      "sha256": "d5d600c1cbd6600284985529375bf7dff67d61d4413109aa85e9446dbb48643c"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/WipeoutRewriteMediaIntegration.cs",
+      "bytes": 9483,
+      "sha256": "c164ff5e13680b01e6dd62f31d20711068321ad57c94b7200e25563ddfea4968"
+    },
+    {
+      "path": "Tests/AddonInfrastructure/XboxPortableIntegration.cs",
+      "bytes": 28424,
+      "sha256": "22c47f09c811a207b04efb49f2516b8f12678b5f9eeeee710fafafbc85bf4ede"
+    },
+    {
+      "path": "Tests/StoreSearch/search.test.cjs",
+      "bytes": 16318,
+      "sha256": "8c47cc8e202eb5e187338d115738a9ce93ccecfce6b30588e41a50a06a4ef730"
+    },
+    {
+      "path": "Tools/DrMario64/N64Recomp.exe",
+      "bytes": 926720,
+      "sha256": "7b9bb46d7e93327a2d3fa808534e867a1a473f581b0b8508300a1db05a9d3cd6"
+    },
+    {
+      "path": "Tools/DrMario64/ORIGIN.txt",
+      "bytes": 433,
+      "sha256": "dddd9e260f0846acb4e9f9c36fdd9c6c3827f404baea113a7bc157044a452453"
+    },
+    {
+      "path": "Tools/DrMario64/RSPRecomp.exe",
+      "bytes": 659968,
+      "sha256": "c749d4654094bbae2399a8e8e86c23251437bcaf581e45b60c19e567e0a77edd"
+    },
+    {
+      "path": "Tools/DrMario64/file_to_c.exe",
+      "bytes": 293376,
+      "sha256": "f6a50cab4253e291a2c18359afc34e5eddd71ba97eea1e4b039d8108017a2009"
+    },
+    {
+      "path": "Tools/DrMario64/licenses/ELFIO-LICENSE.txt",
+      "bytes": 1110,
+      "sha256": "a15b5135eae48f2f6f6572ac4d7baf678761fdfde530344e9202fceb9e4e5014"
+    },
+    {
+      "path": "Tools/DrMario64/licenses/N64Recomp-LICENSE.txt",
+      "bytes": 1095,
+      "sha256": "8f3594c18cd4f7e551795c2a11d17c460f7dd2c39ffde0db82f1de876aaac0c4"
+    },
+    {
+      "path": "Tools/DrMario64/licenses/RT64-LICENSE.txt",
+      "bytes": 1095,
+      "sha256": "b242a9948efebf64d40331807202330ccf0e8704ea97ee4e970f51bb73e8f327"
+    },
+    {
+      "path": "Tools/DrMario64/licenses/clang-LICENSE.TXT",
+      "bytes": 15140,
+      "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47"
+    },
+    {
+      "path": "Tools/DrMario64/licenses/fmt-LICENSE.txt",
+      "bytes": 1458,
+      "sha256": "25b5db04aa6070c12ac518b91cbd0a59725c050ecb091456e6ebc3d3eeb369cf"
+    },
+    {
+      "path": "Tools/DrMario64/licenses/lld-LICENSE.TXT",
+      "bytes": 15138,
+      "sha256": "f7891568956e34643eb6a0db1462db30820d40d7266e2a78063f2fe233ece5a0"
+    },
+    {
+      "path": "Tools/DrMario64/licenses/llvm-LICENSE.TXT",
+      "bytes": 15141,
+      "sha256": "8d85c1057d742e597985c7d4e6320b015a9139385cff4cbae06ffc0ebe89afee"
+    },
+    {
+      "path": "Tools/DrMario64/licenses/rabbitizer-LICENSE.txt",
+      "bytes": 1094,
+      "sha256": "f0df1d4bd58eb60274ae4a8d34e71acd7295903dae9b3b0a4872346ddd87846d"
+    },
+    {
+      "path": "Tools/DrMario64/licenses/sljit-LICENSE.txt",
+      "bytes": 1469,
+      "sha256": "37c7a090fc61388430d63fc97bf8a22ffce92d3ca2249aac572cfaf411d3070f"
+    },
+    {
+      "path": "Tools/DrMario64/licenses/tomlplusplus-LICENSE.txt",
+      "bytes": 1094,
+      "sha256": "529bc3900a9571e49db285b0df432397e70b881cc3bf48de6667ae74ff4b06d8"
+    },
+    {
+      "path": "Tools/ForzaNative/.gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "Tools/ForzaNative/ORIGIN.json",
+      "bytes": 51367,
+      "sha256": "6b0e0ba403928c3e46ea3d61547d07ba90ded31450670a2d01c2a1fff3e5b728"
+    },
+    {
+      "path": "Tools/ForzaNative/source-support.zip",
+      "bytes": 198786,
+      "sha256": "2ba46f15ed7092eb250c47d8616684cea535a25e43fbe2aa0eb8208f8c76617f"
+    },
+    {
+      "path": "Tools/ForzaXex/ORIGIN.txt",
+      "bytes": 258,
+      "sha256": "7289340785b13625a715fba4ad8d3960d3af8675fed2df53c24637bc0343bd68"
+    },
+    {
+      "path": "Tools/ForzaXex/reference.json",
+      "bytes": 20541,
+      "sha256": "dc0dc00cb9781220aacf147a5b328f690b7ab5bda97b5097e78cb48a6bf0c058"
+    },
+    {
+      "path": "Tools/Gt4Disc/README.md",
+      "bytes": 1285,
+      "sha256": "93a9cbbe6882838ac902c2e91eaebd1483c2c9114f24ace06c538251e29b0d66"
+    },
+    {
+      "path": "Tools/Gt4Disc/build-gt4-disc.ps1",
+      "bytes": 3909,
+      "sha256": "798b57742c1ef9683c58b3288a2774b2243869654b05c544a563f77846f6a0df"
+    },
+    {
+      "path": "Tools/Gt4Disc/getall-gt4-disc.rs",
+      "bytes": 3051,
+      "sha256": "4d37840b5a096a790356cbe06c585697d71b7717972eaab55fdfafb7119823bb"
+    },
+    {
+      "path": "Tools/MkwSm86/README.md",
+      "bytes": 1704,
+      "sha256": "a85f8de621384437e45ac4043ddf1400a120da1e4fd9d63e29142c5eb42ad23f"
+    },
+    {
+      "path": "Tools/MkwSm86/mkw-sm86-cli-support-v1.zip",
+      "bytes": 63227,
+      "sha256": "1c79d30594951495f210a349da05aabe0e240f0189dba87c95a78da73a4500ce"
+    },
+    {
+      "path": "Tools/MkwSm86/package.json",
+      "bytes": 1156,
+      "sha256": "484ccd088f0ef608ac1d5688ae359ca7096848677535f3e65779759a044cfa6a"
+    },
+    {
+      "path": "Tools/MkwSm86/repack.py",
+      "bytes": 1797,
+      "sha256": "56272a96c48c96e8f9a6fb33e12b730597103bf2fcdc8b943d25bbba2978572a"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/configuration/instructions.json",
+      "bytes": 288,
+      "sha256": "3407e0837c09cbba2a4cff95405431288d915bc660c869c35b84070c5e88bd2d"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/__init__.py",
+      "bytes": 67,
+      "sha256": "7f1f0b419ea7b5cb2b0913ac43acb6f8e35fee4fe657f8a1f8c4f48029b104cb"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/adapter_fields.py",
+      "bytes": 6897,
+      "sha256": "87aac4051216cddb58c57c06098d415d48c6ab4e0e7c0b47d67a1a6b00ae82e2"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/adapter_model.py",
+      "bytes": 1833,
+      "sha256": "d4870950d1f8d28afeb23453a3648c3164e6cf24a9bb49ac80729e150850bbf4"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/backend.py",
+      "bytes": 1791,
+      "sha256": "199e21cfe58b48d16ececc34928227cc3a8f9901f47ee95fe79b68fe09d1b1b4"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/cli_decoder.py",
+      "bytes": 6478,
+      "sha256": "ef2238afdc34da77750274eb066be65d04001275d6d17ac76fb4bf17de84c7aa"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/cli_parse.py",
+      "bytes": 3523,
+      "sha256": "c19a3eb60d4c68c738ca88de1669c3477867583ecc195c436529f47789431eae"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/control_adapter.py",
+      "bytes": 3789,
+      "sha256": "0f3f698b2b7cb26fc44708808992c7ceecf08a2922b0e28273a0b6f1cf7780bf"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/lea_overlay.py",
+      "bytes": 4866,
+      "sha256": "4cd9116ccdcd178ee25cdad773f6f92990da2f7a917040bf73da2dfd38ccec66"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/memory_adapter.py",
+      "bytes": 10345,
+      "sha256": "14ad35ac42009159faf4db0ce4e7039f220b012172ab06312882406b92f729d5"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/memory_overlay.py",
+      "bytes": 1849,
+      "sha256": "af2167733fadfd8e5e835719e952bc1182bb4833bf662fac6e0ddd9c06f99a8c"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/scalar_adapter.py",
+      "bytes": 12508,
+      "sha256": "39e8e228efd9d6b0113ec43cb5e340825593e83bc7be5f4d5370578e106127c7"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/texture_adapter.py",
+      "bytes": 8188,
+      "sha256": "567dc19396163f1a21eb88df684b216e9a5cf448ca132df362482ea091068b76"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/files/sm86/translate/frontend/allfix_sm86/vendor/nv_isa_parser.py",
+      "bytes": 20903,
+      "sha256": "4db3ec6bcfab76f0480250183148b8c0b2357187a7bb6684dd92d99f9b00068e"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/manifest.json",
+      "bytes": 7020,
+      "sha256": "549aaa37ac928d921cd4f2d382df84c824480c9d64b5ca2f23ef0ea3aca06325"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/notices/CuAssembler-MIT.txt",
+      "bytes": 1102,
+      "sha256": "2e4a290cc86b2ed281cc200b00a8ef8d13afaf26207f6b857bc330c555d91b23"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/notices/Mesa-NAK-MIT.txt",
+      "bytes": 1442,
+      "sha256": "8875c84633d4d2e3794a11cc8d4a74731ada2c53cc6437644f6201c3628ad8ed"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/notices/ORIGIN.txt",
+      "bytes": 597,
+      "sha256": "0d4884e85ddc077e9b2db69e70108858a595e07d23a381ebf8c1b60f09fb6035"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/notices/mkw-MIT.txt",
+      "bytes": 1063,
+      "sha256": "458bc459b303410a4cbed893a9a76affd0beada85a8d381e0f147b106ec450a7"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/notices/nv-isa-solver-MIT.txt",
+      "bytes": 1068,
+      "sha256": "6f9eba9d8bab25327120b41a6cf101596d58b44cbd31c51091408bb77c69191a"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/overlays/sm86/translate/frontend/program.py",
+      "bytes": 2551,
+      "sha256": "93050ad0c4eee1908eca71cae5f586133f29ab9e0ced6bf4937a2c2246ec74a2"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/overlays/tools/prepare/shaderstep.py",
+      "bytes": 9113,
+      "sha256": "4ffba8c1d68599ca841fb128e1d02b55cd4f8d987858da7c5a16d278112a6d66"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/overlays/tools/shaders/extract.py",
+      "bytes": 19438,
+      "sha256": "855b4b9e4a8d1301ebfca7ccd86378131f4910eb9dfbbfe523f6a520d14d331f"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/overlays/tools/shaders/translate.py",
+      "bytes": 16120,
+      "sha256": "dcb01d55d36ba0cf2dae4cfab57976eb9739723a70b1c5ff3938a19af3c0434c"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/proof/fixtures.json",
+      "bytes": 9271,
+      "sha256": "bb0e63a228af27a78c391fa5f4367dadcc7170dbea74c9a4aa09e34a71e3ea6e"
+    },
+    {
+      "path": "Tools/MkwSm86/support-src/proof/prove_backend.py",
+      "bytes": 19703,
+      "sha256": "6e5a755a317472cc03e263c36c067c5c0c2a2a6eec391042163636d77bd405a4"
+    },
+    {
+      "path": "Tools/NativeExtractors/KnowYourRole/Launcher.lock.json",
+      "bytes": 13610,
+      "sha256": "949f91f3c487847e5e5c82d113990fe3a9765023a5542f327456cd193e2a5661"
+    },
+    {
+      "path": "Tools/NativeExtractors/KnowYourRole/RecompOne.Recompiler.lock.json",
+      "bytes": 13460,
+      "sha256": "1ef576c95d9cdf83a3776f1a9ee2c0fe94d79bda068b86b0c3268971b68b4ca0"
+    },
+    {
+      "path": "Tools/NativeExtractors/KnowYourRole/RecompOne.Runtime.lock.json",
+      "bytes": 12300,
+      "sha256": "6fe9cebf828689c8164f685c5cbcad363a6adeb373d99d0ea8f9ec91bfa960c7"
+    },
+    {
+      "path": "Tools/NativeExtractors/README.md",
+      "bytes": 7974,
+      "sha256": "90caa1f5620524e34bdd71d9cefcf2ce8abea7706641caeeb41bf7ae5e1aa4e9"
+    },
+    {
+      "path": "Tools/NativeExtractors/bluewake-import-windows-x64.zip",
+      "bytes": 55610,
+      "sha256": "5dd29c5f689f55135a9b1591525cfb9ff917c1b5ee699c71629fcc671400a6df"
+    },
+    {
+      "path": "Tools/NativeExtractors/build-kingsfield-import.ps1",
+      "bytes": 2613,
+      "sha256": "88081ebae011e6446cc89885205d5c87ce33e4c3eb8965a4ca596adfffbaa6c4"
+    },
+    {
+      "path": "Tools/NativeExtractors/build-know-your-role.ps1",
+      "bytes": 3084,
+      "sha256": "f2b7bc0e297ca0ed7974cc9e28237b6098cec318dcae6426401de56bcfdcae87"
+    },
+    {
+      "path": "Tools/NativeExtractors/kingsfield-import-windows-x64.zip",
+      "bytes": 512201,
+      "sha256": "8b915f1e4b17a4e5261cca664dd027b9485321591a54471a0515a80313eb0970"
+    },
+    {
+      "path": "Tools/NativeExtractors/kingsfield-import.cpp",
+      "bytes": 569,
+      "sha256": "cb6a9029f0cddf658696ec30e6408ffe7eeb188a41e56845dc424a179a82c375"
+    },
+    {
+      "path": "Tools/OfflineInno/ORIGIN.txt",
+      "bytes": 486,
+      "sha256": "f2e1d7bd3d5158032b29e5f11c2eada0bf11452b44af0d9a33eb6ce3c0b11fed"
+    },
+    {
+      "path": "Tools/OfflineInno/innounp.exe",
+      "bytes": 1790976,
+      "sha256": "6ac216da1f7af80a5825e9ce32810fb0115e461884d27125e1f4488e094bc0ee"
+    },
+    {
+      "path": "Tools/OfflineInno/licenses/InnoSetup.txt",
+      "bytes": 1503,
+      "sha256": "dba011d51798ec392741c602f5a1ccf6705e4a08946c2855aa4fd417cf5814e3"
+    },
+    {
+      "path": "Tools/OfflineInno/licenses/bzip2.txt",
+      "bytes": 1764,
+      "sha256": "ac232a05beb4dc5545b4c0bda919673bb74581ca8578b511e12921e51eecf5fa"
+    },
+    {
+      "path": "Tools/OfflineInno/licenses/gpl.txt",
+      "bytes": 18009,
+      "sha256": "204d8eff92f95aac4df6c8122bc1505f468f3a901e5a4cc08940e0ede1938994"
+    },
+    {
+      "path": "Tools/OfflineInno/licenses/lgpl.txt",
+      "bytes": 26444,
+      "sha256": "ea20d713b1fad2f86f1051a90611858f9dc2642f873e18e467578afe943fc05d"
+    },
+    {
+      "path": "Tools/OfflineInno/licenses/lzma.txt",
+      "bytes": 21130,
+      "sha256": "da256bb9bf3a5ca1fbcf62ee6ddf552ba13559313d12cef375e8ccc5d0d7526c"
+    },
+    {
+      "path": "Tools/OfflineInno/licenses/upstream-repository-LICENSE.txt",
+      "bytes": 1072,
+      "sha256": "413793d0cc215456b0a045046ec6322892ecf3c63aca30e6cf843015f078316e"
+    },
+    {
+      "path": "Tools/OfflineInno/licenses/zlib.txt",
+      "bytes": 1541,
+      "sha256": "1d6b70ec33bf0de16c771ad41e326a1d3ee4ffa1087e8e32a6266ae50c648067"
+    },
+    {
+      "path": "Tools/OfflineNsis/7z.dll",
+      "bytes": 1897984,
+      "sha256": "500db9eb17f3c21b729ba41dd02ecfe1823da05028c7e4ba129084cc74cc364e"
+    },
+    {
+      "path": "Tools/OfflineNsis/7z.exe",
+      "bytes": 574464,
+      "sha256": "dc0493429fe28136fcb177a0e77c9875cbb3b0bff5f2f8eeba4df302e98cef76"
+    },
+    {
+      "path": "Tools/OfflineNsis/License.txt",
+      "bytes": 6031,
+      "sha256": "519ac0a4bded9c18ea02e0afb71f663d8c47373bd9facd3ac96a79f51d77765d"
+    },
+    {
+      "path": "Tools/OfflineNsis/ORIGIN.txt",
+      "bytes": 399,
+      "sha256": "63d372b489e685e9ceaf9dba41305d0198cbde76a9aec9755f25637f18188309"
+    },
+    {
+      "path": "Tools/OfflinePyInstaller/mml-v0.9.6-beta.json",
+      "bytes": 5449,
+      "sha256": "09976354e9cc7779b19a619b316b9d3e35458216997c584129b13eef754e26d6"
+    },
+    {
+      "path": "Tools/PinyonNative/.gitattributes",
+      "bytes": 115,
+      "sha256": "5053569bbd6303c0717c4a7abf1a3910a66a7dfe8fc8206eb7276ce736eb9a19"
+    },
+    {
+      "path": "Tools/PinyonNative/ORIGIN.json",
+      "bytes": 13709,
+      "sha256": "ffd2f8a0d99eb9fe36de6560b4e343159515f234cbf2c40a5c6fb784188b79c8"
+    },
+    {
+      "path": "Tools/PinyonNative/README.md",
+      "bytes": 4741,
+      "sha256": "52a55f823bbcbbb39c94e8bd39dbe4a782f219c56b70d7a7ad45fee4333ff200"
+    },
+    {
+      "path": "Tools/PinyonNative/bridge-source/allfix_ngx_bridge.cpp",
+      "bytes": 7426,
+      "sha256": "9cfa6c15b512228dc789460e90936163169bb41cab95a3364ede5a77ada9bddd"
+    },
+    {
+      "path": "Tools/PinyonNative/bridge-source/allfix_ngx_bridge.h",
+      "bytes": 16042,
+      "sha256": "e5d78a312bee09239dfb6ce11280e8d80c691f282a0366bddff225b1a81adbf8"
+    },
+    {
+      "path": "Tools/PinyonNative/bridge-source/allfix_rex_etw.cpp",
+      "bytes": 1298,
+      "sha256": "f3b5de7890d025ca4f2613aa2dd6be06d334fcdc56fecadbc6c4ef42798ec121"
+    },
+    {
+      "path": "Tools/PinyonNative/bridge-source/allfix_rex_etw.h",
+      "bytes": 532,
+      "sha256": "6bd7b55fb9c4d134298d9fdbfd88698463f7d2a45419c8f326a40c002ca2ade1"
+    },
+    {
+      "path": "Tools/PinyonNative/bridge-source/layout-fields.json",
+      "bytes": 3100,
+      "sha256": "0f876840e6693be79766f0c5a07a73fbc1f0bb8a59c63222f68c31679d70b317"
+    },
+    {
+      "path": "Tools/PinyonNative/notices/LLVM-MinGW-LICENSE.TXT",
+      "bytes": 15141,
+      "sha256": "8d85c1057d742e597985c7d4e6320b015a9139385cff4cbae06ffc0ebe89afee"
+    },
+    {
+      "path": "Tools/PinyonNative/notices/MinGW/COPYING",
+      "bytes": 2326,
+      "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f"
+    },
+    {
+      "path": "Tools/PinyonNative/notices/MinGW/COPYING.MinGW-w64-runtime.txt",
+      "bytes": 12155,
+      "sha256": "1db8da07b436c68833c0673ffee3d9fcb2526047f3820b81661865dfedc79a1f"
+    },
+    {
+      "path": "Tools/PinyonNative/notices/MinGW/COPYING.MinGW-w64.txt",
+      "bytes": 5905,
+      "sha256": "f38e6194bd3bfa1b654f118e5acefe0aead437bbe669eee43957ccc65a7127f1"
+    },
+    {
+      "path": "Tools/PinyonNative/notices/MinGW/COPYING.winpthreads.txt",
+      "bytes": 2883,
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177"
+    },
+    {
+      "path": "Tools/PinyonNative/notices/MinGW/COPYING.winstorecompat.txt",
+      "bytes": 1099,
+      "sha256": "fa7368d1f93d890c173177475d8ec7aff265a7d08f1f364d66f74d138978ce36"
+    },
+    {
+      "path": "Tools/PinyonNative/notices/NOTICE.txt",
+      "bytes": 378,
+      "sha256": "6034df692a4ddee1063989bfac0a7920a6051cb84acbc4d7c4431ebc3dcc9ed7"
+    },
+    {
+      "path": "Tools/PinyonNative/notices/NVIDIA-RTX-SDK.txt",
+      "bytes": 26620,
+      "sha256": "d4216e39ebef5f9b50a6712ebb37beeb5379862a67733a9999c651f21592aaf0"
+    },
+    {
+      "path": "Tools/PinyonNative/notices/ShiftGlue-BSD-3-Clause.txt",
+      "bytes": 1659,
+      "sha256": "8e065be1da2ff9a16b1f063d4636d8b67e6a654bb90583ea4332e66ac421bb18"
+    },
+    {
+      "path": "Tools/PinyonNative/publication-manifest.json",
+      "bytes": 2477,
+      "sha256": "0ee33bc914f28e8c96e0202a4e3992eaf2bb60a20afb8129b8dccbfbe285eb15"
+    },
+    {
+      "path": "Tools/PinyonNative/source-support.zip",
+      "bytes": 175161,
+      "sha256": "cc77d46b575da64c3c66e50d5306cd4e12c9cd45f2dc42738b09e614367bcfc6"
+    },
+    {
+      "path": "Tools/SavageWind/ORIGIN.json",
+      "bytes": 8834,
+      "sha256": "8407ddf2e8a6276a1129e527a06c3155b76d0585a329b0539c5aa0214b841c23"
+    },
+    {
+      "path": "Tools/SavageWind/PROVENANCE.md",
+      "bytes": 5480,
+      "sha256": "62889947834f753c751f1f226c319ca805363176949fb1a6b7343af1f7256a61"
+    },
+    {
+      "path": "Tools/Sm64Build/Dockerfile",
+      "bytes": 806,
+      "sha256": "180779356e9172b66d535db8154c292a60847926846e49bf2e1cc21d036370e5"
+    },
+    {
+      "path": "Tools/Sm64Build/packages.lock.txt",
+      "bytes": 5017,
+      "sha256": "8d50117c4ca902772d49b7ad54d30ced44c0e1bdcb832dc2f936a66d849734bc"
+    },
+    {
+      "path": "Tools/Sm64Build/sm64plus-ucrt64.lock.json",
+      "bytes": 15305,
+      "sha256": "4473152bf4b00ae9da3f0cae330d1a86a1a2dcba2aafc499588ef26afcc7a0e4"
+    },
+    {
+      "path": "Tools/SsxNative/.gitattributes",
+      "bytes": 43,
+      "sha256": "6c218cb3dd1e1b351e799bda1d537965cb75d3e723bc3633e20c75aba7c9deec"
+    },
+    {
+      "path": "Tools/SsxNative/ORIGIN.json",
+      "bytes": 10147,
+      "sha256": "855093b5c63af0c1a8e9f753cf1b860497d5b96ca18126e7cea9932f5da4f30f"
+    },
+    {
+      "path": "Tools/SsxNative/README.md",
+      "bytes": 2137,
+      "sha256": "3c17dbbf6e474876d2fda0d98187da58ca7536825655866acfe6ca761c305976"
+    },
+    {
+      "path": "Tools/SsxNative/source-support.zip",
+      "bytes": 601221,
+      "sha256": "054ae3be11679a61050033ccae491883c10b223c40fdd4a96512859b4e23715a"
+    },
+    {
+      "path": "Tools/UnleashedHelper/Sonic-Unleashed-Helper-NOTICES.txt",
+      "bytes": 33115,
+      "sha256": "978611dc9d9158f00efa9bd10dcfea078e6d337db05627cd8f85378dd132a46a"
+    },
+    {
+      "path": "Tools/UnleashedHelper/Unleashed-Xex-Helper-Sources.zip",
+      "bytes": 248867,
+      "sha256": "2ee674de1f5134e3b53e3424ec18bf3ca2aae94fe0779aed684dd578a9a4f5f3"
+    },
+    {
+      "path": "Tools/UnleashedHelper/allfix-mspack-lzx.dll",
+      "bytes": 117760,
+      "sha256": "1de3d9dd9b7add138814707efea6ec9155dec42d6d96ba6c673766be8df26f85"
+    },
+    {
+      "path": "Tools/UnleashedHelper/unleashed-xex-patch.exe",
+      "bytes": 184320,
+      "sha256": "f74ae704cd33d9dbac2c30f9f05194973211904ba80b2283db7cd4ae4fa60d2c"
+    },
+    {
+      "path": "Tools/VerifiedPatches/MML-LICENSE.txt",
+      "bytes": 1375,
+      "sha256": "e2fe4542ade43c367f245648ccdb5d0e74a9a6f6a309f55f3ece036fdd6d49df"
+    },
+    {
+      "path": "Tools/VerifiedPatches/mml-v0.9.6-beta.json",
+      "bytes": 23969,
+      "sha256": "78de63e0aec6ed0d3c797d07fcbebceb63a0915cd599606a66226c087f65bbae"
+    },
+    {
+      "path": "Tools/XboxMedia/marathon-1.0.0.json",
+      "bytes": 321593,
+      "sha256": "ac63913661caacf1c01e394a4c9eaeb9bf39196eb0f3eb1d9e50a3ea045e7db8"
+    },
+    {
+      "path": "Tools/XboxMedia/reblue-1.4.0.txt",
+      "bytes": 88593,
+      "sha256": "13d6e861b5183042730a406c27cb29ce5427ea429b00c9675f2121e490322c5d"
+    },
+    {
+      "path": "Tools/XboxMedia/reblue-LICENSE.txt",
+      "bytes": 1494,
+      "sha256": "f8c7147eba0225be836dd7f701bd9e254b76386271fe0a57955ee479864b1c97"
+    },
+    {
+      "path": "Tools/XboxMedia/shadow-1.0.1.json",
+      "bytes": 192709,
+      "sha256": "a3eebd5d8e19a08a235de8930b04a2032eadd57cbe1d7bb3bc03b4977cdcff5b"
+    },
+    {
+      "path": "Tools/XboxMedia/unleashed-1.0.3-game.json",
+      "bytes": 226712,
+      "sha256": "10a7132c936a9aed906308e12d71f12b69e7ca2b03a92c5dc3f0beffbd1f227a"
+    },
+    {
+      "path": "Tools/XboxMedia/unleashed-1.0.3-update.json",
+      "bytes": 2671,
+      "sha256": "7372c45279e9f58f0da2f4904101c6a7b7f21a010339cace3d40d09e6f7535e1"
+    },
+    {
+      "path": "UnRAR.exe",
+      "bytes": 520336,
+      "sha256": "7d1a4b642a400b2d89c7498a08aad3b496746c1f16d0f1d944784e0f1a0dc1c8"
+    },
+    {
+      "path": "Web/automation.css",
+      "bytes": 45525,
+      "sha256": "f5293e4a1c4dd24d203c1795d9f8fbdbbf6855a33dccdb2eb7fe0b9635ef1b26"
+    },
+    {
+      "path": "Web/automation.js",
+      "bytes": 17428,
+      "sha256": "0621c5fbd916ede4f1fc6deef8a1bc50370c38cef2948ab7b63c9c19fff1ebe0"
+    },
+    {
+      "path": "Web/catalog.js",
+      "bytes": 11847,
+      "sha256": "c92cbe3d45f4c366de2ed64918f5386f6dd2f0ed5a7cf6d5249157375d79c307"
+    },
+    {
+      "path": "Web/closing.css",
+      "bytes": 1694,
+      "sha256": "a110b4710c56d7ed76dfe01c67c5a8b47be0a21c238154ab3506e9705ba06b19"
+    },
+    {
+      "path": "Web/closing.js",
+      "bytes": 845,
+      "sha256": "8023a8fed9db5edb3ec2b92d5ab73ae7eec90643954eb5f1825e5e0632d53c55"
+    },
+    {
+      "path": "Web/index.html",
+      "bytes": 133792,
+      "sha256": "c94e1d55c29512f2539771f5014b97715b7309e72b6bb70da33bb9b5ccd840a6"
+    },
+    {
+      "path": "Web/library.css",
+      "bytes": 93998,
+      "sha256": "b3fb30e4e58f572cc84023e0238fe445fe4aa9bea8bec038639eb52adb9ec2c5"
+    },
+    {
+      "path": "Web/library.js",
+      "bytes": 73960,
+      "sha256": "b1bcd136804a30332366622d0f427acab85a12731f5a50ad261ce449c7d4cfe5"
+    },
+    {
+      "path": "Web/manual.css",
+      "bytes": 51044,
+      "sha256": "52e6d29828347d71b4dbc0e224d5a70a265b295df1fdbd80420c48a2abccc1aa"
+    },
+    {
+      "path": "Web/manual.js",
+      "bytes": 17491,
+      "sha256": "4048b44b91b8957d480f57ca41bee91e5966299f015e4c4a56dcf93afae90b69"
+    },
+    {
+      "path": "Web/mode-experience.jpg",
+      "bytes": 61012,
+      "sha256": "a4613fe03373634aea47ded0941b3ac8e9c78a11b76bcfab3fc857b65c6219e9"
+    },
+    {
+      "path": "Web/mode-store.png",
+      "bytes": 1553412,
+      "sha256": "11126dc15c11f19fd27eb4607e2a0cbd257013bd43dab32e90f2de9ab04af9e8"
+    },
+    {
+      "path": "Web/modes.css",
+      "bytes": 11450,
+      "sha256": "a4f9d1602bf23755046e5a3f7787dd6cbe0964c9903653ecae3d8e07213ab501"
+    },
+    {
+      "path": "Web/modes.js",
+      "bytes": 7327,
+      "sha256": "655630a7d1cb95188e9576c33532384cfc1d3760c598e662d6b90aa06aa7d955"
+    },
+    {
+      "path": "Web/payment.png",
+      "bytes": 4023,
+      "sha256": "8de26754794090c00bea977061ea9270a32e12763ff16b73abe9dea13bde2a72"
+    },
+    {
+      "path": "Web/reference.css",
+      "bytes": 23730,
+      "sha256": "4fae27a532892d983ec34140fb884402e6e29e4262f1890062034d68269e4b5a"
+    },
+    {
+      "path": "Web/store-search.js",
+      "bytes": 2140,
+      "sha256": "33f89f57d72975d3b2dcac693afdb69225819370de09e1192e84bddad508c064"
+    },
+    {
+      "path": "Web/store.css",
+      "bytes": 118423,
+      "sha256": "3cd9d858e452a3bb45e777f2c24ea0fb5f343bdea323d51d2b4588f7a293b882"
+    },
+    {
+      "path": "Web/store.js",
+      "bytes": 198128,
+      "sha256": "0a782e117fc5fd50e477049ee4f6af323282dc57adb3459828f606a60c337177"
+    },
+    {
+      "path": "Web/updates.js",
+      "bytes": 8450,
+      "sha256": "0832b5e2c0298b7904c8892839f8ee2a3ee3292ad7e02151897c77820ce610b4"
+    },
+    {
+      "path": "app.manifest",
+      "bytes": 883,
+      "sha256": "8daa9e184956f66de1aa608b6fb6156457c5e791ca7704c0922148e8781e0766"
+    },
+    {
+      "path": "build-release.ps1",
+      "bytes": 1936,
+      "sha256": "646628f82d74789536938a5bfc10aac45ac8128a6016f0061bb1679ca52df6ff"
+    },
+    {
+      "path": "icone.ico",
+      "bytes": 172738,
+      "sha256": "7b72801d1bd3d34bc1c6d0b864e3f3aa8b718b49d5f747d977c42e9dcf955fe7"
+    },
+    {
+      "path": "run.ps1",
+      "bytes": 492,
+      "sha256": "2bdcaabf806d0c4edd2415203368fda4b1145f33dec5a7c143395e3e08467ea9"
+    }
+  ]
+}

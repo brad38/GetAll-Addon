@@ -1,0 +1,50 @@
+{
+  "format": 1,
+  "resources": [
+    {
+      "name": "MkwSm86.cli-support.zip",
+      "source_root": "desktop",
+      "source": "Tools/MkwSm86/mkw-sm86-cli-support-v1.zip",
+      "bytes": 63227,
+      "sha256": "1c79d30594951495f210a349da05aabe0e240f0189dba87c95a78da73a4500ce",
+      "group": "mkw-sm86"
+    }
+  ],
+  "notices": [
+    {
+      "source_root": "desktop",
+      "source": "Tools/MkwSm86/support-src/notices/CuAssembler-MIT.txt",
+      "target": "licenses/MkwSm86/CuAssembler-MIT.txt",
+      "bytes": 1102,
+      "sha256": "2e4a290cc86b2ed281cc200b00a8ef8d13afaf26207f6b857bc330c555d91b23"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/MkwSm86/support-src/notices/Mesa-NAK-MIT.txt",
+      "target": "licenses/MkwSm86/Mesa-NAK-MIT.txt",
+      "bytes": 1442,
+      "sha256": "8875c84633d4d2e3794a11cc8d4a74731ada2c53cc6437644f6201c3628ad8ed"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/MkwSm86/support-src/notices/ORIGIN.txt",
+      "target": "licenses/MkwSm86/ORIGIN.txt",
+      "bytes": 597,
+      "sha256": "0d4884e85ddc077e9b2db69e70108858a595e07d23a381ebf8c1b60f09fb6035"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/MkwSm86/support-src/notices/mkw-MIT.txt",
+      "target": "licenses/MkwSm86/mkw-MIT.txt",
+      "bytes": 1063,
+      "sha256": "458bc459b303410a4cbed893a9a76affd0beada85a8d381e0f147b106ec450a7"
+    },
+    {
+      "source_root": "desktop",
+      "source": "Tools/MkwSm86/support-src/notices/nv-isa-solver-MIT.txt",
+      "target": "licenses/MkwSm86/nv-isa-solver-MIT.txt",
+      "bytes": 1068,
+      "sha256": "6f9eba9d8bab25327120b41a6cf101596d58b44cbd31c51091408bb77c69191a"
+    }
+  ]
+}

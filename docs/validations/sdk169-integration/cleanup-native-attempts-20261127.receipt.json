@@ -1,0 +1,463 @@
+{
+    "format":  1,
+    "authority":  "User requested continuous cleanup; root authorized only the preflight-listed copies and authored fixtures",
+    "plan_sha256":  "6a2827055f01fd200f30295fb812c6e3d28ca6715f371152431896e8397fdddc",
+    "started_utc":  "2026-11-27T22:03:04.3774770Z",
+    "status":  "PASS",
+    "removed":  [
+                    {
+                        "path":  "backend-native-2/game with spaces á/sm86/nvdisasm/nvdisasm.exe",
+                        "bytes":  5947392,
+                        "sha256":  "f0ab98df225b9f2568e8f56c24a919a4e1362425fb7c02101afbf85022324add",
+                        "kind":  "verified-tool-copy"
+                    },
+                    {
+                        "path":  "backend-native-3/game with spaces á/sm86/nvdisasm/nvdisasm.exe",
+                        "bytes":  5947392,
+                        "sha256":  "f0ab98df225b9f2568e8f56c24a919a4e1362425fb7c02101afbf85022324add",
+                        "kind":  "verified-tool-copy"
+                    },
+                    {
+                        "path":  "backend-native-4/game with spaces á/sm86/nvdisasm/nvdisasm.exe",
+                        "bytes":  5947392,
+                        "sha256":  "f0ab98df225b9f2568e8f56c24a919a4e1362425fb7c02101afbf85022324add",
+                        "kind":  "verified-tool-copy"
+                    },
+                    {
+                        "path":  "backend-native-5/authored/romfs/Shader/authored.bnsh.zs",
+                        "bytes":  652,
+                        "sha256":  "1c0a159b92655ff4be17a0b49edffd3bf9bf9e1b273f95239d48aeca11363da6",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/game with spaces á/sm86/nvdisasm/nvdisasm.exe",
+                        "bytes":  5947392,
+                        "sha256":  "f0ab98df225b9f2568e8f56c24a919a4e1362425fb7c02101afbf85022324add",
+                        "kind":  "verified-tool-copy"
+                    },
+                    {
+                        "path":  "backend-native-5/prepared/pipeline-pairs.bin",
+                        "bytes":  832,
+                        "sha256":  "ee1e781b665b874cd804324280ae75d21cfb3f52106ab98fce6d681e96964efa",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/0b7d6ca5f77f6c052405d976a1d0454a1258740f.code",
+                        "bytes":  224,
+                        "sha256":  "4c9860d72482139de07c1565f742cce31201d6511c9160a0e06211d63355b271",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/0b7d6ca5f77f6c052405d976a1d0454a1258740f.ctl",
+                        "bytes":  216,
+                        "sha256":  "5935ee0cb273133e07dd040112d8569330ca0d674fe9494a73d494d43d72bdce",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/13e38bd937558e63dca42f77c3849fcea651729e.code",
+                        "bytes":  160,
+                        "sha256":  "fc9052bfb477a40dfc166d668ab26309b278373326e645b616bf466e7e0ac772",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/13e38bd937558e63dca42f77c3849fcea651729e.ctl",
+                        "bytes":  216,
+                        "sha256":  "38f3087f90c27ad302e0e5ed72bbe41a7b0ca880482b482ca0b8d808b22201b2",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/1dc9f3338e2e0c5ebcddd682a67bbdc95250ec1d.code",
+                        "bytes":  64,
+                        "sha256":  "8f3a5c0bf5d38d271880a240ced1fdfa93eb08366202729d9808cfc0b4dfddeb",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/1dc9f3338e2e0c5ebcddd682a67bbdc95250ec1d.ctl",
+                        "bytes":  216,
+                        "sha256":  "fb0e5264bfc3591e492a595e4324713a459dae7281e1df51caa52fe94280c5e0",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/21fe3e62f00be84c8cec0f1ca871df89836aae13.code",
+                        "bytes":  80,
+                        "sha256":  "19f5fb061e60de992ec7a05fe3340e9c4c5e720e4cb054ee58528337451db2ea",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/21fe3e62f00be84c8cec0f1ca871df89836aae13.ctl",
+                        "bytes":  216,
+                        "sha256":  "933dab4af354c3d199950fc6663e86bb02789845c46918e60df53c107911040a",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/33101429f352ff04d605ece2d4bf9c21dd102745.code",
+                        "bytes":  176,
+                        "sha256":  "a2652d699c46667540ea538ab4fbf579e7d68df262757abaa970f0e5271abbc4",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/33101429f352ff04d605ece2d4bf9c21dd102745.ctl",
+                        "bytes":  216,
+                        "sha256":  "a02503986530f2f6bfc42c894f1e04b13c1b79c750a499e48c460e5664857b36",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/4a39a1e2fa0e13a5329da2fb660855c1125d53b2.code",
+                        "bytes":  64,
+                        "sha256":  "8877c9751a7a9d7c3e0142e62923cc8fd405320c680e55c37c7feb5beeb294d0",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/4a39a1e2fa0e13a5329da2fb660855c1125d53b2.ctl",
+                        "bytes":  216,
+                        "sha256":  "fb0e5264bfc3591e492a595e4324713a459dae7281e1df51caa52fe94280c5e0",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/6f8f61019b4c0802c873b2b8c81b97d7b4b2e32f.code",
+                        "bytes":  64,
+                        "sha256":  "24f0864d0eb75f2e4bf95e249901d717f77c9e748f9b5b46b95111b6c946b1ab",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/6f8f61019b4c0802c873b2b8c81b97d7b4b2e32f.ctl",
+                        "bytes":  216,
+                        "sha256":  "fb0e5264bfc3591e492a595e4324713a459dae7281e1df51caa52fe94280c5e0",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/79cc1274e343ca7dc04b9edbdef07214302e038a.code",
+                        "bytes":  208,
+                        "sha256":  "aca1a978e9117301eb94e0d342f8034b0c66a973a1ad9b9a5595ef66e2865ca8",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/79cc1274e343ca7dc04b9edbdef07214302e038a.ctl",
+                        "bytes":  216,
+                        "sha256":  "9f26d1f4af3923b00ee932b407913903926abfa4bb83b26e96d65a46c2a26fb5",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/7ce0d7e9205b84d07249675ecd0475efaeb3fad5.code",
+                        "bytes":  96,
+                        "sha256":  "5f816ee4ce333f856011d54e6075a7ed34357af907a3ae859c14261bbdef7820",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/7ce0d7e9205b84d07249675ecd0475efaeb3fad5.ctl",
+                        "bytes":  216,
+                        "sha256":  "49824ca48b5e2c6af991c0e22dcd38b49536f1ea9412a8aae8d04497d6dfab91",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/8ecf2294febf6e71dc330864e103c95a06ba2d8d.c1",
+                        "bytes":  32,
+                        "sha256":  "4884fdaafea47c29fea7159d0daddd9c085d6200e1359e85bb81736af6b7c837",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/8ecf2294febf6e71dc330864e103c95a06ba2d8d.code",
+                        "bytes":  48,
+                        "sha256":  "814de38385e7e4f18fb8950e2c0b0dda5f48bc6b36172ebbfbde2373abde018a",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/8ecf2294febf6e71dc330864e103c95a06ba2d8d.ctl",
+                        "bytes":  216,
+                        "sha256":  "d0a9c9ae6ac813eacad47ec7d999cd2f4ae753589a8c40f17f554a940700e549",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/a6940a41bb73d87594c95676626b92f263fe4412.code",
+                        "bytes":  192,
+                        "sha256":  "1b5c1159edc22167a815fa4a75cc7976b8d7106855a97504d4f7f27258409f1c",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/a6940a41bb73d87594c95676626b92f263fe4412.ctl",
+                        "bytes":  216,
+                        "sha256":  "f61e855fd9641068a1c28ce856585381ac8d1bcce2102a29dc7096ab5b003fcb",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/d75c8c5d1d499162784d62744854ecf6cc2454e9.code",
+                        "bytes":  64,
+                        "sha256":  "550069f41803be4d643399dba026e832c8a3ba9e984324a92564a8f246bb8b91",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/d75c8c5d1d499162784d62744854ecf6cc2454e9.ctl",
+                        "bytes":  216,
+                        "sha256":  "fb0e5264bfc3591e492a595e4324713a459dae7281e1df51caa52fe94280c5e0",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/fcf16d782890f0ebf1a2fb3899f7cb3ee9f28ce2.code",
+                        "bytes":  48,
+                        "sha256":  "814de38385e7e4f18fb8950e2c0b0dda5f48bc6b36172ebbfbde2373abde018a",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-5/prepare-work/shaders/fcf16d782890f0ebf1a2fb3899f7cb3ee9f28ce2.ctl",
+                        "bytes":  216,
+                        "sha256":  "d67a2b2dc3423873a3c6eb6070bc65e3ebfca4ac6e314be919f56120ac235d01",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/authored/romfs/Shader/authored.bnsh.zs",
+                        "bytes":  697,
+                        "sha256":  "3f9bfa2997a06a61ab452efeebb157f1b38b73f308f9e90fa59705cf7c6dc3e9",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/game with spaces á/sm86/nvdisasm/nvdisasm.exe",
+                        "bytes":  5947392,
+                        "sha256":  "f0ab98df225b9f2568e8f56c24a919a4e1362425fb7c02101afbf85022324add",
+                        "kind":  "verified-tool-copy"
+                    },
+                    {
+                        "path":  "backend-native-6/prepared/pipeline-pairs.bin",
+                        "bytes":  900,
+                        "sha256":  "0e3d1320ce692f47697b0361c6c19c1b58413510792d32b35a274b744a5531f8",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepared/spirv/6d6b772d6d6573682d63732d76732d316d6b772d6d6573682d63732d76732d31.spv",
+                        "bytes":  2884,
+                        "sha256":  "e47d6b05a6d509160dfd8492bbf19612db1cb845097000c20d1d407361d23116",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/0b7d6ca5f77f6c052405d976a1d0454a1258740f.code",
+                        "bytes":  224,
+                        "sha256":  "4c9860d72482139de07c1565f742cce31201d6511c9160a0e06211d63355b271",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/0b7d6ca5f77f6c052405d976a1d0454a1258740f.ctl",
+                        "bytes":  216,
+                        "sha256":  "5935ee0cb273133e07dd040112d8569330ca0d674fe9494a73d494d43d72bdce",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/13e38bd937558e63dca42f77c3849fcea651729e.code",
+                        "bytes":  160,
+                        "sha256":  "fc9052bfb477a40dfc166d668ab26309b278373326e645b616bf466e7e0ac772",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/13e38bd937558e63dca42f77c3849fcea651729e.ctl",
+                        "bytes":  216,
+                        "sha256":  "38f3087f90c27ad302e0e5ed72bbe41a7b0ca880482b482ca0b8d808b22201b2",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/1dc9f3338e2e0c5ebcddd682a67bbdc95250ec1d.code",
+                        "bytes":  64,
+                        "sha256":  "8f3a5c0bf5d38d271880a240ced1fdfa93eb08366202729d9808cfc0b4dfddeb",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/1dc9f3338e2e0c5ebcddd682a67bbdc95250ec1d.ctl",
+                        "bytes":  216,
+                        "sha256":  "fb0e5264bfc3591e492a595e4324713a459dae7281e1df51caa52fe94280c5e0",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/21fe3e62f00be84c8cec0f1ca871df89836aae13.code",
+                        "bytes":  80,
+                        "sha256":  "19f5fb061e60de992ec7a05fe3340e9c4c5e720e4cb054ee58528337451db2ea",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/21fe3e62f00be84c8cec0f1ca871df89836aae13.ctl",
+                        "bytes":  216,
+                        "sha256":  "933dab4af354c3d199950fc6663e86bb02789845c46918e60df53c107911040a",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/33101429f352ff04d605ece2d4bf9c21dd102745.code",
+                        "bytes":  176,
+                        "sha256":  "a2652d699c46667540ea538ab4fbf579e7d68df262757abaa970f0e5271abbc4",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/33101429f352ff04d605ece2d4bf9c21dd102745.ctl",
+                        "bytes":  216,
+                        "sha256":  "a02503986530f2f6bfc42c894f1e04b13c1b79c750a499e48c460e5664857b36",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/4a39a1e2fa0e13a5329da2fb660855c1125d53b2.code",
+                        "bytes":  64,
+                        "sha256":  "8877c9751a7a9d7c3e0142e62923cc8fd405320c680e55c37c7feb5beeb294d0",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/4a39a1e2fa0e13a5329da2fb660855c1125d53b2.ctl",
+                        "bytes":  216,
+                        "sha256":  "fb0e5264bfc3591e492a595e4324713a459dae7281e1df51caa52fe94280c5e0",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/6f8f61019b4c0802c873b2b8c81b97d7b4b2e32f.code",
+                        "bytes":  64,
+                        "sha256":  "24f0864d0eb75f2e4bf95e249901d717f77c9e748f9b5b46b95111b6c946b1ab",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/6f8f61019b4c0802c873b2b8c81b97d7b4b2e32f.ctl",
+                        "bytes":  216,
+                        "sha256":  "fb0e5264bfc3591e492a595e4324713a459dae7281e1df51caa52fe94280c5e0",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/79cc1274e343ca7dc04b9edbdef07214302e038a.code",
+                        "bytes":  208,
+                        "sha256":  "aca1a978e9117301eb94e0d342f8034b0c66a973a1ad9b9a5595ef66e2865ca8",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/79cc1274e343ca7dc04b9edbdef07214302e038a.ctl",
+                        "bytes":  216,
+                        "sha256":  "9f26d1f4af3923b00ee932b407913903926abfa4bb83b26e96d65a46c2a26fb5",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/7ce0d7e9205b84d07249675ecd0475efaeb3fad5.code",
+                        "bytes":  96,
+                        "sha256":  "5f816ee4ce333f856011d54e6075a7ed34357af907a3ae859c14261bbdef7820",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/7ce0d7e9205b84d07249675ecd0475efaeb3fad5.ctl",
+                        "bytes":  216,
+                        "sha256":  "49824ca48b5e2c6af991c0e22dcd38b49536f1ea9412a8aae8d04497d6dfab91",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/8ecf2294febf6e71dc330864e103c95a06ba2d8d.c1",
+                        "bytes":  32,
+                        "sha256":  "4884fdaafea47c29fea7159d0daddd9c085d6200e1359e85bb81736af6b7c837",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/8ecf2294febf6e71dc330864e103c95a06ba2d8d.code",
+                        "bytes":  48,
+                        "sha256":  "814de38385e7e4f18fb8950e2c0b0dda5f48bc6b36172ebbfbde2373abde018a",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/8ecf2294febf6e71dc330864e103c95a06ba2d8d.ctl",
+                        "bytes":  216,
+                        "sha256":  "d0a9c9ae6ac813eacad47ec7d999cd2f4ae753589a8c40f17f554a940700e549",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/a6940a41bb73d87594c95676626b92f263fe4412.code",
+                        "bytes":  192,
+                        "sha256":  "1b5c1159edc22167a815fa4a75cc7976b8d7106855a97504d4f7f27258409f1c",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/a6940a41bb73d87594c95676626b92f263fe4412.ctl",
+                        "bytes":  216,
+                        "sha256":  "f61e855fd9641068a1c28ce856585381ac8d1bcce2102a29dc7096ab5b003fcb",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/b03572dc6a980881226001c71f34dc8defbb3894.code",
+                        "bytes":  64,
+                        "sha256":  "1381d525175b91706525369ed7302a563c404ad3ccb65332b57a008272621fb3",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/b03572dc6a980881226001c71f34dc8defbb3894.ctl",
+                        "bytes":  216,
+                        "sha256":  "fb0e5264bfc3591e492a595e4324713a459dae7281e1df51caa52fe94280c5e0",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/d75c8c5d1d499162784d62744854ecf6cc2454e9.code",
+                        "bytes":  64,
+                        "sha256":  "550069f41803be4d643399dba026e832c8a3ba9e984324a92564a8f246bb8b91",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/d75c8c5d1d499162784d62744854ecf6cc2454e9.ctl",
+                        "bytes":  216,
+                        "sha256":  "fb0e5264bfc3591e492a595e4324713a459dae7281e1df51caa52fe94280c5e0",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/fcf16d782890f0ebf1a2fb3899f7cb3ee9f28ce2.code",
+                        "bytes":  48,
+                        "sha256":  "814de38385e7e4f18fb8950e2c0b0dda5f48bc6b36172ebbfbde2373abde018a",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-6/prepare-work/shaders/fcf16d782890f0ebf1a2fb3899f7cb3ee9f28ce2.ctl",
+                        "bytes":  216,
+                        "sha256":  "d67a2b2dc3423873a3c6eb6070bc65e3ebfca4ac6e314be919f56120ac235d01",
+                        "kind":  "authored-fixture"
+                    },
+                    {
+                        "path":  "backend-native-7/game with spaces á/sm86/nvdisasm/nvdisasm.exe",
+                        "bytes":  5947392,
+                        "sha256":  "f0ab98df225b9f2568e8f56c24a919a4e1362425fb7c02101afbf85022324add",
+                        "kind":  "verified-tool-copy"
+                    },
+                    {
+                        "path":  "backend-native-7/prepare-work/shaders/8ecf2294febf6e71dc330864e103c95a06ba2d8d.c1",
+                        "bytes":  32,
+                        "sha256":  "4884fdaafea47c29fea7159d0daddd9c085d6200e1359e85bb81736af6b7c837",
+                        "kind":  "authored-fixture"
+                    }
+                ],
+    "bytes_removed":  35699285,
+    "preserved_before":  {
+                             "old_attempt_sources_logs_notices":  {
+                                                                      "files":  829,
+                                                                      "bytes":  10518851,
+                                                                      "manifest_sha256":  "97574e6b2524d4bec0994dd5cd9dc8a6f85f047d302f2756ef4be7783f42443c"
+                                                                  },
+                             "native8":  {
+                                             "files":  220,
+                                             "bytes":  8296116,
+                                             "manifest_sha256":  "23ed715c3d63962e0eb3fb464a0b6c48791e070ad932d1d1898c86db3135b603"
+                                         },
+                             "outer_scripts_logs_receipts":  {
+                                                                 "files":  44,
+                                                                 "bytes":  298704,
+                                                                 "manifest_sha256":  "6107ba05d11a96582dc2c9ef7385aa6b906a6fde9b551839bb5ce27dd0efcda4"
+                                                             },
+                             "shared_nvdisasm_cache_sha256":  "a348209c803fa67b7bc216a5b4d7a6f9a117ccc60a8c567eb94cf25ba737ec47"
+                         },
+    "preserved_after":  {
+                            "old_attempt_sources_logs_notices":  {
+                                                                     "files":  829,
+                                                                     "bytes":  10518851,
+                                                                     "manifest_sha256":  "97574e6b2524d4bec0994dd5cd9dc8a6f85f047d302f2756ef4be7783f42443c"
+                                                                 },
+                            "native8":  {
+                                            "files":  220,
+                                            "bytes":  8296116,
+                                            "manifest_sha256":  "23ed715c3d63962e0eb3fb464a0b6c48791e070ad932d1d1898c86db3135b603"
+                                        },
+                            "outer_scripts_logs_receipts":  {
+                                                                "files":  44,
+                                                                "bytes":  298704,
+                                                                "manifest_sha256":  "6107ba05d11a96582dc2c9ef7385aa6b906a6fde9b551839bb5ce27dd0efcda4"
+                                                            },
+                            "shared_nvdisasm_cache_sha256":  "a348209c803fa67b7bc216a5b4d7a6f9a117ccc60a8c567eb94cf25ba737ec47"
+                        },
+    "unchanged":  true,
+    "excluded_roots":  [
+                           "backend-native-8",
+                           "Desktop worktree",
+                           "Git documentation",
+                           "shared caches",
+                           "original media"
+                       ],
+    "finished_utc":  "2026-11-27T22:03:06.1184116Z"
+}

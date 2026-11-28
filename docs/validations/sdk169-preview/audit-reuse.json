@@ -1,0 +1,97 @@
+{
+  "format": 1,
+  "target_sdk_version": "1.5.69",
+  "previous_publish_sdk_version": "1.5.68",
+  "task_root": "C:\\Users\\bradg\\Downloads\\GetAll-R18",
+  "checked_utc": "2026-11-27T21:54:03.0826671Z",
+  "verification": "One batched read-only Windows query: existence, size, SHA-256, timestamps and assembly metadata. No auditor or Desktop execution.",
+  "audit_executed": false,
+  "desktop_executed": false,
+  "remote_files_modified": false,
+  "auditor_relative_directory": "evidence-r18/desktop-final-publish-20261127/run-20261127T192959Z-cc0522a1/audit-bin",
+  "source_expected_sha256": "adfb534eeb1d24e399e9cd6f9424542baf7180ffcab1e2899181d76fe327948c",
+  "source_pin_matches": true,
+  "required_runtime_files_present": true,
+  "files": [
+    {
+      "role": "audit_assembly",
+      "path": "evidence-r18/desktop-final-publish-20261127/run-20261127T192959Z-cc0522a1/audit-bin/audit.dll",
+      "exists": true,
+      "bytes": 17920,
+      "sha256": "8173baa36cbbbcba7428d861315e92ae33b16f473e6c85dea950640fcd85d459",
+      "last_write_utc": "2026-11-27T19:30:31.8505207Z",
+      "assembly_version": "1.0.0.0"
+    },
+    {
+      "role": "audit_deps",
+      "path": "evidence-r18/desktop-final-publish-20261127/run-20261127T192959Z-cc0522a1/audit-bin/audit.deps.json",
+      "exists": true,
+      "bytes": 407,
+      "sha256": "25a40ed5a05e56cf4d047ea08ff4d3e5c4bc383cf1b0e4a7c00ef77e1536f868",
+      "last_write_utc": "2026-11-27T19:30:31.8806158Z"
+    },
+    {
+      "role": "audit_runtimeconfig",
+      "path": "evidence-r18/desktop-final-publish-20261127/run-20261127T192959Z-cc0522a1/audit-bin/audit.runtimeconfig.json",
+      "exists": true,
+      "bytes": 340,
+      "sha256": "28329cf08f6505e73806b17558b187c02f0c1c516fe47ebfb7a013d082aaa306",
+      "last_write_utc": "2026-11-27T19:30:31.9088041Z"
+    },
+    {
+      "role": "audit_source",
+      "path": "evidence-r18/complete-flows-publish-20261127/resource-audit/Program.cs",
+      "exists": true,
+      "bytes": 5346,
+      "sha256": "adfb534eeb1d24e399e9cd6f9424542baf7180ffcab1e2899181d76fe327948c",
+      "last_write_utc": "2026-11-27T17:54:23.0239988Z"
+    },
+    {
+      "role": "audit_project",
+      "path": "evidence-r18/complete-flows-publish-20261127/resource-audit/audit.csproj",
+      "exists": true,
+      "bytes": 424,
+      "sha256": "7007a3a473d27149daf4922b7ba8d6a749530f53121f42ee2ac819e574906647",
+      "last_write_utc": "2026-11-27T19:03:50.3716895Z"
+    }
+  ],
+  "desktop_build_outputs": [
+    {
+      "role": "desktop_rid_assembly",
+      "path": "desktop-continuation-20261127/bin/Release/net8.0-windows/win-x64/AllFix.dll",
+      "exists": false
+    },
+    {
+      "role": "desktop_rid_deps",
+      "path": "desktop-continuation-20261127/bin/Release/net8.0-windows/win-x64/AllFix.deps.json",
+      "exists": false
+    },
+    {
+      "role": "desktop_rid_runtimeconfig",
+      "path": "desktop-continuation-20261127/bin/Release/net8.0-windows/win-x64/AllFix.runtimeconfig.json",
+      "exists": false
+    },
+    {
+      "role": "desktop_rid_sdk",
+      "path": "desktop-continuation-20261127/bin/Release/net8.0-windows/win-x64/AllFix.Addons.Sdk.dll",
+      "exists": false
+    },
+    {
+      "role": "desktop_assembly",
+      "path": "desktop-continuation-20261127/bin/Release/net8.0-windows/AllFix.dll",
+      "exists": false
+    },
+    {
+      "role": "desktop_deps",
+      "path": "desktop-continuation-20261127/bin/Release/net8.0-windows/AllFix.deps.json",
+      "exists": false
+    },
+    {
+      "role": "desktop_runtimeconfig",
+      "path": "desktop-continuation-20261127/bin/Release/net8.0-windows/AllFix.runtimeconfig.json",
+      "exists": false
+    }
+  ],
+  "desktop_standard_build_available": false,
+  "desktop_proof_note": "Neither checked bin/Release layout currently contains AllFix.dll. The later reflection proof needs a new real Desktop assembly and its matching runtimeconfig/deps, or an explicitly selected preserved build."
+}

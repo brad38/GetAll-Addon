@@ -1,0 +1,233 @@
+[
+  {
+    "path": "upstream/sass_spec.py",
+    "git_blob": "cecbcfbb29f1aa5b68bf85027c52d791c59d9b12",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/decode/sass_spec.py",
+    "bytes": 8348,
+    "sha256": "652e077dddd3c7eb250adb9d26482d2b9cbbde857ae0868bdf63fadf7a3dca23"
+  },
+  {
+    "path": "upstream/sass_decode.py",
+    "git_blob": "8e6066c4e6aed09f5c65b26d8e02274dfe84974b",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/decode/sass_decode.py",
+    "bytes": 13636,
+    "sha256": "07a8995b2c5eba5ec53a3d7e38739d814a4974078cb8026cd31d2687f9723f8e"
+  },
+  {
+    "path": "upstream/translate.py",
+    "git_blob": "4344f835264e0b988c74654d8eb23000eb2a636c",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/tools/shaders/translate.py",
+    "bytes": 15792,
+    "sha256": "f4a58cf8751925e8eb756e479c952bd3134c7ebdf29bc6ea0a7cc0eba415708b"
+  },
+  {
+    "path": "upstream/README-shaders.md",
+    "git_blob": "525b7032f7991942725d9c7007b5931aae748ba8",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/tools/shaders/README.md",
+    "bytes": 9344,
+    "sha256": "d9dc0ac320a46fa4cf56d513365aabc58d07b51cb5c445a7f8bee923ee3b0fdb"
+  },
+  {
+    "path": "upstream/sm86/translate/frontend/program.py",
+    "git_blob": "260cf90fe36c67ae3f89a54f1d7e051ec82785c6",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/frontend/program.py",
+    "bytes": 3802,
+    "sha256": "4e96445c14206a44ce4531ab5688c035de651981fa896b0441507d57db8e6a36"
+  },
+  {
+    "path": "upstream/sm86/translate/frontend/flow.py",
+    "git_blob": "6963f783f1e850e972afc73881cbde2acd14aa36",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/frontend/flow.py",
+    "bytes": 12090,
+    "sha256": "efed7cdb59416602ecc9155d15dfa3bd80ea3f6cb80c2f4e06562e1bdb4cd3a0"
+  },
+  {
+    "path": "upstream/sm86/translate/glsl/common.py",
+    "git_blob": "351a6519ff8f5e96343c073399694ae770b6196d",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/glsl/common.py",
+    "bytes": 9886,
+    "sha256": "022bd5a9cd080186122a0cfa3be85278025463053d089503ae1ed11ebceb1619"
+  },
+  {
+    "path": "upstream/sm86/translate/glsl/core.py",
+    "git_blob": "94314fa6cdad2866facc0df2c2b0c116f1db9c18",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/glsl/core.py",
+    "bytes": 29463,
+    "sha256": "a232572353d41a9cde2b7bcc03cc336e463ec7660cde8c6ccec378b0b2507033"
+  },
+  {
+    "path": "upstream/sm86/translate/glsl/alu.py",
+    "git_blob": "adfc4785b3f7dc6fb635671191dc983e4b2afd99",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/glsl/alu.py",
+    "bytes": 22833,
+    "sha256": "6b2782ae58bcbd3743334c3bb37f5a86ba8bff923def70cc47e080bda6d1d97c"
+  },
+  {
+    "path": "upstream/sm86/translate/glsl/mem.py",
+    "git_blob": "e2aa3da75deb05744630df0357f62a40913547fb",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/glsl/mem.py",
+    "bytes": 25781,
+    "sha256": "46cfe0f30f4c2af443261c33d65c1745a1cd3174a01a8e246c1ef1077fc66d12"
+  },
+  {
+    "path": "upstream/sm86/translate/glsl/tex.py",
+    "git_blob": "b0303bfad79081ab7bfbcee216885df982e9d793",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/glsl/tex.py",
+    "bytes": 15662,
+    "sha256": "a0f2d74a334ddf4c60a3628ca94b1c84db500ce85ec2d5676bd0040eba8717c3"
+  },
+  {
+    "path": "upstream/sm86/translate/glsl/thread.py",
+    "git_blob": "678ad342c7989ef8f3427eeddbc08ed63be5f352",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/glsl/thread.py",
+    "bytes": 14331,
+    "sha256": "33cd1406a6e03f3e74288095deb32d883d2f3319082eacbd947f74a8f8e93417"
+  },
+  {
+    "path": "upstream/sm86/translate/glsl/__init__.py",
+    "git_blob": "4164d11e94f9a51765657eb9c6a9d7c926b2ce4a",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/glsl/__init__.py",
+    "bytes": 380,
+    "sha256": "98915f46a66aa1f15a30333760a7f2524e85930433f0ee504027adcd4c10ea3f"
+  },
+  {
+    "path": "upstream/sm86/translate/glsl/head.py",
+    "git_blob": "ec4d336c8fd9f98c821b579fa6726d8f7441c1d0",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/glsl/head.py",
+    "bytes": 17609,
+    "sha256": "cc8fd922f2c86233aec6f0c86d7c6ff4af466ed88ab78d509900a7303970fef8"
+  },
+  {
+    "path": "upstream/sm86/translate/glsl/first_store.py",
+    "git_blob": "002432c90451694303d7bc2471b2305b53764aed",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/glsl/first_store.py",
+    "bytes": 5420,
+    "sha256": "e511143631c95a96dc8d32b4be778f0f20e898c83bf11ff769aa6489c902d940"
+  },
+  {
+    "path": "upstream/sm86/translate/glsl/int_hints.py",
+    "git_blob": "167834543493c77c1b08d7736978acb4456ac1ea",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/glsl/int_hints.py",
+    "bytes": 3506,
+    "sha256": "1ddcef926d8d6eef02782177f59ffc79d31ce4ee03641191b64084341438a366"
+  },
+  {
+    "path": "upstream/sm86/translate/glsl/subroutines.py",
+    "git_blob": "ef6cd85b5e763171efe147dca297b00bde6022a2",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/glsl/subroutines.py",
+    "bytes": 6310,
+    "sha256": "83d575b782053cb047144268fa54ba20011f66b85ddd25084f9a4e8baa181c05"
+  },
+  {
+    "path": "upstream/LICENSE",
+    "git_blob": "dca5a9ceb66e424fd00b467dc09e5b82fa8132a3",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/LICENSE",
+    "bytes": 1063,
+    "sha256": "458bc459b303410a4cbed893a9a76affd0beada85a8d381e0f147b106ec450a7"
+  },
+  {
+    "path": "references/src/nx/gpu/shader/sm86.decode",
+    "git_blob": "5641fac4a12bd89fb2727ef1488cb5ab46f7fca7",
+    "url": "https://github.com/scarletnx/ScarletNX/blob/901dd81b2c33c5e00af6406f6f3a378cdfbdd0e1/src/nx/gpu/shader/sm86.decode",
+    "bytes": 19880,
+    "sha256": "2f44ea139b2345b337bb7a5c20d911a91288c59e0d15d9320948c102ad9ea8a0"
+  },
+  {
+    "path": "references/src/nx/gpu/shader/sm86_decode.c",
+    "git_blob": "5fa86a3333b138a1916273a3161089a87db87eee",
+    "url": "https://github.com/scarletnx/ScarletNX/blob/901dd81b2c33c5e00af6406f6f3a378cdfbdd0e1/src/nx/gpu/shader/sm86_decode.c",
+    "bytes": 11301,
+    "sha256": "a713aef55d57d494dc9c580fe5db323b87d20d812d7c79b1ad1ec39a3b374de2"
+  },
+  {
+    "path": "references/src/nx/gpu/shader/sm86.h",
+    "git_blob": "3d574833668f4ae026b607b6d483b691f3ee2203",
+    "url": "https://github.com/scarletnx/ScarletNX/blob/901dd81b2c33c5e00af6406f6f3a378cdfbdd0e1/src/nx/gpu/shader/sm86.h",
+    "bytes": 40688,
+    "sha256": "48eac83d6ff9d0a80e58ec03ac4c20ba6801ff9cec7747772b29754e78573c41"
+  },
+  {
+    "path": "references/CuAsm/CuInsAssemblerRepos.py",
+    "git_blob": "b13a41c75315a56f7830359e1b75504e804b0f62",
+    "url": "https://github.com/cloudcores/CuAssembler/blob/96a9f72baf00f40b9b299653fcef8d3e2b4a3d49/CuAsm/CuInsAssemblerRepos.py",
+    "bytes": 14770,
+    "sha256": "7d8e4f6aab50201e13fc1546cacf9d1206cb75b8af2a9e4fe45c4a363df7a87f"
+  },
+  {
+    "path": "references/CuAsm/CuInsAssembler.py",
+    "git_blob": "c4cfe404e5b2c1d32ce70721cbb057617e4bbcab",
+    "url": "https://github.com/cloudcores/CuAssembler/blob/96a9f72baf00f40b9b299653fcef8d3e2b4a3d49/CuAsm/CuInsAssembler.py",
+    "bytes": 15732,
+    "sha256": "9cc52524048d95d5d5fa4ed44ccd8ed694e2a2bd4eb50853c5b999a6bcd70011"
+  },
+  {
+    "path": "references/LICENCE.md",
+    "git_blob": "c9867e2a26bbc45cbad907afa218f97eaf2ce399",
+    "url": "https://github.com/cloudcores/CuAssembler/blob/96a9f72baf00f40b9b299653fcef8d3e2b4a3d49/LICENCE.md",
+    "bytes": 1102,
+    "sha256": "2e4a290cc86b2ed281cc200b00a8ef8d13afaf26207f6b857bc330c555d91b23"
+  },
+  {
+    "path": "references/CuAsm/DefaultInsAsmRepos.sm_86.txt",
+    "git_blob": "a1465fd953942fc77c1b0a1a8c37ebe6b91b2b68",
+    "url": "https://github.com/cloudcores/CuAssembler/blob/96a9f72baf00f40b9b299653fcef8d3e2b4a3d49/CuAsm/InsAsmRepos/DefaultInsAsmRepos.sm_86.txt",
+    "bytes": 1551873,
+    "sha256": "f8bd12e50b024c6b959609600134b320d0b7e6b7e8e5576e3dc42c49022a1934"
+  },
+  {
+    "path": "references/nv_isa_solver/disasm_utils.py",
+    "git_blob": "402c99bb8d9b3cdc3daf86f44df94ab8077870a9",
+    "url": "https://github.com/kuterd/nv_isa_solver/blob/3640363b7d7f3ddd4a65b67502687d2d5f147d92/nv_isa_solver/disasm_utils.py",
+    "bytes": 6459,
+    "sha256": "4c9bf8b92de6b11f3a04956ed96e6ea9abe978df91ef8515e497e50215469402"
+  },
+  {
+    "path": "references/nv_isa_solver/instruction_solver.py",
+    "git_blob": "06b0f4f9a5116903399488fe1e186a289bd5e08b",
+    "url": "https://github.com/kuterd/nv_isa_solver/blob/3640363b7d7f3ddd4a65b67502687d2d5f147d92/nv_isa_solver/instruction_solver.py",
+    "bytes": 53893,
+    "sha256": "103e6fc749860e78fe2c7e32754e5f877bf80602e3b9d5933fba286fc00936b5"
+  },
+  {
+    "path": "references/nv_isa_solver/parser.py",
+    "git_blob": "1f1bf14e69c3c9f86456bdca714d4a95e82d2557",
+    "url": "https://github.com/kuterd/nv_isa_solver/blob/3640363b7d7f3ddd4a65b67502687d2d5f147d92/nv_isa_solver/parser.py",
+    "bytes": 20903,
+    "sha256": "4db3ec6bcfab76f0480250183148b8c0b2357187a7bb6684dd92d99f9b00068e"
+  },
+  {
+    "path": "references/nv_isa_solver/LICENSE",
+    "git_blob": "00c7b761d6a09576cbbd3c0d9e74b5ba36ee6493",
+    "url": "https://raw.githubusercontent.com/kuterd/nv_isa_solver/3640363b7d7f3ddd4a65b67502687d2d5f147d92/LICENSE",
+    "bytes": 1068,
+    "sha256": "6f9eba9d8bab25327120b41a6cf101596d58b44cbd31c51091408bb77c69191a"
+  },
+  {
+    "path": "upstream/sm86/translate/frontend/flow_sim.py",
+    "git_blob": "f66c8a0e642c81ce466828128754d322b0f52f82",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/sm86/translate/frontend/flow_sim.py",
+    "bytes": 7137,
+    "sha256": "dd365943510ac97a49c8736af2bae6916c6f67ff0df9d61ed2a98c4176219d2e"
+  },
+  {
+    "path": "upstream/tools/prepare/shaderstep.py",
+    "git_blob": "2ac8916608db654efe857e2a6c987c84b79a7668",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/tools/prepare/shaderstep.py",
+    "bytes": 10309,
+    "sha256": "1b5e8a528ff37163ed43381ff223108d0e91471c92c9698e988702572e9df788"
+  },
+  {
+    "path": "upstream/tools/shaders/extract.py",
+    "git_blob": "c18cdfe8418d44abc215aed7812cab6eca4dcd10",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/tools/shaders/extract.py",
+    "bytes": 17366,
+    "sha256": "aed28f031c1af522d2c212c0119d844ad912a32803fce454601ced30ebcbc7e0"
+  },
+  {
+    "path": "upstream/tools/shaders/shaderc_lib.py",
+    "git_blob": "24de7b4f47466143f4e1c6e1f45fa54b301f45be",
+    "url": "https://github.com/adriadam10/mkw-recomp/blob/006d48de08849495e01e151602690d0ec322af82/tools/shaders/shaderc_lib.py",
+    "bytes": 3719,
+    "sha256": "dde8926949db4dd614873c55ee06e11620acef65379888b362e623c6d271b782"
+  }
+]

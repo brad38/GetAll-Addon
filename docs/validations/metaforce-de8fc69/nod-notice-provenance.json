@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/encounter/nod/ebd80cac99b48a323200d84365e07a58cc27412d/LICENSE-APACHE",
+    "path": "nod-LICENSE-APACHE.txt",
+    "bytes": 11342,
+    "sha256": "fd363f1eb5135402a2e66f4a6173e6eff06daabe79d150acd7c669d33b985b4e"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/encounter/nod/ebd80cac99b48a323200d84365e07a58cc27412d/LICENSE-MIT",
+    "path": "nod-LICENSE-MIT.txt",
+    "bytes": 1065,
+    "sha256": "544ffe9befaefa6b59ab1fdde58789069ba7c1b65432bdea273a16b2117909b7"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/encounter/nod/ebd80cac99b48a323200d84365e07a58cc27412d/Cargo.lock",
+    "path": "nod-Cargo-lock.txt",
+    "bytes": 35802,
+    "sha256": "90841810b99fa0971cbd553c0180b8d9e62f702abae9133da237ea903714a3d5"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/encounter/nod/ebd80cac99b48a323200d84365e07a58cc27412d/README.md",
+    "path": "nod-README.txt",
+    "bytes": 8215,
+    "sha256": "62517d73a2668dfb5e75aa331fe301a2e6e5b10aeb63846bf56990e3338aa467"
+  }
+]

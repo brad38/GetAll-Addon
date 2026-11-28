@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "exit_code": 0,
+  "seconds": 1.328,
+  "source_inputs_unchanged": true,
+  "git_state_unchanged": true,
+  "used_package_cache_unchanged": true,
+  "cache_files": 36,
+  "assets": [
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127\\Tests\\AddonInfrastructure\\obj\\project.assets.json",
+      "bytes": 5728,
+      "sha256": "ebf0e5ac32e1e4f4e6e47527aa927c50522f495b59932b879c8fc7ef440072fc"
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127\\AddonSdk\\obj\\project.assets.json",
+      "bytes": 1995,
+      "sha256": "c7707158428c57454f6d48939d48a8fed191799d38ba04c3f142271ea8eb6e3b"
+    }
+  ],
+  "log": {
+    "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\restore-offline31\\restore.log",
+    "bytes": 305,
+    "sha256": "89e4ca6fb3e0d4ff0cd702331c159a0202569bd6ddc2fb65df33cf7f15ce44ed"
+  },
+  "tail": [
+    "  Determining projects to restore...",
+    "  Restored C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127\\AddonSdk\\AllFix.Addons.Sdk.csproj (in 55 ms).",
+    "  Restored C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127\\Tests\\AddonInfrastructure\\AddonInfrastructure.csproj (in 88 ms)."
+  ],
+  "finished_utc": "2026-11-27T22:01:40.791659+00:00"
+}

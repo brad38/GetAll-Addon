@@ -1,0 +1,20 @@
+{
+  "origin": "https://github.com/AxioDL/metaforce",
+  "public_archive_repository": "Antidote/metaforce",
+  "revision": "de8fc69bd7f345d6cf5f0c8fc2798295e22522d3",
+  "git_tree": "9d693e8894c031e5d1d220f39a44999d4010dc9f",
+  "url": "https://codeload.github.com/Antidote/metaforce/tar.gz/de8fc69bd7f345d6cf5f0c8fc2798295e22522d3",
+  "archive": "three-upstreams-20261127/metaforce-de8fc69bd7f345d6cf5f0c8fc2798295e22522d3.tar.gz",
+  "archive_bytes": 20496145,
+  "archive_sha256": "efc58779e6b3ff62853e5c1d4f084a8a7744dee056d1c28faf3748dad1df524a",
+  "source": "three-upstreams-20261127/source-de8fc69",
+  "trees": 199,
+  "files": 2070,
+  "expanded_bytes": 53744648,
+  "submodules": {
+    "extern/aurora": "40cf48fce6ce85366608596bae018c6188f2b2e7",
+    "extern/borealis": "d4d7ff146ff4097d64bb24e52459152f1b5e597a",
+    "extern/musyx": "dc56c921528821209a8b53029114e5443435f40d"
+  },
+  "status": "PINNED_GIT_SOURCE_VERIFIED"
+}

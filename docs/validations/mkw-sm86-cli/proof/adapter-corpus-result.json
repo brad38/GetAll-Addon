@@ -1,0 +1,916 @@
+{
+  "status": "DRAFT_ADAPTER_CORPUS",
+  "normal_cli_exit": 0,
+  "normal_cli_records": 2917,
+  "normal_cli_input_sha256": "d94ff0053a50570f08cc3a0c5fed51b34ccdbe4eba446f625e1016241e45a252",
+  "retained_cli_rejections": 5,
+  "accepted_mnemonics": 81,
+  "accepted": {
+    "BAR": 3,
+    "BREAK": 8,
+    "BSSY": 3,
+    "BSYNC": 2,
+    "CS2R": 3,
+    "DEPBAR": 6,
+    "ERRBAR": 1,
+    "EXIT": 5,
+    "F2FP": 16,
+    "F2I": 18,
+    "FADD": 49,
+    "FFMA": 100,
+    "FLO": 14,
+    "FMNMX": 33,
+    "FMUL": 47,
+    "FRND": 11,
+    "FSEL": 44,
+    "FSET": 14,
+    "FSETP": 80,
+    "FSWZADD": 8,
+    "HADD2": 43,
+    "HMMA": 7,
+    "HMNMX2": 4,
+    "HSETP2": 37,
+    "I2F": 28,
+    "I2FP": 15,
+    "IABS": 12,
+    "IADD3": 236,
+    "IMAD": 126,
+    "IMNMX": 35,
+    "ISETP": 135,
+    "LDC": 17,
+    "LDG": 8,
+    "LDL": 9,
+    "LDS": 48,
+    "LDSM": 6,
+    "LEA": 189,
+    "LOP3": 81,
+    "MATCH": 4,
+    "MEMBAR": 2,
+    "MOV": 18,
+    "MOVM": 3,
+    "MUFU": 24,
+    "NOP": 2,
+    "P2R": 4,
+    "PLOP3": 14,
+    "POPC": 11,
+    "PRMT": 23,
+    "R2P": 8,
+    "R2UR": 4,
+    "REDUX": 8,
+    "S2R": 14,
+    "S2UR": 4,
+    "SEL": 34,
+    "SGXT": 17,
+    "SHF": 89,
+    "SHFL": 36,
+    "STG": 7,
+    "STL": 7,
+    "STS": 37,
+    "TEX": 26,
+    "TLD": 16,
+    "TLD4": 9,
+    "TXQ": 5,
+    "UBREV": 3,
+    "UFLO": 4,
+    "UIADD3": 66,
+    "UIMAD": 25,
+    "UISETP": 39,
+    "ULDC": 13,
+    "ULEA": 68,
+    "ULOP3": 23,
+    "UMOV": 8,
+    "UP2UR": 3,
+    "UPLOP3": 4,
+    "UPOPC": 3,
+    "USEL": 14,
+    "USHF": 26,
+    "VOTE": 11,
+    "VOTEU": 10,
+    "WARPSYNC": 4
+  },
+  "adapter_rejections": {
+    "ATOMG": 67,
+    "BAR": 10,
+    "BRA": 6,
+    "CALL": 7,
+    "FMNMX": 15,
+    "HMMA": 10,
+    "LDC": 1,
+    "LDG": 47,
+    "LDL": 12,
+    "LDSM": 13,
+    "MEMBAR": 3,
+    "MOV": 4,
+    "R2P": 2,
+    "RED": 19,
+    "RET": 2,
+    "STG": 30,
+    "STL": 12,
+    "SULD": 43,
+    "SUST": 52,
+    "TEX": 28,
+    "TLD": 26,
+    "TLD4": 18,
+    "TXQ": 9,
+    "ULDC": 1,
+    "WARPSYNC": 1
+  },
+  "upstream_rejections": {
+    "BRA": 10,
+    "BRX": 3,
+    "BRXU": 3,
+    "CALL": 4,
+    "CS2R": 7,
+    "F2FP": 4,
+    "F2I": 4,
+    "FRND": 5,
+    "FSETP": 1,
+    "HMMA": 5,
+    "HMNMX2": 26,
+    "HSETP2": 1,
+    "I2F": 24,
+    "IMAD": 54,
+    "LDG": 15,
+    "LDL": 3,
+    "LDSM": 2,
+    "MUFU": 12,
+    "P2R": 4,
+    "PRMT": 1,
+    "R2UR": 3,
+    "REDUX": 1,
+    "RET": 3,
+    "S2R": 2,
+    "S2UR": 1,
+    "STG": 2,
+    "STL": 4,
+    "STS": 6,
+    "TLD": 8,
+    "UIMAD": 7,
+    "ULDC": 3
+  },
+  "broken_bindings": [],
+  "samples": {
+    "S2UR": [
+      {
+        "type": "upstream-rejection",
+        "text": "S2UR UR5, SR_CLOCKLO",
+        "error": "S2UR SR_CLOCKLO"
+      }
+    ],
+    "S2R": [
+      {
+        "type": "upstream-rejection",
+        "text": "S2R R5, SR_VIRTUALSMID",
+        "error": "S2R SR_VIRTUALSMID"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "S2R R0, SR_VIRTID",
+        "error": "S2R SR_VIRTID"
+      }
+    ],
+    "ULDC": [
+      {
+        "type": "upstream-rejection",
+        "text": "ULDC.U8 UR4, c[0x0][0x1a0]",
+        "error": "ULDC.U8"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "ULDC.U16 UR6, c[0x0][0x17c]",
+        "error": "ULDC.U16"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "ULDC.S8 UR4, c[0x0][0x1c4]",
+        "error": "ULDC.S8"
+      }
+    ],
+    "LDG": [
+      {
+        "type": "closed-rejection",
+        "text": "LDG.E R2, desc[UR4][R2.64]",
+        "error": "Only an ordinary, unmodified address is supported"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "LDG.E R3, desc[UR4][R2.64]",
+        "error": "Only an ordinary, unmodified address is supported"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "LDG.E R0, desc[UR4][R4.64]",
+        "error": "Only an ordinary, unmodified address is supported"
+      }
+    ],
+    "STG": [
+      {
+        "type": "closed-rejection",
+        "text": "STG.E desc[UR4][R4.64], R7",
+        "error": "Only an ordinary, unmodified address is supported"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "STG.E desc[UR4][R2.64], R7",
+        "error": "Only an ordinary, unmodified address is supported"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "STG.E desc[UR6][R2.64], R9",
+        "error": "Only an ordinary, unmodified address is supported"
+      }
+    ],
+    "BRA": [
+      {
+        "type": "upstream-rejection",
+        "text": "BRA 0x8b0",
+        "error": "cli_bra"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "@!P0 BRA 0x8f0",
+        "error": "cli_bra"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "@!P0 BRA 0xa50",
+        "error": "cli_bra"
+      }
+    ],
+    "MUFU": [
+      {
+        "type": "upstream-rejection",
+        "text": "MUFU.RCP64H R9, R11",
+        "error": "MUFU.RCP64H"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "MUFU.RSQ64H R3, R15",
+        "error": "MUFU.RSQ64H"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "MUFU.TANH R0, R0",
+        "error": "MUFU.TANH"
+      }
+    ],
+    "CALL": [
+      {
+        "type": "upstream-rejection",
+        "text": "CALL.REL.NOINC 0xcb0",
+        "error": "cli_call"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "CALL.REL.NOINC 0x1f30",
+        "error": "cli_call"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "@P0 CALL.REL.NOINC 0xca0",
+        "error": "cli_call"
+      }
+    ],
+    "FSETP": [
+      {
+        "type": "upstream-rejection",
+        "text": "FSETP.NAN.AND P5, PT, R10, R11, PT",
+        "error": "cli_fsetp: compare NAN"
+      }
+    ],
+    "RET": [
+      {
+        "type": "upstream-rejection",
+        "text": "RET.REL.NODEC R2 0x12c0",
+        "error": "cli_ret"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "RET.REL.NODEC R16 0x180",
+        "error": "cli_ret"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "RET.REL.NODEC R18 0x2c0",
+        "error": "cli_ret"
+      }
+    ],
+    "IMAD": [
+      {
+        "type": "upstream-rejection",
+        "text": "IMAD.WIDE.U32.X R6, RZ, R5, R6, P1",
+        "error": "imad_wide__CLI: .X"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "IMAD.WIDE.U32.X R10, R19, R29, R12, P0",
+        "error": "imad_wide__CLI: .X"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "IMAD.WIDE.U32.X R12, R19, R23, R30, P3",
+        "error": "imad_wide__CLI: .X"
+      }
+    ],
+    "CS2R": [
+      {
+        "type": "upstream-rejection",
+        "text": "CS2R R46, SR_GLOBALTIMERLO",
+        "error": "CS2R SR_GLOBALTIMERLO"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "CS2R.32 R0, SR_CLOCKLO",
+        "error": "CS2R SR_CLOCKLO"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "CS2R R2, SR_CLOCKLO",
+        "error": "CS2R SR_CLOCKLO"
+      }
+    ],
+    "STS": [
+      {
+        "type": "upstream-rejection",
+        "text": "STS.U16 [R6], R34",
+        "error": "STS.U16"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "STS.U8 [R35+0x100], R18",
+        "error": "STS.U8"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "STS.U16 [R15+UR6], R16",
+        "error": "STS.U16"
+      }
+    ],
+    "F2I": [
+      {
+        "type": "upstream-rejection",
+        "text": "F2I.U64.TRUNC R18, R18",
+        "error": "F2I.U64"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "F2I.U64.TRUNC R20, R20",
+        "error": "F2I.U64"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "F2I.S64.F64 R4, R4",
+        "error": "F2I.S64"
+      }
+    ],
+    "I2F": [
+      {
+        "type": "upstream-rejection",
+        "text": "I2F.U64.RP R22, UR4",
+        "error": "I2F.U64"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "I2F.U64.RP R24, UR4",
+        "error": "I2F.U64"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "I2F.U64.RP R18, UR8",
+        "error": "I2F.U64"
+      }
+    ],
+    "PRMT": [
+      {
+        "type": "upstream-rejection",
+        "text": "PRMT.B4E R3, R3, 0x3, R3",
+        "error": "PRMT.B4E"
+      }
+    ],
+    "STL": [
+      {
+        "type": "upstream-rejection",
+        "text": "STL.S16 [R1+0x8], RZ",
+        "error": "STL.S16"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "STL.U8 [R5+0x20], R4",
+        "error": "STL.U8"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "STL.U8 [R0+-0x2], R3",
+        "error": "STL.U8"
+      }
+    ],
+    "HSETP2": [
+      {
+        "type": "upstream-rejection",
+        "text": "HSETP2.NAN.AND P0, PT, R11.H0_H0, R11.H0_H0, PT",
+        "error": "HSETP2.NAN"
+      }
+    ],
+    "REDUX": [
+      {
+        "type": "upstream-rejection",
+        "text": "REDUX UR5, R9",
+        "error": "REDUX."
+      }
+    ],
+    "RED": [
+      {
+        "type": "closed-rejection",
+        "text": "RED.E.ADD.F64.RN.STRONG.GPU desc[UR8][R2.64], R4",
+        "error": "Only an ordinary, unmodified address is supported"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "RED.E.ADD.F64.RN.STRONG.GPU desc[UR8][R2.64+0x8], R6",
+        "error": "Only an ordinary, unmodified address is supported"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "RED.E.ADD.F64.RN.STRONG.GPU desc[UR8][R2.64], R6",
+        "error": "Only an ordinary, unmodified address is supported"
+      }
+    ],
+    "P2R": [
+      {
+        "type": "upstream-rejection",
+        "text": "P2R.B1 R15, PR, R14, 0xf",
+        "error": "P2R.B1"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "P2R.B2 R16, PR, R15, 0xf",
+        "error": "P2R.B2"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "P2R.B3 R16, PR, R16, 0xf",
+        "error": "P2R.B3"
+      }
+    ],
+    "ATOMG": [
+      {
+        "type": "closed-rejection",
+        "text": "ATOMG.E.CAS.STRONG.GPU PT, R6, [R4], R11, R15",
+        "error": "Ordered/scoped memory access has no proved lowering"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "ATOMG.E.CAS.STRONG.GPU PT, R6, [R4], R7, R11",
+        "error": "Ordered/scoped memory access has no proved lowering"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "ATOMG.E.CAS.STRONG.GPU PT, R15, [R4], R11, R15",
+        "error": "Ordered/scoped memory access has no proved lowering"
+      }
+    ],
+    "WARPSYNC": [
+      {
+        "type": "closed-rejection",
+        "text": "WARPSYNC.EXCLUSIVE R6",
+        "error": "WARPSYNC: unhandled modifiers ['EXCLUSIVE']"
+      }
+    ],
+    "LDL": [
+      {
+        "type": "upstream-rejection",
+        "text": "LDL.S16 R39, [R1+0x8]",
+        "error": "LDL.S16"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "LDL.U8 R6, [R4]",
+        "error": "LDL.U8"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "LDL.U16 R3, [R1]",
+        "error": "LDL.U16"
+      }
+    ],
+    "MEMBAR": [
+      {
+        "type": "closed-rejection",
+        "text": "MEMBAR.ALL.GPU",
+        "error": "Unknown memory barrier ordering"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "MEMBAR.ALL.SYS",
+        "error": "Unknown memory barrier ordering"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "@P5 MEMBAR.GPU",
+        "error": "Unknown memory barrier ordering"
+      }
+    ],
+    "LDSM": [
+      {
+        "type": "upstream-rejection",
+        "text": "LDSM.16.M88.2 R34, [R243]",
+        "error": "LDSM.16.M88.2"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "LDSM.16.M88 R5, [R5]",
+        "error": "LDSM.16.M88.1"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "LDSM.16.M88.4 R92, [R112+UR5]",
+        "error": "LDSM: consumer does not read a uniform address component"
+      }
+    ],
+    "HMMA": [
+      {
+        "type": "upstream-rejection",
+        "text": "HMMA.16816.F32 R4, R36, R40, R4",
+        "error": "HMMA.16816.F32.F16"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "HMMA.16816.F32.BF16 R4, R36, R40, R4",
+        "error": "HMMA.16816.F32.BF16"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "HMMA.1688.F32.TF32 R4, R36, R2, R4",
+        "error": "HMMA.1688.F32.TF32"
+      }
+    ],
+    "BAR": [
+      {
+        "type": "closed-rejection",
+        "text": "BAR.RED.AND 0x0, P0",
+        "error": "Only BAR.SYNC is lowered by the pinned frontend"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "BAR.RED.OR 0x0, P0",
+        "error": "Only BAR.SYNC is lowered by the pinned frontend"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "BAR.RED.OR 0x0, P1",
+        "error": "Only BAR.SYNC is lowered by the pinned frontend"
+      }
+    ],
+    "UIMAD": [
+      {
+        "type": "upstream-rejection",
+        "text": "UIMAD.WIDE.U32 UR6, UP0, UR8, -0x55555556, UR4",
+        "error": "uimad_wide__CLI: carry out"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "UIMAD.WIDE.U32 UR6, UP0, UR8, -0x1c71c71d, UR4",
+        "error": "uimad_wide__CLI: carry out"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "UIMAD.WIDE.U32.X UR4, UR10, -0x55555556, UR8, UP0",
+        "error": "uimad_wide__CLI: .X"
+      }
+    ],
+    "FRND": [
+      {
+        "type": "upstream-rejection",
+        "text": "FRND.F64 R14, R4",
+        "error": "FRND.F64"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "FRND.F64.TRUNC R22, R2",
+        "error": "FRND.F64"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "FRND.F64.FLOOR R4, R4",
+        "error": "FRND.F64"
+      }
+    ],
+    "LDC": [
+      {
+        "type": "closed-rejection",
+        "text": "LDC R3, c[0x3][R11+-0x10]",
+        "error": "Constant-buffer address outside the fixed bank/byte-offset contract"
+      }
+    ],
+    "R2UR": [
+      {
+        "type": "upstream-rejection",
+        "text": "@P0 R2UR P1, UR4, R2",
+        "error": "R2UR with predicate"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "@P0 R2UR P1, UR12, R14",
+        "error": "R2UR with predicate"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "@P0 R2UR P1, UR12, R6",
+        "error": "R2UR with predicate"
+      }
+    ],
+    "FMNMX": [
+      {
+        "type": "closed-rejection",
+        "text": "FMNMX.NAN R23, R11, 2, !PT",
+        "error": "FMNMX: unhandled modifiers ['NAN']"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "FMNMX.NAN R27, -R11, 2, !PT",
+        "error": "FMNMX: unhandled modifiers ['NAN']"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "FMNMX.NAN R5, R0, R5, !PT",
+        "error": "FMNMX: unhandled modifiers ['NAN']"
+      }
+    ],
+    "SUST": [
+      {
+        "type": "closed-rejection",
+        "text": "SUST.D.BA.2D.STRONG.SM.TRAP [R4], R2, 0x0, 0x5c",
+        "error": "SUST: consumer requires a constant-buffer handle form"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM [R6], R3, 0x0, 0x58",
+        "error": "SUST: consumer requires a constant-buffer handle form"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM [R16], R3, 0x0, 0x5a",
+        "error": "SUST: consumer requires a constant-buffer handle form"
+      }
+    ],
+    "BRX": [
+      {
+        "type": "upstream-rejection",
+        "text": "BRX R14 -0x390",
+        "error": "cli_brx"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "BRX R14 -0x6b0",
+        "error": "cli_brx"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "BRX R16 -0x490",
+        "error": "cli_brx"
+      }
+    ],
+    "HMNMX2": [
+      {
+        "type": "upstream-rejection",
+        "text": "HMNMX2.NAN R4, R17, R0.H0_H0, !PT",
+        "error": "HMNMX2.F16_V2.NAN."
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "HMNMX2.NAN R6, R0.H0_H0, R17, !PT",
+        "error": "HMNMX2.F16_V2.NAN."
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "HMNMX2.NAN R4, R19, R0.H0_H0, !PT",
+        "error": "HMNMX2.F16_V2.NAN."
+      }
+    ],
+    "SULD": [
+      {
+        "type": "closed-rejection",
+        "text": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R28, [R2], R28",
+        "error": "SULD: consumer requires a constant-buffer handle form"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R29, [R4], R29",
+        "error": "SULD: consumer requires a constant-buffer handle form"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R32, [R14], R26",
+        "error": "SULD: consumer requires a constant-buffer handle form"
+      }
+    ],
+    "TXQ": [
+      {
+        "type": "closed-rejection",
+        "text": "TXQ.B RZ, R14, R14, TEX_HEADER_DIMENSION, 0x2",
+        "error": "TXQ: consumer requires a constant-buffer handle form"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "TXQ.B RZ, R2, R2, TEX_HEADER_DIMENSION, 0x2",
+        "error": "TXQ: consumer requires a constant-buffer handle form"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "TXQ.B RZ, R33, R12, TEX_HEADER_DIMENSION, 0x2",
+        "error": "TXQ: consumer requires a constant-buffer handle form"
+      }
+    ],
+    "TEX": [
+      {
+        "type": "closed-rejection",
+        "text": "TEX.SCR.LL.DC R8, R34, R2, R6, UR4, 0x0, 2D",
+        "error": "TEX: consumer requires a constant-buffer handle form"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "TEX.SCR.LL.DC R24, R22, R22, R24, UR4, 0x0, 2D",
+        "error": "TEX: consumer requires a constant-buffer handle form"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "TEX.SCR.LL.DC R20, R24, R20, R24, UR4, 0x0, 2D",
+        "error": "TEX: consumer requires a constant-buffer handle form"
+      }
+    ],
+    "TLD": [
+      {
+        "type": "closed-rejection",
+        "text": "TLD.SCR.B.LZ.AOFFI R10, R8, R4, R14, 1D",
+        "error": "TLD: consumer requires a constant-buffer handle form"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "TLD.SCR.B.LZ.AOFFI R18, R12, R12, R14, 1D",
+        "error": "TLD: consumer requires a constant-buffer handle form"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "TLD.SCR.B.LZ.AOFFI R22, R20, R20, R14, 1D",
+        "error": "TLD: consumer requires a constant-buffer handle form"
+      }
+    ],
+    "MOV": [
+      {
+        "type": "closed-rejection",
+        "text": "MOV R8, R20, 0x1",
+        "error": "MOV with a partial byte mask"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "MOV R9, R21, 0x1",
+        "error": "MOV with a partial byte mask"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "MOV R10, R36, 0x1",
+        "error": "MOV with a partial byte mask"
+      }
+    ],
+    "TLD4": [
+      {
+        "type": "closed-rejection",
+        "text": "TLD4.SCR.A.AOFFI R10, R8, R56, R7, UR4, 0x0, 2D",
+        "error": "TLD4: consumer requires a constant-buffer handle form"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "TLD4.SCR.A.AOFFI R18, R14, R14, R7, UR4, 0x0, 2D",
+        "error": "TLD4: consumer requires a constant-buffer handle form"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "TLD4.SCR.A.AOFFI R22, R20, R56, R7, UR6, 0x0, 2D",
+        "error": "TLD4: consumer requires a constant-buffer handle form"
+      }
+    ],
+    "BRXU": [
+      {
+        "type": "upstream-rejection",
+        "text": "BRXU UR10 -0x5180",
+        "error": "cli_brxu"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "BRXU UR10 -0x55b0",
+        "error": "cli_brxu"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "BRXU UR8 -0x4210",
+        "error": "cli_brxu"
+      }
+    ],
+    "R2P": [
+      {
+        "type": "closed-rejection",
+        "text": "R2P PR, RZ",
+        "error": "R2P requires the immediate mask implemented by MKW"
+      },
+      {
+        "type": "closed-rejection",
+        "text": "R2P PR, R141",
+        "error": "R2P requires the immediate mask implemented by MKW"
+      }
+    ],
+    "F2FP": [
+      {
+        "type": "upstream-rejection",
+        "text": "F2FP.MERGE_C R0, c[0x0][0x1f0], RZ",
+        "error": "F2FP.MERGE_C"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "F2FP.MERGE_C R0, c[0x0][0x1ec], R0",
+        "error": "F2FP.MERGE_C"
+      },
+      {
+        "type": "upstream-rejection",
+        "text": "F2FP.MERGE_C R16, c[0x0][0x1f0], RZ",
+        "error": "F2FP.MERGE_C"
+      }
+    ]
+  },
+  "first_accepted": {
+    "IMAD": "IMAD.MOV.U32 R1, RZ, RZ, c[0x0][0x28]",
+    "S2UR": "S2UR UR4, SR_CTAID.X",
+    "S2R": "S2R R0, SR_TID.X",
+    "ULDC": "ULDC UR5, c[0x0][0x0]",
+    "UIMAD": "UIMAD UR4, UR4, UR5, URZ",
+    "ISETP": "ISETP.NE.AND P0, PT, R0, UR4, PT",
+    "EXIT": "@P0 EXIT",
+    "MOV": "MOV R2, c[0x0][0x160]",
+    "FADD": "FADD R7, -R2, -RZ",
+    "MUFU": "MUFU.RCP R6, R3",
+    "FFMA": "FFMA R7, -R3, R6, 1",
+    "SHF": "SHF.R.U32.HI R5, RZ, 0x17, R3",
+    "LOP3": "LOP3.LUT R5, R5, 0xff, RZ, 0xc0, !PT",
+    "IADD3": "IADD3 R10, R5, -0x1, RZ",
+    "FSETP": "FSETP.GTU.FTZ.AND P0, PT, |R0|, +INF , PT",
+    "PLOP3": "PLOP3.LUT P0, PT, P0, P1, PT, 0xa8, 0x0",
+    "LEA": "LEA R0, R5, 0xc0800000, 0x17",
+    "SEL": "SEL R5, R6, RZ, P2",
+    "USHF": "USHF.R.S32.HI UR4, URZ, 0x1f, UR4",
+    "CS2R": "CS2R R8, SRZ",
+    "STS": "STS.128 [R4.X16], R8",
+    "BAR": "BAR.SYNC 0x0",
+    "LDS": "@!P1 LDS.128 R12, [R2]",
+    "I2FP": "I2FP.F32.U32 R2, c[0x0][0x0]",
+    "F2I": "F2I.FTZ.U32.TRUNC.NTZ R19, R18",
+    "UMOV": "UMOV UR5, URZ",
+    "I2F": "I2F.U32.RP R0, UR4",
+    "PRMT": "PRMT R28, RZ, 0x5410, R28",
+    "HADD2": "HADD2.F32 R12, -RZ, R28.H0_H0",
+    "ULEA": "ULEA UR5, UP0, UR4, UR8, 0x3",
+    "R2P": "R2P PR, R0, 0x6",
+    "FSEL": "FSEL R6, R4, R2, !P0",
+    "FMUL": "@!P0 FMUL R19, R13, R5",
+    "F2FP": "F2FP.BF16.PACK_AB R0, RZ, R0",
+    "UIADD3": "UIADD3 UR8, -UR8, 0x1, URZ",
+    "UISETP": "UISETP.LE.AND UP0, UPT, URZ, UR6, UPT",
+    "USEL": "USEL UR15, UR6, URZ, !UP0",
+    "ULOP3": "ULOP3.LUT UR5, UR8, 0x1, URZ, 0xc0, !UPT",
+    "LDC": "LDC.U8 R4, c[0x0][0x180]",
+    "STL": "STL.64 [R1], R10",
+    "HSETP2": "HSETP2.NEU.AND P1, PT, RZ.H0_H0, c[0x0] [0x178].H1_H1, PT",
+    "SHFL": "SHFL.DOWN P0, R2, R17, 0x1, 0x1e01",
+    "REDUX": "REDUX.SUM.S32 UR6, R14",
+    "SGXT": "SGXT R7, R7, 0x8",
+    "VOTE": "VOTE.ANY R6, PT, P2",
+    "FLO": "FLO.U32 R57, R16",
+    "IMNMX": "IMNMX R7, R4, 0x1, !PT",
+    "P2R": "P2R R49, PR, RZ, 0x1",
+    "R2UR": "R2UR UR7, R29",
+    "LDG": "LDG.E R6, [R4]",
+    "FSET": "FSET.BF.EQ.AND R5, R5, RZ, PT",
+    "LDL": "LDL.LU R29, [R1]",
+    "VOTEU": "VOTEU.ALL UR4, UPT, PT",
+    "UFLO": "UFLO.U32 UR4, UR4",
+    "IABS": "IABS R6, R5",
+    "UPLOP3": "@!UP1 UPLOP3.LUT UP0, UPT, UPT, UPT, UP2, 0x80, 0x0",
+    "MEMBAR": "MEMBAR.SC.CTA",
+    "POPC": "POPC R7, UR4",
+    "LDSM": "LDSM.16.M88.4 R68, [R2]",
+    "HMMA": "HMMA.16816.F16 R2, R20, R24, R2",
+    "FRND": "FRND.FLOOR R19, R2",
+    "TEX": "TEX.SCR.LL RZ, R0, R2, R7, 0x0, 0x62, 2D, 0x1",
+    "MATCH": "MATCH.ANY R5, R9",
+    "UPOPC": "UPOPC UR5, UR4",
+    "FMNMX": "FMNMX R3, |R7|, 1, !PT",
+    "UBREV": "UBREV UR4, UR6",
+    "TLD": "TLD.SCR.LZ RZ, R8, R15, 0x0, 0x64, 1D, 0x3",
+    "STG": "@!P0 STG.E.128 [R60], R40",
+    "HMNMX2": "HMNMX2 R9, R16, R5.H0_H0, !PT",
+    "TXQ": "TXQ RZ, R16, R16, TEX_HEADER_DIMENSION, 0x0, 0x58, 0x2",
+    "FSWZADD": "FSWZADD.NDV R20, R21, R20, ZPPPZPPP",
+    "TLD4": "TLD4.SCR.A.AOFFI R20, R18, R56, R7, 0x0, 0x58, 2D",
+    "MOVM": "MOVM.16.MT88 R21, R14",
+    "UP2UR": "UP2UR UR29, UPR, URZ, 0x1"
+  },
+  "production_ready": false
+}

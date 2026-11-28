@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-11-28T00:42:27.956012+00:00",
+  "removed_files": 2,
+  "removed_bytes": 21658683,
+  "removed": [
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\metaforce-policy-build31d\\games á\\Metroid Prime - Metaforce build-de8fc69\\source.zip",
+      "bytes": 21536851,
+      "sha256": "e130131a1a41e8599541d8ab3dd2f31c6d8abaa9af03411f8bba25c3f5b63f21"
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\evidence-transfer31d.zip.b64",
+      "bytes": 121832,
+      "sha256": "3bd29638620fc9b048c321a99c9d455a28ca30aeb72d26458780e5e06983d768"
+    }
+  ],
+  "policy_preserved_files": 145,
+  "policy_preserved_bytes": 1605553,
+  "source_cache_preserved": {
+    "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\metaforce-de8fc69-source.zip",
+    "bytes": 21536851,
+    "sha256": "e130131a1a41e8599541d8ab3dd2f31c6d8abaa9af03411f8bba25c3f5b63f21"
+  },
+  "integrated_gate_preserved": {
+    "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-result.json",
+    "bytes": 6687,
+    "sha256": "51f98c91d7a0ff2a925ac0a5043217e795ece487fa5478347acfa0f3277229a9"
+  },
+  "free_before": 103018151936,
+  "free_after": 103039766528,
+  "before_manifest": {
+    "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\cleanup-policy31d\\before.json",
+    "bytes": 47987,
+    "sha256": "c70a7bb0408e44b3f4ffb1dac0946fdfb7ae818b54483d11b63203443b4c1dc1"
+  },
+  "limits": "Only a task-owned source ZIP duplicate and base64 transport copy were removed. The old fixture kit is now intentionally incomplete; reproduce in a new work path. No original media, personal data, active build, harness, toolchain or shared dependency was removed."
+}

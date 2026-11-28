@@ -1756,6 +1756,32 @@
       "has_inputs": false,
       "has_manual_steps": true,
       "min_sdk_version": "1.5.67"
+    },
+    {
+      "game_id": "metroid-prime",
+      "project_id": "metaforce",
+      "repository": "AxioDL/metaforce",
+      "tag": "build-de8fc69",
+      "schema_version": 5,
+      "path": "recipes/metroid-prime/metaforce/build-de8fc69.json",
+      "sha256": "8d293603daaded40f3c17cf4574438f55aa9da56970f7a47638b88ecdc0f7df0",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.69"
+    },
+    {
+      "game_id": "mario-kart-world",
+      "project_id": "mkw-recomp",
+      "repository": "adriadam10/mkw-recomp",
+      "tag": "v0.1.18-allfix-cli",
+      "schema_version": 9,
+      "path": "recipes/mario-kart-world/mkw-recomp/v0.1.18-allfix-cli.json",
+      "sha256": "416bcb86b1ccd3526b8fa7543ab69e9d4cbfc1a943621e88542f5c6e4e5b66a1",
+      "status": "experimental",
+      "has_inputs": false,
+      "has_manual_steps": true,
+      "min_sdk_version": "1.5.69"
     }
   ]
 }

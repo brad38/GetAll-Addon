@@ -1,0 +1,19 @@
+{
+  "stage": "ps",
+  "cbufs": [],
+  "sbufs": [],
+  "textures": [
+    {
+      "binding": 1,
+      "type": 3,
+      "format": "Unknown",
+      "cbuf_slot": 0,
+      "handle": 88,
+      "array": 1,
+      "separate": false,
+      "flags": 0
+    }
+  ],
+  "images": [],
+  "spec": []
+}

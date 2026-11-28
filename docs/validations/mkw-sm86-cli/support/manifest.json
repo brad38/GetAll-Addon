@@ -1,0 +1,181 @@
+{
+  "configuration": {
+    "source": "configuration/instructions.json",
+    "target": "sm86/instructions.json"
+  },
+  "consumer_commit": "006d48de08849495e01e151602690d0ec322af82",
+  "files": [
+    {
+      "bytes": 288,
+      "path": "configuration/instructions.json",
+      "sha256": "3407e0837c09cbba2a4cff95405431288d915bc660c869c35b84070c5e88bd2d"
+    },
+    {
+      "bytes": 67,
+      "path": "files/sm86/translate/frontend/allfix_sm86/__init__.py",
+      "sha256": "7f1f0b419ea7b5cb2b0913ac43acb6f8e35fee4fe657f8a1f8c4f48029b104cb"
+    },
+    {
+      "bytes": 6897,
+      "path": "files/sm86/translate/frontend/allfix_sm86/adapter_fields.py",
+      "sha256": "87aac4051216cddb58c57c06098d415d48c6ab4e0e7c0b47d67a1a6b00ae82e2"
+    },
+    {
+      "bytes": 1833,
+      "path": "files/sm86/translate/frontend/allfix_sm86/adapter_model.py",
+      "sha256": "d4870950d1f8d28afeb23453a3648c3164e6cf24a9bb49ac80729e150850bbf4"
+    },
+    {
+      "bytes": 1791,
+      "path": "files/sm86/translate/frontend/allfix_sm86/backend.py",
+      "sha256": "199e21cfe58b48d16ececc34928227cc3a8f9901f47ee95fe79b68fe09d1b1b4"
+    },
+    {
+      "bytes": 6478,
+      "path": "files/sm86/translate/frontend/allfix_sm86/cli_decoder.py",
+      "sha256": "ef2238afdc34da77750274eb066be65d04001275d6d17ac76fb4bf17de84c7aa"
+    },
+    {
+      "bytes": 3523,
+      "path": "files/sm86/translate/frontend/allfix_sm86/cli_parse.py",
+      "sha256": "c19a3eb60d4c68c738ca88de1669c3477867583ecc195c436529f47789431eae"
+    },
+    {
+      "bytes": 3789,
+      "path": "files/sm86/translate/frontend/allfix_sm86/control_adapter.py",
+      "sha256": "0f3f698b2b7cb26fc44708808992c7ceecf08a2922b0e28273a0b6f1cf7780bf"
+    },
+    {
+      "bytes": 4866,
+      "path": "files/sm86/translate/frontend/allfix_sm86/lea_overlay.py",
+      "sha256": "4cd9116ccdcd178ee25cdad773f6f92990da2f7a917040bf73da2dfd38ccec66"
+    },
+    {
+      "bytes": 10345,
+      "path": "files/sm86/translate/frontend/allfix_sm86/memory_adapter.py",
+      "sha256": "14ad35ac42009159faf4db0ce4e7039f220b012172ab06312882406b92f729d5"
+    },
+    {
+      "bytes": 1849,
+      "path": "files/sm86/translate/frontend/allfix_sm86/memory_overlay.py",
+      "sha256": "af2167733fadfd8e5e835719e952bc1182bb4833bf662fac6e0ddd9c06f99a8c"
+    },
+    {
+      "bytes": 12508,
+      "path": "files/sm86/translate/frontend/allfix_sm86/scalar_adapter.py",
+      "sha256": "39e8e228efd9d6b0113ec43cb5e340825593e83bc7be5f4d5370578e106127c7"
+    },
+    {
+      "bytes": 8188,
+      "path": "files/sm86/translate/frontend/allfix_sm86/texture_adapter.py",
+      "sha256": "567dc19396163f1a21eb88df684b216e9a5cf448ca132df362482ea091068b76"
+    },
+    {
+      "bytes": 20903,
+      "path": "files/sm86/translate/frontend/allfix_sm86/vendor/nv_isa_parser.py",
+      "sha256": "4db3ec6bcfab76f0480250183148b8c0b2357187a7bb6684dd92d99f9b00068e"
+    },
+    {
+      "bytes": 1102,
+      "path": "notices/CuAssembler-MIT.txt",
+      "sha256": "2e4a290cc86b2ed281cc200b00a8ef8d13afaf26207f6b857bc330c555d91b23"
+    },
+    {
+      "bytes": 1442,
+      "path": "notices/Mesa-NAK-MIT.txt",
+      "sha256": "8875c84633d4d2e3794a11cc8d4a74731ada2c53cc6437644f6201c3628ad8ed"
+    },
+    {
+      "bytes": 597,
+      "path": "notices/ORIGIN.txt",
+      "sha256": "0d4884e85ddc077e9b2db69e70108858a595e07d23a381ebf8c1b60f09fb6035"
+    },
+    {
+      "bytes": 1063,
+      "path": "notices/mkw-MIT.txt",
+      "sha256": "458bc459b303410a4cbed893a9a76affd0beada85a8d381e0f147b106ec450a7"
+    },
+    {
+      "bytes": 1068,
+      "path": "notices/nv-isa-solver-MIT.txt",
+      "sha256": "6f9eba9d8bab25327120b41a6cf101596d58b44cbd31c51091408bb77c69191a"
+    },
+    {
+      "bytes": 2551,
+      "path": "overlays/sm86/translate/frontend/program.py",
+      "sha256": "93050ad0c4eee1908eca71cae5f586133f29ab9e0ced6bf4937a2c2246ec74a2"
+    },
+    {
+      "bytes": 9113,
+      "path": "overlays/tools/prepare/shaderstep.py",
+      "sha256": "4ffba8c1d68599ca841fb128e1d02b55cd4f8d987858da7c5a16d278112a6d66"
+    },
+    {
+      "bytes": 19438,
+      "path": "overlays/tools/shaders/extract.py",
+      "sha256": "855b4b9e4a8d1301ebfca7ccd86378131f4910eb9dfbbfe523f6a520d14d331f"
+    },
+    {
+      "bytes": 16120,
+      "path": "overlays/tools/shaders/translate.py",
+      "sha256": "dcb01d55d36ba0cf2dae4cfab57976eb9739723a70b1c5ff3938a19af3c0434c"
+    },
+    {
+      "bytes": 9271,
+      "path": "proof/fixtures.json",
+      "sha256": "bb0e63a228af27a78c391fa5f4367dadcc7170dbea74c9a4aa09e34a71e3ea6e"
+    },
+    {
+      "bytes": 19703,
+      "path": "proof/prove_backend.py",
+      "sha256": "6e5a755a317472cc03e263c36c067c5c0c2a2a6eec391042163636d77bd405a4"
+    }
+  ],
+  "format": 1,
+  "modules": [
+    "sm86/translate/frontend/allfix_sm86/adapter_model.py",
+    "sm86/translate/frontend/allfix_sm86/adapter_fields.py",
+    "sm86/translate/frontend/allfix_sm86/cli_parse.py",
+    "sm86/translate/frontend/allfix_sm86/scalar_adapter.py",
+    "sm86/translate/frontend/allfix_sm86/control_adapter.py",
+    "sm86/translate/frontend/allfix_sm86/memory_adapter.py",
+    "sm86/translate/frontend/allfix_sm86/texture_adapter.py",
+    "sm86/translate/frontend/allfix_sm86/lea_overlay.py",
+    "sm86/translate/frontend/allfix_sm86/memory_overlay.py",
+    "sm86/translate/frontend/allfix_sm86/cli_decoder.py",
+    "sm86/translate/frontend/allfix_sm86/backend.py",
+    "sm86/translate/frontend/allfix_sm86/__init__.py",
+    "sm86/translate/frontend/allfix_sm86/vendor/nv_isa_parser.py"
+  ],
+  "nvdisasm": {
+    "bytes": 5368805,
+    "executable": "cuda_nvdisasm-windows-x86_64-12.8.90-archive/bin/nvdisasm.exe",
+    "executable_bytes": 5947392,
+    "executable_sha256": "f0ab98df225b9f2568e8f56c24a919a4e1362425fb7c02101afbf85022324add",
+    "license_sha256": "e2c71babfd18a8e69542dd7e9ca018f9caa438094001a58e6bc4d8c999bf0d07",
+    "sha256": "a348209c803fa67b7bc216a5b4d7a6f9a117ccc60a8c567eb94cf25ba737ec47",
+    "url": "https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvdisasm/windows-x86_64/cuda_nvdisasm-windows-x86_64-12.8.90-archive.zip"
+  },
+  "overlays": [
+    {
+      "after_sha256": "93050ad0c4eee1908eca71cae5f586133f29ab9e0ced6bf4937a2c2246ec74a2",
+      "before_sha256": "4e96445c14206a44ce4531ab5688c035de651981fa896b0441507d57db8e6a36",
+      "path": "sm86/translate/frontend/program.py"
+    },
+    {
+      "after_sha256": "4ffba8c1d68599ca841fb128e1d02b55cd4f8d987858da7c5a16d278112a6d66",
+      "before_sha256": "1b5e8a528ff37163ed43381ff223108d0e91471c92c9698e988702572e9df788",
+      "path": "tools/prepare/shaderstep.py"
+    },
+    {
+      "after_sha256": "855b4b9e4a8d1301ebfca7ccd86378131f4910eb9dfbbfe523f6a520d14d331f",
+      "before_sha256": "aed28f031c1af522d2c212c0119d844ad912a32803fce454601ced30ebcbc7e0",
+      "path": "tools/shaders/extract.py"
+    },
+    {
+      "after_sha256": "dcb01d55d36ba0cf2dae4cfab57976eb9739723a70b1c5ff3938a19af3c0434c",
+      "before_sha256": "f4a58cf8751925e8eb756e479c952bd3134c7ebdf29bc6ea0a7cc0eba415708b",
+      "path": "tools/shaders/translate.py"
+    }
+  ]
+}

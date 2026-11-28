@@ -1,0 +1,184 @@
+#version 460
+#extension GL_ARB_gpu_shader_int64 : require
+#extension GL_EXT_spirv_intrinsics : require
+#define LOOP_CAP 0x10000u
+#extension GL_KHR_shader_subgroup_basic : require
+#extension GL_KHR_shader_subgroup_ballot : require
+#extension GL_KHR_shader_subgroup_vote : require
+#extension GL_KHR_shader_subgroup_shuffle : require
+#extension GL_KHR_shader_subgroup_arithmetic : require
+uint warp_shuffle(uint v, uint lane) {
+    return subgroupShuffle(v, (gl_SubgroupInvocationID & ~31u) | (lane & 31u));
+}
+uvec2 warp_shuffle(uvec2 v, uint lane) {
+    return subgroupShuffle(v, (gl_SubgroupInvocationID & ~31u) | (lane & 31u));
+}
+uint warp_ballot(bool p) {
+    uvec4 votes = subgroupBallot(p);
+    return votes[gl_SubgroupInvocationID >> 5u];
+}
+bool warp_all(bool p) {
+    uint yes = warp_ballot(p), wmask = warp_ballot(true);
+    return yes == wmask;
+}
+bool warp_any(bool p) { return warp_ballot(p) != 0u; }
+bool warp_equal(bool p) {
+    uint yes = warp_ballot(p), wmask = warp_ballot(true);
+    return yes == 0u || yes == wmask;
+}
+layout(local_size_x = 1, local_size_y = 1, local_size_z = 1) in;
+const uint SMEM_WORDS = 16384u;
+shared uint smem[SMEM_WORDS];
+const uint SMEM_WRAP = 0x7ffe5a3bu;
+#define SMEM(i) smem[(i) % SMEM_WRAP]
+uint smem16(uint b) { return (SMEM(b >> 2) >> ((b & 2u) * 8u)) & 0xffffu; }
+uint ldsm(uint a, uint i, bool trans) {
+    uint lane = gl_SubgroupInvocationID & 31u, r = lane >> 2, q = lane & 3u;
+    uint p = warp_shuffle(a, i * 8u + r), c0 = warp_shuffle(a, i * 8u + 2u * q),
+         c1 = warp_shuffle(a, i * 8u + 2u * q + 1u);
+    return trans ? smem16(c0 + 2u * r) | (smem16(c1 + 2u * r) << 16) : SMEM((p >> 2) + q);
+}
+void hmma(uint a0, uint a1, uint a2, uint a3, uint b0, uint b1, uint c0, uint c1, out uint d0, out uint d1) {
+    uint lane = gl_SubgroupInvocationID & 31u, g = lane >> 2, t = lane & 3u;
+    vec2 lo = unpackHalf2x16(c0), hi = unpackHalf2x16(c1);
+    for (uint s = 0u; s < 4u; s++) {
+        uint from = g * 4u + s;
+        vec2 ar0 = unpackHalf2x16(warp_shuffle(a0, from)), ar1 = unpackHalf2x16(warp_shuffle(a1, from));
+        vec2 ar2 = unpackHalf2x16(warp_shuffle(a2, from)), ar3 = unpackHalf2x16(warp_shuffle(a3, from));
+        for (uint j = 0u; j < 2u; j++) {
+            uint col = (2u * t + j) * 4u + s;
+            vec2 bk0 = unpackHalf2x16(warp_shuffle(b0, col)), bk1 = unpackHalf2x16(warp_shuffle(b1, col));
+            lo[j] += dot(ar0, bk0) + dot(ar2, bk1);
+            hi[j] += dot(ar1, bk0) + dot(ar3, bk1);
+        }
+    }
+    d0 = packHalf2x16(lo);
+    d1 = packHalf2x16(hi);
+}
+uint movm(uint v) {
+    uint lane = gl_SubgroupInvocationID & 31u, r = lane >> 2, q = lane & 3u, sh = (r & 1u) * 16u;
+    uint lo = warp_shuffle(v, 2u * q * 4u + (r >> 1)), hi = warp_shuffle(v, (2u * q + 1u) * 4u + (r >> 1));
+    return ((lo >> sh) & 0xffffu) | (((hi >> sh) & 0xffffu) << 16);
+}
+const uint LMEM_WORDS = 2u;
+uint lmem[LMEM_WORDS];
+uint shfl(uint v, uint src, uint c, uint mode, out bool ok) {
+    uint lane = gl_SubgroupInvocationID & 31u, seg = (c >> 8) & 31u, lo = lane & seg, hi = (c & 31u & ~seg) | lo;
+    uint s;
+    if (mode == 0u) { s = (src & ~seg) | lo; ok = s <= hi; }
+    else if (mode == 1u) { s = lane - src; ok = int(s) >= int(lo); }
+    else if (mode == 2u) { s = lane + src; ok = s <= hi; }
+    else { s = lane ^ src; ok = s <= hi; }
+    uint r = warp_shuffle(v, s & 31u);
+    return ok ? r : v;
+}
+uint prmt(uint a, uint sel, uint b) {
+    uint r = 0u;
+    for (int k = 0; k < 4; k++) {
+        uint n = (sel >> (4 * k)) & 15u, src = (n & 4u) != 0u ? b : a;
+        uint byte = (src >> (8u * (n & 3u))) & 255u;
+        if ((n & 8u) != 0u) byte = (byte & 128u) != 0u ? 255u : 0u;
+        r |= byte << (8 * k);
+    }
+    return r;
+}
+spirv_instruction(set = "GLSL.std.450", id = 79) float nmin(float a, float b);
+spirv_instruction(set = "GLSL.std.450", id = 80) float nmax(float a, float b);
+spirv_instruction(set = "GLSL.std.450", id = 81) float nclamp(float x, float lo, float hi);
+spirv_instruction(set = "GLSL.std.450", id = 81) vec2 nclamp(vec2 x, vec2 lo, vec2 hi);
+layout(std140, binding = 1) uniform CB0 { uvec4 d[4096]; } cb0;
+layout(std430, binding = 2) buffer SB600 { uint d[]; } sb600;
+layout(binding = 3) uniform sampler2D t0_88;
+layout(binding = 4) uniform sampler2D t0_98;
+layout(binding = 5) uniform sampler1D t0_100;
+ivec3 txqsz_0_88(int l) { return ivec3(textureSize(t0_88, l), 1); }
+uint gfind(uint lo, uint hi, out int s) {
+    uint w = 0xffffffffu, r, b; s = -1;
+    r = usubBorrow(lo, cb0.d[96][0], b); if (hi - cb0.d[96][1] - b == 0u && r < uint(sb600.d.length()) * 4u && r < w) { w = r; s = 0; }
+    return w;
+}
+void gst(uint lo, uint hi, uint k, uint v) {
+    int s; uint w = gfind(lo, hi, s);
+    if (s == 0) sb600.d[(w >> 2) + k] = v;
+}
+void main() {
+    precise uint r0 = 0u, r1 = 0u, r2 = 0u, r3 = 0u, r4 = 0u, r5 = 0u, r6 = 0u, r7 = 0u, r8 = 0u, r9 = 0u, r10 = 0u, r11 = 0u, r12 = 0u, r13 = 0u, r14 = 0u, r15 = 0u, r16 = 0u, r17 = 0u, r18 = 0u, r19 = 0u, r20 = 0u, r21 = 0u, r22 = 0u, r23 = 0u, r24 = 0u, r25 = 0u, r28 = 0u, r29 = 0u, r40 = 0u, r41 = 0u, r42 = 0u, r43 = 0u, r49 = 0u, r56 = 0u, r57 = 0u, r60 = 0u, r61 = 0u, r68 = 0u, r69 = 0u, r70 = 0u, r71 = 0u, ur4 = 0u, ur5 = 0u, ur6 = 0u, ur7 = 0u, ur8 = 0u, ur15 = 0u, ur29 = 0u;
+    bool p0 = false, p1 = false, p2 = false, p3 = false, p4 = false, p5 = false, p6 = false, up0 = false, up1 = false, up2 = false, up3 = false, up4 = false, up5 = false, up6 = false;
+    uint loops = 0u;
+    bool exited = false;
+        r1 = (0u * 0u + cb0.d[2][2]);
+        ur4 = gl_WorkGroupID.x;
+        r0 = gl_LocalInvocationID.x;
+        ur5 = cb0.d[0][0];
+        ur4 = (ur4 * ur5 + 0u);
+        p0 = ((int(r0)) != (int(ur4))) && true;
+        if (p0) { exited = true; }
+        r2 = cb0.d[22][0];
+        r7 = floatBitsToUint(((-uintBitsToFloat(r2)) + (-uintBitsToFloat(0u))));
+        r6 = floatBitsToUint((1.0 / uintBitsToFloat(r3)));
+        r7 = floatBitsToUint(fma((-uintBitsToFloat(r3)), uintBitsToFloat(r6), uintBitsToFloat(0x3f800000u)));
+        r5 = uint((((uint64_t(r3) << 32) | uint64_t(0u)) >> min(0x17u, 32u)) >> 32);
+        r5 = ((r5) & (0xffu));
+        r10 = ((r5) + (0xffffffffu) + (0u));
+        p0 = !(((abs(abs(uintBitsToFloat(r0))) < 1.17549435e-38 ? 0.0 : abs(uintBitsToFloat(r0)))) <= ((abs(uintBitsToFloat(0x7f800000u)) < 1.17549435e-38 ? 0.0 : uintBitsToFloat(0x7f800000u)))) && true;
+        p0 = (!(p0) && p1 && true) || (p0 && !(p1) && true) || (p0 && p1 && true);
+        { uint lea_shifted = (r5 << 23u); uint lea_b = 0xc0800000u; bool lea_negcarry = false; bool lea_carry = false; uint64_t lea_sum = uint64_t(lea_shifted) + uint64_t(lea_b) + uint64_t(lea_carry ? 1u : 0u); r0 = uint(lea_sum); }
+        r5 = (p2 ? r6 : 0u);
+        ur4 = uint(uint64_t(int64_t(((uint64_t(ur4) << 32) | uint64_t(0u))) >> min(0x1fu, 32u)) >> 32);
+        r8 = 0u; r9 = 0u;
+        if (!exited) { SMEM(((r4 * 16u + 0x0u) >> 2) + 0u) = r8; SMEM(((r4 * 16u + 0x0u) >> 2) + 1u) = r9; SMEM(((r4 * 16u + 0x0u) >> 2) + 2u) = r10; SMEM(((r4 * 16u + 0x0u) >> 2) + 3u) = r11; }
+        barrier();
+        if (!p1) { { uint lw0 = SMEM(((r2 * 1u + 0x0u) >> 2) + 0u), lw1 = SMEM(((r2 * 1u + 0x0u) >> 2) + 1u), lw2 = SMEM(((r2 * 1u + 0x0u) >> 2) + 2u), lw3 = SMEM(((r2 * 1u + 0x0u) >> 2) + 3u); r12 = lw0; r13 = lw1; r14 = lw2; r15 = lw3; } }
+        r2 = floatBitsToUint(float(cb0.d[0][0]));
+        r19 = uint(uint(clamp(trunc(uintBitsToFloat(r18)), 0.0, 4294967295.0)));
+        ur5 = 0u;
+        r0 = floatBitsToUint(float(ur4));
+        r28 = prmt(0u, 0x5410u, r28);
+        r12 = floatBitsToUint((((-unpackHalf2x16(0u)) + unpackHalf2x16(r28).xx)).x);
+        { uint lea_shifted = (ur4 << 3u); uint lea_b = ur8; bool lea_negcarry = false; bool lea_carry = false; uint64_t lea_sum = uint64_t(lea_shifted) + uint64_t(lea_b) + uint64_t(lea_carry ? 1u : 0u); ur5 = uint(lea_sum); up0 = lea_negcarry || ((lea_sum >> 32u) != uint64_t(0)); }
+        { uint pr = r0 >> 0u; p1 = (pr & 2u) != 0u; p2 = (pr & 4u) != 0u; }
+        r6 = floatBitsToUint((!p0 ? uintBitsToFloat(r4) : uintBitsToFloat(r2)));
+        if (!p0) { r19 = floatBitsToUint((uintBitsToFloat(r13) * uintBitsToFloat(r5))); }
+        r0 = ((floatBitsToUint(uintBitsToFloat(0u)) & 0xffff0000u) | (floatBitsToUint(uintBitsToFloat(r0)) >> 16));
+        ur8 = (((0u - ur8)) + (0x1u) + (0u));
+        up0 = ((int(0u)) <= (int(ur6))) && true;
+        ur15 = (!up0 ? ur6 : 0u);
+        ur5 = ((ur8) & (0x1u));
+        r4 = bitfieldExtract(cb0.d[(0u + 384u) >> 4][((0u + 384u) >> 2) & 3u], int(((0u + 384u) & 3u) * 8u), 8);
+        lmem[min(((r1 + 0x0u) >> 2) + 0u, LMEM_WORDS - 1u)] = r10; lmem[min(((r1 + 0x0u) >> 2) + 1u, LMEM_WORDS - 1u)] = r11;
+        { vec2 ha = unpackHalf2x16(0u).xx, hc = unpackHalf2x16(cb0.d[23][2]).yy; bool h0 = ((ha.x) != (hc.x)), h1 = ((ha.y) != (hc.y)); p1 = h0 && true; }
+        { bool sok; uint sr = shfl(r17, 0x1u, 0x1e01u, 2u, sok); r2 = sr; p0 = sok; }
+        if (gl_SubgroupSize <= 32u) { ur6 = uint(subgroupAdd(int(r14))); } else { uint ra = r14, rv = 0u, wmask = warp_ballot(true); for (uint k = 0u; k < 32u; k++) { uint rx = warp_shuffle(ra, k); if (((wmask >> k) & 1u) != 0u) rv = rv + rx; } ur6 = rv; }
+        r7 = uint(bitfieldExtract(int(r7), 0, int(min(0x8u, 32u))));
+        r6 = warp_ballot((p2) && !exited);
+        r57 = uint(findMSB(r16));
+        r7 = uint(!true ? min(int(r4), int(0x1u)) : max(int(r4), int(0x1u)));
+        r49 = ((((p0 ? 1u : 0u) | (p1 ? 2u : 0u) | (p2 ? 4u : 0u) | (p3 ? 8u : 0u) | (p4 ? 16u : 0u) | (p5 ? 32u : 0u) | (p6 ? 64u : 0u)) & 1u) | (0u & 4294967294u));
+        ur7 = r29;
+        r6 = sb600.d[((r4 - cb0.d[96][0] + 0x0u) >> 2) + 0u];
+        r5 = ((((uintBitsToFloat(r5)) == (uintBitsToFloat(0u))) && true) ? 0x3f800000u : 0u);
+        r29 = lmem[min(((r1 + 0x0u) >> 2) + 0u, LMEM_WORDS - 1u)];
+        ur4 = warp_ballot((true) && !exited);
+        ur4 = uint(findMSB(ur4));
+        { uint ab864 = r5; r6 = (ab864 * (uint(int(ab864) >> 31) | 1u)); }
+        if (!up1) { up0 = (true && true && up2); }
+        groupMemoryBarrier();
+        r7 = uint(bitCount(ur4));
+        { uint lw0 = ldsm((r2 + 0x0u), 0u, false), lw1 = ldsm((r2 + 0x0u), 1u, false), lw2 = ldsm((r2 + 0x0u), 2u, false), lw3 = ldsm((r2 + 0x0u), 3u, false); r68 = lw0; r69 = lw1; r70 = lw2; r71 = lw3; }
+        { uint hd0, hd1; hmma(r20, r21, r22, r23, r24, r25, r2, r3, hd0, hd1); r2 = hd0; r3 = hd1; }
+        r19 = floatBitsToUint(floor(uintBitsToFloat(r2)));
+        { vec4 tv = textureLod(t0_98, vec2(uintBitsToFloat(r2), uintBitsToFloat(r3)), uintBitsToFloat(r7)); r0 = floatBitsToUint(tv[0]); }
+        { uint mv = r9; uint mm = 0u; for (uint k = 0u; k < 32u; k++) if (warp_shuffle(mv, k) == mv) mm |= 1u << k; mm &= warp_ballot(true); r5 = mm; }
+        ur5 = uint(bitCount(ur4));
+        r3 = floatBitsToUint((!true ? nmin(abs(uintBitsToFloat(r7)), uintBitsToFloat(0x3f800000u)) : nmax(abs(uintBitsToFloat(r7)), uintBitsToFloat(0x3f800000u))));
+        ur4 = bitfieldReverse(ur6);
+        { vec4 tv = texelFetch(t0_100, int(r15), 0); r8 = floatBitsToUint(tv[0]); r9 = floatBitsToUint(tv[1]); }
+        if (!p0) { if (!exited) { { uint gc, gl = uaddCarry(r60, 0x0u, gc), gh = r61 + gc; gst(gl, gh, 0u, r40); gst(gl, gh, 1u, r41); gst(gl, gh, 2u, r42); gst(gl, gh, 3u, r43); } } }
+        { vec2 ma = unpackHalf2x16(r16), mb = unpackHalf2x16(r5).xx; vec2 mr = (!true) ? vec2(nmin(ma.x, mb.x), nmin(ma.y, mb.y)) : vec2(nmax(ma.x, mb.x), nmax(ma.y, mb.y)); r9 = packHalf2x16(mr); }
+        { ivec3 sz = txqsz_0_88(int(r16)); r16 = uint(sz[1]); }
+        r20 = floatBitsToUint((uintBitsToFloat(r21) * vec4(1.0, 1.0, -1.0, 0.0)[((204u >> ((gl_SubgroupInvocationID & 3u) * 2u)) & 3u)] + uintBitsToFloat(r20) * vec4(1.0, -1.0, 1.0, 1.0)[((204u >> ((gl_SubgroupInvocationID & 3u) * 2u)) & 3u)]));
+        { vec4 tv = textureGather(t0_88, vec2((uintBitsToFloat(r56) + float(bitfieldExtract(int(r7), 0, 4)) / float(textureSize(t0_88, 0).x)), (uintBitsToFloat(r57) + float(bitfieldExtract(int(r7), 4, 4)) / float(textureSize(t0_88, 0).y))), 3); r18 = floatBitsToUint(tv[0]); r19 = floatBitsToUint(tv[1]); r20 = floatBitsToUint(tv[2]); r21 = floatBitsToUint(tv[3]); }
+        r21 = movm(r14);
+        ur29 = ((((up0 ? 1u : 0u) | (up1 ? 2u : 0u) | (up2 ? 4u : 0u) | (up3 ? 8u : 0u) | (up4 ? 16u : 0u) | (up5 ? 32u : 0u) | (up6 ? 64u : 0u)) & 1u) | (0u & 4294967294u));
+        return;
+}

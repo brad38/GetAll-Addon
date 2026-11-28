@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "status": "FAILED",
+  "run_id": "31c",
+  "started_utc": "2026-11-27T22:02:51.181414+00:00",
+  "phases": [
+    {
+      "mode": "dotnet-version31c",
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.exe",
+        "--version"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127",
+      "started_utc": "2026-11-27T22:02:51.229413+00:00",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.078,
+      "finished_utc": "2026-11-27T22:02:51.320026+00:00",
+      "passes": 0,
+      "failures": 0,
+      "log": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\dotnet-version31c.log",
+        "bytes": 9,
+        "sha256": "edd0ad505c4a86b69a22139ead7657ff889802887824385e6334d544555dbbb7"
+      },
+      "sdk_version": "8.0.425"
+    },
+    {
+      "mode": "harness-build31c",
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.exe",
+        "build",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127\\Tests\\AddonInfrastructure\\AddonInfrastructure.csproj",
+        "-c",
+        "Release",
+        "--nologo",
+        "--no-restore",
+        "-o",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31c"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127",
+      "started_utc": "2026-11-27T22:02:51.322026+00:00",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 5.391,
+      "finished_utc": "2026-11-27T22:02:56.708360+00:00",
+      "passes": 0,
+      "failures": 0,
+      "log": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31c.log",
+        "bytes": 360,
+        "sha256": "5110b14ac7cdd8af3cc97377bc52a4f4d9fd0f0227020678a11c5ab994294a60"
+      },
+      "warnings": 0,
+      "errors": 0,
+      "assemblies": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31c\\AddonInfrastructure.dll",
+          "bytes": 12245504,
+          "sha256": "90515c8f7bec7f0cc9a481f23d9ff71825ed4109fbb0b9650bf270c4355a341e"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31c\\AllFix.Addons.Sdk.dll",
+          "bytes": 89088,
+          "sha256": "bdf1179cd2761c4e3fb1a8c0ef7c4e20b4d68a2ffe6697ac40130b6339fbd555"
+        }
+      ]
+    },
+    {
+      "mode": "regression31c",
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.exe",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31c\\AddonInfrastructure.dll"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127",
+      "started_utc": "2026-11-27T22:02:56.723361+00:00",
+      "status": "FAILED",
+      "exit_code": 3762504530,
+      "seconds": 12.328,
+      "finished_utc": "2026-11-27T22:03:09.048316+00:00",
+      "passes": 1756,
+      "failures": 0,
+      "log": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\regression31c.log",
+        "bytes": 116478,
+        "sha256": "de678a831789bf3a7cdd5b92d08a0bfdfb59683e224b192aeec9b10588c745df"
+      },
+      "error": "regression31c exited unsuccessfully"
+    }
+  ],
+  "source_inputs_unchanged": true,
+  "git_state_unchanged": true,
+  "getall_index_unchanged": true,
+  "source_cache_unchanged": true,
+  "native_stage_repeated": false,
+  "native_cpp_built": false,
+  "errors": [
+    "RuntimeError: regression31c exited unsuccessfully"
+  ],
+  "finished_utc": "2026-11-27T22:03:09.545924+00:00",
+  "input_manifest": {
+    "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31c-sources-before.json",
+    "bytes": 94438,
+    "sha256": "09d6a9affc77a79a4f43deaa308bb57d2dd867d70e7f2eaf42652f74777f1be8"
+  },
+  "sources_checked": 538
+}

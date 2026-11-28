@@ -1,0 +1,246 @@
+[
+  {
+    "name": "abseil-cpp",
+    "url": "https://github.com/abseil/abseil-cpp/archive/refs/tags/20240722.0.tar.gz",
+    "sha256": "f50e5ac311a81382da7fa75b97310e4b9006474f9560ac46f54a9967f07d4ae3",
+    "kind": "source",
+    "source_contract": "dep-aurora-40cf48f/extern/CMakeLists.txt",
+    "file": "abseil-20240722.0.tar.gz",
+    "cache_names": [
+      "20240722.0.tar.gz"
+    ],
+    "prefix": "abseil-cpp-20240722.0",
+    "bytes": 2242861
+  },
+  {
+    "name": "xxhash",
+    "url": "https://github.com/Cyan4973/xxHash/archive/refs/tags/v0.8.3.tar.gz",
+    "sha256": "aae608dfe8213dfd05d909a57718ef82f30722c392344583d3f39050c7f29a80",
+    "kind": "source",
+    "source_contract": "dep-aurora-40cf48f/extern/CMakeLists.txt",
+    "file": "xxhash-v0.8.3.tar.gz",
+    "cache_names": [
+      "v0.8.3.tar.gz"
+    ],
+    "prefix": "xxHash-0.8.3",
+    "bytes": 1147630
+  },
+  {
+    "name": "fmt",
+    "url": "https://github.com/fmtlib/fmt/archive/refs/tags/12.1.0.tar.gz",
+    "sha256": "ea7de4299689e12b6dddd392f9896f08fb0777ac7168897a244a6d6085043fea",
+    "kind": "source",
+    "source_contract": "dep-aurora-40cf48f/extern/CMakeLists.txt",
+    "file": "fmt-12.1.0.tar.gz",
+    "cache_names": [
+      "12.1.0.tar.gz"
+    ],
+    "prefix": "fmt-12.1.0",
+    "bytes": 711419
+  },
+  {
+    "name": "ZLIB",
+    "url": "https://github.com/zlib-ng/zlib-ng/archive/refs/tags/2.3.3.tar.gz",
+    "sha256": "f9c65aa9c852eb8255b636fd9f07ce1c406f061ec19a2e7d508b318ca0c907d1",
+    "kind": "source",
+    "source_contract": "dep-aurora-40cf48f/extern/CMakeLists.txt",
+    "file": "ZLIB-2.3.3.tar.gz",
+    "cache_names": [
+      "2.3.3.tar.gz"
+    ],
+    "prefix": "zlib-ng-2.3.3",
+    "bytes": 2447397
+  },
+  {
+    "name": "PNG",
+    "url": "https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.58.tar.gz",
+    "sha256": "a9d4df463d36a6e5f9c29bd6f4967312d17e996c1854f3511f833924eb1993cf",
+    "kind": "source",
+    "source_contract": "dep-aurora-40cf48f/extern/CMakeLists.txt",
+    "file": "PNG-v1.6.58.tar.gz",
+    "cache_names": [
+      "v1.6.58.tar.gz"
+    ],
+    "prefix": "libpng-1.6.58",
+    "bytes": 1592190
+  },
+  {
+    "name": "Freetype",
+    "url": "https://files.twilitrealm.dev/freetype-2.14.3.tar.gz",
+    "sha256": "e61b31ab26358b946e767ed7eb7f4bb2e507da1cfefeb7a8861ace7fd5c899a1",
+    "kind": "source",
+    "source_contract": "dep-aurora-40cf48f/extern/CMakeLists.txt",
+    "file": "freetype-2.14.3.tar.gz",
+    "cache_names": [
+      "freetype-2.14.3.tar.gz"
+    ],
+    "prefix": "freetype-2.14.3",
+    "bytes": 4134916
+  },
+  {
+    "name": "imgui",
+    "url": "https://github.com/ocornut/imgui/archive/refs/tags/v1.91.9b-docking.tar.gz",
+    "sha256": "466fdef9b18de15f0bb6e288e3d00ffa3d82200ec458ce5e4f724a161d9528a5",
+    "kind": "source",
+    "source_contract": "dep-aurora-40cf48f/extern/CMakeLists.txt",
+    "file": "imgui-v1.91.9b-docking.tar.gz",
+    "cache_names": [
+      "v1.91.9b-docking.tar.gz"
+    ],
+    "prefix": "imgui-1.91.9b-docking",
+    "bytes": 2006500
+  },
+  {
+    "name": "sqlite3",
+    "url": "https://sqlite.org/2026/sqlite-amalgamation-3510300.zip",
+    "sha256": "acb1e6f5d832484bf6d32b681e858c38add8b2acdfd42ac5df24b8afb46552b4",
+    "kind": "source",
+    "source_contract": "dep-aurora-40cf48f/extern/CMakeLists.txt",
+    "file": "sqlite-amalgamation-3510300.zip",
+    "cache_names": [
+      "sqlite-amalgamation-3510300.zip"
+    ],
+    "prefix": "sqlite-amalgamation-3510300",
+    "bytes": 2876305
+  },
+  {
+    "name": "zstd",
+    "url": "https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz",
+    "sha256": "eb33e51f49a15e023950cd7825ca74a4a2b43db8354825ac24fc1b7ee09e6fa3",
+    "kind": "source",
+    "source_contract": "dep-aurora-40cf48f/extern/CMakeLists.txt",
+    "file": "zstd-1.5.7.tar.gz",
+    "cache_names": [
+      "zstd-1.5.7.tar.gz"
+    ],
+    "prefix": "zstd-1.5.7",
+    "exclude_prefixes": [
+      "tests"
+    ],
+    "exclusion_reason": "No tests used: ZSTD_BUILD_TESTS=OFF. The pinned release contains test-only symlinks; no links are materialized.",
+    "bytes": 2434947
+  },
+  {
+    "name": "rmlui",
+    "url": "https://github.com/encounter/RmlUi/archive/f00a0fee38391b2f927114e11bea18dc0a7dba1e.tar.gz",
+    "sha256": "6d9fd1164b7873c9dfba72d724753bda9e3db8280c9af802eed8e2a12035f152",
+    "kind": "source",
+    "source_contract": "dep-aurora-40cf48f/extern/CMakeLists.txt",
+    "file": "f00a0fee38391b2f927114e11bea18dc0a7dba1e.tar.gz",
+    "cache_names": [
+      "f00a0fee38391b2f927114e11bea18dc0a7dba1e.tar.gz"
+    ],
+    "prefix": "RmlUi-f00a0fee38391b2f927114e11bea18dc0a7dba1e",
+    "bytes": 4033883
+  },
+  {
+    "name": "tracy",
+    "url": "https://github.com/wolfpld/tracy/archive/refs/tags/v0.14.1.zip",
+    "sha256": "908f3a2917fa86a247abfcf85dcf04bad1db6986a4d40f94b70512f3e9e98d5b",
+    "kind": "source",
+    "source_contract": "dep-aurora-40cf48f/extern/CMakeLists.txt",
+    "file": "tracy-v0.14.1.zip",
+    "cache_names": [
+      "v0.14.1.zip"
+    ],
+    "prefix": "tracy-0.14.1",
+    "bytes": 6387264
+  },
+  {
+    "name": "cxxopts",
+    "url": "https://github.com/jarro2783/cxxopts/archive/refs/tags/v3.3.1.tar.gz",
+    "sha256": "3bfc70542c521d4b55a46429d808178916a579b28d048bd8c727ee76c39e2072",
+    "kind": "source",
+    "source_contract": "dep-borealis-d4d7ff1/CMakeLists.txt",
+    "file": "cxxopts-v3.3.1.tar.gz",
+    "cache_names": [
+      "v3.3.1.tar.gz"
+    ],
+    "prefix": "cxxopts-3.3.1",
+    "bytes": 161557
+  },
+  {
+    "name": "nlohmann_json",
+    "url": "https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz",
+    "sha256": "42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa",
+    "kind": "source",
+    "source_contract": "dep-borealis-d4d7ff1/CMakeLists.txt",
+    "file": "nlohmann_json-json.tar.xz",
+    "cache_names": [
+      "json.tar.xz"
+    ],
+    "prefix": "json",
+    "bytes": 114576
+  },
+  {
+    "name": "dawn_prebuilt",
+    "url": "https://github.com/encounter/dawn/releases/download/v20260807.225922/dawn-windows-amd64.tar.gz",
+    "sha256": "42a7a295c87b2e8a36312e2f84a5823aac63325e8e1d271bc7ced6f83bfb075f",
+    "bytes": 14209713,
+    "kind": "runtime-and-headers",
+    "release": "v20260807.225922",
+    "target": "1155e0ed531126f33a1279afa029349651ca1c93",
+    "file": "dawn-windows-amd64.tar.gz",
+    "cache_names": [
+      "dawn-windows-amd64.tar.gz"
+    ],
+    "prefix": ""
+  },
+  {
+    "name": "nod_prebuilt",
+    "url": "https://github.com/encounter/nod/releases/download/v2.0.0-alpha.12/libnod-windows-x86_64.tar.gz",
+    "sha256": "c9dfecf8e52066a5222f3cb1cad18d0740c958ce65bf60cb84e780a3856ed881",
+    "bytes": 6408338,
+    "kind": "runtime-and-headers",
+    "release": "v2.0.0-alpha.12",
+    "file": "libnod-windows-x86_64.tar.gz",
+    "cache_names": [
+      "libnod-windows-x86_64.tar.gz"
+    ],
+    "prefix": "",
+    "release_target": "main",
+    "source_revision": "ebd80cac99b48a323200d84365e07a58cc27412d"
+  },
+  {
+    "name": "aurora",
+    "repository": "encounter/aurora",
+    "revision": "40cf48fce6ce85366608596bae018c6188f2b2e7",
+    "url": "https://codeload.github.com/encounter/aurora/tar.gz/40cf48fce6ce85366608596bae018c6188f2b2e7",
+    "bytes": 1114986,
+    "sha256": "31e95aa7de5a4d5e0d4a145af89e384b19e35fda598c507b56ccaf2684914a74",
+    "file": "aurora-40cf48fce6ce85366608596bae018c6188f2b2e7.tar.gz",
+    "prefix": "aurora-40cf48fce6ce85366608596bae018c6188f2b2e7",
+    "kind": "source"
+  },
+  {
+    "name": "borealis",
+    "repository": "encounter/borealis",
+    "revision": "d4d7ff146ff4097d64bb24e52459152f1b5e597a",
+    "url": "https://codeload.github.com/encounter/borealis/tar.gz/d4d7ff146ff4097d64bb24e52459152f1b5e597a",
+    "bytes": 243106,
+    "sha256": "0909f693bb118deab0ec89bd3708eb2532b4b12190dd1adec28dfa07f9288034",
+    "file": "borealis-d4d7ff146ff4097d64bb24e52459152f1b5e597a.tar.gz",
+    "prefix": "borealis-d4d7ff146ff4097d64bb24e52459152f1b5e597a",
+    "kind": "source"
+  },
+  {
+    "name": "musyx",
+    "repository": "AxioDL/musyx",
+    "revision": "dc56c921528821209a8b53029114e5443435f40d",
+    "url": "https://codeload.github.com/AxioDL/musyx/tar.gz/dc56c921528821209a8b53029114e5443435f40d",
+    "bytes": 200167,
+    "sha256": "62fe620ac01507840f5b134a44a2eda352f75e369017555f15816a1f2f070b26",
+    "file": "musyx-dc56c921528821209a8b53029114e5443435f40d.tar.gz",
+    "prefix": "musyx-dc56c921528821209a8b53029114e5443435f40d",
+    "kind": "source"
+  },
+  {
+    "name": "sdl3_prebuilt",
+    "file": "SDL3-devel-3.4.10-mingw.tar.gz",
+    "url": "https://github.com/libsdl-org/SDL/releases/download/release-3.4.10/SDL3-devel-3.4.10-mingw.tar.gz",
+    "bytes": 5271275,
+    "sha256": "39dd2ac370bf33d6332a21ed768d8d49c37cc6f3211d788ead765102722639a8",
+    "prefix": "SDL3-3.4.10",
+    "kind": "runtime-and-headers"
+  }
+]

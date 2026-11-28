@@ -1,0 +1,160 @@
+{
+  "status": "NORMAL_CLI_PUBLIC_CORPUS",
+  "input_bytes": 46672,
+  "input_sha256": "d94ff0053a50570f08cc3a0c5fed51b34ccdbe4eba446f625e1016241e45a252",
+  "nvdisasm_exit": 0,
+  "cases": 2917,
+  "matched_mnemonics": 90,
+  "matched": {
+    "ATOMG": 67,
+    "BAR": 13,
+    "BRA": 16,
+    "BREAK": 8,
+    "BRX": 3,
+    "BRXU": 3,
+    "BSSY": 3,
+    "BSYNC": 2,
+    "CALL": 11,
+    "CS2R": 10,
+    "DEPBAR": 6,
+    "ERRBAR": 1,
+    "EXIT": 5,
+    "F2FP": 20,
+    "F2I": 22,
+    "FADD": 49,
+    "FFMA": 100,
+    "FLO": 14,
+    "FMNMX": 48,
+    "FMUL": 47,
+    "FRND": 16,
+    "FSEL": 44,
+    "FSET": 14,
+    "FSETP": 81,
+    "FSWZADD": 8,
+    "HADD2": 43,
+    "HMMA": 22,
+    "HMNMX2": 30,
+    "HSETP2": 38,
+    "I2F": 52,
+    "I2FP": 15,
+    "IABS": 12,
+    "IADD3": 236,
+    "IMAD": 180,
+    "IMNMX": 35,
+    "ISETP": 135,
+    "LDC": 18,
+    "LDG": 70,
+    "LDL": 24,
+    "LDS": 48,
+    "LDSM": 21,
+    "LEA": 189,
+    "LOP3": 81,
+    "MATCH": 4,
+    "MEMBAR": 5,
+    "MOV": 22,
+    "MOVM": 3,
+    "MUFU": 36,
+    "NOP": 2,
+    "P2R": 8,
+    "PLOP3": 14,
+    "POPC": 11,
+    "PRMT": 24,
+    "R2P": 10,
+    "R2UR": 7,
+    "RED": 19,
+    "REDUX": 9,
+    "RET": 5,
+    "S2R": 16,
+    "S2UR": 5,
+    "SEL": 34,
+    "SGXT": 17,
+    "SHF": 89,
+    "SHFL": 36,
+    "STG": 39,
+    "STL": 23,
+    "STS": 43,
+    "SULD": 43,
+    "SUST": 52,
+    "TEX": 54,
+    "TLD": 50,
+    "TLD4": 27,
+    "TXQ": 14,
+    "UBREV": 3,
+    "UFLO": 4,
+    "UIADD3": 66,
+    "UIMAD": 32,
+    "UISETP": 39,
+    "ULDC": 17,
+    "ULEA": 68,
+    "ULOP3": 23,
+    "UMOV": 8,
+    "UP2UR": 3,
+    "UPLOP3": 4,
+    "UPOPC": 3,
+    "USEL": 14,
+    "USHF": 26,
+    "VOTE": 11,
+    "VOTEU": 10,
+    "WARPSYNC": 5
+  },
+  "mismatches": [],
+  "rejected_records": [
+    {
+      "form": "FFMA_R_R_R_R",
+      "word": "180000000000c00b000000060a007223",
+      "sass": "FFMA.RZ R0, R10, R6.reuse, R11.reuse ;",
+      "diagnostic": "nvdisasm error   : Opclass 'ffma__RRR_RRR', undefined value 0xc2 for table 'TABLES_opex_3' at address 0x00000b60"
+    },
+    {
+      "form": "FFMA_R_R_R_R",
+      "word": "180000000000400b000000060a057223",
+      "sass": "FFMA.RM R5, R10, R6.reuse, R11.reuse ;",
+      "diagnostic": "nvdisasm error   : Opclass 'ffma__RRR_RRR', undefined value 0xc2 for table 'TABLES_opex_3' at address 0x00000b70"
+    },
+    {
+      "form": "SHF_R_R_R_R",
+      "word": "180000000000120700000009060d7219",
+      "sass": "SHF.R.U64 R13, R6, R9.reuse, R7.reuse ;",
+      "diagnostic": "nvdisasm error   : Opclass 'shf__RRR_RRR', undefined value 0xc2 for table 'TABLES_opex_3' at address 0x00001950"
+    },
+    {
+      "form": "SHF_R_R_R_R",
+      "word": "180000000000100c0000000304057219",
+      "sass": "SHF.R.S64 R5, R4, R3.reuse, R12.reuse ;",
+      "diagnostic": "nvdisasm error   : Opclass 'shf__RRR_RRR', undefined value 0xc2 for table 'TABLES_opex_3' at address 0x00001960"
+    },
+    {
+      "form": "LEA_R_R_R_R_II_P",
+      "word": "1c000000008f24030000000e00407211",
+      "sass": "LEA.HI.X R64, R0.reuse, R14.reuse, R3.reuse, 0x4, P1 ;",
+      "diagnostic": "nvdisasm error   : Opclass 'lea_hi_noimm_x__RRR_RRR', undefined value 0xe2 for table 'TABLES_opex_3' at address 0x00002740"
+    }
+  ],
+  "up2ur_reference": "https://raw.githubusercontent.com/cloudcores/CuAssembler/96a9f72baf00f40b9b299653fcef8d3e2b4a3d49/CuAsm/InsAsmRepos/DefaultInsAsmRepos.sm_80.txt",
+  "up2ur_confirmed_sm86": [
+    {
+      "word": "0000000008000000000000013f1d7883",
+      "disassembly": {
+        "opcode": "UP2UR",
+        "operands": "UR29,UPR,URZ,0x1"
+      }
+    },
+    {
+      "word": "0000000008000000000000013f1c7883",
+      "disassembly": {
+        "opcode": "UP2UR",
+        "operands": "UR28,UPR,URZ,0x1"
+      }
+    },
+    {
+      "word": "0000000008000000000000023f2c7883",
+      "disassembly": {
+        "opcode": "UP2UR",
+        "operands": "UR44,UPR,URZ,0x2"
+      }
+    }
+  ],
+  "schedule": "0x7e2 at bit105; operand bits unchanged",
+  "stderr": "",
+  "production_model": false
+}

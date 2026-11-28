@@ -1,0 +1,21 @@
+{
+  "stage": "cs",
+  "cbufs": [
+    {
+      "binding": 1,
+      "slot": 0
+    }
+  ],
+  "sbufs": [
+    {
+      "binding": 2,
+      "slot": 0,
+      "cb_slot": 0,
+      "cb_offset": 128,
+      "flags": 1
+    }
+  ],
+  "textures": [],
+  "images": [],
+  "spec": []
+}

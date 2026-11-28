@@ -1,0 +1,62 @@
+{
+  "status": "STARTED",
+  "desktop": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127",
+  "getall": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\getall-sdk169-snapshot",
+  "expected_index_sha256": "2e3ee9a442015c492c84cc28f92f7da75dfffdbbe817d42dc0f3b311cbfac9eb",
+  "expected_head": "8ba34eb51ee0ab93accef3da5e1689c68825977d",
+  "output": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31d",
+  "metaforce_work": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\metaforce-policy-build31d",
+  "result": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-result.json",
+  "new_files": [
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-result.json",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\parser31d.json",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-request.json",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-git-before.json",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-git-after.json",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-sources-before.json",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-sources-after.json",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\dotnet-version31d.log",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\dotnet-version31d-result.json",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31d.log",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31d-result.json",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\regression31d.log",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\regression31d-result.json",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\parser31d.log",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\parser31d-result.json",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\metaforce-build31d.log",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\metaforce-build31d-result.json"
+  ],
+  "native_stage_repeated": false,
+  "started_utc": "2026-11-28T00:39:17.456608+00:00",
+  "runner": {
+    "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\run-build31.py",
+    "bytes": 15158,
+    "sha256": "494ccf5e3a86833260db91b2b4b74cfa8855df35905e6474b0b528cbd650969c"
+  },
+  "sdk_declared_version": "1.5.69",
+  "dotnet": {
+    "path": "C:\\Program Files\\dotnet\\dotnet.exe",
+    "bytes": 162096,
+    "sha256": "a399333d6f2e8c9a702542d478e60853a009b32d936e95b0ca0306f0ae97ccf3"
+  },
+  "git_version": "git version 2.55.0.windows.3",
+  "getall_index": {
+    "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\getall-sdk169-snapshot\\index.json",
+    "bytes": 66318,
+    "sha256": "2e3ee9a442015c492c84cc28f92f7da75dfffdbbe817d42dc0f3b311cbfac9eb"
+  },
+  "source_archive": {
+    "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\metaforce-de8fc69-source.zip",
+    "bytes": 21536851,
+    "sha256": "e130131a1a41e8599541d8ab3dd2f31c6d8abaa9af03411f8bba25c3f5b63f21"
+  },
+  "environment_overrides": {
+    "DOTNET_CLI_TELEMETRY_OPTOUT": "1",
+    "DOTNET_NOLOGO": "1",
+    "DOTNET_CLI_UI_LANGUAGE": "en"
+  },
+  "counts_regex": {
+    "pass": "^[ \\t]*PASS(?:[ \\t].*)?$",
+    "fail": "^[ \\t]*FAIL(?:[ \\t].*)?$"
+  }
+}
