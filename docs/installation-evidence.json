@@ -499,7 +499,7 @@
               "observed": "Current official Hookshot profile stages pinned builder parts into a portable home, validates media, invokes HookshotBuilder --cli --prepare --game --out, verifies executable/renderer/image/RomFS and uses the shared build transaction. The local bootstrap inspection establishes package identity only."
             },
             {
-              "path": "recipes/the-legend-of-zelda-ocarina-of-time/hookshot-zelda-oot-port/v3.0.2.json",
+              "path": "recipes/the-legend-of-zelda-ocarina-of-time-switch-2/hookshot-zelda-oot-port/v3.0.2.json",
               "sha256": "f92fde813ec44b2975e3da1f63b921da701e3e841a741f6a5892b186da7d457d",
               "observed": "New official package identity and CLI/launcher contract reviewed. No original media, local game build or gameplay was exercised in this review.",
               "data_kind": "code_review",

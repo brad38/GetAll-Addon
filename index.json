@@ -825,24 +825,24 @@
       "has_manual_steps": true
     },
     {
-      "game_id": "dead-rising-2-case-zero-case-west",
+      "game_id": "dead-rising-2-case-zero",
       "project_id": "dead-rising-2-case-zero-xenon-recomp",
       "repository": "wivi514/Dead_Rising_2_Case_Zero_Xenon_Recomp",
       "tag": "v1.1.3",
       "schema_version": 3,
-      "path": "recipes/dead-rising-2-case-zero-case-west/dead-rising-2-case-zero-xenon-recomp/v1.1.3.json",
+      "path": "recipes/dead-rising-2-case-zero/dead-rising-2-case-zero-xenon-recomp/v1.1.3.json",
       "sha256": "26e068d9839c00411a2aee5f58d43f26aac5ae67f902071b1988707ff5b96f96",
       "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true
     },
     {
-      "game_id": "dead-rising-2-case-zero-case-west",
+      "game_id": "dead-rising-2-case-west",
       "project_id": "dead-rising-2-case-west-xenon-recomp",
       "repository": "wivi514/Dead_Rising_2_Case_West_Xenon_Recomp",
       "tag": "v1.1.2",
       "schema_version": 3,
-      "path": "recipes/dead-rising-2-case-zero-case-west/dead-rising-2-case-west-xenon-recomp/v1.1.2.json",
+      "path": "recipes/dead-rising-2-case-west/dead-rising-2-case-west-xenon-recomp/v1.1.2.json",
       "sha256": "b542af6a8526e96275da0fd8e8174c0172628bc0e0cd31f7fe8b908432def552",
       "status": "experimental",
       "has_inputs": false,
@@ -1715,12 +1715,12 @@
       "min_sdk_version": "1.5.67"
     },
     {
-      "game_id": "the-legend-of-zelda-ocarina-of-time",
+      "game_id": "the-legend-of-zelda-ocarina-of-time-switch-2",
       "project_id": "hookshot-zelda-oot-port",
       "repository": "ItsNotRexed/Hookshot",
       "tag": "v3.0.2",
       "schema_version": 9,
-      "path": "recipes/the-legend-of-zelda-ocarina-of-time/hookshot-zelda-oot-port/v3.0.2.json",
+      "path": "recipes/the-legend-of-zelda-ocarina-of-time-switch-2/hookshot-zelda-oot-port/v3.0.2.json",
       "sha256": "f92fde813ec44b2975e3da1f63b921da701e3e841a741f6a5892b186da7d457d",
       "status": "experimental",
       "has_inputs": false,
@@ -1744,12 +1744,12 @@
       "audit_reference": "AllFix-Repo/excluded-projects.json#sonic-1-forever-sonic-2-absolute"
     },
     {
-      "game_id": "sonic-the-hedgehog-1-2-2013",
+      "game_id": "sonic-the-hedgehog-2013",
       "project_id": "sonic-1-forever",
       "repository": "TeamForeverDev/Sonic1Forever",
       "tag": "v1.5.2",
       "schema_version": 9,
-      "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-1-forever/v1.5.2.json",
+      "path": "recipes/sonic-the-hedgehog-2013/sonic-1-forever/v1.5.2.json",
       "sha256": "6561526792ca7d71039eaf9672835339ee982c1cc2e57281e007ad1ae7dd847f",
       "status": "experimental",
       "has_inputs": false,
@@ -1757,12 +1757,12 @@
       "min_sdk_version": "1.5.11"
     },
     {
-      "game_id": "sonic-the-hedgehog-1-2-2013",
+      "game_id": "sonic-the-hedgehog-2-2013",
       "project_id": "sonic-2-absolute",
       "repository": "TeamForeverDev/Sonic2Absolute",
       "tag": "v1.2.2",
       "schema_version": 9,
-      "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-2-absolute/v1.2.2.json",
+      "path": "recipes/sonic-the-hedgehog-2-2013/sonic-2-absolute/v1.2.2.json",
       "sha256": "92e3a744b5b73539c97c69d899c1328b6a2d79ecf90c16b2dd26d2c808ca9a82",
       "status": "experimental",
       "has_inputs": false,

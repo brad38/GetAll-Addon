@@ -651,10 +651,11 @@ def validate_recipe_semantics(
             "sarecomp-0.52.0-prepare": ("sonic-adventure", "sonicfreak1337/SARecomp"),
             "fh1-0.3.9-inno-prepare": ("forza-horizon", "FH1-ReImagined/ForzaHorizon1-ReImagined"),
             "mml-0.9.6-beta-pyinstaller-prepare": ("mega-man-legends-rockman-dash", "Drakfix/MML_Modernization-Project"),
-            "hookshot-3.0.2-official-prepare": ("the-legend-of-zelda-ocarina-of-time", "ItsNotRexed/Hookshot"),
+            "hookshot-3.0.2-official-prepare": ("the-legend-of-zelda-ocarina-of-time-switch-2", "ItsNotRexed/Hookshot"),
+            "teamforever-sonic1-1.5.2": ("sonic-the-hedgehog-2013", "TeamForeverDev/Sonic1Forever"),
+            "teamforever-sonic2-1.2.2": ("sonic-the-hedgehog-2-2013", "TeamForeverDev/Sonic2Absolute"),
             "teamforever-1.5.2-1.2.2-prepare": ("sonic-the-hedgehog-1-2-2013", "TeamForeverDev/Sonic1Forever"),
         }
-        identities.update({'teamforever-sonic1-1.5.2': ('sonic-the-hedgehog-1-2-2013', 'TeamForeverDev/Sonic1Forever'), 'teamforever-sonic2-1.2.2': ('sonic-the-hedgehog-1-2-2013', 'TeamForeverDev/Sonic2Absolute')})
         profile = next((p for p in profiles if p == recipe), None)
         if profile is None or recipe != profile:
             return errors + [f"{label}: v9 preparation profile is not approved"]
