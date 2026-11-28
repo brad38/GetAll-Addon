@@ -20,9 +20,10 @@ import sys
 import tempfile
 import urllib.error
 import urllib.request
+from urllib.parse import urlencode
 import zipfile
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -144,6 +145,48 @@ def fetch_json(url: str, headers: dict[str, str] | None = None) -> tuple[Any, di
         resp_headers = {k.lower(): v for k, v in resp.headers.items()}
         data = json.loads(resp.read().decode("utf-8"))
         return data, resp_headers
+
+
+def discover_candidate_repositories(known_repositories, headers, *, fetcher=None):
+    """Find public GitHub leads for human review without inspecting or admitting them."""
+    fetcher = fetcher or fetch_json
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=45)).date().isoformat()
+    queries = ('recomp in:name', '"recompiled" in:name,description', 'topic:static-recompilation')
+    known = {repo.lower() for repo in known_repositories if repo}
+    candidates = {}
+    errors = []
+    for query in queries:
+        params = urlencode({
+            "q": f"{query} archived:false is:public pushed:>={cutoff}",
+            "sort": "updated", "order": "desc", "per_page": 20,
+        })
+        try:
+            data, _ = fetcher(f"{GITHUB_API_BASE}/search/repositories?{params}", headers)
+        except urllib.error.HTTPError as exc:
+            errors.append({"repository": "GitHub Search", "error": f"HTTP {exc.code}, query: {query}"})
+            if exc.code in (403, 429):
+                break
+            continue
+        except (OSError, ValueError) as exc:
+            errors.append({"repository": "GitHub Search", "error": f"{type(exc).__name__}, query: {query}"})
+            continue
+        if not isinstance(data, dict) or not isinstance(data.get("items"), list):
+            errors.append({"repository": "GitHub Search", "error": f"Invalid response, query: {query}"})
+            continue
+        if data.get("incomplete_results"):
+            errors.append({"repository": "GitHub Search", "error": f"Incomplete results, query: {query}"})
+        for item in data["items"]:
+            if not isinstance(item, dict) or item.get("archived") or item.get("private") or item.get("fork"):
+                continue
+            repo = item.get("full_name")
+            if not isinstance(repo, str) or not re.fullmatch(r"[A-Za-z0-9-]+/[A-Za-z0-9_.-]+", repo):
+                continue
+            if repo.endswith(("/.", "/..")) or repo.lower() in known:
+                continue
+            candidates.setdefault(repo.lower(), {
+                "repository": repo, "url": f"https://github.com/{repo}", "status": "review_required"
+            })
+    return [candidates[key] for key in sorted(candidates)], errors
 
 
 def load_existing_report_fingerprint(repo_root: Path) -> str | None:
@@ -404,6 +447,7 @@ def run_upstream_watch(
     catalog_source: str | None = None,
     releases_fetcher: Any = None,
     asset_inspector: Any = None,
+    discover_candidates: bool = False,
 ) -> dict[str, Any]:
     """Compare catalog and GitHub releases against current repository state."""
     index_path = repo_root / "index.json"
@@ -418,7 +462,7 @@ def run_upstream_watch(
         exclusions_data = exclusions_data if exclusions_data is not None else loaded_exclusions
     decisions = assessments(eligibility_data)
     excluded_records = assessments(exclusions_data)
-    excluded_identities(exclusions_data)  # Reject malformed archive identities.
+    exclusions = excluded_identities(exclusions_data)
     policy_projects = set()
     if index_data.get("execution_policy") == "official_upstream_only":
         policy = json.loads((repo_root / "docs" / "official-install-policy.json").read_text(encoding="utf-8"))
@@ -543,6 +587,13 @@ def run_upstream_watch(
     pending_reviews: list[dict[str, Any]] = []
     api_errors: list[dict[str, str]] = []
     checked_repos = 0
+    candidates = []
+    if discover_candidates:
+        known = [p["repository"] for p in catalog_projects.values()]
+        known.extend(exclusions.values())
+        known.extend(entry.get("repository") for entry in index_entries)
+        candidates, discovery_errors = discover_candidate_repositories(known, headers)
+        api_errors.extend(discovery_errors)
 
     for repo, targets in sorted(repos_to_check.items()):
         checked_repos += 1
@@ -881,6 +932,8 @@ def run_upstream_watch(
         "new_catalog_projects": new_catalog_projects,
         "metadata_changes": metadata_changes,
         "pending_reviews": pending_reviews,
+        "discovery_requested": discover_candidates,
+        "discovery_candidates": candidates,
         "api_errors": api_errors,
     }
 
@@ -917,6 +970,14 @@ def render_markdown_report(result: dict[str, Any]) -> str:
                 f"| `{p['game_id']}` | `{p['project_id']}` | `{p.get('repository') or '—'}` | `{p.get('provider') or '—'}` |"
             )
         lines.append("")
+
+    if result.get("discovery_requested"):
+        lines.extend(["## Candidatos externos aguardando revisão", ""])
+        if result["discovery_candidates"]:
+            lines.extend(f"- [`{c['repository']}`]({c['url']})" for c in result["discovery_candidates"])
+        else:
+            lines.append("Nenhum candidato adicional nas consultas executadas.")
+        lines.extend(["", "A inclusão depende de procedência, instalação oficial e evidência específica de gameplay.", ""])
 
     if result["metadata_changes"]:
         lines.append("## Divergências de repositório com o catálogo")
@@ -992,6 +1053,8 @@ def main() -> int:
     )
     parser.add_argument("--eligibility-file", type=Path, help="Eligibility registry from the same catalog revision")
     parser.add_argument("--excluded-projects-file", type=Path, help="Preserved exclusions, monitored only for review")
+    parser.add_argument("--discover-candidates", action="store_true",
+                        help="Report external GitHub candidates for human review")
     parser.add_argument("--json-out", type=Path, default=None)
     parser.add_argument("--report-out", type=Path, default=None)
     args = parser.parse_args()
@@ -1014,6 +1077,7 @@ def main() -> int:
         catalog_data=catalog_data,
         eligibility_data=eligibility_data,
         exclusions_data=exclusions_data,
+        discover_candidates=args.discover_candidates,
     )
     report_md = render_markdown_report(result)
 

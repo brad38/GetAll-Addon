@@ -9,7 +9,7 @@ import shutil
 import sys
 import tempfile
 import unittest
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 import zipfile
 from pathlib import Path
 
@@ -21,6 +21,46 @@ import validate_recipes  # noqa: E402
 
 
 class UpstreamWatchTests(unittest.TestCase):
+    def test_candidate_discovery_excludes_catalog_forks_and_invalid_results(self) -> None:
+        fetcher = Mock(return_value=({"items": [
+            {"full_name": "Ports/ExampleRecomp"},
+            {"full_name": "ports/examplerecomp"},
+            {"full_name": "known/Active"},
+            {"full_name": "known/Archived"},
+            {"full_name": "fork/Port", "fork": True},
+            {"full_name": "org/Secret", "private": True},
+            {"full_name": "org/Archived", "archived": True},
+            {"full_name": "org/.."},
+            {"full_name": "org/port|bad"},
+        ]}, {}))
+        result, errors = upstream_watch.discover_candidate_repositories(
+            ["Known/Active", "Known/Archived"], {"User-Agent": "test"}, fetcher=fetcher)
+        self.assertEqual(result, [{"repository": "Ports/ExampleRecomp",
+                                   "url": "https://github.com/Ports/ExampleRecomp",
+                                   "status": "review_required"}])
+        self.assertEqual(errors, [])
+        self.assertEqual(fetcher.call_count, 3)
+        for call in fetcher.call_args_list:
+            self.assertIn("/search/repositories?", call.args[0])
+            self.assertIn("per_page=20", call.args[0])
+
+    def test_discovery_candidates_do_not_mutate_recipes_or_trigger_publication(self) -> None:
+        tmp = self._make_temp_repo()
+        before = (tmp / "index.json").read_bytes()
+        search = Mock(return_value=({"items": [{"full_name": "new/Port"}],
+                                     "incomplete_results": True}, {}))
+        with patch.object(upstream_watch, "fetch_json", search):
+            result = upstream_watch.run_upstream_watch(
+                tmp, catalog_data={"games": []}, apply_updates=True,
+                releases_fetcher=lambda _: [], discover_candidates=True)
+        self.assertFalse(result["has_actionable_changes"])
+        self.assertFalse(result["catalog_mutations"])
+        self.assertFalse(result["eligibility_mutations"])
+        self.assertEqual((tmp / "index.json").read_bytes(), before)
+        self.assertEqual(len(result["discovery_candidates"]), 1)
+        self.assertIn("Incomplete results", result["api_errors"][0]["error"])
+        self.assertIn("https://github.com/new/Port", upstream_watch.render_markdown_report(result))
+
     def _make_temp_repo(self) -> Path:
         tmp = Path(tempfile.mkdtemp(prefix="getall_watch_test_"))
         self.addCleanup(lambda: shutil.rmtree(tmp, ignore_errors=True))

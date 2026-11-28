@@ -14,7 +14,7 @@ leitura. Os gatilhos incluem PR, execução manual e push em main e nas branches
 de desenvolvimento declaradas, incluindo `work/official-install-scope-20261127`.
 
 O canal `preview` usa o catálogo fixado em
-`3d86836676e9c7fa7359c32987c13fefc0a2ff8b`, com `eligibility.json` e
+`e4fdde9d7c128f79eb19cf99ea07e2e9b628127a`, com `eligibility.json` e
 `excluded-projects.json` desse mesmo commit. O canal público/legado mantém a
 origem pública. Índice preview é recusado em push, execução manual ou PR com
 destino main, antes de executar os validadores.
@@ -71,6 +71,15 @@ de reavaliação quando aparece uma release nova. Esse caminho não baixa builds
 não cria receita ativa, não muda classificação, não altera o catálogo e não
 substitui `added_at` pela data da pesquisa. Uma release sozinha não prova jogo
 funcional. A reentrada exige análise de gameplay e procedimento oficial.
+
+O mesmo workflow usa `--discover-candidates` para consultar a busca de
+repositórios do GitHub em três consultas limitadas a 20 resultados cada, com
+atividade nos últimos 45 dias. Remove duplicatas e repositórios já no catálogo,
+no índice ou no arquivo de exclusões. O relatório lista esses achados como
+candidatos à revisão e registra consultas incompletas. A descoberta externa
+não baixa arquivos nem cria receitas ou PRs por si só; seus resultados ficam no
+artifact do workflow. A admissão requer verificação humana do jogo funcional,
+das fontes e do procedimento oficial.
 
 A inspeção de ZIP para uma proposta elegível usa pasta temporária, limite de
 250 MiB, SHA-256 calculado e leitura da lista de membros. Não extrai nem executa

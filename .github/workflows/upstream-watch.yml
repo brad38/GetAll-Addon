@@ -116,6 +116,7 @@ jobs:
             --scope "$SCOPE" \
             $APPLY_FLAG \
             --inspect-assets \
+            --discover-candidates \
             --json-out "$RUNNER_TEMP/upstream-status.json" \
             --report-out "$RUNNER_TEMP/upstream-report.md"
 
