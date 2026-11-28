@@ -1,0 +1,211 @@
+PASS N64 portable zelda64-v1.2.2-portable official ZIP
+PASS N64 portable zelda64-v1.2.2-portable exact official manifest
+PASS N64 portable zelda64-v1.2.2-portable mutated official member
+PASS N64 portable zelda64-v1.2.2-portable real staging remains partial
+PASS N64 portable zelda64-v1.2.2-portable actual kit rejects invalid ROM
+PASS N64 portable zelda64-v1.2.2-portable original stage retained
+PASS N64 portable zelda64-v1.2.2-portable cancellation preserved
+PASS N64 portable banjo-v1.0.2-portable official ZIP
+PASS N64 portable banjo-v1.0.2-portable exact official manifest
+PASS N64 portable banjo-v1.0.2-portable mutated official member
+PASS N64 portable banjo-v1.0.2-portable real staging remains partial
+PASS N64 portable banjo-v1.0.2-portable actual kit rejects invalid ROM
+PASS N64 portable banjo-v1.0.2-portable original stage retained
+PASS N64 portable banjo-v1.0.2-portable cancellation preserved
+PASS N64 portable tooie-v1.0.1-portable official ZIP
+PASS N64 portable tooie-v1.0.1-portable exact official manifest
+PASS N64 portable tooie-v1.0.1-portable mutated official member
+PASS N64 portable tooie-v1.0.1-portable original ROM prompt
+PASS N64 portable tooie-v1.0.1-portable original ROM prompt
+PASS N64 portable tooie-v1.0.1-portable rejects wrong original before compilation
+PASS N64 portable tooie-v1.0.1-portable cancelling preserves the official ZIP
+PASS N64 portable mk64-v0.9.2-portable official ZIP
+PASS N64 portable mk64-v0.9.2-portable exact official manifest
+PASS N64 portable mk64-v0.9.2-portable mutated official member
+PASS N64 portable mk64-v0.9.2-portable real staging remains partial
+PASS N64 portable mk64-v0.9.2-portable actual kit rejects invalid ROM
+PASS N64 portable mk64-v0.9.2-portable original stage retained
+PASS N64 portable mk64-v0.9.2-portable cancellation preserved
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable official ZIP
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable exact official manifest
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable mutated official member
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable original ROM prompt
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable original ROM prompt
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable rejects wrong original before compilation
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable cancelling preserves the official ZIP
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable official ZIP
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable exact official manifest
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable mutated official member
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable original ROM prompt
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable original ROM prompt
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable rejects wrong original before compilation
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable cancelling preserves the official ZIP
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable official ZIP
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable exact official manifest
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable mutated official member
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable original ROM prompt
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable original ROM prompt
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable rejects wrong original before compilation
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable cancelling preserves the official ZIP
+PASS N64 portable vpw64recomp-0.3.2-portable official ZIP
+PASS N64 portable vpw64recomp-0.3.2-portable exact official manifest
+PASS N64 portable vpw64recomp-0.3.2-portable mutated official member
+PASS N64 portable vpw64recomp-0.3.2-portable original ROM prompt
+PASS N64 portable vpw64recomp-0.3.2-portable original ROM prompt
+PASS N64 portable vpw64recomp-0.3.2-portable rejects wrong original before compilation
+PASS N64 portable vpw64recomp-0.3.2-portable cancelling preserves the official ZIP
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable official ZIP
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable exact official manifest
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable mutated official member
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable original ROM prompt
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable original ROM prompt
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable rejects wrong original before compilation
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable cancelling preserves the official ZIP
+PASS N64 portable btgarecomp-0.1.13-portable official ZIP
+PASS N64 portable btgarecomp-0.1.13-portable exact official manifest
+PASS N64 portable btgarecomp-0.1.13-portable mutated official member
+PASS N64 portable btgarecomp-0.1.13-portable original ROM prompt
+PASS N64 portable btgarecomp-0.1.13-portable original ROM prompt
+PASS N64 portable btgarecomp-0.1.13-portable rejects wrong original before compilation
+PASS N64 portable btgarecomp-0.1.13-portable cancelling preserves the official ZIP
+PASS N64 portable battle-tanx-ga-v0.2.5-portable official ZIP
+PASS N64 portable battle-tanx-ga-v0.2.5-portable exact official manifest
+PASS N64 portable battle-tanx-ga-v0.2.5-portable mutated official member
+PASS N64 portable battle-tanx-ga-v0.2.5-portable real staging remains partial
+PASS N64 portable battle-tanx-ga-v0.2.5-portable actual kit rejects invalid ROM
+PASS N64 portable battle-tanx-ga-v0.2.5-portable original stage retained
+PASS N64 portable battle-tanx-ga-v0.2.5-portable cancellation preserved
+PASS N64 portable body-harvest-v0.1.0-portable official ZIP
+PASS N64 portable body-harvest-v0.1.0-portable exact official manifest
+PASS N64 portable body-harvest-v0.1.0-portable mutated official member
+PASS N64 portable body-harvest-v0.1.0-portable original ROM prompt
+PASS N64 portable body-harvest-v0.1.0-portable original ROM prompt
+PASS N64 portable body-harvest-v0.1.0-portable rejects wrong original before compilation
+PASS N64 portable body-harvest-v0.1.0-portable cancelling preserves the official ZIP
+PASS N64 portable quest64-v0.1-portable official ZIP
+PASS N64 portable quest64-v0.1-portable exact official manifest
+PASS N64 portable quest64-v0.1-portable mutated official member
+PASS N64 portable quest64-v0.1-portable real staging remains partial
+PASS N64 portable quest64-v0.1-portable actual kit rejects invalid ROM
+PASS N64 portable quest64-v0.1-portable original stage retained
+PASS N64 portable quest64-v0.1-portable cancellation preserved
+PASS N64 portable snowboardkids2-v2.0.2-portable official ZIP
+PASS N64 portable snowboardkids2-v2.0.2-portable exact official manifest
+PASS N64 portable snowboardkids2-v2.0.2-portable mutated official member
+PASS N64 portable snowboardkids2-v2.0.2-portable real staging remains partial
+PASS N64 portable snowboardkids2-v2.0.2-portable actual kit rejects invalid ROM
+PASS N64 portable snowboardkids2-v2.0.2-portable original stage retained
+PASS N64 portable snowboardkids2-v2.0.2-portable cancellation preserved
+PASS N64 portable sssv-v0.2.0-portable official ZIP
+PASS N64 portable sssv-v0.2.0-portable exact official manifest
+PASS N64 portable sssv-v0.2.0-portable mutated official member
+PASS N64 portable sssv-v0.2.0-portable real staging remains partial
+PASS N64 portable sssv-v0.2.0-portable actual kit rejects invalid ROM
+PASS N64 portable sssv-v0.2.0-portable original stage retained
+PASS N64 portable sssv-v0.2.0-portable cancellation preserved
+PASS N64 portable bm64recomp-v1.0.0-portable official ZIP
+PASS N64 portable bm64recomp-v1.0.0-portable exact official manifest
+PASS N64 portable bm64recomp-v1.0.0-portable mutated official member
+PASS N64 portable bm64recomp-v1.0.0-portable real staging remains partial
+PASS N64 portable bm64recomp-v1.0.0-portable actual kit rejects invalid ROM
+PASS N64 portable bm64recomp-v1.0.0-portable original stage retained
+PASS N64 portable bm64recomp-v1.0.0-portable cancellation preserved
+PASS N64 portable bmherorecomp-v0.7.1-portable official ZIP
+PASS N64 portable bmherorecomp-v0.7.1-portable exact official manifest
+PASS N64 portable bmherorecomp-v0.7.1-portable mutated official member
+PASS N64 portable bmherorecomp-v0.7.1-portable real staging remains partial
+PASS N64 portable bmherorecomp-v0.7.1-portable actual kit rejects invalid ROM
+PASS N64 portable bmherorecomp-v0.7.1-portable original stage retained
+PASS N64 portable bmherorecomp-v0.7.1-portable cancellation preserved
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable official ZIP
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable exact official manifest
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable mutated official member
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable real staging remains partial
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable actual kit rejects invalid ROM
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable original stage retained
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable cancellation preserved
+PASS N64 portable dnzhrecomp-0.0.3-portable official ZIP
+PASS N64 portable dnzhrecomp-0.0.3-portable exact official manifest
+PASS N64 portable dnzhrecomp-0.0.3-portable mutated official member
+PASS N64 portable dnzhrecomp-0.0.3-portable real staging remains partial
+PASS N64 portable dnzhrecomp-0.0.3-portable actual kit rejects invalid ROM
+PASS N64 portable dnzhrecomp-0.0.3-portable original stage retained
+PASS N64 portable dnzhrecomp-0.0.3-portable cancellation preserved
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable official ZIP
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable exact official manifest
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable mutated official member
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable real staging remains partial
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable actual kit rejects invalid ROM
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable original stage retained
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable cancellation preserved
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable official ZIP
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable exact official manifest
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable mutated official member
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable real staging remains partial
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable actual kit rejects invalid ROM
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable original stage retained
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable cancellation preserved
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable official ZIP
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable exact official manifest
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable mutated official member
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable real staging remains partial
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable actual kit rejects invalid ROM
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable original stage retained
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable cancellation preserved
+PASS N64 portable gga64recomp-v0.1.0-portable official ZIP
+PASS N64 portable gga64recomp-v0.1.0-portable exact official manifest
+PASS N64 portable gga64recomp-v0.1.0-portable mutated official member
+PASS N64 portable gga64recomp-v0.1.0-portable real staging remains partial
+PASS N64 portable gga64recomp-v0.1.0-portable actual kit rejects invalid ROM
+PASS N64 portable gga64recomp-v0.1.0-portable original stage retained
+PASS N64 portable gga64recomp-v0.1.0-portable cancellation preserved
+PASS N64 portable megaman64recompiled-v0.9.1-portable official ZIP
+PASS N64 portable megaman64recompiled-v0.9.1-portable exact official manifest
+PASS N64 portable megaman64recompiled-v0.9.1-portable mutated official member
+PASS N64 portable megaman64recompiled-v0.9.1-portable real staging remains partial
+PASS N64 portable megaman64recompiled-v0.9.1-portable actual kit rejects invalid ROM
+PASS N64 portable megaman64recompiled-v0.9.1-portable original stage retained
+PASS N64 portable megaman64recompiled-v0.9.1-portable cancellation preserved
+PASS N64 portable snap64-recomp-v1.1.8-portable official ZIP
+PASS N64 portable snap64-recomp-v1.1.8-portable exact official manifest
+PASS N64 portable snap64-recomp-v1.1.8-portable mutated official member
+PASS N64 portable snap64-recomp-v1.1.8-portable real staging remains partial
+PASS N64 portable snap64-recomp-v1.1.8-portable actual kit rejects invalid ROM
+PASS N64 portable snap64-recomp-v1.1.8-portable original stage retained
+PASS N64 portable snap64-recomp-v1.1.8-portable cancellation preserved
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable official ZIP
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable exact official manifest
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable mutated official member
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable real staging remains partial
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable actual kit rejects invalid ROM
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable original stage retained
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable cancellation preserved
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable official ZIP
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable exact official manifest
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable mutated official member
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable real staging remains partial
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable actual kit rejects invalid ROM
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable original stage retained
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable cancellation preserved
+PASS N64 portable gga-v0.3.0-portable official ZIP
+PASS N64 portable gga-v0.3.0-portable exact official manifest
+PASS N64 portable gga-v0.3.0-portable mutated official member
+PASS N64 portable gga-v0.3.0-portable real staging remains partial
+PASS N64 portable gga-v0.3.0-portable actual kit rejects invalid ROM
+PASS N64 portable gga-v0.3.0-portable original stage retained
+PASS N64 portable gga-v0.3.0-portable cancellation preserved
+PASS N64 portable rocket-r-v.1.0.1-portable official ZIP
+PASS N64 portable rocket-r-v.1.0.1-portable exact official manifest
+PASS N64 portable rocket-r-v.1.0.1-portable mutated official member
+PASS N64 portable rocket-r-v.1.0.1-portable real staging remains partial
+PASS N64 portable rocket-r-v.1.0.1-portable actual kit rejects invalid ROM
+PASS N64 portable rocket-r-v.1.0.1-portable original stage retained
+PASS N64 portable rocket-r-v.1.0.1-portable cancellation preserved
+PASS N64 portable extreme-g-v1.0.0-portable official ZIP
+PASS N64 portable extreme-g-v1.0.0-portable exact official manifest
+PASS N64 portable extreme-g-v1.0.0-portable mutated official member
+PASS N64 portable extreme-g-v1.0.0-portable real staging remains partial
+PASS N64 portable extreme-g-v1.0.0-portable actual kit rejects invalid ROM
+PASS N64 portable extreme-g-v1.0.0-portable original stage retained
+PASS N64 portable extreme-g-v1.0.0-portable cancellation preserved
+N64_PORTABLE_OFFICIAL_KITS_PASS

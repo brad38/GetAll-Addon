@@ -1,0 +1,89 @@
+{
+  "source_commit": "14552fffa0e0b47e02b57592e274fc6e7a649923",
+  "source_tool_sha256": {
+    "build_data_segment.py": "b3c88fac5179b255b576a63e698b612102a9855dac84e6c33adbdb2c22fae186",
+    "gen_kanji_font.py": "43057f32dfcd96d6c324175f6ea397ad518db1e5bc16fa54e1e205b916d05242",
+    "check_shared.py": "d5d7fac138906d3a56a9de89375de1ae22424aea07c28418fb6c0e35507061fb"
+  },
+  "scope": "Upstream source parity and negative input guards using synthetic files",
+  "results": [
+    {
+      "case": "us-missing.exe",
+      "exit_code": 1,
+      "output": "build_data_segment: PSX_EXE not found: <fixture>\\missing.exe",
+      "passed": true
+    },
+    {
+      "case": "us-invalid.exe",
+      "exit_code": 1,
+      "output": "build_data_segment: not a PS-X EXE: <fixture>\\invalid.exe",
+      "passed": true
+    },
+    {
+      "case": "us-synthetic-short.exe",
+      "exit_code": 1,
+      "output": "build_data_segment: PSX_EXE looks truncated: <fixture>\\synthetic-short.exe is 2048 bytes, need at least 2112 (0x800 header + this header's own 64-byte load_size)",
+      "passed": true
+    },
+    {
+      "case": "us-synthetic-complete.exe",
+      "exit_code": 1,
+      "output": "build_data_segment: PSX_EXE does not match the known US retail executable: <fixture>\\synthetic-complete.exe md5=2f0b3a31fafbc982b15d2faec0f98d29, expected 596bb082a2de5f1fe977dd3d7e160b03. Set VH_ALLOW_UNVERIFIED_EXE=1 to override (e.g. a deliberately modified executable).",
+      "passed": true
+    },
+    {
+      "case": "us-invalid-bios.bin",
+      "exit_code": 1,
+      "output": "unsupported or invalid KROM/BIOS charset-2 data: sha256 53d29485c3b1c5e13a62be88d6bc7efcca69545576335768ed333420a2f30726 (expected 19b1dd839020e62a8a0f6dfc673c320da36105d9bc9bbce876aa151b7bd927a7)",
+      "passed": true
+    },
+    {
+      "case": "us-short-krom.bin",
+      "exit_code": 1,
+      "output": "KROMDAT.BIN too small: 64 < 6270",
+      "passed": true
+    },
+    {
+      "case": "jp-missing.exe",
+      "exit_code": 1,
+      "output": "build_data_segment: PSX_EXE not found: <fixture>\\missing.exe",
+      "passed": true
+    },
+    {
+      "case": "jp-invalid.exe",
+      "exit_code": 1,
+      "output": "build_data_segment: not a PS-X EXE: <fixture>\\invalid.exe",
+      "passed": true
+    },
+    {
+      "case": "jp-synthetic-short.exe",
+      "exit_code": 1,
+      "output": "build_data_segment: PSX_EXE looks truncated: <fixture>\\synthetic-short.exe is 2048 bytes, need at least 2112 (0x800 header + this header's own 64-byte load_size)",
+      "passed": true
+    },
+    {
+      "case": "jp-synthetic-complete.exe",
+      "exit_code": 1,
+      "output": "build_data_segment: PSX_EXE does not match the known JP retail executable: <fixture>\\synthetic-complete.exe md5=2f0b3a31fafbc982b15d2faec0f98d29, expected 53849277b08184863bd45f10925995a6. Set VH_ALLOW_UNVERIFIED_EXE=1 to override (e.g. a deliberately modified executable).",
+      "passed": true
+    },
+    {
+      "case": "jp-invalid-bios.bin",
+      "exit_code": 1,
+      "output": "unsupported or invalid KROM/BIOS charset-2 data: sha256 7bc3e2a9fbf7d098c23ebedc7d71c553507dae8b868afbc00ac9cad09d834fcb (expected 014313b691fa9caf95239400653ff61ca90fae8d481e79fa8fc571c7cdf13a86)",
+      "passed": true
+    },
+    {
+      "case": "jp-short-krom.bin",
+      "exit_code": 1,
+      "output": "KROMDAT.BIN too small: 64 < 104670",
+      "passed": true
+    },
+    {
+      "case": "shared-source-parity",
+      "exit_code": 0,
+      "output": "check-shared OK: 54 TUs + 11 headers identical after gate-stripping.",
+      "passed": true
+    }
+  ]
+}

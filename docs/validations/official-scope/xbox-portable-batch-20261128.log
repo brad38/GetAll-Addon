@@ -1,0 +1,25 @@
+PASS Xbox ng2recomp official kit stages with no launch
+PASS Xbox ng2recomp cancellation preserves verified download
+PASS Xbox lost-odyssey-recomp official kit stages with no launch
+PASS Xbox lost-odyssey-recomp cancellation preserves verified download
+PASS Xbox Lost blocks registration when SVOD data integrity fails
+PASS Xbox Lost synthetic GoD traverses XDVDFS import, verification and registration
+PASS Xbox Lost single-file GoD rejects tampered payload
+PASS Xbox Lost single-file synthetic GoD is imported and registered
+PASS Xbox Lost copy cancellation rolls back staging
+PASS Xbox Lost synthetic multi-disc transaction publishes exact slots
+PASS Xbox Lost uses the isolated game path when constructing the launch request
+PASS Xbox Lost rejects a changed disc at launch
+PASS Xbox king-kong-recompiled official kit stages with no launch
+PASS Xbox king-kong-recompiled cancellation preserves verified download
+PASS Xbox King Kong rejects an ISO of the wrong size
+PASS Xbox the-darkness-recomp official kit stages with no launch
+PASS Xbox the-darkness-recomp cancellation preserves verified download
+PASS Xbox Darkness rejects an unrecognized XEX before importing data
+PASS Xbox Darkness rejects incompatible media without publishing data
+PASS Xbox gears-of-war-2-pc-port official kit stages with no launch
+PASS Xbox gears-of-war-2-pc-port cancellation preserves verified download
+PASS Xbox downpourrecomp official kit stages with no launch
+PASS Xbox downpourrecomp cancellation preserves verified download
+PASS Xbox project8recomp official kit stages with no launch
+PASS Xbox project8recomp cancellation preserves verified download

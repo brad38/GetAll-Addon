@@ -23,8 +23,8 @@
       "blocked": 3
     },
     "synthetic_validation": {
-      "unknown": 108,
-      "passed": 15,
+      "unknown": 72,
+      "passed": 51,
       "historical": 13,
       "failed": 1
     },
@@ -52,9 +52,9 @@
     "limit": "Prior user report of original-ROM import and launch; not reproduced in this resumed work; no specific gameplay sequence."
   },
   "validation": {
-    "python_tests": 79,
+    "python_tests": 81,
     "local_ci_exit": 0,
-    "desktop_suite_passes": 2312,
+    "desktop_suite_passes": 2322,
     "desktop_parser_recipes": 146
   },
   "preview": {

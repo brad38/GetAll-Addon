@@ -20,8 +20,8 @@
       "blocked": 3
     },
     "synthetic_validation": {
-      "unknown": 108,
-      "passed": 15,
+      "unknown": 72,
+      "passed": 51,
       "historical": 13,
       "failed": 1
     },
@@ -40,24 +40,47 @@
   "historical_excluded_recipes": [
     {
       "index": "development",
-      "game_id": "sonic-the-hedgehog-1-2-2013",
-      "project_id": "sonic-1-forever-sonic-2-absolute",
+      "game_id": "burnout-3-takedown",
+      "project_id": "burnout3-recomp",
       "recipes": [
         {
-          "game_id": "sonic-the-hedgehog-1-2-2013",
-          "project_id": "sonic-1-forever-sonic-2-absolute",
-          "repository": "TeamForeverDev/Sonic1Forever",
-          "tag": "v1.5.2-v1.2.2",
-          "schema_version": 9,
-          "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-1-forever-sonic-2-absolute/v1.5.2-v1.2.2.json",
-          "sha256": "c3b2317522899e5e570b7c3509e417818204d81085ccdfa7a355d0de1733c67d",
+          "game_id": "burnout-3-takedown",
+          "project_id": "burnout3-recomp",
+          "repository": "sp00nznet/burnout3",
+          "tag": "build-3c85ed7",
+          "schema_version": 5,
+          "path": "recipes/burnout-3-takedown/burnout3-recomp/build-3c85ed7.json",
+          "sha256": "acd0487703956b86d9d0f45ab76548b76cff982fc63c4aaa3c278c8ba47fee09",
           "status": "disabled",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.11",
-          "disabled_reason": "Fora do catálogo ativo após revisão de elegibilidade: ID de pacote legado duplicado: manter histórico e os dois IDs individuais, sem contá-lo como projeto ativo independente.",
+          "min_sdk_version": "1.5.67",
+          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
           "disabled_at": "2026-11-27",
-          "audit_reference": "AllFix-Repo/excluded-projects.json#sonic-1-forever-sonic-2-absolute"
+          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-BURNOUT"
+        }
+      ]
+    },
+    {
+      "index": "development",
+      "game_id": "metroid-prime",
+      "project_id": "metaforce",
+      "recipes": [
+        {
+          "game_id": "metroid-prime",
+          "project_id": "metaforce",
+          "repository": "AxioDL/metaforce",
+          "tag": "build-de8fc69",
+          "schema_version": 5,
+          "path": "recipes/metroid-prime/metaforce/build-de8fc69.json",
+          "sha256": "8d293603daaded40f3c17cf4574438f55aa9da56970f7a47638b88ecdc0f7df0",
+          "status": "disabled",
+          "has_inputs": false,
+          "has_manual_steps": true,
+          "min_sdk_version": "1.5.69",
+          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+          "disabled_at": "2026-11-27",
+          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-META"
         }
       ]
     },
@@ -85,24 +108,24 @@
     },
     {
       "index": "development",
-      "game_id": "burnout-3-takedown",
-      "project_id": "burnout3-recomp",
+      "game_id": "sonic-the-hedgehog-1-2-2013",
+      "project_id": "sonic-1-forever-sonic-2-absolute",
       "recipes": [
         {
-          "game_id": "burnout-3-takedown",
-          "project_id": "burnout3-recomp",
-          "repository": "sp00nznet/burnout3",
-          "tag": "build-3c85ed7",
-          "schema_version": 5,
-          "path": "recipes/burnout-3-takedown/burnout3-recomp/build-3c85ed7.json",
-          "sha256": "acd0487703956b86d9d0f45ab76548b76cff982fc63c4aaa3c278c8ba47fee09",
+          "game_id": "sonic-the-hedgehog-1-2-2013",
+          "project_id": "sonic-1-forever-sonic-2-absolute",
+          "repository": "TeamForeverDev/Sonic1Forever",
+          "tag": "v1.5.2-v1.2.2",
+          "schema_version": 9,
+          "path": "recipes/sonic-the-hedgehog-1-2-2013/sonic-1-forever-sonic-2-absolute/v1.5.2-v1.2.2.json",
+          "sha256": "c3b2317522899e5e570b7c3509e417818204d81085ccdfa7a355d0de1733c67d",
           "status": "disabled",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+          "min_sdk_version": "1.5.11",
+          "disabled_reason": "Fora do catálogo ativo após revisão de elegibilidade: ID de pacote legado duplicado: manter histórico e os dois IDs individuais, sem contá-lo como projeto ativo independente.",
           "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-BURNOUT"
+          "audit_reference": "AllFix-Repo/excluded-projects.json#sonic-1-forever-sonic-2-absolute"
         }
       ]
     },
@@ -126,29 +149,6 @@
           "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
           "disabled_at": "2026-11-27",
           "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-DRMARIO"
-        }
-      ]
-    },
-    {
-      "index": "development",
-      "game_id": "metroid-prime",
-      "project_id": "metaforce",
-      "recipes": [
-        {
-          "game_id": "metroid-prime",
-          "project_id": "metaforce",
-          "repository": "AxioDL/metaforce",
-          "tag": "build-de8fc69",
-          "schema_version": 5,
-          "path": "recipes/metroid-prime/metaforce/build-de8fc69.json",
-          "sha256": "8d293603daaded40f3c17cf4574438f55aa9da56970f7a47638b88ecdc0f7df0",
-          "status": "disabled",
-          "has_inputs": false,
-          "has_manual_steps": true,
-          "min_sdk_version": "1.5.69",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-META"
         }
       ]
     }
@@ -989,9 +989,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "zelda-64-recompiled v1.2.2: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -1290,9 +1298,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "mariokart-64-recompiled v0.9.2: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -1512,9 +1528,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "donkey-kong-64-recompiled-dk64-rekongpiled v1.0.3: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -1590,9 +1614,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "snap64-recomp v1.1.8: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -1663,9 +1695,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "drmario64-recomp-plus 1.0.0: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -1735,9 +1775,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "banjo-recompiled v1.0.2: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -1885,9 +1933,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "banjo-tooie-recompiled v1.0.1: official ZIP; exact official manifest; mutated official member; original ROM prompt; original ROM prompt; rejects wrong original before compilation; cancelling preserves the official ZIP.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -2179,9 +2235,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "dinosaur-planet-recompiled-dino-recomp v0.3.0: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -2251,9 +2315,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "bm64recomp v1.0.0: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -2323,9 +2395,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "bmherorecomp v0.7.1: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -2395,9 +2475,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "goemon64recomp v0.2.0-dev: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -2473,9 +2561,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "ggarecomp v0.3.0: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -2545,9 +2641,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "dnzhrecomp 0.0.3: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -2701,9 +2805,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "body-harvest-recomp v0.1.0: official ZIP; exact official manifest; mutated official member; original ROM prompt; original ROM prompt; rejects wrong original before compilation; cancelling preserves the official ZIP.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -2773,9 +2885,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "sssv-recomp v0.2.0: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -2852,9 +2972,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "quest64-recomp v0.1: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -2924,9 +3052,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "megaman64recompiled v0.9.1: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -2997,9 +3133,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "battletanx-global-assault-pc-port v0.2.5: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3069,9 +3213,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "btgarecomp v0.1.13: official ZIP; exact official manifest; mutated official member; original ROM prompt; original ROM prompt; rejects wrong original before compilation; cancelling preserves the official ZIP.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3147,9 +3299,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "snowboardkids2-recomp v2.0.2: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3224,9 +3384,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "extremegrecomp v1.0.0: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3296,9 +3464,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "rocket-r v.1.0.1: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3369,9 +3545,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "chameleontwist1-jp-recomp v0.1: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3442,9 +3626,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "automobililamborghini-recomp v0.11.1: official ZIP; exact official manifest; mutated official member; real staging remains partial; actual kit rejects invalid ROM; original stage retained; cancellation preserved.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3514,9 +3706,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "wcwvsnwoworldtourrecomp v0.3.2: official ZIP; exact official manifest; mutated official member; original ROM prompt; original ROM prompt; rejects wrong original before compilation; cancelling preserves the official ZIP.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3586,9 +3786,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "wcwnworevengerecomp v0.3.2: official ZIP; exact official manifest; mutated official member; original ROM prompt; original ROM prompt; rejects wrong original before compilation; cancelling preserves the official ZIP.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3658,9 +3866,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "wwfwrestlemania2000recomp v0.3.2: official ZIP; exact official manifest; mutated official member; original ROM prompt; original ROM prompt; rejects wrong original before compilation; cancelling preserves the official ZIP.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3730,9 +3946,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "vpw64recomp v0.3.2: official ZIP; exact official manifest; mutated official member; original ROM prompt; original ROM prompt; rejects wrong original before compilation; cancelling preserves the official ZIP.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -3802,9 +4026,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/n64-portable-batch-20261128.json",
+              "sha256": "74762f4a642e8e2ab5446f096bd4ec81fe0460bdb346b7d9bc589a1b607d93f2",
+              "observed": "wwfnomercyrecomp v0.3.2: official ZIP; exact official manifest; mutated official member; original ROM prompt; original ROM prompt; rejects wrong original before compilation; cancelling preserves the official ZIP.",
+              "data_kind": "synthetic",
+              "scope": "getall"
+            }
+          ],
+          "reason": "Windows installer staging and synthetic negative/cancellation checks with the exact official kit. No original-media installation or boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -4701,6 +4933,13 @@
               "observed": "Official build.ps1 compiled 42 runtime_check objects, 165 original sources unchanged, OpenXR ON and benchmark-only OFF; synthetic wrong main.dol hash rejected. No final game link or OpenXR runtime build.",
               "data_kind": "synthetic",
               "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/mkdd-openxr-synthetic-result-20261128.json",
+              "sha256": "a3a8feb599ce86dbcc98578266eef6a5a4aedf5642cc63d6ffdb108a9235f1fc",
+              "data_kind": "synthetic",
+              "scope": "getall",
+              "observed": "Windows linked a host fixture and OpenXR with 165 upstream sources unchanged; loader reached xrCreateInstance. Exact retail link and boot remained untested."
             }
           ],
           "reason": "Current result limited to the named checks, not a full game installation."
@@ -6678,6 +6917,13 @@
               "observed": "A compilação oficial copia os mesmos 76 arquivos rastreados data/DRIVER2 ao pacote. Os conversores oficiais geram apenas vídeo e áudio da mídia própria; não fornecem reconstrução dos extras LANG/GFX/GAL/REPLAYS questionados na issue234. Compilar somente o executável não resolve a lacuna de procedência desses dados. Restoration condition: Documentar a procedência dos extras ou validar uma reconstrução oficial desses dados a partir das mídias próprias, preservando as funcionalidades do upstream.",
               "data_kind": "code_review",
               "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/redriver2-synthetic-video-result-20261128.json",
+              "sha256": "b33df9f4e742531b28bc0647d775a9a3f816e03f9560340ffd8b132d23811817",
+              "data_kind": "synthetic",
+              "scope": "getall",
+              "observed": "Pinned jPSXdec on Java 21 converted a 96-frame synthetic STR and the SDK verified the output, cancellation and merge. This does not resolve packaged ancillary-data provenance."
             }
           ],
           "reason": "A compilação oficial copia os mesmos 76 arquivos rastreados data/DRIVER2 ao pacote. Os conversores oficiais geram apenas vídeo e áudio da mídia própria; não fornecem reconstrução dos extras LANG/GFX/GAL/REPLAYS questionados na issue234. Compilar somente o executável não resolve a lacuna de procedência desses dados."
@@ -6928,9 +7174,16 @@
               "observed": "O NOTICE declara dados do jogo/BIOS incorporados nos binários. A alternativa fonte foi verificada e usa executável PS-X e BIOS próprios; o teste nativo CMake intacto falhou na criação obrigatória de symlinks por falta de privilégio. O procedimento Windows documentado usa cross-compilação Linux/macOS e dependências próprias, ainda sem integração validada no Desktop. Restoration condition: Integrar e verificar ambiente oficial de compilação que suporte o staging de symlinks, gerando todos os dados necessários exclusivamente das mídias/BIOS fornecidos pelo usuário. Não substituir por binário que já incorpora esses dados.",
               "data_kind": "code_review",
               "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/vandal-cross-build-result-20261128.json",
+              "sha256": "760d7545ea923853a8e5c931240ee64d7c0d57185a07815c7ef0b1954b456998",
+              "data_kind": "synthetic",
+              "scope": "getall",
+              "observed": "Private WSL MinGW x64 linked a dependency probe; untouched upstream configured US and JP with WebP and HD video intact. Both core builds reached the original executable check and stopped. No core or Vandal Hearts EXE was generated."
             }
           ],
-          "reason": "O NOTICE declara dados do jogo/BIOS incorporados nos binários. A alternativa fonte foi verificada e usa executável PS-X e BIOS próprios; o teste nativo CMake intacto falhou na criação obrigatória de symlinks por falta de privilégio. O procedimento Windows documentado usa cross-compilação Linux/macOS e dependências próprias, ainda sem integração validada no Desktop."
+          "reason": "Official unified source build requires the exact US and JP PS-X executables extracted from the original discs plus a compatible BIOS or KROM source. The private WSL cross-build reached the original-input gate."
         },
         "synthetic_validation": {
           "status": "failed",
@@ -8602,9 +8855,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/xbox-portable-batch-20261128.log",
+              "sha256": "f3ba0e6bd9868ef5d30de7d8c1a04060301493c722f8e69d75efef782e3de1ac",
+              "data_kind": "synthetic",
+              "scope": "getall",
+              "observed": "the-darkness-recomp v0.1.10: verified official kit staged with launch withheld; cancellation preserved the kit."
+            }
+          ],
+          "reason": "Windows harness executed official kit staging and authored negative or synthetic-media tests. No retail-media boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -8675,9 +8936,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/xbox-portable-batch-20261128.log",
+              "sha256": "f3ba0e6bd9868ef5d30de7d8c1a04060301493c722f8e69d75efef782e3de1ac",
+              "data_kind": "synthetic",
+              "scope": "getall",
+              "observed": "downpourrecomp v1.1.8: verified official kit staged with launch withheld; cancellation preserved the kit."
+            }
+          ],
+          "reason": "Windows harness executed official kit staging and authored negative or synthetic-media tests. No retail-media boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -8835,9 +9104,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/xbox-portable-batch-20261128.log",
+              "sha256": "f3ba0e6bd9868ef5d30de7d8c1a04060301493c722f8e69d75efef782e3de1ac",
+              "data_kind": "synthetic",
+              "scope": "getall",
+              "observed": "project8recomp v0.3.0: verified official kit staged with launch withheld; cancellation preserved the kit."
+            }
+          ],
+          "reason": "Windows harness executed official kit staging and authored negative or synthetic-media tests. No retail-media boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -8996,9 +9273,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/xbox-portable-batch-20261128.log",
+              "sha256": "f3ba0e6bd9868ef5d30de7d8c1a04060301493c722f8e69d75efef782e3de1ac",
+              "data_kind": "synthetic",
+              "scope": "getall",
+              "observed": "king-kong-recompiled v2.1.3: verified official kit staged with launch withheld; cancellation preserved the kit."
+            }
+          ],
+          "reason": "Windows harness executed official kit staging and authored negative or synthetic-media tests. No retail-media boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -10749,9 +11034,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/xbox-portable-batch-20261128.log",
+              "sha256": "f3ba0e6bd9868ef5d30de7d8c1a04060301493c722f8e69d75efef782e3de1ac",
+              "data_kind": "synthetic",
+              "scope": "getall",
+              "observed": "gears-of-war-2-pc-port v0.4.8: verified official kit staged with launch withheld; cancellation preserved the kit."
+            }
+          ],
+          "reason": "Windows harness executed official kit staging and authored negative or synthetic-media tests. No retail-media boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -10822,9 +11115,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/xbox-portable-batch-20261128.log",
+              "sha256": "f3ba0e6bd9868ef5d30de7d8c1a04060301493c722f8e69d75efef782e3de1ac",
+              "data_kind": "synthetic",
+              "scope": "getall",
+              "observed": "ng2recomp v0.7.5: verified official kit staged with launch withheld; cancellation preserved the kit."
+            }
+          ],
+          "reason": "Windows harness executed official kit staging and authored negative or synthetic-media tests. No retail-media boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",
@@ -11062,9 +11363,17 @@
           "reason": "Static review of the installation handler, separate from functional execution."
         },
         "synthetic_validation": {
-          "status": "unknown",
-          "evidence": [],
-          "reason": "No project-specific synthetic execution result has been transferred to this ledger. Schema acceptance alone is not counted."
+          "status": "passed",
+          "evidence": [
+            {
+              "path": "docs/validations/official-scope/xbox-portable-batch-20261128.log",
+              "sha256": "f3ba0e6bd9868ef5d30de7d8c1a04060301493c722f8e69d75efef782e3de1ac",
+              "data_kind": "synthetic",
+              "scope": "getall",
+              "observed": "lost-odyssey-recomp v1.1.0: verified official kit staged with launch withheld; cancellation preserved the kit. The synthetic SVOD and four-disc import, registration, rollback and changed-media rejection also passed."
+            }
+          ],
+          "reason": "Windows harness executed official kit staging and authored negative or synthetic-media tests. No retail-media boot was attempted."
         },
         "original_media_installation": {
           "status": "unknown",

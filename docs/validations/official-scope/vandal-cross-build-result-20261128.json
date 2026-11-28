@@ -1,0 +1,118 @@
+{
+  "date": "2026-11-28",
+  "source": {
+    "revision": "14552fffa0e0b47e02b57592e274fc6e7a649923",
+    "archive_sha256": "e7c50aaddf57c05df97eee50c9355473a1a4ea6d8354fe719c9450f89b14160f",
+    "v210_tag_revision": "7450a2462c0d437740da2ec438a7d8d55c27fadf"
+  },
+  "environment": {
+    "host": "WSL2 Ubuntu 26.04 x86_64",
+    "stage": "/tmp/getall-vandal-cross-20261128",
+    "compiler": "Ubuntu GCC MinGW-w64 13 POSIX",
+    "cmake": "4.2.3",
+    "generator": "Ninja",
+    "python": "3.14.4",
+    "nasm": "3.01",
+    "toolchain_installed_system_wide": false
+  },
+  "official_dependencies": {
+    "sdl2": {
+      "version": "2.30.11",
+      "url": "https://github.com/libsdl-org/SDL/releases/download/release-2.30.11/SDL2-devel-2.30.11-mingw.tar.gz",
+      "sha256": "0590db0a47b564aab92499ed03eaa75db9aee17c371080caa3b05df9d49d9ff9"
+    },
+    "openal": {
+      "version": "1.25.2",
+      "url": "https://openal-soft.org/openal-binaries/openal-soft-1.25.2-bin.zip",
+      "sha256": "67a0c4b800bd860c93c04f38caf8cbe4875f9c84700ac430efc451f70e265434"
+    },
+    "webp": {
+      "version": "1.6.0-1",
+      "url": "https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-libwebp-1.6.0-1-any.pkg.tar.zst",
+      "sha256": "360b1690d41eb497dfe50526460a2424600a6a806cbb76c5b0fec9f14623ac59",
+      "publisher_hash_matches": true
+    },
+    "ffmpeg": {
+      "version": "7.1",
+      "url": "https://ffmpeg.org/releases/ffmpeg-7.1.tar.xz",
+      "sha256": "40973d44970dbc83ef302b0609f2e74982be2d85916dd2ee7472d30678a7abe6",
+      "pgp_valid_signature": true,
+      "pgp_publisher_fingerprint": "FCF986EA15E6E293A5644F10B4322F04D67658D8",
+      "upstream_cross_script": "platform/pc/tools/build-ffmpeg-static.sh",
+      "static_libraries_sha256": {
+        "libavformat.a": "5f4ecd7b118951d66da5b90b30a5afd010674521ca7499e74a06c65cb2da2b24",
+        "libavcodec.a": "866d717b62e69b5eb0e3170c0e145363f1358fd585321ebd854039824fd01f87",
+        "libavutil.a": "7dba130fb81f36dccc89c3861a3a59b7389b07d3534ae14275a0332653d5a4a2",
+        "libswscale.a": "781f476eb072c7b9d56706c7c80cee22619cf0e9b08537ca9114e16c3f3a9293"
+      }
+    }
+  },
+  "ubuntu_deb_sha256": {
+    "binutils-mingw-w64-base_2.45.90.20260125-1ubuntu1+13.3_amd64.deb": "f3dbbe4aec206d7078987c9ba3286df20a5fab4ed8c63b0f0d31969c26bdfcbf",
+    "binutils-mingw-w64-x86-64_2.45.90.20260125-1ubuntu1+13.3_amd64.deb": "f835050ed5b7fedf8f3242610fda1eb55b5472b72624f9a88de90c610b465552",
+    "gcc-mingw-w64-base_13.2.0-6ubuntu1+26.1_amd64.deb": "a30c07e807e9874ea93909448c5d6d37f9569ebe60ad32de8e490aad198538a3",
+    "gcc-mingw-w64-x86-64-posix-runtime_13.2.0-6ubuntu1+26.1_amd64.deb": "aca6b438e0b55b11cedcf1170a1ee26e7979e34192e34f6e6389e560908a5bfc",
+    "gcc-mingw-w64-x86-64-posix_13.2.0-6ubuntu1+26.1_amd64.deb": "0855fa1d4a618550faac3a3e4352aa3226833b28184ad3c3b496a68a22c4eda2",
+    "mingw-w64-common_13.0.0-2ubuntu1_all.deb": "da9b2cb14134ca0ef3a31302df50295a2dd6fee7aa4fd888b11c6f72f8ab939e",
+    "mingw-w64-x86-64-dev_13.0.0-2ubuntu1_all.deb": "da40b9e2ae89d98d44b547a9e4fd01862858edb176bade9f12ad143e7ae7efe4",
+    "nasm_3.01-1_amd64.deb": "a611d0d8f35d49e8c9f4b76ff6ef77fba2183ef1b46d0699431a848ba8d2cb46",
+    "bchunk_1.2.2+git20220715+ds-4_amd64.deb": "a19267e8f3cb9d5b2de5e9f0ee666bde11c2af6c2ef5839664f50743e14458ef",
+    "7zip_26.00+dfsg-1_amd64.deb": "97dc6694bd7919e163a600dff8a5d7f72d892934f97cb0d7deba285abff779ce",
+    "genisoimage_9%3a1.1.11-5_amd64.deb": "19a0a26e83ea97a18c7d8388f554ceb46b364f6c00ff419acfe9e753ca4a9d2d"
+  },
+  "checks": {
+    "compiler_links_x64_pe_probe": true,
+    "compiler_links_x64_pe_dependency_probe": {
+      "sha256": "763f4f0b9c665363f1a9a0c38ff446873eddbb0de9e73cd0949fe7a685448338",
+      "imports": [
+        "OpenAL32.dll",
+        "SDL2.dll",
+        "libwebp-7.dll",
+        "bcrypt.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "OPENGL32.dll",
+        "libwinpthread-1.dll"
+      ],
+      "executed": false
+    },
+    "upstream_unified_cores": [
+      {
+        "region": "us",
+        "configure_passed": true,
+        "build_passed": false,
+        "first_blocking_input": "SLUS_004.47",
+        "target": "datagen/generated_sources/pc_evt_entities.c"
+      },
+      {
+        "region": "jp",
+        "configure_passed": true,
+        "build_passed": false,
+        "first_blocking_input": "jp/SLPM_860.07",
+        "target": "datagen/generated_sources/pc_battle_data.c"
+      }
+    ],
+    "upstream_single_region_configured": [
+      "us",
+      "jp"
+    ],
+    "hdvideo_enabled": true,
+    "webp_enabled": true,
+    "test_raw_disc_extraction": {
+      "regions": [
+        "us",
+        "jp"
+      ],
+      "method": "bchunk projection of authored MODE2/2352 BIN -> 7z extract from ISO9660",
+      "iso_roundtrip_identical": true,
+      "exe_roundtrip_identical": true,
+      "synthetic_exe_sha256": "53ff184eab9631f73b3fcecc8946ba4cafac9527315b137d9104c9f81e0d94c6",
+      "upstream_rejected_synthetic_exe": true
+    },
+    "generated_media_assets": false,
+    "game_executable_produced": false,
+    "original_media_tested": false,
+    "first_boot": false,
+    "gameplay": false
+  }
+}

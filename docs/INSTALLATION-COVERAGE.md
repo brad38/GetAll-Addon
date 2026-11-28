@@ -32,7 +32,7 @@ bloqueados. Os bytes anteriores permanecem em retired-recipes. Veja
 |---|---:|---|
 | Upstream funcional | 137 com evidência específica | Evidência externa do catálogo, independente de testes locais GetAll. |
 | Automação implementada | 134 implementadas; 0 parciais; 3 bloqueadas | Código, dispatch, perfil e operação oficial revisados; não é uma instalação comercial concluída. |
-| Validação sintética | 15 atuais passaram; 13 históricos; 1 falhou; 108 desconhecidos | Somente as operações descritas em cada recibo: pacotes, negativos, configuração, ferramentas ou builds sem mídia. |
+| Validação sintética | 51 atuais passaram; 13 históricos; 1 falhou; 72 desconhecidos | Somente as operações descritas em cada recibo: pacotes, negativos, configuração, ferramentas ou builds sem mídia. |
 | Instalação com mídia original | 1 relato histórico; 136 desconhecidas | SM64 Coop Deluxe v1.5.1, sem nova reprodução nesta rodada. |
 | Primeiro boot pelo GetAll | 1 relato histórico; 136 desconhecidos | O mesmo relato anterior de importação e execução. |
 | Gameplay pelo GetAll | 137 desconhecidos | Nenhuma sessão específica GetAll atribuível foi acrescentada. |
@@ -96,10 +96,19 @@ uma fixture, tela inicial ou build em gameplay.
 
 ## Testes e reprodução
 
-**79 testes Python passaram**. O ponto de entrada real do CI local
+Os kits oficiais e casos sintéticos foram executados para 29 projetos ativos
+N64 e sete Xbox. A conversão de vídeo do REDRIVER2 e a configuração Windows
+cruzada de Vandal Hearts receberam provas dirigidas. Os três projetos manuais
+permanecem com esse estado. Consulte os recibos de
+[N64](validations/official-scope/n64-portable-batch-20261128.json),
+[Xbox](validations/official-scope/xbox-portable-batch-20261128.log),
+[REDRIVER2](validations/official-scope/redriver2-official-alternatives-20261128.md) e
+[Vandal Hearts](validations/official-scope/vandal-cross-build-result-20261128.json).
+
+**81 testes Python passaram**. O ponto de entrada real do CI local
 validou as **146 receitas** com LF estrito, JSON Schema, blobs Git e o catálogo
 público fixado. A matriz verificou todas as referências locais de evidência.
-Desktop registrou **2312 verificações de regressão**, parser **146/146**,
+Desktop registrou **2.322 verificações de regressão**, parser **146/146**,
 builds sem avisos/erros e testes específicos dos kits oficiais. Os recibos
 [de validação](validations/official-scope/README.md) delimitam cada resultado.
 

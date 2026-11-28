@@ -1,0 +1,18 @@
+{
+  "scope": "Authored 96-frame STR, pinned converter and SDK merge; no original media, installation or boot",
+  "java": "openjdk version \"21.0.13.1\" 2026-11-17 LTS",
+  "input_sha256": "490797fd339bf73218dd67ec81844bd71b8e6ea2c2b4a39d9db94722869eb128",
+  "input_bytes": 282240,
+  "output_path": "DRIVER2/FMV/2/RENDER20.STR[0].avi",
+  "output_sha256": "86446cda170a9709c5c2c37bcd95bfc419c7d3130986b8a9625d791cbf17d2fb",
+  "output_bytes": 65988,
+  "converter_sha256": {
+    "jpsxdec.jar": "d55b4d23a898a3c168413b0a6bca615806535640412c76dcada5ab27e75c322e",
+    "jpsxdec-lib.jar": "bdfccc48028efb6bfb7e7111033f6fb6a1eb23ffaac28e041cb2eb4361a4b925"
+  },
+  "checks": [
+    "PASS REDRIVER2 jPSXdec MJPEG AVI accepted at the genuine runtime path",
+    "PASS REDRIVER2 cancelled merge leaves destination empty",
+    "PASS REDRIVER2 real converter output is merged byte for byte"
+  ]
+}

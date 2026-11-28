@@ -1,0 +1,38 @@
+{
+  "checked_at_utc": "2026-11-28T04:12:11.533521+00:00",
+  "game_source_revision": "bd36eb982ea58c6651584cc48264876d1aba9546",
+  "toolkit_source_revision": "b2193d7c7ce65c40959cf81859beaacafeebfd99",
+  "artifact_type": "Synthetic game-independent PPC fixture, not original game media or a playable executable",
+  "fixture_sha256": "5c4fe7d0cbaad58870b8040dd6c2aec2a128511195fb8c22644d15681b69db30",
+  "fixture_dol_sha1": "649ddb7e531d4d6cce9f3f15d55483bcc38064a0",
+  "exit_code": 0,
+  "original_source_count": 165,
+  "changed_original_sources": [],
+  "launch_smokes": {
+    "missing-media": {
+      "exit_code": 1,
+      "log_sha256": "4c89b9f52b5e0f328cde1a5d7baad169775d406f640fade5e08deb6ff3143b37",
+      "expected_media_error": true
+    },
+    "openxr": {
+      "exit_code": 1,
+      "log_sha256": "ce4d8e6e47e0207e42b95ec1e6e8762569c8636909da473b7d66706c3ef07516",
+      "loader_reached": true,
+      "no_active_openxr_runtime": true
+    }
+  },
+  "openxr_enabled": true,
+  "frontend_sources_compiled": [
+    "xr_desktop.cpp.obj",
+    "xr_frontend.cpp.obj"
+  ],
+  "mkdd_host_sources_compiled": [
+    "controls.cpp.obj",
+    "motion.cpp.obj",
+    "race.cpp.obj",
+    "vr_mkdd.cpp.obj"
+  ],
+  "static_loader_present": true,
+  "fixture_executable_sha256": "c91db3994d4082cbe044724f0715ce901a0af1a425aaa06fa2e51e8da093e19a",
+  "limitations": "Official retail build and first boot need a legitimate GM4E01 disc with the specified main.dol SHA-1. This uses the unchanged upstream CMake toolkit with a separate fixture project. The OpenXR loader ran, but no active OpenXR runtime or headset was available. No gameplay tested."
+}

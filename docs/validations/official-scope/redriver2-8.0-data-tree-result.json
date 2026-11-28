@@ -1,0 +1,170 @@
+{
+  "date": "2026-11-28",
+  "scope": "Read-only upstream Git tree/install procedure and local finished package inventory. No game assets extracted or executed.",
+  "repository": "https://github.com/OpenDriver2/REDRIVER2",
+  "previous_source_revision": "acca6b139302dd72c1fbff52556f3493aafda2dd",
+  "previous_data_count": 76,
+  "previous_release_sha256": "92c20bf6194af715a84c058783fa3095ed09d3aeeb4c41485b11c984d14d276c",
+  "previous_release_driver2_files": 76,
+  "previous_source_entries_in_release": 76,
+  "new_tag": "8.0",
+  "new_tag_prerelease": true,
+  "new_source_revision": "b2d8857426f815007486def9bd23f9a6007a2c64",
+  "new_data_count": 81,
+  "new_windows_asset": {
+    "url": "https://github.com/OpenDriver2/REDRIVER2/releases/download/8.0/REDRIVER2_Win32_Release.zip",
+    "bytes": 9364906,
+    "digest_from_release_api": "sha256:ddc0106858ad91c36cce8d305d0547c5601a57f6d8f0e82d71ef5a76b4b84e05"
+  },
+  "new_data_tree_additions": [
+    "data/DRIVER2/GFX/HQ/digits.tga",
+    "data/DRIVER2/GFX/HQ/fefont.fn2",
+    "data/DRIVER2/GFX/HQ/fefont.tga",
+    "data/DRIVER2/GFX/HQ/font2.fn2",
+    "data/DRIVER2/GFX/HQ/font2.tga"
+  ],
+  "unchanged_gallery_files": [
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG0.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "b2a1ccbbb0f062618e983fdeea5c679a5a0a70ae"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG1.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "b3aa7c14ef3f93a9f69047f408cdd96b33edae14"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG10.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "86b7952cdc011000da10443789e6efd3ab512dac"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG11.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "52125c890b17ae8971ad3d255b818a7b0f30f7cf"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG12.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "e91abb41397cfaf3b9c12d0f3f2517b64ef29531"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG13.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "452141fda2423a29f5742c6d4e6ae27638b64a31"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG14.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "0950de342b409d01af7641f348ca79a5d2e11712"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG15.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "a4f3e55a25e00b71fb24f5545107e1800cf45152"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG16.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "0a7425bbf8593af702e7ca361c2308ebc926aa67"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG17.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "8a80ab001d4b04cecff287082b54c9bd85dc0086"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG18.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "2506ff0e61e1aa3710e9a0fc3fd91c8869bd9864"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG19.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "cc803e60e9564a04c1da6ce0178a0bba422eebd5"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG2.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "a93da5c20a9d9b13ae92431998ed842ba6606bb8"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG20.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "a828ac0d696cb5479631be1db182064eca5db9b6"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG21.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "38d964ebba2ec033004a9a26fd404381febe1360"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG22.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "7bc5c46b37203c1f2cdea5cff820bfcb64f78ced"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG23.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "9e036a7987f1a7cc641d163ce782b8b4f843f083"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG3.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "0efc67e9780b545ff835439780ed6d3a4ca423cd"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG4.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "d3698c3bc43f4ee41f64459dc925b6aa28d8a35c"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG5.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "f6d168f5c6f4f43574a4c66918649a27f1f8c71d"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG6.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "85885b11a3d6b51546106126decba9e5aaaf4fdc"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG7.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "4694b5949b0575047ef27d0057e64a0d9f6e099e"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG8.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "4ef8f65e658a68576ccd4108358f440481ff539e"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/IMG9.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "cf4e8b55f92f240f4eac502ea2893842601605e7"
+    },
+    {
+      "path": "data/DRIVER2/GFX/GAL/INTRO.TIM",
+      "bytes": 328224,
+      "git_blob_sha1": "1878572590c6c79511a8ff957f17995702b09b33"
+    }
+  ],
+  "rc2_technical_audio_check": {
+    "platform": "Windows 11",
+    "java": "Temurin 21.0.13.1+2",
+    "tool": "jPSXdec 1.05 beta",
+    "tool_sha256": "d55b4d23a898a3c168413b0a6bca615806535640412c76dcada5ab27e75c322e",
+    "tool_library_sha256": "bdfccc48028efb6bfb7e7111033f6fb6a1eb23ffaac28e041cb2eb4361a4b925",
+    "synthetic_input_bytes": 752640,
+    "synthetic_input_sha256": "83ff8072c000859c1f8e60f8f35d8db5525079c74de1c62f7674a9beea46789b",
+    "original_and_staged_fixture_match": true,
+    "path_with_spaces_and_accents": true,
+    "indexing_exit_code": 0,
+    "audio_conversion_exit_code": 0,
+    "output_container": "RIFF/WAVE",
+    "output_bytes": 185516,
+    "output_sha256": "7ef4bbe089160bb1f44075adcbe7e29b391f54d717062f2c14abe95eb90858a8",
+    "previous_java17_output_hash_matches": true
+  }
+}
