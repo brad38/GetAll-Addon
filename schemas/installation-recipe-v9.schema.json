@@ -1429,6 +1429,32 @@
           }
         ]
       }
+    },
+    {
+      "const": {
+        "schema_version": 9,
+        "project_id": "strikersrecomp",
+        "tag": "build-cd88f71",
+        "source_url": "https://github.com/aharonahdoot/StrikersRecomp/commit/cd88f71f5a836c103484c038454b4143000d883c",
+        "operations": [],
+        "required_files": [
+          "source.zip",
+          "README.md"
+        ],
+        "inputs": [],
+        "manual_steps": "Selecione a ISO original americana de Super Mario Strikers. O All-Fix compila o RecompCore e o módulo oficial e registra o jogo. Primeiro boot ainda não homologado.",
+        "build_profile": "strikersrecomp-cd88f71-recompcore",
+        "preparation_media": [
+          {
+            "id": "original-disc",
+            "kind": "file",
+            "extensions": [
+              ".iso"
+            ],
+            "version": "Disco original de Super Mario Strikers para GameCube, edição americana G4QE01 Rev 0."
+          }
+        ]
+      }
     }
   ]
 }

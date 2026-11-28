@@ -318,6 +318,18 @@
       "retired_build_profile": null,
       "upstream_commit": "bd36eb982ea58c6651584cc48264876d1aba9546",
       "audit_reference": "docs/OFFICIAL-CONTRACT-RESTORATION-20261128.md"
+    },
+    {
+      "project_id": "strikersrecomp",
+      "tag": "build-cd88f71",
+      "path": "recipes/super-mario-strikers/strikersrecomp/build-cd88f71.json",
+      "sha256": "a9a80f21fd63a331d67ab453f6d22c485ef0bb80ce68abc76f96b531530a8121",
+      "build_profile": "strikersrecomp-cd88f71-recompcore",
+      "retired_path": "docs/retired-recipes/super-mario-strikers/strikersrecomp/build-cd88f71.json",
+      "retired_sha256": "77b95bd2c700ea76fe6776b615b4ee65be25dee8a3c0fdb6e4997e6230feba7a",
+      "retired_build_profile": null,
+      "upstream_commit": "cd88f71f5a836c103484c038454b4143000d883c",
+      "audit_reference": "docs/validations/official-scope/strikers-and-mkdd-follow-up-20261128.md"
     }
   ]
 }

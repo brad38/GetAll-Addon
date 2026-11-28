@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 9,
   "project_id": "strikersrecomp",
   "tag": "build-cd88f71",
   "source_url": "https://github.com/aharonahdoot/StrikersRecomp/commit/cd88f71f5a836c103484c038454b4143000d883c",
@@ -9,5 +9,16 @@
     "README.md"
   ],
   "inputs": [],
-  "manual_steps": "Compilacao experimental local de StrikersRecomp (DolRecomp + GXRuntime + Aurora). Use Retomar e selecione a ISO GameCube USA original completa de Super Mario Strikers (G4QE01 Rev 0). O GetAll prepara as ferramentas privadas, compila o host e o renderer e registra a instalacao com Jogar. Nenhum jogo incluido."
+  "manual_steps": "Selecione a ISO original americana de Super Mario Strikers. O All-Fix compila o RecompCore e o módulo oficial e registra o jogo. Primeiro boot ainda não homologado.",
+  "build_profile": "strikersrecomp-cd88f71-recompcore",
+  "preparation_media": [
+    {
+      "id": "original-disc",
+      "kind": "file",
+      "extensions": [
+        ".iso"
+      ],
+      "version": "Disco original de Super Mario Strikers para GameCube, edição americana G4QE01 Rev 0."
+    }
+  ]
 }

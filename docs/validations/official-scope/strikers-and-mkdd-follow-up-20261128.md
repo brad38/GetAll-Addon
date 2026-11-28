@@ -132,3 +132,15 @@ sem tentar instalar ou iniciar o jogo comercial.
 
 - [Script da prova](strikers-iso-module-probe.py)
 - [Recibo e hashes](strikers-iso-module-result-20261128.json)
+
+### Contrato GetAll de prévia
+
+A substituição experimental mantém o jogo fixado em cd88f71 e usa a
+rota RecompCore, separada do standalone GXRuntime. O índice requer SDK 1.5.71
+e autoriza somente a receita v9 de hash fixado. A receita v5 anterior
+permanece arquivada e bloqueada para execução. O SDK recebe uma única
+ISO G4QE01 Rev 0 fornecida pelo usuário.
+
+A validação de schema, identidade, política e hash do contrato passou.
+Os ensaios de host e de geração acima usaram mídias autorais. Instalação
+com mídia original e primeiro boot são evidências ainda pendentes.

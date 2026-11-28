@@ -1669,16 +1669,13 @@
       "project_id": "strikersrecomp",
       "repository": "aharonahdoot/StrikersRecomp",
       "tag": "build-cd88f71",
-      "schema_version": 5,
+      "schema_version": 9,
       "path": "recipes/super-mario-strikers/strikersrecomp/build-cd88f71.json",
-      "sha256": "77b95bd2c700ea76fe6776b615b4ee65be25dee8a3c0fdb6e4997e6230feba7a",
-      "status": "disabled",
+      "sha256": "a9a80f21fd63a331d67ab453f6d22c485ef0bb80ce68abc76f96b531530a8121",
+      "status": "experimental",
       "has_inputs": false,
       "has_manual_steps": true,
-      "min_sdk_version": "1.5.67",
-      "disabled_reason": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão.",
-      "disabled_at": "2026-11-27",
-      "audit_reference": "docs/validations/official-scope/remaining-official-blockers.json"
+      "min_sdk_version": "1.5.71"
     },
     {
       "game_id": "mario-kart-double-dash",
