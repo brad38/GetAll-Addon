@@ -3034,13 +3034,20 @@
       "dimensions": {
         "automated_installation_implemented": {
           "status": "blocked",
-          "reason": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão.",
+          "reason": "The recommended upstream RecompCore host and module loaded synthetic fixtures on Windows. A pinned, licensed distribution/build and exact-disc GetAll installation are not yet integrated.",
           "evidence": [
             {
               "path": "docs/validations/official-scope/remaining-official-blockers.json",
               "sha256": "879bfb3995ed34ab0a498535bbd242fca1b741d201cd957443048ef5a75bde7f",
               "observed": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão. Restoration condition: Validar uma combinação oficial compatível de dependências e embalagem Windows, ou integrar um ambiente oficialmente suportado sem modificar código/runtime do jogo.",
               "data_kind": "code_review",
+              "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/strikers-recompcore-headless-result-20261128.json",
+              "sha256": "3d794fe7fe0e8e827ea71a5c0b7a985d593b5ef24c1d96440b4b7c6764f73434",
+              "observed": "Unmodified RecompCore 283baee built with MSVC for Windows. The official core 6 accepted the matching authored module and rejected the wrong game ID.",
+              "data_kind": "synthetic",
               "scope": "getall"
             }
           ]

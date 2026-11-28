@@ -40,29 +40,6 @@
   "historical_excluded_recipes": [
     {
       "index": "development",
-      "game_id": "burnout-3-takedown",
-      "project_id": "burnout3-recomp",
-      "recipes": [
-        {
-          "game_id": "burnout-3-takedown",
-          "project_id": "burnout3-recomp",
-          "repository": "sp00nznet/burnout3",
-          "tag": "build-3c85ed7",
-          "schema_version": 5,
-          "path": "recipes/burnout-3-takedown/burnout3-recomp/build-3c85ed7.json",
-          "sha256": "acd0487703956b86d9d0f45ab76548b76cff982fc63c4aaa3c278c8ba47fee09",
-          "status": "disabled",
-          "has_inputs": false,
-          "has_manual_steps": true,
-          "min_sdk_version": "1.5.67",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
-          "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-BURNOUT"
-        }
-      ]
-    },
-    {
-      "index": "development",
       "game_id": "metroid-prime",
       "project_id": "metaforce",
       "recipes": [
@@ -86,23 +63,24 @@
     },
     {
       "index": "development",
-      "game_id": "goemon-s-great-adventure",
-      "project_id": "gga64recomp",
+      "game_id": "burnout-3-takedown",
+      "project_id": "burnout3-recomp",
       "recipes": [
         {
-          "game_id": "goemon-s-great-adventure",
-          "project_id": "gga64recomp",
-          "repository": "StopSine/GGA64Recomp",
-          "tag": "v0.1.0",
-          "schema_version": 3,
-          "path": "recipes/goemon-s-great-adventure/gga64recomp/v0.1.0.json",
-          "sha256": "39c796049722921d010dc41e852bcf1f23f573bd843bdcf344960c6ead9139bc",
+          "game_id": "burnout-3-takedown",
+          "project_id": "burnout3-recomp",
+          "repository": "sp00nznet/burnout3",
+          "tag": "build-3c85ed7",
+          "schema_version": 5,
+          "path": "recipes/burnout-3-takedown/burnout3-recomp/build-3c85ed7.json",
+          "sha256": "acd0487703956b86d9d0f45ab76548b76cff982fc63c4aaa3c278c8ba47fee09",
           "status": "disabled",
           "has_inputs": false,
           "has_manual_steps": true,
-          "disabled_reason": "Fora do catálogo ativo após revisão de elegibilidade: Documentação e release sugerem execução, mas a investigação não encontrou evidência específica verificável além dessas declarações. Isso significa prova insuficiente, não conclusão de que o port esteja quebrado.",
+          "min_sdk_version": "1.5.67",
+          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
           "disabled_at": "2026-11-27",
-          "audit_reference": "AllFix-Repo/excluded-projects.json#gga64recomp"
+          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-BURNOUT"
         }
       ]
     },
@@ -126,6 +104,28 @@
           "disabled_reason": "Fora do catálogo ativo após revisão de elegibilidade: ID de pacote legado duplicado: manter histórico e os dois IDs individuais, sem contá-lo como projeto ativo independente.",
           "disabled_at": "2026-11-27",
           "audit_reference": "AllFix-Repo/excluded-projects.json#sonic-1-forever-sonic-2-absolute"
+        }
+      ]
+    },
+    {
+      "index": "development",
+      "game_id": "goemon-s-great-adventure",
+      "project_id": "gga64recomp",
+      "recipes": [
+        {
+          "game_id": "goemon-s-great-adventure",
+          "project_id": "gga64recomp",
+          "repository": "StopSine/GGA64Recomp",
+          "tag": "v0.1.0",
+          "schema_version": 3,
+          "path": "recipes/goemon-s-great-adventure/gga64recomp/v0.1.0.json",
+          "sha256": "39c796049722921d010dc41e852bcf1f23f573bd843bdcf344960c6ead9139bc",
+          "status": "disabled",
+          "has_inputs": false,
+          "has_manual_steps": true,
+          "disabled_reason": "Fora do catálogo ativo após revisão de elegibilidade: Documentação e release sugerem execução, mas a investigação não encontrou evidência específica verificável além dessas declarações. Isso significa prova insuficiente, não conclusão de que o port esteja quebrado.",
+          "disabled_at": "2026-11-27",
+          "audit_reference": "AllFix-Repo/excluded-projects.json#gga64recomp"
         }
       ]
     },
@@ -4670,9 +4670,16 @@
               "observed": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão. Restoration condition: Validar uma combinação oficial compatível de dependências e embalagem Windows, ou integrar um ambiente oficialmente suportado sem modificar código/runtime do jogo.",
               "data_kind": "code_review",
               "scope": "getall"
+            },
+            {
+              "path": "docs/validations/official-scope/strikers-recompcore-headless-result-20261128.json",
+              "sha256": "3d794fe7fe0e8e827ea71a5c0b7a985d593b5ef24c1d96440b4b7c6764f73434",
+              "observed": "Unmodified RecompCore 283baee built with MSVC for Windows. The official core 6 accepted the matching authored module and rejected the wrong game ID.",
+              "data_kind": "synthetic",
+              "scope": "getall"
             }
           ],
-          "reason": "O bootstrap oficial fixa GXRuntime v0.1.0, mas essa versão exporta DolRuntime enquanto o Strikers exige GXRuntime. A embalagem RecompCore oficial não contempla .dll no Windows e o GXRuntime lista suporte Windows no roadmap. A integração anterior recorria a alterações próprias; não há contrato Windows íntegro validado nesta revisão."
+          "reason": "The recommended upstream RecompCore host and module loaded synthetic fixtures on Windows. A pinned, licensed distribution/build and exact-disc GetAll installation are not yet integrated."
         },
         "synthetic_validation": {
           "status": "unknown",

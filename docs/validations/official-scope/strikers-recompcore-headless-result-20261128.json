@@ -1,0 +1,46 @@
+{
+  "scope": "Authored DOL and synthetic DLLs only. No retail disc or gameplay.",
+  "host_version": "Dolphin [main] 283baee",
+  "host_sha256": "79e5871bc8d1dc4eb0c4eb03b8f9adc8bb3b124d770c6d0ac5aafc5fac355fd0",
+  "dol_sha256": "afbf5f54fef8113a10d1470805a0eccadb289cdab19c00f1b7ed680b53b79e3f",
+  "checks": [
+    {
+      "case": "mismatch",
+      "module_sha256": "7097c8f66647b030c0995c00d63ac20994bbc2a0506fd6005af45e7c34df9650",
+      "stopped_by_probe": true,
+      "static_core_started": true,
+      "title_rejected": true,
+      "module_loaded": false
+    },
+    {
+      "case": "match",
+      "module_sha256": "1b65154405684de00662657b475b3ed138c06908a2c7aa0d28cfc0fa59e9b645",
+      "stopped_by_probe": true,
+      "static_core_started": true,
+      "title_rejected": false,
+      "module_loaded": true
+    }
+  ],
+  "windows_build": {
+    "host_revision": "283baee01e54b6c3f71e441bb78fc77b260512fa",
+    "compiler": "MSVC 19.44.35230.0",
+    "upstream_source_changed": false,
+    "cmake_options": [
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DENABLE_QT=OFF",
+      "-DENABLE_NOGUI=ON",
+      "-DUSE_MGBA=OFF"
+    ],
+    "compiler_override": "/wd5048",
+    "override_reason": "MSVC classifies the upstream build timestamp macros as nondeterministic under /WX.",
+    "build_exit_code": 0,
+    "enabled_video_backends": [
+      "D3D",
+      "D3D12",
+      "OpenGL",
+      "Vulkan",
+      "Software"
+    ],
+    "probe_video_backend": "Null (headless probe only)"
+  }
+}

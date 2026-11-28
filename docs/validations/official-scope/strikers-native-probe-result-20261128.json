@@ -1,0 +1,227 @@
+{
+  "checked_at_utc": "2026-11-28T04:13:57.118039+00:00",
+  "source_archives": {
+    "main": {
+      "url": "https://codeload.github.com/aharonahdoot/StrikersRecomp/zip/cd88f71f5a836c103484c038454b4143000d883c",
+      "sha256": "1f361113dbfd35d0b0e6e1c5b98cbdf755cc28334f984cbdd95572a3be189a62",
+      "bytes": 181877
+    },
+    "release": {
+      "url": "https://codeload.github.com/aharonahdoot/StrikersRecomp/zip/67047edb69194a9642e3fbe2ba039db6e8c37c76",
+      "sha256": "1ab542f13472f04383fd464ce495d45f3a3f8346ab5eeaa081ccaf16f69125bc",
+      "bytes": 122004
+    },
+    "runtime_tag": {
+      "url": "https://codeload.github.com/aharonahdoot/GXRuntime/zip/b4c85bba0ce6633a6d977dbb9595b6640784b8ba",
+      "sha256": "5b3f8b4b1a716975b0a353a50d0ab81a337f3d98a637503325ffbcfd80cce7e7",
+      "bytes": 1472369
+    },
+    "runtime_head": {
+      "url": "https://codeload.github.com/aharonahdoot/GXRuntime/zip/8a47b0e8ea7dfc39014a4cff4f7895d88494a611",
+      "sha256": "9e52c8873befa17161815a7cecfeef4c146e02d11816dfa36ea1e59d41ff2e0d",
+      "bytes": 1823888
+    },
+    "runtime_compatible": {
+      "url": "https://codeload.github.com/aharonahdoot/GXRuntime/zip/f83d25877c7b701468c978c09559d513c4971ddd",
+      "sha256": "b548b5b6a630fb7f49efb1c8fbaf8cc3fa54fbb22ffa80009b43cee9b5625b5f",
+      "bytes": 1828183
+    },
+    "compiler": {
+      "url": "https://codeload.github.com/aharonahdoot/DolRecomp/zip/c7af6c9e149833d12ae721e6e26714f099e62e52",
+      "sha256": "c43cac41a1de238eef528fc292b8e0635f870906cf406f2ce973184cdbc77bfb",
+      "bytes": 579489
+    },
+    "symbols": {
+      "url": "https://codeload.github.com/yannicksuter/smstrikers-decomp/zip/d1f357ffeb1d8e89311edebf9a4b304b05ece7bb",
+      "sha256": "78c18e586f83d6f3a899a101167415cb923937b8d71529bbff2ddefe3a86608c",
+      "bytes": 5724838
+    }
+  },
+  "synthetic_dol_sha256": "77265ff970a8f280de90800202ea7da7cfe3b5f1893bef8ab3600c99f25e84fc",
+  "runs": [
+    {
+      "name": "tag_and_tag",
+      "source": "release",
+      "runtime": "runtime_tag",
+      "generate": 0,
+      "symbols": 0,
+      "configure": 0,
+      "build": 2,
+      "artifact": false,
+      "logs": {
+        "generate.log": {
+          "sha256": "c261cb4cc686e4b44443bcfcb90afc14d37992d2a55b7475035399a304be4c0a",
+          "errors": []
+        },
+        "symbols.log": {
+          "sha256": "637a59078140959a0ef9c9edc3d89bf890423179fdc5c19dab7b7b56e97ea4b7",
+          "errors": []
+        },
+        "configure.log": {
+          "sha256": "805fd87c2e5be1e65cce80da6513834a46bd9e1ddb3c5e9407ec5180e4ba9e28",
+          "errors": []
+        },
+        "build.log": {
+          "sha256": "b40e4a80829a6762dac0820fcb09962387c3cddc5bcb64af48de1e782b326ba7",
+          "errors": [
+            "evidence-r18\\homologacao-20261128\\strikers-native\\tag_and_tag\\DolRuntime\\src\\dvd.c(84): error C2065: 'off_t': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\tag_and_tag\\DolRuntime\\src\\dvd.c(84): error C2146: erro de sintaxe: ')' ausente antes do identificador 'fst_off'",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\tag_and_tag\\DolRuntime\\src\\dvd.c(91): error C2065: 'fst': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\tag_and_tag\\DolRuntime\\src\\dvd.c(98): error C2065: 'f': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\tag_and_tag\\DolRuntime\\src\\dvd.c(99): error C2065: 'fst': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\tag_and_tag\\DolRuntime\\src\\dvd.c(100): error C2065: 'fst_size': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\tag_and_tag\\DolRuntime\\src\\dvd.c(102): error C2065: 'fst': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\tag_and_tag\\DolRuntime\\src\\dvd.c(224): error C2065: 'off_t': identificador não declarado"
+          ]
+        }
+      }
+    },
+    {
+      "name": "main_and_tag",
+      "source": "main",
+      "runtime": "runtime_tag",
+      "generate": 0,
+      "symbols": 0,
+      "configure": 1,
+      "build": null,
+      "artifact": false,
+      "logs": {
+        "generate.log": {
+          "sha256": "d6ca52b694afa5a04c9c5dcbf77477e6c073287b72e050db282e67b834315cca",
+          "errors": []
+        },
+        "symbols.log": {
+          "sha256": "1738f8c234934558ca6a4758ec1ce07cb7eeca8c980d021b751a2cc3a62ee3a4",
+          "errors": []
+        },
+        "configure.log": {
+          "sha256": "ba4d2a063bc752abcd6ea1b1c8eaf9a5d5e4af7fa4cd0b636e024c3bcf9699da",
+          "errors": [
+            "CMake Error at CMakeLists.txt:90 (target_link_libraries):",
+            "    GXRuntime::runtime"
+          ]
+        }
+      }
+    },
+    {
+      "name": "main_and_head",
+      "source": "main",
+      "runtime": "runtime_head",
+      "generate": 0,
+      "symbols": 0,
+      "configure": 0,
+      "build": 2,
+      "artifact": false,
+      "logs": {
+        "generate.log": {
+          "sha256": "c89f893b93d1a491147f0b6e7b30a00d44472dda6465be4083b2d9a027188536",
+          "errors": []
+        },
+        "symbols.log": {
+          "sha256": "b0f303b67b57514e75bc0fb0de4cd6d1dfa50c5d90766c93ecbc1f49df96090e",
+          "errors": []
+        },
+        "configure.log": {
+          "sha256": "19977e0fc147503f9f5c07181f05b40879244d500638645b173ce0f740a6e152",
+          "errors": []
+        },
+        "build.log": {
+          "sha256": "2365d9da48280770f8594209691c7daf6980b58b55bc6586810e053b67f355ca",
+          "errors": [
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_head\\GXRuntime\\src\\dvd.c(84): error C2065: 'off_t': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_head\\GXRuntime\\src\\dvd.c(84): error C2146: erro de sintaxe: ')' ausente antes do identificador 'fst_off'",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_head\\GXRuntime\\src\\dvd.c(91): error C2065: 'fst': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_head\\GXRuntime\\src\\dvd.c(98): error C2065: 'f': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_head\\GXRuntime\\src\\dvd.c(99): error C2065: 'fst': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_head\\GXRuntime\\src\\dvd.c(100): error C2065: 'fst_size': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_head\\GXRuntime\\src\\dvd.c(102): error C2065: 'fst': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_head\\GXRuntime\\src\\dvd.c(224): error C2065: 'off_t': identificador não declarado"
+          ]
+        }
+      }
+    },
+    {
+      "name": "main_and_compatible",
+      "source": "main",
+      "runtime": "runtime_compatible",
+      "generate": 0,
+      "symbols": 0,
+      "configure": 0,
+      "build": 2,
+      "artifact": false,
+      "logs": {
+        "generate.log": {
+          "sha256": "8ddb3f37d309d82ccc815b83779710def5bbc690af2b2569d4f8773b8cff3fa1",
+          "errors": []
+        },
+        "symbols.log": {
+          "sha256": "08e2faf5ea5e4acc0a5d8434942c4b5659642593fc08473bbcd06affc51dd7bf",
+          "errors": []
+        },
+        "configure.log": {
+          "sha256": "6849d35b156bbf874afdfa51162ca7accc2a0d9c3b5a7350bf1c8e7ebd338a5d",
+          "errors": []
+        },
+        "build.log": {
+          "sha256": "b796036eb93721788b26a2277277853b4811c95bd729b4864ed86bf07dfd0006",
+          "errors": [
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_compatible\\GXRuntime\\src\\dvd.c(84): error C2065: 'off_t': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_compatible\\GXRuntime\\src\\dvd.c(84): error C2146: erro de sintaxe: ')' ausente antes do identificador 'fst_off'",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_compatible\\GXRuntime\\src\\dvd.c(91): error C2065: 'fst': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_compatible\\GXRuntime\\src\\dvd.c(98): error C2065: 'f': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_compatible\\GXRuntime\\src\\dvd.c(99): error C2065: 'fst': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_compatible\\GXRuntime\\src\\dvd.c(100): error C2065: 'fst_size': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_compatible\\GXRuntime\\src\\dvd.c(102): error C2065: 'fst': identificador não declarado",
+            "evidence-r18\\homologacao-20261128\\strikers-native\\main_and_compatible\\GXRuntime\\src\\dvd.c(224): error C2065: 'off_t': identificador não declarado"
+          ]
+        }
+      }
+    }
+  ],
+  "pristine_source_count": 3867,
+  "changed_sources": [],
+  "limitations": "Unchanged sources, default Aurora enabled, probe DOL only. No game installation or gameplay.",
+  "llvm_mingw_probe": {
+    "configure": 0,
+    "host_translation_unit": 1,
+    "source_commit": "cd88f71f5a836c103484c038454b4143000d883c",
+    "runtime_commit": "8a47b0e8ea7dfc39014a4cff4f7895d88494a611",
+    "build_log_sha256": "d9ab63be71446c31e48647a04cdc938117105c566c13b6f2bcee08a88ecf33e5",
+    "errors": [
+      "evidence-r18/homologacao-20261128/strikers-native/main_and_head/StrikersRecomp/runtime/host/main.c:392:16: error: use of undeclared identifier 'SIGUSR1'",
+      "evidence-r18/homologacao-20261128/strikers-native/main_and_head/StrikersRecomp/runtime/host/main.c:393:12: error: use of undeclared identifier 'SIGUSR2'"
+    ]
+  },
+  "alternative_recompcore_module": {
+    "artifact": "Authored PPC fixture DLL. Exact module descriptor read via Windows loader.",
+    "sha256": "7097c8f66647b030c0995c00d63ac20994bbc2a0506fd6005af45e7c34df9650",
+    "abi_version": 2,
+    "cpu_abi_version": 2,
+    "cpu_state_size": 7592,
+    "disc_id_constant": "G4QE01",
+    "entry": "0x80003100",
+    "code_ranges": 3,
+    "smc_ranges": 9,
+    "chunk_ranges_with_hashes": 3,
+    "guest_dispatched": false,
+    "recompcore_commit": "283baee01e54b6c3f71e441bb78fc77b260512fa",
+    "recompcore_archive_sha256": "081e230a66cb50c1cd0a81a14bb0ed2c89c708e6622932ea95259867a07097c0",
+    "fixture_sha256": "afbf5f54fef8113a10d1470805a0eccadb289cdab19c00f1b7ed680b53b79e3f",
+    "build_log_sha256": "82c4e471852dd1d8fc36070bc2237540fef4eceeecbd346fc0a62dd13a025219"
+  },
+  "alternative_upstream_linux": {
+    "architecture": "Linux x86-64 via WSL Ubuntu",
+    "upstream_title": "v0.1.0",
+    "upstream_runtime": "v0.1.0",
+    "compiler": "Ubuntu Clang 21.1.8",
+    "renderer": "Aurora enabled in native Linux build",
+    "build_exit_code": 0,
+    "native_build_steps": 726,
+    "executable_sha256": "b27d6fc985321e37202c9c391c5fa5c07f4abc0b656ecf1a92a18fdb471603a6",
+    "test_exit_code": 0,
+    "synthetic_blocks": 1,
+    "return_sentinel": "0x0BADF00C",
+    "build_log_sha256": "a4ef702af0f063e1e030568c6f7ac922cdd5d879eb523d6bbf385e41d7e31579",
+    "call_log_sha256": "93018f581c0d7f059949b0e8ae587d56044b85ef0fce1e12d325a064a9ddac96"
+  }
+}
