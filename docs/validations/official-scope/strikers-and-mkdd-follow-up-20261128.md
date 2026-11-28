@@ -120,3 +120,15 @@ e registrar o lançamento após validação da mídia original.
 
 - [Script de empacotamento local](strikers-stage-recompcore-host.py)
 - [Recibo do pacote de teste](strikers-staged-host-result-20261128.json)
+
+### Ensaio da rota ISO oficial
+
+Uma imagem GameCube criada para teste, ID QATX01, exercitou o fluxo
+`generate.py --iso` em um caminho com espaços. O DolRecomp extraiu o DOL
+autoral com SHA-256 idêntico e o CMake upstream produziu a DLL Windows
+`gG4QE01_recomp.dll`. A imagem sintética permaneceu idêntica e o teste
+ficou em uma pasta isolada. Essa prova cobre a extração, geração e link,
+sem tentar instalar ou iniciar o jogo comercial.
+
+- [Script da prova](strikers-iso-module-probe.py)
+- [Recibo e hashes](strikers-iso-module-result-20261128.json)

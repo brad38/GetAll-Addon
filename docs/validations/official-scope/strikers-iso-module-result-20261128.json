@@ -1,0 +1,9 @@
+{
+  "scope": "Authored synthetic GC ISO; no original game data or launch.",
+  "iso_sha256": "559ba10d196e4a73fbe2c47fdc742942a879f1017e33772f31acb60b9849c341",
+  "extracted_dol_sha256": "afbf5f54fef8113a10d1470805a0eccadb289cdab19c00f1b7ed680b53b79e3f",
+  "module_sha256": "6695211b5abf4ead37a5583e84c10584a3b244ceb821ac8037cca9a4218eed91",
+  "source_files_unchanged": true,
+  "strikers_revision": "cd88f71f5a836c103484c038454b4143000d883c",
+  "recompcore_revision": "283baee01e54b6c3f71e441bb78fc77b260512fa"
+}
