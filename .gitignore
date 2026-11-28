@@ -4,3 +4,6 @@ __pycache__/
 .pytest_cache/
 .venv/
 venv/
+
+# Generated coverage report; CI preserves the report as an artifact.
+/catalog-coverage-report.json

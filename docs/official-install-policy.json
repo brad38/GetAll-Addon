@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-27",
+  "policy": "official_upstream_only",
+  "source": "docs/INSTALLATION-SCOPE-REQUEST-20261127.md",
+  "blocked_recipes": [
+    {
+      "project_id": "ship-of-harkinian-soh",
+      "tag": "9.3.1",
+      "path": "recipes/the-legend-of-zelda-ocarina-of-time/ship-of-harkinian-soh/9.3.1.json",
+      "reason": "Auxiliar incorporado soh-torch sem prova suficiente de procedência; usar launcher/importação oficial até validação do componente oficial.",
+      "audit_reference": "docs/audits/source-integrity-20261127/native-soh-provenance-gap.json"
+    },
+    {
+      "project_id": "sm64plus",
+      "tag": "build-85c3e51",
+      "path": "recipes/super-mario-64/sm64plus/build-85c3e51.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-SM64PLUS"
+    },
+    {
+      "project_id": "god-of-war-native-pc-port-gow-pc-port",
+      "tag": "launcher-v0.4.0",
+      "path": "recipes/god-of-war-2005/god-of-war-native-pc-port-gow-pc-port/launcher-v0.4.0.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-GOW"
+    },
+    {
+      "project_id": "pinyon-shift",
+      "tag": "v0.9.5",
+      "path": "recipes/forza-horizon/pinyon-shift/v0.9.5.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-REX"
+    },
+    {
+      "project_id": "ssx-recomp",
+      "tag": "v2.0.0",
+      "path": "recipes/ssx-2012/ssx-recomp/v2.0.0.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-REX"
+    },
+    {
+      "project_id": "fh1-reimagined",
+      "tag": "v0.3.9",
+      "path": "recipes/forza-horizon/fh1-reimagined/v0.3.9.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-REX"
+    },
+    {
+      "project_id": "crash-team-racing-turbocharged",
+      "tag": "build-07d0c49",
+      "path": "recipes/crash-team-racing/crash-team-racing-turbocharged/build-07d0c49.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-CTR"
+    },
+    {
+      "project_id": "sm",
+      "tag": "build-578f90b",
+      "path": "recipes/super-metroid/sm/build-578f90b.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-SM"
+    },
+    {
+      "project_id": "sm-rewrite",
+      "tag": "build-5237873",
+      "path": "recipes/super-metroid/sm-rewrite/build-5237873.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-SM"
+    },
+    {
+      "project_id": "mariokartdd-recomp",
+      "tag": "build-bd36eb9",
+      "path": "recipes/mario-kart-double-dash/mariokartdd-recomp/build-bd36eb9.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MKDDCPP"
+    },
+    {
+      "project_id": "sm64ex",
+      "tag": "build-d7ca2c0",
+      "path": "recipes/super-mario-64/sm64ex/build-d7ca2c0.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MARIO"
+    },
+    {
+      "project_id": "render96ex",
+      "tag": "build-48da5c4",
+      "path": "recipes/super-mario-64/render96ex/build-48da5c4.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MARIO"
+    },
+    {
+      "project_id": "sm64rt",
+      "tag": "build-20e618b",
+      "path": "recipes/super-mario-64/sm64rt/build-20e618b.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MARIO"
+    },
+    {
+      "project_id": "burnout3-recomp",
+      "tag": "build-3c85ed7",
+      "path": "recipes/burnout-3-takedown/burnout3-recomp/build-3c85ed7.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-BURNOUT"
+    },
+    {
+      "project_id": "gt5-recomp",
+      "tag": "build-64ca169",
+      "path": "recipes/gran-turismo-5/gt5-recomp/build-64ca169.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-GT5"
+    },
+    {
+      "project_id": "god-of-war-recomp",
+      "tag": "build-d1d11ec",
+      "path": "recipes/god-of-war-2005/god-of-war-recomp/build-d1d11ec.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-GOW"
+    },
+    {
+      "project_id": "strikersrecomp",
+      "tag": "build-cd88f71",
+      "path": "recipes/super-mario-strikers/strikersrecomp/build-cd88f71.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-STRIKERS"
+    },
+    {
+      "project_id": "drmario64-recomp",
+      "tag": "build-7892264",
+      "path": "recipes/dr-mario-64/drmario64-recomp/build-7892264.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-DRMARIO"
+    },
+    {
+      "project_id": "metaforce",
+      "tag": "build-de8fc69",
+      "path": "recipes/metroid-prime/metaforce/build-de8fc69.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-META"
+    },
+    {
+      "project_id": "mkw-recomp",
+      "tag": "v0.1.18-allfix-cli",
+      "path": "recipes/mario-kart-world/mkw-recomp/v0.1.18-allfix-cli.json",
+      "reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+      "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-MKW"
+    }
+  ],
+  "preserved_official_aliases": [
+    {
+      "project_id": "crash-team-racing-turbocharged",
+      "tag": "ci-07d0c49"
+    },
+    {
+      "project_id": "mkw-recomp",
+      "tag": "v0.1.18"
+    },
+    {
+      "project_id": "sm64plus",
+      "tag": "LauncherMirror"
+    }
+  ],
+  "reactivation": "A new release does not clear a blocked recipe. Re-review source fidelity, preserve disabled history, and explicitly approve a new official installation contract."
+}

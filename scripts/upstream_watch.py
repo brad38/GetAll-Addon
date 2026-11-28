@@ -31,6 +31,8 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 import validate_recipes  # noqa: E402
+from catalog_scope import assessments, excluded_identities, is_eligible, load_scope  # noqa: E402
+from validate_ci import select_catalog  # noqa: E402
 
 CATALOG_URL = "https://raw.githubusercontent.com/brad38/AllFix-Repo/main/catalog.json"
 GITHUB_API_BASE = "https://api.github.com"
@@ -398,6 +400,9 @@ def run_upstream_watch(
     apply_updates: bool = False,
     inspect_assets: bool = False,
     catalog_data: dict[str, Any] | None = None,
+    eligibility_data: dict[str, Any] | None = None,
+    exclusions_data: dict[str, Any] | None = None,
+    catalog_source: str | None = None,
     releases_fetcher: Any = None,
     asset_inspector: Any = None,
 ) -> dict[str, Any]:
@@ -408,7 +413,17 @@ def run_upstream_watch(
     baseline = load_audit_baseline(repo_root)
 
     if catalog_data is None:
-        catalog_data, _ = fetch_json(CATALOG_URL)
+        catalog_data, loaded_eligibility, loaded_exclusions = load_scope(
+            catalog_source or select_catalog(index_data, os.environ))
+        eligibility_data = eligibility_data if eligibility_data is not None else loaded_eligibility
+        exclusions_data = exclusions_data if exclusions_data is not None else loaded_exclusions
+    decisions = assessments(eligibility_data)
+    excluded_records = assessments(exclusions_data)
+    excluded_identities(exclusions_data)  # Reject malformed archive identities.
+    policy_projects = set()
+    if index_data.get("execution_policy") == "official_upstream_only":
+        policy = json.loads((repo_root / "docs" / "official-install-policy.json").read_text(encoding="utf-8"))
+        policy_projects = {item["project_id"] for item in policy["blocked_recipes"]}
 
     headers = get_github_headers()
     if releases_fetcher is None:
@@ -443,6 +458,7 @@ def run_upstream_watch(
                 "provider": src.get("provider"),
                 "repository": src.get("github_repository"),
                 "url": src.get("url"),
+                "eligible": is_eligible(decisions.get(pid)),
             }
 
     # 1. Detect new projects in AllFix-Repo not in the 119-project baseline
@@ -473,9 +489,20 @@ def run_upstream_watch(
         if repo.startswith("gitlab:"):
             # GitHub release watcher does not query gitlab: repositories
             continue
-        repos_to_check.setdefault(repo, []).append(
-            {"kind": "indexed", "project_id": pid, "entries": entries}
-        )
+        pinfo = catalog_projects.get(pid)
+        if pid in excluded_records:
+            reason = "Excluded project: new releases require a fresh gameplay/provenance review before catalog admission"
+        elif not pinfo or not pinfo["eligible"]:
+            reason = "Candidate/unreviewed project: README, release or build alone cannot establish gameplay eligibility"
+        elif str(pinfo.get("repository") or "").lower() != repo.lower():
+            reason = "Catalog repository changed; official identity and procedure need explicit review"
+        else:
+            reason = None
+        repos_to_check.setdefault(repo, []).append({
+            "kind": "review_only" if reason else "indexed", "project_id": pid,
+            "entries": entries, "reason": reason,
+            "class": "EXCLUDED" if pid in excluded_records else "CANDIDATE",
+        })
 
     if scope in {"ab", "all"}:
         for pid, pinfo in catalog_projects.items():
@@ -487,14 +514,31 @@ def run_upstream_watch(
             if scope == "ab" and cls not in {"A", "B", "NEW"}:
                 continue
             repos_to_check.setdefault(pinfo["repository"], []).append(
-                {"kind": "catalog", "project_id": pid, "info": pinfo, "class": cls}
+                {"kind": "catalog" if pinfo["eligible"] else "review_only",
+                 "project_id": pid, "info": pinfo, "class": cls,
+                 "reason": "Candidate requires specific gameplay evidence and official installation review before admission"}
             )
     elif new_catalog_projects:
         for pinfo in new_catalog_projects:
             if pinfo.get("provider") == "github" and pinfo.get("repository"):
                 repos_to_check.setdefault(pinfo["repository"], []).append(
-                    {"kind": "catalog", "project_id": pinfo["project_id"], "info": pinfo, "class": "NEW"}
+                    {"kind": "catalog" if pinfo["eligible"] else "review_only",
+                     "project_id": pinfo["project_id"], "info": pinfo, "class": "NEW",
+                     "reason": "Candidate requires specific gameplay evidence and official installation review before admission"}
                 )
+
+    # Archived identities remain discoverable without ever becoming installable.
+    if scope == "all":
+        for pid, record in excluded_records.items():
+            if pid in indexed_by_project:
+                continue
+            src = record.get("project", {}).get("source", {})
+            repo = src.get("github_repository")
+            if src.get("provider") == "github" and repo:
+                repos_to_check.setdefault(repo, []).append({
+                    "kind": "review_only", "project_id": pid, "class": "EXCLUDED",
+                    "reason": "Excluded project: new releases require a fresh gameplay/provenance review before catalog admission",
+                })
 
     updated_recipes: list[dict[str, Any]] = []
     pending_reviews: list[dict[str, Any]] = []
@@ -519,6 +563,18 @@ def run_upstream_watch(
 
         for target in targets:
             pid = target["project_id"]
+            if target["kind"] == "review_only":
+                known = {e["tag"] for e in target.get("entries", [])} or baseline.known_tags.get(pid, set())
+                latest_rel = select_newer_catalog_release(releases, known, is_new_project=not known)
+                if latest_rel:
+                    pending_reviews.append({
+                        "project_id": pid, "class": target.get("class", "CANDIDATE"),
+                        "repository": repo, "current_tags": sorted(known),
+                        "latest_tag": latest_rel.get("tag_name"), "reason": target["reason"],
+                        "release_url": latest_rel.get("html_url", ""),
+                        "review_only": True, "eligible_for_automatic_update": False,
+                    })
+                continue
             if target["kind"] == "indexed":
                 entries = target["entries"]
                 current_tags = {e["tag"] for e in entries}
@@ -547,7 +603,9 @@ def run_upstream_watch(
                 # In particular, v8 Java launchers and v9 preparation/build profiles
                 # cannot be copied by checking ZIP filenames alone.
                 review_reason = None
-                if any(e.get("status") == "validated" for e in entries):
+                if pid in policy_projects or any(e.get("disabled_reason") for e in entries):
+                    review_reason = "Source-integrity suspension requires a reviewed official replacement; an upstream release cannot reactivate it"
+                elif any(e.get("status") == "validated" for e in entries):
                     review_reason = "Validated recipe requires functional verification with original media"
                 elif any(e.get("status") != "experimental" for e in entries):
                     review_reason = "Disabled or draft recipe requires explicit review before a new version"
@@ -794,7 +852,7 @@ def run_upstream_watch(
             "new_projects": [p["project_id"] for p in new_catalog_projects],
             "metadata": metadata_changes,
             "pending": [
-                (p["project_id"], p.get("latest_tag")) for p in pending_reviews
+                (p["project_id"], p.get("latest_tag"), p.get("reason")) for p in pending_reviews
             ],
         },
         sort_keys=True,
@@ -812,6 +870,10 @@ def run_upstream_watch(
         "scope": scope,
         "checked_repositories": checked_repos,
         "catalog_project_count": len(catalog_projects),
+        "reviewed_eligible_project_count": sum(p["eligible"] for p in catalog_projects.values()),
+        "excluded_project_count": len(excluded_records),
+        "catalog_mutations": False,
+        "eligibility_mutations": False,
         "indexed_recipe_count": len(index_entries),
         "has_actionable_changes": has_actionable_changes and not already_reported,
         "already_reported": already_reported,
@@ -929,13 +991,21 @@ def main() -> int:
         default=None,
         help="Optional local catalog.json path for offline runs",
     )
+    parser.add_argument("--eligibility-file", type=Path, help="Eligibility registry from the same catalog revision")
+    parser.add_argument("--excluded-projects-file", type=Path, help="Preserved exclusions, monitored only for review")
     parser.add_argument("--json-out", type=Path, default=None)
     parser.add_argument("--report-out", type=Path, default=None)
     args = parser.parse_args()
 
     catalog_data = None
+    eligibility_data = None
+    exclusions_data = None
     if args.catalog_file is not None:
-        catalog_data = json.loads(args.catalog_file.read_text(encoding="utf-8"))
+        catalog_data, eligibility_data, exclusions_data = load_scope(
+            args.catalog_file, eligibility_source=args.eligibility_file,
+            exclusions_source=args.excluded_projects_file)
+    elif args.eligibility_file or args.excluded_projects_file:
+        parser.error("Registry file overrides require --catalog-file to keep revisions aligned")
 
     result = run_upstream_watch(
         args.repo_root.resolve(),
@@ -943,6 +1013,8 @@ def main() -> int:
         apply_updates=args.apply_updates,
         inspect_assets=args.inspect_assets,
         catalog_data=catalog_data,
+        eligibility_data=eligibility_data,
+        exclusions_data=exclusions_data,
     )
     report_md = render_markdown_report(result)
 

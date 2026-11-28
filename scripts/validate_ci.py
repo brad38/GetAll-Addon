@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import os
 from pathlib import Path
 import subprocess
@@ -11,10 +12,11 @@ from typing import Any, Mapping
 
 
 PUBLIC_CATALOG = "https://raw.githubusercontent.com/brad38/AllFix-Repo/main/catalog.json"
-# Preview identities staged for review in AllFix-Repo issue #8 (148 projects).
+# Catalog, eligibility and exclusion companions are fetched at one revision.
+# Reviewed eligibility scope committed on 2026-11-28 (137 projects, 11 exclusions).
 PREVIEW_CATALOG = (
     "https://raw.githubusercontent.com/brad38/AllFix-Repo/"
-    "3f4603cf42ef43402b4a0a9470232e7d4fcd9eb9/catalog.json"
+    "91bd560fab30f7411b5350abe0ad7103d370a7ce/catalog.json"
 )
 
 
@@ -35,10 +37,23 @@ def select_catalog(index: Any, context: Mapping[str, str]) -> str:
     return PREVIEW_CATALOG if channel == "preview" else PUBLIC_CATALOG
 
 
+def watch_target(index: Any, context: Mapping[str, str]) -> dict[str, str]:
+    """Keep preview automation on its review branch, never on production main."""
+    catalog = select_catalog(index, context)
+    ref = context.get("GITHUB_REF", "")
+    if not ref.startswith("refs/heads/"):
+        raise ValueError("Upstream watch requires an explicit branch context")
+    base = ref.removeprefix("refs/heads/")
+    if not base or base.startswith("automation/"):
+        raise ValueError("Upstream watch must start from a maintained review/base branch")
+    suffix = "" if base == "main" else "-" + hashlib.sha256(base.encode()).hexdigest()[:12]
+    return {"base": base, "branch": "automation/upstream-watch" + suffix, "catalog": catalog}
+
+
 def run_validation(repo_root: Path, context: Mapping[str, str]) -> int:
     index = json.loads((repo_root / "index.json").read_text(encoding="utf-8"))
     catalog = select_catalog(index, context)
-    return subprocess.call(
+    result = subprocess.call(
         [
             sys.executable,
             str(repo_root / "scripts" / "validate_recipes.py"),
@@ -48,6 +63,13 @@ def run_validation(repo_root: Path, context: Mapping[str, str]) -> int:
             "--check-catalog",
             catalog,
         ],
+        cwd=repo_root,
+    )
+    if result:
+        return result
+    return subprocess.call(
+        [sys.executable, str(repo_root / "scripts" / "catalog_coverage.py"),
+         "--catalog", catalog, "--output", str(repo_root / "catalog-coverage-report.json")],
         cwd=repo_root,
     )
 

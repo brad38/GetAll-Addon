@@ -55,4 +55,3 @@ restrições antigas de escrita que conflitem com a autorização desta rodada.
 - Nunca remover mídia original, fonte não versionado necessário, dependência
   ativa ou dado pessoal.
 - Registrar progresso real, pendências e comandos de reprodução no checkpoint.
-

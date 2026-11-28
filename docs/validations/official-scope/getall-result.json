@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-11-28",
+  "catalog_commit": "91bd560fab30f7411b5350abe0ad7103d370a7ce",
+  "python_tests": {
+    "passed": 73,
+    "failed": 0,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "validator": {
+    "passed": true,
+    "command": "python scripts/validate_recipes.py --strict-lf --require-jsonschema --check-git-blobs --check-catalog ../catalog-scope/catalog.json",
+    "recipes": 145,
+    "statuses": {
+      "validated": 1,
+      "experimental": 122,
+      "disabled": 22
+    }
+  },
+  "coverage": {
+    "games": 108,
+    "projects": 137,
+    "development_covered": 123,
+    "missing": 14,
+    "dimension_counts": {
+      "upstream_functional": {
+        "evidenced": 137
+      },
+      "automated_installation_implemented": {
+        "implemented": 118,
+        "partial": 5,
+        "blocked": 14
+      },
+      "synthetic_validation": {
+        "unknown": 124,
+        "historical": 13
+      },
+      "original_media_installation": {
+        "unknown": 136,
+        "historical": 1
+      },
+      "first_boot": {
+        "unknown": 136,
+        "historical": 1
+      },
+      "gameplay": {
+        "unknown": 137
+      }
+    }
+  },
+  "limits": [
+    "No GetAll run with original game media was performed in this verification.",
+    "Historical tests are not treated as approval of the SDK 1.5.70 executable.",
+    "Hosted CI and remote push are separate integration steps."
+  ],
+  "artifacts": [
+    {
+      "path": "docs/installation-evidence.json",
+      "bytes": 287685,
+      "sha256": "fd920a6add97ba33aa80c1d729a8f020b48dec0cf4b2eceed412d72d2cd73111"
+    },
+    {
+      "path": "docs/official-install-policy.json",
+      "bytes": 9191,
+      "sha256": "741d89ffd75028cbfa2be8fac3b70da53e09a8227097804375280db8e3d03502"
+    },
+    {
+      "path": "docs/INSTALLATION-COVERAGE.md",
+      "bytes": 7188,
+      "sha256": "761bd07f6df0466d951f9a168b34d78157cb433c5e0f1225642c8008bb2e258d"
+    },
+    {
+      "path": "docs/validations/official-scope/catalog-coverage.json",
+      "bytes": 465495,
+      "sha256": "d99dfeb3770e80952107d6b43078568ca30d8c736dc805fb0902dc4c6bf83e9a"
+    },
+    {
+      "path": "docs/validations/official-scope/getall-tests.log",
+      "bytes": 11793,
+      "sha256": "2a04faad344a483ba94ac113828d1b76c59d578b49cfcaabd2ac0df6d9b88cdb"
+    },
+    {
+      "path": "docs/validations/official-scope/getall-validation.log",
+      "bytes": 245,
+      "sha256": "351a327bb210567258b1ecf2c5eafe6249e9ec0b673069411a70292f4fd06035"
+    }
+  ]
+}

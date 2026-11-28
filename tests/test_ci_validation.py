@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from scripts.validate_ci import PREVIEW_CATALOG, PUBLIC_CATALOG, run_validation, select_catalog
+from scripts.validate_ci import PREVIEW_CATALOG, PUBLIC_CATALOG, run_validation, select_catalog, watch_target
 
 
 class CiValidationTests(unittest.TestCase):
@@ -75,6 +75,26 @@ class CiValidationTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, "must not be served as production"):
                     run_validation(root, context)
             validate.assert_not_called()
+
+    def test_successful_ci_also_validates_multidimensional_evidence(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            (root/"index.json").write_text(json.dumps({"channel":"preview"}),encoding="utf-8")
+            with patch("scripts.validate_ci.subprocess.call",side_effect=[0,9]) as validate:
+                self.assertEqual(run_validation(root,{}),9)
+            self.assertEqual(validate.call_count,2)
+            self.assertIn(str(root/"scripts"/"catalog_coverage.py"),validate.call_args_list[1].args[0])
+            self.assertIn(PREVIEW_CATALOG,validate.call_args_list[1].args[0])
+
+    def test_preview_watcher_never_targets_main_or_an_unrelated_review_branch(self):
+        first=watch_target({"channel":"preview"},{"GITHUB_REF":"refs/heads/work/official-install-scope-20261127"})
+        second=watch_target({"channel":"preview"},{"GITHUB_REF":"refs/heads/work/another-review"})
+        self.assertEqual(first["base"],"work/official-install-scope-20261127")
+        self.assertNotEqual(first["branch"],second["branch"])
+        self.assertNotEqual(first["branch"],"automation/upstream-watch")
+        for ref in ("refs/heads/main","refs/heads/automation/upstream-watch","refs/tags/v1"):
+            with self.assertRaises(ValueError):
+                watch_target({"channel":"preview"},{"GITHUB_REF":ref})
 
 
 if __name__ == "__main__":

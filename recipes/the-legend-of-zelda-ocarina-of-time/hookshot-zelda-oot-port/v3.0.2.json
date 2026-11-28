@@ -2,7 +2,7 @@
   "schema_version": 9,
   "project_id": "hookshot-zelda-oot-port",
   "tag": "v3.0.2",
-  "source_url": "https://github.com/ZuanCrisp/Zelda-OOT-Port/releases/tag/v3.0.2",
+  "source_url": "https://github.com/ItsNotRexed/Hookshot/releases/tag/v3.0.2",
   "operations": [],
   "required_files": [
     "HookshotBuilder.exe",
@@ -10,7 +10,7 @@
   ],
   "inputs": [],
   "manual_steps": "Kit oficial preparado. Use Retomar e selecione sua propria copia de Ocarina of Time Nintendo Switch 2 (.nup/.nx v131072 e0f3ccfa ou pasta com exefs e romfs). O All-Fix verifica os componentes oficiais por SHA-256 e compila localmente.",
-  "build_profile": "hookshot-3.0.2-prepare",
+  "build_profile": "hookshot-3.0.2-official-prepare",
   "preparation_media": [
     {
       "id": "original-game",

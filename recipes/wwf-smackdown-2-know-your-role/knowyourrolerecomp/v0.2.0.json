@@ -9,6 +9,6 @@
     "KnowYourRole-v0.2.0-win-x64/KnowYourRole-files/runtime/KnowYourRole.Game.exe"
   ],
   "inputs": [],
-  "manual_steps": "A previa All-Fix SDK 1.5.50 com o compilador incorporado aceita o BIN original NTSC-U SLUS-01234 e compila o port. Para outras copias do All-Fix, use o launcher oficial.",
+  "manual_steps": "Use o KnowYourRole.exe oficial que acompanha a release. Na primeira execução, selecione seu CUE/BIN original NTSC-U SLUS-01234 para gerar o jogo. A CLI oficial aceita --cue <disc.cue> [--out <runtime folder>]; depois --play inicia o jogo. Preserve KnowYourRole-files junto ao launcher. O All-Fix obtém esse componente sob demanda e não recompila um helper próprio.",
   "launch_file": "KnowYourRole-v0.2.0-win-x64/KnowYourRole.exe"
 }

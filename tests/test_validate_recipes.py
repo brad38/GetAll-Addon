@@ -28,7 +28,7 @@ class ValidateRecipesTests(unittest.TestCase):
         self.assertEqual(stats["statuses"].get("validated"), 1)
         self.assertEqual(
             stats["statuses"].get("experimental"),
-            stats["recipe_count"] - 1,
+            stats["recipe_count"] - 1 - stats["statuses"].get("disabled", 0),
         )
 
     def _make_temp_repo(self) -> Path:
@@ -38,6 +38,8 @@ class ValidateRecipesTests(unittest.TestCase):
         shutil.copytree(REPO_ROOT / "addons", tmp / "addons")
         shutil.copytree(REPO_ROOT / "recipes", tmp / "recipes")
         shutil.copy2(REPO_ROOT / "index.json", tmp / "index.json")
+        (tmp / "docs").mkdir()
+        shutil.copy2(REPO_ROOT / "docs" / "official-install-policy.json", tmp / "docs" / "official-install-policy.json")
         # Normalize copied files in temp repo to LF for strict_lf tests
         for jf in tmp.rglob("*.json"):
             jf.write_bytes(jf.read_bytes().replace(b"\r\n", b"\n"))
@@ -53,6 +55,32 @@ class ValidateRecipesTests(unittest.TestCase):
         ok, errors, _ = validate_recipes.validate_repository(tmp, strict_lf=True)
         self.assertFalse(ok)
         self.assertTrue(any("SHA-256 mismatch" in e for e in errors), errors)
+
+    def test_retired_contract_cannot_be_reactivated_by_removing_its_reason(self) -> None:
+        tmp=self._make_temp_repo()
+        index_path=tmp/"index.json"
+        index=json.loads(index_path.read_text(encoding="utf-8"))
+        entry=next(e for e in index["recipes"] if e["project_id"]=="sm64plus" and e["tag"]=="build-85c3e51")
+        entry["status"]="experimental"
+        for key in ("disabled_reason","disabled_at","audit_reference"):
+            entry.pop(key,None)
+        index_path.write_text(json.dumps(index),encoding="utf-8")
+        ok,errors,_=validate_recipes.validate_repository(tmp)
+        self.assertFalse(ok)
+        self.assertTrue(any("source-integrity policy" in e for e in errors),errors)
+
+    def test_disabled_history_still_requires_provenance_and_valid_hash(self) -> None:
+        tmp=self._make_temp_repo()
+        index_path=tmp/"index.json"
+        index=json.loads(index_path.read_text(encoding="utf-8"))
+        entry=next(e for e in index["recipes"] if e["status"]=="disabled")
+        entry.pop("disabled_reason")
+        entry["sha256"]="0"*64
+        index_path.write_text(json.dumps(index),encoding="utf-8")
+        ok,errors,_=validate_recipes.validate_repository(tmp)
+        self.assertFalse(ok)
+        self.assertTrue(any("disabled_reason" in e for e in errors),errors)
+        self.assertTrue(any("SHA-256 mismatch" in e for e in errors),errors)
 
     def test_rejects_unsafe_paths_spaces_and_reserved_names(self) -> None:
         self.assertFalse(validate_recipes.is_safe_relative_path("../evil.exe")[0])

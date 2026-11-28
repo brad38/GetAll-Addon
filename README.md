@@ -8,6 +8,20 @@ Repositório público de **receitas declarativas** para o motor nativo do AllFix
 - `addons/allfix.install.universal/`: documentos do addon declarativo universal.
 - `docs/`: política de confiança, atualização, migração e rollback.
 
+## Escopo revisado em 27/11/2026
+
+O GetAll automatiza **procedimentos oficiais** de projetos com gameplay
+comprovado. O catálogo de revisão contém **137 projetos em 108 jogos**; 11 IDs
+anteriores ficam em registro separado para reavaliação. O índice conserva 145
+receitas: 123 ativas e 22 desativadas com motivo. A presença de um launcher
+oficial é um caminho válido de instalação e pode dispensar uma automação própria.
+
+A [cobertura em seis dimensões](docs/INSTALLATION-COVERAGE.md) separa upstream
+funcional, implementação, testes sintéticos, instalação com mídia original,
+primeiro boot e gameplay. A revisão não acrescenta uma nova homologação.
+As métricas de rodadas antigas abaixo são históricas e não representam o
+catálogo ou a cobertura atual. Não existe meta obrigatória de manter 148 IDs.
+
 ## GetAll-Addon v1.0.0 — instalar e usar
 
 **Download oficial:** [GetAll-Addon.zip (Release v1.0.0)](https://github.com/brad38/GetAll-Addon/releases/tag/v1.0.0)
@@ -34,12 +48,12 @@ Os commits de desenvolvimento usam `channel: "preview"`. Um índice destinado à
 
 ## Adicionar uma nova receita
 
-1. Confirme `game_id`, `project_id` e `repository` no catálogo oficial [AllFix-Repo](https://github.com/brad38/AllFix-Repo/blob/main/catalog.json).
+1. Confirme `game_id`, `project_id`, `repository` e a elegibilidade funcional no catálogo e nos registros do mesmo commit do canal escolhido. Leia as evidências de gameplay e o procedimento oficial.
 2. Consulte as instruções oficiais de uma tag específica; crie a receita conforme o schema suportado pelo SDK, sem scripts ou execução arbitrária.
-3. Valide o JSON, as operações, os caminhos e o resultado da instalação. Publique com status `validated` apenas após validação efetiva.
+3. Valide JSON, operações, caminhos e fidelidade ao procedimento oficial. Registre separadamente cada dimensão de execução. `validated` exige a validação funcional apropriada com mídia original; schema, build e fixture não bastam.
 4. Grave a receita em `recipes/<jogo>/<projeto>/<tag>.json`; compute SHA-256 sobre os **bytes UTF-8 publicados**.
 5. Acrescente a entrada ao `index.json` no **mesmo commit** da receita e revise o hash. Nenhuma recompilação do aplicativo é necessária para receitas compatíveis.
-6. Reverter o commit ou marcar a entrada como `disabled` permite rollback.
+6. Suspenda contratos problemáticos com `disabled`, motivo, data e referência de auditoria. Preserve a receita e a proveniência; uma atualização upstream não pode reativá-la automaticamente.
 
 Versões independentes: `index_format_version` (índice), `schema_version` (receita) e `manifest.version` (addon).
 
@@ -64,7 +78,7 @@ A análise integral de [87 jogos e 119 projetos](docs/AUDITORIA-CATALOGO-2026-11
 - [GoldenEye 007 PC Port v0.5.0 — validação estática e pendências](docs/GOLDENEYE-V0.5.0-VALIDACAO.md)
 - [Rodada SDK 1.2.0: contratos v4, testes integrados e bloqueios concretos](docs/RODADA-SDK-1.2.0-2026-11-23.md)
 
-**Índice atual:** 14 receitas — SM64 Coop Deluxe v1.5.1 segue `validated` e as outras 13 permanecem `experimental` (não descobertas automaticamente pelo host). Com o SDK 1.2.0, a receita experimental GoldenEye v0.5.0 passou a exigir também `libstdc++-6.dll`; ainda não foi homologada com ROM legítima. O ZIP universal v1.0.0 foi preservado.
+**Índice histórico dessa rodada:** 14 receitas — SM64 Coop Deluxe v1.5.1 segue `validated` e as outras 13 permanecem `experimental` (não descobertas automaticamente pelo host). Com o SDK 1.2.0, a receita experimental GoldenEye v0.5.0 passou a exigir também `libstdc++-6.dll`; ainda não foi homologada com ROM legítima. O ZIP universal v1.0.0 foi preservado.
 
 ## Rodada 11B — integracao SDK 1.4.1 (proposta em PR)
 

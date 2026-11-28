@@ -26,7 +26,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: upstream-watch
+  group: upstream-watch-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -47,18 +47,34 @@ jobs:
       - name: Install jsonschema validator
         run: python -m pip install --upgrade pip jsonschema
 
+      - name: Select reviewed channel and automation base
+        id: target
+        run: |
+          python - << 'PY'
+          import json, os
+          from scripts.validate_ci import watch_target
+          index = json.load(open("index.json", encoding="utf-8"))
+          target = watch_target(index, os.environ)
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              for key, value in target.items():
+                  output.write(f"{key}={value}\n")
+          PY
+
       - name: Check for existing open automation Pull Request
         id: pr_check
+        env:
+          WATCH_BRANCH: ${{ steps.target.outputs.branch }}
+          WATCH_BASE: ${{ steps.target.outputs.base }}
         uses: actions/github-script@v7
         with:
           script: |
-            const branch = "automation/upstream-watch";
+            const branch = process.env.WATCH_BRANCH;
             const { data: pulls } = await github.rest.pulls.list({
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: "open",
               head: `${context.repo.owner}:${branch}`,
-              base: "main"
+              base: process.env.WATCH_BASE
             });
             if (pulls.length > 0) {
               core.setOutput("pr_number", String(pulls[0].number));
@@ -68,12 +84,17 @@ jobs:
             }
 
       - name: Prepare automation branch workspace
+        env:
+          WATCH_BRANCH: ${{ steps.target.outputs.branch }}
+          WATCH_BASE: ${{ steps.target.outputs.base }}
+          WATCH_PR: ${{ steps.pr_check.outputs.pr_number }}
         run: |
-          BRANCH="automation/upstream-watch"
-          if [ -n "${{ steps.pr_check.outputs.pr_number }}" ]; then
+          BRANCH="$WATCH_BRANCH"
+          if [ -n "$WATCH_PR" ]; then
             git fetch origin "$BRANCH"
             git switch -C "$BRANCH" "origin/$BRANCH"
-            git merge --no-edit origin/main
+            git fetch origin "$WATCH_BASE"
+            git merge --no-edit "origin/$WATCH_BASE"
           else
             git switch -C "$BRANCH"
           fi
@@ -113,17 +134,17 @@ jobs:
         if: steps.watch.outputs.actionable == 'true'
         run: |
           cp "$RUNNER_TEMP/upstream-report.md" docs/MONITORAMENTO-UPSTREAM.md
-          python scripts/validate_recipes.py \
-            --strict-lf \
-            --require-jsonschema \
-            --check-catalog
+          python scripts/validate_ci.py
           python -m unittest discover -s tests -v
 
       - name: Commit and push automation branch (without force push)
         id: git_push
+        env:
+          WATCH_BRANCH: ${{ steps.target.outputs.branch }}
+          WATCH_FINGERPRINT: ${{ steps.watch.outputs.fingerprint }}
         if: steps.watch.outputs.actionable == 'true'
         run: |
-          BRANCH="automation/upstream-watch"
+          BRANCH="$WATCH_BRANCH"
           if [ -z "$(git status --porcelain)" ]; then
             echo "pushed=false" >> "$GITHUB_OUTPUT"
             exit 0
@@ -138,11 +159,14 @@ jobs:
             exit 0
           fi
 
-          git commit -m "chore(upstream): atualizar monitoramento (${{ steps.watch.outputs.fingerprint }})"
+          git commit -m "chore(upstream): atualizar monitoramento ($WATCH_FINGERPRINT)"
           git push -u origin "$BRANCH"
           echo "pushed=true" >> "$GITHUB_OUTPUT"
 
       - name: Create or update Pull Request for human review
+        env:
+          WATCH_BRANCH: ${{ steps.target.outputs.branch }}
+          WATCH_BASE: ${{ steps.target.outputs.base }}
         if: steps.git_push.outputs.pushed == 'true'
         uses: actions/github-script@v7
         with:
@@ -154,13 +178,13 @@ jobs:
             const pending = "${{ steps.watch.outputs.pending_count }}";
             const newProj = "${{ steps.watch.outputs.new_projects_count }}";
             const prNumber = "${{ steps.pr_check.outputs.pr_number }}";
-            const branch = "automation/upstream-watch";
+            const branch = process.env.WATCH_BRANCH;
 
             const body = [
               "Pull Request gerado automaticamente pelo workflow **Upstream Catalog & Release Watch**.",
               "",
               `- **Resumo:** ${updated} receita(s) experimental(is) proposta(s), ${pending} pendência(s) técnica(s), ${newProj} novo(s) projeto(s) no catálogo.`,
-              "- **Política:** nenhuma receita foi promovida a `validated` automaticamente e nenhum merge automático foi realizado.",
+              "- **Política:** somente projetos elegíveis podem receber propostas; candidatos/excluídos ficam em revisão. Nenhuma receita suspensa foi reativada nem promovida a `validated`; nenhum merge foi realizado.",
               "",
               "---",
               "",
@@ -181,7 +205,17 @@ jobs:
                 repo: context.repo.repo,
                 title: `chore(upstream): novidades detectadas (${fp})`,
                 head: branch,
-                base: "main",
+                base: process.env.WATCH_BASE,
                 body
               });
             }
+
+      - name: Preserve the small monitoring report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: upstream-review-report
+          path: |
+            ${{ runner.temp }}/upstream-status.json
+            ${{ runner.temp }}/upstream-report.md
+          retention-days: 14

@@ -7,6 +7,7 @@ on:
       - main
       - feat/marathon-xbox-media-import
       - feat/sm64plus-handoff
+      - work/official-install-scope-20261127
   workflow_dispatch:
 
 permissions:
@@ -37,3 +38,10 @@ jobs:
 
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
+
+      - name: Preserve coverage evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: installation-coverage
+          path: catalog-coverage-report.json
+          retention-days: 14

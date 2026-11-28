@@ -1,5 +1,40 @@
 # Checkpoint do GetAll-Addon
 
+## Revisão de elegibilidade e fidelidade — 27/11/2026
+
+Este checkpoint substitui a antiga conclusão de **142/148 fluxos integrais**.
+A revisão tem **137 projetos elegíveis / 108 jogos**, com **11 exclusões
+preservadas**. O índice mantém **145 receitas: 122 experimental, 1 validated
+histórica e 22 disabled**. São **123 IDs com contrato ativo** e **14 elegíveis
+sem automação ativa**. Todas as receitas históricas continuam auditáveis.
+
+A [matriz em seis dimensões](INSTALLATION-COVERAGE.md) registra 118 implementações
+examinadas no código, cinco fluxos parciais e 14 suspensões; 13 provas sintéticas
+históricas, um relato histórico de mídia/boot e nenhuma nova prova de gameplay
+pelo GetAll. Esses números medem coisas diferentes. A revisão upstream
+independe da ausência de um teste local com mídia original.
+
+SM64Plus LauncherMirror, CTR ci-07d0c49 e MKW v0.1.18 oficiais foram preservados.
+Hookshot usa ItsNotRexed e perfil oficial novo. KnowYourRole referencia o
+launcher/CLI do próprio ZIP oficial. Variantes com alterações próprias e o
+auxiliar SoH sem proveniência suficiente permanecem suspensos.
+
+O validador preserva histórico excluído somente como disabled, rejeita órfãos
+ativos e impede reativar os contratos registrados na política de integridade.
+O monitor só propõe versões automáticas para projetos elegíveis; candidatos e
+excluídos geram revisão, nunca admissão automática. As datas do catálogo não
+são alteradas. CI e monitor da prévia usam o catálogo fixado e não têm main
+como destino de publicação da prévia.
+
+Validação desta alteração: **73 testes Python aprovados**; validador estrito
+com JSON Schema e catálogo revisado aprovado para as 145 receitas. Resultados
+e reprodução em [official-scope](validations/official-scope/). Não houve push,
+merge, release nem mudança da instalação corrente por esta etapa.
+
+As seções seguintes conservam o histórico e seus números da época.
+
+---
+
 ## Continuidade — SDK 1.5.69, fontes e prévia verificadas em 27/11/2026
 
 **142/148 fluxos integrais implementados**, 28 acima do checkpoint de 114.

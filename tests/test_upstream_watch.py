@@ -31,6 +31,25 @@ class UpstreamWatchTests(unittest.TestCase):
             jf.write_bytes(jf.read_bytes().replace(b"\r\n", b"\n"))
         return tmp
 
+    def _reviewed_scope(self, tmp: Path, project_ids: list[str], extra_catalog=None) -> dict:
+        index = json.loads((tmp / "index.json").read_text(encoding="utf-8"))
+        games = copy.deepcopy((extra_catalog or {}).get("games", []))
+        decisions = {}
+        for pid in project_ids:
+            entry = next(e for e in index["recipes"] if e["project_id"] == pid)
+            games.append({"id": entry["game_id"], "title": entry["game_id"], "projects": [{
+                "id": pid, "source": {"provider": "github", "github_repository": entry["repository"]},
+                "added_at": "2025-01-02",
+            }]})
+            decisions[pid] = {
+                "eligible": True, "classification": "functional_with_limitations",
+                "official_install_method": "Official fixture installation procedure for regression testing.",
+                "provenance_review": "official_source",
+                "gameplay_evidence": [{"url": "https://example.invalid/gameplay",
+                    "kind": "user_gameplay_report", "observed": "Fixture player completes a level with the official build."}],
+            }
+        return {"catalog_data": {"games": games}, "eligibility_data": {"projects": decisions}}
+
     def _build_mock_zip(self, members: list[str]) -> tuple[Path, int, str]:
         tmp = Path(tempfile.mkdtemp(prefix="getall_mock_zip_"))
         self.addCleanup(lambda: shutil.rmtree(tmp, ignore_errors=True))
@@ -44,22 +63,22 @@ class UpstreamWatchTests(unittest.TestCase):
     def test_stages_compatible_experimental_update_and_preserves_existing_recipes(self) -> None:
         tmp = self._make_temp_repo()
         initial_count = len(json.loads((tmp / "index.json").read_text(encoding="utf-8"))["recipes"])
-        zip_path, zsize, zsha = self._build_mock_zip(["soh.exe", "soh.o2r"])
+        zip_path, zsize, zsha = self._build_mock_zip(["Starship.exe", "starship.o2r"])
 
         mock_catalog = {"games": []}
 
         def mock_releases(repo: str) -> list[dict]:
-            if repo == "HarbourMasters/Shipwright":
+            if repo == "HarbourMasters/Starship":
                 return [
                     {
                         "tag_name": "9.4.0",
                         "draft": False,
                         "prerelease": False,
-                        "html_url": "https://github.com/HarbourMasters/Shipwright/releases/tag/9.4.0",
+                        "html_url": "https://github.com/HarbourMasters/Starship/releases/tag/9.4.0",
                         "assets": [
                             {
                                 "name": "SoH-Test-Win64.zip",
-                                "browser_download_url": "https://github.com/HarbourMasters/Shipwright/releases/download/9.4.0/SoH-Test-Win64.zip",
+                                "browser_download_url": "https://github.com/HarbourMasters/Starship/releases/download/9.4.0/SoH-Test-Win64.zip",
                                 "size": zsize,
                             }
                         ],
@@ -81,7 +100,7 @@ class UpstreamWatchTests(unittest.TestCase):
             scope="tracked",
             apply_updates=True,
             inspect_assets=True,
-            catalog_data=mock_catalog,
+            **self._reviewed_scope(tmp, ["starship"]),
             releases_fetcher=mock_releases,
             asset_inspector=mock_inspector,
         )
@@ -95,7 +114,7 @@ class UpstreamWatchTests(unittest.TestCase):
         idx = json.loads((tmp / "index.json").read_text(encoding="utf-8"))
         self.assertEqual(len(idx["recipes"]), initial_count + 1)
         self.assertEqual(
-            [e["status"] for e in idx["recipes"] if e["project_id"] == "ship-of-harkinian-soh"],
+            [e["status"] for e in idx["recipes"] if e["project_id"] == "starship"],
             ["experimental", "experimental"],
         )
 
@@ -148,7 +167,7 @@ class UpstreamWatchTests(unittest.TestCase):
                 }
                 result = upstream_watch.run_upstream_watch(
                     tmp, scope="tracked", apply_updates=True, inspect_assets=True,
-                    catalog_data={"games": []},
+                    **self._reviewed_scope(tmp, [project_id]),
                     releases_fetcher=lambda _: [release],
                     asset_inspector=inspector,
                 )
@@ -167,12 +186,12 @@ class UpstreamWatchTests(unittest.TestCase):
                     tmp = self._make_temp_repo()
                     index_path = tmp / "index.json"
                     index = json.loads(index_path.read_text(encoding="utf-8"))
-                    entry = next(e for e in index["recipes"] if e["project_id"] == "ship-of-harkinian-soh")
+                    entry = next(e for e in index["recipes"] if e["project_id"] == "starship")
                     recipe = json.loads((tmp / entry["path"]).read_text(encoding="utf-8"))
                     protected = copy.deepcopy(recipe)
                     protected["schema_version"] = schema
                     protected["tag"] = "fixture-protected-version"
-                    protected["source_url"] = "https://github.com/HarbourMasters/Shipwright/releases/tag/fixture-protected-version"
+                    protected["source_url"] = "https://github.com/HarbourMasters/Starship/releases/tag/fixture-protected-version"
                     if schema == 5:
                         protected["prerequisites"] = ["openal-x64"]
                     protected_path = str(Path(entry["path"]).with_name("fixture-protected-version.json"))
@@ -198,7 +217,7 @@ class UpstreamWatchTests(unittest.TestCase):
                     }
                     result = upstream_watch.run_upstream_watch(
                         tmp, scope="tracked", apply_updates=True, inspect_assets=True,
-                        catalog_data={"games": []}, releases_fetcher=lambda _: [release],
+                        **self._reviewed_scope(tmp, ["starship"]), releases_fetcher=lambda _: [release],
                         asset_inspector=inspector,
                     )
                     self.assertEqual(result["updated_recipes"], [])
@@ -210,9 +229,9 @@ class UpstreamWatchTests(unittest.TestCase):
     def test_never_auto_updates_validated_recipe_and_blocks_incompatible_zip(self) -> None:
         tmp = self._make_temp_repo()
         initial_count = len(json.loads((tmp / "index.json").read_text(encoding="utf-8"))["recipes"])
-        # Missing soh.exe and has space in name -> must NOT create recipe
+        # Missing Starship.exe and has space in name -> must NOT create recipe
         bad_zip_path, bad_size, bad_sha = self._build_mock_zip(
-            ["Ship App.exe", "soh.o2r"]
+            ["Ship App.exe", "starship.o2r"]
         )
         ok_zip_path, ok_size, ok_sha = self._build_mock_zip(
             ["sm64coopdx.exe", "coopdx_updater.exe", "discord_game_sdk.dll", "coop.map"]
@@ -254,17 +273,17 @@ class UpstreamWatchTests(unittest.TestCase):
                         ],
                     }
                 ]
-            if repo == "HarbourMasters/Shipwright":
+            if repo == "HarbourMasters/Starship":
                 return [
                     {
                         "tag_name": "9.5.0",
                         "draft": False,
                         "prerelease": False,
-                        "html_url": "https://github.com/HarbourMasters/Shipwright/releases/tag/9.5.0",
+                        "html_url": "https://github.com/HarbourMasters/Starship/releases/tag/9.5.0",
                         "assets": [
                             {
                                 "name": "SoH-Win64.zip",
-                                "browser_download_url": "https://github.com/HarbourMasters/Shipwright/releases/download/9.5.0/SoH-Win64.zip",
+                                "browser_download_url": "https://github.com/HarbourMasters/Starship/releases/download/9.5.0/SoH-Win64.zip",
                                 "size": bad_size,
                             }
                         ],
@@ -287,7 +306,7 @@ class UpstreamWatchTests(unittest.TestCase):
             scope="tracked",
             apply_updates=True,
             inspect_assets=True,
-            catalog_data=mock_catalog,
+            **self._reviewed_scope(tmp, ["starship", "sm64coopdx-super-mario-64-coop-deluxe"], mock_catalog),
             releases_fetcher=mock_releases,
             asset_inspector=mock_inspector,
         )
@@ -306,6 +325,58 @@ class UpstreamWatchTests(unittest.TestCase):
         chosen = upstream_watch.select_latest_release(releases, allow_prerelease=False)
         self.assertIsNotNone(chosen)
         self.assertEqual(chosen["tag_name"], "v1.1.7")
+
+    def test_unproven_and_excluded_projects_only_create_review_notes(self) -> None:
+        for excluded in (False, True):
+            with self.subTest(excluded=excluded):
+                tmp=self._make_temp_repo()
+                index_path=tmp/"index.json"
+                index=json.loads(index_path.read_text(encoding="utf-8"))
+                entry=next(e for e in index["recipes"] if e["project_id"]=="starship")
+                index["recipes"]=[entry]
+                index_path.write_text(json.dumps(index),encoding="utf-8")
+                initial_index=index_path.read_bytes()
+                source=self._reviewed_scope(tmp,["starship"])
+                original_catalog=copy.deepcopy(source["catalog_data"])
+                if excluded:
+                    source["exclusions_data"]={"projects":{"starship":{
+                        "game_id":entry["game_id"],"project":source["catalog_data"]["games"][0]["projects"][0],
+                        "assessment":{"eligible":False}}}}
+                    source["catalog_data"]={"games":[]}
+                    original_catalog=copy.deepcopy(source["catalog_data"])
+                else:
+                    # Even a nominally eligible label cannot turn a README into play evidence.
+                    source["eligibility_data"]["projects"]["starship"]["gameplay_evidence"][0]["kind"]="readme"
+                initial_decisions=copy.deepcopy(source["eligibility_data"])
+                inspector=Mock(side_effect=AssertionError("Review-only project must not download assets"))
+                release={"tag_name":"v99.0.0","draft":False,"prerelease":False,
+                         "html_url":"https://example.invalid/release","assets":[{
+                         "name":"Starship-Windows.zip","browser_download_url":"https://example.invalid/port.zip","size":12}]}
+                result=upstream_watch.run_upstream_watch(tmp,scope="all",apply_updates=True,inspect_assets=True,
+                    **source,releases_fetcher=lambda _:[release],asset_inspector=inspector)
+                self.assertEqual(result["updated_recipes"],[])
+                self.assertEqual(len(result["pending_reviews"]),1)
+                self.assertTrue(result["pending_reviews"][0]["review_only"])
+                self.assertEqual(index_path.read_bytes(),initial_index)
+                self.assertEqual(source["catalog_data"],original_catalog)
+                self.assertEqual(source["eligibility_data"],initial_decisions)
+                inspector.assert_not_called()
+
+    def test_eligible_update_preserves_catalog_dates_and_eligibility_decisions(self) -> None:
+        tmp=self._make_temp_repo()
+        source=self._reviewed_scope(tmp,["starship"])
+        original=copy.deepcopy(source)
+        inspection=upstream_watch.ZipInspection("Starship-Windows.zip","https://example.invalid/port.zip",12,"a"*64,
+            ["Starship.exe","starship.o2r"],["Starship.exe"],[])
+        release={"tag_name":"v99.0.0","draft":False,"prerelease":False,"assets":[{
+            "name":inspection.asset_name,"browser_download_url":inspection.asset_url,"size":12}]}
+        result=upstream_watch.run_upstream_watch(tmp,scope="tracked",apply_updates=True,inspect_assets=True,
+            **source,releases_fetcher=lambda repo:[release] if repo=="HarbourMasters/Starship" else [],
+            asset_inspector=Mock(return_value=inspection))
+        self.assertEqual(len(result["updated_recipes"]),1)
+        self.assertEqual(source,original)
+        self.assertFalse(result["catalog_mutations"])
+        self.assertFalse(result["eligibility_mutations"])
 
     def test_catalog_watch_ignores_older_releases_and_deduplicates_fingerprint(self) -> None:
         releases = [
