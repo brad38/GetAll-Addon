@@ -1,0 +1,5 @@
+{
+  "exit": 1,
+  "stderr": "nvdisasm error   : Opclass 'ffma__RRR_RRR', undefined value 0xc2 for table 'TABLES_opex_3' at address 0x00000b60\nnvdisasm error   : Opclass 'ffma__RRR_RRR', undefined value 0xc2 for table 'TABLES_opex_3' at address 0x00000b70\nnvdisasm error   : Opclass 'shf__RRR_RRR', undefined value 0xc2 for table 'TABLES_opex_3' at address 0x00001950\nnvdisasm error   : Opclass 'shf__RRR_RRR', undefined value 0xc2 for table 'TABLES_opex_3' at address 0x00001960\nnvdisasm error   : Opclass 'lea_hi_noimm_x__RRR_RRR', undefined value 0xe2 for table 'TABLES_opex_3' at address 0x00002740\n",
+  "stdout_prefix": ""
+}

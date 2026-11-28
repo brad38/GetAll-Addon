@@ -1,0 +1,6749 @@
+{
+  "status": "STATIC_CONSUMER_CONTRACT",
+  "mnemonics": 99,
+  "cuasm_mnemonics": 89,
+  "cuasm_missing": [
+    "ALD",
+    "AST",
+    "IPA",
+    "ISBERD",
+    "ISBEWR",
+    "KILL",
+    "SUATOM",
+    "SURED",
+    "TMML",
+    "UP2UR"
+  ],
+  "source_missing": [
+    "UP2UR"
+  ],
+  "literal_fields": [
+    "Pg",
+    "Pg@not",
+    "Pp",
+    "Pp@not",
+    "Pu",
+    "Pv",
+    "Ra",
+    "Ra@negate",
+    "Ra_URb",
+    "Ra_offset",
+    "Rb",
+    "Rb@negate",
+    "Rd",
+    "Rd2",
+    "SRa",
+    "Sa",
+    "Sb",
+    "UPg",
+    "UPg@not",
+    "UPp",
+    "UPp@not",
+    "UPr",
+    "UPu",
+    "UR_offset",
+    "URa",
+    "URa_offset",
+    "URd",
+    "X",
+    "a_bsel",
+    "addr",
+    "aoffi",
+    "attr",
+    "bank5",
+    "barmode",
+    "base",
+    "bop",
+    "bsel",
+    "clamp",
+    "cmp",
+    "comp",
+    "cw",
+    "dc",
+    "depth",
+    "dim",
+    "dir",
+    "dstfmt",
+    "ex",
+    "f16rm",
+    "fcomp",
+    "fmt",
+    "ftz",
+    "h_and",
+    "hilo",
+    "hsel",
+    "icmp",
+    "imm8",
+    "insert",
+    "io",
+    "ipaop",
+    "iswzA",
+    "iswzB",
+    "iswzB_as_C",
+    "lodlc",
+    "merge",
+    "mode",
+    "ms",
+    "mufuop",
+    "nan",
+    "npCtrl",
+    "num",
+    "ofmt",
+    "op",
+    "paramA",
+    "pmode",
+    "pop",
+    "query",
+    "relu",
+    "rgba",
+    "rnd",
+    "sImm",
+    "sat",
+    "scale",
+    "scaleU5",
+    "sco",
+    "scr",
+    "sh",
+    "shflmd",
+    "size",
+    "skew",
+    "srcfmt",
+    "stride",
+    "sx32",
+    "sz",
+    "toff",
+    "tsPtrIdx",
+    "voteop",
+    "wmsk",
+    "xorsign"
+  ],
+  "dynamic_field_expressions": [
+    "'UR_offset' if i.op == 'BRXU' else 'Ra_offset'",
+    "'sImm' if i.op == 'BRA' else 'Sa'",
+    "dst",
+    "f'R{slot}'",
+    "f'S{slot}'",
+    "f'S{slot}1'",
+    "f'UR{slot}'",
+    "f'{name}@absolute'",
+    "f'{name}@invert'",
+    "f'{name}@negate'",
+    "f'{pre}Pp'",
+    "f'{pre}Pp@not'",
+    "f'{pre}Pr'",
+    "f'{pre}Pr@not'",
+    "f'{pre}Pu'",
+    "f'{pre}Pv'",
+    "f'{r}@absolute'",
+    "f'{r}@negate'",
+    "f'{r}@not'",
+    "f'{u}Pp'",
+    "f'{u}Pp@not'",
+    "f'{u}Pu'",
+    "f'{u}Pv'",
+    "f'{u}Rd'",
+    "f'{u}{k}'",
+    "f'{u}{k}@not'",
+    "k",
+    "lut",
+    "n",
+    "name",
+    "r"
+  ],
+  "field_accesses": [
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "src_cmp",
+      "line": 17,
+      "access": "sym",
+      "expression": "'ftz'",
+      "literal": "ftz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 36,
+      "access": "has",
+      "expression": "'X'",
+      "literal": "X"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 38,
+      "access": "sym",
+      "expression": "'bop'",
+      "literal": "bop"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 39,
+      "access": "v",
+      "expression": "f'{pre}Pp'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 39,
+      "access": "v",
+      "expression": "f'{pre}Pp@not'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 41,
+      "access": "v",
+      "expression": "f'{pre}Pu'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 43,
+      "access": "v",
+      "expression": "f'{pre}Pv'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 23,
+      "access": "sym",
+      "expression": "'fcomp'",
+      "literal": "fcomp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 25,
+      "access": "sym",
+      "expression": "'icmp'",
+      "literal": "icmp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 27,
+      "access": "sym",
+      "expression": "'fmt'",
+      "literal": "fmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 32,
+      "access": "sym",
+      "expression": "'ex'",
+      "literal": "ex"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 42,
+      "access": "v",
+      "expression": "f'{pre}Pu'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 44,
+      "access": "v",
+      "expression": "f'{pre}Pv'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 33,
+      "access": "v",
+      "expression": "f'{pre}Pr'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 33,
+      "access": "v",
+      "expression": "f'{pre}Pr@not'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 35,
+      "access": "sym",
+      "expression": "'fcomp'",
+      "literal": "fcomp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 35,
+      "access": "sym",
+      "expression": "'icmp'",
+      "literal": "icmp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "f2fp",
+      "line": 53,
+      "access": "sym",
+      "expression": "'dstfmt'",
+      "literal": "dstfmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "f2fp",
+      "line": 55,
+      "access": "sym",
+      "expression": "'dstfmt'",
+      "literal": "dstfmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "f2fp",
+      "line": 50,
+      "access": "sym",
+      "expression": "'merge'",
+      "literal": "merge"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "f2fp",
+      "line": 50,
+      "access": "sym",
+      "expression": "'relu'",
+      "literal": "relu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "f2fp",
+      "line": 57,
+      "access": "sym",
+      "expression": "'dstfmt'",
+      "literal": "dstfmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "f2fp",
+      "line": 51,
+      "access": "sym",
+      "expression": "'merge'",
+      "literal": "merge"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "r2ur",
+      "line": 60,
+      "access": "v",
+      "expression": "'Pu'",
+      "literal": "Pu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "i2f",
+      "line": 65,
+      "access": "sym",
+      "expression": "'srcfmt'",
+      "literal": "srcfmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "i2f",
+      "line": 65,
+      "access": "sym",
+      "expression": "'dstfmt'",
+      "literal": "dstfmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "i2f",
+      "line": 73,
+      "access": "sym",
+      "expression": "'bsel'",
+      "literal": "bsel"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "i2f",
+      "line": 73,
+      "access": "sym",
+      "expression": "'hsel'",
+      "literal": "hsel"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "p2r",
+      "line": 85,
+      "access": "sym",
+      "expression": "'insert'",
+      "literal": "insert"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "p2r",
+      "line": 87,
+      "access": "v",
+      "expression": "'Sb'",
+      "literal": "Sb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "p2r",
+      "line": 86,
+      "access": "sym",
+      "expression": "'insert'",
+      "literal": "insert"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "r2p",
+      "line": 94,
+      "access": "v",
+      "expression": "'Sb'",
+      "literal": "Sb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "r2p",
+      "line": 94,
+      "access": "sym",
+      "expression": "'a_bsel'",
+      "literal": "a_bsel"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "flo",
+      "line": 111,
+      "access": "v",
+      "expression": "f'{name}@invert'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "flo",
+      "line": 107,
+      "access": "v",
+      "expression": "'Pu'",
+      "literal": "Pu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "flo",
+      "line": 114,
+      "access": "sym",
+      "expression": "'sh'",
+      "literal": "sh"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "flo",
+      "line": 113,
+      "access": "sym",
+      "expression": "'fmt'",
+      "literal": "fmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "sgxt",
+      "line": 120,
+      "access": "sym",
+      "expression": "'fmt'",
+      "literal": "fmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "prmt",
+      "line": 125,
+      "access": "sym",
+      "expression": "'pmode'",
+      "literal": "pmode"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "prmt",
+      "line": 126,
+      "access": "sym",
+      "expression": "'pmode'",
+      "literal": "pmode"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "uflo",
+      "line": 131,
+      "access": "v",
+      "expression": "'UPu'",
+      "literal": "UPu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "ulea",
+      "line": 136,
+      "access": "v",
+      "expression": "'UPu'",
+      "literal": "UPu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "usel",
+      "line": 141,
+      "access": "v",
+      "expression": "'UPp'",
+      "literal": "UPp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "usel",
+      "line": 141,
+      "access": "v",
+      "expression": "'UPp@not'",
+      "literal": "UPp@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "neg_u",
+      "line": 165,
+      "access": "v",
+      "expression": "f'{name}@invert'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "neg_u",
+      "line": 167,
+      "access": "v",
+      "expression": "f'{name}@negate'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "iadd3",
+      "line": 172,
+      "access": "has",
+      "expression": "'URd'",
+      "literal": "URd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "iadd3",
+      "line": 174,
+      "access": "has",
+      "expression": "'X'",
+      "literal": "X"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "iadd3",
+      "line": 177,
+      "access": "v",
+      "expression": "f'{u}Pu'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "iadd3",
+      "line": 177,
+      "access": "v",
+      "expression": "f'{u}Pv'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "iadd3",
+      "line": 174,
+      "access": "sym",
+      "expression": "'X'",
+      "literal": "X"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "iadd3",
+      "line": 176,
+      "access": "v",
+      "expression": "f'{u}{k}'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "iadd3",
+      "line": 176,
+      "access": "v",
+      "expression": "f'{u}{k}@not'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imnmx",
+      "line": 197,
+      "access": "sym",
+      "expression": "'fmt'",
+      "literal": "fmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imnmx",
+      "line": 199,
+      "access": "v",
+      "expression": "'Pp'",
+      "literal": "Pp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imnmx",
+      "line": 199,
+      "access": "v",
+      "expression": "'Pp@not'",
+      "literal": "Pp@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "src_u_hi",
+      "line": 204,
+      "access": "has",
+      "expression": "f'R{slot}'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "src_u_hi",
+      "line": 209,
+      "access": "has",
+      "expression": "f'UR{slot}'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "src_u_hi",
+      "line": 205,
+      "access": "v",
+      "expression": "f'R{slot}'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "src_u_hi",
+      "line": 210,
+      "access": "v",
+      "expression": "f'UR{slot}'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 249,
+      "access": "v",
+      "expression": "f'{name}@negate'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 251,
+      "access": "v",
+      "expression": "f'{u}Rd'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 225,
+      "access": "has",
+      "expression": "'URd'",
+      "literal": "URd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 226,
+      "access": "v",
+      "expression": "f'{u}Pu'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 238,
+      "access": "sym",
+      "expression": "'X'",
+      "literal": "X"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 235,
+      "access": "sym",
+      "expression": "'X'",
+      "literal": "X"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 242,
+      "access": "sym",
+      "expression": "'fmt'",
+      "literal": "fmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 248,
+      "access": "has",
+      "expression": "n",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 236,
+      "access": "v",
+      "expression": "f'{u}Pp'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 236,
+      "access": "v",
+      "expression": "f'{u}Pp@not'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "shf",
+      "line": 261,
+      "access": "sym",
+      "expression": "'fmt'",
+      "literal": "fmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "shf",
+      "line": 270,
+      "access": "v",
+      "expression": "'URd'",
+      "literal": "URd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "shf",
+      "line": 261,
+      "access": "sym",
+      "expression": "'fmt'",
+      "literal": "fmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "shf",
+      "line": 264,
+      "access": "sym",
+      "expression": "'cw'",
+      "literal": "cw"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "shf",
+      "line": 266,
+      "access": "sym",
+      "expression": "'dir'",
+      "literal": "dir"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "shf",
+      "line": 268,
+      "access": "sym",
+      "expression": "'hilo'",
+      "literal": "hilo"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "half2",
+      "line": 280,
+      "access": "has",
+      "expression": "f'S{slot}1'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "half2",
+      "line": 289,
+      "access": "v",
+      "expression": "f'{name}@absolute'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "half2",
+      "line": 291,
+      "access": "v",
+      "expression": "f'{name}@negate'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "half2",
+      "line": 281,
+      "access": "v",
+      "expression": "f'S{slot}'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "half2",
+      "line": 281,
+      "access": "v",
+      "expression": "f'S{slot}1'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hadd2",
+      "line": 298,
+      "access": "sym",
+      "expression": "'iswzA'",
+      "literal": "iswzA"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hadd2",
+      "line": 301,
+      "access": "sym",
+      "expression": "'sat'",
+      "literal": "sat"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hadd2",
+      "line": 299,
+      "access": "sym",
+      "expression": "'iswzB_as_C'",
+      "literal": "iswzB_as_C"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hadd2",
+      "line": 299,
+      "access": "sym",
+      "expression": "'iswzB'",
+      "literal": "iswzB"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hadd2",
+      "line": 304,
+      "access": "sym",
+      "expression": "'ofmt'",
+      "literal": "ofmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hmnmx2",
+      "line": 311,
+      "access": "v",
+      "expression": "'Pp'",
+      "literal": "Pp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hmnmx2",
+      "line": 311,
+      "access": "v",
+      "expression": "'Pp@not'",
+      "literal": "Pp@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hmnmx2",
+      "line": 308,
+      "access": "sym",
+      "expression": "'ofmt'",
+      "literal": "ofmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hmnmx2",
+      "line": 308,
+      "access": "sym",
+      "expression": "'nan'",
+      "literal": "nan"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hmnmx2",
+      "line": 308,
+      "access": "sym",
+      "expression": "'xorsign'",
+      "literal": "xorsign"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hmnmx2",
+      "line": 312,
+      "access": "sym",
+      "expression": "'iswzA'",
+      "literal": "iswzA"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hmnmx2",
+      "line": 312,
+      "access": "sym",
+      "expression": "'iswzB'",
+      "literal": "iswzB"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hmnmx2",
+      "line": 309,
+      "access": "sym",
+      "expression": "'ofmt'",
+      "literal": "ofmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hmnmx2",
+      "line": 309,
+      "access": "sym",
+      "expression": "'nan'",
+      "literal": "nan"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hmnmx2",
+      "line": 309,
+      "access": "sym",
+      "expression": "'xorsign'",
+      "literal": "xorsign"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 323,
+      "access": "sym",
+      "expression": "'iswzA'",
+      "literal": "iswzA"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 327,
+      "access": "sym",
+      "expression": "'ftz'",
+      "literal": "ftz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 331,
+      "access": "sym",
+      "expression": "'h_and'",
+      "literal": "h_and"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 333,
+      "access": "v",
+      "expression": "'Pu'",
+      "literal": "Pu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 335,
+      "access": "v",
+      "expression": "'Pv'",
+      "literal": "Pv"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 321,
+      "access": "sym",
+      "expression": "'cmp'",
+      "literal": "cmp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 324,
+      "access": "sym",
+      "expression": "'iswzB_as_C'",
+      "literal": "iswzB_as_C"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 324,
+      "access": "sym",
+      "expression": "'iswzB'",
+      "literal": "iswzB"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 325,
+      "access": "sym",
+      "expression": "'bop'",
+      "literal": "bop"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 325,
+      "access": "v",
+      "expression": "'Pp'",
+      "literal": "Pp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 325,
+      "access": "v",
+      "expression": "'Pp@not'",
+      "literal": "Pp@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 322,
+      "access": "sym",
+      "expression": "'cmp'",
+      "literal": "cmp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 330,
+      "access": "sym",
+      "expression": "'cmp'",
+      "literal": "cmp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 330,
+      "access": "sym",
+      "expression": "'cmp'",
+      "literal": "cmp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 334,
+      "access": "v",
+      "expression": "'Pu'",
+      "literal": "Pu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hsetp2",
+      "line": 336,
+      "access": "v",
+      "expression": "'Pv'",
+      "literal": "Pv"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "plop3",
+      "line": 343,
+      "access": "has",
+      "expression": "'UPr'",
+      "literal": "UPr"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "plop3",
+      "line": 347,
+      "access": "v",
+      "expression": "dst",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "plop3",
+      "line": 342,
+      "access": "v",
+      "expression": "f'{u}{k}'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "plop3",
+      "line": 342,
+      "access": "v",
+      "expression": "f'{u}{k}@not'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "plop3",
+      "line": 344,
+      "access": "v",
+      "expression": "r",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "plop3",
+      "line": 344,
+      "access": "v",
+      "expression": "f'{r}@not'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "plop3",
+      "line": 352,
+      "access": "v",
+      "expression": "lut",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lea",
+      "line": 360,
+      "access": "v",
+      "expression": "'scaleU5'",
+      "literal": "scaleU5"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lea",
+      "line": 361,
+      "access": "v",
+      "expression": "'Pu'",
+      "literal": "Pu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lea",
+      "line": 365,
+      "access": "v",
+      "expression": "'Pu'",
+      "literal": "Pu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lea",
+      "line": 369,
+      "access": "sym",
+      "expression": "'hilo'",
+      "literal": "hilo"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lea",
+      "line": 362,
+      "access": "sym",
+      "expression": "'hilo'",
+      "literal": "hilo"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lea",
+      "line": 370,
+      "access": "has",
+      "expression": "'sx32'",
+      "literal": "sx32"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lea",
+      "line": 370,
+      "access": "sym",
+      "expression": "'sx32'",
+      "literal": "sx32"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lop3",
+      "line": 383,
+      "access": "v",
+      "expression": "f'{u}Pu'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lop3",
+      "line": 377,
+      "access": "v",
+      "expression": "'imm8'",
+      "literal": "imm8"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lop3",
+      "line": 399,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lop3",
+      "line": 405,
+      "access": "v",
+      "expression": "'URd'",
+      "literal": "URd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lop3",
+      "line": 387,
+      "access": "sym",
+      "expression": "'pop'",
+      "literal": "pop"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lop3",
+      "line": 390,
+      "access": "v",
+      "expression": "f'{u}Pp'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lop3",
+      "line": 390,
+      "access": "v",
+      "expression": "f'{u}Pp@not'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lop3",
+      "line": 394,
+      "access": "v",
+      "expression": "'URd'",
+      "literal": "URd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lop3",
+      "line": 380,
+      "access": "v",
+      "expression": "'imm8'",
+      "literal": "imm8"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lop3",
+      "line": 389,
+      "access": "sym",
+      "expression": "'pop'",
+      "literal": "pop"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "sel",
+      "line": 416,
+      "access": "v",
+      "expression": "'Pp'",
+      "literal": "Pp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "sel",
+      "line": 416,
+      "access": "v",
+      "expression": "'Pp@not'",
+      "literal": "Pp@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "cs2r",
+      "line": 419,
+      "access": "sym",
+      "expression": "'SRa'",
+      "literal": "SRa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "cs2r",
+      "line": 421,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "cs2r",
+      "line": 421,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "cs2r",
+      "line": 420,
+      "access": "sym",
+      "expression": "'SRa'",
+      "literal": "SRa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "f2i",
+      "line": 432,
+      "access": "sym",
+      "expression": "'dstfmt'",
+      "literal": "dstfmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "f2i",
+      "line": 431,
+      "access": "sym",
+      "expression": "'rnd'",
+      "literal": "rnd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "i2fp",
+      "line": 442,
+      "access": "sym",
+      "expression": "'srcfmt'",
+      "literal": "srcfmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "i2fp",
+      "line": 443,
+      "access": "sym",
+      "expression": "'dstfmt'",
+      "literal": "dstfmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "i2fp",
+      "line": 444,
+      "access": "sym",
+      "expression": "'dstfmt'",
+      "literal": "dstfmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "frnd",
+      "line": 449,
+      "access": "sym",
+      "expression": "'fmt'",
+      "literal": "fmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "frnd",
+      "line": 450,
+      "access": "sym",
+      "expression": "'fmt'",
+      "literal": "fmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "frnd",
+      "line": 451,
+      "access": "sym",
+      "expression": "'rnd'",
+      "literal": "rnd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "fset",
+      "line": 454,
+      "access": "sym",
+      "expression": "'fcomp'",
+      "literal": "fcomp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "fset",
+      "line": 457,
+      "access": "sym",
+      "expression": "'bop'",
+      "literal": "bop"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "fset",
+      "line": 457,
+      "access": "v",
+      "expression": "'Pp'",
+      "literal": "Pp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "fset",
+      "line": 457,
+      "access": "v",
+      "expression": "'Pp@not'",
+      "literal": "Pp@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "fset",
+      "line": 456,
+      "access": "sym",
+      "expression": "'fcomp'",
+      "literal": "fcomp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "inline_single_call",
+      "line": 302,
+      "access": "sv",
+      "expression": "'Sa'",
+      "literal": "Sa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "inline_single_call",
+      "line": 306,
+      "access": "v",
+      "expression": "'Pg'",
+      "literal": "Pg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "inline_single_call",
+      "line": 300,
+      "access": "v",
+      "expression": "'Pg@not'",
+      "literal": "Pg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "inline_single_call",
+      "line": 313,
+      "access": "sv",
+      "expression": "'sImm' if i.op == 'BRA' else 'Sa'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "inline_single_call",
+      "line": 300,
+      "access": "v",
+      "expression": "'Pg'",
+      "literal": "Pg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "inline_single_call",
+      "line": 318,
+      "access": "sv",
+      "expression": "'sImm'",
+      "literal": "sImm"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "brx_targets",
+      "line": 337,
+      "access": "v",
+      "expression": "'URa'",
+      "literal": "URa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "brx_targets",
+      "line": 337,
+      "access": "sv",
+      "expression": "'UR_offset'",
+      "literal": "UR_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "brx_targets",
+      "line": 337,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "brx_targets",
+      "line": 337,
+      "access": "sv",
+      "expression": "'Ra_offset'",
+      "literal": "Ra_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "brx_targets",
+      "line": 340,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 377,
+      "access": "sym",
+      "expression": "'skew'",
+      "literal": "skew"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 420,
+      "access": "v",
+      "expression": "'Pg'",
+      "literal": "Pg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 420,
+      "access": "v",
+      "expression": "'Pg@not'",
+      "literal": "Pg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 420,
+      "access": "v",
+      "expression": "'UPg'",
+      "literal": "UPg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 422,
+      "access": "sym",
+      "expression": "'depth'",
+      "literal": "depth"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 481,
+      "access": "v",
+      "expression": "'Pg@not'",
+      "literal": "Pg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 424,
+      "access": "sv",
+      "expression": "'Sa'",
+      "literal": "Sa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 437,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 442,
+      "access": "has",
+      "expression": "'URa'",
+      "literal": "URa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 448,
+      "access": "sv",
+      "expression": "'UR_offset' if i.op == 'BRXU' else 'Ra_offset'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 481,
+      "access": "v",
+      "expression": "'Pg'",
+      "literal": "Pg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 483,
+      "access": "v",
+      "expression": "'UPg@not'",
+      "literal": "UPg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 376,
+      "access": "sym",
+      "expression": "'base'",
+      "literal": "base"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 376,
+      "access": "sym",
+      "expression": "'skew'",
+      "literal": "skew"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 388,
+      "access": "sv",
+      "expression": "'sImm'",
+      "literal": "sImm"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 428,
+      "access": "v",
+      "expression": "'Pg@not'",
+      "literal": "Pg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 428,
+      "access": "v",
+      "expression": "'Pg'",
+      "literal": "Pg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 428,
+      "access": "v",
+      "expression": "'Pg@not'",
+      "literal": "Pg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 433,
+      "access": "sym",
+      "expression": "'depth'",
+      "literal": "depth"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 433,
+      "access": "sym",
+      "expression": "'addr'",
+      "literal": "addr"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 483,
+      "access": "v",
+      "expression": "'UPg'",
+      "literal": "UPg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 393,
+      "access": "sv",
+      "expression": "'Sa'",
+      "literal": "Sa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 423,
+      "access": "sym",
+      "expression": "'depth'",
+      "literal": "depth"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 428,
+      "access": "v",
+      "expression": "'Pg'",
+      "literal": "Pg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 438,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 443,
+      "access": "v",
+      "expression": "'URa'",
+      "literal": "URa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 446,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 447,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 482,
+      "access": "v",
+      "expression": "'Pg'",
+      "literal": "Pg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 482,
+      "access": "v",
+      "expression": "'Pg@not'",
+      "literal": "Pg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 434,
+      "access": "sym",
+      "expression": "'addr'",
+      "literal": "addr"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 434,
+      "access": "sym",
+      "expression": "'depth'",
+      "literal": "depth"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 444,
+      "access": "v",
+      "expression": "'URa'",
+      "literal": "URa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 452,
+      "access": "sv",
+      "expression": "'sImm'",
+      "literal": "sImm"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 458,
+      "access": "has",
+      "expression": "'Pp'",
+      "literal": "Pp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 458,
+      "access": "v",
+      "expression": "'Pp'",
+      "literal": "Pp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 458,
+      "access": "v",
+      "expression": "'Pp@not'",
+      "literal": "Pp@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 463,
+      "access": "v",
+      "expression": "'Pg@not'",
+      "literal": "Pg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 484,
+      "access": "v",
+      "expression": "'UPg'",
+      "literal": "UPg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 484,
+      "access": "v",
+      "expression": "'UPg@not'",
+      "literal": "UPg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 438,
+      "access": "sv",
+      "expression": "'Ra_offset'",
+      "literal": "Ra_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 444,
+      "access": "v",
+      "expression": "'URa'",
+      "literal": "URa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 458,
+      "access": "v",
+      "expression": "'Pp@not'",
+      "literal": "Pp@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 463,
+      "access": "v",
+      "expression": "'Pg'",
+      "literal": "Pg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 464,
+      "access": "v",
+      "expression": "'Pg'",
+      "literal": "Pg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 464,
+      "access": "v",
+      "expression": "'Pg@not'",
+      "literal": "Pg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 465,
+      "access": "v",
+      "expression": "'UPg@not'",
+      "literal": "UPg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 458,
+      "access": "v",
+      "expression": "'Pp'",
+      "literal": "Pp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 465,
+      "access": "v",
+      "expression": "'UPg'",
+      "literal": "UPg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 466,
+      "access": "v",
+      "expression": "'UPg'",
+      "literal": "UPg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "translate",
+      "line": 466,
+      "access": "v",
+      "expression": "'UPg@not'",
+      "literal": "UPg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "src_u",
+      "line": 107,
+      "access": "has",
+      "expression": "f'R{slot}'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "src_u",
+      "line": 112,
+      "access": "has",
+      "expression": "f'UR{slot}'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "src_u",
+      "line": 118,
+      "access": "has",
+      "expression": "f'S{slot}'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "src_u",
+      "line": 108,
+      "access": "v",
+      "expression": "f'R{slot}'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "src_u",
+      "line": 113,
+      "access": "v",
+      "expression": "f'UR{slot}'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "src_u",
+      "line": 119,
+      "access": "v",
+      "expression": "f'S{slot}'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "operand",
+      "line": 131,
+      "access": "has",
+      "expression": "n",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "src_f",
+      "line": 136,
+      "access": "v",
+      "expression": "f'{name}@absolute'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "src_f",
+      "line": 138,
+      "access": "v",
+      "expression": "f'{name}@negate'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "dst",
+      "line": 143,
+      "access": "has",
+      "expression": "'URd'",
+      "literal": "URd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "dst",
+      "line": 149,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "dst",
+      "line": 144,
+      "access": "v",
+      "expression": "'URd'",
+      "literal": "URd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "dst_f",
+      "line": 157,
+      "access": "sym",
+      "expression": "'sat'",
+      "literal": "sat"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 189,
+      "access": "sym",
+      "expression": "'mufuop'",
+      "literal": "mufuop"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 248,
+      "access": "v",
+      "expression": "'URd'",
+      "literal": "URd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 177,
+      "access": "sym",
+      "expression": "'scale'",
+      "literal": "scale"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 197,
+      "access": "has",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 206,
+      "access": "v",
+      "expression": "'Pp'",
+      "literal": "Pp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 206,
+      "access": "v",
+      "expression": "'Pp@not'",
+      "literal": "Pp@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 173,
+      "access": "sym",
+      "expression": "'sco'",
+      "literal": "sco"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 238,
+      "access": "sym",
+      "expression": "'barmode'",
+      "literal": "barmode"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 238,
+      "access": "v",
+      "expression": "'Sb'",
+      "literal": "Sb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 198,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 261,
+      "access": "v",
+      "expression": "'Pp'",
+      "literal": "Pp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 261,
+      "access": "v",
+      "expression": "'Pp@not'",
+      "literal": "Pp@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 199,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 211,
+      "access": "v",
+      "expression": "'Pp'",
+      "literal": "Pp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 211,
+      "access": "v",
+      "expression": "'Pp@not'",
+      "literal": "Pp@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 239,
+      "access": "sym",
+      "expression": "'barmode'",
+      "literal": "barmode"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "fold_set",
+      "line": 13,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "fold_set",
+      "line": 14,
+      "access": "sym",
+      "expression": "'sat'",
+      "literal": "sat"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "fold_ipa_w",
+      "line": 27,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "fold_ipa_w",
+      "line": 27,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "fold_ipa_w",
+      "line": 23,
+      "access": "has",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "fold_ipa_w",
+      "line": 23,
+      "access": "has",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "fold_ipa_w",
+      "line": 24,
+      "access": "v",
+      "expression": "f'{r}@negate'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "fold_ipa_w",
+      "line": 24,
+      "access": "v",
+      "expression": "f'{r}@absolute'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ipa",
+      "line": 54,
+      "access": "sym",
+      "expression": "'ipaop'",
+      "literal": "ipaop"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ipa",
+      "line": 36,
+      "access": "has",
+      "expression": "'attr'",
+      "literal": "attr"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ipa",
+      "line": 38,
+      "access": "v",
+      "expression": "'attr'",
+      "literal": "attr"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ipa",
+      "line": 55,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ipa",
+      "line": 59,
+      "access": "sym",
+      "expression": "'ipaop'",
+      "literal": "ipaop"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ipa",
+      "line": 61,
+      "access": "sym",
+      "expression": "'ipaop'",
+      "literal": "ipaop"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ipa",
+      "line": 62,
+      "access": "sym",
+      "expression": "'ipaop'",
+      "literal": "ipaop"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ipa_indexed",
+      "line": 78,
+      "access": "v",
+      "expression": "'URa'",
+      "literal": "URa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ipa_indexed",
+      "line": 77,
+      "access": "v",
+      "expression": "'URa_offset'",
+      "literal": "URa_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ipa_indexed",
+      "line": 74,
+      "access": "has",
+      "expression": "'URa'",
+      "literal": "URa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ipa_indexed",
+      "line": 74,
+      "access": "sym",
+      "expression": "'ipaop'",
+      "literal": "ipaop"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "uldc",
+      "line": 109,
+      "access": "v",
+      "expression": "'URd'",
+      "literal": "URd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "uldc",
+      "line": 106,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "uldc",
+      "line": 117,
+      "access": "has",
+      "expression": "'URa'",
+      "literal": "URa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "uldc",
+      "line": 117,
+      "access": "v",
+      "expression": "'URa'",
+      "literal": "URa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "uldc",
+      "line": 108,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "uldc",
+      "line": 124,
+      "access": "v",
+      "expression": "'URa'",
+      "literal": "URa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_mem",
+      "line": 149,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_mem",
+      "line": 166,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_mem",
+      "line": 186,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_mem",
+      "line": 158,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_mem",
+      "line": 179,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_mem",
+      "line": 144,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_addr",
+      "line": 195,
+      "access": "sv",
+      "expression": "'Ra_offset'",
+      "literal": "Ra_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_addr",
+      "line": 196,
+      "access": "has",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_addr",
+      "line": 196,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_addr",
+      "line": 194,
+      "access": "v",
+      "expression": "k",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_addr",
+      "line": 194,
+      "access": "has",
+      "expression": "k",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_search",
+      "line": 235,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_search",
+      "line": 220,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_search",
+      "line": 223,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_search",
+      "line": 228,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_search",
+      "line": 223,
+      "access": "sv",
+      "expression": "'Ra_offset'",
+      "literal": "Ra_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_search",
+      "line": 222,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "atom_global",
+      "line": 275,
+      "access": "sym",
+      "expression": "'op'",
+      "literal": "op"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "atom_global",
+      "line": 275,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "atom_global",
+      "line": 278,
+      "access": "has",
+      "expression": "'Pu'",
+      "literal": "Pu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "atom_global",
+      "line": 278,
+      "access": "v",
+      "expression": "'Pu'",
+      "literal": "Pu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "track_ssbo",
+      "line": 304,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "track_ssbo",
+      "line": 289,
+      "access": "has",
+      "expression": "'URd'",
+      "literal": "URd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "track_ssbo",
+      "line": 293,
+      "access": "v",
+      "expression": "'URd'",
+      "literal": "URd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "track_ssbo",
+      "line": 302,
+      "access": "has",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "track_ssbo",
+      "line": 319,
+      "access": "sym",
+      "expression": "k",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "track_ssbo",
+      "line": 314,
+      "access": "v",
+      "expression": "r",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "track_ssbo",
+      "line": 296,
+      "access": "v",
+      "expression": "r",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "track_ssbo",
+      "line": 314,
+      "access": "has",
+      "expression": "r",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "track_ssbo",
+      "line": 296,
+      "access": "v",
+      "expression": "r",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "track_ssbo",
+      "line": 297,
+      "access": "has",
+      "expression": "r",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "track_ssbo",
+      "line": 314,
+      "access": "v",
+      "expression": "r",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "track_ssbo",
+      "line": 297,
+      "access": "v",
+      "expression": "r",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "track_ssbo",
+      "line": 297,
+      "access": "v",
+      "expression": "r",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ldc",
+      "line": 328,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ldc",
+      "line": 337,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "shared_mem",
+      "line": 368,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "shared_mem",
+      "line": 376,
+      "access": "has",
+      "expression": "'Ra_URb'",
+      "literal": "Ra_URb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "shared_mem",
+      "line": 374,
+      "access": "sym",
+      "expression": "'stride'",
+      "literal": "stride"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "shared_mem",
+      "line": 381,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "shared_mem",
+      "line": 391,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "shared_mem",
+      "line": 396,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "shared_mem",
+      "line": 375,
+      "access": "sv",
+      "expression": "'Ra_offset'",
+      "literal": "Ra_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "shared_mem",
+      "line": 377,
+      "access": "v",
+      "expression": "'Ra_URb'",
+      "literal": "Ra_URb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "local_mem",
+      "line": 406,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "local_mem",
+      "line": 409,
+      "access": "sv",
+      "expression": "'Ra_offset'",
+      "literal": "Ra_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "local_mem",
+      "line": 409,
+      "access": "v",
+      "expression": "'Ra_offset'",
+      "literal": "Ra_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "local_mem",
+      "line": 411,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "local_mem",
+      "line": 418,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "local_mem",
+      "line": 423,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "local_mem",
+      "line": 408,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "attr_mem",
+      "line": 462,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "attr_mem",
+      "line": 465,
+      "access": "v",
+      "expression": "'Ra_offset'",
+      "literal": "Ra_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "attr_mem",
+      "line": 460,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "attr_mem",
+      "line": 460,
+      "access": "sym",
+      "expression": "'io'",
+      "literal": "io"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "attr_mem",
+      "line": 477,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "attr_mem",
+      "line": 478,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "attr_mem",
+      "line": 464,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "attr_mem",
+      "line": 472,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "attr_mem",
+      "line": 472,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "_plain",
+      "line": 22,
+      "access": "v",
+      "expression": "'Pg'",
+      "literal": "Pg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "_plain",
+      "line": 22,
+      "access": "v",
+      "expression": "'Pg@not'",
+      "literal": "Pg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "_plain",
+      "line": 22,
+      "access": "v",
+      "expression": "'UPg'",
+      "literal": "UPg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "_plain",
+      "line": 22,
+      "access": "v",
+      "expression": "'UPg@not'",
+      "literal": "UPg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "_branch_target",
+      "line": 26,
+      "access": "sv",
+      "expression": "'sImm'",
+      "literal": "sImm"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "calls",
+      "line": 54,
+      "access": "sym",
+      "expression": "'addr'",
+      "literal": "addr"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "calls",
+      "line": 47,
+      "access": "sv",
+      "expression": "'Sa'",
+      "literal": "Sa"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "returns",
+      "line": 84,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "returns",
+      "line": 92,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "returns",
+      "line": 96,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "returns",
+      "line": 95,
+      "access": "sv",
+      "expression": "'Ra_offset'",
+      "literal": "Ra_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "returns",
+      "line": 96,
+      "access": "v",
+      "expression": "'Sb'",
+      "literal": "Sb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "txq",
+      "line": 14,
+      "access": "sym",
+      "expression": "'query'",
+      "literal": "query"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "txq",
+      "line": 16,
+      "access": "v",
+      "expression": "'bank5'",
+      "literal": "bank5"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "txq",
+      "line": 16,
+      "access": "v",
+      "expression": "'tsPtrIdx'",
+      "literal": "tsPtrIdx"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "txq",
+      "line": 24,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "txq",
+      "line": 24,
+      "access": "v",
+      "expression": "'Rd2'",
+      "literal": "Rd2"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "txq",
+      "line": 26,
+      "access": "v",
+      "expression": "'wmsk'",
+      "literal": "wmsk"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "txq",
+      "line": 15,
+      "access": "sym",
+      "expression": "'query'",
+      "literal": "query"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "image",
+      "line": 43,
+      "access": "sym",
+      "expression": "'dim'",
+      "literal": "dim"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "image",
+      "line": 47,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "image",
+      "line": 52,
+      "access": "v",
+      "expression": "'bank5'",
+      "literal": "bank5"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "image",
+      "line": 52,
+      "access": "v",
+      "expression": "'tsPtrIdx'",
+      "literal": "tsPtrIdx"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "image",
+      "line": 44,
+      "access": "sym",
+      "expression": "'clamp'",
+      "literal": "clamp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "image",
+      "line": 57,
+      "access": "sym",
+      "expression": "'rgba'",
+      "literal": "rgba"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "image",
+      "line": 45,
+      "access": "sym",
+      "expression": "'clamp'",
+      "literal": "clamp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "sust",
+      "line": 63,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "sust",
+      "line": 62,
+      "access": "sym",
+      "expression": "'rgba'",
+      "literal": "rgba"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "sured",
+      "line": 79,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "sured",
+      "line": 75,
+      "access": "sym",
+      "expression": "'op'",
+      "literal": "op"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "sured",
+      "line": 76,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "sured",
+      "line": 77,
+      "access": "sym",
+      "expression": "'op'",
+      "literal": "op"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "sured",
+      "line": 77,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "suatom",
+      "line": 89,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "suatom",
+      "line": 86,
+      "access": "v",
+      "expression": "'Pu'",
+      "literal": "Pu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "suld",
+      "line": 96,
+      "access": "v",
+      "expression": "'Pu'",
+      "literal": "Pu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "suld",
+      "line": 101,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "suld",
+      "line": 100,
+      "access": "sym",
+      "expression": "'rgba'",
+      "literal": "rgba"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 121,
+      "access": "sym",
+      "expression": "'paramA'",
+      "literal": "paramA"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 122,
+      "access": "sym",
+      "expression": "'aoffi'",
+      "literal": "aoffi"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 130,
+      "access": "sym",
+      "expression": "'lodlc'",
+      "literal": "lodlc"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 136,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 136,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 137,
+      "access": "sym",
+      "expression": "'scr'",
+      "literal": "scr"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 153,
+      "access": "v",
+      "expression": "'bank5'",
+      "literal": "bank5"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 153,
+      "access": "v",
+      "expression": "'tsPtrIdx'",
+      "literal": "tsPtrIdx"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 124,
+      "access": "sym",
+      "expression": "'toff'",
+      "literal": "toff"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 125,
+      "access": "sym",
+      "expression": "'toff'",
+      "literal": "toff"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 130,
+      "access": "sym",
+      "expression": "'dc'",
+      "literal": "dc"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 128,
+      "access": "sym",
+      "expression": "'aoffi'",
+      "literal": "aoffi"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 128,
+      "access": "sym",
+      "expression": "'toff'",
+      "literal": "toff"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 182,
+      "access": "sym",
+      "expression": "'comp'",
+      "literal": "comp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex",
+      "line": 173,
+      "access": "sym",
+      "expression": "'comp'",
+      "literal": "comp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex_outs",
+      "line": 206,
+      "access": "v",
+      "expression": "'f16rm'",
+      "literal": "f16rm"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex_outs",
+      "line": 203,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex_outs",
+      "line": 203,
+      "access": "v",
+      "expression": "'Rd2'",
+      "literal": "Rd2"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tex_outs",
+      "line": 205,
+      "access": "v",
+      "expression": "'wmsk'",
+      "literal": "wmsk"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tld",
+      "line": 231,
+      "access": "sym",
+      "expression": "'paramA'",
+      "literal": "paramA"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tld",
+      "line": 236,
+      "access": "sym",
+      "expression": "'lodlc'",
+      "literal": "lodlc"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tld",
+      "line": 232,
+      "access": "sym",
+      "expression": "'ms'",
+      "literal": "ms"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tld",
+      "line": 243,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tld",
+      "line": 243,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tld",
+      "line": 244,
+      "access": "sym",
+      "expression": "'scr'",
+      "literal": "scr"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tld",
+      "line": 256,
+      "access": "v",
+      "expression": "'bank5'",
+      "literal": "bank5"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tld",
+      "line": 256,
+      "access": "v",
+      "expression": "'tsPtrIdx'",
+      "literal": "tsPtrIdx"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tld",
+      "line": 233,
+      "access": "sym",
+      "expression": "'aoffi'",
+      "literal": "aoffi"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tld",
+      "line": 234,
+      "access": "sym",
+      "expression": "'ms'",
+      "literal": "ms"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tld",
+      "line": 234,
+      "access": "sym",
+      "expression": "'aoffi'",
+      "literal": "aoffi"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tmml",
+      "line": 266,
+      "access": "sym",
+      "expression": "'paramA'",
+      "literal": "paramA"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tmml",
+      "line": 270,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tmml",
+      "line": 275,
+      "access": "v",
+      "expression": "'bank5'",
+      "literal": "bank5"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tmml",
+      "line": 275,
+      "access": "v",
+      "expression": "'tsPtrIdx'",
+      "literal": "tsPtrIdx"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tmml",
+      "line": 278,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tmml",
+      "line": 278,
+      "access": "v",
+      "expression": "'Rd2'",
+      "literal": "Rd2"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/tex.py",
+      "function": "tmml",
+      "line": 280,
+      "access": "v",
+      "expression": "'wmsk'",
+      "literal": "wmsk"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "fswzadd",
+      "line": 17,
+      "access": "v",
+      "expression": "'npCtrl'",
+      "literal": "npCtrl"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "redux",
+      "line": 26,
+      "access": "sym",
+      "expression": "'op'",
+      "literal": "op"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "redux",
+      "line": 31,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "s2r",
+      "line": 65,
+      "access": "v",
+      "expression": "'URd'",
+      "literal": "URd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "ldsm",
+      "line": 85,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "ldsm",
+      "line": 81,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "ldsm",
+      "line": 81,
+      "access": "sym",
+      "expression": "'mode'",
+      "literal": "mode"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "ldsm",
+      "line": 81,
+      "access": "sym",
+      "expression": "'num'",
+      "literal": "num"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "ldsm",
+      "line": 84,
+      "access": "sv",
+      "expression": "'Ra_offset'",
+      "literal": "Ra_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "ldsm",
+      "line": 85,
+      "access": "sym",
+      "expression": "'mode'",
+      "literal": "mode"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "ldsm",
+      "line": 82,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "ldsm",
+      "line": 82,
+      "access": "sym",
+      "expression": "'mode'",
+      "literal": "mode"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "ldsm",
+      "line": 82,
+      "access": "sym",
+      "expression": "'num'",
+      "literal": "num"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "movm",
+      "line": 92,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "movm",
+      "line": 92,
+      "access": "sym",
+      "expression": "'mode'",
+      "literal": "mode"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "movm",
+      "line": 93,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "movm",
+      "line": 93,
+      "access": "sym",
+      "expression": "'mode'",
+      "literal": "mode"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "hmma",
+      "line": 102,
+      "access": "v",
+      "expression": "'Ra@negate'",
+      "literal": "Ra@negate"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "hmma",
+      "line": 102,
+      "access": "v",
+      "expression": "'Rb@negate'",
+      "literal": "Rb@negate"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "hmma",
+      "line": 107,
+      "access": "v",
+      "expression": "name",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "hmma",
+      "line": 112,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "hmma",
+      "line": 100,
+      "access": "sym",
+      "expression": "'size'",
+      "literal": "size"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "hmma",
+      "line": 100,
+      "access": "sym",
+      "expression": "'dstfmt'",
+      "literal": "dstfmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "hmma",
+      "line": 100,
+      "access": "sym",
+      "expression": "'srcfmt'",
+      "literal": "srcfmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "hmma",
+      "line": 101,
+      "access": "sym",
+      "expression": "'size'",
+      "literal": "size"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "hmma",
+      "line": 101,
+      "access": "sym",
+      "expression": "'dstfmt'",
+      "literal": "dstfmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "hmma",
+      "line": 101,
+      "access": "sym",
+      "expression": "'srcfmt'",
+      "literal": "srcfmt"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "shfl",
+      "line": 120,
+      "access": "sym",
+      "expression": "'shflmd'",
+      "literal": "shflmd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "shfl",
+      "line": 124,
+      "access": "v",
+      "expression": "'Pu'",
+      "literal": "Pu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "shfl",
+      "line": 124,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "shfl",
+      "line": 122,
+      "access": "sym",
+      "expression": "'shflmd'",
+      "literal": "shflmd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "match",
+      "line": 137,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "match",
+      "line": 140,
+      "access": "v",
+      "expression": "'Rd'",
+      "literal": "Rd"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "match",
+      "line": 141,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "match",
+      "line": 143,
+      "access": "sym",
+      "expression": "'op'",
+      "literal": "op"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "match",
+      "line": 147,
+      "access": "v",
+      "expression": "'Pu'",
+      "literal": "Pu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "match",
+      "line": 138,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "match",
+      "line": 148,
+      "access": "v",
+      "expression": "'Pu'",
+      "literal": "Pu"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "vote",
+      "line": 176,
+      "access": "v",
+      "expression": "f'{u}Rd'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "vote",
+      "line": 180,
+      "access": "v",
+      "expression": "f'{u}Pu'",
+      "literal": null
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "vote",
+      "line": 163,
+      "access": "v",
+      "expression": "'Pp'",
+      "literal": "Pp"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "vote",
+      "line": 163,
+      "access": "v",
+      "expression": "'Pp@not'",
+      "literal": "Pp@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "vote",
+      "line": 170,
+      "access": "sym",
+      "expression": "'voteop'",
+      "literal": "voteop"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "vote",
+      "line": 173,
+      "access": "sym",
+      "expression": "'voteop'",
+      "literal": "voteop"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "task_isbe",
+      "line": 199,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "task_isbe",
+      "line": 194,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "task_isbe",
+      "line": 194,
+      "access": "v",
+      "expression": "'Ra_offset'",
+      "literal": "Ra_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "task_isbe",
+      "line": 192,
+      "access": "sym",
+      "expression": "'base'",
+      "literal": "base"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "task_isbe",
+      "line": 192,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "task_isbe",
+      "line": 196,
+      "access": "sym",
+      "expression": "'io'",
+      "literal": "io"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "task_isbe",
+      "line": 193,
+      "access": "sym",
+      "expression": "'base'",
+      "literal": "base"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "task_isbe",
+      "line": 193,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 215,
+      "access": "v",
+      "expression": "'Ra'",
+      "literal": "Ra"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 215,
+      "access": "v",
+      "expression": "'Ra_offset'",
+      "literal": "Ra_offset"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 227,
+      "access": "sym",
+      "expression": "'base'",
+      "literal": "base"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 231,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 215,
+      "access": "has",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 215,
+      "access": "v",
+      "expression": "'Rb'",
+      "literal": "Rb"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 225,
+      "access": "sym",
+      "expression": "'base'",
+      "literal": "base"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 225,
+      "access": "sym",
+      "expression": "'skew'",
+      "literal": "skew"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 229,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 218,
+      "access": "sym",
+      "expression": "'base'",
+      "literal": "base"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 218,
+      "access": "sym",
+      "expression": "'io'",
+      "literal": "io"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 232,
+      "access": "sym",
+      "expression": "'sz'",
+      "literal": "sz"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 219,
+      "access": "sym",
+      "expression": "'base'",
+      "literal": "base"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "mesh_isbe",
+      "line": 219,
+      "access": "sym",
+      "expression": "'io'",
+      "literal": "io"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "exit",
+      "line": 239,
+      "access": "v",
+      "expression": "'Pg@not'",
+      "literal": "Pg@not"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "exit",
+      "line": 239,
+      "access": "v",
+      "expression": "'Pg'",
+      "literal": "Pg"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/thread.py",
+      "function": "regs",
+      "line": 107,
+      "access": "v",
+      "expression": "name",
+      "literal": null
+    }
+  ],
+  "class_dependencies": [
+    {
+      "file": "upstream/sm86/translate/frontend/program.py",
+      "function": "v",
+      "line": 62,
+      "expression": "KeyError(f'{self.cls}: no field {name}')"
+    },
+    {
+      "file": "upstream/sm86/translate/frontend/program.py",
+      "function": "program",
+      "line": 106,
+      "expression": "d.cls is None"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 35,
+      "expression": "Unsupported(f\"{i.cls}: compare {i.sym('fcomp') or i.sym('icmp')}\")"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "setp",
+      "line": 37,
+      "expression": "Unsupported(f'{i.cls}.X')"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "r2p",
+      "line": 92,
+      "expression": "i.cls != 'r2p__RIR'"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "r2p",
+      "line": 93,
+      "expression": "Unsupported(f'{i.cls}: mask not an immediate')"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "src_u_hi",
+      "line": 219,
+      "expression": "Unsupported(f'{i.cls}: 64-bit operand {slot}')"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 230,
+      "expression": "i.cls.split('__')[0].split('_')"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 227,
+      "expression": "Unsupported(f'{i.cls}: carry out')"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 239,
+      "expression": "Unsupported(f'{i.cls}: .X')"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "imad",
+      "line": 230,
+      "expression": "i.cls.split('__')"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hadd2",
+      "line": 296,
+      "expression": "'32i' in i.cls"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "hadd2",
+      "line": 297,
+      "expression": "Unsupported(i.cls)"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lea",
+      "line": 363,
+      "expression": "Unsupported(f'{i.cls} HI with carry out')"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/alu.py",
+      "function": "lop3",
+      "line": 389,
+      "expression": "Unsupported(f\"{i.cls}: pop {i.sym('pop')}\")"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "src_u",
+      "line": 124,
+      "expression": "Unsupported(f'{i.cls}: operand {slot}')"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/core.py",
+      "function": "insn",
+      "line": 285,
+      "expression": "Unsupported(i.cls)"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "ipa_indexed",
+      "line": 75,
+      "expression": "Unsupported(f'{i.cls}: attribute address in a register')"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_mem",
+      "line": 144,
+      "expression": "'sImmOffset' in i.cls"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_mem",
+      "line": 144,
+      "expression": "'RaNonRZ' in i.cls"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_addr",
+      "line": 199,
+      "expression": "i.cls.endswith('Ra32')"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_addr",
+      "line": 210,
+      "expression": "Unsupported(f'{i.cls}: base not a traced storage buffer')"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_addr",
+      "line": 203,
+      "expression": "i.cls.endswith('Ra32')"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_addr",
+      "line": 205,
+      "expression": "'sImmOffset' in i.cls"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "global_addr",
+      "line": 205,
+      "expression": "'RaNonRZ' in i.cls"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/mem.py",
+      "function": "local_mem",
+      "line": 409,
+      "expression": "'sImm' in i.cls"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "calls",
+      "line": 61,
+      "expression": "insns[c - 1].cls != 'mov__RI'"
+    },
+    {
+      "file": "upstream/sm86/translate/glsl/subroutines.py",
+      "function": "returns",
+      "line": 88,
+      "expression": "mov.cls != 'mov__RR'"
+    }
+  ],
+  "rows": [
+    {
+      "opcode": "ALD",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 277
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "attr_mem",
+          "line": 460
+        }
+      ],
+      "cuasm_forms": {},
+      "cuasm_records": 0,
+      "mesa_methods": [
+        {
+          "name": "OpALd",
+          "line": 3932
+        }
+      ],
+      "implemented_proof": true
+    },
+    {
+      "opcode": "AST",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 277
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "attr_mem",
+          "line": 465
+        }
+      ],
+      "cuasm_forms": {},
+      "cuasm_records": 0,
+      "mesa_methods": [
+        {
+          "name": "OpASt",
+          "line": 3953
+        }
+      ],
+      "implemented_proof": true
+    },
+    {
+      "opcode": "ATOMG",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 269
+        }
+      ],
+      "cuasm_forms": {
+        "ATOMG_P_R_ARI_R_R": 9,
+        "ATOMG_P_R_dARI_R": 22,
+        "ATOMG_P_R_ARI_R": 18,
+        "ATOMG_P_R_AURI_R": 18
+      },
+      "cuasm_records": 67,
+      "mesa_methods": [
+        {
+          "name": "OpAtom",
+          "line": 3777
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "BAR",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 382
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 237
+        }
+      ],
+      "cuasm_forms": {
+        "BAR_II": 3,
+        "BAR_II_P": 6,
+        "BAR_R_R": 2,
+        "BAR_R": 2
+      },
+      "cuasm_records": 13,
+      "mesa_methods": [
+        {
+          "name": "OpBar",
+          "line": 4245
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "BRA",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "inline_single_call",
+          "line": 306
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "inline_single_call",
+          "line": 311
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "inline_single_call",
+          "line": 318
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "inline_single_call",
+          "line": 313
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 387
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 450
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 486
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/subroutines.py",
+          "function": "calls",
+          "line": 51
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/subroutines.py",
+          "function": "calls",
+          "line": 57
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/subroutines.py",
+          "function": "calls",
+          "line": 68
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/subroutines.py",
+          "function": "returns",
+          "line": 83
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/subroutines.py",
+          "function": "returns",
+          "line": 90
+        }
+      ],
+      "cuasm_forms": {
+        "BRA_II": 5,
+        "BRA_P_II": 6,
+        "BRA_UR_II": 5
+      },
+      "cuasm_records": 16,
+      "mesa_methods": [
+        {
+          "name": "OpBra",
+          "line": 4191
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "BREAK",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 167
+        }
+      ],
+      "cuasm_forms": {
+        "BREAK_B": 3,
+        "BREAK_P_B": 5
+      },
+      "cuasm_records": 8,
+      "mesa_methods": [
+        {
+          "name": "OpBreak",
+          "line": 4152
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "BRX",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "brx_targets",
+          "line": 335
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "brx_targets",
+          "line": 340
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 397
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 439
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 409
+        }
+      ],
+      "cuasm_forms": {
+        "BRX_R_II": 3
+      },
+      "cuasm_records": 3,
+      "mesa_methods": [],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "BRXU",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "brx_targets",
+          "line": 335
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "brx_targets",
+          "line": 337
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 397
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 439
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 409
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 448
+        }
+      ],
+      "cuasm_forms": {
+        "BRXU_UR_II": 3
+      },
+      "cuasm_records": 3,
+      "mesa_methods": [],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "BSSY",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 167
+        }
+      ],
+      "cuasm_forms": {
+        "BSSY_B_II": 3
+      },
+      "cuasm_records": 3,
+      "mesa_methods": [
+        {
+          "name": "OpBSSy",
+          "line": 4165
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "BSYNC",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 167
+        }
+      ],
+      "cuasm_forms": {
+        "BSYNC_B": 2
+      },
+      "cuasm_records": 2,
+      "mesa_methods": [
+        {
+          "name": "OpBSync",
+          "line": 4179
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "CALL",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "inline_single_call",
+          "line": 294
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "inline_single_call",
+          "line": 311
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 421
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 390
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 486
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 411
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/subroutines.py",
+          "function": "calls",
+          "line": 39
+        }
+      ],
+      "cuasm_forms": {
+        "CALL_II": 6,
+        "CALL_R": 2,
+        "CALL_R_II": 3
+      },
+      "cuasm_records": 11,
+      "mesa_methods": [],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "CS2R",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        }
+      ],
+      "cuasm_forms": {
+        "CS2R_R_L": 10
+      },
+      "cuasm_records": 10,
+      "mesa_methods": [
+        {
+          "name": "OpCS2R",
+          "line": 4273
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "DEPBAR",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 167
+        }
+      ],
+      "cuasm_forms": {
+        "DEPBAR_SB_II_SBSET": 3,
+        "DEPBAR_SB_II": 3
+      },
+      "cuasm_records": 6,
+      "mesa_methods": [],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "ERRBAR",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 167
+        }
+      ],
+      "cuasm_forms": {
+        "ERRBAR": 1
+      },
+      "cuasm_records": 1,
+      "mesa_methods": [],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "EXIT",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "inline_single_call",
+          "line": 306
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 395
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 283
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/subroutines.py",
+          "function": "calls",
+          "line": 51
+        }
+      ],
+      "cuasm_forms": {
+        "EXIT": 2,
+        "EXIT_P": 3
+      },
+      "cuasm_records": 5,
+      "mesa_methods": [
+        {
+          "name": "OpExit",
+          "line": 4218
+        }
+      ],
+      "implemented_proof": true
+    },
+    {
+      "opcode": "F2FP",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "F2FP_R_R_R": 8,
+        "F2FP_R_R_FI": 3,
+        "F2FP_R_R_cAI": 5,
+        "F2FP_R_cAI_R": 4
+      },
+      "cuasm_records": 20,
+      "mesa_methods": [
+        {
+          "name": "OpF2FP",
+          "line": 2237
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "F2I",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        }
+      ],
+      "cuasm_forms": {
+        "F2I_R_R": 18,
+        "F2I_R_cAI": 4
+      },
+      "cuasm_records": 22,
+      "mesa_methods": [
+        {
+          "name": "OpF2I",
+          "line": 2282
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "FADD",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 182
+        }
+      ],
+      "cuasm_forms": {
+        "FADD_R_R_R": 16,
+        "FADD_R_R_FI": 10,
+        "FADD_R_R_cAI": 12,
+        "FADD_R_R_UR": 11
+      },
+      "cuasm_records": 49,
+      "mesa_methods": [
+        {
+          "name": "OpFAdd",
+          "line": 849
+        }
+      ],
+      "implemented_proof": true
+    },
+    {
+      "opcode": "FFMA",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 184
+        }
+      ],
+      "cuasm_forms": {
+        "FFMA_R_R_R_FI": 15,
+        "FFMA_R_R_R_R": 20,
+        "FFMA_R_R_FI_R": 14,
+        "FFMA_R_R_cAI_R": 14,
+        "FFMA_R_R_UR_R": 13,
+        "FFMA_R_R_R_cAI": 15,
+        "FFMA_R_R_R_UR": 11
+      },
+      "cuasm_records": 102,
+      "mesa_methods": [
+        {
+          "name": "OpFFma",
+          "line": 890
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "FLO",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "FLO_R_R": 5,
+        "FLO_R_UR": 4,
+        "FLO_R_cAI": 5
+      },
+      "cuasm_records": 14,
+      "mesa_methods": [
+        {
+          "name": "OpFlo",
+          "line": 1561
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "FMNMX",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 205
+        }
+      ],
+      "cuasm_forms": {
+        "FMNMX_R_R_FI_P": 11,
+        "FMNMX_R_R_R_P": 13,
+        "FMNMX_R_R_cAI_P": 13,
+        "FMNMX_R_R_UR_P": 11
+      },
+      "cuasm_records": 48,
+      "mesa_methods": [
+        {
+          "name": "OpFMnMx",
+          "line": 925
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "FMUL",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 174
+        }
+      ],
+      "cuasm_forms": {
+        "FMUL_R_R_R": 15,
+        "FMUL_R_R_cAI": 12,
+        "FMUL_R_R_UR": 9,
+        "FMUL_R_R_FI": 11
+      },
+      "cuasm_records": 47,
+      "mesa_methods": [
+        {
+          "name": "OpFMul",
+          "line": 963
+        }
+      ],
+      "implemented_proof": true
+    },
+    {
+      "opcode": "FRND",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        }
+      ],
+      "cuasm_forms": {
+        "FRND_R_R": 10,
+        "FRND_R_cAI": 6
+      },
+      "cuasm_records": 16,
+      "mesa_methods": [
+        {
+          "name": "OpFRnd",
+          "line": 2371
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "FSEL",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 210
+        }
+      ],
+      "cuasm_forms": {
+        "FSEL_R_R_R_P": 13,
+        "FSEL_R_R_FI_P": 10,
+        "FSEL_R_R_cAI_P": 12,
+        "FSEL_R_R_UR_P": 9
+      },
+      "cuasm_records": 44,
+      "mesa_methods": [],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "FSET",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        }
+      ],
+      "cuasm_forms": {
+        "FSET_R_R_R_P": 10,
+        "FSET_R_R_cAI_P": 4
+      },
+      "cuasm_records": 14,
+      "mesa_methods": [
+        {
+          "name": "OpFSet",
+          "line": 1052
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "FSETP",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/alu.py",
+          "function": "setp",
+          "line": 22
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 212
+        }
+      ],
+      "cuasm_forms": {
+        "FSETP_P_P_R_FI_P": 19,
+        "FSETP_P_P_R_R_P": 26,
+        "FSETP_P_P_R_cAI_P": 22,
+        "FSETP_P_P_R_UR_P": 14
+      },
+      "cuasm_records": 81,
+      "mesa_methods": [
+        {
+          "name": "OpFSetP",
+          "line": 1089
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "FSWZADD",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 275
+        }
+      ],
+      "cuasm_forms": {
+        "FSWZADD_R_R_R_L": 8
+      },
+      "cuasm_records": 8,
+      "mesa_methods": [
+        {
+          "name": "OpFSwzAdd",
+          "line": 1132
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "HADD2",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 273
+        }
+      ],
+      "cuasm_forms": {
+        "HADD2_R_R_R": 17,
+        "HADD2_R_R_FI_FI": 6,
+        "HADD2_R_R_cAI": 14,
+        "HADD2_R_R_UR": 6
+      },
+      "cuasm_records": 43,
+      "mesa_methods": [
+        {
+          "name": "OpHAdd2",
+          "line": 1316
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "HMMA",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 241
+        }
+      ],
+      "cuasm_forms": {
+        "HMMA_R_R_R_R": 13,
+        "HMMA_R_R_R_R_R_II": 9
+      },
+      "cuasm_records": 22,
+      "mesa_methods": [
+        {
+          "name": "OpHmma",
+          "line": 4577
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "HMNMX2",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 241
+        }
+      ],
+      "cuasm_forms": {
+        "HMNMX2_R_R_R_P": 16,
+        "HMNMX2_R_R_cAI_P": 14
+      },
+      "cuasm_records": 30,
+      "mesa_methods": [
+        {
+          "name": "OpHMnMx2",
+          "line": 1488
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "HSETP2",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 273
+        }
+      ],
+      "cuasm_forms": {
+        "HSETP2_P_P_R_cAI_P": 7,
+        "HSETP2_P_P_R_R_P": 19,
+        "HSETP2_P_P_R_FI_FI_P": 12
+      },
+      "cuasm_records": 38,
+      "mesa_methods": [
+        {
+          "name": "OpHSetP2",
+          "line": 1445
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "I2F",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "I2F_R_UR": 14,
+        "I2F_R_R": 19,
+        "I2F_R_cAI": 12,
+        "I2F_R_II": 7
+      },
+      "cuasm_records": 52,
+      "mesa_methods": [
+        {
+          "name": "OpI2F",
+          "line": 2329
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "I2FP",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        }
+      ],
+      "cuasm_forms": {
+        "I2FP_R_cAI": 5,
+        "I2FP_R_R": 6,
+        "I2FP_R_UR": 4
+      },
+      "cuasm_records": 15,
+      "mesa_methods": [],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "IABS",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "IABS_R_R": 5,
+        "IABS_R_cAI": 4,
+        "IABS_R_UR": 3
+      },
+      "cuasm_records": 12,
+      "mesa_methods": [
+        {
+          "name": "OpIAbs",
+          "line": 1580
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "IADD3",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "track_ssbo",
+          "line": 313
+        }
+      ],
+      "cuasm_forms": {
+        "IADD3_R_R_II_R": 11,
+        "IADD3_R_P_R_cAI_R": 10,
+        "IADD3_R_R_cAI_R_P_P": 16,
+        "IADD3_R_P_R_R_R": 10,
+        "IADD3_R_R_R_R": 12,
+        "IADD3_R_R_R_R_P_P": 15,
+        "IADD3_R_R_cAI_R": 12,
+        "IADD3_R_R_UR_R_P_P": 14,
+        "IADD3_R_P_R_II_R": 9,
+        "IADD3_R_R_II_R_P_P": 14,
+        "IADD3_R_P_P_R_cAI_R": 13,
+        "IADD3_R_P_P_R_R_R": 13,
+        "IADD3_R_R_UR_R": 11,
+        "IADD3_R_P_R_UR_R": 9,
+        "IADD3_R_P_P_R_UR_R": 11,
+        "IADD3_R_P_P_R_II_R": 13,
+        "IADD3_R_P_P_R_cAI_R_P_P": 7,
+        "IADD3_R_P_R_cAI_R_P_P": 9,
+        "IADD3_R_P_R_R_R_P_P": 10,
+        "IADD3_R_P_R_UR_R_P_P": 9,
+        "IADD3_R_P_R_II_R_P_P": 8
+      },
+      "cuasm_records": 236,
+      "mesa_methods": [
+        {
+          "name": "OpIAdd3",
+          "line": 1595
+        },
+        {
+          "name": "OpIAdd3X",
+          "line": 1651
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "IMAD",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "track_ssbo",
+          "line": 313
+        }
+      ],
+      "cuasm_forms": {
+        "IMAD_R_R_R_cAI": 14,
+        "IMAD_R_R_R_R": 14,
+        "IMAD_R_R_R_II": 11,
+        "IMAD_R_R_II_R": 16,
+        "IMAD_R_R_cAI_R": 13,
+        "IMAD_R_R_R_R_P": 10,
+        "IMAD_R_R_II_R_P": 13,
+        "IMAD_R_P_R_R_R": 9,
+        "IMAD_R_R_R_UR": 12,
+        "IMAD_R_R_UR_R": 12,
+        "IMAD_R_R_R_II_P": 4,
+        "IMAD_R_R_R_cAI_P": 7,
+        "IMAD_R_R_R_UR_P": 6,
+        "IMAD_R_P_R_II_R": 7,
+        "IMAD_R_P_R_cAI_R": 9,
+        "IMAD_R_R_cAI_R_P": 8,
+        "IMAD_R_P_R_UR_R": 8,
+        "IMAD_R_R_UR_R_P": 7
+      },
+      "cuasm_records": 180,
+      "mesa_methods": [
+        {
+          "name": "OpIMad",
+          "line": 1751
+        },
+        {
+          "name": "OpIMad64",
+          "line": 1783
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "IMNMX",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        }
+      ],
+      "cuasm_forms": {
+        "IMNMX_R_R_II_P": 9,
+        "IMNMX_R_R_R_P": 9,
+        "IMNMX_R_R_UR_P": 8,
+        "IMNMX_R_R_cAI_P": 9
+      },
+      "cuasm_records": 35,
+      "mesa_methods": [
+        {
+          "name": "OpIMnMx",
+          "line": 1815
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "IPA",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 217
+        }
+      ],
+      "cuasm_forms": {},
+      "cuasm_records": 0,
+      "mesa_methods": [
+        {
+          "name": "OpIpa",
+          "line": 3974
+        }
+      ],
+      "implemented_proof": true
+    },
+    {
+      "opcode": "ISBERD",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 279
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 281
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/thread.py",
+          "function": "task_isbe",
+          "line": 195
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/thread.py",
+          "function": "mesh_isbe",
+          "line": 217
+        }
+      ],
+      "cuasm_forms": {},
+      "cuasm_records": 0,
+      "mesa_methods": [
+        {
+          "name": "OpIsberd",
+          "line": 4286
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "ISBEWR",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 374
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 279
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 281
+        }
+      ],
+      "cuasm_forms": {},
+      "cuasm_records": 0,
+      "mesa_methods": [
+        {
+          "name": "OpIsbewr",
+          "line": 4322
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "ISETP",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 212
+        }
+      ],
+      "cuasm_forms": {
+        "ISETP_P_P_R_UR_P": 15,
+        "ISETP_P_P_R_II_P": 17,
+        "ISETP_P_P_R_R_P": 17,
+        "ISETP_P_P_R_cAI_P": 17,
+        "ISETP_P_P_R_UR_P_P": 17,
+        "ISETP_P_P_R_R_P_P": 18,
+        "ISETP_P_P_R_II_P_P": 16,
+        "ISETP_P_P_R_cAI_P_P": 18
+      },
+      "cuasm_records": 135,
+      "mesa_methods": [
+        {
+          "name": "OpISetP",
+          "line": 1866
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "KILL",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 255
+        }
+      ],
+      "cuasm_forms": {},
+      "cuasm_records": 0,
+      "mesa_methods": [
+        {
+          "name": "OpKill",
+          "line": 4360
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "LDC",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "brx_targets",
+          "line": 341
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 223
+        }
+      ],
+      "cuasm_forms": {
+        "LDC_R_cAI": 7,
+        "LDC_R_cARI": 11
+      },
+      "cuasm_records": 18,
+      "mesa_methods": [
+        {
+          "name": "OpLdc",
+          "line": 3505
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "LDG",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 221
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "global_mem",
+          "line": 178
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "global_search",
+          "line": 226
+        }
+      ],
+      "cuasm_forms": {
+        "LDG_R_dARI": 18,
+        "LDG_R_ARI": 15,
+        "LDG_R_ARURI": 10,
+        "LDG_R_AURI": 11,
+        "LDG_R_ARI_P": 11,
+        "LDG_R_dARI_P": 5
+      },
+      "cuasm_records": 70,
+      "mesa_methods": [
+        {
+          "name": "OpLd",
+          "line": 3428
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "LDL",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 235
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "local_mem",
+          "line": 417
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "local_mem",
+          "line": 427
+        }
+      ],
+      "cuasm_forms": {
+        "LDL_R_ARI": 12,
+        "LDL_R_AURI": 8,
+        "LDL_R_ARURI": 4
+      },
+      "cuasm_records": 24,
+      "mesa_methods": [
+        {
+          "name": "OpLd",
+          "line": 3428
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "LDS",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 233
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "shared_mem",
+          "line": 390
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "shared_mem",
+          "line": 400
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "shared_mem",
+          "line": 370
+        }
+      ],
+      "cuasm_forms": {
+        "LDS_R_ARI": 15,
+        "LDS_R_AI": 8,
+        "LDS_R_ARURI": 15,
+        "LDS_R_AURI": 10
+      },
+      "cuasm_records": 48,
+      "mesa_methods": [
+        {
+          "name": "OpLd",
+          "line": 3428
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "LDSM",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 241
+        }
+      ],
+      "cuasm_forms": {
+        "LDSM_R_ARI": 8,
+        "LDSM_R_ARURI": 7,
+        "LDSM_R_AURI": 6
+      },
+      "cuasm_records": 21,
+      "mesa_methods": [
+        {
+          "name": "OpLdsm",
+          "line": 4622
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "LEA",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 262
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "track_ssbo",
+          "line": 313
+        }
+      ],
+      "cuasm_forms": {
+        "LEA_R_R_II_II": 8,
+        "LEA_R_P_R_cAI_II": 10,
+        "LEA_R_R_cAI_R_II_P": 11,
+        "LEA_R_P_R_R_II": 10,
+        "LEA_R_R_R_R_II_P": 12,
+        "LEA_R_R_II_R_II": 7,
+        "LEA_R_R_R_II": 11,
+        "LEA_R_P_R_cAI_R_II": 4,
+        "LEA_R_R_cAI_II_P": 9,
+        "LEA_R_R_cAI_R_II": 7,
+        "LEA_R_R_R_R_II": 9,
+        "LEA_R_R_R_II_P": 11,
+        "LEA_R_R_cAI_II": 11,
+        "LEA_R_R_UR_II": 9,
+        "LEA_R_R_UR_II_P": 9,
+        "LEA_R_P_R_UR_II": 8,
+        "LEA_R_R_UR_R_II_P": 10,
+        "LEA_R_P_R_II_II": 7,
+        "LEA_R_R_UR_R_II": 8,
+        "LEA_R_P_R_R_R_II": 8,
+        "LEA_R_R_II_II_P": 5,
+        "LEA_R_R_R_II_II_P": 6
+      },
+      "cuasm_records": 190,
+      "mesa_methods": [
+        {
+          "name": "OpLea",
+          "line": 1923
+        },
+        {
+          "name": "OpLeaX",
+          "line": 1979
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "LOP3",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        }
+      ],
+      "cuasm_forms": {
+        "LOP3_R_R_II_R_II_P": 9,
+        "LOP3_P_R_R_II_R_II_P": 10,
+        "LOP3_R_R_R_R_II_P": 10,
+        "LOP3_R_R_cAI_R_II_P": 10,
+        "LOP3_P_R_R_R_R_II_P": 12,
+        "LOP3_R_R_UR_R_II_P": 9,
+        "LOP3_P_R_R_cAI_R_II_P": 10,
+        "LOP3_P_R_R_UR_R_II_P": 11
+      },
+      "cuasm_records": 81,
+      "mesa_methods": [
+        {
+          "name": "OpLop3",
+          "line": 2064
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "MATCH",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 273
+        }
+      ],
+      "cuasm_forms": {
+        "MATCH_R_R": 4
+      },
+      "cuasm_records": 4,
+      "mesa_methods": [
+        {
+          "name": "OpMatch",
+          "line": 4493
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "MEMBAR",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 172
+        }
+      ],
+      "cuasm_forms": {
+        "MEMBAR": 5
+      },
+      "cuasm_records": 5,
+      "mesa_methods": [
+        {
+          "name": "OpMemBar",
+          "line": 4063
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "MOV",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 186
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "track_ssbo",
+          "line": 313
+        }
+      ],
+      "cuasm_forms": {
+        "MOV_R_cAI": 5,
+        "MOV_R_II": 4,
+        "MOV_R_R": 5,
+        "MOV_R_UR": 4,
+        "MOV_R_R_II": 4
+      },
+      "cuasm_records": 22,
+      "mesa_methods": [
+        {
+          "name": "OpMov",
+          "line": 2417
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "MOVM",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 241
+        }
+      ],
+      "cuasm_forms": {
+        "MOVM_R_R": 3
+      },
+      "cuasm_records": 3,
+      "mesa_methods": [
+        {
+          "name": "OpMovm",
+          "line": 4663
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "MUFU",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 188
+        }
+      ],
+      "cuasm_forms": {
+        "MUFU_R_R": 15,
+        "MUFU_R_cAI": 10,
+        "MUFU_R_FI": 3,
+        "MUFU_R_UR": 8
+      },
+      "cuasm_records": 36,
+      "mesa_methods": [
+        {
+          "name": "OpMuFu",
+          "line": 1168
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "NOP",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 167
+        }
+      ],
+      "cuasm_forms": {
+        "NOP": 2
+      },
+      "cuasm_records": 2,
+      "mesa_methods": [
+        {
+          "name": "OpNop",
+          "line": 4371
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "P2R",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "P2R_R_L_R_II": 8
+      },
+      "cuasm_records": 8,
+      "mesa_methods": [],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "PLOP3",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 253
+        }
+      ],
+      "cuasm_forms": {
+        "PLOP3_P_P_P_P_P_II_II": 9,
+        "PLOP3_P_P_P_P_UP_II_II": 5
+      },
+      "cuasm_records": 14,
+      "mesa_methods": [
+        {
+          "name": "OpPLop3",
+          "line": 2616
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "POPC",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 273
+        }
+      ],
+      "cuasm_forms": {
+        "POPC_R_UR": 3,
+        "POPC_R_R": 4,
+        "POPC_R_cAI": 4
+      },
+      "cuasm_records": 11,
+      "mesa_methods": [
+        {
+          "name": "OpPopC",
+          "line": 2124
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "PRMT",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "PRMT_R_R_II_R": 9,
+        "PRMT_R_R_R_R": 7,
+        "PRMT_R_R_R_II": 1,
+        "PRMT_R_R_R_UR": 7
+      },
+      "cuasm_records": 24,
+      "mesa_methods": [
+        {
+          "name": "OpPrmt",
+          "line": 2448
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "R2P",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "R2P_L_R_II": 8,
+        "R2P_L_R": 2
+      },
+      "cuasm_records": 10,
+      "mesa_methods": [],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "R2UR",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "R2UR_UR_R": 4,
+        "R2UR_P_UR_R": 3
+      },
+      "cuasm_records": 7,
+      "mesa_methods": [
+        {
+          "name": "OpR2UR",
+          "line": 2688
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "RED",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 269
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "atom_global",
+          "line": 283
+        }
+      ],
+      "cuasm_forms": {
+        "RED_dARI_R": 19
+      },
+      "cuasm_records": 19,
+      "mesa_methods": [
+        {
+          "name": "OpAtom",
+          "line": 3777
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "REDUX",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 273
+        }
+      ],
+      "cuasm_forms": {
+        "REDUX_UR_R": 9
+      },
+      "cuasm_records": 9,
+      "mesa_methods": [
+        {
+          "name": "OpRedux",
+          "line": 2705
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "RET",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "inline_single_call",
+          "line": 295
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 432
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 395
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 404
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "translate",
+          "line": 410
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/subroutines.py",
+          "function": "calls",
+          "line": 40
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/subroutines.py",
+          "function": "calls",
+          "line": 51
+        }
+      ],
+      "cuasm_forms": {
+        "RET_R_II": 5
+      },
+      "cuasm_records": 5,
+      "mesa_methods": [],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "S2R",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 231
+        }
+      ],
+      "cuasm_forms": {
+        "S2R_R_L": 16
+      },
+      "cuasm_records": 16,
+      "mesa_methods": [
+        {
+          "name": "OpS2R",
+          "line": 4404
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "S2UR",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 231
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/thread.py",
+          "function": "s2r",
+          "line": 64
+        }
+      ],
+      "cuasm_forms": {
+        "S2UR_UR_L": 5
+      },
+      "cuasm_records": 5,
+      "mesa_methods": [
+        {
+          "name": "OpS2R",
+          "line": 4404
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "SEL",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "track_ssbo",
+          "line": 313
+        }
+      ],
+      "cuasm_forms": {
+        "SEL_R_R_R_P": 9,
+        "SEL_R_R_II_P": 8,
+        "SEL_R_R_cAI_P": 9,
+        "SEL_R_R_UR_P": 8
+      },
+      "cuasm_records": 34,
+      "mesa_methods": [
+        {
+          "name": "OpSel",
+          "line": 2491
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "SGXT",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "SGXT_R_R_II": 7,
+        "SGXT_R_R_R": 7,
+        "SGXT_R_R_UR": 3
+      },
+      "cuasm_records": 17,
+      "mesa_methods": [
+        {
+          "name": "OpSgxt",
+          "line": 2529
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "SHF",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        }
+      ],
+      "cuasm_forms": {
+        "SHF_R_R_II_R": 14,
+        "SHF_R_R_R_R": 15,
+        "SHF_R_R_R_cAI": 13,
+        "SHF_R_R_UR_R": 14,
+        "SHF_R_R_R_II": 9,
+        "SHF_R_R_cAI_R": 15,
+        "SHF_R_R_R_UR": 11
+      },
+      "cuasm_records": 91,
+      "mesa_methods": [
+        {
+          "name": "OpShf",
+          "line": 2141
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "SHFL",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 243
+        }
+      ],
+      "cuasm_forms": {
+        "SHFL_P_R_R_II_II": 9,
+        "SHFL_P_R_R_R_II": 9,
+        "SHFL_P_R_R_II_R": 9,
+        "SHFL_P_R_R_R_R": 9
+      },
+      "cuasm_records": 36,
+      "mesa_methods": [
+        {
+          "name": "OpShfl",
+          "line": 2558
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "STG",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 221
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "global_mem",
+          "line": 147
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "global_mem",
+          "line": 154
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "track_ssbo",
+          "line": 302
+        }
+      ],
+      "cuasm_forms": {
+        "STG_dARI_R": 16,
+        "STG_ARI_R": 11,
+        "STG_ARURI_R": 9,
+        "STG_AURI_R": 3
+      },
+      "cuasm_records": 39,
+      "mesa_methods": [
+        {
+          "name": "OpSt",
+          "line": 3625
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "STL",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 235
+        }
+      ],
+      "cuasm_forms": {
+        "STL_ARI_R": 11,
+        "STL_AURI_R": 8,
+        "STL_ARURI_R": 4
+      },
+      "cuasm_records": 23,
+      "mesa_methods": [
+        {
+          "name": "OpSt",
+          "line": 3625
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "STS",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 233
+        }
+      ],
+      "cuasm_forms": {
+        "STS_ARI_R": 13,
+        "STS_ARURI_R": 14,
+        "STS_AI_R": 8,
+        "STS_AURI_R": 8
+      },
+      "cuasm_records": 43,
+      "mesa_methods": [
+        {
+          "name": "OpSt",
+          "line": 3625
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "SUATOM",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/tex.py",
+          "function": "image",
+          "line": 53
+        }
+      ],
+      "cuasm_forms": {},
+      "cuasm_records": 0,
+      "mesa_methods": [
+        {
+          "name": "OpSuAtom",
+          "line": 3391
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "SULD",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "SULD_R_ARI_R": 14,
+        "SULD_R_ARI_UR_II": 14,
+        "SULD_R_ARI_II_II": 15
+      },
+      "cuasm_records": 43,
+      "mesa_methods": [
+        {
+          "name": "OpSuLd",
+          "line": 3321
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "SURED",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/tex.py",
+          "function": "image",
+          "line": 53
+        }
+      ],
+      "cuasm_forms": {},
+      "cuasm_records": 0,
+      "mesa_methods": [
+        {
+          "name": "OpSuAtom",
+          "line": 3391
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "SUST",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "SUST_ARI_R_II_II": 18,
+        "SUST_ARI_R_R": 17,
+        "SUST_ARI_R_UR_II": 17
+      },
+      "cuasm_records": 52,
+      "mesa_methods": [
+        {
+          "name": "OpSuSt",
+          "line": 3359
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "TEX",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 225
+        }
+      ],
+      "cuasm_forms": {
+        "TEX_R_R_R_R_II_II_L_II": 9,
+        "TEX_R_R_R_R_UR_II_L": 14,
+        "TEX_R_R_R_R_L": 14,
+        "TEX_R_R_R_R_II_II_L": 17
+      },
+      "cuasm_records": 54,
+      "mesa_methods": [
+        {
+          "name": "OpTex",
+          "line": 2887
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "TLD",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 227
+        }
+      ],
+      "cuasm_forms": {
+        "TLD_R_R_R_II_II_L_II": 6,
+        "TLD_R_R_R_R_L": 11,
+        "TLD_R_R_R_R_UR_II_L": 11,
+        "TLD_R_R_R_R_II_II_L": 12,
+        "TLD_R_R_R_UR_II_L": 4,
+        "TLD_R_R_R_II_II_L": 6
+      },
+      "cuasm_records": 50,
+      "mesa_methods": [
+        {
+          "name": "OpTld",
+          "line": 2956
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "TLD4",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 225
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/tex.py",
+          "function": "tex",
+          "line": 123
+        }
+      ],
+      "cuasm_forms": {
+        "TLD4_R_R_R_R_UR_II_L": 9,
+        "TLD4_R_R_R_R_L": 9,
+        "TLD4_R_R_R_R_II_II_L": 9
+      },
+      "cuasm_records": 27,
+      "mesa_methods": [
+        {
+          "name": "OpTld4",
+          "line": 3032
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "TMML",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 229
+        }
+      ],
+      "cuasm_forms": {},
+      "cuasm_records": 0,
+      "mesa_methods": [
+        {
+          "name": "OpTmml",
+          "line": 3092
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "TXQ",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "TXQ_R_R_R_L_II": 4,
+        "TXQ_R_R_R_L_UR_II_II": 5,
+        "TXQ_R_R_R_L_II_II_II": 5
+      },
+      "cuasm_records": 14,
+      "mesa_methods": [
+        {
+          "name": "OpTxq",
+          "line": 3198
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "UBREV",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "UBREV_UR_UR": 3
+      },
+      "cuasm_records": 3,
+      "mesa_methods": [
+        {
+          "name": "OpBRev",
+          "line": 1547
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "UFLO",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "UFLO_UR_UR": 4
+      },
+      "cuasm_records": 4,
+      "mesa_methods": [
+        {
+          "name": "OpFlo",
+          "line": 1561
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "UIADD3",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "track_ssbo",
+          "line": 295
+        }
+      ],
+      "cuasm_forms": {
+        "UIADD3_UR_UR_II_UR": 9,
+        "UIADD3_UR_UR_UR_UR": 9,
+        "UIADD3_UR_UP_UR_UR_UR": 8,
+        "UIADD3_UR_UR_UR_UR_UP_UP": 12,
+        "UIADD3_UR_UP_UR_II_UR": 7,
+        "UIADD3_UR_UR_II_UR_UP_UP": 8,
+        "UIADD3_UR_UP_UP_UR_UR_UR": 8,
+        "UIADD3_UR_UP_UP_UR_II_UR": 5
+      },
+      "cuasm_records": 66,
+      "mesa_methods": [
+        {
+          "name": "OpIAdd3",
+          "line": 1595
+        },
+        {
+          "name": "OpIAdd3X",
+          "line": 1651
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "UIMAD",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "track_ssbo",
+          "line": 295
+        }
+      ],
+      "cuasm_forms": {
+        "UIMAD_UR_UR_UR_UR": 9,
+        "UIMAD_UR_UR_II_UR": 10,
+        "UIMAD_UR_UR_UR_II": 6,
+        "UIMAD_UR_UP_UR_II_UR": 2,
+        "UIMAD_UR_UR_II_UR_UP": 3,
+        "UIMAD_UR_UP_UR_UR_UR": 1,
+        "UIMAD_UR_UR_UR_UR_UP": 1
+      },
+      "cuasm_records": 32,
+      "mesa_methods": [
+        {
+          "name": "OpIMad",
+          "line": 1751
+        },
+        {
+          "name": "OpIMad64",
+          "line": 1783
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "UISETP",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/alu.py",
+          "function": "setp",
+          "line": 20
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 212
+        }
+      ],
+      "cuasm_forms": {
+        "UISETP_UP_UP_UR_UR_UP": 15,
+        "UISETP_UP_UP_UR_UR_UP_UP": 11,
+        "UISETP_UP_UP_UR_II_UP": 13
+      },
+      "cuasm_records": 39,
+      "mesa_methods": [
+        {
+          "name": "OpISetP",
+          "line": 1866
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "ULDC",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 219
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "track_ssbo",
+          "line": 289
+        }
+      ],
+      "cuasm_forms": {
+        "ULDC_UR_cAI": 9,
+        "ULDC_UR_cAURI": 8
+      },
+      "cuasm_records": 17,
+      "mesa_methods": [
+        {
+          "name": "OpLdc",
+          "line": 3505
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "ULEA",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "track_ssbo",
+          "line": 295
+        }
+      ],
+      "cuasm_forms": {
+        "ULEA_UR_UP_UR_UR_II": 8,
+        "ULEA_UR_UR_UR_UR_II_UP": 8,
+        "ULEA_UR_UR_UR_UR_II": 6,
+        "ULEA_UR_UR_II_II": 6,
+        "ULEA_UR_UR_UR_II": 9,
+        "ULEA_UR_UR_UR_II_UP": 6,
+        "ULEA_UR_UR_II_UR_II": 5,
+        "ULEA_UR_UR_II_II_UP": 4,
+        "ULEA_UR_UP_UR_UR_UR_II": 5,
+        "ULEA_UR_UP_UR_II_II": 6,
+        "ULEA_UR_UR_II_UR_II_UP": 5
+      },
+      "cuasm_records": 68,
+      "mesa_methods": [
+        {
+          "name": "OpLea",
+          "line": 1923
+        },
+        {
+          "name": "OpLeaX",
+          "line": 1979
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "ULOP3",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 266
+        }
+      ],
+      "cuasm_forms": {
+        "ULOP3_UR_UR_II_UR_II_UP": 7,
+        "ULOP3_UR_UR_UR_UR_II_UP": 7,
+        "ULOP3_UP_UR_UR_II_UR_II_UP": 4,
+        "ULOP3_UP_UR_UR_UR_UR_II_UP": 5
+      },
+      "cuasm_records": 23,
+      "mesa_methods": [
+        {
+          "name": "OpLop3",
+          "line": 2064
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "UMOV",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 247
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/mem.py",
+          "function": "track_ssbo",
+          "line": 295
+        }
+      ],
+      "cuasm_forms": {
+        "UMOV_UR_UR": 4,
+        "UMOV_UR_II": 4
+      },
+      "cuasm_records": 8,
+      "mesa_methods": [
+        {
+          "name": "OpMov",
+          "line": 2417
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "UP2UR",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {},
+      "cuasm_records": 0,
+      "mesa_methods": [],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "UPLOP3",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "UPLOP3_UP_UP_UP_UP_UP_II_II": 4
+      },
+      "cuasm_records": 4,
+      "mesa_methods": [
+        {
+          "name": "OpPLop3",
+          "line": 2616
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "UPOPC",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 271
+        }
+      ],
+      "cuasm_forms": {
+        "UPOPC_UR_UR": 3
+      },
+      "cuasm_records": 3,
+      "mesa_methods": [
+        {
+          "name": "OpPopC",
+          "line": 2124
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "USEL",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 214
+        }
+      ],
+      "cuasm_forms": {
+        "USEL_UR_UR_UR_UP": 7,
+        "USEL_UR_UR_II_UP": 7
+      },
+      "cuasm_records": 14,
+      "mesa_methods": [
+        {
+          "name": "OpSel",
+          "line": 2491
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "USHF",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 264
+        }
+      ],
+      "cuasm_forms": {
+        "USHF_UR_UR_II_UR": 11,
+        "USHF_UR_UR_UR_UR": 10,
+        "USHF_UR_UR_UR_II": 5
+      },
+      "cuasm_records": 26,
+      "mesa_methods": [
+        {
+          "name": "OpShf",
+          "line": 2141
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "VOTE",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 245
+        }
+      ],
+      "cuasm_forms": {
+        "VOTE_R_P_P": 6,
+        "VOTE_P_P": 5
+      },
+      "cuasm_records": 11,
+      "mesa_methods": [
+        {
+          "name": "OpVote",
+          "line": 4465
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "VOTEU",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 245
+        },
+        {
+          "file": "upstream/sm86/translate/glsl/thread.py",
+          "function": "vote",
+          "line": 175
+        }
+      ],
+      "cuasm_forms": {
+        "VOTEU_UR_UP_P": 5,
+        "VOTEU_UP_P": 5
+      },
+      "cuasm_records": 10,
+      "mesa_methods": [
+        {
+          "name": "OpVote",
+          "line": 4465
+        }
+      ],
+      "implemented_proof": false
+    },
+    {
+      "opcode": "WARPSYNC",
+      "consumer": [
+        {
+          "file": "upstream/sm86/translate/glsl/core.py",
+          "function": "insn",
+          "line": 167
+        }
+      ],
+      "cuasm_forms": {
+        "WARPSYNC_II": 2,
+        "WARPSYNC_R": 3
+      },
+      "cuasm_records": 5,
+      "mesa_methods": [
+        {
+          "name": "OpWarpSync",
+          "line": 4234
+        }
+      ],
+      "implemented_proof": false
+    }
+  ],
+  "qualification": "Source availability does not prove compatible forms, mappings, or production coverage."
+}

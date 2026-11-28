@@ -1,0 +1,29 @@
+{
+  "path": "mkw-sm86-cli-support-v1.zip",
+  "bytes": 63227,
+  "sha256": "1c79d30594951495f210a349da05aabe0e240f0189dba87c95a78da73a4500ce",
+  "files": 26,
+  "source_modules": 13,
+  "overlays": [
+    {
+      "path": "sm86/translate/frontend/program.py",
+      "before_sha256": "4e96445c14206a44ce4531ab5688c035de651981fa896b0441507d57db8e6a36",
+      "after_sha256": "93050ad0c4eee1908eca71cae5f586133f29ab9e0ced6bf4937a2c2246ec74a2"
+    },
+    {
+      "path": "tools/prepare/shaderstep.py",
+      "before_sha256": "1b5e8a528ff37163ed43381ff223108d0e91471c92c9698e988702572e9df788",
+      "after_sha256": "4ffba8c1d68599ca841fb128e1d02b55cd4f8d987858da7c5a16d278112a6d66"
+    },
+    {
+      "path": "tools/shaders/extract.py",
+      "before_sha256": "aed28f031c1af522d2c212c0119d844ad912a32803fce454601ced30ebcbc7e0",
+      "after_sha256": "855b4b9e4a8d1301ebfca7ccd86378131f4910eb9dfbbfe523f6a520d14d331f"
+    },
+    {
+      "path": "tools/shaders/translate.py",
+      "before_sha256": "f4a58cf8751925e8eb756e479c952bd3134c7ebdf29bc6ea0a7cc0eba415708b",
+      "after_sha256": "dcb01d55d36ba0cf2dae4cfab57976eb9739723a70b1c5ff3938a19af3c0434c"
+    }
+  ]
+}

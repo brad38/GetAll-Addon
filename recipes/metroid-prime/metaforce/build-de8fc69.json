@@ -1,0 +1,13 @@
+{
+  "schema_version": 5,
+  "project_id": "metaforce",
+  "tag": "build-de8fc69",
+  "source_url": "https://github.com/AxioDL/metaforce/commit/de8fc69bd7f345d6cf5f0c8fc2798295e22522d3",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Selecione sua ISO ou GCM original de Metroid Prime para GameCube, edição americana GM8E01 revisão 0. O All-Fix verifica o disco e compila o Metaforce. O jogo lê a mídia selecionada sem modificá-la; mantenha esse arquivo disponível para Jogar."
+}

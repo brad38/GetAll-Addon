@@ -1,5 +1,103 @@
 # Checkpoint do GetAll-Addon
 
+## Continuidade — SDK 1.5.69, fontes e prévia verificadas em 27/11/2026
+
+**142/148 fluxos integrais implementados**, 28 acima do checkpoint de 114.
+Metaforce e a preparação automática de Mario Kart World completam esta
+rodada. Há **um homologado histórico, 141 integrais aguardando mídia original,
+zero parciais e seis sem receita**. Nenhum novo primeiro boot comercial foi
+comprovado. O índice tem **145 receitas para 142 projetos**: 144 entradas
+experimentais e uma homologação histórica.
+
+Desktop [`921295d`](https://github.com/brad38/Allfix/commit/921295de12349e726f7ca21a5edd8a8ecee123d8)
+e GetAll [`37fbc54`](https://github.com/brad38/GetAll-Addon/commit/37fbc54ee2d137952d8f1ca2b06f3602410870c9)
+foram confirmados no GitHub. Os CIs
+[Desktop 46089235002](https://github.com/brad38/Allfix/actions/runs/46089235002)
+e [GetAll 46089870630](https://github.com/brad38/GetAll-Addon/actions/runs/46089870630)
+passaram. As PRs continuam draft, sem merge, release pública ou mudança da
+instalação corrente. A documentação de fechamento pode avançar na mesma
+branch; os pins de código e receitas da prévia permanecem imutáveis.
+
+BUILD31d: **0 erros, 0 avisos, 1.967 verificações aprovadas**; parser C#
+**145/145**; Metaforce Policy **52**; serviços Store reais **20**. O DLL testado
+nos serviços é idêntico ao DLL auditado dentro do executável distribuído.
+As provas nativas Metaforce e MKW foram preservadas; fixtures, `--help` e
+SPIR-V validado não foram convertidos em homologação com mídia comercial.
+Resultados e reprodução: [integração SDK169](validations/sdk169-integration/README.md).
+
+A [prévia completa SDK169](validations/sdk169-preview/README.md) está em
+`publish-getall-sdk169-20261127`, com Desktop 3.0.0, SDK 1.5.69 e addon
+1.5.74. Foram verificados 79 arquivos listados no manifesto, 35 recursos,
+71 avisos e 12 propriedades. As prévias SDK167 e SDK168 foram preservadas.
+
+Os seis restantes são Courage Reborn (fonte inacessível), Project 2099
+(runtime/contrato de preparação indisponíveis), MKDD/TMC/MML1 base
+(decompilações para console, sem port Windows correspondente) e Wind Waker
+Recomp (sucessor BlueWake já coberto). Os 148 IDs foram mantidos.
+[Contratos e evidência](validations/remaining-projects-20261127/README.md).
+
+A [limpeza contínua](validations/sdk169-integration/STORAGE.md) mantém fontes,
+receitas, scripts, logs e resultados, reutiliza caches/toolchains e remove
+somente descartáveis comprovados. Mídia original, dados pessoais e dependências
+em uso permanecem preservados. As seções seguintes conservam o histórico.
+
+---
+
+## Continuidade — SDK 1.5.68, fontes publicadas e prévia completa em 27/11/2026
+
+Branch `work/complete-install-flows-20261127`, a partir de GetAll `f0942a6`
+e Desktop `c209adc`, sem merge em main. O checkpoint confirmado registra
+**140/148 fluxos integrais**, vinte e seis acima de 114: sm64ex, Render96ex, sm64rt,
+Strikers Wii, WipEout, Dr. Mario, Double Dash C++, Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey, LAS, GOW 0.4.0, TotK, DKB, GT5, RyGT, Spartan, SSX, GTA Stories, FH1 ReImagined, Pinyon Shift, Shadow of the Colossus e Savage Wind. Há um
+homologado histórico, 139 integrais aguardando mídia, um parcial e sete sem
+receita; as duas retomadas anteriormente adiadas foram concluídas. Nenhum novo primeiro boot foi
+comprovado. O índice tem **143 receitas para 141 projetos**, com uma entrada
+validated histórica e 142 experimentais.
+
+O candidato final usa SDK **1.5.68**. SotC e Savage Wind exigem esse mínimo
+no índice, pois a prévia138/SDK 1.5.67 não contém o perfil automático SotC.
+A versão nova mantém explícita essa diferença de capacidade.
+
+O GitHub confirmou Desktop `8ba34eb51ee0ab93accef3da5e1689c68825977d`
+na PR3 draft, CI Windows [46059165665](https://github.com/brad38/Allfix/actions/runs/46059165665)
+aprovado, e GetAll `5b7fea8fb8d2b77df5a6cfd7e9efb6b463fba75b`
+na PR20 draft, CI [46059162398](https://github.com/brad38/GetAll-Addon/actions/runs/46059162398)
+aprovado. Ambos estão na branch de desenvolvimento acima. As recusas de envio
+registradas anteriormente são históricas; não há novo merge ou release.
+O checkpoint139 mantém os 148 IDs e o histórico138.
+FH1 concluiu a prova nativa com 22/22 verificações em 503,188 s. Pinyon
+também concluiu seu provider: SDK, 78 objetos públicos, três renderizadores,
+DLSS e entrada Windows oficiais. SotC passou em 33 verificações de política e
+23 nativas, incluindo Run, retomada, cinco scripts oficiais, publicação,
+registro e Jogar. Savage Wind passou em 46 verificações de política e 26
+nativas, incluindo swgen/Zig oficiais, transação, recuperação do kit e
+preservação de saves. Restam oito dependências externas identificadas.
+
+BUILD30 SDK 1.5.68: **0 erros, 0 avisos, 1.866 checks PASS, zero falhas**
+(regressão em 13,515 s). O parser30 aprovou **143/143 receitas** do snapshot
+final em 11,547 s. O parser28 também havia aprovado 143/143 do GetAll
+publicado `9caef66`; não foi repetido porque o parser não mudou. WipEout passou
+pela transação Run/Resume/registro/Jogar com compilação oficial e mídia
+sintética. Dr. Mario passou pela preparação nativa real, Python e geradores.
+Double Dash C++ passou pelo runtime completo e execução SDL/C++20 sem Visual
+Studio. Burnout passou pelo fluxo e pelos quatro testes D3D8 reais. Evidências
+e limites estão em [SDK 1.5.67](validations/sdk167-flow-completion.md).
+
+A prévia Windows completa dos 140 está em `publish-getall-sdk168-20261127`,
+com Desktop 3.0.0, SDK 1.5.68 e addon 1.5.73 fixado ao GetAll publicado
+`5b7fea8`. Inclui SotC v9 e o novo fluxo Savage Wind. A montagem reutilizou
+o executável auditado, sem recompilação, e verificou 74 arquivos, 34 recursos,
+66 avisos e 12 propriedades. A prévia138/SDK 1.5.67 foi preservada.
+Pins, hashes, recibos e reprodução estão em [prévia SDK168](validations/sdk168-preview/README.md).
+
+A instrução atual do usuário exige limpeza contínua automática de artefatos
+comprovadamente descartáveis após validação, preservando fontes, receitas,
+scripts, logs, resultados, mídia original e dependências ativas. Ela substitui
+a proibição histórica de limpar intermediários de rodadas anteriores.
+Os oito restantes estão em investigação: a descoberta de uma fonte arquivada
+ou de um decoder alternativo só altera a contagem após implementação e prova.
+As seções abaixo são históricas e mantêm as contagens da sua data.
+
 ## Integração da continuidade com SM64Plus — 27/11/2026
 
 Branch isolada `work/getall-integration-20261127`: combina os commits

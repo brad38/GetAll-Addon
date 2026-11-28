@@ -1,0 +1,222 @@
+{
+  "format": 1,
+  "normalization": "UTF-8 without BOM, LF; originals retained on Windows",
+  "files": [
+    {
+      "path": "sdk169-preview/audit-resources.log",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004740Z-d8548a9f\\audit-resources.log",
+      "source_bytes": 128,
+      "source_sha256": "196a3ac5eeb586c5cb67c204560a9e6e0bc4074070909cd58f579c9f3bad76d2",
+      "source_encoding": "utf-16",
+      "bytes": 62,
+      "sha256": "6f3cde89d9b50041b1adfa8ef471fdaaa32d955c8172024d44af800ff2efccd4"
+    },
+    {
+      "path": "sdk169-preview/audit/bundle.json",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004740Z-d8548a9f\\assemblies\\bundle.json",
+      "source_bytes": 446,
+      "source_sha256": "337892bced791a2e289b178ca8da6098b1b3f9af2a38f74c3018c2ac2dbfb0c5",
+      "source_encoding": "utf-8",
+      "bytes": 446,
+      "sha256": "337892bced791a2e289b178ca8da6098b1b3f9af2a38f74c3018c2ac2dbfb0c5"
+    },
+    {
+      "path": "sdk169-preview/audit/resources.json",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004740Z-d8548a9f\\assemblies\\resources.json",
+      "source_bytes": 6629,
+      "source_sha256": "8e9164e839357c8eb5e5b9a88bed56b0bd46d6ce5b4aeae7b419ffe56a251fc5",
+      "source_encoding": "utf-8",
+      "bytes": 6439,
+      "sha256": "2797ada70fe209790fd98bf145925e0436683623ce8a4bd79c8b85b5e39dfcd2"
+    },
+    {
+      "path": "sdk169-preview/desktop-candidate-result.json",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004740Z-d8548a9f\\desktop-candidate-result.json",
+      "source_bytes": 500,
+      "source_sha256": "83c3e81e50a5fc7f0f8cf2dffcc7480160d76d4b3c4fd28a41f74a24c3ab23b1",
+      "source_encoding": "utf-8",
+      "bytes": 491,
+      "sha256": "2d2bbec02a7b78b1ee7b77335b4db192af9c4beb105b91cff98d6f4340ea587e"
+    },
+    {
+      "path": "sdk169-preview/desktop-candidate/ARTIFACT-MANIFEST.json",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\ARTIFACT-MANIFEST.json",
+      "source_bytes": 15175,
+      "source_sha256": "aa85bbe915f2a8d975a8fa0139dea79d145d8c0a0107464941505a7f528a01e3",
+      "source_encoding": "utf-8",
+      "bytes": 15175,
+      "sha256": "aa85bbe915f2a8d975a8fa0139dea79d145d8c0a0107464941505a7f528a01e3"
+    },
+    {
+      "path": "sdk169-preview/desktop-candidate/RESOURCE-AUDIT.json",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\RESOURCE-AUDIT.json",
+      "source_bytes": 6430,
+      "source_sha256": "127cfc144b14b9a784c56901b1346872d5013d71d68e20e67519a6046e60dd59",
+      "source_encoding": "utf-8",
+      "bytes": 6430,
+      "sha256": "127cfc144b14b9a784c56901b1346872d5013d71d68e20e67519a6046e60dd59"
+    },
+    {
+      "path": "sdk169-preview/desktop-candidate/SHA256SUMS.txt",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\SHA256SUMS.txt",
+      "source_bytes": 8670,
+      "source_sha256": "34b27a36e0e7a8090b6f3681086e99fca4a9e09c1dbe49f8a95bce9f04a87275",
+      "source_encoding": "utf-8",
+      "bytes": 8670,
+      "sha256": "34b27a36e0e7a8090b6f3681086e99fca4a9e09c1dbe49f8a95bce9f04a87275"
+    },
+    {
+      "path": "sdk169-preview/dotnet-version.log",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004740Z-d8548a9f\\dotnet-version.log",
+      "source_bytes": 20,
+      "source_sha256": "44a70416f89ede2c3912a991136fe34b4bdaa7bc929361f17814f226f27af412",
+      "source_encoding": "utf-16",
+      "bytes": 8,
+      "sha256": "02001ed6d93a3044be97ce543dc812ae0bd32c45046a71286cd34798bfed45ca"
+    },
+    {
+      "path": "sdk169-preview/effective-desktop-inputs.json",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004740Z-d8548a9f\\effective-desktop-inputs.json",
+      "source_bytes": 37299,
+      "source_sha256": "49be39227a7b72ccbf71173828defc189fe0dd578e36968e3b569c137673b3fe",
+      "source_encoding": "utf-8",
+      "bytes": 37299,
+      "sha256": "49be39227a7b72ccbf71173828defc189fe0dd578e36968e3b569c137673b3fe"
+    },
+    {
+      "path": "sdk169-preview/extract-bundle.log",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004740Z-d8548a9f\\extract-bundle.log",
+      "source_bytes": 64,
+      "source_sha256": "38db46d4384b208794febb7872992bc6d3eae5ae837a650d2b591a63dd6e7006",
+      "source_encoding": "utf-16",
+      "bytes": 30,
+      "sha256": "ba7fb04ded113ec4633e0b09c4eb3618d18fc215c120c0c435ec25889f7acf79"
+    },
+    {
+      "path": "sdk169-preview/finish-desktop.log",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004740Z-d8548a9f\\finish-desktop.log",
+      "source_bytes": 674,
+      "source_sha256": "1b8c3f38fbc3b403143cb398a5b1c4faefeb7b7a49c92c9d137df42e571dc2be",
+      "source_encoding": "utf-16",
+      "bytes": 331,
+      "sha256": "eb22cb5b727160d66b78fde81f11c2d75c2551102b6f8ee3ffdace379fe59f49"
+    },
+    {
+      "path": "sdk169-preview/preflight-before-notice-relocation/failure.txt",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004517Z-12dcd552\\failure.txt",
+      "source_bytes": 172,
+      "source_sha256": "908dea954a097ce49dbd5cc828f7482afe07d73ac6c9e0af5305a3d4460f12a0",
+      "source_encoding": "utf-8",
+      "bytes": 172,
+      "sha256": "908dea954a097ce49dbd5cc828f7482afe07d73ac6c9e0af5305a3d4460f12a0"
+    },
+    {
+      "path": "sdk169-preview/preflight-before-notice-relocation/preflight.log",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004517Z-12dcd552\\preflight.log",
+      "source_bytes": 4112,
+      "source_sha256": "ee787b3f7dc85b35fac54feb86448d192b8d0d9b38466d0f26337954b47862e2",
+      "source_encoding": "utf-16",
+      "bytes": 2024,
+      "sha256": "8119cc4ba1144d1d5a9a0246dcf7fa8b4b15e3d3025d89aefc5a76e75f2dd6df"
+    },
+    {
+      "path": "sdk169-preview/preflight-before-notice-relocation/run-request.json",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004517Z-12dcd552\\run-request.json",
+      "source_bytes": 644,
+      "source_sha256": "f144f4204be093cff8a1810c4807819c99c999a9a1ef9a034fc514a36f6ac50c",
+      "source_encoding": "utf-8",
+      "bytes": 634,
+      "sha256": "ebb865360902ce3516f69702638635aa69289cfd2a365c4ab5b4ad673b6ae523"
+    },
+    {
+      "path": "sdk169-preview/preflight.log",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004740Z-d8548a9f\\preflight.log",
+      "source_bytes": 414,
+      "source_sha256": "84c863a3d4325663568dd71355488b53a907b14089476c1965929fa40cf7ec17",
+      "source_encoding": "utf-16",
+      "bytes": 203,
+      "sha256": "6964b29aa91f8e26a3a01937a60b92ecb3e12d284a2b1550537ca8858d1068d3"
+    },
+    {
+      "path": "sdk169-preview/publication-driver-notice-relocation.log",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\publication-driver-notice-relocation.log",
+      "source_bytes": 1655,
+      "source_sha256": "2208ac00fef5a43e644a37dcc13e6f605b152000d43b1439b54bced2a372f1a9",
+      "source_encoding": "utf-8",
+      "bytes": 1634,
+      "sha256": "0da76d231acba2f1fef0deb7ee4b1a3822df0dc9b884c1acd6859b3d4731961b"
+    },
+    {
+      "path": "sdk169-preview/publish-desktop.log",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004740Z-d8548a9f\\publish-desktop.log",
+      "source_bytes": 1404,
+      "source_sha256": "f7c95868260fe44a20135df1e94b3fee10adadd633446fc2214094ebe4f37203",
+      "source_encoding": "utf-16",
+      "bytes": 695,
+      "sha256": "3d7ab7ed7aaa025298202d8ab31e803c2085f6e9e1027da0e1f6d582dc06e072"
+    },
+    {
+      "path": "sdk169-preview/run-request.json",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004740Z-d8548a9f\\run-request.json",
+      "source_bytes": 644,
+      "source_sha256": "5eca19da5fce3319d856fcc42c7eda7a524b211b56ef15459c6d66f329584987",
+      "source_encoding": "utf-8",
+      "bytes": 634,
+      "sha256": "61c399f8b120705c866a4f4a94bbc7f9ba3ca8db3570662eb6e1e495038ee33a"
+    },
+    {
+      "path": "sdk169-preview/source-relocation-inventory.json",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\source-relocation-inventory.json",
+      "source_bytes": 14240,
+      "source_sha256": "ca20bf8e0480cad678a6b969bc1c12fb0f0d0f92b48da86887d439566b5126ca",
+      "source_encoding": "utf-8",
+      "bytes": 14240,
+      "sha256": "ca20bf8e0480cad678a6b969bc1c12fb0f0d0f92b48da86887d439566b5126ca"
+    },
+    {
+      "path": "sdk169-preview/verify-desktop-final.log",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\sdk169-finalization\\run-20261128T004740Z-d8548a9f\\verify-desktop-final.log",
+      "source_bytes": 422,
+      "source_sha256": "0f602dccf9c9348cbd10ba42d191ad9981b5edd9a2e5a44bd4858c0602505c68",
+      "source_encoding": "utf-16",
+      "bytes": 207,
+      "sha256": "73073283b3fd83faa93b7aa3597f449ddb38fd1b45adb3e307e643f8f2a78576"
+    },
+    {
+      "path": "store-assembly-proof/build.log",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\store-assembly-proof-sdk169-result\\build.log",
+      "source_bytes": 456,
+      "source_sha256": "6e3eb938c13334569cc46efbd58f37aabbc153cebc7bfc73f5de64ed3132c1ea",
+      "source_encoding": "utf-8",
+      "bytes": 447,
+      "sha256": "b2b77877c2f70edcd5bfe929b890b30c64b5cf4677a0a5f6b53137137045347a"
+    },
+    {
+      "path": "store-assembly-proof/dotnet-version.log",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\store-assembly-proof-sdk169-result\\dotnet-version.log",
+      "source_bytes": 9,
+      "source_sha256": "edd0ad505c4a86b69a22139ead7657ff889802887824385e6334d544555dbbb7",
+      "source_encoding": "utf-8",
+      "bytes": 8,
+      "sha256": "02001ed6d93a3044be97ce543dc812ae0bd32c45046a71286cd34798bfed45ca"
+    },
+    {
+      "path": "store-assembly-proof/result.json",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\store-assembly-proof-sdk169-result\\result.json",
+      "source_bytes": 3868,
+      "source_sha256": "22804295925878e3a43bb1173109bd68a5728dc48db63723a1347862abd8c69f",
+      "source_encoding": "utf-8",
+      "bytes": 3769,
+      "sha256": "7400a11b62a76447229478ba2d94f152659ef6a733d23296f07bb81d6cddbbfe"
+    },
+    {
+      "path": "store-assembly-proof/store-services.log",
+      "windows_source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\store-assembly-proof-sdk169-result\\store-services.log",
+      "source_bytes": 2763,
+      "source_sha256": "8ed2c023d757572c0c519fcd0b61200dbdf17ddf54c21e7d6b899aac4eda790c",
+      "source_encoding": "utf-8",
+      "bytes": 2741,
+      "sha256": "e554123875b0324d248f9400004910fce479174945591593d0e92694a4d6f932"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127\\Tests\\AddonInfrastructure\\MkwCliIntegration.cs",
+  "before_sha256": "22440e4665572c1730dcff832814c39a4a9d069f09dd1d2bea8336731999612c",
+  "after_sha256": "39c54d95b2b68c4b91ae160b3bdb5aa010c7198b38954307b24e2f9d51af01ea",
+  "diff": "+using AllFix.Addons;"
+}

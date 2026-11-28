@@ -12,7 +12,7 @@
     "RyGT-ci-889c5a7e/SHA256SUMS.txt"
   ],
   "inputs": [],
-  "manual_steps": "Preparação apenas. Use seu próprio dump PS4 Gran Turismo 7 CUSA24769 e módulos de firmware obtidos legitimamente. A conversão e configuração ficam a cargo do usuário no launcher oficial; não execute automaticamente nem instale patches ou serviços.",
+  "manual_steps": "Use Retomar e selecione sua pasta original de Gran Turismo 7 PS4 CUSA24769 versão 01.00, os módulos e as fontes do seu próprio firmware PS4. O GetAll prepara o jogo automaticamente com as ferramentas privadas do projeto. Ao concluir, use Jogar e mantenha os originais selecionados no mesmo local. Nenhum jogo ou firmware está incluído.",
   "build_profile": "rygt-2026-11-23-prepare",
   "preparation_media": [
     {

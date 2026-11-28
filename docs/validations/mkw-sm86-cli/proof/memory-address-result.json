@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "authored_cli_variants": 11,
+  "native_comparisons": 22132,
+  "normal_cli_exit": 0,
+  "compile_exit": 0,
+  "native_evaluate_exit": 0,
+  "input_sha256": "cbda46d61456f4db48cfec00e4dea9f4d46fc240af6c42bda8995f1721d8b0f4",
+  "generated_cpp_sha256": "5dcc541c1eadb272b34f2e1f4d2d97437b4d5818f4c14a3651233af3be3481b6",
+  "known_regression": {
+    "address": "0x100000100",
+    "offset": -256,
+    "expected": "0x100000000",
+    "old_result": "0x200000000"
+  },
+  "binary_fixtures_retained": false,
+  "game_boot": false,
+  "variants": [
+    {
+      "offset": -8388608,
+      "word": "000fc400001e09008000000004067381",
+      "sass": "LDG.E R6, [R4+-0x800000]",
+      "emitted_address": "uint gc, gl = uaddCarry(r4, 0xff800000u, gc), gh = r5 + gc - 1u;"
+    },
+    {
+      "offset": -65536,
+      "word": "000fc400001e0900ff00000004067381",
+      "sass": "LDG.E R6, [R4+-0x10000]",
+      "emitted_address": "uint gc, gl = uaddCarry(r4, 0xffff0000u, gc), gh = r5 + gc - 1u;"
+    },
+    {
+      "offset": -256,
+      "word": "000fc400001e0900ffff000004067381",
+      "sass": "LDG.E R6, [R4+-0x100]",
+      "emitted_address": "uint gc, gl = uaddCarry(r4, 0xffffff00u, gc), gh = r5 + gc - 1u;"
+    },
+    {
+      "offset": -16,
+      "word": "000fc400001e0900fffff00004067381",
+      "sass": "LDG.E R6, [R4+-0x10]",
+      "emitted_address": "uint gc, gl = uaddCarry(r4, 0xfffffff0u, gc), gh = r5 + gc - 1u;"
+    },
+    {
+      "offset": -1,
+      "word": "000fc400001e0900ffffff0004067381",
+      "sass": "LDG.E R6, [R4+-0x1]",
+      "emitted_address": "uint gc, gl = uaddCarry(r4, 0xffffffffu, gc), gh = r5 + gc - 1u;"
+    },
+    {
+      "offset": 0,
+      "word": "000fc400001e09000000000004067381",
+      "sass": "LDG.E R6, [R4]",
+      "emitted_address": "uint gc, gl = uaddCarry(r4, 0x0u, gc), gh = r5 + gc;"
+    },
+    {
+      "offset": 1,
+      "word": "000fc400001e09000000010004067381",
+      "sass": "LDG.E R6, [R4+0x1]",
+      "emitted_address": "uint gc, gl = uaddCarry(r4, 0x1u, gc), gh = r5 + gc;"
+    },
+    {
+      "offset": 16,
+      "word": "000fc400001e09000000100004067381",
+      "sass": "LDG.E R6, [R4+0x10]",
+      "emitted_address": "uint gc, gl = uaddCarry(r4, 0x10u, gc), gh = r5 + gc;"
+    },
+    {
+      "offset": 256,
+      "word": "000fc400001e09000001000004067381",
+      "sass": "LDG.E R6, [R4+0x100]",
+      "emitted_address": "uint gc, gl = uaddCarry(r4, 0x100u, gc), gh = r5 + gc;"
+    },
+    {
+      "offset": 65536,
+      "word": "000fc400001e09000100000004067381",
+      "sass": "LDG.E R6, [R4+0x10000]",
+      "emitted_address": "uint gc, gl = uaddCarry(r4, 0x10000u, gc), gh = r5 + gc;"
+    },
+    {
+      "offset": 8388607,
+      "word": "000fc400001e09007fffff0004067381",
+      "sass": "LDG.E R6, [R4+0x7fffff]",
+      "emitted_address": "uint gc, gl = uaddCarry(r4, 0x7fffffu, gc), gh = r5 + gc;"
+    }
+  ]
+}

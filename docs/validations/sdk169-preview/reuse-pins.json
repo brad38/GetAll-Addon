@@ -1,0 +1,40 @@
+{
+  "historical_root": "evidence-r18/complete-flows-publish-20261127",
+  "inputs": [
+    {
+      "path": "run-20261127T190214Z-0467ae01\\effective-inputs.json",
+      "bytes": 34343,
+      "sha256": "7ef784fd367c6fb34a7fca2465dcd59772bc90f2b4cf7acdb5f081c7277eed75"
+    },
+    {
+      "path": "preview_support.py",
+      "bytes": 20840,
+      "sha256": "d5cfd3d57f366b17e5e0e41547f8b60ca7224d924d82ac256439eabf1e680608"
+    },
+    {
+      "path": "resource-audit\\Program.cs",
+      "bytes": 5346,
+      "sha256": "adfb534eeb1d24e399e9cd6f9424542baf7180ffcab1e2899181d76fe327948c"
+    },
+    {
+      "path": "resource-audit\\audit.csproj",
+      "bytes": 424,
+      "sha256": "7007a3a473d27149daf4922b7ba8d6a749530f53121f42ee2ac819e574906647"
+    },
+    {
+      "path": "resource-audit\\NuGet.Config",
+      "bytes": 74,
+      "sha256": "9508cae5f76364f56e80eb97cb16493977243cf38e5cca6284e3d74f83b20a2c"
+    },
+    {
+      "path": "resource-audit\\global.json",
+      "bytes": 54,
+      "sha256": "9969992897aee36fbc62db0976390d87b1275dc0d7c6fcb937a7f81a316f97dc"
+    },
+    {
+      "path": "catalog.json",
+      "bytes": 115068,
+      "sha256": "dff40fc028cd544300c80e78d779ab503c2e9ae7b27df47ed5417c85f6e10aad"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "published_checkpoint": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\work-progress-published-sdk168.json",
+  "published_checkpoint_sha256": "07029302f3cdfac9b113c2a71e3e7b3e61a636330c90a3a7cf431887ef3118da",
+  "checkpoint140_unchanged_sha256": "cb254ea6a9da175851557fc98a0754164b05afd70dbb0137b49443325880ab14",
+  "changes": [
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\CONTINUIDADE.md",
+      "before_sha256": "b11ed57f18a5bb8429dfa1e0759f0eb438363e5e72883f3a882bb572d6806286",
+      "after_sha256": "06b01de577651eadade6674b1140213b0ed331931ff0018cf0650440ce50fc57",
+      "backup": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\preview-sdk168-20261127\\continuity-before-publication\\CONTINUIDADE.md"
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\PENDENCIAS.md",
+      "before_sha256": "7636d302a9b933303f9878f962096816fb3e673a91c4b3138effec05e6b4797c",
+      "after_sha256": "550e9102589b15f19737e59d3fa51f272ab0ff22d3ef7a6f1bfe4d3c054125b5",
+      "backup": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\preview-sdk168-20261127\\continuity-before-publication\\PENDENCIAS.md"
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\MATRIZ-FUNCIONAL.md",
+      "before_sha256": "89341c33c7699d6f3bad1e2bd6f16694a80db349b30538ba0460fc656ff98328",
+      "after_sha256": "2decb6f24e88b7c75f3798e57b8ff1510a6a4981790168d192a61b8484005686",
+      "backup": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\preview-sdk168-20261127\\continuity-before-publication\\MATRIZ-FUNCIONAL.md"
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\work-progress-latest.json",
+      "before_sha256": "ddeb9ffffadeb0f92767901969b4aebf5623b7c650e17c83dd9d100457419f28",
+      "after_sha256": "07029302f3cdfac9b113c2a71e3e7b3e61a636330c90a3a7cf431887ef3118da",
+      "backup": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\preview-sdk168-20261127\\continuity-before-publication\\work-progress-latest.json"
+    }
+  ]
+}

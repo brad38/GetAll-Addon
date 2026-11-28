@@ -9,7 +9,7 @@
     "recomplauncher.json"
   ],
   "inputs": [],
-  "manual_steps": "Selecione a mídia original de SSX EA-2413. Para incluir a atualização 0.0.3.2, forneça o pacote STFS completo com default.xexp e patch0.big.",
+  "manual_steps": "Use sua cópia original de SSX EA-2413 para Xbox 360. O All-Fix valida o XEX e prepara automaticamente o SDK e o compilador privados, preservando D3D12, Vulkan e FidelityFX. A atualização 0.0.3.2 é opcional.",
   "build_profile": "ssx-2.0.0-prepare",
   "preparation_media": [
     {

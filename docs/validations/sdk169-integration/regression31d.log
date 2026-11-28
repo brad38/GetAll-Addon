@@ -1,0 +1,2041 @@
+PASS R15 R17 compiled NSIS profile available
+PASS R15 R17 exact profile allowlist
+PASS R15 R17 unknown NSIS manifest policy
+PASS R15 R17 empty NSIS manifest
+PASS R15 R17 Inno exact profile registered
+PASS R15 R17 unknown Inno profile denied
+PASS R15 R17 structured original media
+PASS R15 R17 display metadata cannot mutate policy
+PASS R15 R17 no unregistered media
+PASS R15 trusted experimental schema v9
+PASS R15 experimental opt-in required
+PASS R15 third-party or mutable development branch denied
+PASS R15 v9 cannot be promoted to validated
+PASS R15 legacy validated compatibility
+PASS R15 expired CI shows unavailable
+PASS R15 Foxhollow exact CDN asset approved
+PASS R15 Foxhollow query rejected
+PASS R15 R16 encoded filename exact URL
+PASS R15 R16 unescaped plus denied
+PASS R15 R16 query denied
+PASS Rust extracts only the component and preserves its license
+PASS Rust rejects archive traversal, Windows aliases and unexpected roots: rust/cargo/../escape
+PASS Rust rejects archive traversal, Windows aliases and unexpected roots: rust/cargo/bin/NUL.txt
+PASS Rust rejects archive traversal, Windows aliases and unexpected roots: rust/cargo/bin/bad:stream
+PASS Rust rejects archive traversal, Windows aliases and unexpected roots: rust/cargo/bin/ending.
+PASS Rust rejects archive traversal, Windows aliases and unexpected roots: other/cargo/bin/tool
+PASS Rust rejects case-insensitive duplicate entries
+PASS Rust rejects symbolic links without following them
+PASS Rust rejects replacement of a previously staged binary
+PASS Rust preserves the prior binary on collision
+PASS Rust rejects a wrong component before decompression
+PASS Rust does not accept unregistered toolchains
+PASS Rust cancels before download or extraction
+PASS Rust isolates Cargo cache, compiler, target and rustup state inside the owned workspace
+PASS Rust removes inherited compiler overrides and fixes the x64 build target
+PASS Rust host and target native compilers, archiver, C++ ABI and linker are explicit LLVM-MinGW tools
+PASS Rust does not inherit MSVC headers or libraries and fixes static native linkage
+PASS Rust host Cargo, rustc and standard library use the same UCRT ABI
+PASS Rust does not mutate the process or user Cargo environment
+PASS Mario native sm64ex fixed native renderer and compiler arguments
+PASS Mario native foreign renderer rejected
+PASS Mario native SDL paths and nested host compiler adapted
+PASS Mario native duplicate upstream anchors rejected
+PASS Mario native changed upstream contract rejected
+PASS Mario native published layout excludes original ROM and build inputs
+PASS Mario native unapproved output DLL rejected
+PASS Mario native missing SDL runtime rejected
+PASS Mario native transaction cancellation propagated
+PASS Mario native cancel preserves kit and media and removes staging
+PASS Mario native build failure does not publish a game
+PASS Mario native retry publishes verified portable game and recovery kit
+PASS Mario native launch uses published local directory
+PASS Mario native missing recorded runtime blocks launch
+PASS Mario native full media flow rejects correct-size wrong-hash ROM
+PASS Mario native wrong ROM rejected before execution consent without deleting input
+PASS Mario native cancelled resume stops before build
+PASS Mario native render96ex fixed native renderer and compiler arguments
+PASS Mario native foreign renderer rejected
+PASS Mario native SDL paths and nested host compiler adapted
+PASS Mario native duplicate upstream anchors rejected
+PASS Mario native changed upstream contract rejected
+PASS Mario native published layout excludes original ROM and build inputs
+PASS Mario native unapproved output DLL rejected
+PASS Mario native missing SDL runtime rejected
+PASS Mario native missing external asset pack rejected
+PASS Mario native executable hidden among resources rejected
+PASS Mario native transaction cancellation propagated
+PASS Mario native cancel preserves kit and media and removes staging
+PASS Mario native build failure does not publish a game
+PASS Mario native retry publishes verified portable game and recovery kit
+PASS Mario native launch uses published local directory
+PASS Mario native missing recorded runtime blocks launch
+PASS Mario native full media flow rejects correct-size wrong-hash ROM
+PASS Mario native wrong ROM rejected before execution consent without deleting input
+PASS Mario native cancelled resume stops before build
+PASS Mario native sm64rt fixed native renderer and compiler arguments
+PASS Mario native foreign renderer rejected
+PASS Mario native SDL paths and nested host compiler adapted
+PASS Mario native RT64 explicitly links its staged GLEW runtime
+PASS Mario native duplicate upstream anchors rejected
+PASS Mario native changed upstream contract rejected
+PASS Mario native published layout excludes original ROM and build inputs
+PASS Mario native unapproved output DLL rejected
+PASS Mario native missing SDL runtime rejected
+PASS Mario native missing RT64 GLEW runtime rejected
+PASS Mario native missing external asset pack rejected
+PASS Mario native executable hidden among resources rejected
+PASS Mario native transaction cancellation propagated
+PASS Mario native cancel preserves kit and media and removes staging
+PASS Mario native build failure does not publish a game
+PASS Mario native retry publishes verified portable game and recovery kit
+PASS Mario native launch uses published local directory
+PASS Mario native missing recorded runtime blocks launch
+PASS Mario native full media flow rejects correct-size wrong-hash ROM
+PASS Mario native wrong ROM rejected before execution consent without deleting input
+PASS Mario native cancelled resume stops before build
+PASS Strikers Wii shared parser preserves GC byte offsets and Wii word offsets
+PASS Strikers Wii rejects runtime entry limit
+PASS Strikers Wii rejects wrong directory parent
+PASS Strikers Wii rejects subtree outside its parent
+PASS Strikers Wii rejects missing name
+PASS Strikers Wii rejects Wii byte-offset overflow
+PASS Strikers Wii rejects Wii extent overflow
+PASS Strikers Wii rejects FST traversal
+PASS Strikers Wii rejects Windows device alias in FST
+PASS Strikers Wii complete synthetic extracted tree accepted
+PASS Strikers Wii rejects truncated resource
+PASS Strikers Wii rejects missing resource
+PASS Strikers Wii rejects resource absent from FST
+PASS Strikers Wii tree validation cancellation
+PASS Strikers Wii selected directory copied into one private snapshot
+PASS Strikers Wii rejects same-size directory change after selection
+PASS Strikers Wii snapshot cancellation
+PASS Strikers Wii cancelled snapshot creates no private tree
+PASS Strikers Wii verified image rewound for extraction
+PASS Strikers Wii selected image cannot be written during extraction
+PASS Strikers Wii rejects same-size image change before extraction
+PASS Strikers Wii real launch dispatch uses relocated portable installation
+PASS Strikers Wii official settings changes do not invalidate immutable disc hashes
+PASS Strikers Wii rejects real launch dispatch rejects same-size installed resource corruption
+PASS Strikers Wii rejects real launch dispatch rejects missing FST resource
+PASS Strikers Wii rejects real launch dispatch rejects a missing Dawn CRT dependency
+PASS Strikers Wii rejects actual Wii build transaction rejects incomplete media before tools
+PASS Strikers Wii failed transaction keeps prepared kit and original, removes work, publishes no game
+PASS Strikers Wii actual Wii build transaction cancellation
+PASS Strikers Wii cancelled transaction leaves no published or owned work directory
+PASS Strikers Wii private SDK ignores inherited installation
+PASS Strikers Wii private build isolates user profile and NuGet caches
+PASS Strikers Wii NuGet machine defaults have private roots even with a cleared environment
+PASS Strikers Wii SDK selection cannot roll to user versions
+PASS Strikers Wii restore reads only the verified local NuGet feed, including escaped paths
+PASS Strikers Wii rejects unexpected existing SDK selection is not overwritten
+PASS Strikers Wii rejects changed source archive before private SDK provisioning
+PASS Strikers Wii source pin failure invokes no SDK or external restore
+PASS GOW-KI inspects both ISO layers with the upstream sector base
+PASS GOW-KI second-layer file retains its physical image offset
+PASS GOW-KI layout size matches extracted synthetic file
+PASS GOW-KI layout size matches extracted synthetic file
+PASS GOW-KI layout size matches extracted synthetic file
+PASS GOW-KI layout size matches extracted synthetic file
+PASS GOW-KI dual-layer extraction reconstructs every byte including non-zero tail padding
+PASS GOW-KI supports a single-volume image without inventing a second layer
+PASS GOW-KI rejects invalid layer path, duplicate, metadata collision, host executable, incomplete/PAL disc or fragmented file
+PASS GOW-KI rejects invalid layer path, duplicate, metadata collision, host executable, incomplete/PAL disc or fragmented file
+PASS GOW-KI rejects invalid layer path, duplicate, metadata collision, host executable, incomplete/PAL disc or fragmented file
+PASS GOW-KI rejects invalid layer path, duplicate, metadata collision, host executable, incomplete/PAL disc or fragmented file
+PASS GOW-KI rejects invalid layer path, duplicate, metadata collision, host executable, incomplete/PAL disc or fragmented file
+PASS GOW-KI rejects invalid layer path, duplicate, metadata collision, host executable, incomplete/PAL disc or fragmented file
+PASS GOW-KI rejects invalid layer path, duplicate, metadata collision, host executable, incomplete/PAL disc or fragmented file
+PASS GOW-KI rejects invalid layer path, duplicate, metadata collision, host executable, incomplete/PAL disc or fragmented file
+PASS GOW-KI checks second-layer extents against its own bounded stream
+PASS GOW-KI rejects second-layer endian mismatch
+PASS GOW-KI rejects an invalid main PS2 ELF
+PASS GOW-KI rejects a truncated image before extraction
+PASS GOW-KI unsafe second-layer image cannot start extraction
+PASS GOW-KI unsafe image writes no files
+PASS GOW-KI disc inspection respects cancellation before creating output
+PASS GOW-KI never overwrites an existing extraction
+PASS GOW-KI native configuration uses private MinGW and the upstream interpreter/libmpeg2 defaults
+PASS GOW-KI closed environment excludes installed SDK and Git configuration
+PASS GOW-KI private-shell-policy.log exit 0
+PASS GOW-KI source adapter refuses an unpinned input
+PASS GOW-KI failed source pin leaves the input untouched
+PASS GOW-KI missing generated game units cannot reach compilation
+PASS GOW-KI fixed pipeline validates/extracts media before tool work and publishes last
+PASS GOW-KI synthetic launch plan supplies the registered US ELF as argv[1]
+PASS GOW-KI launch refuses an unverified installation
+PASS GOW-KI launch rejects modified disc data
+PASS GOW-KI failed launch validation publishes no arguments
+PASS GOW-KI real resume rejects invalid ISO media
+PASS GOW-KI invalid disc fails before authorization or downloads
+PASS GOW-KI rejected disc preserves the kit, selected file and partial state
+PASS GOW-KI real transaction propagates generation failure
+PASS GOW-KI failed transaction keeps the media checkpoint without registering a game
+PASS GOW-KI rollback removes only its work and preserves kit, cache and original media
+PASS GOW-KI real transaction propagates cancellation
+PASS GOW-KI failed transaction keeps the media checkpoint without registering a game
+PASS GOW-KI rollback removes only its work and preserves kit, cache and original media
+PASS Strikers GC real launch dispatch resolves relocated DOL, ISO and local runtime
+PASS Strikers GC runtime checks preserve mutable memory-card files
+PASS Strikers GC launch rejects same-size CRT corruption
+PASS Strikers GC launch rejects missing Dawn before process creation
+PASS Strikers GC source pin rejects changed archive before provisioning
+PASS Strikers GC source rejection invokes no toolchain or dependency download
+PASS Strikers GC graphics staging honors cancellation before any extraction
+PASS Strikers GC cancelled graphics staging creates no work or output
+PASS Strikers GC runtime without the required GX API fails before source patching
+PASS DRMARIO64 accepts exact source kit identity
+PASS DRMARIO64 rejects changed official README
+PASS DRMARIO64 rejects incomplete kit
+PASS DRMARIO64 rejects duplicate kit entries
+PASS DRMARIO64 rejects synthetic non-US-ROM input before build
+PASS DRMARIO64 rejects synthetic non-US-ROM input before build
+PASS DRMARIO64 rejects synthetic non-US-ROM input before build
+PASS DRMARIO64 ROM gate respects cancellation
+PASS DRMARIO64 compiled orchestration imports media before tools and publishes last
+PASS DRMARIO64 generator failure propagates
+PASS DRMARIO64 failed generation cannot build or stage a game
+PASS DRMARIO64 pipeline cancellation propagates
+PASS DRMARIO64 cancelled pipeline cannot generate or publish
+PASS DRMARIO64 extracts a verified source archive
+PASS DRMARIO64 archive hash is checked before materialization
+PASS DRMARIO64 invalid archive creates no output
+PASS DRMARIO64 rejects source path escape
+PASS DRMARIO64 path escape writes nothing outside target
+PASS DRMARIO64 rejects unexpected archive root
+PASS DRMARIO64 rejects Windows case-colliding entries
+PASS DRMARIO64 rejects unapproved source links
+PASS DRMARIO64 approved unused link is omitted, never followed
+PASS DRMARIO64 frozen CMake retains compile target without repeating patch generation
+PASS DRMARIO64 CMake adapter rejects ambiguous anchor
+PASS DRMARIO64 CMake adapter rejects changed generation contract
+PASS DRMARIO64 native patch compiler accepts only two fixed translation units
+PASS DRMARIO64 configure preserves argument boundaries, closes SDL fetch and links private MinGW C++ statically
+PASS DRMARIO64 native build does not select the installed Microsoft compiler
+PASS DRMARIO64 native environment inherits no compiler or SDK installation
+PASS DRMARIO64 native linker retains the original entry point and subsystem
+PASS DRMARIO64 native linker rejects an ambiguous upstream contract
+PASS DRMARIO64 native adaptation rejects an unpinned source before writing
+PASS DRMARIO64 rejected native adaptation preserves its input
+PASS DRMARIO64 embedded Python path has no user site or startup hook
+PASS DRMARIO64 Python path file rejects injected lines
+PASS DRMARIO64 CMake adapter escapes path metacharacters
+PASS DRMARIO64 missing game generation cannot reach configure
+PASS DRMARIO64 data staging rejects an executable extension
+PASS DRMARIO64 real store profile binds the automatic DrMario64 flow
+PASS DRMARIO64 real resume rejects invalid US ROM
+PASS DRMARIO64 invalid ROM fails before local preparation authorization
+PASS DRMARIO64 invalid ROM starts no downloads or build transaction
+PASS DRMARIO64 invalid media leaves installation and selected file intact
+PASS DRMARIO64 real DrMario64 transaction propagates generator failure
+PASS DRMARIO64 failed transaction persists selected-media checkpoint without completing installation
+PASS DRMARIO64 real transaction removes owned work and publishes no game
+PASS DRMARIO64 rollback preserves prepared kit, original input and package cache
+PASS DRMARIO64 real DrMario64 transaction propagates cancellation
+PASS DRMARIO64 failed transaction persists selected-media checkpoint without completing installation
+PASS DRMARIO64 real transaction removes owned work and publishes no game
+PASS DRMARIO64 rollback preserves prepared kit, original input and package cache
+PASS DRMARIO64 published helper resources materialize with pinned hashes and licenses
+PASS R17 multipart mandatory base only
+PASS R17 multipart optional group atomic
+PASS R17 multipart partial group selection
+PASS R17 multipart required group explicit selection
+PASS R17 multipart duplicate choice
+PASS R17 multipart missing base
+PASS R17 multipart duplicate asset even if optional
+PASS R17 multipart unsafe asset
+PASS R17 multipart invalid digest
+PASS R17 binary patch produces exact hash without changing source
+PASS R17 overlapping ranges
+PASS R17 range outside original
+PASS R17 negative range
+PASS R17 invalid patch bytes
+PASS R17 incorrect output size
+PASS R17 wrong original digest
+PASS R17 wrong output digest
+PASS R17 patch cancellation
+PASS R17 pinned MML US plan
+PASS R17 pinned MML JP plan
+PASS R17 unknown MML edition
+PASS R17 MML rejects wrong original SHA
+PASS R17 MML failure creates no output and preserves original
+PASS R17 fake GOW kit cannot authorize native build
+PASS R17 invalid GOW kit cannot persist selection or require receipt
+PASS R17 modified prepared payload denied
+PASS R17 duplicate media for distinct requirements
+PASS R17 no partial persistence on multi-media failure
+PASS R17 fake TotK kit cannot authorize native build
+PASS R17 invalid TotK kit cannot persist media
+PASS R17 fake MKW kit cannot authorize native build
+PASS R17 invalid MKW kit cannot persist media
+PASS R17 directory fingerprint recorded
+PASS R17 wrong media type
+PASS R17 cannot select prepared kit as original media
+PASS R17 media fingerprint cancellation
+PASS R17 original media untouched
+PASS R17C Sonic layout fixture
+PASS R17C Sonic unsafe filename
+PASS R17C Sonic wrong LBA
+PASS R17C Sonic absent track
+PASS R17C Sonic wrong track size
+PASS R17C missing Switch filesystem
+PASS R17C Switch filesystem structure
+PASS R17C RyGT title metadata
+PASS R17C wrong PS4 title
+PASS R17C SpartanPort title/version metadata
+PASS R17C wrong PS4 version
+PASS R17C inFAMOUS missing modules
+PASS R17C inFAMOUS updated folder structure
+PASS R17C Guardian rejects inFAMOUS media
+PASS R17C Guardian missing archives
+PASS R17C Guardian updated folder structure
+PASS R17C PS4 linked image layout
+PASS R17C PS4 segment outside linked image
+PASS R17C truncated PS4 linked image
+PASS R17C PS4 full content profile
+PASS R17C PS4 trial content profile rejected
+PASS R17C truncated SFO
+PASS R17C synthetic ISO parses three modules
+PASS R17C invalid XDVDFS magic
+PASS R17C invalid directory index
+PASS R17C out of bounds sector
+PASS R17C path traversal
+PASS R17C foreign title ID
+PASS R17C facade wrong edition
+PASS R17C extracted folder module preflight
+PASS R17C missing facade
+PASS R17C missing original edition
+PASS R17C correct size incorrect US hash
+PASS R17C mixed US and JP editions
+PASS R17C missing MML data folders
+PASS R17C MML data manifest
+PASS R17C foreign DLL in media
+PASS R17C renamed executable in media
+PASS R17C verified import copy
+PASS R17C verified staged file reused
+PASS R17C only invalid stage file replaced
+PASS R17C changed media refused
+PASS R17C valid staged copy preserved on source error
+PASS R17C same staging patch writer commits exact fixture and preserves original
+PASS R17C patch never overwrites destination
+PASS R17C patch path traversal
+PASS R17C wrong output hash rejected
+PASS R17C failed patch leaves no output or temporary file
+PASS Forza SVOD offers ISO, GoD, or folder in the universal picker
+PASS Forza SVOD reads the same three validated XEX headers and hashes from segmented and single-file GoD
+PASS Forza SVOD rejects a package for another Title ID
+PASS Forza SVOD rejects a package whose Media ID differs from default.xex
+PASS Forza SVOD checks every payload block, including bytes outside the three module extents
+PASS Forza SVOD rejects a segmented folder without its original header
+PASS Forza SVOD propagates cancellation from the GoD reader
+PASS LinkedPs4 single directory and consent: tlg-pc
+PASS LinkedPs4 single directory and consent: iss-pc
+PASS OpenGOAL disc identity and unknown or ambiguous serial rejection
+PASS Wind Waker HD region pins and unknown game code rejection
+PASS P.T. title, optional file and bad QAR
+PASS R17D real upstream hash-only reference
+PASS R17D XEX decode and page chain fixture
+PASS R17D exact section match
+PASS R17D reject missing chunk hashes
+PASS R17D fixture cannot match real Forza
+PASS R17D XEX page digest mismatch
+PASS R17D XEX invalid security offset
+PASS R17D XEX unsupported compression
+PASS R17D ISO9660 absolute Dreamcast LBA
+PASS R17D MODE1 multi-sector extraction
+PASS R17D extent before track
+PASS R17D truncated extent
+PASS R17D reject non-MODE1
+PASS R17D reject invalid PVD
+PASS R17D fixture real extraction and hash publication
+PASS R17D verified content reused
+PASS R17D modified output repaired
+PASS R17D reject wrong content hash before publication
+PASS R17D no file after failed verification
+PASS R17D bootstrap placement and XOR
+PASS R17D wrong bootstrap size
+PASS R17D invalid zlib
+PASS R17D bootstrap cancellation
+PASS R17E atomic digest mismatch
+PASS R17E previous file preserved
+PASS R17E atomic cancel preserves previous
+PASS R17E verified commit without residue
+PASS R17E bounded disc extent
+PASS R17E truncated extent
+PASS R17E original resources imported; system update and executable excluded
+PASS R17E reject changed module before copying
+PASS R17E valid imported module preserved
+PASS R17E Xbox manifest imports an identified file without changing its bytes
+PASS R17E same Xbox manifest imports a bounded XDVDFS extent
+PASS R17E Xbox manifest rejects altered original
+PASS R17E Marathon manifest includes the supported XEX variants
+PASS R17E MML US synthetic patch + original backup
+PASS R17E MML JP synthetic patch + original backup
+PASS R17E closed toolchain profile
+PASS STFS detects a valid update member
+PASS STFS reports real copied bytes
+PASS STFS extracts the declared update member
+PASS STFS rejects a different media ID
+PASS STFS enforces the extraction size limit
+PASS STFS honors extraction cancellation
+PASS STFS rejects corrupt file data
+PASS STFS detects a valid update member
+PASS STFS reports real copied bytes
+PASS STFS extracts the declared update member
+PASS STFS rejects a different media ID
+PASS STFS enforces the extraction size limit
+PASS STFS honors extraction cancellation
+PASS STFS rejects corrupt file data
+PASS STFS rejects traversal before exposing members
+PASS STFS SSX consumes the extracted patch instead of the container
+PASS STFS rejects a valid STFS package with the wrong revision hash
+PASS STFS rejects an update missing the runtime data
+PASS STFS extracts the verified update tree with canonical path and byte progress
+PASS STFS rejects incompatible data in a structurally valid update
+PASS retail STFS single-backed L2 enumerates nested member
+PASS retail STFS single-backed L2 extracts across the group boundary
+PASS retail STFS single-backed reports exact copied bytes
+PASS retail STFS single-backed enforces member size
+PASS retail STFS single-backed cancels during copy
+PASS retail STFS single-backed rejects another title
+PASS retail STFS single-backed accepts a zero-byte member without claiming data
+PASS retail STFS single-backed rejects a second member claiming an extracted data block
+PASS retail STFS single-backed does not write an aliased block
+PASS retail STFS single-backed resolves parent indices by on-disk slot after an unused entry
+PASS retail STFS single-backed rejects an unallocated data block with a consistent hash hierarchy
+PASS retail STFS single-backed rejects a Title Update
+PASS retail STFS single-backed rejects unsafe directory names
+PASS retail STFS single-backed rejects a reserved Windows device name
+PASS retail STFS single-backed rejects a superscript Windows device name
+PASS retail STFS single-backed verifies the descriptor root SHA-1
+PASS retail STFS single-backed verifies the selected L1 table
+PASS retail STFS single-backed verifies data against the L0 table
+PASS retail STFS single-backed rejects a truncated final data block
+PASS retail STFS double-backed L2 enumerates nested member
+PASS retail STFS double-backed L2 extracts across the group boundary
+PASS retail STFS double-backed reports exact copied bytes
+PASS retail STFS double-backed enforces member size
+PASS retail STFS double-backed cancels during copy
+PASS retail STFS double-backed rejects another title
+PASS retail STFS double-backed accepts a zero-byte member without claiming data
+PASS retail STFS double-backed rejects a second member claiming an extracted data block
+PASS retail STFS double-backed does not write an aliased block
+PASS retail STFS double-backed resolves parent indices by on-disk slot after an unused entry
+PASS retail STFS double-backed rejects an unallocated data block with a consistent hash hierarchy
+PASS retail STFS double-backed rejects a Title Update
+PASS retail STFS double-backed rejects unsafe directory names
+PASS retail STFS double-backed rejects a reserved Windows device name
+PASS retail STFS double-backed rejects a superscript Windows device name
+PASS retail STFS double-backed verifies the descriptor root SHA-1
+PASS retail STFS double-backed verifies the selected L1 table
+PASS retail STFS double-backed verifies data against the L0 table
+PASS retail STFS double-backed rejects a truncated final data block
+PASS retail STFS Desktop writes verified files into staging and reports exact bytes
+PASS retail STFS Desktop rejects an expanded payload over budget
+PASS retail STFS Desktop checks all destination paths and sizes before writing
+PASS Retail XBLA earthworm-jim-hd-recompiled consent and media profile
+PASS Retail XBLA earthworm-jim-hd-recompiled rejects another XBLA Title ID
+PASS Retail XBLA earthworm-jim-hd-recompiled rejects changed bytes under a matching XBLA header
+PASS Retail XBLA earthworm-jim-hd-recompiled rejects a mismatched original XEX
+PASS Retail XBLA earthworm-jim-hd-recompiled checks the exact port-supported XEX revision
+PASS Retail XBLA earthworm-jim-hd-recompiled launches the native runtime directly
+PASS Retail XBLA earthworm-jim-hd-recompiled refuses missing default.xex
+PASS Retail XBLA earthworm-jim-hd-recompiled refuses missing data.dat
+PASS Retail XBLA earthworm-jim-hd-recompiled refuses missing data/sounds/xbox/ALL_LEVEL.xwb
+PASS Retail XBLA earthworm-jim-hd-recompiled rejects a same-size XEX modification
+PASS Retail XBLA 3on3nhl-recomp consent and media profile
+PASS Retail XBLA 3on3nhl-recomp rejects another XBLA Title ID
+PASS Retail XBLA 3on3nhl-recomp rejects changed bytes under a matching XBLA header
+PASS Retail XBLA 3on3nhl-recomp rejects a mismatched original XEX
+PASS Retail XBLA 3on3nhl-recomp launches the native runtime directly
+PASS Retail XBLA 3on3nhl-recomp refuses missing default.xex
+PASS Retail XBLA 3on3nhl-recomp rejects a same-size XEX modification
+PASS SVOD single-file descriptor and exact payload length
+PASS SVOD single-file truncated
+PASS SVOD single-file trailing data
+PASS SVOD single-file data hash at descriptor
+PASS SVOD single-file secondary hash table
+PASS SVOD declared media identity and exact size
+PASS SVOD read across hash group boundary
+PASS SVOD full verification reports real bytes without moving cursor
+PASS SVOD partial final block and exact EOF
+PASS SVOD seek past logical bound
+PASS SVOD segment count limit
+PASS SVOD truncated segment
+PASS SVOD reject missing segment even with valid header hash
+PASS SVOD reject altered metadata
+PASS SVOD reject unknown layout flags
+PASS SVOD reject corrupted principal table
+PASS SVOD reject corrupted data table
+PASS SVOD reject corrupted data block
+PASS SVOD maps second segment using chained master hash
+PASS SVOD reject broken segment chain
+PASS SVOD Enhanced GDF applies non-zero start offset and descriptor at block zero
+PASS SVOD Enhanced GDF rejects an extent before the logical start
+PASS SVOD cancel during data verification
+PASS Xbox NG2 recognizes World revision 4
+PASS Xbox NG2 rejects Japanese edition
+PASS Xbox NG2 rejects wrong base disc revision
+PASS Xbox NG2 requires the exact World patch SHA-1
+PASS Xbox Lost validates disc ID and edition
+PASS Xbox Lost rejects spoofed disc slot
+PASS Xbox Lost rejects inconsistent base revision
+PASS Xbox Lost accepts matching four-disc set
+PASS Xbox Lost requires disc 1
+PASS Xbox Lost rejects mixed editions
+PASS Xbox Lost rejects duplicate slots
+PASS Xbox King Kong accepts the original disc revision
+PASS Xbox King Kong rejects a different revision
+PASS Xbox Darkness rejects XEX without a pinned revision hash
+PASS Xbox Gears uses the official FNV-1a fingerprint
+PASS Xbox Gears rejects unrecognized retail XEX
+PASS Xbox Downpour accepts the original execution identity
+PASS Xbox Downpour rejects wrong base revision
+PASS Xbox Downpour rejects altered patch with official size
+PASS Xbox Project 8 rejects XEX without official fingerprint
+PASS Xbox ng2recomp local consent and profile
+PASS Xbox lost-odyssey-recomp local consent and profile
+PASS Xbox king-kong-recompiled local consent and profile
+PASS Xbox the-darkness-recomp local consent and profile
+PASS Xbox gears-of-war-2-pc-port local consent and profile
+PASS Xbox downpourrecomp local consent and profile
+PASS Xbox project8recomp local consent and profile
+PASS Xbox shadow-recompiled local consent and profile
+PASS Xbox opence local consent and profile
+PASS Xbox dprecomp local consent and profile
+PASS Xbox DP maps exact retail ISO hashes to executables
+PASS Xbox DP rejects unpinned ISO digests
+PASS Xbox DP rejects mixed ISO and XEX identity
+PASS Xbox DP direct launch uses the registered edition and installed assets
+PASS Xbox DP rejects the alternate launcher for registered media
+PASS Xbox DP rejects mixed ISO and XEX identity
+PASS Xbox DP direct launch uses the registered edition and installed assets
+PASS Xbox DP rejects the alternate launcher for registered media
+PASS Xbox NG2 selector accepts the official package filename
+PASS XBLA dead-rising-2-case-zero-xenon-recomp consent and media profile
+PASS XBLA dead-rising-2-case-zero-xenon-recomp exact media digest rejects tampering
+PASS XBLA dead-rising-2-case-zero-xenon-recomp refuses another Title ID
+PASS XBLA dead-rising-2-case-zero-xenon-recomp starts without reopening the port installer
+PASS XBLA dead-rising-2-case-zero-xenon-recomp requires prepared shader marker before launch
+PASS XBLA dead-rising-2-case-west-xenon-recomp consent and media profile
+PASS XBLA dead-rising-2-case-west-xenon-recomp exact media digest rejects tampering
+PASS XBLA dead-rising-2-case-west-xenon-recomp refuses another Title ID
+PASS XBLA dead-rising-2-case-west-xenon-recomp starts without reopening the port installer
+PASS XBLA dead-rising-2-case-west-xenon-recomp requires prepared shader marker before launch
+PASS Adam matches the pinned Windows kit
+PASS Adam rejects a different release
+PASS Adam reuse existing ROM input and require local consent
+PASS Simpsons consent and universal media profile
+PASS Simpsons rejects incomplete movie resources
+PASS Simpsons native runtime, local saves and official launch flags
+PASS Simpsons refuses changed movie size
+PASS Simpsons rejects the wrong Title ID even when it matches the recorded hash
+PASS re:Blue consent and universal media profile
+PASS re:Blue matches the exact Western set
+PASS re:Blue rejects inverted discs
+PASS re:Blue rejects mixed editions
+PASS re:Blue loads the byte-pinned official manifest
+PASS re:Blue rejects the wrong disc marker
+PASS re:Blue plans manifest paths and language groups in official disc order
+PASS re:Blue rejects an incomplete plan
+PASS re:Blue preserves the original INI and updates its language list
+PASS re:Blue stages selected resources, official portable record, and byte progress
+PASS re:Blue launches the official runtime from the portable record directory
+PASS re:Blue rejects changes to the portable record
+PASS re:Blue cancellation cannot write an install record
+PASS re:Blue rejects traversal in staging
+PASS re:Blue creates no file outside the game staging folder
+PASS PGR4 original World disc and TU2 share the native preparation flow
+PASS PGR4 same-size but altered TU2 is refused
+PASS PGR4 TU digest honors cancellation
+PASS PGR4 rejects a different XEX Media ID
+PASS PGR4 stages original default beside its patch
+PASS PGR4 stages original gw beside its patch
+PASS PGR4 launches the official executable with local base and prepared update
+PASS PGR4 refuses an altered Geometry Wars patch
+PASS Unleashed uses the existing media picker for the original European pair
+PASS Unleashed loads complete official media manifests
+PASS Unleashed rejects an altered TU2 of the correct size
+PASS Unleashed honors cancellation before hashing the update
+PASS Unleashed accepts the bounded patch table layout
+PASS Unleashed rejects a patch descriptor outside the header
+PASS Unleashed deploys the pinned helper and its adjacent shared library
+PASS Unleashed rejects a mismatched base version
+PASS Unleashed Jogar starts the portable runtime directly
+PASS Unleashed refuses altered patched output without launching
+PASS SM64Plus fixed Windows source profile
+PASS SM64Plus one original ROM
+PASS SM64Plus rejects correct-size wrong-hash ROM
+PASS SM64Plus missing gfx rejected
+PASS SM64Plus expected resource tree
+PASS SM64Plus portable launch plan
+PASS SM64Plus modified resource rejected
+PASS SM64Plus modified runtime rejected
+PASS SM64Plus executable in resource directory rejected
+PASS SM64Plus cancellation honored
+PASS WipEout Rewrite empty placeholders no longer pass
+PASS WipEout Rewrite five old assets without PC menu data do not pass
+PASS WipEout Rewrite accepts the structural shape without optional video or music from either folder level
+PASS WipEout Rewrite missing PC menu model is reported
+PASS WipEout Rewrite checks the section revision of all original tracks
+PASS WipEout Rewrite rejects a truncated CMP header table
+PASS WipEout Rewrite copies optional resources to the private staging folder
+PASS WipEout Rewrite changing staging cannot modify the original folder
+PASS WipEout Rewrite legacy install with complete media reaches the recorded launch plan
+PASS WipEout Rewrite rejects a replaced legacy runtime DLL
+PASS WipEout Rewrite blocks launch for a legacy install with incomplete tracks
+PASS WipEout Rewrite rejects same-size changes after folder selection
+PASS WipEout Rewrite rejected folder writes no staging files
+PASS WipEout Rewrite blocks host executable content inside game media
+PASS WipEout Rewrite an incomplete ISO never begins extraction
+PASS WipEout Rewrite rejected ISO writes no staging files
+PASS WipEout Rewrite honors cancellation before writing files
+PASS WipEout composition detects that original PSX data needs the four PC files
+PASS WipEout composition combines both originals with case-insensitive PC discovery and the exact runtime layout
+PASS WipEout composition does not copy or run the original PC installer or unrelated files
+PASS WipEout composition never adds files to the original PSX folder
+PASS WipEout composition preserves existing complete-folder installs without asking for PC files again
+PASS WipEout composition imports a previously combined folder through the same production composer
+PASS WipEout composition rejects an incomplete selection before staging
+PASS WipEout composition rejects redundant or inconsistent media references
+PASS WipEout composition rejects same-size PC changes after selection
+PASS WipEout composition does not start extraction with changed PC media
+PASS WipEout composition rejects ambiguous original PC files instead of guessing a version
+PASS WipEout composition rejects noncanonical BIN media before requesting the second source
+PASS WipEout composition cancels before touching either original or output
+PASS MKDD MinGW build ignores inherited compiler, SDK, Python and PATH state
+PASS MKDD MinGW SDL cache, profile, temporary files and Python stay private
+PASS MKDD media reads nested FST paths and disc extents
+PASS MKDD media rejects an overflowing FST count
+PASS MKDD media rejects mislabeled FST parent
+PASS MKDD media rejects a directory spanning outside its enclosing subtree
+PASS MKDD media rejects an out-of-range FST name offset
+PASS MKDD media rejects file data extending off the image
+PASS MKDD media rejects an unterminated FST name
+PASS MKDD media rejects relative traversal in FST names
+PASS MKDD media expands sparse CISO and truncates final padding to the logical disc size
+PASS MKDD media rejects a truncated CISO data block
+PASS MKDD media rejects a map too short for the logical image
+PASS MKDD media rejects blocks beyond the logical disc size
+PASS MKDD media honors cancellation before CISO writes
+PASS MKDD media snapshots the chosen disc into the installation staging directory
+PASS MKDD media rejects same-length media changes after selection
+PASS MKDD media does not publish a copy of altered input
+PASS MKDD media overrides an inherited disc hint with the verified installed image
+PASS MKDD media refuses a changed installed disc
+PASS Super Metroid sm-source-578f90b launches with local settings and ROM
+PASS Super Metroid sm-source-578f90b preserves the local user settings override
+PASS Super Metroid sm-source-578f90b rejects missing local configuration even with a parent INI
+PASS Super Metroid sm-source-578f90b refuses a different recorded executable
+PASS Super Metroid sm-source-578f90b prevents partial launch
+PASS Super Metroid sm-source-578f90b refuses missing SDL2
+PASS Super Metroid sm-source-578f90b rejects same-size ROM modification
+PASS Super Metroid sm-rewrite-source-5237873 launches with local settings and ROM
+PASS Super Metroid sm-rewrite-source-5237873 preserves the local user settings override
+PASS Super Metroid sm-rewrite-source-5237873 rejects missing local configuration even with a parent INI
+PASS Super Metroid sm-rewrite-source-5237873 refuses a different recorded executable
+PASS Super Metroid sm-rewrite-source-5237873 prevents partial launch
+PASS Super Metroid sm-rewrite-source-5237873 refuses missing SDL2
+PASS Super Metroid sm-rewrite-source-5237873 rejects same-size ROM modification
+PASS R17F CTR source pin
+PASS R17F CTR foreign URL
+PASS R17F CTR revision mismatch
+PASS R17F CTR archive digest mismatch
+PASS R17F CTR launch injection
+PASS R17F CTR recipe operation injection
+PASS R17G MKDD rejects wrong disc
+PASS R17G MKDD rejects correct header with wrong DOL SHA-1
+PASS R17G MKDD rejects oversized DOL
+PASS R17G SM Rewrite deterministic MSVC patch
+PASS R17G SM Rewrite refuses repeated patch
+PASS R17G MKDD explicit ISO media contract
+PASS R18 SM64 rejects wrong size
+PASS R18 SM64 rejects wrong byte order
+PASS R18 SM64 rejects plausible header wrong SHA1
+PASS R18 SM64 fixed distinct profile sm64ex
+PASS R18 SM64 pinned URL sm64ex
+PASS R18 SM64 original media selector sm64ex
+PASS R18 SM64 closed build args sm64ex
+PASS R18 SM64 fixed distinct profile render96ex
+PASS R18 SM64 pinned URL render96ex
+PASS R18 SM64 original media selector render96ex
+PASS R18 SM64 closed build args render96ex
+PASS R18 SM64 fixed distinct profile sm64rt
+PASS R18 SM64 pinned URL sm64rt
+PASS R18 SM64 original media selector sm64rt
+PASS R18 SM64 closed build args sm64rt
+PASS R18 SM64 unknown build profile denied
+PASS R18 SM64 rejects wrong toolchain archive
+PASS R18 SM64 resolves app-relative Toolchains archive cleanly
+PASS R18 SM64 returns null cleanly when toolchain tar absent
+PASS Render96 packs absent: base build unchanged
+PASS Render96 unchecked cached model ignored
+PASS Render96 rejects altered model archive without output
+PASS Render96 rejects altered texture archive without output
+PASS GT5 private GNU-driver C/C++/resource compiler contract
+PASS GT5 no installed MSVC compiler gate
+PASS GT5 static C++ runtime and no implicit CMake downloads
+PASS GT5 retains Direct3D 12 profile and explicit private Python
+PASS GT5 native environment does not inherit a global C++ toolchain
+PASS GT5 Windows shell path and private Python isolation
+PASS GT5 only exact current/legacy instructions accepted
+PASS GT5 retains independent original game, ELF and firmware selection
+PASS GT5 rejects modified source before applying any adapter
+PASS GT5 cancels before source mutation
+PASS Burnout invalid XBE rejected
+PASS Burnout wrong header rejected
+PASS GT5 upstream hexadecimal code_end
+PASS GT5 rejects excessive code_end
+PASS GT5 invalid ELF rejected
+PASS Console pinned source URL burnout3-recomp
+PASS Console media selection burnout3-recomp
+PASS Console pinned source URL gt5-recomp
+PASS Console media selection gt5-recomp
+PASS GT5 supports debug .bin SELF and local .PUP firmware
+PASS PS3 PUP extracts dev_flash/sys
+PASS PS3 PUP rejects mismatched SHA-256
+PASS GT5 extracts debug SCE SELF to ELF
+PASS GT5 rejects encrypted retail SELF without keys
+PASS Wipeout MODE2 ISO multi-extent index
+PASS Wipeout MODE2 read across sector boundaries
+PASS Wipeout truncated raw image
+PASS Wipeout Form 2 treated as Form 1
+PASS Wipeout Form 2 retains XA subheader and packed payload
+PASS Wipeout wrong XA form
+PASS Wipeout CDDA WAV header and sample bytes after pregap
+PASS Wipeout pregap consumes track
+PASS Wipeout CDDA cancellation
+PASS ISO multi extent
+PASS ISO GT5 SFO edition
+PASS ISO split ISO volume
+PASS ISO split ISO gap
+PASS ISO split folder volume
+PASS ISO mixed volume
+PASS ISO duplicate segment
+PASS ISO empty segment
+PASS ISO short split volume
+PASS ISO endian mismatch
+PASS ISO duplicate file
+PASS ISO path separator
+PASS ISO out of bounds
+PASS ISO wrong edition
+PASS ISO cancellation
+PASS ISO encrypted PS3 ISO requires key
+PASS ISO encrypted PS3 ISO decrypted with ephemeral key
+PASS ISO PS3 rejects invalid hex key
+PASS ISO PS3 parses 32-hex ephemeral key
+PASS ISO UDF 2.50 reads PS3_GAME tree
+PASS ISO UDF 2.50 CheckGt5Iso BCUS98114
+PASS ISO UDF 2.50 rejects invalid descriptor checksum
+PASS Shadow of Rome PAL boot
+PASS Shadow of Rome NTSC boot
+PASS Shadow of Rome wrong serial
+PASS Shadow of Rome ambiguous serial
+PASS Shadow of Rome relative boot path
+PASS Shadow of Rome only empty out-of-memory PT_LOAD changed
+PASS Shadow of Rome truncated ELF table
+PASS REDRIVER2 canonical pair
+PASS REDRIVER2 swapped discs
+PASS REDRIVER2 mixed revisions
+PASS REDRIVER2 fixed converter arguments
+PASS REDRIVER2 AVI name and header
+PASS REDRIVER2 wrong video folder
+PASS REDRIVER2 wrong RIFF type
+PASS REDRIVER2 identical duplicate accepted
+PASS REDRIVER2 unequal duplicate rejected
+PASS REDRIVER2 original staged output preserved
+PASS Foxhollow USA releases have distinct pinned digests
+PASS Foxhollow unsupported Japanese reprint
+PASS Foxhollow Europe revision 1 recognized
+PASS Foxhollow wrong disc number
+PASS Foxhollow Nookery selects the exact original disc
+PASS Foxhollow Nookery image cannot be used for Foxhollow
+PASS Foxhollow Nookery rejects unsupported revision
+PASS Foxhollow Dusklight accepts documented PAL GameCube pressing
+PASS Foxhollow Dusklight GameCube flow rejects Wii media
+PASS Foxhollow Strikers accepts the documented Japanese disc
+PASS Foxhollow Strikers disc cannot satisfy the Nookery profile
+PASS Picori synthetic TMCP v1 offsets accepted
+PASS Picori cancelled archive validation
+PASS Picori truncated TMCP package
+PASS Picori out of range payload
+PASS Picori out of range filename
+PASS Picori completion requires bundled helper
+PASS Picori AutoTMC retains its upstream USA-only ROM contract
+PASS Open Nectar exact USA Pikmin disc
+PASS Open Nectar PAL Pikmin selects PAL executable
+PASS Open Nectar USA Pikmin 2 selects USA payload
+PASS Open Nectar PAL Pikmin 2 selects PAL payload
+PASS Open Nectar unsupported discs rejected
+PASS Open Nectar native profile gated by its embedded helper
+PASS Golden Sun managed English ROM path
+PASS Golden Sun managed localized ROM path
+PASS Golden Sun exact supported hashes, including explicit Reloaded revision
+PASS Radz shared media contract
+PASS Radz native build requires local consent
+PASS Radz unrecognized asset signature
+PASS Radz asset table size bounded
+PASS Radz asset index hash required
+PASS Phase Distorter closed import arguments
+PASS Phase Distorter synthetic range matches donor
+PASS Phase Distorter trailing bytes
+PASS Phase Distorter different asset bytes
+PASS Phase Distorter out-of-bounds range
+PASS Severed Chains four disc positions
+PASS Severed Chains wrong disc size
+PASS Severed Chains no wildcard launcher arguments
+PASS Severed Chains injected classpath entry
+PASS Severed Chains missing completion marker
+PASS Severed Chains wrong extraction version
+PASS Severed Chains marker alone does not register
+PASS Severed Chains synthetic marker and data pass the output guard
+PASS KnowYourRole settings resolve to the final directory after the move
+PASS KnowYourRole binding preserves other settings
+PASS R18 DKB Bananza loose shader cache has a dedicated bounded entry limit
+PASS R18 DKB dkb-0.5.1-44ba6b1-prepare resolves installed runtime without media selection
+PASS R18 DKB dkb-0.5.1-44ba6b1-prepare rejects alternate runtime and missing or resized RomFS
+PASS R18 DKB totk-0.5.0-prepare resolves installed runtime without media selection
+PASS R18 DKB TotK rejects modified shader preparation and missing resource patch manifest
+PASS R18 DKB totk-0.5.0-prepare rejects alternate runtime and missing or resized RomFS
+PASS R18 DKB supervisor cancels and joins the build after progress failure
+PASS R18 DKB requires consent
+PASS R18 DKB NUP or extracted folder
+PASS R18 DKB bounded progress events
+PASS R18 DKB fixed offline policy and optional licenses off
+PASS R18 DKB rejects altered kit
+PASS R18 DKB DKB strips unverified stray binaries/codegen on checkpoint
+PASS R18 DKB DKB retains only verified dkb_data phase
+PASS R18 DKB DKB deterministic resume reuses retained data phase
+PASS R18 DKB DKB rejects tampered romfs.bin in checkpoint
+PASS R18 DKB DKB rejects mismatched destination in checkpoint
+PASS R18 LAS requires consent
+PASS R18 LAS rejects unpinned kit
+PASS R18 LAS rejects fake NSO
+PASS R18 LAS rejects unknown build ID
+PASS R18 LAS uses the installed game folder
+PASS R18 LAS rejects an alternate launcher
+PASS R18 LAS rejects same-size changes to installed ExeFS
+PASS R18 LAS requires the installed game DLL
+PASS R18 LAS fixed SDK generator arguments
+PASS SSX requires consent
+PASS SSX ISO or extracted folder
+PASS SSX rejects unknown XEX digest
+PASS SSX rejects unknown launcher tree
+PASS SSX SSX approved optional DLC allowlist
+PASS SSX SSX rejects a lone XEXP without the update data
+PASS SSX SSX rejects invalid TU
+PASS SSX SSX accepts STFS DLC
+PASS SSX SSX rejects host executable in DLC
+PASS SSX CACHE persists the complete generated tree and identity
+PASS SSX CACHE restores after state reload and failed-build work cleanup
+PASS SSX CACHE restores only source tree, without the private identity marker
+PASS SSX CACHE changed media cannot reuse codegen
+PASS SSX CACHE title update cannot reuse base codegen
+PASS SSX CACHE changed launcher package invalidates codegen
+PASS SSX CACHE different staging path cannot reuse potentially absolute upstream paths
+PASS SSX CACHE source mismatch is rejected independently of file integrity
+PASS SSX CACHE generator mismatch is rejected independently of file integrity
+PASS SSX CACHE same-size corruption never publishes a partial restore
+PASS SSX CACHE missing generated header is rejected
+PASS SSX CACHE unexpected media in the cache is rejected
+PASS SSX CACHE failed restores leave no candidate tree
+PASS SSX CACHE restore honors cancellation without publishing
+PASS SSX CACHE cancelled publication preserves the previous cache
+PASS SSX CACHE cancelled publication leaves the identity unchanged
+PASS SSX CACHE raw media cannot be persisted even alongside valid codegen
+PASS SSX CACHE rejected candidate preserves the previous verified cache
+PASS SSX CACHE occupied candidate is not overwritten
+PASS SSX CACHE successful replacement cleans its owned backup
+PASS SSX CACHE updated codegen cannot be reused without its title update
+PASS SSX CACHE matching updated media restores successfully
+PASS SSX CACHE cache ownership must match the installation
+PASS SSX CACHE foreign cache is never replaced
+PASS SSX CACHE foreign cache remains intact
+PASS SSX CACHE cache hit selects frozen CMake mode
+PASS SSX CACHE ordinary generation remains the default
+PASS SSX CACHE unrecognized upstream CMake cannot receive the adapter
+PASS SSX CACHE ambiguous upstream CMake cannot receive the adapter
+PASS SSX CACHE real build transaction propagates link failure after saving codegen
+PASS SSX CACHE failed transaction preserves the saved manifest
+PASS SSX CACHE real transaction cleans its work while retaining the sidecar
+PASS SSX CACHE a new real transaction reaches the build after restoring codegen
+PASS SSX CACHE retry preserves its cache record through a second rollback
+PASS SSX CACHE real build transaction propagates cancellation after saving codegen
+PASS SSX CACHE cancelled transaction preserves the saved manifest
+PASS SSX CACHE real transaction cleans its work while retaining the sidecar
+PASS SSX CACHE a new real transaction reaches the build after restoring codegen
+PASS SSX CACHE retry preserves its cache record through a second rollback
+PASS SSX NATIVE embedded source/patch/header contract verifies
+PASS SSX NATIVE same-size embedded corruption rejected
+PASS SSX NATIVE truncated embedded support rejected
+PASS SSX NATIVE wrong official source revision rejected before adaptation
+PASS SSX NATIVE rejected source remains unchanged
+PASS SSX NATIVE source preparation cancellation has no writes
+PASS SSX NATIVE fixed relative source link becomes an ordinary private file
+PASS SSX NATIVE unlisted source links rejected
+PASS SSX NATIVE unlisted link is never created
+PASS SSX NATIVE relative link cannot escape package root
+PASS SSX NATIVE outside file is preserved
+PASS SSX NATIVE archive path traversal rejected
+PASS SSX NATIVE unexpected archive prefix rejected
+PASS SSX NATIVE Windows-case duplicate source rejected
+PASS SSX NATIVE archive hash mismatch rejected before extraction
+PASS SSX NATIVE bad archive hash produces no source tree
+PASS SSX NATIVE archive extraction honors cancellation
+PASS SSX NATIVE cancelled extraction publishes no source
+PASS SSX NATIVE native build retains every pinned SDK renderer/feature
+PASS SSX NATIVE resource compiler path is valid CMake syntax with spaces
+PASS SSX NATIVE game uses the same shared C++ runtime and architecture as SDK
+PASS SSX NATIVE private build does not inherit the installed MSVC SDK
+PASS PINYON consent required
+PASS PINYON ISO or extracted folder
+PASS PINYON fake kit rejected
+PASS PINYON exact reviewed warnings accepted
+PASS PINYON unknown warning rejected
+PASS PINYON missing expected warning rejected
+PASS PINYON Pinyon accepts avx2 option
+PASS PINYON Pinyon rejects unknown CPU baseline
+PASS PINYON Pinyon wires optional DLSS and CPU baseline
+PASS PINYON v4 configure variant
+PASS PINYON host verifier remains base
+PASS PINYON base variant unchanged
+PASS PINYON wrong TU size rejected
+PASS PINYON wrong TU hash rejected
+PASS PINYON restored codegen skips upstream generation
+PASS PINYON host preflight never uses frozen codegen
+PASS PINYON persisted manifest includes identity
+PASS PINYON restores verified cache after state reload
+PASS PINYON private restore excludes identity marker
+PASS PINYON different disc hash cannot reuse cache
+PASS PINYON base cache cannot be reused by TU4
+PASS PINYON tampered cache rejected
+PASS PINYON cache restore honors cancellation
+PASS GTA combined distinct selectors
+PASS GTA single edition unchanged
+PASS GTA consent required
+PASS GTA fake kit rejected
+PASS GTA fake ISO rejected
+PASS GTA combined exact pack result
+PASS GTA combined missing packs rejected
+PASS GTA normal build preserves one ISO argument and always performs codegen
+PASS GTA the old codegen-skipping oneproc invocation is rejected
+PASS GTA oneproc explicitly consumes both completed generated roots
+PASS GTA oneproc launch stays an explicit selection
+PASS GTA both normal games precede oneproc and publication
+PASS GTA two-process mode preserves normal runners without DLL stage
+PASS GTA second-city failure propagates
+PASS GTA failed second city cannot build host, packs or publish
+PASS GTA cancellation propagates between cities
+PASS GTA cancelled pipeline starts no further stage
+PASS GTA closed environment uses only the private toolchain
+PASS GTA Windows shell path is native and fixed
+PASS GTA normal build receipt is bound to the generated source and edition
+PASS GTA stale receipt rejected
+PASS GTA wrong-city receipt rejected
+PASS GTA empty generated header rejected
+PASS GTA single launch passes the verified local ISO explicitly and clears ambient overrides
+PASS GTA user settings remain mutable
+PASS GTA unverified single installation cannot launch
+PASS GTA missing recorded runtime DLL rejected
+PASS GTA modified original ISO rejected
+PASS GTA failed single validation publishes no launch arguments
+PASS GTA combined launch binds both originals and the published build root
+PASS GTA combined launch does not supply saves or modify cross-city save state
+PASS GTA combined settings and user saves stay mutable
+PASS GTA oneproc refuses missing actual host
+PASS GTA missing recorded interpreter configuration rejected
+PASS GTA changed modslots contract rejected before runner execution
+PASS GTA failed combined validation publishes no arguments
+PASS GTA combined transaction propagates second-city failure
+PASS GTA rollback keeps both media checkpoints and prevents incomplete registration
+PASS GTA rollback preserves kit, tool cache and both originals
+PASS GTA combined transaction propagates cancellation
+PASS GTA rollback keeps both media checkpoints and prevents incomplete registration
+PASS GTA rollback preserves kit, tool cache and both originals
+PASS GOW consent required
+PASS GOW fake kit rejected
+PASS GOW fake ISO rejected
+PASS GOW fake CHD rejected
+PASS GOW original-disc gate accepts the structurally valid synthetic dual-layer fixture
+PASS GOW disc validation observes cancellation
+PASS GOW an ISO signature alone cannot authorize preparation
+PASS GOW available optional generation is retained
+PASS GOW optional generation mismatch selects the upstream interpreter
+PASS GOW optional preparation does not hide cancellation
+PASS GOW optional preparation does not hide storage failures
+PASS GOW missing EE generation cannot compile
+PASS GOW generated-output gate recognizes the required source contract
+PASS GOW generated host executables cannot be staged as source
+PASS GOW shared DiscSource adapter requires its exact source hash
+PASS GOW failed source pin preserves its input
+PASS GOW Jogar supplies the verified guest ELF and permits mutable memory-card saves
+PASS GOW Jogar refuses unverified state
+PASS GOW Jogar refuses another profile
+PASS GOW Jogar refuses changed disc content
+PASS GOW failed launch validation publishes no arguments
+PASS PS4 rygt-2026-11-23-prepare consent required
+PASS PS4 rygt-2026-11-23-prepare fake kit rejected
+PASS PS4 spartanport-3.2.1-prepare consent required
+PASS PS4 spartanport-3.2.1-prepare fake kit rejected
+PASS PS4 GT7 separate firmware selectors
+PASS PS4 Spartan local game selector
+PASS PS4 Spartan refuses boot image in place of linked libc
+PASS PS4 Spartan accepts all three official image layouts
+PASS PS4 Spartan rejects trial content profile
+PASS PS4 GT7 rejects empty converted module directory
+PASS PS4 GT7 rejects conversion without Fios
+PASS PS4 GT7 rejects modules split across layouts
+PASS PS4 GT7 rejects an unconverted module
+PASS PS4 GT7 requires both font directories to contain files
+PASS PS4 GT7 accepts the expected output directory structure
+PASS PS4 GT7 rejects legacy module names even when their contents are PE images
+PASS PS4 GT7 accepts recorded installed fonts
+PASS PS4 GT7 rejects same-size font changes
+PASS PS4 GT7 rejects missing recorded fonts
+PASS ODYSSEY consent required
+PASS ODYSSEY fake kit rejected
+PASS ODYSSEY base build ID
+PASS ODYSSEY update build ID
+PASS ODYSSEY wrong build ID rejected
+PASS ODYSSEY uses installed data root without selecting media
+PASS ODYSSEY preserves the old loose RomFS layout
+PASS ODYSSEY rejects missing registered RomFS image
+PASS ODYSSEY rejects changed installed ExeFS
+PASS ODYSSEY rejects missing installed ExeFS
+PASS ODYSSEY rejects missing loose video files
+PASS ODYSSEY rejects missing generated DLL
+PASS ODYSSEY RomFS image header and table ranges
+PASS ODYSSEY truncated RomFS denied
+PASS ODYSSEY overlapping RomFS tables denied
+PASS GT4 consent required
+PASS GT4 detects original Gran Turismo 4
+PASS GT4 detects Spec II boot identifier
+PASS GT4 rejects unrelated disc serial
+PASS GT4 availability follows the embedded helper
+PASS GT4 gt4 starts the matching native runtime with CoreGS
+PASS GT4 gt4 rejects changed ISO size
+PASS GT4 spec2 starts the matching native runtime with CoreGS
+PASS GT4 spec2 rejects changed ISO size
+PASS MKW consent required
+PASS MKW fake kit rejected
+PASS MKW base build ID
+PASS MKW update build ID
+PASS MKW wrong build ID rejected
+PASS MKW incomplete spec rejected
+PASS MKW separate spec input
+PASS MKW uses registered media and installed shader spec
+PASS MKW rejects changed original media
+PASS MKW rejects missing installed shader pack
+PASS MKW accepts the official empty cleanup completion key
+PASS MKW rejects state from a different port version
+PASS MKW rejects a library identifier from a different build
+PASS MKW distinguishes missing cleanup from an empty completion key
+PASS DOAX consent required
+PASS DOAX fake kit rejected
+PASS DOAX fake ISO rejected
+PASS DOAX DOAX wires optional RTGI flag
+PASS DOAX private CMake compiler paths are normalized, including resources
+PASS DOAX Windows imports and explicitly packaged dependencies accepted
+PASS DOAX unpackaged CRT cannot rely on the build machine
+PASS DOAX pinned TAR default-stays-strict
+PASS DOAX pinned TAR verified-git-comment
+PASS DOAX pinned TAR preserves member bytes
+PASS DOAX pinned TAR metadata-path-rejected
+PASS DOAX pinned TAR symbolic-link-rejected
+PASS DOAX pinned TAR traversal-rejected
+PASS DOAX pinned TAR duplicate-rejected
+PASS DOAX pinned TAR never writes outside the destination
+PASS DOAX requested RTGI cannot silently disappear from the build
+PASS DOAX RTGI requires all three generated shader pairs
+PASS DOAX DOAX retains verified generated phase checkpoint
+PASS DOAX DOAX rejects mismatched checkpoint manifest
+PASS R18 TotK consent required
+PASS R18 TotK only nonsecret media in persistent selector
+PASS R18 TotK fixed CLI arguments without optional download
+PASS R18 TotK safe progress fields only
+PASS R18 TotK safe error without params
+PASS R18 TotK unknown steps ignored
+PASS R18 TotK rejects unpinned kit
+PASS TotK cache closed nine-file retention contract
+PASS TotK cache no kit, input, generated code or logs survive
+PASS TotK cache transient key copies and all logs removed
+PASS TotK cache index rebuilt from verified RomFS instead of untrusted index paths
+PASS TotK cache upstream state regenerated from allowed fields only
+PASS TotK cache only completed extract phase retained
+PASS TotK cache no key material, key path, log or arbitrary upstream metadata in saved state
+PASS TotK cache cache lookup works while metadata is locked against writes and deletion
+PASS TotK cache retention and resume preserve the same image without a duplicate
+PASS TotK cache verified resume bypasses the production key selector callback
+PASS TotK cache fresh extraction still requests an ephemeral key
+PASS TotK cache all original synthetic inputs untouched
+PASS TotK cache same-size same-date corruption rejected: romfs/romfs.bin
+PASS TotK cache same-size same-date corruption rejected: exefs/main
+PASS TotK cache new full media fingerprint rejects same-size same-date update changes
+PASS TotK cache same bytes remain reusable after original media is renamed
+PASS TotK cache package identity change invalidates cache
+PASS TotK cache modified source file rejected against its recorded digest
+PASS TotK cache changed source manifest invalidates the upstream phase fingerprint
+PASS TotK cache tampered phase metadata rejected by snapshot
+PASS TotK cache closed cache layout rejects unexpected entry: exefs/extra.keys
+PASS TotK cache closed cache layout rejects unexpected entry: romfs/private.log
+PASS TotK cache closed cache layout rejects unexpected entry: unexpected-directory
+PASS TotK cache foreign work owner is rejected without deleting its files
+PASS TotK cache missing extract completion
+PASS TotK cache wrong phase fingerprint
+PASS TotK cache wrong phase release
+PASS TotK cache wrong upstream release
+PASS TotK cache unsupported media version
+PASS TotK cache changed media identity in upstream state
+PASS TotK cache incomplete phase output stamp
+PASS TotK cache malformed RomFS table rejected: cycle
+PASS TotK cache malformed RomFS table rejected: bounds
+PASS TotK cache malformed RomFS table rejected: name
+PASS TotK cache cancellation before retention does not publish or mutate a checkpoint
+PASS TotK cache cancelled resume preserves the previously verified phase
+PASS TotK cache cancelled key selection does not destroy retained data
+PASS TotK cache failure handler discards sensitive native exception details
+PASS TotK cache failure state cannot become a registered game
+PASS TotK cache failure removes incomplete extraction and clears recovery state
+PASS TotK cache saved failure state excludes secrets and preserves original key fixture
+PASS TotK cache failure handler discards sensitive native exception details
+PASS TotK cache failure state cannot become a registered game
+PASS TotK cache failure saves and reuses completed data despite cancelled token
+PASS TotK cache saved failure state excludes secrets and preserves original key fixture
+PASS TotK cache failure handler preserves original cancellation
+PASS TotK cache failure state cannot become a registered game
+PASS TotK cache cancellation removes incomplete extraction and clears recovery state
+PASS TotK cache saved failure state excludes secrets and preserves original key fixture
+PASS TotK cache failure handler preserves original cancellation
+PASS TotK cache failure state cannot become a registered game
+PASS TotK cache cancellation saves and reuses completed data despite cancelled token
+PASS TotK cache saved failure state excludes secrets and preserves original key fixture
+PASS TotK cache resume CLI verifies retained output without key or media arguments
+TOTK_CACHE_POLICY_PASS
+PASS R19 pinned source URL god-of-war-recomp
+PASS R19 consent required god-of-war-recomp
+PASS R19 media spec god-of-war-recomp
+PASS R19 rejects launch injection god-of-war-recomp
+PASS R19 rejects wrong sha god-of-war-recomp
+PASS R19 pinned source URL strikers-wiicompiled
+PASS R19 consent required strikers-wiicompiled
+PASS R19 media spec strikers-wiicompiled
+PASS R19 rejects launch injection strikers-wiicompiled
+PASS R19 rejects wrong sha strikers-wiicompiled
+PASS R19 pinned source URL strikersrecomp
+PASS R19 consent required strikersrecomp
+PASS R19 media spec strikersrecomp
+PASS R19 rejects launch injection strikersrecomp
+PASS R19 rejects wrong sha strikersrecomp
+PASS R19 pinned source URL mkdd-recomp
+PASS R19 consent required mkdd-recomp
+PASS R19 media spec mkdd-recomp
+PASS R19 rejects launch injection mkdd-recomp
+PASS R19 rejects wrong sha mkdd-recomp
+PASS R19 pinned source URL wipeout-rewrite
+PASS R19 consent required wipeout-rewrite
+PASS R19 media spec wipeout-rewrite
+PASS R19 rejects launch injection wipeout-rewrite
+PASS R19 rejects wrong sha wipeout-rewrite
+PASS R19 KIexster rejects short PS2 ELF
+PASS R19 KIexster rejects fake PS2 ISO
+PASS R19 Strikers Wii rejects wrong DOL SHA-256
+PASS R19 Strikers Wii rejects empty disc folder
+PASS R19 Strikers Wii rejects media without the runtime file table
+PASS R19 Strikers Wii selector requires a disc image or full extracted media
+PASS R19 Strikers Wii portable config resolves disc data after staging relocation
+PASS R19 shared copy cancels before creating the destination
+PASS R19 shared copy preserves nested file contents
+PASS R19 StrikersRecomp rejects non-G4QE01 ISO
+PASS R19 StrikersRecomp rejects bad DOL
+PASS R19 MKDD-Alt rejects CISO without magic
+PASS R19 MKDD-Alt rejects non-power-of-two block size
+PASS R19 Wipeout rejects missing textures/common
+PASS R19 Hookshot can continue after initial staging
+PASS R19 incomplete Forza pipeline keeps an explicit manual boundary
+PASS R19 separate Team Forever profiles only ask for their own original
+PASS R19 provider distinguishes verified, experimental and partial automation
+PASS R19 Hookshot requires consent
+PASS R19 Hookshot NUP/NX or folder media
+PASS R19 Hookshot 8 SHA-256 pinned parts
+PASS R19 Hookshot deterministic CLI args with opt-in DLSS
+PASS R19 Hookshot rejects fake kit manifest
+PASS R19 Hookshot rejects tiny synthetic .nup
+PASS R19 Hookshot rejects folder without exefs/romfs
+PASS R19 TeamForever v9 profile registered
+PASS R19 TeamForever dual media spec
+PASS R19 TeamForever S1 media spec
+PASS R19 TeamForever rejects Data.rsdk without RSDKvB header
+PASS R19 TeamForever extracts and validates assets/Data.rsdk from .apk
+PASS R19 TeamForever reads the edition from an encrypted GameConfig
+PASS R19 TeamForever rejects Sonic 2 medium for Sonic 1
+PASS R19 TeamForever rejects a truncated data record
+PASS Hookshot refuses a folder without the original RomFS dictionary
+PASS Hookshot builder receives a private media folder
+PASS Hookshot snapshot copies the selected data
+PASS Hookshot output writes cannot change the user's original media
+PASS Hookshot rejects pre-existing media staging
+PASS Hookshot rejects same-size changes to the source
+PASS Hookshot rejects a growing source
+PASS Hookshot private copy never exceeds the fingerprinted size
+PASS Hookshot private media staging observes cancellation
+PASS Hookshot root setup executable is not a completed build
+PASS Hookshot rejects a build missing its original RomFS
+PASS Hookshot launches the native game directly from its data directory
+PASS Hookshot legacy registration resolves the verified native executable
+PASS Hookshot rejects an untracked module in the working directory
+PASS Hookshot rejects a changed renderer
+PASS PaperBoat exact receipt accepted
+PASS PaperBoat other release rejected
+PASS PaperBoat different archive hash rejected
+PASS PaperBoat no duplicate ROM picker
+PASS PaperBoat local consent preserved
+PASS PaperBoat profile unavailable without exact embedded tool
+PASS PaperBoat incorrect ROM size rejected
+PASS PaperBoat correct size and magic with wrong SHA-1 rejected
+PASS PaperBoat incomplete kit rejected
+PASS PaperBoat synthetic structural O2R fixture accepted (not gameplay)
+PASS PaperBoat different ROM CRC rejected
+PASS PaperBoat wrong output version rejected
+PASS PaperBoat missing CRC rejected
+PASS BattleShip exact release
+PASS BattleShip JP release rejected
+PASS BattleShip altered archive rejected
+PASS BattleShip closed local profile
+PASS BattleShip no duplicate media selection
+PASS BattleShip consent preserved
+PASS BattleShip wrong ROM SHA-1
+PASS BattleShip incomplete kit rejected
+PASS BattleShip structural fixture with upstream metadata (not gameplay)
+PASS BattleShip wrong ROM CRC
+PASS BattleShip unexpected portVersion rejected
+PASS Ghostship exact receipt accepted
+PASS Ghostship other release rejected
+PASS Ghostship different archive hash rejected
+PASS Ghostship no duplicate ROM picker
+PASS Ghostship local consent preserved
+PASS Ghostship profile unavailable without exact embedded tool
+PASS Ghostship incorrect ROM size rejected
+PASS Ghostship correct size and magic with wrong SHA-1 rejected
+PASS Ghostship incomplete kit rejected
+PASS Ghostship synthetic structural O2R fixture accepted (not gameplay)
+PASS Ghostship different ROM CRC rejected
+PASS Ghostship wrong output version rejected
+PASS Ghostship missing CRC rejected
+PASS BlueWake perfil e seletor universal
+PASS BlueWake ISO curta recusada
+PASS BlueWake 414 RELs recusados
+PASS BlueWake 415 RELs sintÇticos aceitos
+PASS BlueWake REL com alinhamento inv†lido recusado
+PASS N64 portable zelda64-v1.2.2-portable exact release
+PASS N64 portable zelda64-v1.2.2-portable URL mismatch
+PASS N64 portable zelda64-v1.2.2-portable hash mismatch
+PASS N64 portable zelda64-v1.2.2-portable media picker
+PASS N64 portable zelda64-v1.2.2-portable consent
+PASS N64 portable zelda64-v1.2.2-portable enabled
+PASS N64 portable zelda64-v1.2.2-portable wrong runtime hash rejected
+PASS N64 portable zelda64-v1.2.2-portable incomplete kit rejected
+PASS N64 portable zelda64-v1.2.2-portable synthetic hash implementation fixture only
+PASS N64 portable zelda64-v1.2.2-portable wrong byte order
+PASS N64 portable banjo-v1.0.2-portable exact release
+PASS N64 portable banjo-v1.0.2-portable URL mismatch
+PASS N64 portable banjo-v1.0.2-portable hash mismatch
+PASS N64 portable banjo-v1.0.2-portable media picker
+PASS N64 portable banjo-v1.0.2-portable consent
+PASS N64 portable banjo-v1.0.2-portable enabled
+PASS N64 portable banjo-v1.0.2-portable wrong runtime hash rejected
+PASS N64 portable banjo-v1.0.2-portable incomplete kit rejected
+PASS N64 portable banjo-v1.0.2-portable synthetic hash implementation fixture only
+PASS N64 portable banjo-v1.0.2-portable wrong byte order
+PASS N64 portable tooie-v1.0.1-portable exact release
+PASS N64 portable tooie-v1.0.1-portable URL mismatch
+PASS N64 portable tooie-v1.0.1-portable hash mismatch
+PASS N64 portable tooie-v1.0.1-portable media picker
+PASS N64 portable tooie-v1.0.1-portable consent
+PASS N64 portable tooie-v1.0.1-portable enabled
+PASS N64 portable tooie-v1.0.1-portable wrong runtime hash rejected
+PASS N64 portable tooie-v1.0.1-portable incomplete kit rejected
+PASS N64 portable tooie-v1.0.1-portable synthetic hash implementation fixture only
+PASS N64 portable tooie-v1.0.1-portable wrong byte order
+PASS N64 portable mk64-v0.9.2-portable exact release
+PASS N64 portable mk64-v0.9.2-portable URL mismatch
+PASS N64 portable mk64-v0.9.2-portable hash mismatch
+PASS N64 portable mk64-v0.9.2-portable media picker
+PASS N64 portable mk64-v0.9.2-portable consent
+PASS N64 portable mk64-v0.9.2-portable enabled
+PASS N64 portable mk64-v0.9.2-portable wrong runtime hash rejected
+PASS N64 portable mk64-v0.9.2-portable incomplete kit rejected
+PASS N64 portable mk64-v0.9.2-portable synthetic hash implementation fixture only
+PASS N64 portable mk64-v0.9.2-portable wrong byte order
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable exact release
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable URL mismatch
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable hash mismatch
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable media picker
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable consent
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable enabled
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable wrong runtime hash rejected
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable incomplete kit rejected
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable synthetic hash implementation fixture only
+PASS N64 portable wcwvsnwoworldtourrecomp-0.3.2-portable wrong byte order
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable exact release
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable URL mismatch
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable hash mismatch
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable media picker
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable consent
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable enabled
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable wrong runtime hash rejected
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable incomplete kit rejected
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable synthetic hash implementation fixture only
+PASS N64 portable wcwnworevengerecomp-0.3.2-portable wrong byte order
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable exact release
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable URL mismatch
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable hash mismatch
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable media picker
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable consent
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable enabled
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable wrong runtime hash rejected
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable incomplete kit rejected
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable synthetic hash implementation fixture only
+PASS N64 portable wwfwrestlemania2000recomp-0.3.2-portable wrong byte order
+PASS N64 portable vpw64recomp-0.3.2-portable exact release
+PASS N64 portable vpw64recomp-0.3.2-portable URL mismatch
+PASS N64 portable vpw64recomp-0.3.2-portable hash mismatch
+PASS N64 portable vpw64recomp-0.3.2-portable media picker
+PASS N64 portable vpw64recomp-0.3.2-portable consent
+PASS N64 portable vpw64recomp-0.3.2-portable enabled
+PASS N64 portable vpw64recomp-0.3.2-portable wrong runtime hash rejected
+PASS N64 portable vpw64recomp-0.3.2-portable incomplete kit rejected
+PASS N64 portable vpw64recomp-0.3.2-portable synthetic hash implementation fixture only
+PASS N64 portable vpw64recomp-0.3.2-portable wrong byte order
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable exact release
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable URL mismatch
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable hash mismatch
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable media picker
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable consent
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable enabled
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable wrong runtime hash rejected
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable incomplete kit rejected
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable synthetic hash implementation fixture only
+PASS N64 portable wwfnomercyrecomp-0.3.2-portable wrong byte order
+PASS N64 portable btgarecomp-0.1.13-portable exact release
+PASS N64 portable btgarecomp-0.1.13-portable URL mismatch
+PASS N64 portable btgarecomp-0.1.13-portable hash mismatch
+PASS N64 portable btgarecomp-0.1.13-portable media picker
+PASS N64 portable btgarecomp-0.1.13-portable consent
+PASS N64 portable btgarecomp-0.1.13-portable enabled
+PASS N64 portable btgarecomp-0.1.13-portable wrong runtime hash rejected
+PASS N64 portable btgarecomp-0.1.13-portable incomplete kit rejected
+PASS N64 portable btgarecomp-0.1.13-portable synthetic hash implementation fixture only
+PASS N64 portable btgarecomp-0.1.13-portable wrong byte order
+PASS N64 portable battle-tanx-ga-v0.2.5-portable exact release
+PASS N64 portable battle-tanx-ga-v0.2.5-portable URL mismatch
+PASS N64 portable battle-tanx-ga-v0.2.5-portable hash mismatch
+PASS N64 portable battle-tanx-ga-v0.2.5-portable media picker
+PASS N64 portable battle-tanx-ga-v0.2.5-portable consent
+PASS N64 portable battle-tanx-ga-v0.2.5-portable enabled
+PASS N64 portable battle-tanx-ga-v0.2.5-portable wrong runtime hash rejected
+PASS N64 portable battle-tanx-ga-v0.2.5-portable incomplete kit rejected
+PASS N64 portable battle-tanx-ga-v0.2.5-portable synthetic hash implementation fixture only
+PASS N64 portable battle-tanx-ga-v0.2.5-portable wrong byte order
+PASS N64 portable body-harvest-v0.1.0-portable exact release
+PASS N64 portable body-harvest-v0.1.0-portable URL mismatch
+PASS N64 portable body-harvest-v0.1.0-portable hash mismatch
+PASS N64 portable body-harvest-v0.1.0-portable media picker
+PASS N64 portable body-harvest-v0.1.0-portable consent
+PASS N64 portable body-harvest-v0.1.0-portable enabled
+PASS N64 portable body-harvest-v0.1.0-portable wrong runtime hash rejected
+PASS N64 portable body-harvest-v0.1.0-portable incomplete kit rejected
+PASS N64 portable body-harvest-v0.1.0-portable synthetic hash implementation fixture only
+PASS N64 portable body-harvest-v0.1.0-portable wrong byte order
+PASS N64 portable quest64-v0.1-portable exact release
+PASS N64 portable quest64-v0.1-portable URL mismatch
+PASS N64 portable quest64-v0.1-portable hash mismatch
+PASS N64 portable quest64-v0.1-portable media picker
+PASS N64 portable quest64-v0.1-portable consent
+PASS N64 portable quest64-v0.1-portable enabled
+PASS N64 portable quest64-v0.1-portable wrong runtime hash rejected
+PASS N64 portable quest64-v0.1-portable incomplete kit rejected
+PASS N64 portable quest64-v0.1-portable synthetic hash implementation fixture only
+PASS N64 portable quest64-v0.1-portable wrong byte order
+PASS N64 portable snowboardkids2-v2.0.2-portable exact release
+PASS N64 portable snowboardkids2-v2.0.2-portable URL mismatch
+PASS N64 portable snowboardkids2-v2.0.2-portable hash mismatch
+PASS N64 portable snowboardkids2-v2.0.2-portable media picker
+PASS N64 portable snowboardkids2-v2.0.2-portable consent
+PASS N64 portable snowboardkids2-v2.0.2-portable enabled
+PASS N64 portable snowboardkids2-v2.0.2-portable wrong runtime hash rejected
+PASS N64 portable snowboardkids2-v2.0.2-portable incomplete kit rejected
+PASS N64 portable snowboardkids2-v2.0.2-portable synthetic hash implementation fixture only
+PASS N64 portable snowboardkids2-v2.0.2-portable wrong byte order
+PASS N64 portable sssv-v0.2.0-portable exact release
+PASS N64 portable sssv-v0.2.0-portable URL mismatch
+PASS N64 portable sssv-v0.2.0-portable hash mismatch
+PASS N64 portable sssv-v0.2.0-portable media picker
+PASS N64 portable sssv-v0.2.0-portable consent
+PASS N64 portable sssv-v0.2.0-portable enabled
+PASS N64 portable sssv-v0.2.0-portable wrong runtime hash rejected
+PASS N64 portable sssv-v0.2.0-portable incomplete kit rejected
+PASS N64 portable sssv-v0.2.0-portable synthetic hash implementation fixture only
+PASS N64 portable sssv-v0.2.0-portable wrong byte order
+PASS N64 portable bm64recomp-v1.0.0-portable exact release
+PASS N64 portable bm64recomp-v1.0.0-portable URL mismatch
+PASS N64 portable bm64recomp-v1.0.0-portable hash mismatch
+PASS N64 portable bm64recomp-v1.0.0-portable media picker
+PASS N64 portable bm64recomp-v1.0.0-portable consent
+PASS N64 portable bm64recomp-v1.0.0-portable enabled
+PASS N64 portable bm64recomp-v1.0.0-portable wrong runtime hash rejected
+PASS N64 portable bm64recomp-v1.0.0-portable incomplete kit rejected
+PASS N64 portable bm64recomp-v1.0.0-portable synthetic hash implementation fixture only
+PASS N64 portable bm64recomp-v1.0.0-portable wrong byte order
+PASS N64 portable bmherorecomp-v0.7.1-portable exact release
+PASS N64 portable bmherorecomp-v0.7.1-portable URL mismatch
+PASS N64 portable bmherorecomp-v0.7.1-portable hash mismatch
+PASS N64 portable bmherorecomp-v0.7.1-portable media picker
+PASS N64 portable bmherorecomp-v0.7.1-portable consent
+PASS N64 portable bmherorecomp-v0.7.1-portable enabled
+PASS N64 portable bmherorecomp-v0.7.1-portable wrong runtime hash rejected
+PASS N64 portable bmherorecomp-v0.7.1-portable incomplete kit rejected
+PASS N64 portable bmherorecomp-v0.7.1-portable synthetic hash implementation fixture only
+PASS N64 portable bmherorecomp-v0.7.1-portable wrong byte order
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable exact release
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable URL mismatch
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable hash mismatch
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable media picker
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable consent
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable enabled
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable wrong runtime hash rejected
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable incomplete kit rejected
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable synthetic hash implementation fixture only
+PASS N64 portable chameleontwist1-jp-recomp-v0.1-portable wrong byte order
+PASS N64 portable dnzhrecomp-0.0.3-portable exact release
+PASS N64 portable dnzhrecomp-0.0.3-portable URL mismatch
+PASS N64 portable dnzhrecomp-0.0.3-portable hash mismatch
+PASS N64 portable dnzhrecomp-0.0.3-portable media picker
+PASS N64 portable dnzhrecomp-0.0.3-portable consent
+PASS N64 portable dnzhrecomp-0.0.3-portable enabled
+PASS N64 portable dnzhrecomp-0.0.3-portable wrong runtime hash rejected
+PASS N64 portable dnzhrecomp-0.0.3-portable incomplete kit rejected
+PASS N64 portable dnzhrecomp-0.0.3-portable synthetic hash implementation fixture only
+PASS N64 portable dnzhrecomp-0.0.3-portable wrong byte order
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable exact release
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable URL mismatch
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable hash mismatch
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable media picker
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable consent
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable enabled
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable wrong runtime hash rejected
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable incomplete kit rejected
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable synthetic hash implementation fixture only
+PASS N64 portable donkey-kong-64-recompiled-dk64-rekongpiled-v1.0.3-portable wrong byte order
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable exact release
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable URL mismatch
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable hash mismatch
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable media picker
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable consent
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable enabled
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable wrong runtime hash rejected
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable incomplete kit rejected
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable synthetic hash implementation fixture only
+PASS N64 portable drmario64-recomp-plus-1.0.0-portable wrong byte order
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable exact release
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable URL mismatch
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable hash mismatch
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable media picker
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable consent
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable enabled
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable wrong runtime hash rejected
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable incomplete kit rejected
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable synthetic hash implementation fixture only
+PASS N64 portable goemon64recomp-v0.2.0-dev-portable wrong byte order
+PASS N64 portable gga64recomp-v0.1.0-portable exact release
+PASS N64 portable gga64recomp-v0.1.0-portable URL mismatch
+PASS N64 portable gga64recomp-v0.1.0-portable hash mismatch
+PASS N64 portable gga64recomp-v0.1.0-portable media picker
+PASS N64 portable gga64recomp-v0.1.0-portable consent
+PASS N64 portable gga64recomp-v0.1.0-portable enabled
+PASS N64 portable gga64recomp-v0.1.0-portable wrong runtime hash rejected
+PASS N64 portable gga64recomp-v0.1.0-portable incomplete kit rejected
+PASS N64 portable gga64recomp-v0.1.0-portable synthetic hash implementation fixture only
+PASS N64 portable gga64recomp-v0.1.0-portable wrong byte order
+PASS N64 portable megaman64recompiled-v0.9.1-portable exact release
+PASS N64 portable megaman64recompiled-v0.9.1-portable URL mismatch
+PASS N64 portable megaman64recompiled-v0.9.1-portable hash mismatch
+PASS N64 portable megaman64recompiled-v0.9.1-portable media picker
+PASS N64 portable megaman64recompiled-v0.9.1-portable consent
+PASS N64 portable megaman64recompiled-v0.9.1-portable enabled
+PASS N64 portable megaman64recompiled-v0.9.1-portable wrong runtime hash rejected
+PASS N64 portable megaman64recompiled-v0.9.1-portable incomplete kit rejected
+PASS N64 portable megaman64recompiled-v0.9.1-portable synthetic hash implementation fixture only
+PASS N64 portable megaman64recompiled-v0.9.1-portable wrong byte order
+PASS N64 portable snap64-recomp-v1.1.8-portable exact release
+PASS N64 portable snap64-recomp-v1.1.8-portable URL mismatch
+PASS N64 portable snap64-recomp-v1.1.8-portable hash mismatch
+PASS N64 portable snap64-recomp-v1.1.8-portable media picker
+PASS N64 portable snap64-recomp-v1.1.8-portable consent
+PASS N64 portable snap64-recomp-v1.1.8-portable enabled
+PASS N64 portable snap64-recomp-v1.1.8-portable wrong runtime hash rejected
+PASS N64 portable snap64-recomp-v1.1.8-portable incomplete kit rejected
+PASS N64 portable snap64-recomp-v1.1.8-portable synthetic hash implementation fixture only
+PASS N64 portable snap64-recomp-v1.1.8-portable wrong byte order
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable exact release
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable URL mismatch
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable hash mismatch
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable media picker
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable consent
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable enabled
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable wrong runtime hash rejected
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable incomplete kit rejected
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable synthetic hash implementation fixture only
+PASS N64 portable automobililamborghini-recomp-v0.11.1-portable wrong byte order
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable exact release
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable URL mismatch
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable hash mismatch
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable media picker
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable consent
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable enabled
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable wrong runtime hash rejected
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable incomplete kit rejected
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable synthetic hash implementation fixture only
+PASS N64 portable dinosaur-planet-recompiled-dino-recomp-v0.3.0-portable wrong byte order
+PASS N64 portable gga-v0.3.0-portable exact release
+PASS N64 portable gga-v0.3.0-portable URL mismatch
+PASS N64 portable gga-v0.3.0-portable hash mismatch
+PASS N64 portable gga-v0.3.0-portable media picker
+PASS N64 portable gga-v0.3.0-portable consent
+PASS N64 portable gga-v0.3.0-portable enabled
+PASS N64 portable gga-v0.3.0-portable wrong runtime hash rejected
+PASS N64 portable gga-v0.3.0-portable incomplete kit rejected
+PASS N64 portable gga-v0.3.0-portable synthetic hash implementation fixture only
+PASS N64 portable gga-v0.3.0-portable wrong byte order
+PASS N64 portable rocket-r-v.1.0.1-portable exact release
+PASS N64 portable rocket-r-v.1.0.1-portable URL mismatch
+PASS N64 portable rocket-r-v.1.0.1-portable hash mismatch
+PASS N64 portable rocket-r-v.1.0.1-portable media picker
+PASS N64 portable rocket-r-v.1.0.1-portable consent
+PASS N64 portable rocket-r-v.1.0.1-portable enabled
+PASS N64 portable rocket-r-v.1.0.1-portable wrong runtime hash rejected
+PASS N64 portable rocket-r-v.1.0.1-portable incomplete kit rejected
+PASS N64 portable rocket-r-v.1.0.1-portable synthetic hash implementation fixture only
+PASS N64 portable rocket-r-v.1.0.1-portable wrong byte order
+PASS N64 portable extreme-g-v1.0.0-portable exact release
+PASS N64 portable extreme-g-v1.0.0-portable URL mismatch
+PASS N64 portable extreme-g-v1.0.0-portable hash mismatch
+PASS N64 portable extreme-g-v1.0.0-portable media picker
+PASS N64 portable extreme-g-v1.0.0-portable consent
+PASS N64 portable extreme-g-v1.0.0-portable enabled
+PASS N64 portable extreme-g-v1.0.0-portable wrong runtime hash rejected
+PASS N64 portable extreme-g-v1.0.0-portable incomplete kit rejected
+PASS N64 portable extreme-g-v1.0.0-portable synthetic hash implementation fixture only
+PASS N64 portable extreme-g-v1.0.0-portable wrong byte order
+PASS N64 portable ROM and portable marker follow the nested executable
+PASS N64 portable BattleTanx starts without its ROM picker
+PASS N64 portable Snap64 launches the official executable with an isolated data directory
+PASS N64 portable Lamborghini launches with one explicit ROM path and portable mode
+PASS N64 portable Rocket-R launches with the verified ROM and installation-local settings
+PASS N64 portable Rocket-R accepts SHA-1 policy with a synthetic fixture
+PASS N64 portable ROM policy cannot omit all digests
+PASS N64 portable unknown profile rejected
+PASS 2S2H CRC32C matches the Castagnoli reference vector
+PASS 2S2H known header with wrong full-ROM CRC32C
+PASS 2S2H synthetic O2R wire metadata
+PASS 2S2H wrong edition in O2R
+PASS Starship only an embedded helper enables the profile
+PASS Starship correct ROM shape with incorrect SHA-1
+PASS Starship output without resources
+PASS Starship synthetic resource and metadata accepted
+PASS Torch helper availability
+PASS Torch missing output despite successful process
+PASS Torch archive without game entries
+PASS Torch synthetic O2R metadata and data accepted
+PASS Torch wrong ROM edition
+PASS Torch Lighthouse helper availability
+PASS Torch Lighthouse missing port version
+PASS Torch Lighthouse wrong port version
+PASS Torch Lighthouse synthetic port version and payload
+PASS official CI build pinned and discoverable
+PASS CI download URL approved exactly
+PASS CI allowlist rejects foreign source, parameters and expiration
+PASS CI redirect host, scheme and path restrictions
+PASS start with empty registry
+PASS invalid manifest
+PASS incompatible API
+PASS malicious ZIP path
+PASS executable entrypoint rejected
+PASS invalid capability document
+PASS hash must match approval
+PASS install valid package disabled
+PASS activation and discovery
+PASS deactivation
+PASS capability priority
+[Addon example.high] O conte£do do pacote foi alterado.
+[Addon example.high] O conte£do do pacote foi alterado.
+PASS broken addon isolated and lower priority used
+PASS update preserves activation
+PASS reject same version
+PASS remove addon
+PASS installation engine works without addons
+PASS recipe and hashed input reach real installation engine
+[Addon example.fixture] Receita rejeitada: Operaá∆o incompat°vel.
+PASS reject arbitrary recipe operation and fall back
+PASS discover multiple exact versions and distinguish manual work
+PASS do not apply another version's recipe
+PASS disabled addon omitted from discovery
+PASS resolve recipe priority for the same version
+PASS input required, reject type, wrong hash and missing file, then validate without copying and retain manual step
+PASS cancel while selecting and clean staging while preserving download
+PASS new attempt extracts again
+PASS validate directory using named and hashed child file
+PASS v3 imports a valid file into a previously missing destination and preserves its source
+PASS Jogar agora dispatches the verified executable
+PASS Jogar agora rejects a modified executable
+PASS reinstall reuses an already validated import
+[Store installation 76c38ecb-ebc9-4010-80d1-f729c808d0e1] System.IO.InvalidDataException: J† existe um arquivo diferente no destino da importaá∆o: C:\Users\bradg\AppData\Local\Temp\AllFixAddonTest-3316fd7d383b4002a692587bc92d4bfb\roaming\test-profile\imported.bin
+   at AllFix.Desktop.Services.GameInstallationService.ValidateExistingImport(InstallationInput input, String destination, CancellationToken token) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 902
+   at AllFix.Desktop.Services.GameInstallationService.ApplyRecipe(StoreDownloadReceipt receipt, InstallationRecipe recipe, String payload, String inputDirectory, List`1 profileImports, Action beginOperations, CancellationToken token, String& message, Boolean& prepared) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 668
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 219
+PASS existing mismatched destination is preserved
+PASS v3 rejects invalid selection and imports into the non-empty legacy profile
+[Store installation 76c38ecb-ebc9-4010-80d1-f729c808d0e1] System.UnauthorizedAccessException: Attempted to perform an unauthorized operation.
+   at Program.<>c.<<Main>$>b__0_30(String _) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Tests\AddonInfrastructure\Program.cs:line 534
+   at AllFix.Desktop.Services.GameInstallationService.PrepareImport(InstallationInput input, String source, String destination, Boolean profile, CancellationToken token) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 859
+   at AllFix.Desktop.Services.GameInstallationService.ApplyRecipe(StoreDownloadReceipt receipt, InstallationRecipe recipe, String payload, String inputDirectory, List`1 profileImports, Action beginOperations, CancellationToken token, String& message, Boolean& prepared) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 770
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 219
+PASS permission failure prevents external writes
+PASS cancellation clears pending external import
+[Addon example.fixture] Receita rejeitada: Caminho inv†lido no pacote.
+PASS v4 rejects traversal in postconditions
+[Addon example.fixture] Receita rejeitada: A lista contÇm arquivos duplicados ou extens‰es n∆o permitidas.
+PASS v4 rejects executable content in original sets
+PASS v4 reports missing member before importing
+PASS v4 imports only listed files and accepts a plus sign in library names
+PASS v4 blocks launch before first-run verification
+PASS v4 rejects incorrect generated data
+PASS v4 promotes installation on verified first-run output
+PASS v4 dispatches verified executable after restart
+PASS v4 rejects removed first-run output
+PASS v4 cancellation rolls back staging
+[Store installation 8a32563a-86f0-4b7d-b71b-6c19e4aee6a8] System.IO.InvalidDataException: O tamanho do arquivo baixado est† incorreto. Baixe o arquivo novamente.
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 120
+PASS v4 rejects an incomplete download
+PASS v6 traversal rejected
+PASS v6 duplicate rejected
+PASS v6 digest rejected
+PASS v6 wrong executable kind rejected by install semantics
+PASS v6 verified multi asset install
+[Store installation 0128591e-ea0c-467c-b84e-539d3142a812] System.IO.InvalidDataException: O tamanho ou SHA-256 de um asset n∆o corresponde Ö receita.
+   at AllFix.Desktop.Services.GameInstallationService.StageAssets(StoreDownloadReceipt receipt, InstallationAsset[] declared, String payload, CancellationToken token) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 617
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 182
+PASS v6 digest mismatch rollback
+[Store installation ce669d47-10d1-4c9b-86ef-0b42eaead5a4] System.IO.InvalidDataException: Um asset obrigat¢rio n∆o foi disponibilizado.
+   at AllFix.Desktop.Services.GameInstallationService.StageAssets(StoreDownloadReceipt receipt, InstallationAsset[] declared, String payload, CancellationToken token) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 613
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 182
+PASS v6 missing asset rollback
+PASS v6 cancellation
+[Store installation 9f2ed030-2202-4815-90a2-39bddd0ffc96] System.IO.InvalidDataException: O tamanho ou SHA-256 de um asset n∆o corresponde Ö receita.
+   at AllFix.Desktop.Services.GameInstallationService.StageAssets(StoreDownloadReceipt receipt, InstallationAsset[] declared, String payload, CancellationToken token) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 617
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 182
+PASS failed update preserves installed game and state
+PASS cancelled update preserves installed game
+PASS v6 blocks script payload
+PASS v6 total asset size bound
+PASS common media flow accepts a local provider, retries the same numbered prompt and installs both inputs
+PASS Java JAR installed and validated
+PASS Java uses exact -jar argument list without invoking shell
+PASS Java rejects launcher path traversal
+PASS Java rejects unsupported runtime
+PASS Java rejects external working directory
+PASS Java rejects unrecognized command-line arguments
+[Store installation 09587dc0-dc72-41c7-86d7-b983833dae9a] System.IO.InvalidDataException: Um dos arquivos obrigat¢rios da receita est† ausente.
+   at AllFix.Desktop.Services.GameInstallationService.ApplyRecipe(StoreDownloadReceipt receipt, InstallationRecipe recipe, String payload, String inputDirectory, List`1 profileImports, Action beginOperations, CancellationToken token, String& message, Boolean& prepared) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 797
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 219
+PASS Java refuses JAR without executable manifest
+PASS tar.gz extracts with transactional staging
+[Store installation 11379eac-5286-4c0f-bb88-918d5870bfe4] System.IO.InvalidDataException: O TAR contÇm link, dispositivo ou entrada n∆o autorizada.
+   at AllFix.Desktop.Services.GameInstallationService.PrepareTarGzip(Stream source, String payload, Action`2 progress, CancellationToken token, Boolean allowGitMetadata) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 565
+   at AllFix.Desktop.Services.GameInstallationService.Prepare(String name, Stream source, String payload, Action`2 progress, CancellationToken token) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 469
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 150
+PASS tar.gz symlink denied without published folder
+[Store installation c76c506f-9910-426d-b415-0401c6d1ba03] System.IO.InvalidDataException: O pacote ou a receita contÇm um caminho inv†lido ou fora da pasta selecionada.
+   at AllFix.Desktop.Services.GameInstallationService.Inside(String root, String relative) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 1449
+   at AllFix.Desktop.Services.GameInstallationService.PrepareTarGzip(Stream source, String payload, Action`2 progress, CancellationToken token, Boolean allowGitMetadata) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 567
+   at AllFix.Desktop.Services.GameInstallationService.Prepare(String name, Stream source, String payload, Action`2 progress, CancellationToken token) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 469
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 150
+PASS tar.gz path traversal denied
+[Store installation 3f63778f-dc1e-4aa7-84f9-ce04cb50d4a5] System.IO.InvalidDataException: O TAR contÇm entrada duplicada.
+   at AllFix.Desktop.Services.GameInstallationService.PrepareTarGzip(Stream source, String payload, Action`2 progress, CancellationToken token, Boolean allowGitMetadata) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 570
+   at AllFix.Desktop.Services.GameInstallationService.Prepare(String name, Stream source, String payload, Action`2 progress, CancellationToken token) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 469
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 150
+PASS tar.gz duplicate path denied
+PASS arcade CRC32 standard vector
+PASS arcade romset imported with original numeric name
+[Store installation ceb6c6ff-6ebe-4229-9bb8-757eea8f1f7b] System.IO.InvalidDataException: A dependància obrigat¢ria n∆o foi selecionada.
+   at AllFix.Desktop.Services.GameInstallationService.ApplyRecipe(StoreDownloadReceipt receipt, InstallationRecipe recipe, String payload, String inputDirectory, List`1 profileImports, Action beginOperations, CancellationToken token, String& message, Boolean& prepared) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 689
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 219
+PASS arcade mismatched CRC denied
+PASS romset rejects script extension
+PASS CUE verifies referenced BIN tracks
+[Store installation 60e8e675-c294-457b-9dcd-31d5bab6c03a] System.IO.InvalidDataException: A dependància obrigat¢ria n∆o foi selecionada.
+   at AllFix.Desktop.Services.GameInstallationService.ApplyRecipe(StoreDownloadReceipt receipt, InstallationRecipe recipe, String payload, String inputDirectory, List`1 profileImports, Action beginOperations, CancellationToken token, String& message, Boolean& prepared) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 689
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 219
+PASS CUE rejects path traversal reference
+PASS v7 imports .sfc into authorized nested LocalAppData
+PASS nested profile path traversal rejected
+[Store installation 4cda43d7-2152-4813-a793-f152a7cdf875] System.IO.InvalidDataException: A gravaá∆o na pasta de dados do jogo n∆o foi autorizada.
+   at AllFix.Desktop.Services.GameInstallationService.PrepareImport(InstallationInput input, String source, String destination, Boolean profile, CancellationToken token) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 860
+   at AllFix.Desktop.Services.GameInstallationService.ApplyRecipe(StoreDownloadReceipt receipt, InstallationRecipe recipe, String payload, String inputDirectory, List`1 profileImports, Action beginOperations, CancellationToken token, String& message, Boolean& prepared) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 770
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 219
+PASS v7 profile write requires explicit user consent
+PASS v7 original data sets still reject scripts
+PASS v7 first-run profile verification remains pending
+PASS v7 rejects absent generated GBA
+PASS v7 validates generated GBA in multi-level profile
+PASS unapproved installer remains disabled
+PASS unisolated build remains disabled
+PASS Java25 v8 contract parses main class and multiple JARs
+PASS Java25 classpath package staged and installed with hash manifest
+PASS Java25 safe ArgumentList uses exactly 3 verified classpath JARs; no shell
+PASS Java25 JVM environment injection variables cleared in child only
+PASS Java25 classpath traversal rejected
+PASS Java25 absolute classpath rejected
+PASS Java25 duplicate classpath rejected
+PASS Java25 undeclared classpath rejected
+PASS Java25 main class injection rejected
+PASS Java25 arbitrary JVM flag rejected
+PASS Java25 duplicate JVM feature rejected
+PASS Java25 arbitrary program argument profile rejected
+PASS Java25 Severed Chains fixed profile requires official identity
+PASS Java25 v7 cannot silently accept v8 classpath
+PASS Java25 unknown v8 raw arguments rejected
+[Store installation a3077ae4-e26b-4f70-ac6e-7c46349b5ff1] System.IO.InvalidDataException: Um dos arquivos obrigat¢rios da receita est† ausente.
+   at AllFix.Desktop.Services.GameInstallationService.ApplyRecipe(StoreDownloadReceipt receipt, InstallationRecipe recipe, String payload, String inputDirectory, List`1 profileImports, Action beginOperations, CancellationToken token, String& message, Boolean& prepared) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 797
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 219
+PASS Java25 missing dependency JAR rejects transaction
+[Store installation f3000030-6592-4c4a-9ca8-137164108656] System.IO.InvalidDataException: Dependància JAR ausente ou com tamanho inv†lido: a.jar
+   at AllFix.Desktop.Services.JavaJarLauncher.OpenSafeJar(String path) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\JavaJarLauncher.cs:line 131
+   at AllFix.Desktop.Services.JavaJarLauncher.ValidateClasspath(String primaryJar, String mainClass, IEnumerable`1 classpath, String runtime) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\JavaJarLauncher.cs:line 109
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 300
+PASS Java25 malformed JAR rejects install
+[Store installation 52d71924-bf77-4b24-83e0-8b5ec04a0c9d] System.IO.InvalidDataException: Bytecode da classe principal exige vers∆o Java diferente de java-21.
+   at AllFix.Desktop.Services.JavaJarLauncher.ValidateClasspath(String primaryJar, String mainClass, IEnumerable`1 classpath, String runtime) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\JavaJarLauncher.cs:line 121
+   at AllFix.Desktop.Services.GameInstallationService.Run(StoreDownloadReceipt receipt, String root, Boolean reinstall, Action`1 progress, CancellationToken token, Boolean createRoot) in C:\Users\bradg\Downloads\GetAll-R18\desktop-continuation-20261127\Services\GameInstallationService.cs:line 300
+PASS Java25 Java 21 refuses Java 25 bytecode during staging
+PASS Java25 installed classpath JAR tampering rejected before launch
+PASS Java25 cancellation leaves no published install
+PASS Java25 Java 21 cannot satisfy Java 25
+PASS Java25 Java 21 remains accepted by legacy contract
+PASS Java25 Java 25 release recognized without executing JVM
+PASS Java25 Java 26 is accepted as newer runtime
+PASS compiled contract SDK is a separately built referenced assembly
+PASS compiled contract public protocol and SDK versions
+PASS compiled contract compiled DLL informational version 1.5.69
+PASS compiled contract v6/v7 recipe document fields
+PASS compiled contract v6 multi asset fields
+PASS compiled contract v7 restricted Java launcher fields
+PASS compiled contract v8 classpath, class main and restricted options public contract
+PASS compiled contract v7 CRC32 / CUE fields
+PASS v5 rejects ../evil.exe
+PASS v5 rejects dir/ 
+PASS v5 rejects CON.exe
+PASS v5 rejects a/b\c.exe
+PASS v5 rejects C:/a.exe
+PASS v5 rejects  leading.exe
+PASS v5 rejects folder/file.
+PASS v5 rejects size without identity or magic
+PASS v5 rejects arbitrary prerequisite
+PASS v5 profile path cannot escape
+PASS hash mismatch requests selection again: sha
+PASS hash mismatch requests selection again: md5
+PASS engine imports bounded disc and both legacy hashes, including consented LOCALAPPDATA
+PASS reject invalid generated header and size
+PASS verify variable-size output in LOCALAPPDATA
+PASS missing runtime blocks launch without running tools
+PASS verified launcher proceeds when runtime checks pass
+PASS extensionless XBLA container validated by user-selected header and size
+PASS GitLab binds release links to project, package file ID and SHA-256
+PASS Metaforce small authored image returns bounded DOL and actual FST resource range
+PASS Metaforce layout seeks from an arbitrary initial stream position
+METAFORCE_EMPTY_MEMBER_PASS
+PASS Metaforce zero-length file at offset zero occupies no disc range
+PASS Metaforce empty member inside another range creates no overlap
+PASS Metaforce nested FST uses the real shared directory parser
+PASS Metaforce rejects other region
+PASS Metaforce rejects other disc number
+PASS Metaforce rejects other revision
+PASS Metaforce rejects wrong GameCube magic
+PASS Metaforce rejects truncated disc header
+PASS Metaforce rejects DOL begins in disc header
+PASS Metaforce rejects truncated DOL header
+PASS Metaforce rejects section begins inside DOL header
+PASS Metaforce rejects truncated DOL section
+PASS Metaforce rejects overlapping DOL file sections
+PASS Metaforce rejects section outside GameCube RAM
+PASS Metaforce rejects entry point outside code sections
+PASS Metaforce rejects DOL without sections
+PASS Metaforce rejects FST overlaps DOL
+PASS Metaforce rejects FST beyond image
+PASS Metaforce rejects FST shorter than root entry
+PASS Metaforce rejects FST exceeds advertised maximum
+PASS Metaforce rejects FST root is not a directory
+PASS Metaforce rejects FST count outside bound
+PASS Metaforce rejects invalid FST entry type
+PASS Metaforce rejects name offset outside name table
+PASS Metaforce rejects unterminated FST name
+PASS Metaforce rejects resource beyond image
+PASS Metaforce rejects resource overlaps DOL
+PASS Metaforce rejects resource overlaps FST
+PASS Metaforce rejects nonempty resource overlaps header
+PASS Metaforce rejects wrong directory parent
+PASS Metaforce rejects directory extends beyond root
+PASS Metaforce rejects path traversal in FST
+PASS Metaforce rejects missing PAK resources
+PASS Metaforce cancelled before reading disc
+PASS Metaforce cancelled during DOL read
+PASS Metaforce cancelled during FST read
+PASS Metaforce cancelled between bounded SHA chunks
+PASS Metaforce authored DOL cannot satisfy commercial identity
+PASS Metaforce Unicode GCM path reaches the same commercial hash gate
+PASS Metaforce rejects unsupported extension
+PASS Metaforce real process argument boundary preserves Unicode and spaces without a game launch
+PASS Metaforce commercial SHA pin remains the archived official identity
+METAFORCE_MEDIA_PASS checks=44
+PASS MKW CLI the new closed profile does not replace the legacy profile
+PASS MKW CLI the CLI selector requests only the original directory
+PASS MKW CLI the legacy selector retains its independent shader-spec input
+PASS MKW CLI the new profile retains native-build consent
+PASS MKW CLI the single-media contract selects the CLI branch
+PASS MKW CLI legacy selections stay on the legacy branch
+PASS MKW CLI an old two-media state is not silently promoted
+PASS MKW CLI the old profile cannot discard its shader specification
+PASS MKW CLI the original media cannot be replaced with an arbitrary file
+PASS MKW CLI same-size source-package corruption is rejected
+PASS MKW CLI a truncated source package is rejected
+PASS MKW CLI cancelled preparation does not open or extract support
+PASS MKW CLI cancelled source adaptation stops before writing
+PASS MKW CLI cancellation left no destination
+MKW_CLI_POLICY_PASS
+PASS MKW local release: local alias and official tag remain distinct
+PASS MKW local release: unchanged official package identity from the legacy profile
+PASS MKW local release: fixed original byte length and digest
+PASS MKW local release: local profile changes preparation identity while retaining the complete official package
+PASS MKW local release: automatic CLI preparation requests only the original game directory
+PASS MKW local release: legacy preparation retains its original game and SM86 table requirements
+PASS MKW local release: CLI resume and parser use the same complete media contract
+PASS MKW local release: legacy wire recipe retains its original single-media contract; resume adds the local shader table
+PASS MKW local release: automatic CLI preparation still requires local build consent
+PASS MKW local release: legacy preparation retains local build consent
+PASS MKW local release: actual recipe parser accepts the exact local CLI contract
+PASS MKW local release: actual recipe parser continues to accept the original upstream contract
+PASS MKW local release: CLI profile cannot claim the original recipe tag
+PASS MKW local release: CLI recipe cannot invent an upstream source page for its alias
+PASS MKW local release: the legacy profile is not inferred from a matching package
+PASS MKW local release: CLI recipe cannot acquire the legacy resume's extra table requirement
+PASS MKW local release: legacy wire recipe cannot drop its original-game requirement
+PASS MKW local release: mutated local preparation instructions rejected
+PASS MKW local release: exact repository, local tag and official asset accepted
+PASS MKW local release: GitHub repository identity remains case insensitive
+PASS MKW local release: changed repository rejected: 
+PASS MKW local release: changed repository rejected: adriadam10/mkw-recomp-fork
+PASS MKW local release: changed repository rejected: other/mkw-recomp
+PASS MKW local release: changed repository rejected: adriadam10/mkw-recomp/
+PASS MKW local release: changed repository rejected:  adriadam10/mkw-recomp
+PASS MKW local release: changed tag rejected: v0.1.18
+PASS MKW local release: changed tag rejected: v0.1.19-allfix-cli
+PASS MKW local release: changed tag rejected: v0.1.18-allfix-cli 
+PASS MKW local release: changed tag rejected: V0.1.18-ALLFIX-CLI
+PASS MKW local release: changed asset URI rejected: https://github.com/adriadam10/mkw-recomp/releases/tag/v0.1.18
+PASS MKW local release: changed asset URI rejected: http://github.com/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip
+PASS MKW local release: changed asset URI rejected: https://github.com.evil.invalid/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip
+PASS MKW local release: changed asset URI rejected: https://github.com:444/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip
+PASS MKW local release: changed asset URI rejected: https://user@github.com/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip
+PASS MKW local release: changed asset URI rejected: https://github.com/adriadam10/mkw-recomp/releases/download/v0.1.18-allfix-cli/mkw-recomp-0.1.18-windows-x64.zip
+PASS MKW local release: changed asset URI rejected: https://github.com/adriadam10/mkw-recomp/releases/download/v0.1.17/mkw-recomp-0.1.18-windows-x64.zip
+PASS MKW local release: changed asset URI rejected: https://github.com/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip?download=1
+PASS MKW local release: changed asset URI rejected: https://github.com/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip#fragment
+PASS MKW local release: changed asset URI rejected: https://github.com/adriadam10/mkw-recomp/releases/download/v0.1.18/mkw-recomp-0.1.18-windows-x64.zip.altered
+PASS MKW local release: relative URI rejected without dereferencing it
+PASS MKW local release: release identifies the All-Fix local variant explicitly
+PASS MKW local release: release points to the official source page without inventing an upstream tag
+PASS MKW local release: JSON retains the exact official asset and SHA-256
+MKW_CLI_RELEASE_PASS checks=43
+PASS Savage Wind exact official receipt recognized
+PASS Savage Wind observed historic lowercase owner/repository URL remains compatible
+PASS Savage Wind another receipt identity cannot enable preparation
+PASS Savage Wind another receipt identity cannot enable preparation
+PASS Savage Wind another receipt identity cannot enable preparation
+PASS Savage Wind another receipt identity cannot enable preparation
+PASS Savage Wind another receipt identity cannot enable preparation
+PASS Savage Wind another receipt identity cannot enable preparation
+PASS Savage Wind another receipt identity cannot enable preparation
+PASS Savage Wind another receipt identity cannot enable preparation
+PASS Savage Wind another receipt identity cannot enable preparation
+PASS Savage Wind actual payload hash is required
+PASS Savage Wind compiled resume and consent policy are wired
+PASS Savage Wind one local original directory
+PASS Savage Wind reject missing official kit
+PASS Savage Wind bounded authored LZ4 NSO layout
+PASS Savage Wind reject authored build ID cannot pass commercial media gate
+PASS Savage Wind documented identity header is parsed without running authored code
+PASS Savage Wind reject wrong NSO format
+PASS Savage Wind reject truncated segment
+PASS Savage Wind reject overlapping memory segments
+PASS Savage Wind reject overlapping file segments
+PASS Savage Wind reject compressed bytes cannot masquerade as plain segments
+PASS Savage Wind exact base/update minimum and additional original DLC accepted
+PASS Savage Wind reject wrong RomFS version
+PASS Savage Wind reject missing RomFS file
+PASS Savage Wind reject truncated RomFS bytes
+PASS Savage Wind reject missing cutscene video
+PASS Savage Wind AMD64 DLL with callable ABI export and closed imports
+PASS Savage Wind reject missing swgame_tables export
+PASS Savage Wind reject forwarded ABI export
+PASS Savage Wind reject unclosed library import
+PASS Savage Wind reject x86 library
+PASS Savage Wind generated layout binds name, address, image size and full NSO ID
+PASS Savage Wind reject different layout image size
+PASS Savage Wind reject unselected extra layout module
+PASS Savage Wind closed environment uses private data/home/cache and no tool overrides
+PASS Savage Wind Play preserves the path as one argument and ignores saved command overrides
+PASS Savage Wind production generator keeps version/sites gate for main
+PASS Savage Wind production generator keeps version/sites gate for subsdk0
+PASS Savage Wind production generator keeps version/sites gate for sdk
+PASS Savage Wind reject foreign generator module
+PASS Savage Wind compiler flags and ABI identity agree
+PASS Savage Wind compiler flags and ABI identity agree
+PASS Savage Wind fresh owned settings do not download optional runtimes or updates
+PASS Savage Wind media and executable remain immutable while saves stay mutable
+SAVAGEWIND_POLICY_PASS
+PASS SotC v9 profile binds the exact upstream package
+PASS SotC one original directory and fixed automatic instructions
+PASS SotC rejects incomplete kit manifest
+PASS SotC plaintext authored ELF structure
+PASS SotC plaintext authored SELF mappings
+PASS SotC rejects encrypted SELF before any tool
+PASS SotC rejects compressed SELF before any tool
+PASS SotC rejects truncated SELF data
+PASS SotC rejects ELF from another architecture
+PASS SotC rejects oversized program header table
+PASS SotC rejects file segment beyond memory segment
+PASS SotC two documented upstream version checks in non-executed authored fixture
+PASS SotC rejects changed first upstream version check
+PASS SotC rejects changed second upstream version check
+PASS SotC BBPROBE5 exact module/segment layout
+PASS SotC rejects other probe format
+PASS SotC rejects linked image missing bytes
+PASS SotC rejects unselected third module
+PASS SotC rejects module outside image
+PASS SotC default upstream pool fix and exact command line
+PASS SotC no pool fix when original bytes do not match
+PASS SotC rejects pool correction cannot silently disappear
+PASS SotC rejects arbitrary patch bytes
+PASS SotC rejects CPU function table from another contract
+PASS SotC rejects altered runtime cvars
+PASS SotC complete authored US directory passes structural media gate
+PASS SotC documented EU version passes the same structural media gate
+PASS SotC rejects unsupported SFO version
+PASS SotC rejects host executable in media
+PASS SotC rejects missing required bundled module
+PASS SotC complete five-script upstream chain
+PASS SotC exact bundled modules and empty optional modes
+PASS SotC policy checks create no installation output
+SOTC_POLICY_PASS
+PASS PINYON NATIVE embedded source, C bridges and probe contract verifies
+PASS PINYON NATIVE same-size embedded corruption rejected
+PASS PINYON NATIVE truncated embedded support rejected
+PASS PINYON NATIVE cancellation precedes preparation
+PASS PINYON NATIVE wrong official game source rejected
+PASS PINYON NATIVE rejected source remains unchanged
+PASS PINYON NATIVE cancelled overlay has no writes
+PASS PINYON NATIVE complete fixed source and SR/FG provider inputs are present
+PASS PINYON NATIVE SDK pin remains the game contract
+PASS PINYON NATIVE SDK retains all three renderers and DLSS
+PASS PINYON NATIVE resource compiler uses a CMake-safe private path
+PASS PINYON NATIVE native migration preserves title update, CPU choice and codegen resume
+PASS PINYON NATIVE game and SDK share the same C++ ABI
+PASS PINYON NATIVE public host proof requires no generated guest modules
+PASS PINYON NATIVE unsupported CPU flags rejected
+PASS PINYON NATIVE build does not inherit installed MSVC or another SDK
+PASS PINYON NATIVE loader has only System32 on PATH and a private user directory
+PASS PINYON NATIVE NVIDIA driver aliases come from Windows known folders
+PASS PINYON NATIVE codegen identity includes the verified source and C bridge support
+PASS FH1 NATIVE embedded exact source, bridge and license contract verifies
+PASS FH1 NATIVE same-size support corruption is rejected
+PASS FH1 NATIVE truncated support is rejected
+PASS FH1 NATIVE source preparation observes cancellation before extraction
+PASS FH1 NATIVE a foreign upstream CMake revision is rejected before adaptation
+PASS FH1 NATIVE rejected source bytes remain intact
+PASS FH1 NATIVE cancelled adaptation does not write the source tree
+PASS FH1 NATIVE SDK configuration retains all official renderers and upscalers
+PASS FH1 NATIVE fixed SDK and resource compiler paths remain valid CMake literals
+PASS CTR/SM private build environment has no ambient compiler, SDK or package-manager variables
+PASS CTR/SM private private tools precede only the Windows system directory
+PASS CTR/SM private command processor and home are explicit and isolated
+PASS CTR/SM private CTR x86 compiler and resource architecture are fixed
+PASS CTR/SM private SM x64 compiler and resource architecture are fixed
+PASS CTR/SM private ctr accepts the automatic private-toolchain instructions
+PASS CTR/SM private ctr preserves the exact historical recipe
+PASS CTR/SM private ctr refuses arbitrary instruction text
+PASS CTR/SM private sm accepts the automatic private-toolchain instructions
+PASS CTR/SM private sm preserves the exact historical recipe
+PASS CTR/SM private sm refuses arbitrary instruction text
+PASS CTR/SM private smr accepts the automatic private-toolchain instructions
+PASS CTR/SM private smr preserves the exact historical recipe
+PASS CTR/SM private smr refuses arbitrary instruction text
+PASS package exposes the remote origin before approval
+PASS authorized test origin
+PASS warm-up downloads only the index
+PASS authorized test origin
+[Addon org.example.remote] Receita remota verificada: recipes/fixture/v1.json, SHA-256 57DFE06001055060DAC740F17CDC8479D7F4D8EE3D445140FB69CD69072D7748.
+PASS discover and verify recipe of the requested project
+PASS winning provider exposed for destination resolution
+PASS prepare exact recipe from verified cache
+PASS do not use a remote recipe for another tag
+PASS winning provider exposed for destination resolution
+PASS local recipe takes precedence over remote
+PASS authorized test origin
+[Addon org.example.remote] index.json: offline test
+PASS persisted cache serves a verified recipe offline
+PASS authorized test origin
+[Addon org.example.remote] index.json: Caminho inv†lido no pacote.
+PASS path traversal index is rejected and last valid cache is preserved
+PASS authorized test origin
+PASS authorized test origin
+[Addon org.example.remote] recipes/fixture/v1.json: SHA-256 da receita n∆o confere com o °ndice.
+PASS hash mismatch cannot authorize new recipe bytes
+PASS invalid recipe is not cached
+PASS authorized test origin
+PASS disabled index entry rolls back availability
+PASS authorized test origin
+PASS authorized test origin
+[Addon org.example.remote] Receita remota verificada: recipes/fixture/v1.json, SHA-256 5D4CFF3CE080399848ABB1BC020784EEDEF102F7AC7006B91A2F167590DD96C8.
+PASS remote index and provider accept verified v4 recipe
+PASS authorized test origin
+PASS newer SDK version is reported without a recommendation
+PASS newer SDK blocks installation without downloading recipe bytes
+PASS authorized test origin
+PASS explicit refresh replaces a fresh incompatible snapshot with a disabled update
+PASS preview addon resolves an immutable GetAll reference
+PASS preview addon can pin the matching curated catalog
+[Addon allfix.install.universal] index.json: O °ndice de receitas n∆o pertence ao canal autorizado.
+PASS preview index is invisible from the public source
+PASS disabled addon cannot request network
+PASS blocked non-public IP 127.0.0.1
+PASS blocked non-public IP 169.254.169.254
+PASS blocked non-public IP 10.0.0.1
+PASS blocked non-public IP 192.168.1.1
+PASS blocked non-public IP ::1
+PASS blocked non-public IP ::ffff:100.64.0.1
+PASS blocked non-public IP fc00::1
+PASS blocked non-public IP fe80::1
+PASS public address permitted
+PASS invalid HTTPS origins rejected
+PASS default uses configured folder with no picker
+PASS changed folder is picked up despite previous root and quick mode
+PASS installation identifies the actual third-party provider
+PASS real installation creates and uses the new default destination
+PASS Jogar agora resolves verified executable
+PASS preference survives restart and addon update
+PASS picker starts in current configured folder
+PASS picker starts in current configured folder
+PASS ask opens picker on every installation, including quick setup
+PASS picker starts in current configured folder
+PASS picker cancellation leaves no installation files

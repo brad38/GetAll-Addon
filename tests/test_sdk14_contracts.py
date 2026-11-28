@@ -30,6 +30,13 @@ class SDK14ContractsTests(unittest.TestCase):
                      repository=repository,
                      has_inputs=bool(item["inputs"]),
                      has_manual_steps=bool(item.get("manual_steps")))
+        if item["schema_version"] == 9:
+            index = json.loads((ROOT / "index.json").read_text(encoding="utf-8"))
+            recorded = next((e for e in index["recipes"] if e["project_id"] == item["project_id"]
+                             and e["tag"] == item["tag"]), None)
+            if recorded is not None:
+                entry.update(game_id=recorded["game_id"], status=recorded["status"],
+                             repository=recorded["repository"])
         # Synthetic handoff examples use a repository root URL; our strict GetAll
         # contract requires a release/source path beneath the declared repository.
         semantic_document = copy.deepcopy(item)
@@ -200,7 +207,8 @@ class SDK14ContractsTests(unittest.TestCase):
         self.assertEqual(entry["tag"], "v0.6.0-alpha.6")
         self.assertEqual(entry["schema_version"], 5)
         self.assertEqual(entry["status"], "experimental")
-        self.assertEqual(entry["sha256"], "9bb7a992123432ac587eb4cd711d64170f59b0d897d3bd238c2cf0b1559c7374")
+        self.assertEqual(entry["sha256"], "76a8c832c90915c38f4f370be8dfb47166230f04f802b67fd58f6f151b797628")
+        self.assertEqual(entry["min_sdk_version"], "1.5.68")
         doc = json.loads((ROOT / entry["path"]).read_text(encoding="utf-8"))
         self.assertEqual(self.errors(doc), [])
         self.assertEqual(doc["operations"], [])
@@ -208,8 +216,8 @@ class SDK14ContractsTests(unittest.TestCase):
         self.assertEqual(doc["launch_file"], "Savage Wind/savagewind.exe")
         self.assertIn("Savage Wind/zig/zig.exe", doc["required_files"])
         self.assertIn("1.9.0", doc["manual_steps"])
-        self.assertIn("exefs/", doc["manual_steps"])
-        self.assertIn("romfs/", doc["manual_steps"])
+        self.assertIn("exefs", doc["manual_steps"].lower())
+        self.assertIn("romfs", doc["manual_steps"].lower())
         for mutate in [
             lambda d: d.update(source_url="https://attacker.invalid/download.zip"),
             lambda d: d.update(launch_file="../../bad.exe"),
@@ -228,18 +236,23 @@ class SDK14ContractsTests(unittest.TestCase):
         self.assertEqual(entry["repository"], "AjncSystem/ShadowOfTheColossus-PC")
         self.assertEqual(entry["status"], "experimental")
         self.assertEqual(entry["tag"], "v0.77")
-        self.assertEqual(entry["sha256"], "7231a748c329592e0bdaa9345a4e0cdb1ada9c72f656b7857720e77ea0bbd286")
+        self.assertEqual(entry["sha256"], "dd6491c1b3afe360cbeb37ff890af5a18398f100b1896b43c651bda771187854")
+        self.assertEqual(entry["schema_version"], 9)
+        self.assertEqual(entry["min_sdk_version"], "1.5.68")
         doc = json.loads((ROOT / entry["path"]).read_text(encoding="utf-8"))
         self.assertEqual(self.errors(doc), [])
         self.assertEqual(doc["operations"], [])
         self.assertEqual(doc["inputs"], [])
-        self.assertEqual(doc["launch_file"], "SotC-PC/SotC.exe")
+        self.assertEqual(doc["build_profile"], "sotc-0.77-prepare")
+        self.assertNotIn("launch_file", doc)
+        self.assertIn("SotC-PC/scripts/link_libc.py", doc["required_files"])
+        self.assertEqual(doc["preparation_media"][0]["kind"], "directory")
         self.assertIn("CUSA08809", doc["manual_steps"])
         self.assertIn("CUSA08034", doc["manual_steps"])
         for mutate in [
             lambda d: d.update(source_url="https://untrusted.invalid/SotC-PC.zip"),
             lambda d: d.update(launch_file="../evil.exe"),
-            lambda d: d["required_files"].remove(d["launch_file"]),
+            lambda d: d["required_files"].remove("SotC-PC/SotC.exe"),
             lambda d: d.update(installer_profile="cmd-shell"),
         ]:
             candidate = copy.deepcopy(doc)

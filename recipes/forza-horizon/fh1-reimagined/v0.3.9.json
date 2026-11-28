@@ -13,7 +13,7 @@
     "licenses/ForzaHorizon1-ReImagined.txt"
   ],
   "inputs": [],
-  "manual_steps": "Kit oficial do Forza extraido offline e verificado integralmente. O jogo ainda nao foi compilado. Forneca sua propria copia Xbox 360 (ISO, Games on Demand ou pasta extraida), conforme README.txt. O All-Fix nao executa o launcher, instalador ou compiladores automaticamente.",
+  "manual_steps": "Selecione sua cópia original de Forza Horizon para Xbox 360: ISO, Games on Demand ou pasta extraída. O All-Fix prepara as ferramentas privadas e compila o jogo automaticamente. Ao concluir, use Jogar. Nenhuma mídia está incluída.",
   "build_profile": "fh1-0.3.9-inno-prepare",
   "preparation_media": [
     {

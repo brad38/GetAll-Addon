@@ -14,7 +14,7 @@
     "TotK-Setup-0.5.0-windows/bin/SDL3.dll"
   ],
   "inputs": [],
-  "manual_steps": "Kit oficial preparado. O jogo ainda nao foi compilado. A compilacao exige sua propria midia Switch e atualizacao 1.1.0, 1.2.1 ou 1.4.3, alem dos requisitos oficiais. O All-Fix nao executa o setup nem scripts automaticamente. Consulte as instrucoes oficiais.",
+  "manual_steps": "Use Retomar e selecione a mídia-base original de The Legend of Zelda: Tears of the Kingdom, a atualização 1.1.0, 1.2.1 ou 1.4.3 e o arquivo de chaves da sua própria cópia quando solicitado. O GetAll verifica os arquivos e compila o jogo localmente com ferramentas privadas. As chaves não são salvas no estado da instalação. Ao concluir, use Jogar. Requer Vulkan 1.3. Nenhum jogo está incluído.",
   "build_profile": "totk-0.5.0-prepare",
   "preparation_media": [
     {

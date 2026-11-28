@@ -1,0 +1,25 @@
+{
+  "source_url": "https://raw.githubusercontent.com/cloudcores/CuAssembler/96a9f72baf00f40b9b299653fcef8d3e2b4a3d49/CuAsm/InsAsmRepos/DefaultInsAsmRepos.sm_80.txt",
+  "source_blob": "51208f1b5e6084c9d61411330c676bda7793af21",
+  "source_bytes": 1581121,
+  "source_sha256": "c601f9d96225fca137906b1ce12b392337c3e75a6a3698db81c0eb2ed6d60751",
+  "records": {
+    "UP2UR_UR_L_UR_II": [
+      [
+        1408,
+        2475880078570760555152111747,
+        "UP2UR UR29, UPR, URZ, 0x1 ;"
+      ],
+      [
+        1520,
+        2475880078570760555152046211,
+        "UP2UR UR28, UPR, URZ, 0x1 ;"
+      ],
+      [
+        304,
+        2475880078570760559448062083,
+        "UP2UR UR44, UPR, URZ, 0x2 ;"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,765 @@
+{
+  "status": "METAFORCE_PUBLIC_NATIVE_RUNTIME_PASS",
+  "source_revision": "de8fc69bd7f345d6cf5f0c8fc2798295e22522d3",
+  "output": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1",
+  "results": [
+    {
+      "step": "runtime-probe-build",
+      "argv": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\gta-engine\\preflight\\llvm\\llvm-mingw-20261020-ucrt-x86_64\\bin\\clang++.exe",
+        "-std=c++20",
+        "-O2",
+        "-static",
+        "-DWEBGPU_DAWN",
+        "-I",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\deps-build\\dawn_prebuilt\\include",
+        "-I",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\deps-build\\nod_prebuilt\\include",
+        "-I",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\deps-build\\sdl3_prebuilt\\x86_64-w64-mingw32\\include",
+        "-I",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\game-src\\extern\\borealis\\include",
+        "-I",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\build\\extern\\borealis\\generated",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\metaforce_runtime_probe.cpp",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\build\\extern\\borealis\\libborealis_io.a",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\deps-build\\dawn_prebuilt\\lib\\webgpu_dawn.lib",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\deps-build\\nod_prebuilt\\lib\\nod.lib",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\deps-build\\sdl3_prebuilt\\x86_64-w64-mingw32\\lib\\libSDL3.dll.a",
+        "-o",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\metaforce-runtime-probe.exe"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1",
+      "exit": 0,
+      "seconds": 1.562,
+      "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\runtime-probe-build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "step": "runtime-interfaces",
+      "argv": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\metaforce-runtime-probe.exe"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1",
+      "exit": 0,
+      "seconds": 0.032,
+      "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\runtime-interfaces.log",
+      "log_sha256": "cc16b55e7dbf6f6bc6f199ccbfdb3e3b1de523850e132318416ec1a11cf09e7c"
+    },
+    {
+      "step": "metaforce-help",
+      "argv": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\metaforce.exe",
+        "--help"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1",
+      "exit": 0,
+      "seconds": 0.031,
+      "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\metaforce-help.log",
+      "log_sha256": "df54a82cc92b7a80eb8bd46e5d518eebe5d9463cdcd671907d8a63c9c90328d3"
+    },
+    {
+      "step": "metaforce-help-argv",
+      "argv": [
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\metaforce.exe",
+        "--dvd",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\authored absent disc.iso",
+        "--user-dir",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\help-only-user",
+        "--help"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1",
+      "exit": 0,
+      "seconds": 0.015,
+      "log": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\metaforce-help-argv.log",
+      "log_sha256": "df54a82cc92b7a80eb8bd46e5d518eebe5d9463cdcd671907d8a63c9c90328d3"
+    }
+  ],
+  "runtime": [
+    {
+      "file": "dxcompiler.dll",
+      "machine": "AMD64",
+      "dll": true,
+      "bytes": 20231680,
+      "sha256": "8be50a43e83dc4fe8e1af9fb22c19f2c485bf3cc4ef9ed653f0358a12cac7665",
+      "imports": [
+        "advapi32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "kernel32.dll",
+        "msvcp140.dll",
+        "ole32.dll",
+        "oleaut32.dll",
+        "vcruntime140.dll",
+        "vcruntime140_1.dll"
+      ],
+      "delay_imports": []
+    },
+    {
+      "file": "dxil.dll",
+      "machine": "AMD64",
+      "dll": true,
+      "bytes": 1509800,
+      "sha256": "fda4dde92222ddb8564c3173ce48faa56f7e1c7b46b0b67dada1182ee07a4123",
+      "imports": [
+        "advapi32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "kernel32.dll",
+        "ole32.dll"
+      ],
+      "delay_imports": []
+    },
+    {
+      "file": "metaforce-runtime-probe.exe",
+      "machine": "AMD64",
+      "dll": false,
+      "bytes": 1582080,
+      "sha256": "ca069968967e40d8e138dafd5e965fe78c3114ec235fc3632d7a69923426d0c8",
+      "imports": [
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-multibyte-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "kernel32.dll",
+        "nod.dll",
+        "sdl3.dll",
+        "webgpu_dawn.dll"
+      ],
+      "delay_imports": []
+    },
+    {
+      "file": "metaforce.exe",
+      "machine": "AMD64",
+      "dll": false,
+      "bytes": 18186752,
+      "sha256": "dfb79798a507ac553d29fb2dda51939861d38f085c82dd77d8ec7534f112a249",
+      "imports": [
+        "advapi32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-multibyte-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "dxgi.dll",
+        "kernel32.dll",
+        "nod.dll",
+        "ntdll.dll",
+        "ole32.dll",
+        "oleaut32.dll",
+        "sdl3.dll",
+        "shell32.dll",
+        "user32.dll",
+        "webgpu_dawn.dll"
+      ],
+      "delay_imports": []
+    },
+    {
+      "file": "msvcp140.dll",
+      "machine": "AMD64",
+      "dll": true,
+      "bytes": 557728,
+      "sha256": "0f885b509a685d2bbfa652fed26b5fb31d88fbdab0a978c641d1c7b8aa460aa9",
+      "imports": [
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "kernel32.dll",
+        "vcruntime140.dll",
+        "vcruntime140_1.dll"
+      ],
+      "delay_imports": []
+    },
+    {
+      "file": "msvcp140_atomic_wait.dll",
+      "machine": "AMD64",
+      "dll": true,
+      "bytes": 50304,
+      "sha256": "640b2aefced484d0368eea5bdd06addd0658a3a70a49256e560d6923b404a479",
+      "imports": [
+        "advapi32.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "kernel32.dll",
+        "msvcp140.dll",
+        "vcruntime140.dll",
+        "vcruntime140_1.dll"
+      ],
+      "delay_imports": []
+    },
+    {
+      "file": "nod.dll",
+      "machine": "AMD64",
+      "dll": true,
+      "bytes": 1297920,
+      "sha256": "6b6a27265341820dee390139e1a6eb05573a8f07de3daba52fab2cad7795ff4f",
+      "imports": [
+        "api-ms-win-core-synch-l1-2-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "bcryptprimitives.dll",
+        "kernel32.dll",
+        "ntdll.dll",
+        "vcruntime140.dll"
+      ],
+      "delay_imports": []
+    },
+    {
+      "file": "SDL3.dll",
+      "machine": "AMD64",
+      "dll": true,
+      "bytes": 5346516,
+      "sha256": "34fdfba213c5d6265ebcc840ca7af966815854336c98e9d2d9c998440424c363",
+      "imports": [
+        "advapi32.dll",
+        "gdi32.dll",
+        "imm32.dll",
+        "kernel32.dll",
+        "msvcrt.dll",
+        "ole32.dll",
+        "oleaut32.dll",
+        "setupapi.dll",
+        "shell32.dll",
+        "user32.dll",
+        "version.dll",
+        "winmm.dll"
+      ],
+      "delay_imports": []
+    },
+    {
+      "file": "vcruntime140.dll",
+      "machine": "AMD64",
+      "dll": true,
+      "bytes": 124544,
+      "sha256": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066",
+      "imports": [
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll"
+      ],
+      "delay_imports": []
+    },
+    {
+      "file": "vcruntime140_1.dll",
+      "machine": "AMD64",
+      "dll": true,
+      "bytes": 49792,
+      "sha256": "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f",
+      "imports": [
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "vcruntime140.dll"
+      ],
+      "delay_imports": []
+    },
+    {
+      "file": "webgpu_dawn.dll",
+      "machine": "AMD64",
+      "dll": true,
+      "bytes": 10861056,
+      "sha256": "eb6e9833dc75696f54fa6281432356a2baf73f4c0ad752b23a4a974d6ff91ae5",
+      "imports": [
+        "api-ms-win-core-console-l1-1-0.dll",
+        "api-ms-win-core-console-l2-1-0.dll",
+        "api-ms-win-core-errorhandling-l1-1-0.dll",
+        "api-ms-win-core-handle-l1-1-0.dll",
+        "api-ms-win-core-interlocked-l1-1-0.dll",
+        "api-ms-win-core-kernel32-legacy-l1-1-1.dll",
+        "api-ms-win-core-libraryloader-l1-2-0.dll",
+        "api-ms-win-core-processenvironment-l1-1-0.dll",
+        "api-ms-win-core-processthreads-l1-1-0.dll",
+        "api-ms-win-core-profile-l1-1-0.dll",
+        "api-ms-win-core-registry-l1-1-0.dll",
+        "api-ms-win-core-string-l1-1-0.dll",
+        "api-ms-win-core-synch-l1-1-0.dll",
+        "api-ms-win-core-synch-l1-2-0.dll",
+        "api-ms-win-core-synch-l1-2-1.dll",
+        "api-ms-win-core-sysinfo-l1-1-0.dll",
+        "api-ms-win-core-sysinfo-l1-2-0.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "msvcp140.dll",
+        "msvcp140_atomic_wait.dll",
+        "user32.dll",
+        "vcruntime140.dll",
+        "vcruntime140_1.dll"
+      ],
+      "delay_imports": []
+    }
+  ],
+  "resources": [
+    {
+      "path": "res/licenses/MaterialSymbols-LICENSE.txt",
+      "bytes": 11357,
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "path": "res/licenses/NotoMono-OFL.txt",
+      "bytes": 4396,
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    },
+    {
+      "path": "res/licenses/SairaSemiCondensed-OFL.txt",
+      "bytes": 4403,
+      "sha256": "0e2ccc5da1dd979f08ba82bca2fb61592506a1e58d3cbfc26d904f0db71bd812"
+    },
+    {
+      "path": "res/licenses/TitilliumWeb-OFL.txt",
+      "bytes": 4430,
+      "sha256": "72a06c86e19bea241f4d6cdafe616518830f8625a5c25b5a9b125d03cf309313"
+    },
+    {
+      "path": "res/MaterialSymbolsRounded-Regular.ttf",
+      "bytes": 1196044,
+      "sha256": "2014db4bf7ba90bfd5de9378b48b63a4a8cd89b446b2c8cdc038c43d437ce3e7"
+    },
+    {
+      "path": "res/NotoMono-Regular.ttf",
+      "bytes": 107848,
+      "sha256": "41fd7ccc82375e2a1e47f0cc2c941c14d7c99ba2f57cf69c9f738d07fb257686"
+    },
+    {
+      "path": "res/rml/controls.rcss",
+      "bytes": 5854,
+      "sha256": "704326fc796f3741e296b0a08f6226b804d975ec18a9230be8ff819491c0c0d3"
+    },
+    {
+      "path": "res/rml/global.rcss",
+      "bytes": 3841,
+      "sha256": "1d193c071b1eb19d6dd003188ecaf96acc46ec95cf1386baf3a19e1588b763c8"
+    },
+    {
+      "path": "res/rml/popover.rcss",
+      "bytes": 2307,
+      "sha256": "393663e4e9570bec91a3e9cf4e9f1f2f00582926618e0fbaaf1e9053b7ebbc15"
+    },
+    {
+      "path": "res/rml/popup.rcss",
+      "bytes": 953,
+      "sha256": "2afb82da6d3d22c6bec4c977c03f9dafc19007f922d9deb8199041b8df16cd50"
+    },
+    {
+      "path": "res/rml/tabbing.rcss",
+      "bytes": 2554,
+      "sha256": "5390d623964409231fa7801f60f22a7c6c4e1adc9d1e106c8f115c6f438abc5f"
+    },
+    {
+      "path": "res/rml/theme.rcss",
+      "bytes": 4950,
+      "sha256": "6779975710cb6ca19cc72fd9ffacb04541a620071272abaf64ddf38220959272"
+    },
+    {
+      "path": "res/rml/window.rcss",
+      "bytes": 7398,
+      "sha256": "4dd2ab9eb3d3fe583fabd733fbe85f0e1524cb57fba26061c844192f320b9a71"
+    },
+    {
+      "path": "res/SairaSemiCondensed-Bold.ttf",
+      "bytes": 96500,
+      "sha256": "2ab7a35f798e149db1908ddae844024bcb975bdccbfc81dbac3429d0f6270b14"
+    },
+    {
+      "path": "res/SairaSemiCondensed-Regular.ttf",
+      "bytes": 95184,
+      "sha256": "9dad0fea2405ebc740092a0ca34e350ac235c0a040095068e0054b337520f93a"
+    },
+    {
+      "path": "res/SairaSemiCondensed-SemiBold.ttf",
+      "bytes": 96160,
+      "sha256": "f7a32aded607fb364a940ca08b4dbe514346b4fbfa6bb1777c71edf6d7f0fe56"
+    },
+    {
+      "path": "res/TitilliumWeb-Bold.ttf",
+      "bytes": 59884,
+      "sha256": "e2e8e1812041e2c5868f1d03ac24994312052c5381cca2e80748f08cb7e13093"
+    },
+    {
+      "path": "res/TitilliumWeb-Regular.ttf",
+      "bytes": 63660,
+      "sha256": "7b6b4452c65cc8b8522e92e7d4d4c2e6d7675341ceafd041bb6bd30297517ea5"
+    },
+    {
+      "path": "res/TitilliumWeb-SemiBold.ttf",
+      "bytes": 63008,
+      "sha256": "7c92f15302d7ac1836015cb9cf4068796406667b304a061b75df8e11f1648c81"
+    }
+  ],
+  "notices": [
+    {
+      "path": "licenses/dependencies/abseil-cpp/LICENSE",
+      "bytes": 11361,
+      "sha256": "c79a7fea0e3cac04cd43f20e7b648e5a0ff8fa5344e644b0ee09ca1162b62747"
+    },
+    {
+      "path": "licenses/dependencies/aurora/LICENSE",
+      "bytes": 1072,
+      "sha256": "40c03cee04cda570d1029b85b6c2ee7ba78431ab1a754b9d912091d73b8ecb18"
+    },
+    {
+      "path": "licenses/dependencies/borealis/LICENSE",
+      "bytes": 1072,
+      "sha256": "2764ca77eadedc0d374ee9d8914a960a2b24829ce4a4e9a84b960c13fc328b6d"
+    },
+    {
+      "path": "licenses/dependencies/cxxopts/LICENSE",
+      "bytes": 1055,
+      "sha256": "aa324fbe633a96546bebca975fbbab65caa175894bd00cfa13d7335e7363400c"
+    },
+    {
+      "path": "licenses/dependencies/fmt/LICENSE",
+      "bytes": 1431,
+      "sha256": "07580f2a3b35709ce703d523f447b242f6dfec7582a8c0df102c7fa2849375f8"
+    },
+    {
+      "path": "licenses/dependencies/Freetype/docs/FTL.TXT",
+      "bytes": 6743,
+      "sha256": "5a5ee54c5001bbad1cdc1a57cc3dd4c42199b2da09d39c7ee41fab002d02967f"
+    },
+    {
+      "path": "licenses/dependencies/Freetype/docs/GPLv2.TXT",
+      "bytes": 17994,
+      "sha256": "c4120c6752c910c299e3bd9cb3a46ff262c268303ca2069b61f92f10a5656c18"
+    },
+    {
+      "path": "licenses/dependencies/Freetype/LICENSE.TXT",
+      "bytes": 2149,
+      "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b"
+    },
+    {
+      "path": "licenses/dependencies/imgui/examples/libs/glfw/COPYING.txt",
+      "bytes": 934,
+      "sha256": "da2fb2c802537710cdebe8881b55356d07b88a6dbd7e4b912ac3091f8e6b5f6a"
+    },
+    {
+      "path": "licenses/dependencies/imgui/LICENSE.txt",
+      "bytes": 1083,
+      "sha256": "c80c5789748d955c4a650562baa0d750494e2c7128c2ca66aaebe2e3c4e198bf"
+    },
+    {
+      "path": "licenses/dependencies/musyx/LICENSE",
+      "bytes": 1084,
+      "sha256": "a0084b30910441e2b778b73344343d9439a261c8137d23224aea5cefee0f01ad"
+    },
+    {
+      "path": "licenses/dependencies/nlohmann_json/LICENSE.MIT",
+      "bytes": 1076,
+      "sha256": "46a65cffd1ea955132d95a8dd921640714a8d6b537d2e4e482d31145ae95b603"
+    },
+    {
+      "path": "licenses/dependencies/PNG/contrib/gregbook/COPYING",
+      "bytes": 18097,
+      "sha256": "d6cb0e9e560f51085556949a84af12b79a00f10ab8b66c752537faf7cd665572"
+    },
+    {
+      "path": "licenses/dependencies/PNG/contrib/gregbook/LICENSE",
+      "bytes": 2373,
+      "sha256": "b6a03c1803eb58ffb1f1278d5c7d4096c4c116e66dce8a7553e8c77d163c3438"
+    },
+    {
+      "path": "licenses/dependencies/PNG/contrib/pngminus/LICENSE.txt",
+      "bytes": 1164,
+      "sha256": "1806f1f10d393e9e377b3a8d1b968452b54f1a90378f14eeef45426946ace330"
+    },
+    {
+      "path": "licenses/dependencies/PNG/LICENSE",
+      "bytes": 5345,
+      "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526"
+    },
+    {
+      "path": "licenses/dependencies/rmlui/Backends/RmlUi_DirectX/LICENSE.txt",
+      "bytes": 3503,
+      "sha256": "c61d8647647d45dfb7ef8e9ca78ae0b9db03560f13cdfe7a70d2a5a1b75c788d"
+    },
+    {
+      "path": "licenses/dependencies/rmlui/Backends/RmlUi_SDL_GPU/SDL_shadercross/LICENSE.txt",
+      "bytes": 1146,
+      "sha256": "1387e570124896cdccffcc1f1129281c5ec337d02366f9e824022d07ab49fbb2"
+    },
+    {
+      "path": "licenses/dependencies/rmlui/Backends/RmlUi_Vulkan/LICENSE.txt",
+      "bytes": 1408,
+      "sha256": "8c8992294f55b0c622f308e68986b4c6aa3d760d0c2e454d888082a55718e702"
+    },
+    {
+      "path": "licenses/dependencies/rmlui/Include/RmlUi/Core/Containers/LICENSE.txt",
+      "bytes": 2549,
+      "sha256": "f8314901f32a5e132372f2568c77d5482d226582bbc92456d9d4d486029835a6"
+    },
+    {
+      "path": "licenses/dependencies/rmlui/LICENSE.txt",
+      "bytes": 1172,
+      "sha256": "64c049f65ec810b805457dc1f24745002203f919ea5a16b6fcd7ca5f45ea298e"
+    },
+    {
+      "path": "licenses/dependencies/rmlui/Samples/assets/LICENSE.txt",
+      "bytes": 14920,
+      "sha256": "c97278bb336ab0fb2d3bb7ba3f303d638224d6dd1edc6e6fcdd4ba28b8dbf2a6"
+    },
+    {
+      "path": "licenses/dependencies/rmlui/Samples/basic/bitmap_font/data/LICENSE.txt",
+      "bytes": 4640,
+      "sha256": "97785324541d80a8803f59129e7fb438322ffce17421b83a5c7714787db5abdc"
+    },
+    {
+      "path": "licenses/dependencies/rmlui/Samples/basic/harfbuzz/data/LICENSE.txt",
+      "bytes": 9853,
+      "sha256": "ddcce72196a3cb9531db6500797b2e28d4e4e10a7f2793a66a576c9f095c0199"
+    },
+    {
+      "path": "licenses/dependencies/rmlui/Samples/basic/lottie/data/LICENSE.txt",
+      "bytes": 1261,
+      "sha256": "fe32d3c56a3506917347ada8230ced1baa31659c9ff09ba634bd197a224c7ebb"
+    },
+    {
+      "path": "licenses/dependencies/rmlui/Samples/basic/svg/data/LICENSE.txt",
+      "bytes": 34985,
+      "sha256": "9490a83a1dbc1d91cfd397dc490808855333aa3c2291927a025cfe11a3a4e7fa"
+    },
+    {
+      "path": "licenses/dependencies/rmlui/Source/Debugger/LICENSE.txt",
+      "bytes": 4453,
+      "sha256": "8d5167099532ac2f0cf25a95e9d70572837d6fd22f47718206ca147915945f49"
+    },
+    {
+      "path": "licenses/dependencies/rmlui/Tests/Data/VisualTests/LICENSE.txt",
+      "bytes": 2695,
+      "sha256": "981f3542b21117ff97c861f9696a1a6fdd12573e61830fcd26ea816fe11dfd09"
+    },
+    {
+      "path": "licenses/dependencies/rmlui/Tests/Dependencies/LICENSE.txt",
+      "bytes": 5234,
+      "sha256": "20c6577bfcb656b958ab29a9643f5e4baa08d6e50fe5e8839a1627915acea416"
+    },
+    {
+      "path": "licenses/dependencies/sdl3_prebuilt/i686-w64-mingw32/share/licenses/SDL3/LICENSE.txt",
+      "bytes": 884,
+      "sha256": "1c040b8271b37e5076359f8fd54240e371114112924d2df81ef87c7d6a1dfdfd"
+    },
+    {
+      "path": "licenses/dependencies/sdl3_prebuilt/LICENSE.txt",
+      "bytes": 884,
+      "sha256": "1c040b8271b37e5076359f8fd54240e371114112924d2df81ef87c7d6a1dfdfd"
+    },
+    {
+      "path": "licenses/dependencies/sdl3_prebuilt/x86_64-w64-mingw32/share/licenses/SDL3/LICENSE.txt",
+      "bytes": 884,
+      "sha256": "1c040b8271b37e5076359f8fd54240e371114112924d2df81ef87c7d6a1dfdfd"
+    },
+    {
+      "path": "licenses/dependencies/sqlite3/header-notice.txt",
+      "bytes": 1517,
+      "sha256": "5ece2a55359a6b882311a46822119776901ab87a23d70eb189c7fb71799e1f9f"
+    },
+    {
+      "path": "licenses/dependencies/tracy/examples/dyna/LICENSE",
+      "bytes": 298,
+      "sha256": "429dab915df1738d236de8ab9bfa12670f011ac3c5b84540c93781958a03a7a6"
+    },
+    {
+      "path": "licenses/dependencies/tracy/examples/ToyPathTracer/license.md",
+      "bytes": 1210,
+      "sha256": "88d9b4eb60579c191ec391ca04c16130572d7eedc4a86daa58bf28c6e14c9bcd"
+    },
+    {
+      "path": "licenses/dependencies/tracy/LICENSE",
+      "bytes": 1618,
+      "sha256": "27ab6b51e57f7e263a6e953d9c8984cd26e69d2f7606bde81e4b3048acf30732"
+    },
+    {
+      "path": "licenses/dependencies/tracy/public/libbacktrace/LICENSE",
+      "bytes": 1478,
+      "sha256": "ef8a9b3247488f8901ca60de9b17b745d7bd67e5ec1e622f80d62364572200d8"
+    },
+    {
+      "path": "licenses/dependencies/xxhash/cli/COPYING",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "licenses/dependencies/xxhash/LICENSE",
+      "bytes": 1389,
+      "sha256": "6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a"
+    },
+    {
+      "path": "licenses/dependencies/xxhash/tests/bench/LICENSE",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "licenses/dependencies/xxhash/tests/collisions/LICENSE",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "licenses/dependencies/ZLIB/LICENSE.md",
+      "bytes": 867,
+      "sha256": "6c9f0d975b41afaa34d22f55bb8986ce69e5cb7ad327cb2b28820cd425edf5ee"
+    },
+    {
+      "path": "licenses/dependencies/zstd/build/LICENSE",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "licenses/dependencies/zstd/COPYING",
+      "bytes": 18091,
+      "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505"
+    },
+    {
+      "path": "licenses/dependencies/zstd/LICENSE",
+      "bytes": 1549,
+      "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8"
+    },
+    {
+      "path": "licenses/LLVM-MinGW/LLVM.txt",
+      "bytes": 15141,
+      "sha256": "8d85c1057d742e597985c7d4e6320b015a9139385cff4cbae06ffc0ebe89afee"
+    },
+    {
+      "path": "licenses/LLVM-MinGW/MinGW/COPYING",
+      "bytes": 2326,
+      "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f"
+    },
+    {
+      "path": "licenses/LLVM-MinGW/MinGW/COPYING.MinGW-w64-runtime.txt",
+      "bytes": 12155,
+      "sha256": "1db8da07b436c68833c0673ffee3d9fcb2526047f3820b81661865dfedc79a1f"
+    },
+    {
+      "path": "licenses/LLVM-MinGW/MinGW/COPYING.MinGW-w64.txt",
+      "bytes": 5905,
+      "sha256": "f38e6194bd3bfa1b654f118e5acefe0aead437bbe669eee43957ccc65a7127f1"
+    },
+    {
+      "path": "licenses/LLVM-MinGW/MinGW/COPYING.winpthreads.txt",
+      "bytes": 2883,
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177"
+    },
+    {
+      "path": "licenses/LLVM-MinGW/MinGW/COPYING.winstorecompat.txt",
+      "bytes": 1099,
+      "sha256": "fa7368d1f93d890c173177475d8ec7aff265a7d08f1f364d66f74d138978ce36"
+    },
+    {
+      "path": "licenses/Metaforce/extern/aurora/LICENSE",
+      "bytes": 1072,
+      "sha256": "40c03cee04cda570d1029b85b6c2ee7ba78431ab1a754b9d912091d73b8ecb18"
+    },
+    {
+      "path": "licenses/Metaforce/extern/borealis/LICENSE",
+      "bytes": 1072,
+      "sha256": "2764ca77eadedc0d374ee9d8914a960a2b24829ce4a4e9a84b960c13fc328b6d"
+    },
+    {
+      "path": "licenses/Metaforce/extern/musyx/LICENSE",
+      "bytes": 1084,
+      "sha256": "a0084b30910441e2b778b73344343d9439a261c8137d23224aea5cefee0f01ad"
+    },
+    {
+      "path": "licenses/Metaforce/LICENSE",
+      "bytes": 1088,
+      "sha256": "6e449c264d38ece29483d8ba398e73337370bfef59d6f0b8da43fc0b7a44c634"
+    },
+    {
+      "path": "licenses/Metaforce/LICENSE.decomp",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "licenses/MSVC-en-US.rtf",
+      "bytes": 9235,
+      "sha256": "8099dc3cf9502c335da829e5c755948a12e3e6de490eb492a99deb673d883d8b"
+    },
+    {
+      "path": "licenses/MSVC-pt-BR.rtf",
+      "bytes": 10956,
+      "sha256": "27891eec899be859e3b4d3b29247fc6b535d7e836def0329111c48741ec6e701"
+    },
+    {
+      "path": "licenses/runtime/dawn-license.txt",
+      "bytes": 11829,
+      "sha256": "0493f897193af1796d5054659f45ec7d4c5af648fa67a99f01d30e55cc805abc"
+    },
+    {
+      "path": "licenses/runtime/dxc-LICENSE.TXT",
+      "bytes": 29241,
+      "sha256": "27a49e35d1da96eba18fba54bc882667ff0ff8c0254f16f2b6e165d605ba7df8"
+    },
+    {
+      "path": "licenses/runtime/nod-LICENSE-APACHE.txt",
+      "bytes": 11342,
+      "sha256": "fd363f1eb5135402a2e66f4a6173e6eff06daabe79d150acd7c669d33b985b4e"
+    },
+    {
+      "path": "licenses/runtime/nod-LICENSE-MIT.txt",
+      "bytes": 1065,
+      "sha256": "544ffe9befaefa6b59ab1fdde58789069ba7c1b65432bdea273a16b2117909b7"
+    }
+  ],
+  "media": "Only authored invalid bytes; no commercial disc or game boot.",
+  "environment": {
+    "SystemRoot": "C:\\WINDOWS",
+    "WINDIR": "C:\\WINDOWS",
+    "SystemDrive": "C:",
+    "COMSPEC": "C:\\WINDOWS\\System32\\cmd.exe",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD",
+    "PATH": "C:\\WINDOWS\\System32;C:\\WINDOWS",
+    "USERPROFILE": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\finish-private-user\\home",
+    "HOME": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\finish-private-user\\home",
+    "APPDATA": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\finish-private-user\\roaming",
+    "LOCALAPPDATA": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\finish-private-user\\local",
+    "TEMP": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\finish-private-user\\temp",
+    "TMP": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\native-1\\portable-check-1\\finish-private-user\\temp",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "NUMBER_OF_PROCESSORS": "2"
+  }
+}

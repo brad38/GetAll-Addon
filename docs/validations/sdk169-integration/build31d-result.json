@@ -1,0 +1,164 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "run_id": "31d",
+  "started_utc": "2026-11-28T00:39:17.456608+00:00",
+  "phases": [
+    {
+      "mode": "dotnet-version31d",
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.exe",
+        "--version"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127",
+      "started_utc": "2026-11-28T00:39:17.502649+00:00",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.219,
+      "finished_utc": "2026-11-28T00:39:17.719243+00:00",
+      "passes": 0,
+      "failures": 0,
+      "log": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\dotnet-version31d.log",
+        "bytes": 9,
+        "sha256": "edd0ad505c4a86b69a22139ead7657ff889802887824385e6334d544555dbbb7"
+      },
+      "sdk_version": "8.0.425"
+    },
+    {
+      "mode": "harness-build31d",
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.exe",
+        "build",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127\\Tests\\AddonInfrastructure\\AddonInfrastructure.csproj",
+        "-c",
+        "Release",
+        "--nologo",
+        "--no-restore",
+        "-o",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31d"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127",
+      "started_utc": "2026-11-28T00:39:17.720249+00:00",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 10.219,
+      "finished_utc": "2026-11-28T00:39:27.942890+00:00",
+      "passes": 0,
+      "failures": 0,
+      "log": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31d.log",
+        "bytes": 360,
+        "sha256": "d0ab27f7c94b36a408f4c0c4ddc4612cd7681027d8add2ee105854a3a2fe1662"
+      },
+      "warnings": 0,
+      "errors": 0,
+      "assemblies": [
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31d\\AddonInfrastructure.dll",
+          "bytes": 12245504,
+          "sha256": "0f04713bf9dfb54c59192dd6a2e724e87ae9b6e1bc2da78ff402399d6fd66c73"
+        },
+        {
+          "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31d\\AllFix.Addons.Sdk.dll",
+          "bytes": 89088,
+          "sha256": "bdf1179cd2761c4e3fb1a8c0ef7c4e20b4d68a2ffe6697ac40130b6339fbd555"
+        }
+      ]
+    },
+    {
+      "mode": "regression31d",
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.exe",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31d\\AddonInfrastructure.dll"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127",
+      "started_utc": "2026-11-28T00:39:27.956888+00:00",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 11.312,
+      "finished_utc": "2026-11-28T00:39:39.262229+00:00",
+      "passes": 1967,
+      "failures": 0,
+      "log": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\regression31d.log",
+        "bytes": 130115,
+        "sha256": "27e4d538422a84ce24b888b6f9dd09c18c8b0808f7c04cb9171f16163f825fd6"
+      },
+      "metaforce_media_checks": 44,
+      "mkw_release_checks": 43
+    },
+    {
+      "mode": "parser31d",
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.exe",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31d\\AddonInfrastructure.dll",
+        "--parse-getall",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\getall-sdk169-snapshot",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\parser31d.json"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127",
+      "started_utc": "2026-11-28T00:39:39.271214+00:00",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 9.375,
+      "finished_utc": "2026-11-28T00:39:48.638646+00:00",
+      "passes": 1553,
+      "failures": 0,
+      "log": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\parser31d.log",
+        "bytes": 90513,
+        "sha256": "92c69b27da623fc4deb0ede963eb87de65d6a920313e49b6f2bf340af76a56b5"
+      },
+      "recipes_passed": 145,
+      "recipes_failed": 0,
+      "report": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\parser31d.json",
+        "bytes": 32625,
+        "sha256": "e67af856927416923596772b92dd575f334e5eb7c2c749362fe840fa07f9f4ba"
+      }
+    },
+    {
+      "mode": "metaforce-build31d",
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.exe",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31d\\AddonInfrastructure.dll",
+        "--metaforce-build-policy",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\metaforce-de8fc69-source.zip",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\metaforce-policy-build31d"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127",
+      "started_utc": "2026-11-28T00:39:48.644654+00:00",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.891,
+      "finished_utc": "2026-11-28T00:39:49.531509+00:00",
+      "passes": 52,
+      "failures": 0,
+      "log": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\metaforce-build31d.log",
+        "bytes": 3766,
+        "sha256": "c86b78a6768a349152141a439f4a35ca0bbcda43005d3f06dcf71cb4fb3fb49d"
+      },
+      "receipt": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\metaforce-policy-build31d\\result.json",
+        "bytes": 242,
+        "sha256": "db53dd11c0b75962b426d41e373283f46c0648a8451970392e21f1ceea0e4785"
+      }
+    }
+  ],
+  "source_inputs_unchanged": true,
+  "git_state_unchanged": true,
+  "getall_index_unchanged": true,
+  "source_cache_unchanged": true,
+  "native_stage_repeated": false,
+  "native_cpp_built": false,
+  "errors": [],
+  "finished_utc": "2026-11-28T00:39:50.042213+00:00",
+  "input_manifest": {
+    "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-sources-before.json",
+    "bytes": 94438,
+    "sha256": "6bf7cbc0f32ac0c418308b2fc98472cbf067a8c1dc2bf321ec4f522602ce6ede"
+  },
+  "sources_checked": 538
+}

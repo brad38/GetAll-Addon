@@ -1,0 +1,221 @@
+{
+  "format": 1,
+  "files": [
+    {
+      "file": "build31d-result.json",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-result.json",
+      "bytes": 6687,
+      "sha256": "51f98c91d7a0ff2a925ac0a5043217e795ece487fa5478347acfa0f3277229a9"
+    },
+    {
+      "file": "build31d-request.json",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-request.json",
+      "bytes": 3975,
+      "sha256": "56ef42965e22298f4127dcf9400c3c843cee895448eb66fd2912cd510bdf8ea5"
+    },
+    {
+      "file": "build31d-git-before.json",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-git-before.json",
+      "bytes": 2834,
+      "sha256": "69ec7089dba1e34c076f78377bfa4ebcf1ae5a1128e127305ab6bfc92b0cda65"
+    },
+    {
+      "file": "build31d-sources-before.json",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-sources-before.json",
+      "bytes": 94438,
+      "sha256": "6bf7cbc0f32ac0c418308b2fc98472cbf067a8c1dc2bf321ec4f522602ce6ede"
+    },
+    {
+      "file": "parser31d.json",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\parser31d.json",
+      "bytes": 32625,
+      "sha256": "e67af856927416923596772b92dd575f334e5eb7c2c749362fe840fa07f9f4ba"
+    },
+    {
+      "file": "dotnet-version31d.log",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\dotnet-version31d.log",
+      "bytes": 9,
+      "sha256": "edd0ad505c4a86b69a22139ead7657ff889802887824385e6334d544555dbbb7"
+    },
+    {
+      "file": "harness-build31d.log",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31d.log",
+      "bytes": 360,
+      "sha256": "d0ab27f7c94b36a408f4c0c4ddc4612cd7681027d8add2ee105854a3a2fe1662"
+    },
+    {
+      "file": "regression31d.log",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\regression31d.log",
+      "bytes": 130115,
+      "sha256": "27e4d538422a84ce24b888b6f9dd09c18c8b0808f7c04cb9171f16163f825fd6"
+    },
+    {
+      "file": "parser31d.log",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\parser31d.log",
+      "bytes": 90513,
+      "sha256": "92c69b27da623fc4deb0ede963eb87de65d6a920313e49b6f2bf340af76a56b5"
+    },
+    {
+      "file": "metaforce-build31d.log",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\metaforce-build31d.log",
+      "bytes": 3766,
+      "sha256": "c86b78a6768a349152141a439f4a35ca0bbcda43005d3f06dcf71cb4fb3fb49d"
+    },
+    {
+      "file": "build31-result.json",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31-result.json",
+      "bytes": 2566,
+      "sha256": "6672d9e7b966faf88858849b67b22347da86bf24204a4359a5f1deabef5c8067"
+    },
+    {
+      "file": "build31b-result.json",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31b-result.json",
+      "bytes": 2578,
+      "sha256": "e1d6fdc5b506f02e218669e579082d41be0686fca31483399fa1b2a9188dca47"
+    },
+    {
+      "file": "build31c-result.json",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31c-result.json",
+      "bytes": 4028,
+      "sha256": "f8c243edeaa6f2094d3787c9798571c370a0eb5c3570335402ded2a99e815ff8"
+    },
+    {
+      "file": "mkw-test-namespace31c.json",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\mkw-test-namespace31c.json",
+      "bytes": 349,
+      "sha256": "fa602b0941fede056a1e96398b85f59b2f79c7f40455d934acc620b796b27b9b"
+    },
+    {
+      "file": "mkw-release-test31d.json",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\mkw-release-test31d.json",
+      "bytes": 712,
+      "sha256": "4ffc525fdf8ff0c1207e4fa9b7101d6fb2c742b6948bd7e1f58fdaa056aabc77"
+    },
+    {
+      "file": "restore-offline31-result.json",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\restore-offline31\\result.json",
+      "bytes": 1356,
+      "sha256": "ff9bd8aba6107e43368c6ff467d0ffc6af719f2b205f8d740aee162aefc9b240"
+    },
+    {
+      "file": "metaforce-policy31d-result.json",
+      "source": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\metaforce-policy-build31d\\result.json",
+      "bytes": 242,
+      "sha256": "db53dd11c0b75962b426d41e373283f46c0648a8451970392e21f1ceea0e4785"
+    }
+  ],
+  "transfer_zip_bytes": 91372,
+  "transfer_zip_sha256": "8de9f8dff45e0939846b6bbd8d1461b762cc28c1efc6301b56d48636d146ca4c",
+  "stored_files": [
+    {
+      "path": "build31d-result.json",
+      "bytes": 6687,
+      "sha256": "51f98c91d7a0ff2a925ac0a5043217e795ece487fa5478347acfa0f3277229a9",
+      "transform": "none"
+    },
+    {
+      "path": "build31d-request.json",
+      "bytes": 3975,
+      "sha256": "56ef42965e22298f4127dcf9400c3c843cee895448eb66fd2912cd510bdf8ea5",
+      "transform": "none"
+    },
+    {
+      "path": "build31d-git-before.json",
+      "bytes": 2834,
+      "sha256": "69ec7089dba1e34c076f78377bfa4ebcf1ae5a1128e127305ab6bfc92b0cda65",
+      "transform": "none"
+    },
+    {
+      "path": "build31d-sources-before.json",
+      "bytes": 94438,
+      "sha256": "6bf7cbc0f32ac0c418308b2fc98472cbf067a8c1dc2bf321ec4f522602ce6ede",
+      "transform": "none"
+    },
+    {
+      "path": "parser31d.json",
+      "bytes": 31459,
+      "sha256": "ed4685bf4d517862d6ae75c4bcf85980b5d72fb4a91472ae5664b4802f84a026",
+      "transform": "CRLF to LF; original Windows bytes/hash retained in files"
+    },
+    {
+      "path": "dotnet-version31d.log",
+      "bytes": 8,
+      "sha256": "02001ed6d93a3044be97ce543dc812ae0bd32c45046a71286cd34798bfed45ca",
+      "transform": "CRLF to LF; Windows original preserved"
+    },
+    {
+      "path": "harness-build31d.log",
+      "bytes": 352,
+      "sha256": "8d72c47ed69a4f05a727863884536f711fc80e92cd9810876abad61543ec17cc",
+      "transform": "CRLF to LF; Windows original preserved"
+    },
+    {
+      "path": "regression31d.log",
+      "bytes": 128074,
+      "sha256": "d688626a8d1b5a92e9167f3c89e0a8e2c79c899e0691f38b660ad606bda9b957",
+      "transform": "CRLF to LF; Windows original preserved"
+    },
+    {
+      "path": "parser31d.log",
+      "bytes": 88958,
+      "sha256": "ed80f631bfd65f545aac071df90f0fcfc67b22856139c2553740bbda8089631d",
+      "transform": "CRLF to LF; Windows original preserved"
+    },
+    {
+      "path": "metaforce-build31d.log",
+      "bytes": 3713,
+      "sha256": "70297ba4526360fa045a7ac1aa290bf9968528ea2fd130776ab40358347ab87d",
+      "transform": "CRLF to LF; Windows original preserved"
+    },
+    {
+      "path": "build31-result.json",
+      "bytes": 2566,
+      "sha256": "6672d9e7b966faf88858849b67b22347da86bf24204a4359a5f1deabef5c8067",
+      "transform": "none"
+    },
+    {
+      "path": "build31b-result.json",
+      "bytes": 2578,
+      "sha256": "e1d6fdc5b506f02e218669e579082d41be0686fca31483399fa1b2a9188dca47",
+      "transform": "none"
+    },
+    {
+      "path": "build31c-result.json",
+      "bytes": 4028,
+      "sha256": "f8c243edeaa6f2094d3787c9798571c370a0eb5c3570335402ded2a99e815ff8",
+      "transform": "none"
+    },
+    {
+      "path": "mkw-test-namespace31c.json",
+      "bytes": 344,
+      "sha256": "b87b69695afbb2e094ed1fa8d9ec7fd1ff840d23c9148de58f8e6d00d7f19f7e",
+      "transform": "CRLF to LF; original Windows bytes/hash retained in files"
+    },
+    {
+      "path": "mkw-release-test31d.json",
+      "bytes": 712,
+      "sha256": "4ffc525fdf8ff0c1207e4fa9b7101d6fb2c742b6948bd7e1f58fdaa056aabc77",
+      "transform": "none"
+    },
+    {
+      "path": "restore-offline31-result.json",
+      "bytes": 1356,
+      "sha256": "ff9bd8aba6107e43368c6ff467d0ffc6af719f2b205f8d740aee162aefc9b240",
+      "transform": "none"
+    },
+    {
+      "path": "metaforce-policy31d-result.json",
+      "bytes": 235,
+      "sha256": "7c815cefbf0fde9ea6a73e88f42a713993ef9a2da7355b123f93240c8f66c669",
+      "transform": "CRLF to LF; original Windows bytes/hash retained in files"
+    }
+  ],
+  "reproduction_script_normalization": {
+    "file": "restore-offline-and-run31b.py",
+    "original_bytes": 4453,
+    "original_sha256": "73e0c519a17ce749452fa7cff83236aeec78298ce5aaf2764fb8dc6e56d9008b",
+    "stored_bytes": 4452,
+    "stored_sha256": "83f6efabe8d613bb1b513c3bed8678cd87b3f60ce2b1d6666a867ca3b022d3ac",
+    "transform": "Remove one extra empty line at EOF; original Windows script preserved"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "desktop_commit": "8ba34eb51ee0ab93accef3da5e1689c68825977d",
+  "getall_commit": "5b7fea8fb8d2b77df5a6cfd7e9efb6b463fba75b",
+  "sdk_version": "1.5.68",
+  "harness": "harness-build30/AddonInfrastructure.dll",
+  "recipes_passed": 143,
+  "recipes_failed": 0,
+  "exit_code": 0,
+  "process_runtime_seconds": 9.46,
+  "log_path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\preview-sdk168-20261127\\parser-sdk168-preview.log",
+  "report_path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\preview-sdk168-20261127\\parser-sdk168-preview.json",
+  "recompiled": false
+}

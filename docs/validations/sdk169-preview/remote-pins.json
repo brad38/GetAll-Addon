@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "verified_utc": "2026-11-28T00:49:57.524Z",
+  "branch": "work/complete-install-flows-20261127",
+  "repositories": [
+    {
+      "repository": "brad38/Allfix",
+      "commit": "921295de12349e726f7ca21a5edd8a8ecee123d8",
+      "pull_request": 3,
+      "pull_request_url": "https://github.com/brad38/Allfix/pull/3",
+      "branch": "work/complete-install-flows-20261127",
+      "draft": true,
+      "merged": false,
+      "workflow_runs": [
+        {
+          "id": 46089235002,
+          "name": "Windows SDK and Desktop CI",
+          "status": "completed",
+          "conclusion": "success",
+          "run_number": 115,
+          "jobs_url": "https://api.github.com/repos/brad38/Allfix/actions/runs/46089235002/jobs",
+          "logs_url": "https://api.github.com/repos/brad38/Allfix/actions/runs/46089235002/logs",
+          "workflow_id": 428567351
+        }
+      ]
+    },
+    {
+      "repository": "brad38/GetAll-Addon",
+      "commit": "37fbc54ee2d137952d8f1ca2b06f3602410870c9",
+      "pull_request": 20,
+      "pull_request_url": "https://github.com/brad38/GetAll-Addon/pull/20",
+      "branch": "work/complete-install-flows-20261127",
+      "draft": true,
+      "merged": false,
+      "workflow_runs": [
+        {
+          "id": 46089870630,
+          "name": "Validate GetAll-Addon Recipes",
+          "status": "completed",
+          "conclusion": "success",
+          "run_number": 136,
+          "jobs_url": "https://api.github.com/repos/brad38/GetAll-Addon/actions/runs/46089870630/jobs",
+          "logs_url": "https://api.github.com/repos/brad38/GetAll-Addon/actions/runs/46089870630/logs",
+          "workflow_id": 427385552
+        }
+      ]
+    }
+  ]
+}

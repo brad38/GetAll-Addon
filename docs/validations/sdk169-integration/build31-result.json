@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "status": "FAILED",
+  "run_id": "31",
+  "started_utc": "2026-11-27T21:58:14.309795+00:00",
+  "phases": [
+    {
+      "mode": "dotnet-version31",
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.exe",
+        "--version"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127",
+      "started_utc": "2026-11-27T21:58:14.361795+00:00",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.094,
+      "finished_utc": "2026-11-27T21:58:14.456345+00:00",
+      "passes": 0,
+      "failures": 0,
+      "log": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\dotnet-version31.log",
+        "bytes": 9,
+        "sha256": "edd0ad505c4a86b69a22139ead7657ff889802887824385e6334d544555dbbb7"
+      },
+      "sdk_version": "8.0.425"
+    },
+    {
+      "mode": "harness-build31",
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.exe",
+        "build",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127\\Tests\\AddonInfrastructure\\AddonInfrastructure.csproj",
+        "-c",
+        "Release",
+        "--nologo",
+        "--no-restore",
+        "-o",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31"
+      ],
+      "cwd": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127",
+      "started_utc": "2026-11-27T21:58:14.457344+00:00",
+      "status": "FAILED",
+      "exit_code": 1,
+      "seconds": 0.5,
+      "finished_utc": "2026-11-27T21:58:14.951071+00:00",
+      "passes": 0,
+      "failures": 0,
+      "log": {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31.log",
+        "bytes": 987,
+        "sha256": "ca68617aacb3d21eeda0ea20750b15c8c12c6f156c583e5bea0b2a77fe0825b1"
+      },
+      "error": "harness-build31 exited unsuccessfully"
+    }
+  ],
+  "source_inputs_unchanged": true,
+  "git_state_unchanged": true,
+  "getall_index_unchanged": true,
+  "source_cache_unchanged": true,
+  "native_stage_repeated": false,
+  "native_cpp_built": false,
+  "errors": [
+    "RuntimeError: harness-build31 exited unsuccessfully"
+  ],
+  "finished_utc": "2026-11-27T21:58:15.431589+00:00",
+  "input_manifest": {
+    "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31-sources-before.json",
+    "bytes": 94438,
+    "sha256": "0e4e2bd0f7d78fc98aac14ad8f45b4ec4ad4dd00480979c61c6bc646cdf1bc1b"
+  },
+  "sources_checked": 538
+}

@@ -1,0 +1,19 @@
+{
+  "stage": "ps",
+  "cbufs": [],
+  "sbufs": [],
+  "textures": [],
+  "images": [
+    {
+      "binding": 1,
+      "type": 3,
+      "format": "R32Uint",
+      "cbuf_slot": 0,
+      "handle": 88,
+      "array": 1,
+      "separate": false,
+      "flags": 4
+    }
+  ],
+  "spec": []
+}

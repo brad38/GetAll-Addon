@@ -1,0 +1,14 @@
+[
+  {
+    "path": "references/CuAsm/DefaultInsAsmRepos.sm_86.txt",
+    "url": "https://raw.githubusercontent.com/cloudcores/CuAssembler/96a9f72baf00f40b9b299653fcef8d3e2b4a3d49/CuAsm/InsAsmRepos/DefaultInsAsmRepos.sm_86.txt",
+    "bytes": 1551873,
+    "sha256": "f8bd12e50b024c6b959609600134b320d0b7e6b7e8e5576e3dc42c49022a1934"
+  },
+  {
+    "path": "references/mesa-ir.rs",
+    "url": "https://gitlab.freedesktop.org/mesa/mesa/-/raw/mesa-26.3.0/src/nouveau/compiler/nak/ir.rs",
+    "bytes": 258397,
+    "sha256": "d297a3b1c2148d0f9875d6c099e34e4c9780afc56f49998468be509dc4e75485"
+  }
+]

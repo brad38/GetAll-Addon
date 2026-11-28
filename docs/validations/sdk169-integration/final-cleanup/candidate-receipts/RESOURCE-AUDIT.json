@@ -1,0 +1,191 @@
+{
+  "desktop": {
+    "name": "AllFix",
+    "version": "3.0.0.0",
+    "informational_version": "3.0.0+921295de12349e726f7ca21a5edd8a8ecee123d8",
+    "sha256": "3c6ad7c8909888c13452777db37a6ddea940281f533b8588ba0852984ca2c44d"
+  },
+  "sdk": {
+    "name": "AllFix.Addons.Sdk",
+    "version": "1.5.69.0",
+    "informational_version": "1.5.69+921295de12349e726f7ca21a5edd8a8ecee123d8",
+    "sha256": "348a4c2ac16d6f870df920837ba4ca3d4227a3402d7709fcc4bdcd13d8221366"
+  },
+  "resources": [
+    {
+      "name": "AllFix.Tools.2ship-zapd.exe",
+      "bytes": 1858048,
+      "sha256": "b781f9c605a7a566b1b149b789e8f28f9e1c317b9bb71898609346bfebfaee33"
+    },
+    {
+      "name": "AllFix.Tools.bluewake-import-windows-x64.zip",
+      "bytes": 55610,
+      "sha256": "5dd29c5f689f55135a9b1591525cfb9ff917c1b5ee699c71629fcc671400a6df"
+    },
+    {
+      "name": "AllFix.Tools.getall-gt4-disc.exe",
+      "bytes": 1090560,
+      "sha256": "db97432b10b5a196dd63f713e748c71815b2fdeb8b3065b59821a7615cbb2f82"
+    },
+    {
+      "name": "AllFix.Tools.ghostship-torch.exe",
+      "bytes": 2473984,
+      "sha256": "e51c4e6e801173e978156631fa01f1741d890d8f84a8ab500e73106fb3344e8d"
+    },
+    {
+      "name": "AllFix.Tools.kingsfield-import-windows-x64.zip",
+      "bytes": 512201,
+      "sha256": "8b915f1e4b17a4e5261cca664dd027b9485321591a54471a0515a80313eb0970"
+    },
+    {
+      "name": "AllFix.Tools.know-your-role-builder.exe",
+      "bytes": 76668714,
+      "sha256": "ff0ef87da4887fa3164070ea0b853b09f65e5f3a539cfdc27c066d181b36964b"
+    },
+    {
+      "name": "AllFix.Tools.lighthouse-torch.exe",
+      "bytes": 4266496,
+      "sha256": "91f20508aac740058b8bf540d5c5dd72b7792ad9d2959e53544c271ceaae5147"
+    },
+    {
+      "name": "AllFix.Tools.nectar-extract.exe",
+      "bytes": 3039134,
+      "sha256": "59318b0d29b1df3766c8863b4d3aebc59501a24358690e309a964b54058d4e90"
+    },
+    {
+      "name": "AllFix.Tools.paperboat-torch.exe",
+      "bytes": 2383872,
+      "sha256": "5211b9d2041fbb0ef6e712692a99bec9b045d985cf6a2c4a30d54fb42641ef99"
+    },
+    {
+      "name": "AllFix.Tools.picori-asset-extractor.exe",
+      "bytes": 4958840,
+      "sha256": "b7c1172179af87050b7b6037a4e5ed0677818e7082c38de59a25e1ea3e338599"
+    },
+    {
+      "name": "AllFix.Tools.soh-torch.exe",
+      "bytes": 1804288,
+      "sha256": "e1d221f2a58ad56581b85da752e0bc236e577a26a2e145404764ca836779be02"
+    },
+    {
+      "name": "AllFix.Tools.spaghetti-defines.h",
+      "bytes": 18222,
+      "sha256": "a8be4f588308dbc3eca23589a5809a0bbd5c232b6542baf9c86dcf188a573c74"
+    },
+    {
+      "name": "AllFix.Tools.spaghetti-torch.exe",
+      "bytes": 2518528,
+      "sha256": "e5423dd886c578a550a57a103e53045880f59efd2aec5bf4ea1447e7ef018e55"
+    },
+    {
+      "name": "AllFix.Tools.starship-torch.exe",
+      "bytes": 1951744,
+      "sha256": "b40e1e78aa31a6035b89d82d2563f9f1906a3518d924b087666cb42542d10081"
+    },
+    {
+      "name": "DrMario64.N64Recomp.exe",
+      "bytes": 926720,
+      "sha256": "7b9bb46d7e93327a2d3fa808534e867a1a473f581b0b8508300a1db05a9d3cd6"
+    },
+    {
+      "name": "DrMario64.ORIGIN.txt",
+      "bytes": 433,
+      "sha256": "dddd9e260f0846acb4e9f9c36fdd9c6c3827f404baea113a7bc157044a452453"
+    },
+    {
+      "name": "DrMario64.RSPRecomp.exe",
+      "bytes": 659968,
+      "sha256": "c749d4654094bbae2399a8e8e86c23251437bcaf581e45b60c19e567e0a77edd"
+    },
+    {
+      "name": "DrMario64.file_to_c.exe",
+      "bytes": 293376,
+      "sha256": "f6a50cab4253e291a2c18359afc34e5eddd71ba97eea1e4b039d8108017a2009"
+    },
+    {
+      "name": "DrMario64.licenses.ELFIO-LICENSE.txt",
+      "bytes": 1110,
+      "sha256": "a15b5135eae48f2f6f6572ac4d7baf678761fdfde530344e9202fceb9e4e5014"
+    },
+    {
+      "name": "DrMario64.licenses.N64Recomp-LICENSE.txt",
+      "bytes": 1095,
+      "sha256": "8f3594c18cd4f7e551795c2a11d17c460f7dd2c39ffde0db82f1de876aaac0c4"
+    },
+    {
+      "name": "DrMario64.licenses.RT64-LICENSE.txt",
+      "bytes": 1095,
+      "sha256": "b242a9948efebf64d40331807202330ccf0e8704ea97ee4e970f51bb73e8f327"
+    },
+    {
+      "name": "DrMario64.licenses.clang-LICENSE.TXT",
+      "bytes": 15140,
+      "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47"
+    },
+    {
+      "name": "DrMario64.licenses.fmt-LICENSE.txt",
+      "bytes": 1458,
+      "sha256": "25b5db04aa6070c12ac518b91cbd0a59725c050ecb091456e6ebc3d3eeb369cf"
+    },
+    {
+      "name": "DrMario64.licenses.lld-LICENSE.TXT",
+      "bytes": 15138,
+      "sha256": "f7891568956e34643eb6a0db1462db30820d40d7266e2a78063f2fe233ece5a0"
+    },
+    {
+      "name": "DrMario64.licenses.llvm-LICENSE.TXT",
+      "bytes": 15141,
+      "sha256": "8d85c1057d742e597985c7d4e6320b015a9139385cff4cbae06ffc0ebe89afee"
+    },
+    {
+      "name": "DrMario64.licenses.rabbitizer-LICENSE.txt",
+      "bytes": 1094,
+      "sha256": "f0df1d4bd58eb60274ae4a8d34e71acd7295903dae9b3b0a4872346ddd87846d"
+    },
+    {
+      "name": "DrMario64.licenses.sljit-LICENSE.txt",
+      "bytes": 1469,
+      "sha256": "37c7a090fc61388430d63fc97bf8a22ffce92d3ca2249aac572cfaf411d3070f"
+    },
+    {
+      "name": "DrMario64.licenses.tomlplusplus-LICENSE.txt",
+      "bytes": 1094,
+      "sha256": "529bc3900a9571e49db285b0df432397e70b881cc3bf48de6667ae74ff4b06d8"
+    },
+    {
+      "name": "ForzaNative.source-support.zip",
+      "bytes": 198786,
+      "sha256": "2ba46f15ed7092eb250c47d8616684cea535a25e43fbe2aa0eb8208f8c76617f"
+    },
+    {
+      "name": "MkwSm86.cli-support.zip",
+      "bytes": 63227,
+      "sha256": "1c79d30594951495f210a349da05aabe0e240f0189dba87c95a78da73a4500ce"
+    },
+    {
+      "name": "PinyonNative.source-support.zip",
+      "bytes": 175161,
+      "sha256": "cc77d46b575da64c3c66e50d5306cd4e12c9cd45f2dc42738b09e614367bcfc6"
+    },
+    {
+      "name": "Sm64Build.sm64plus-ucrt64.lock.json",
+      "bytes": 15305,
+      "sha256": "4473152bf4b00ae9da3f0cae330d1a86a1a2dcba2aafc499588ef26afcc7a0e4"
+    },
+    {
+      "name": "SsxNative.source-support.zip",
+      "bytes": 601221,
+      "sha256": "054ae3be11679a61050033ccae491883c10b223c40fdd4a96512859b4e23715a"
+    },
+    {
+      "name": "UnleashedHelper.allfix-mspack-lzx.dll",
+      "bytes": 117760,
+      "sha256": "1de3d9dd9b7add138814707efea6ec9155dec42d6d96ba6c673766be8df26f85"
+    },
+    {
+      "name": "UnleashedHelper.unleashed-xex-patch.exe",
+      "bytes": 184320,
+      "sha256": "f74ae704cd33d9dbac2c30f9f05194973211904ba80b2283db7cd4ae4fa60d2c"
+    }
+  ]
+}

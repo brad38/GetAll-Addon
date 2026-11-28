@@ -9,5 +9,5 @@
     "README.md"
   ],
   "inputs": [],
-  "manual_steps": "Compilacao experimental local de God of War Recomp (KIexster / PS2Recomp + parches). Use Retomar e selecione sua ISO PS2 USA (SCUS_973.99) ou PAL (SCES_531.33). Requer Visual Studio Build Tools e Windows SDK licenciados. Nenhum jogo incluido."
+  "manual_steps": "Selecione sua ISO original americana de God of War para PS2 (SCUS_973.99). O AllFix verifica as duas camadas do disco, prepara as ferramentas privadas e compila o jogo automaticamente."
 }

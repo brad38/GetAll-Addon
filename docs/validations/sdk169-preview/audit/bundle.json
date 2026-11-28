@@ -1,0 +1,16 @@
+{
+  "executable_sha256": "b558afccf6fa50ec9a3899b66055009f04f8ce71cfc4dbcc6ab3886bd0433fcd",
+  "bundle_version": 6,
+  "assemblies": [
+    {
+      "name": "AllFix.dll",
+      "bytes": 117995520,
+      "sha256": "3c6ad7c8909888c13452777db37a6ddea940281f533b8588ba0852984ca2c44d"
+    },
+    {
+      "name": "AllFix.Addons.Sdk.dll",
+      "bytes": 89088,
+      "sha256": "348a4c2ac16d6f870df920837ba4ca3d4227a3402d7709fcc4bdcd13d8221366"
+    }
+  ]
+}

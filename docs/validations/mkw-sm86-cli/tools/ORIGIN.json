@@ -1,0 +1,21 @@
+{
+  "url": "https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvdisasm/linux-x86_64/cuda_nvdisasm-linux-x86_64-12.8.90-archive.tar.xz",
+  "bytes": 5085152,
+  "sha256": "8ac63f4079c47707ec958af3a97ceeb18194e16827a2766058f5872f6c3412ae",
+  "manifest_url": "https://developer.download.nvidia.com/compute/cuda/redist/redistrib_12.8.1.json",
+  "members": [
+    {
+      "archive_path": "cuda_nvdisasm-linux-x86_64-12.8.90-archive/bin/nvdisasm",
+      "path": "/workspace/scratch/c9d7f8c70c77/mkw-independent-draft/tools/nvdisasm",
+      "bytes": 5898888,
+      "sha256": "250ebe97dd86617574a30daf8d8ee433e6c5d9d10bafff922078779d1ba36073"
+    },
+    {
+      "archive_path": "cuda_nvdisasm-linux-x86_64-12.8.90-archive/LICENSE",
+      "path": "/workspace/scratch/c9d7f8c70c77/mkw-independent-draft/tools/LICENSE",
+      "bytes": 63021,
+      "sha256": "e2c71babfd18a8e69542dd7e9ca018f9caa438094001a58e6bc4d8c999bf0d07"
+    }
+  ],
+  "version": "nvdisasm: NVIDIA (R) CUDA disassembler\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Thu_Feb_13_02:14:45_PST_2025\nCuda compilation tools, release 12.8, V12.8.90\nBuild cuda_12.8.r12.8/compiler.35538042_0\n"
+}

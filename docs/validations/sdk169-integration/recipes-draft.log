@@ -1,0 +1,2 @@
+Validation summary: recipes=145, statuses={'validated': 1, 'experimental': 144}, schema_versions={'3': 68, '5': 48, '9': 23, '7': 4, '6': 1, '8': 1}, jsonschema=True
+OK: all recipes, schemas, paths, and SHA-256 hashes are valid.

@@ -14,5 +14,5 @@
     "gcn-recomp/recomp/recomp.py"
   ],
   "inputs": [],
-  "manual_steps": "Compilacao local experimental. Requer Visual Studio 2022 Build Tools e Windows SDK. Use Retomar e forneca ISO GameCube USA GM4E01; main.dol SHA-1 oficial. A compilacao usa LLVM, CMake, Ninja, Python e SDL2 fixados; modo VR desativado. Nenhum jogo comercial incluido."
+  "manual_steps": "Compilação local experimental. Use Retomar e forneça sua ISO GameCube americana GM4E01; o main.dol é conferido pelo SHA-1 oficial. O GetAll prepara as ferramentas em ambiente privado, compila, registra a instalação e habilita Jogar. O modo VR permanece desativado. Nenhum jogo comercial está incluído."
 }

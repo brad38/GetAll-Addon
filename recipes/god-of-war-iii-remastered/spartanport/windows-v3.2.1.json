@@ -12,7 +12,7 @@
     "spartanport-windows/bin/spartanport-probe.exe"
   ],
   "inputs": [],
-  "manual_steps": "Preparação apenas. Use seu próprio dump de God of War III Remastered PS4 CUSA01623 ou CUSA01715, versão 01.00/01.02. Configure manualmente o launcher oficial para preparar a imagem; nenhuma execução automática.",
+  "manual_steps": "Use Retomar e selecione sua pasta original de God of War III Remastered PS4 CUSA01623 ou CUSA01715, versão 01.00 ou 01.02. O GetAll prepara a imagem e o runtime automaticamente com as ferramentas privadas do projeto. Ao concluir, use Jogar e mantenha a pasta original no mesmo local. Nenhum jogo está incluído.",
   "build_profile": "spartanport-3.2.1-prepare",
   "preparation_media": [
     {

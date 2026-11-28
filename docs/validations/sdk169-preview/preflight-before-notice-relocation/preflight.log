@@ -1,0 +1,31 @@
+python.exe : Traceback (most recent call last):
+No C:\Users\bradg\Downloads\GetAll-R18\evidence-r18\flow-completion-20261127\sdk169-finalization\publish-desktop-candid
+ate.ps1:44 caractere:48
++ ... tionPreference = 'Continue'; & $Executable @Arguments *> $log; $code  ...
++                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\bradg\Downloads\GetAll-R18\evidence-r18\flow-completion-20261127\sdk169-finalization\desktop_candidate
+_support.py", line 184, in <module>
+    main()
+  File "C:\Users\bradg\Downloads\GetAll-R18\evidence-r18\flow-completion-20261127\sdk169-finalization\desktop_candidate
+_support.py", line 180, in main
+    {'preflight': preflight, 'finish': finish, 'verify': verify}[args.mode](args)
+  File "C:\Users\bradg\Downloads\GetAll-R18\evidence-r18\flow-completion-20261127\sdk169-finalization\desktop_candidate
+_support.py", line 95, in preflight
+    support.validate_inputs(inputs, history/'catalog.json')
+  File "C:\Users\bradg\Downloads\GetAll-R18\evidence-r18\complete-flows-publish-20261127\preview_support.py", line 
+146, in validate_inputs
+    check_record(roots[item["source_root"]], item, cache=cache)
+  File "C:\Users\bradg\Downloads\GetAll-R18\evidence-r18\complete-flows-publish-20261127\preview_support.py", line 83, 
+in check_record
+    path = confined(root, item[relative_key])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bradg\Downloads\GetAll-R18\evidence-r18\complete-flows-publish-20261127\preview_support.py", line 76, 
+in confined
+    require(not existing or path.is_file(), f"Missing input: {path}")
+  File "C:\Users\bradg\Downloads\GetAll-R18\evidence-r18\complete-flows-publish-20261127\preview_support.py", line 33, 
+in require
+    raise ValueError(message)
+ValueError: Missing input: C:\Users\bradg\Downloads\GetAll-R18\publish-getall-media-100\KnowYourRole-LICENSE.txt

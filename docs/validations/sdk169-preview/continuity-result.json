@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "implemented": 142,
+  "projects": 148,
+  "recipes": 145,
+  "counts": {
+    "Instalação integral implementada, aguardando mídia original": 141,
+    "Instalação integral homologada": 1,
+    "Sem receita, bloqueado": 6,
+    "Instalação parcialmente automatizada": 0
+  },
+  "newly_closed": [
+    "metaforce",
+    "mkw-recomp"
+  ],
+  "checkpoint_sha256": "8cb97f98d77001e9f78d649a554707e23267cbc7887d4155626fe49078889674",
+  "storage_totals": {
+    "batches": 8,
+    "removed_files": 11890,
+    "logical_bytes_removed": 5571039928,
+    "decimal_gigabytes": 5.571039928,
+    "environment": "Windows Bradsson"
+  },
+  "changes": [
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\MATRIZ-FUNCIONAL.md",
+      "before_sha256": "2decb6f24e88b7c75f3798e57b8ff1510a6a4981790168d192a61b8484005686",
+      "after_sha256": "86900c163d8e77ff5f34082767ff058de3c78a2c4053b213b6131bd5b9404038"
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\CONTINUIDADE.md",
+      "before_sha256": "06b01de577651eadade6674b1140213b0ed331931ff0018cf0650440ce50fc57",
+      "after_sha256": "87592ac22d66b2390b54fe3c355f3b6133bddee90027240236ff9264bfe3eae6"
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\PENDENCIAS.md",
+      "before_sha256": "550e9102589b15f19737e59d3fa51f272ab0ff22d3ef7a6f1bfe4d3c054125b5",
+      "after_sha256": "b0d084a9c9e43aa9167e4ca45ff19d559b58ad58d137d761289d2818c92f46df"
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\LIMPEZA-ARMAZENAMENTO.md",
+      "before_sha256": "74ba0ff7de8a3bebeb9dd7e95f494bb5c46d8dca0863390b2c47718efe70df29",
+      "after_sha256": "21debe7d8b1411fd3d7e02a90e0ba5ce57fccef99660bc02426eb41f7f7741b7"
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\work-progress-latest.json",
+      "before_sha256": "07029302f3cdfac9b113c2a71e3e7b3e61a636330c90a3a7cf431887ef3118da",
+      "after_sha256": "8cb97f98d77001e9f78d649a554707e23267cbc7887d4155626fe49078889674"
+    }
+  ],
+  "completed_utc": "2026-11-28T00:58:10.008955+00:00"
+}

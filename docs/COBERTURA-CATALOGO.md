@@ -1,4 +1,68 @@
-# Rodada 17C - estado atual (23/11/2026)
+# Cobertura funcional do catálogo
+
+## Continuidade — SDK 1.5.69, fontes e prévia verificadas em 27/11/2026
+
+**142/148 fluxos integrais implementados**, 28 acima do checkpoint de 114.
+Metaforce e a preparação automática de Mario Kart World completam esta
+rodada. Há **um homologado histórico, 141 integrais aguardando mídia original,
+zero parciais e seis sem receita**. Nenhum novo primeiro boot comercial foi
+comprovado. O índice tem **145 receitas para 142 projetos**: 144 entradas
+experimentais e uma homologação histórica.
+
+Desktop [`921295d`](https://github.com/brad38/Allfix/commit/921295de12349e726f7ca21a5edd8a8ecee123d8)
+e GetAll [`37fbc54`](https://github.com/brad38/GetAll-Addon/commit/37fbc54ee2d137952d8f1ca2b06f3602410870c9)
+foram confirmados no GitHub. Os CIs
+[Desktop 46089235002](https://github.com/brad38/Allfix/actions/runs/46089235002)
+e [GetAll 46089870630](https://github.com/brad38/GetAll-Addon/actions/runs/46089870630)
+passaram. As PRs continuam draft, sem merge, release pública ou mudança da
+instalação corrente. A documentação de fechamento pode avançar na mesma
+branch; os pins de código e receitas da prévia permanecem imutáveis.
+
+BUILD31d: **0 erros, 0 avisos, 1.967 verificações aprovadas**; parser C#
+**145/145**; Metaforce Policy **52**; serviços Store reais **20**. O DLL testado
+nos serviços é idêntico ao DLL auditado dentro do executável distribuído.
+As provas nativas Metaforce e MKW foram preservadas; fixtures, `--help` e
+SPIR-V validado não foram convertidos em homologação com mídia comercial.
+Resultados e reprodução: [integração SDK169](validations/sdk169-integration/README.md).
+
+A [prévia completa SDK169](validations/sdk169-preview/README.md) está em
+`publish-getall-sdk169-20261127`, com Desktop 3.0.0, SDK 1.5.69 e addon
+1.5.74. Foram verificados 79 arquivos listados no manifesto, 35 recursos,
+71 avisos e 12 propriedades. As prévias SDK167 e SDK168 foram preservadas.
+
+Os seis restantes são Courage Reborn (fonte inacessível), Project 2099
+(runtime/contrato de preparação indisponíveis), MKDD/TMC/MML1 base
+(decompilações para console, sem port Windows correspondente) e Wind Waker
+Recomp (sucessor BlueWake já coberto). Os 148 IDs foram mantidos.
+[Contratos e evidência](validations/remaining-projects-20261127/README.md).
+
+A [limpeza contínua](validations/sdk169-integration/STORAGE.md) mantém fontes,
+receitas, scripts, logs e resultados, reutiliza caches/toolchains e remove
+somente descartáveis comprovados. Mídia original, dados pessoais e dependências
+em uso permanecem preservados. As seções seguintes conservam o histórico.
+
+---
+
+## Checkpoint de desenvolvimento — SDK 1.5.68, 27/11/2026
+
+Estado confirmado: **140/148 projetos com fluxo integral implementado**,
+incluindo um homologado histórico; um parcial e sete sem receita. As duas
+retomadas foram concluídas. Há 143 receitas para 141 projetos. Os vinte e seis fluxos fechados são
+sm64ex, Render96ex, sm64rt, Strikers Wii, WipEout, Dr. Mario, Double Dash C++,
+Burnout 3, Strikers GC, Double Dash Rust, DOAX, GOW KIexster, Odyssey, LAS, GOW 0.4.0, TotK, DKB, GT5, RyGT, Spartan, SSX, GTA Stories, FH1 ReImagined, Pinyon Shift, Shadow of the Colossus e Savage Wind.
+SotC e Savage Wind exigem SDK mínimo 1.5.68 no índice; a prévia138/SDK 1.5.67
+é preservada e não oferece o novo perfil SotC.
+
+A verificação conjunta do BUILD30/SDK 1.5.68 passou em **1.866 checks**, e o parser30 aprovou 143/143 do índice final. O índice publicado também passou143/143 no BUILD28. Nenhum teste
+sintético foi convertido em homologação. O histórico detalhado abaixo conserva
+os estados da época; para a implementação atual, ver
+[SDK 1.5.67](validations/sdk167-flow-completion.md) e a matriz individual
+`MATRIZ-FUNCIONAL.md` no workspace do Bradsson. O fechamento está publicado:
+Desktop `8ba34eb` (CI46059165665) e GetAll `5b7fea8` (CI46059162398), ambos
+aprovados. A [prévia completa SDK168](validations/sdk168-preview/README.md)
+contém os 140 fluxos, com addon 1.5.73 e o índice imutável publicado,
+incluindo SotC e Savage Wind. As PRs continuam draft, sem merge ou release.
+
 
 122/146 projetos com receita (83,56%); 92 main, 24 sem receita, 15 v9, 1 validated historico. SDK 1.5.3 / Desktop 3.0.0. Retomada transacional MML condicionada a midia genuina; Forza XDVDFS/XEX; Sonic GDI e verificacoes estruturais Switch/PS4. Oito binarios de componentes upstream compilados em cinco projetos, zero novos jogos completos ou homologados. 277 PASS C#, 122 parser, 44 Python, JS e regressao offline tripla aprovados. [Matriz](COBERTURA-R17C-2026-11-23.md) | [Relatorio](RODADA-17C-2026-11-23.md). PR #18 draft, sem merge/release. Historico preservado.
 

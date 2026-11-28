@@ -1,0 +1,649 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-11-28T00:55:27.287876+00:00",
+  "completed_utc": "2026-11-28T00:55:27.864523+00:00",
+  "plan_sha256": "7e9298276b3c2fdfdda238e5e33f3862c24c2e36079691cbb95ab62bfa3ecfcb",
+  "script_sha256": "ae62a7c0fa2cc0f027262b0cfd0573a49c6293fcf7774b237ac186109188f72b",
+  "removed_files": 93,
+  "removed_bytes": 181478855,
+  "removed": [
+    {
+      "path": "ARTIFACT-MANIFEST.json",
+      "bytes": 15175,
+      "sha256": "aa85bbe915f2a8d975a8fa0139dea79d145d8c0a0107464941505a7f528a01e3",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "AllFix.Addons.Sdk.pdb",
+      "bytes": 26576,
+      "sha256": "d5892e93277edd249e2b487028b0d48cd9378ff5629338e29bc3912a4254fa7b",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "AllFix.exe",
+      "bytes": 157469800,
+      "sha256": "b558afccf6fa50ec9a3899b66055009f04f8ce71cfc4dbcc6ab3886bd0433fcd",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "AllFix.pdb",
+      "bytes": 438108,
+      "sha256": "c232e129c977becb75fd334a7b724a35f1abe4718ef0ab7da52348de479f81d0",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "GT4-Disc-Helper-Sources.zip",
+      "bytes": 3986,
+      "sha256": "d64de2eaa8cc02070748d10a869886ee97865329c2188eecccd07126411242dd",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "GT4Recomp-LICENSE.txt",
+      "bytes": 1614,
+      "sha256": "6ef414e487d2d012008577155da07cd87e65e3d0711ef1d0bf2424191265a54e",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/2Ship/OTRExporter-LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "005329140311ddc6e8a830752c85b2ec10d51db59adbe9366651c64ad31ae6a5",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/2Ship/ZAPDTR-LICENSE.txt",
+      "bytes": 1087,
+      "sha256": "354b9f8e19a4922599fd55916dbc8841e8dd1fd802c078d8761f174515fb521f",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/2Ship/imgui-LICENSE.txt",
+      "bytes": 1083,
+      "sha256": "c80c5789748d955c4a650562baa0d750494e2c7128c2ca66aaebe2e3c4e198bf",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/2Ship/libgfxd-LICENSE.txt",
+      "bytes": 1087,
+      "sha256": "57e2db356ffa10601e08f64889990f22e748e9b6e431036a8c5d4b9e6c5c6c10",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/2Ship/libultraship-LICENSE.txt",
+      "bytes": 1090,
+      "sha256": "fdd4f25c62f0a30865c4395d53e731be208c7b8912d5c068dbd93ca7fadc8a97",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/2Ship/monocypher-LICENSE.md",
+      "bytes": 9256,
+      "sha256": "a5781770269d2516e52ba4863f790c10a16da4089a1e81823aee19ff1e9026b0",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/2Ship/prism-LICENSE.txt",
+      "bytes": 1090,
+      "sha256": "2bffb0c0adb719d4fadcdfa6ef9824f49719b837a4d4e64b1e5d14a5fd8bb4cb",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/2Ship/stormlib-LICENSE.txt",
+      "bytes": 1108,
+      "sha256": "50b128e6750ed9d887e7a5748a6021238bb2f3bf34a5dd2768c410d932069e35",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/2Ship/threadpool-LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "877daafacf05b94f7292b670304d1e746ab8e393f47c0693b10531e3660c2912",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/2Ship/upstream-LICENSE.txt",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/DrMario64/ORIGIN.txt",
+      "bytes": 433,
+      "sha256": "dddd9e260f0846acb4e9f9c36fdd9c6c3827f404baea113a7bc157044a452453",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/DrMario64/licenses/ELFIO-LICENSE.txt",
+      "bytes": 1110,
+      "sha256": "a15b5135eae48f2f6f6572ac4d7baf678761fdfde530344e9202fceb9e4e5014",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/DrMario64/licenses/N64Recomp-LICENSE.txt",
+      "bytes": 1095,
+      "sha256": "8f3594c18cd4f7e551795c2a11d17c460f7dd2c39ffde0db82f1de876aaac0c4",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/DrMario64/licenses/RT64-LICENSE.txt",
+      "bytes": 1095,
+      "sha256": "b242a9948efebf64d40331807202330ccf0e8704ea97ee4e970f51bb73e8f327",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/DrMario64/licenses/clang-LICENSE.TXT",
+      "bytes": 15140,
+      "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/DrMario64/licenses/fmt-LICENSE.txt",
+      "bytes": 1458,
+      "sha256": "25b5db04aa6070c12ac518b91cbd0a59725c050ecb091456e6ebc3d3eeb369cf",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/DrMario64/licenses/lld-LICENSE.TXT",
+      "bytes": 15138,
+      "sha256": "f7891568956e34643eb6a0db1462db30820d40d7266e2a78063f2fe233ece5a0",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/DrMario64/licenses/llvm-LICENSE.TXT",
+      "bytes": 15141,
+      "sha256": "8d85c1057d742e597985c7d4e6320b015a9139385cff4cbae06ffc0ebe89afee",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/DrMario64/licenses/rabbitizer-LICENSE.txt",
+      "bytes": 1094,
+      "sha256": "f0df1d4bd58eb60274ae4a8d34e71acd7295903dae9b3b0a4872346ddd87846d",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/DrMario64/licenses/sljit-LICENSE.txt",
+      "bytes": 1469,
+      "sha256": "37c7a090fc61388430d63fc97bf8a22ffce92d3ca2249aac572cfaf411d3070f",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/DrMario64/licenses/tomlplusplus-LICENSE.txt",
+      "bytes": 1094,
+      "sha256": "529bc3900a9571e49db285b0df432397e70b881cc3bf48de6667ae74ff4b06d8",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/FH1/ORIGIN.json",
+      "bytes": 51367,
+      "sha256": "6b0e0ba403928c3e46ea3d61547d07ba90ded31450670a2d01c2a1fff3e5b728",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/FH1/source-support.zip",
+      "bytes": 198786,
+      "sha256": "2ba46f15ed7092eb250c47d8616684cea535a25e43fbe2aa0eb8208f8c76617f",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/Ghostship-Torch-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/ORIGIN.md",
+      "bytes": 7974,
+      "sha256": "90caa1f5620524e34bdd71d9cefcf2ce8abea7706641caeeb41bf7ae5e1aa4e9",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/Paperboat-Torch-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/Paperboat-dependencies/dr_libs-LICENSE",
+      "bytes": 2645,
+      "sha256": "a13603628866863f196c0201891a6dcc8062481e83b5d686f34cf9e45ceec899",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/Paperboat-dependencies/libgfxd-LICENSE",
+      "bytes": 1108,
+      "sha256": "54cfd153aea4cbb4c7060b6afaa35021178b9c35d063094a70fa3a5c0acf4cfd",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/Paperboat-dependencies/spdlog-LICENSE",
+      "bytes": 1348,
+      "sha256": "d8cfaae20761042ac00dff862a1a9f31a437cbe337ea9aa8c13285222b7086c5",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/Paperboat-dependencies/tinyxml2-LICENSE.txt",
+      "bytes": 826,
+      "sha256": "035a1f2fd2f6dba120f3c25cd2d04f9987f32405c847c0cb4859fe33e6148f45",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/Paperboat-dependencies/yaml-cpp-LICENSE",
+      "bytes": 1080,
+      "sha256": "c06fd4ee9241e3b6841fcee5d471475be412c822ddf2876af17127acd426c011",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/Paperboat-dependencies/zlib-LICENSE",
+      "bytes": 1024,
+      "sha256": "18dbd37f0ab175c37877e9053ff870a7de2809a3e9b9673b2696aa5009264638",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/ORIGIN.json",
+      "bytes": 13709,
+      "sha256": "ffd2f8a0d99eb9fe36de6560b4e343159515f234cbf2c40a5c6fb784188b79c8",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/bridge-source/allfix_ngx_bridge.cpp",
+      "bytes": 7426,
+      "sha256": "9cfa6c15b512228dc789460e90936163169bb41cab95a3364ede5a77ada9bddd",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/bridge-source/allfix_ngx_bridge.h",
+      "bytes": 16042,
+      "sha256": "e5d78a312bee09239dfb6ce11280e8d80c691f282a0366bddff225b1a81adbf8",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/bridge-source/allfix_rex_etw.cpp",
+      "bytes": 1298,
+      "sha256": "f3b5de7890d025ca4f2613aa2dd6be06d334fcdc56fecadbc6c4ef42798ec121",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/bridge-source/allfix_rex_etw.h",
+      "bytes": 532,
+      "sha256": "6bd7b55fb9c4d134298d9fdbfd88698463f7d2a45419c8f326a40c002ca2ade1",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/bridge-source/layout-fields.json",
+      "bytes": 3100,
+      "sha256": "0f876840e6693be79766f0c5a07a73fbc1f0bb8a59c63222f68c31679d70b317",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/notices/LLVM-MinGW-LICENSE.TXT",
+      "bytes": 15141,
+      "sha256": "8d85c1057d742e597985c7d4e6320b015a9139385cff4cbae06ffc0ebe89afee",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/notices/MinGW/COPYING",
+      "bytes": 2326,
+      "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/notices/MinGW/COPYING.MinGW-w64-runtime.txt",
+      "bytes": 12155,
+      "sha256": "1db8da07b436c68833c0673ffee3d9fcb2526047f3820b81661865dfedc79a1f",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/notices/MinGW/COPYING.MinGW-w64.txt",
+      "bytes": 5905,
+      "sha256": "f38e6194bd3bfa1b654f118e5acefe0aead437bbe669eee43957ccc65a7127f1",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/notices/MinGW/COPYING.winpthreads.txt",
+      "bytes": 2883,
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/notices/MinGW/COPYING.winstorecompat.txt",
+      "bytes": 1099,
+      "sha256": "fa7368d1f93d890c173177475d8ec7aff265a7d08f1f364d66f74d138978ce36",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/notices/NOTICE.txt",
+      "bytes": 378,
+      "sha256": "6034df692a4ddee1063989bfac0a7920a6051cb84acbc4d7c4431ebc3dcc9ed7",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/notices/NVIDIA-RTX-SDK.txt",
+      "bytes": 26620,
+      "sha256": "d4216e39ebef5f9b50a6712ebb37beeb5379862a67733a9999c651f21592aaf0",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/notices/ShiftGlue-BSD-3-Clause.txt",
+      "bytes": 1659,
+      "sha256": "8e065be1da2ff9a16b1f063d4636d8b67e6a654bb90583ea4332e66ac421bb18",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/PinyonNative/source-support.zip",
+      "bytes": 175161,
+      "sha256": "cc77d46b575da64c3c66e50d5306cd4e12c9cd45f2dc42738b09e614367bcfc6",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/SSX/ORIGIN.json",
+      "bytes": 10147,
+      "sha256": "855093b5c63af0c1a8e9f753cf1b860497d5b96ca18126e7cea9932f5da4f30f",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/SSX/source-support.zip",
+      "bytes": 601221,
+      "sha256": "054ae3be11679a61050033ccae491883c10b223c40fdd4a96512859b4e23715a",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/Starship/Torch-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/Starship/libgfxd-LICENSE.txt",
+      "bytes": 1087,
+      "sha256": "57e2db356ffa10601e08f64889990f22e748e9b6e431036a8c5d4b9e6c5c6c10",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/Starship/spdlog-LICENSE.txt",
+      "bytes": 1348,
+      "sha256": "a7241a379cb98d37788f82c2fc2e484c3ae85dae881fd3406f0637644850926f",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/Starship/tinyxml2-LICENSE.txt",
+      "bytes": 808,
+      "sha256": "9332252e9b9e46db8285d4a3f0bf25f139bf1dca6781b956d57f2302efca6432",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Helper-Licenses/Starship/yaml-cpp-LICENSE.txt",
+      "bytes": 1061,
+      "sha256": "aa6fcc27be034e41e21dd832f9175bfe694a48491d9e14ff0fa278e19ad14f1b",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "KnowYourRole-LICENSE.txt",
+      "bytes": 1065,
+      "sha256": "9554cd8f4da9fe311221e8ddddfe7dc9aae255da096b28cb15f77cf09406ba0f",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "KnowYourRole-THIRD-PARTY-NOTICES.txt",
+      "bytes": 1717,
+      "sha256": "7469cb89e59969aa3750333c111a06b5dc571c54f4d60a0e07c033214998cad3",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Lighthouse-Torch-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Microsoft.Web.WebView2.Core.xml",
+      "bytes": 626091,
+      "sha256": "e654d3512cd5f66c69359578547961d14f1ac6826b2d0040daa86726fb518907",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Microsoft.Web.WebView2.WinForms.xml",
+      "bytes": 41393,
+      "sha256": "4b40e49aec5dbda597224f997d57a16645ddc2eb00f31a6329204d1853a2245a",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Microsoft.Web.WebView2.Wpf.xml",
+      "bytes": 143352,
+      "sha256": "e088d2b21902cb8479f782f327925f9e3281b7ee8406966735dd932e5a58e3a9",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Nectar-Extractor-Sources.zip",
+      "bytes": 31527,
+      "sha256": "89403d5c78a362107a1ddee41ce929bb420ad4b83382a38b74c22b0075c8a9f6",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Picori-Extractor-Sources.zip",
+      "bytes": 5397861,
+      "sha256": "d5cd9311028bfceb031a97aaa0d280ba1a5f3ad203f7fa765e133b9029b68082",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "RESOURCE-AUDIT.json",
+      "bytes": 6430,
+      "sha256": "127cfc144b14b9a784c56901b1346872d5013d71d68e20e67519a6046e60dd59",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "bytes": 8670,
+      "sha256": "34b27a36e0e7a8090b6f3681086e99fca4a9e09c1dbe49f8a95bce9f04a87275",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Sonic-Unleashed-Helper-NOTICES.txt",
+      "bytes": 33115,
+      "sha256": "978611dc9d9158f00efa9bd10dcfea078e6d337db05627cd8f85378dd132a46a",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "SpaghettiKart-Torch-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "111037b48f3d60ad59a896ecc30913989451723ff468f85e847693dd6a7264af",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "Unleashed-Xex-Helper-Sources.zip",
+      "bytes": 248867,
+      "sha256": "2ee674de1f5134e3b53e3424ec18bf3ca2aae94fe0779aed684dd578a9a4f5f3",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "licenses/MkwSm86/CuAssembler-MIT.txt",
+      "bytes": 1102,
+      "sha256": "2e4a290cc86b2ed281cc200b00a8ef8d13afaf26207f6b857bc330c555d91b23",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "licenses/MkwSm86/Mesa-NAK-MIT.txt",
+      "bytes": 1442,
+      "sha256": "8875c84633d4d2e3794a11cc8d4a74731ada2c53cc6437644f6201c3628ad8ed",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "licenses/MkwSm86/ORIGIN.txt",
+      "bytes": 597,
+      "sha256": "0d4884e85ddc077e9b2db69e70108858a595e07d23a381ebf8c1b60f09fb6035",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "licenses/MkwSm86/mkw-MIT.txt",
+      "bytes": 1063,
+      "sha256": "458bc459b303410a4cbed893a9a76affd0beada85a8d381e0f147b106ec450a7",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "licenses/MkwSm86/nv-isa-solver-MIT.txt",
+      "bytes": 1068,
+      "sha256": "6f9eba9d8bab25327120b41a6cf101596d58b44cbd31c51091408bb77c69191a",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "reBlue-Manifests-LICENSE.txt",
+      "bytes": 1494,
+      "sha256": "f8c7147eba0225be836dd7f701bd9e254b76386271fe0a57955ee479864b1c97",
+      "group": "desktop-candidate-duplicate"
+    },
+    {
+      "path": "AllFix.Addons.Sdk.deps.json",
+      "bytes": 445,
+      "sha256": "524eff886d47fb54dadfa9efa57e5b01a3ac8fc2e3669749eeb6fd6430cf4211",
+      "group": "failed-build31b"
+    },
+    {
+      "path": "AllFix.Addons.Sdk.dll",
+      "bytes": 89088,
+      "sha256": "bdf1179cd2761c4e3fb1a8c0ef7c4e20b4d68a2ffe6697ac40130b6339fbd555",
+      "group": "failed-build31b"
+    },
+    {
+      "path": "AllFix.Addons.Sdk.pdb",
+      "bytes": 26576,
+      "sha256": "f8b010d9295e59b91e28857411bb20a5b4399e8ecbcfaec1a092c5110612b18a",
+      "group": "failed-build31b"
+    },
+    {
+      "path": "AddonInfrastructure.deps.json",
+      "bytes": 1997,
+      "sha256": "ffa4e38d5a922862a11e2400c27b07e11df9ba93de91cb404b28f1962fd5b2d8",
+      "group": "failed-build31c"
+    },
+    {
+      "path": "AddonInfrastructure.dll",
+      "bytes": 12245504,
+      "sha256": "90515c8f7bec7f0cc9a481f23d9ff71825ed4109fbb0b9650bf270c4355a341e",
+      "group": "failed-build31c"
+    },
+    {
+      "path": "AddonInfrastructure.exe",
+      "bytes": 152064,
+      "sha256": "8528f2389a3cdf3e5ef58543668c7d936da3d4682887ff690a5ce5dcbe654d92",
+      "group": "failed-build31c"
+    },
+    {
+      "path": "AddonInfrastructure.pdb",
+      "bytes": 555468,
+      "sha256": "485104a8e87c0a6fd7cbcbec6264ed74acba3ac66a4365fb75ac1fcc19505db8",
+      "group": "failed-build31c"
+    },
+    {
+      "path": "AddonInfrastructure.runtimeconfig.json",
+      "bytes": 340,
+      "sha256": "28329cf08f6505e73806b17558b187c02f0c1c516fe47ebfb7a013d082aaa306",
+      "group": "failed-build31c"
+    },
+    {
+      "path": "AllFix.Addons.Sdk.deps.json",
+      "bytes": 445,
+      "sha256": "524eff886d47fb54dadfa9efa57e5b01a3ac8fc2e3669749eeb6fd6430cf4211",
+      "group": "failed-build31c"
+    },
+    {
+      "path": "AllFix.Addons.Sdk.dll",
+      "bytes": 89088,
+      "sha256": "bdf1179cd2761c4e3fb1a8c0ef7c4e20b4d68a2ffe6697ac40130b6339fbd555",
+      "group": "failed-build31c"
+    },
+    {
+      "path": "AllFix.Addons.Sdk.pdb",
+      "bytes": 26576,
+      "sha256": "f8b010d9295e59b91e28857411bb20a5b4399e8ecbcfaec1a092c5110612b18a",
+      "group": "failed-build31c"
+    },
+    {
+      "path": "SharpCompress.dll",
+      "bytes": 2481664,
+      "sha256": "f2b1d564edf60dac57522eb549097b098705774c4ea8589ec1e756c59a5d5a83",
+      "group": "failed-build31c"
+    },
+    {
+      "path": "System.IO.Hashing.dll",
+      "bytes": 55560,
+      "sha256": "53726755857b538b3676cabc39989874be072028fd5b39360a7580d73a14e562",
+      "group": "failed-build31c"
+    }
+  ],
+  "removed_directories": [
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\Helper-Licenses\\PinyonNative\\notices\\MinGW",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\Helper-Licenses\\DrMario64\\licenses",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\Helper-Licenses\\PinyonNative\\bridge-source",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\Helper-Licenses\\PinyonNative\\notices",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\Helper-Licenses\\2Ship",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\Helper-Licenses\\DrMario64",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\Helper-Licenses\\FH1",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\Helper-Licenses\\Paperboat-dependencies",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\Helper-Licenses\\PinyonNative",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\Helper-Licenses\\SSX",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\Helper-Licenses\\Starship",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\licenses\\MkwSm86",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\Helper-Licenses",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127\\licenses",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-desktop-final-sdk169-20261127",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31b",
+    "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31c"
+  ],
+  "candidate_receipts_archived": [
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\cleanup-final-sdk169\\candidate-receipts\\ARTIFACT-MANIFEST.json",
+      "bytes": 15175,
+      "sha256": "aa85bbe915f2a8d975a8fa0139dea79d145d8c0a0107464941505a7f528a01e3"
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\cleanup-final-sdk169\\candidate-receipts\\SHA256SUMS.txt",
+      "bytes": 8670,
+      "sha256": "34b27a36e0e7a8090b6f3681086e99fca4a9e09c1dbe49f8a95bce9f04a87275"
+    },
+    {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\cleanup-final-sdk169\\candidate-receipts\\RESOURCE-AUDIT.json",
+      "bytes": 6430,
+      "sha256": "127cfc144b14b9a784c56901b1346872d5013d71d68e20e67519a6046e60dd59"
+    }
+  ],
+  "preserved_roots": [
+    {
+      "root": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127",
+      "files": 76,
+      "bytes": 165612604,
+      "inventory_sha256": "d297dbd0d6f9cf6b058c95134260273b075ab78a830270774a2c605c35f22cab",
+      "unchanged": true
+    },
+    {
+      "root": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127",
+      "files": 76,
+      "bytes": 165648734,
+      "inventory_sha256": "70f55fefeb170546ce7cf23b23928f08719bbdf85343f46b88b9720a50d77126",
+      "unchanged": true
+    },
+    {
+      "root": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk169-20261127",
+      "files": 81,
+      "bytes": 165755111,
+      "inventory_sha256": "954268730f8f2601df32fedb78bd5beb6f8d7cda0bf4491efda5a9b187412775",
+      "unchanged": true
+    },
+    {
+      "root": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build30",
+      "files": 10,
+      "bytes": 15356522,
+      "inventory_sha256": "a018be43fedaa9e8e510d20f2cb67e406435c8f4b5e88e3585653275325d4138",
+      "unchanged": true
+    },
+    {
+      "root": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31d",
+      "files": 10,
+      "bytes": 15608714,
+      "inventory_sha256": "01a3c87ecdfe7602a28e59e366d967b7f58fa2b5971d1f6e25922af24011b18a",
+      "unchanged": true
+    }
+  ],
+  "failed_gate_receipts_preserved": true,
+  "complete_preview_manifest_sha256": "18cbb75144560fbacbe20708b0b3a63a95577d85490a814cc4dece4d770d9590",
+  "free_before": 102123524096,
+  "free_after": 102305079296,
+  "errors": [],
+  "limits": "Only the duplicate Desktop candidate and failed harness31/31b/31c output trees were removed. Complete previews167/168/169 and harness30/31d were verified unchanged. Repository bin/obj, source, caches, shared tools, originals and personal files are outside all deletion roots."
+}

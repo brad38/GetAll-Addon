@@ -1,0 +1,3425 @@
+{
+  "status": "PASS",
+  "qualification": "Authored/public instruction proof; no commercial shaders or game boot.",
+  "cases": 482,
+  "authored": 242,
+  "public": 240,
+  "input_sha256": "84c144623264998614d8d02a9dd671c5da70eb66c7ec6ee444ae66d8b667241b",
+  "counts": {
+    "decoded": 293,
+    "GLSL_GENERATED": 285,
+    "ADAPTER_REJECTED": 189,
+    "CONSUMER_REJECTED": 8,
+    "negative_boundary_pass": 3
+  },
+  "decoded_by_opcode": {
+    "TEX": 57,
+    "TLD": 52,
+    "TLD4": 38,
+    "TMML": 26,
+    "TXQ": 22,
+    "SULD": 23,
+    "SUST": 23,
+    "SUATOM": 26,
+    "SURED": 26
+  },
+  "cli_rejected": 0,
+  "binary_fixture_retained": false,
+  "representative_glsl_files": 9,
+  "spirv_validation": "separate native compiler receipt required",
+  "source_pins": {
+    "mesa_sha256": "cd45b5d3690316da9b991a5e5919c68833ab54ea04575c9f14cab41ea6784cd0",
+    "nvdisasm_sha256": "250ebe97dd86617574a30daf8d8ee433e6c5d9d10bafff922078779d1ba36073"
+  },
+  "results": [
+    {
+      "case": "base-TEX",
+      "word": "000fc400001e0f062000580c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "194a07981848d724c2c872e011997c30efd94965d1439bf0a696ab125c50f6e3"
+    },
+    {
+      "case": "TEX-12-0",
+      "word": "000fc400001e0f062000580c08040b60",
+      "sass": "@P0 TEX R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "fb27a814bdab0284069fb5aa8974d26bf076ce3923d2fa79feb98e234d9bb26e"
+    },
+    {
+      "case": "TEX-12-1",
+      "word": "000fc400001e0f062000580c08041b60",
+      "sass": "@P1 TEX R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "74e16031eaa02260c7696f0f6be3c6a2d8d6cfdad71d1dbf6a89537f03d58148"
+    },
+    {
+      "case": "TEX-12-6",
+      "word": "000fc400001e0f062000580c08046b60",
+      "sass": "@P6 TEX R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6270186e3be30a780d9df262e5c407ebcfcb845f3014d66c632fe62e35d9fa26"
+    },
+    {
+      "case": "TEX-12-8",
+      "word": "000fc400001e0f062000580c08048b60",
+      "sass": "@!P0 TEX R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e1bbc4ba1386c35014121d470d67f3e0ca55d7e03ec89be025ee59c4631432e0"
+    },
+    {
+      "case": "TEX-12-9",
+      "word": "000fc400001e0f062000580c08049b60",
+      "sass": "@!P1 TEX R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e1e209d2245bf6a5757745a541e879d72efb5795d0419ec1b37a4eb906ab9614"
+    },
+    {
+      "case": "TEX-12-14",
+      "word": "000fc400001e0f062000580c0804eb60",
+      "sass": "@!P6 TEX R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "3f21f1162fa8a7da3be7ab6a557d91044f0905b9b29e05fa1be707779992bc06"
+    },
+    {
+      "case": "TEX-24-0",
+      "word": "000fc400001e0f062000580c00047b60",
+      "sass": "TEX R6, R4, R0, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8fb5105f9bed97eb9f050b09437804e1e0be147d93acea00d9fc1dc817a4f8c3"
+    },
+    {
+      "case": "TEX-24-16",
+      "word": "000fc400001e0f062000580c10047b60",
+      "sass": "TEX R6, R4, R16, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "5a6269a497e549d5f9b7cb2c094ef110ad1102b0849ef7ac3836529cb87deb87"
+    },
+    {
+      "case": "TEX-24-64",
+      "word": "000fc400001e0f062000580c40047b60",
+      "sass": "TEX R6, R4, R64, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e64899a0197386817d6096650669f85ffb05809c134f6ba9e1c891818c3c4023"
+    },
+    {
+      "case": "TEX-24-128",
+      "word": "000fc400001e0f062000580c80047b60",
+      "sass": "TEX R6, R4, R128, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8e611d0a7472b8964f2fddd05c4eaf8a5e84994acf618733d15ada9419805438"
+    },
+    {
+      "case": "TEX-40-0",
+      "word": "000fc400001e0f062000000c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x0, 0x0, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "366b2553813bd680906e9483eee09f0f17d93f626fb7529c95775b472db5b3db"
+    },
+    {
+      "case": "TEX-40-1",
+      "word": "000fc400001e0f062000010c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x0, 0x1, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "7ff74de62e12224c3ea9d11a52d1892eed2f0857555cb722175144bc33db6168"
+    },
+    {
+      "case": "TEX-40-16383",
+      "word": "000fc400001e0f06203fff0c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x0, 0x3fff, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "527dadeeb94b4e73d523f942743fc9cdc0b434ac1ddcf16f8e00033d08f2cb79"
+    },
+    {
+      "case": "TEX-54-1",
+      "word": "000fc400001e0f062040580c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x1, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "7e9f52f7a4969790c44d9dd46ad3852bb41cab023cd47d5efeabbdc3e48d5438"
+    },
+    {
+      "case": "TEX-54-15",
+      "word": "000fc400001e0f0623c0580c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0xf, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "76d02327b4f5d71ea344c3bd4b66653ba7a3146aea9dab147edfe2c71f239e57"
+    },
+    {
+      "case": "TEX-54-31",
+      "word": "000fc400001e0f0627c0580c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x1f, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "51a004f7fdaecec51128c67854945b6e4f84d889d1f3a70670feb6bda567f296"
+    },
+    {
+      "case": "TEX-61-0",
+      "word": "000fc400001e0f060000580c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x0, 0x58, 1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "0e2ccc9922878f0657dd322a962f9f2f43347c0dc337ab64aa9fa7326505d601"
+    },
+    {
+      "case": "TEX-61-2",
+      "word": "000fc400001e0f064000580c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x0, 0x58, 3D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "21fff4bcbf1eb9c46d1326cd0304fba1f63ba265de832488b7f1acc4b337529a"
+    },
+    {
+      "case": "TEX-61-3",
+      "word": "000fc400001e0f066000580c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x0, 0x58, CUBE",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "006853828829ed0f1aeb4c64735d41728dc1fed340eda948bef057ee98b8247c"
+    },
+    {
+      "case": "TEX-61-4",
+      "word": "000fc400001e0f068000580c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x0, 0x58, ARRAY_1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1d352abfb58d92a42c148024101106f5a0b3551b7cde7110dfac4b1372bf4caa"
+    },
+    {
+      "case": "TEX-61-5",
+      "word": "000fc400001e0f06a000580c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x0, 0x58, ARRAY_2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "37ce6233a8792aa412881c3f6bafac7a2786e35a6866e66bf6416be17026a5b7"
+    },
+    {
+      "case": "TEX-61-7",
+      "word": "000fc400001e0f06e000580c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x0, 0x58, ARRAY_CUBE",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "00e377242f24fcbbff3ef75c8fa7ee6f768173709a19ba6a410060935a2adda2"
+    },
+    {
+      "case": "TEX-72-1",
+      "word": "000fc400001e01062000580c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x0, 0x58, 2D, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "b3099044236dafbea3d30373ca782c5ea44aa072c20e6003205a477b66a8b550"
+    },
+    {
+      "case": "TEX-72-3",
+      "word": "000fc400001e03062000580c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x0, 0x58, 2D, 0x3",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "a0da2726e9c7d7e001555d92f3e8b5a682c46ac671babbf27cc9540d6f5ee856"
+    },
+    {
+      "case": "TEX-72-5",
+      "word": "000fc400001e05062000580c08047b60",
+      "sass": "TEX R6, R4, R8, R12, 0x0, 0x58, 2D, 0x5",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e49f7eae63322b7edf68f046b7c44dad858338ec0d2296eaa148c2b40c44d2bf"
+    },
+    {
+      "case": "TEX-87-1",
+      "word": "000fc400009e0f062000580c08047b60",
+      "sass": "TEX.LZ R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1a3ea67b440626eb433f76bb2e1d7a252e03b691ad8964ba9259b57e44ea0eaf"
+    },
+    {
+      "case": "TEX-87-2",
+      "word": "000fc400011e0f062000580c08047b60",
+      "sass": "TEX.LB R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "adf9b98faf82b025865647754548d9a860049eca97766deae6430d9aed85aca3"
+    },
+    {
+      "case": "TEX-87-3",
+      "word": "000fc400019e0f062000580c08047b60",
+      "sass": "TEX.LL R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "06d7bb38ef03d7feffe0ba988c73ab1a7e86dabaeec3275061bb3eb8704cc0af"
+    },
+    {
+      "case": "TEX-60-1",
+      "word": "000fc400001e0f063000580c08047b60",
+      "sass": "TEX.SCR R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "77597de1a399a7da0cecc081a8ab7f72a005aabeeb94aa7da7ad68649d68ef18"
+    },
+    {
+      "case": "TEX-79-1",
+      "word": "000fc400001e8f062000580c08047b60",
+      "sass": "TEX.F16.RN R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "a67161cd4fac77177e9312baa0e889a6c0fcd47501259fc9435eecd64f16b69a"
+    },
+    {
+      "case": "TEX-half-round-toward-zero",
+      "word": "000fc400001f0f062000580c08047b60",
+      "sass": "TEX.F16.RZ R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: only round-to-nearest half results are translated"
+    },
+    {
+      "case": "TEX-fault-predicate",
+      "word": "000fc40000100f062000580c08047b60",
+      "sass": "TEX P0, R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer cannot produce texture fault predicates"
+    },
+    {
+      "case": "base-TLD",
+      "word": "000fc400009e0f062000580c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "9dba5e02055ff95e612c850ce92cc638ad33a1b61eb7592d7fe58bde5f7bf75a"
+    },
+    {
+      "case": "TLD-12-0",
+      "word": "000fc400009e0f062000580c08040b66",
+      "sass": "@P0 TLD.LZ R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8adb928cd4008719ec1bb427bf8bed17a66a46badbff6e3ed2d52633bae0b035"
+    },
+    {
+      "case": "TLD-12-1",
+      "word": "000fc400009e0f062000580c08041b66",
+      "sass": "@P1 TLD.LZ R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "cbdd9cc57aac9f6f072b5f8921834544f9134689d9559c963179e5aec1939b53"
+    },
+    {
+      "case": "TLD-12-6",
+      "word": "000fc400009e0f062000580c08046b66",
+      "sass": "@P6 TLD.LZ R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "7e77f31191488e6a5f8d5d6798df67f2f79797df85927402a8f09bf3264518b4"
+    },
+    {
+      "case": "TLD-12-8",
+      "word": "000fc400009e0f062000580c08048b66",
+      "sass": "@!P0 TLD.LZ R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "f9b2c33fade50ee1ceb3f0ea27dcc6847d2acc5ac0beafe841ba2bc38b66e8a8"
+    },
+    {
+      "case": "TLD-12-9",
+      "word": "000fc400009e0f062000580c08049b66",
+      "sass": "@!P1 TLD.LZ R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "eac7579f987249a482d38ee49e005984c6f756e7d6fc10eda6ee973fbc5a511a"
+    },
+    {
+      "case": "TLD-12-14",
+      "word": "000fc400009e0f062000580c0804eb66",
+      "sass": "@!P6 TLD.LZ R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "3d8b7510e7726192f0457c49be627b0155bdca51fb4ef8c2b4e65850e3953341"
+    },
+    {
+      "case": "TLD-24-0",
+      "word": "000fc400009e0f062000580c00047b66",
+      "sass": "TLD.LZ R6, R4, R0, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "a749f0f9cd4f3d2039afcca825965e6725b87ad6a3cc155af3044f44086326c8"
+    },
+    {
+      "case": "TLD-24-16",
+      "word": "000fc400009e0f062000580c10047b66",
+      "sass": "TLD.LZ R6, R4, R16, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "9c2dc125e90494bc86ee2bbbd82adf35e532c1763292d925400698943781e2cb"
+    },
+    {
+      "case": "TLD-24-64",
+      "word": "000fc400009e0f062000580c40047b66",
+      "sass": "TLD.LZ R6, R4, R64, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "354744b675b2489fe030e4e45875d2a6d1c4e5e3ed2865e0c9b241449001de24"
+    },
+    {
+      "case": "TLD-24-128",
+      "word": "000fc400009e0f062000580c80047b66",
+      "sass": "TLD.LZ R6, R4, R128, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1843e8a8fae473a153107a257a0d193e678df25ae561a86d1f4d5aa527c7e47c"
+    },
+    {
+      "case": "TLD-40-0",
+      "word": "000fc400009e0f062000000c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x0, 0x0, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6c88b25762993ee6cbcda10e09c96edc794ec1a9bbf3eee38b28521c564ae385"
+    },
+    {
+      "case": "TLD-40-1",
+      "word": "000fc400009e0f062000010c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x0, 0x1, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "5b25c18e34c3427d73a69a990513db8f47eef5443bf79cb07f4864f0947de339"
+    },
+    {
+      "case": "TLD-40-16383",
+      "word": "000fc400009e0f06203fff0c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x0, 0x3fff, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "9d20e098ea4752d0cc19f0a6bb4971d4814cc730fae2f79cfdf837c129e8a299"
+    },
+    {
+      "case": "TLD-54-1",
+      "word": "000fc400009e0f062040580c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x1, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "511122a5d40d73b5086434a0973dddfe279f3cf0f25d4b250977ccba6da31b75"
+    },
+    {
+      "case": "TLD-54-15",
+      "word": "000fc400009e0f0623c0580c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0xf, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "b5d0711a74229f9bdc0b5f60022c794190cb1015e4b3bb8a51798e6cd9cd2974"
+    },
+    {
+      "case": "TLD-54-31",
+      "word": "000fc400009e0f0627c0580c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x1f, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "154528a9ca12711365d6020ade6ce77bd97d98b6b3c9e4584fae9911a7fe6364"
+    },
+    {
+      "case": "TLD-61-0",
+      "word": "000fc400009e0f060000580c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x0, 0x58, 1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e4d57c1a1c9200e7d0c18d2c235d9f99651d0c45c49bc8e63515752e408e7f8d"
+    },
+    {
+      "case": "TLD-61-2",
+      "word": "000fc400009e0f064000580c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x0, 0x58, 3D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "62d156a8f15e30036db29fcee7169fbbaad21ca009d8da8cd547c01e070455de"
+    },
+    {
+      "case": "TLD-61-3",
+      "word": "000fc400009e0f066000580c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x0, 0x58, INVALID3",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: unknown dimension operand {'type': 'RegOperand', 'reg_type': 'SNOWFLAKE', 'ident': 'INVALID3', 'modifiers': []}"
+    },
+    {
+      "case": "TLD-61-4",
+      "word": "000fc400009e0f068000580c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x0, 0x58, ARRAY_1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "391039b1c6236892dab6657d04529a2289f4cb3966a70005f8a1b253f75fbe55"
+    },
+    {
+      "case": "TLD-61-5",
+      "word": "000fc400009e0f06a000580c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x0, 0x58, ARRAY_2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "9f584dd853e76c6ba4ba6a62c0e4f6a459e08ca728e2d54e09a81d56654b4ff2"
+    },
+    {
+      "case": "TLD-61-7",
+      "word": "000fc400009e0f06e000580c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x0, 0x58, INVALID7",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: unknown dimension operand {'type': 'RegOperand', 'reg_type': 'SNOWFLAKE', 'ident': 'INVALID7', 'modifiers': []}"
+    },
+    {
+      "case": "TLD-72-1",
+      "word": "000fc400009e01062000580c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x0, 0x58, 2D, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "9928efe11777352fa48e81fffcdeb34320f6c04940ce759dc87e94a7c1221e1d"
+    },
+    {
+      "case": "TLD-72-3",
+      "word": "000fc400009e03062000580c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x0, 0x58, 2D, 0x3",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "fa039d4857af87e03719fc8e203cdb7eef73a86e608943bd90d8423a456cc517"
+    },
+    {
+      "case": "TLD-72-5",
+      "word": "000fc400009e05062000580c08047b66",
+      "sass": "TLD.LZ R6, R4, R8, R12, 0x0, 0x58, 2D, 0x5",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1912bea3b308bd28470a108e7629b6ed75ad18a58072d981a9d468bb537b49bd"
+    },
+    {
+      "case": "TLD-87-3",
+      "word": "000fc400019e0f062000580c08047b66",
+      "sass": "TLD.LL R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "b55b00bebc03be1888e16d72a0b815b6b63d3036f865e7d3ac6601ae1161f34e"
+    },
+    {
+      "case": "TLD-60-1",
+      "word": "000fc400009e0f063000580c08047b66",
+      "sass": "TLD.SCR.LZ R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "a75222373bab288e030d9a30fdde25c528156e7a8662db426f1051ed17e1eacb"
+    },
+    {
+      "case": "TLD-79-1",
+      "word": "000fc400009e8f062000580c08047b66",
+      "sass": "TLD.F16.RN.LZ R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "c8ffeebbeb0d7d9af87c7ba59d25358f4ff6e633691254210036fd01796e580d"
+    },
+    {
+      "case": "TLD-78-1",
+      "word": "000fc400009e4f062000580c08047b66",
+      "sass": "TLD.LZ.MS R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "371a4a07d8d8a9588c197db8e9e9ee520850691c79682fae48c3f798cf534304"
+    },
+    {
+      "case": "TLD-half-round-toward-zero",
+      "word": "000fc400009f0f062000580c08047b66",
+      "sass": "TLD.F16.RZ.LZ R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: only round-to-nearest half results are translated"
+    },
+    {
+      "case": "TLD-fault-predicate",
+      "word": "000fc40000900f062000580c08047b66",
+      "sass": "TLD.LZ P0, R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer cannot produce texture fault predicates"
+    },
+    {
+      "case": "base-TLD4",
+      "word": "000fc400001e0f062000580c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8151984e52b21126f344b31ab762a79663897617914624735b901ea0d4bc1d43"
+    },
+    {
+      "case": "TLD4-12-0",
+      "word": "000fc400001e0f062000580c08040b63",
+      "sass": "@P0 TLD4.R R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "133b4a159cb1079c6c70554edc11a6e4d23b312c5da5cabfff0422afaee4fb15"
+    },
+    {
+      "case": "TLD4-12-1",
+      "word": "000fc400001e0f062000580c08041b63",
+      "sass": "@P1 TLD4.R R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6f27bc649edb1f9af262afbcbcbd81add1453d055a86b73783639f149abb14f7"
+    },
+    {
+      "case": "TLD4-12-6",
+      "word": "000fc400001e0f062000580c08046b63",
+      "sass": "@P6 TLD4.R R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "87ed73500a819e6ae33502d197ab92265ac4457e1e33ef2849fcf7b0372598e9"
+    },
+    {
+      "case": "TLD4-12-8",
+      "word": "000fc400001e0f062000580c08048b63",
+      "sass": "@!P0 TLD4.R R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1317fa3bfcc448c2729881c843188cdfce6d6b856e6b52ccf364809392e95778"
+    },
+    {
+      "case": "TLD4-12-9",
+      "word": "000fc400001e0f062000580c08049b63",
+      "sass": "@!P1 TLD4.R R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "2491e8c298fc284490c806f7a771b96fe2d71b5a8967bff70beff34e1ef967b0"
+    },
+    {
+      "case": "TLD4-12-14",
+      "word": "000fc400001e0f062000580c0804eb63",
+      "sass": "@!P6 TLD4.R R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "bb61b2d5f9b64f9190043e4a8e5f5b5aa1d0aee1e3b5ee8fa589ca0eaa08d259"
+    },
+    {
+      "case": "TLD4-24-0",
+      "word": "000fc400001e0f062000580c00047b63",
+      "sass": "TLD4.R R6, R4, R0, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "fde66e07aed89362779b945e0a2947a39095c0561bd751b2091e4e43212b11b4"
+    },
+    {
+      "case": "TLD4-24-16",
+      "word": "000fc400001e0f062000580c10047b63",
+      "sass": "TLD4.R R6, R4, R16, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "ab882b4f576630080ce27d5a088222b5d3f110af0b88af4d74c0d0c4337b25b6"
+    },
+    {
+      "case": "TLD4-24-64",
+      "word": "000fc400001e0f062000580c40047b63",
+      "sass": "TLD4.R R6, R4, R64, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8e60c0519ee4e75a56f4aef0440ef8d76b8bec24cba3c719b595e7a00ff0c1a5"
+    },
+    {
+      "case": "TLD4-24-128",
+      "word": "000fc400001e0f062000580c80047b63",
+      "sass": "TLD4.R R6, R4, R128, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6a6ce0e555ee5e1cf89e0b05c262de4591cb0a930696b22313bd8719d9d26288"
+    },
+    {
+      "case": "TLD4-40-0",
+      "word": "000fc400001e0f062000000c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x0, 0x0, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "4001c101a8efbd7c82d6253eab5a5c1f18b838ab04b60b9eb3b37b3ab54bd250"
+    },
+    {
+      "case": "TLD4-40-1",
+      "word": "000fc400001e0f062000010c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x0, 0x1, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6f9b11e0417086cf461714a85a3a80388288138e089d967ae781ed97cfee7f76"
+    },
+    {
+      "case": "TLD4-40-16383",
+      "word": "000fc400001e0f06203fff0c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x0, 0x3fff, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "41b2fae7899da5fbb3673d823db75a97802b3bde9b096def887889e1b02e18a0"
+    },
+    {
+      "case": "TLD4-54-1",
+      "word": "000fc400001e0f062040580c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x1, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1b3a8625da68c3608321555d5d57213c9738fcda4de68bfc161ffe96adf992cb"
+    },
+    {
+      "case": "TLD4-54-15",
+      "word": "000fc400001e0f0623c0580c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0xf, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "dff370d4e4112ed722c15bbc4d49979f642747e8508dc8017d08cad49f266ecf"
+    },
+    {
+      "case": "TLD4-54-31",
+      "word": "000fc400001e0f0627c0580c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x1f, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "b0b3b792e28d1c361848d8583e16d8e28bf9afc2d32da1b7972b61021a0c3179"
+    },
+    {
+      "case": "TLD4-61-0",
+      "word": "000fc400001e0f060000580c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x0, 0x58, INVALID0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: unknown dimension operand {'type': 'RegOperand', 'reg_type': 'SNOWFLAKE', 'ident': 'INVALID0', 'modifiers': []}"
+    },
+    {
+      "case": "TLD4-61-2",
+      "word": "000fc400001e0f064000580c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x0, 0x58, INVALID2",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: unknown dimension operand {'type': 'RegOperand', 'reg_type': 'SNOWFLAKE', 'ident': 'INVALID2', 'modifiers': []}"
+    },
+    {
+      "case": "TLD4-61-3",
+      "word": "000fc400001e0f066000580c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x0, 0x58, CUBE",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1c168a72556b156809958e6bc67cf59fe25582571c681296e8a253ad1c357229"
+    },
+    {
+      "case": "TLD4-61-4",
+      "word": "000fc400001e0f068000580c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x0, 0x58, INVALID4",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: unknown dimension operand {'type': 'RegOperand', 'reg_type': 'SNOWFLAKE', 'ident': 'INVALID4', 'modifiers': []}"
+    },
+    {
+      "case": "TLD4-61-5",
+      "word": "000fc400001e0f06a000580c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x0, 0x58, ARRAY_2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "2300a51ce0d29728ed1554c415402b9bac15ab7d15cec7beed5ce7128123173e"
+    },
+    {
+      "case": "TLD4-61-7",
+      "word": "000fc400001e0f06e000580c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x0, 0x58, ARRAY_CUBE",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "346cc239f9ff01e72e5126ce0ccc7118b7f3492dc142f42ab09b14d8c8a8b86e"
+    },
+    {
+      "case": "TLD4-72-1",
+      "word": "000fc400001e01062000580c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x0, 0x58, 2D, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "81947a5dfaa11fe0c1458aad8d6b186b240e6e1b085a46f55bc1759f71761901"
+    },
+    {
+      "case": "TLD4-72-3",
+      "word": "000fc400001e03062000580c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x0, 0x58, 2D, 0x3",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "3cbd13ee6d4aa14e5c46a708dca4ae47d541180afc382a955dc3378852417393"
+    },
+    {
+      "case": "TLD4-72-5",
+      "word": "000fc400001e05062000580c08047b63",
+      "sass": "TLD4.R R6, R4, R8, R12, 0x0, 0x58, 2D, 0x5",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "4ea5f0a32ec74ff818ab79e450affb93860144bbb46ce0f6256488b885f4273d"
+    },
+    {
+      "case": "TLD4-87-1",
+      "word": "000fc400009e0f062000580c08047b63",
+      "sass": "TLD4.G R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "2e6e5f4acfb320917d5feb3270724e2df7fedc51ff317bf4f451c8ac0354a6f8"
+    },
+    {
+      "case": "TLD4-87-2",
+      "word": "000fc400011e0f062000580c08047b63",
+      "sass": "TLD4.B R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "b07e384e5227a01405039fd8712c72e11df635bb2c733a1736fd2f1002321c2d"
+    },
+    {
+      "case": "TLD4-87-3",
+      "word": "000fc400019e0f062000580c08047b63",
+      "sass": "TLD4.A R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "19410f67cdc954b25c7448a885a020a744146cac4723937aaf3f7e7173fb1ed1"
+    },
+    {
+      "case": "TLD4-76-1",
+      "word": "000fc400001e1f062000580c08047b63",
+      "sass": "TLD4.R.AOFFI R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "d0f8fb8912f5f850eb0684cd7acf7e50357be743d8a16e21efc39ceca41dd6f6"
+    },
+    {
+      "case": "TLD4-76-2",
+      "word": "000fc400001e2f062000580c08047b63",
+      "sass": "TLD4.R.PTP R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "05945216cc6151b2320de77a5b2482d231fa02d92f688e563e197bf59ddc6b1b"
+    },
+    {
+      "case": "TLD4-79-1",
+      "word": "000fc400001e8f062000580c08047b63",
+      "sass": "TLD4.R.F16.RN R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "c90071a290cec8c17c5dce0b30c01ae30504daabd502986760acf44d25c6b385"
+    },
+    {
+      "case": "TLD4-half-round-toward-zero",
+      "word": "000fc400001f0f062000580c08047b63",
+      "sass": "TLD4.R.F16.RZ R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: only round-to-nearest half results are translated"
+    },
+    {
+      "case": "TLD4-fault-predicate",
+      "word": "000fc40000100f062000580c08047b63",
+      "sass": "TLD4.R P0, R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer cannot produce texture fault predicates"
+    },
+    {
+      "case": "base-TMML",
+      "word": "000fc40000100f062000580c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "76c3b45e80cca3b6b73d9ddc3b9233189100d7a0b3b9676a0b54e1e4c602d82b"
+    },
+    {
+      "case": "TMML-12-0",
+      "word": "000fc40000100f062000580c08040b69",
+      "sass": "@P0 TMML.LOD R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "3d661f0aef5ff3682ee52c782337b34b86577909a8313f2adc3624c0ef34c7c9"
+    },
+    {
+      "case": "TMML-12-1",
+      "word": "000fc40000100f062000580c08041b69",
+      "sass": "@P1 TMML.LOD R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "089a49820dbbdfa0dcbb3f650493d84bac08377ab3cccd83d514fc95ab103cfe"
+    },
+    {
+      "case": "TMML-12-6",
+      "word": "000fc40000100f062000580c08046b69",
+      "sass": "@P6 TMML.LOD R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "2d4b6973b7895a17e605cc639c8295370252563077debcae3b58c19af85fcd95"
+    },
+    {
+      "case": "TMML-12-8",
+      "word": "000fc40000100f062000580c08048b69",
+      "sass": "@!P0 TMML.LOD R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "aa83e14cb19252f6097a507b6116cc3ac0a602b4e8167bdceac22985b84dcb0b"
+    },
+    {
+      "case": "TMML-12-9",
+      "word": "000fc40000100f062000580c08049b69",
+      "sass": "@!P1 TMML.LOD R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "b1df74eb586cf745f436eda8fdc70997cac8e9a57f62e396cd92bdd11e8b53a2"
+    },
+    {
+      "case": "TMML-12-14",
+      "word": "000fc40000100f062000580c0804eb69",
+      "sass": "@!P6 TMML.LOD R6, R4, R8, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "193a3b2df4057fccab86728146308b690656a0fa3991e431e7159b2c170029e2"
+    },
+    {
+      "case": "TMML-24-0",
+      "word": "000fc40000100f062000580c00047b69",
+      "sass": "TMML.LOD R6, R4, R0, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "c57c05b1f4d021ecbbbe8517cf8060a20cf6542c9359e56880ab785ded0c53ca"
+    },
+    {
+      "case": "TMML-24-16",
+      "word": "000fc40000100f062000580c10047b69",
+      "sass": "TMML.LOD R6, R4, R16, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "61a5f349644e817a90da369964a7ac3114d539be454ec85413fab69ba5f5e080"
+    },
+    {
+      "case": "TMML-24-64",
+      "word": "000fc40000100f062000580c40047b69",
+      "sass": "TMML.LOD R6, R4, R64, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1e56385f5feeae9283eeb7bc0f354e4bd11d88a5adcf8b4207907516b9b6d498"
+    },
+    {
+      "case": "TMML-24-128",
+      "word": "000fc40000100f062000580c80047b69",
+      "sass": "TMML.LOD R6, R4, R128, R12, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e1caa1d64e305f3822292273ebc5f558e3dc15376a9731bfa36abee50c31a035"
+    },
+    {
+      "case": "TMML-40-0",
+      "word": "000fc40000100f062000000c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x0, 0x0, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "cb8dfeb7e478c499aaef156fba3b0ba8b0fac0586932df8de2e9f914428f2cbc"
+    },
+    {
+      "case": "TMML-40-1",
+      "word": "000fc40000100f062000010c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x0, 0x1, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "bcd87b305ca8721032d007bb107ccbe559fae4c94e71ce234b08470d889705ab"
+    },
+    {
+      "case": "TMML-40-16383",
+      "word": "000fc40000100f06203fff0c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x0, 0x3fff, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "023b30957a8ac5d20aee9c3a2ddd9204b000324a7c8d468b134eca48b11b3f74"
+    },
+    {
+      "case": "TMML-54-1",
+      "word": "000fc40000100f062040580c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x1, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "58e2686f81f1e6746dfd660275c4e054d56e899d37db5ff9c9b2d1d1462d554e"
+    },
+    {
+      "case": "TMML-54-15",
+      "word": "000fc40000100f0623c0580c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0xf, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6a61ac376bbe683ae4e2166d05d62c7eb55276bbb74313f7d44331c779cc8e6c"
+    },
+    {
+      "case": "TMML-54-31",
+      "word": "000fc40000100f0627c0580c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x1f, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8f43c9d239921d3ba418f726810b1e2f907684e188964ea40ca6c1eeabb9fdf0"
+    },
+    {
+      "case": "TMML-61-0",
+      "word": "000fc40000100f060000580c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x0, 0x58, 1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "dff34e2a9915234bd6737f9c1ee0a118c2a25b1bd29d6b4cc977e29b438fea2a"
+    },
+    {
+      "case": "TMML-61-2",
+      "word": "000fc40000100f064000580c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x0, 0x58, 3D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "db47306215d7a25fe6cf0aef3e57bc227bc2f35666a3f082e433b1fa5e5de861"
+    },
+    {
+      "case": "TMML-61-3",
+      "word": "000fc40000100f066000580c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x0, 0x58, CUBE",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "fb654b168843587d3cd1f0a3d20285645a49895f3da83594ac11a2285cf1b5e2"
+    },
+    {
+      "case": "TMML-61-4",
+      "word": "000fc40000100f068000580c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x0, 0x58, ARRAY_1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "082eb28ae0a8bde6d1eec97f0f81b244436ee820e4790219d8551cd2848dd117"
+    },
+    {
+      "case": "TMML-61-5",
+      "word": "000fc40000100f06a000580c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x0, 0x58, ARRAY_2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "141560a5f94342b329e62afe0a2a4cd65a0cfb465e1c06e4d444c40590ab5641"
+    },
+    {
+      "case": "TMML-61-7",
+      "word": "000fc40000100f06e000580c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x0, 0x58, ARRAY_CUBE",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "c018c56b3acee2a2bc90b8903432d6bc70b13e4c9eff23c6c968182ba2a24244"
+    },
+    {
+      "case": "TMML-72-1",
+      "word": "000fc400001001062000580c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x0, 0x58, 2D, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "53b456811aef31aae7dcfe0d1f6aec6213a8583d485e7366cb9a1f0625d245a4"
+    },
+    {
+      "case": "TMML-72-3",
+      "word": "000fc400001003062000580c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x0, 0x58, 2D, 0x3",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "ff44868b5858eb58c0ab6f5884cfb93e4dcdaa92668fa9af23e9af189a4d4921"
+    },
+    {
+      "case": "TMML-72-5",
+      "word": "000fc400001005062000580c08047b69",
+      "sass": "TMML.LOD R6, R4, R8, R12, 0x0, 0x58, 2D, 0x5",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "a7a0dd8e0a67b53b03a70cf8d037a0573efacf7a5cf490cafae68b462b07fa62"
+    },
+    {
+      "case": "base-TXQ",
+      "word": "000fc40000000f060000580008047b6f",
+      "sass": "TXQ R6, R4, R8, TEX_HEADER_DIMENSION, 0x0, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6afd73dc9dd62b0e659f2dfc76ad0ac17125fb4538b3e6269028dfa8607e1414"
+    },
+    {
+      "case": "TXQ-12-0",
+      "word": "000fc40000000f060000580008040b6f",
+      "sass": "@P0 TXQ R6, R4, R8, TEX_HEADER_DIMENSION, 0x0, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "a93bb81a81c58766497e2a1f2c495a1787d5cb8edb4e7fa193ef87ca9b43f05a"
+    },
+    {
+      "case": "TXQ-12-1",
+      "word": "000fc40000000f060000580008041b6f",
+      "sass": "@P1 TXQ R6, R4, R8, TEX_HEADER_DIMENSION, 0x0, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "36fce8ad13fe9c435560f514dd89cb43b212bce055568d7ff4484c7e686b461f"
+    },
+    {
+      "case": "TXQ-12-6",
+      "word": "000fc40000000f060000580008046b6f",
+      "sass": "@P6 TXQ R6, R4, R8, TEX_HEADER_DIMENSION, 0x0, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "660d5c9d7975b352359966fe1278dc52fe01ceac26ab6dfb868e8f68dc3c4b73"
+    },
+    {
+      "case": "TXQ-12-8",
+      "word": "000fc40000000f060000580008048b6f",
+      "sass": "@!P0 TXQ R6, R4, R8, TEX_HEADER_DIMENSION, 0x0, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "55e5ed9cc2d6ed93a1ba1b69c6f21e757d65d31686a77eac1ee74a3bec343d04"
+    },
+    {
+      "case": "TXQ-12-9",
+      "word": "000fc40000000f060000580008049b6f",
+      "sass": "@!P1 TXQ R6, R4, R8, TEX_HEADER_DIMENSION, 0x0, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "59a74b12d61633d24981eaf1781681dc04722cd0010b384bb453f62f7bada9b3"
+    },
+    {
+      "case": "TXQ-12-14",
+      "word": "000fc40000000f06000058000804eb6f",
+      "sass": "@!P6 TXQ R6, R4, R8, TEX_HEADER_DIMENSION, 0x0, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "d5e64f72838c3c981392a2b0f5fcfa9fcd91dcd9bff21eac4cfcee7c1daf928b"
+    },
+    {
+      "case": "TXQ-24-0",
+      "word": "000fc40000000f060000580000047b6f",
+      "sass": "TXQ R6, R4, R0, TEX_HEADER_DIMENSION, 0x0, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "753fc2b83a9b7f613c293f97aed4e2c044cdfdf701f8364dbe4c9ca35b60854c"
+    },
+    {
+      "case": "TXQ-24-16",
+      "word": "000fc40000000f060000580010047b6f",
+      "sass": "TXQ R6, R4, R16, TEX_HEADER_DIMENSION, 0x0, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "433b424bb7b0e7d3aaa4bc895edbea31228939e328f0847d74d417de5cc73a23"
+    },
+    {
+      "case": "TXQ-24-64",
+      "word": "000fc40000000f060000580040047b6f",
+      "sass": "TXQ R6, R4, R64, TEX_HEADER_DIMENSION, 0x0, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "9914c980ab291229c65963aa7af10ec4779c6ac521dee6efb348a8519fa5fe63"
+    },
+    {
+      "case": "TXQ-24-128",
+      "word": "000fc40000000f060000580080047b6f",
+      "sass": "TXQ R6, R4, R128, TEX_HEADER_DIMENSION, 0x0, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "c6271f8e5e00639f4c2e7eda05152dc8d5fe0ca1c953c347764761cb8b5990b8"
+    },
+    {
+      "case": "TXQ-40-0",
+      "word": "000fc40000000f060000000008047b6f",
+      "sass": "TXQ R6, R4, R8, TEX_HEADER_DIMENSION, 0x0, 0x0, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8c1e85c843eb3c6523d73a8dc2f1380445a2256a416976bad9c0fa691a7e328f"
+    },
+    {
+      "case": "TXQ-40-1",
+      "word": "000fc40000000f060000010008047b6f",
+      "sass": "TXQ R6, R4, R8, TEX_HEADER_DIMENSION, 0x0, 0x1, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "2a2c98f41c3e59977e39eb55f8814924ea77b186a4c4876854b465047c863f93"
+    },
+    {
+      "case": "TXQ-40-16383",
+      "word": "000fc40000000f06003fff0008047b6f",
+      "sass": "TXQ R6, R4, R8, TEX_HEADER_DIMENSION, 0x0, 0x3fff, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "ef91efaff0b3d1a7aa76860631dc2fb52f92665d5abc896f3f0b143732f153fe"
+    },
+    {
+      "case": "TXQ-54-1",
+      "word": "000fc40000000f060040580008047b6f",
+      "sass": "TXQ R6, R4, R8, TEX_HEADER_DIMENSION, 0x1, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "9b4770566cae34a4839569a4ea4777beb19a530415462248804baacc3a833d55"
+    },
+    {
+      "case": "TXQ-54-15",
+      "word": "000fc40000000f0603c0580008047b6f",
+      "sass": "TXQ R6, R4, R8, TEX_HEADER_DIMENSION, 0xf, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "a159bd7a4d98ffc81cec81f4a89e9d52680e3c8a411a0c0f6e0de0f8b9ba4ebf"
+    },
+    {
+      "case": "TXQ-54-31",
+      "word": "000fc40000000f0607c0580008047b6f",
+      "sass": "TXQ R6, R4, R8, TEX_HEADER_DIMENSION, 0x1f, 0x58, 0xf",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "5a1dc304ba2b5a9ffeda562c27876aef2b2404b9a68568c3174aeef4534936c5"
+    },
+    {
+      "case": "base-SULD",
+      "word": "000fc400001e0f066000580c08047b97",
+      "sass": "SULD.P.2D.IGN R4, [R8], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "a6fc80e667df04638a286eaced2d8b4007395c8f1386d168f6a52bf4be065c1d"
+    },
+    {
+      "case": "SULD-12-0",
+      "word": "000fc400001e0f066000580c08040b97",
+      "sass": "@P0 SULD.P.2D.IGN R4, [R8], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6dea1583a690531a2dc5b10d8cee5d9db123aa195323aaddab1d832c743bc687"
+    },
+    {
+      "case": "SULD-12-1",
+      "word": "000fc400001e0f066000580c08041b97",
+      "sass": "@P1 SULD.P.2D.IGN R4, [R8], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "d96720f463f7c0e800f4f360d4c326c093ee17ddcc752eb000c3fdbbe97b041e"
+    },
+    {
+      "case": "SULD-12-6",
+      "word": "000fc400001e0f066000580c08046b97",
+      "sass": "@P6 SULD.P.2D.IGN R4, [R8], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "c0c3cbb2c4a4a726fbcf2c748db36ee0fe390c7925c16554b732a021d56a911a"
+    },
+    {
+      "case": "SULD-12-8",
+      "word": "000fc400001e0f066000580c08048b97",
+      "sass": "@!P0 SULD.P.2D.IGN R4, [R8], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "ec9b75d7b22e2d54862c804272c00ee57ccf45a8dbfba3c7f4ac15b5c7153f81"
+    },
+    {
+      "case": "SULD-12-9",
+      "word": "000fc400001e0f066000580c08049b97",
+      "sass": "@!P1 SULD.P.2D.IGN R4, [R8], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "fc126adb04bfd1aeefeb6b1fa8219f1a870af86fd356f3c185815c5a35193c60"
+    },
+    {
+      "case": "SULD-12-14",
+      "word": "000fc400001e0f066000580c0804eb97",
+      "sass": "@!P6 SULD.P.2D.IGN R4, [R8], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "d9c234a7837b05266084122702cb6a75f15418b8b1c6c65a38fc1231209b44d6"
+    },
+    {
+      "case": "SULD-24-0",
+      "word": "000fc400001e0f066000580c00047b97",
+      "sass": "SULD.P.2D.IGN R4, [R0], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "a72f010a0a3c11dbef9ed88940039442f36912bd58ab7d796aed8d7de35ef141"
+    },
+    {
+      "case": "SULD-24-16",
+      "word": "000fc400001e0f066000580c10047b97",
+      "sass": "SULD.P.2D.IGN R4, [R16], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "408159d24d9c8da7d08a05e6ae4383a50b6e79c4aeaa83c7ab3e25de23f82b95"
+    },
+    {
+      "case": "SULD-24-64",
+      "word": "000fc400001e0f066000580c40047b97",
+      "sass": "SULD.P.2D.IGN R4, [R64], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "a8a56257840a07f44ebadc2bc260eaad9d7941a4578568638637afea97a06722"
+    },
+    {
+      "case": "SULD-24-128",
+      "word": "000fc400001e0f066000580c80047b97",
+      "sass": "SULD.P.2D.IGN R4, [R128], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "9265df61dd4d7094d5bf50da014e4be79f8d85108aca235f36f8f1435edb1dec"
+    },
+    {
+      "case": "SULD-40-0",
+      "word": "000fc400001e0f066000000c08047b97",
+      "sass": "SULD.P.2D.IGN R4, [R8], 0x0, 0x0",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "119aeb4f8e42eb19bc2f8ea54c5b367aa9db6e08308d72b32637ef504e5dfa82"
+    },
+    {
+      "case": "SULD-40-1",
+      "word": "000fc400001e0f066000010c08047b97",
+      "sass": "SULD.P.2D.IGN R4, [R8], 0x0, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "3fb0755aa52ec221bcf395ce2ebf35385bb10aaa257c5360f184caa5707e5e0e"
+    },
+    {
+      "case": "SULD-40-16383",
+      "word": "000fc400001e0f06603fff0c08047b97",
+      "sass": "SULD.P.2D.IGN R4, [R8], 0x0, 0x3fff",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "90b2f3d2091c6e49d04e8aceb7ed38fb2bacceca89391063a8b43343f3371ecc"
+    },
+    {
+      "case": "SULD-54-1",
+      "word": "000fc400001e0f066040580c08047b97",
+      "sass": "SULD.P.2D.IGN R4, [R8], 0x1, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "cc10966c818233ddb218197adb19aa091e279e5b6ff8e609d64424a079a85a32"
+    },
+    {
+      "case": "SULD-54-15",
+      "word": "000fc400001e0f0663c0580c08047b97",
+      "sass": "SULD.P.2D.IGN R4, [R8], 0xf, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "c2b95fa930acf4278e808b3d7626db349aacbc04b13d1de2b3c932d36c5a0fa1"
+    },
+    {
+      "case": "SULD-54-31",
+      "word": "000fc400001e0f0667c0580c08047b97",
+      "sass": "SULD.P.2D.IGN R4, [R8], 0x1f, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "a2569ba322aae278335f601c6876985a36fd82262023fb95d55a491506e76c09"
+    },
+    {
+      "case": "SULD-61-0",
+      "word": "000fc400001e0f060000580c08047b97",
+      "sass": "SULD.P.1D.IGN R4, [R8], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "80fddc4660929c2eb2a2a368789ca4c38270f168fe9b8de481bbba5b7de4243d"
+    },
+    {
+      "case": "SULD-61-2",
+      "word": "000fc400001e0f064000580c08047b97",
+      "sass": "SULD.P.1D_ARRAY.IGN R4, [R8], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "c3bc00afdc8a4ca2f1a8fb851e8020cc3cfc2dbb69e5dff277e60db3a1d9c89b"
+    },
+    {
+      "case": "SULD-61-4",
+      "word": "000fc400001e0f068000580c08047b97",
+      "sass": "SULD.P.2D_ARRAY.IGN R4, [R8], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "523dd2679b17b40339f668837738e152870bb136bd92622c4a58665317131e0c"
+    },
+    {
+      "case": "SULD-61-5",
+      "word": "000fc400001e0f06a000580c08047b97",
+      "sass": "SULD.P.3D.IGN R4, [R8], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8ea61e3cc921ec665d07bddc7749612f57903e14ce7057cea1d8b3b6d4aaa62c"
+    },
+    {
+      "case": "SULD-72-1",
+      "word": "000fc400001e01066000580c08047b97",
+      "sass": "SULD.P.2D.R.IGN R4, [R8], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e7e343d0276c7507a81db53677bace0511fdca36a7fc2b2cce0e10a00b2f2835"
+    },
+    {
+      "case": "SULD-72-3",
+      "word": "000fc400001e03066000580c08047b97",
+      "sass": "SULD.P.2D.RG.IGN R4, [R8], 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "599717ac33e522c691e3daa46afd8917b4ef0c097b926ff6d2a158ddab65907b"
+    },
+    {
+      "case": "SULD-fault-predicate",
+      "word": "000fc40000100f066000580c08047b97",
+      "sass": "SULD.P.2D.IGN P0, R4, [R8], 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer cannot produce texture fault predicates"
+    },
+    {
+      "case": "base-SUST",
+      "word": "000fc400001e0f066000580c08047b9b",
+      "sass": "SUST.P.2D.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "c723e657258f17d250d2651673b9559a84f77ef31399bfc792af7bb8eaee468b"
+    },
+    {
+      "case": "SUST-12-0",
+      "word": "000fc400001e0f066000580c08040b9b",
+      "sass": "@P0 SUST.P.2D.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "fc447666485c1a42fce4c6b7608f88d402ab734e7dc36e6979ce835b536c6c73"
+    },
+    {
+      "case": "SUST-12-1",
+      "word": "000fc400001e0f066000580c08041b9b",
+      "sass": "@P1 SUST.P.2D.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "495c46bc22215a01b3925873c4f196bc8204b01ac8490d9d8070ecb7053939e2"
+    },
+    {
+      "case": "SUST-12-6",
+      "word": "000fc400001e0f066000580c08046b9b",
+      "sass": "@P6 SUST.P.2D.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "b55f51df162fd1c0a0f3f4e7b92de8ea6ce4c42c4a44862b36a0a12590dcc2fd"
+    },
+    {
+      "case": "SUST-12-8",
+      "word": "000fc400001e0f066000580c08048b9b",
+      "sass": "@!P0 SUST.P.2D.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "d6bbc694c85495c5fb9d9de957ecac8acd8762c23775fa53942216f18781fbb3"
+    },
+    {
+      "case": "SUST-12-9",
+      "word": "000fc400001e0f066000580c08049b9b",
+      "sass": "@!P1 SUST.P.2D.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "209be209285fe6f489aeab19d2c6cddf9bc36a6f7fe874acd38d0d673b730931"
+    },
+    {
+      "case": "SUST-12-14",
+      "word": "000fc400001e0f066000580c0804eb9b",
+      "sass": "@!P6 SUST.P.2D.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e5b99fb646c8bd26211d279a66b79cdb26311aa45cf83d067c3e5f29e0abf4e7"
+    },
+    {
+      "case": "SUST-24-0",
+      "word": "000fc400001e0f066000580c00047b9b",
+      "sass": "SUST.P.2D.IGN [R0], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "841cd351409375f6831c9be9b321a1210af0c3abdd5961f9bdcbceab4931c132"
+    },
+    {
+      "case": "SUST-24-16",
+      "word": "000fc400001e0f066000580c10047b9b",
+      "sass": "SUST.P.2D.IGN [R16], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e658e9dd029d19b0e5c5e0972231cb79bf70607d815725b0907e102980999881"
+    },
+    {
+      "case": "SUST-24-64",
+      "word": "000fc400001e0f066000580c40047b9b",
+      "sass": "SUST.P.2D.IGN [R64], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "51b12511612ff1c80a41243edb0096a0211f821177bf420e95bb9de853ce9714"
+    },
+    {
+      "case": "SUST-24-128",
+      "word": "000fc400001e0f066000580c80047b9b",
+      "sass": "SUST.P.2D.IGN [R128], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8220a551981e315d26835a832a7fd0769c3ca2e5f24fdad27237899137f75de7"
+    },
+    {
+      "case": "SUST-40-0",
+      "word": "000fc400001e0f066000000c08047b9b",
+      "sass": "SUST.P.2D.IGN [R8], R12, 0x0, 0x0",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6e45af74a614c4b41345968d6bce8fedc3fc9b05ffa930a307aeb2d3c75b1cb8"
+    },
+    {
+      "case": "SUST-40-1",
+      "word": "000fc400001e0f066000010c08047b9b",
+      "sass": "SUST.P.2D.IGN [R8], R12, 0x0, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e52dc1cdf8b71cfb137174bcbf65b7710f414a59eb6d0b99acfdd9c87f5a35e6"
+    },
+    {
+      "case": "SUST-40-16383",
+      "word": "000fc400001e0f06603fff0c08047b9b",
+      "sass": "SUST.P.2D.IGN [R8], R12, 0x0, 0x3fff",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "7e989957acfd252f9e21d8c9f5fda8b5a463e72dadba0c59c3e672f016bcc865"
+    },
+    {
+      "case": "SUST-54-1",
+      "word": "000fc400001e0f066040580c08047b9b",
+      "sass": "SUST.P.2D.IGN [R8], R12, 0x1, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1ac1fce114f978c4f6e115bd55cb4c020d0d1d2f5f429276a9dd118bd7afcdd6"
+    },
+    {
+      "case": "SUST-54-15",
+      "word": "000fc400001e0f0663c0580c08047b9b",
+      "sass": "SUST.P.2D.IGN [R8], R12, 0xf, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "4ded6f9c2682d0657fa0ea316d6fdc383ad75ef0b9b06f6b288d9d27966c979c"
+    },
+    {
+      "case": "SUST-54-31",
+      "word": "000fc400001e0f0667c0580c08047b9b",
+      "sass": "SUST.P.2D.IGN [R8], R12, 0x1f, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "790d4a113c97858c3da260d51d2b27fd07504a439b92093de3c9a6fcd66a31ec"
+    },
+    {
+      "case": "SUST-61-0",
+      "word": "000fc400001e0f060000580c08047b9b",
+      "sass": "SUST.P.1D.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "7dc0f9850f6507f6d63332707671e6f6965bf9e9b5706c348f5084659b5a859c"
+    },
+    {
+      "case": "SUST-61-2",
+      "word": "000fc400001e0f064000580c08047b9b",
+      "sass": "SUST.P.1D_ARRAY.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "9e88830e4bd390a031c25ab340ea839bcb004525a8e141e2016085a628039275"
+    },
+    {
+      "case": "SUST-61-4",
+      "word": "000fc400001e0f068000580c08047b9b",
+      "sass": "SUST.P.2D_ARRAY.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "f9a95f32084920c3580df4c2ca470a88eed8a24729e53cd2b06ece3e20ffbca1"
+    },
+    {
+      "case": "SUST-61-5",
+      "word": "000fc400001e0f06a000580c08047b9b",
+      "sass": "SUST.P.3D.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "c5a978262e5d9aab6cd076791a4cf91b2825eda23e234c3cc8fc97df8f447285"
+    },
+    {
+      "case": "SUST-72-1",
+      "word": "000fc400001e01066000580c08047b9b",
+      "sass": "SUST.P.2D.R.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "2c36d45d824aedf79f2a261c79c1d83cc10b865b9d987c3258152f403a8a0b33"
+    },
+    {
+      "case": "SUST-72-3",
+      "word": "000fc400001e03066000580c08047b9b",
+      "sass": "SUST.P.2D.RG.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "372973797cce47cd0c36fcb46b2ea0760a3eb7205afb66211032aa2a7014dc75"
+    },
+    {
+      "case": "base-SUATOM",
+      "word": "000fc400001e00066000580c08047593",
+      "sass": "SUATOM.D.2D.ADD.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "19e81e65f43b358f471bec4f20e3a60fc4a83d526aba8d4d82e429a57d93988f"
+    },
+    {
+      "case": "SUATOM-12-0",
+      "word": "000fc400001e00066000580c08040593",
+      "sass": "@P0 SUATOM.D.2D.ADD.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "f4482055838f3f1c42633ba87eb4e22703a44a99b60e6ab2689f3c03ce60640b"
+    },
+    {
+      "case": "SUATOM-12-1",
+      "word": "000fc400001e00066000580c08041593",
+      "sass": "@P1 SUATOM.D.2D.ADD.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "dc5b9f9512d85f4bc03a55318ac337b34174cd94d3bb89a1a48bfb270263d782"
+    },
+    {
+      "case": "SUATOM-12-6",
+      "word": "000fc400001e00066000580c08046593",
+      "sass": "@P6 SUATOM.D.2D.ADD.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8d6c114c2b497266f66561d7b058805f001f59507334e703b10c13a4de66c8c1"
+    },
+    {
+      "case": "SUATOM-12-8",
+      "word": "000fc400001e00066000580c08048593",
+      "sass": "@!P0 SUATOM.D.2D.ADD.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "301a2099e9d3cdf3d4de12de76d2f8cf1e00c81205e0e3181d22a54f341b2c51"
+    },
+    {
+      "case": "SUATOM-12-9",
+      "word": "000fc400001e00066000580c08049593",
+      "sass": "@!P1 SUATOM.D.2D.ADD.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1de53c14bb1d1184283f74dcdc6a42dd51854a43c7ff74a74585b6ddf4fb43a1"
+    },
+    {
+      "case": "SUATOM-12-14",
+      "word": "000fc400001e00066000580c0804e593",
+      "sass": "@!P6 SUATOM.D.2D.ADD.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "a97f3e03260b5ebe6d0df71dd7e6f0415666287e13fcedfe53b7aa223c7a3cd3"
+    },
+    {
+      "case": "SUATOM-24-0",
+      "word": "000fc400001e00066000580c00047593",
+      "sass": "SUATOM.D.2D.ADD.IGN R4, [R0], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "2588ce545f3c74d2c911ebaef38df6acd6dcd7d8b2e0f062fc4210efc677dc4f"
+    },
+    {
+      "case": "SUATOM-24-16",
+      "word": "000fc400001e00066000580c10047593",
+      "sass": "SUATOM.D.2D.ADD.IGN R4, [R16], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6dd1a43df2f530b7e4f876a9b978d6c5696f9c9e4825083500eee14273bb6a67"
+    },
+    {
+      "case": "SUATOM-24-64",
+      "word": "000fc400001e00066000580c40047593",
+      "sass": "SUATOM.D.2D.ADD.IGN R4, [R64], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6d52818bd80fa19135f0038b783c3d6ce00131440cb986c915cfc51f0635b0c7"
+    },
+    {
+      "case": "SUATOM-24-128",
+      "word": "000fc400001e00066000580c80047593",
+      "sass": "SUATOM.D.2D.ADD.IGN R4, [R128], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "89acac5fba9211bd9b0c09d5a63474af9ee76e20867e76c7a54b4fadd3c9b078"
+    },
+    {
+      "case": "SUATOM-40-0",
+      "word": "000fc400001e00066000000c08047593",
+      "sass": "SUATOM.D.2D.ADD.IGN R4, [R8], R12, 0x0, 0x0",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "c59e030f0920c576e23e125279e74599a45d3564818a1f27b3510ae32383af4c"
+    },
+    {
+      "case": "SUATOM-40-1",
+      "word": "000fc400001e00066000010c08047593",
+      "sass": "SUATOM.D.2D.ADD.IGN R4, [R8], R12, 0x0, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1608c583e751816da7504c98c393fea29689a976a93075cc1fad6cff99fb8989"
+    },
+    {
+      "case": "SUATOM-40-16383",
+      "word": "000fc400001e0006603fff0c08047593",
+      "sass": "SUATOM.D.2D.ADD.IGN R4, [R8], R12, 0x0, 0x3fff",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1efe57359acb3bbc5ab795c190753ec40cfbf624b8e93f28b0f17c8c9cc2c2e1"
+    },
+    {
+      "case": "SUATOM-54-1",
+      "word": "000fc400001e00066040580c08047593",
+      "sass": "SUATOM.D.2D.ADD.IGN R4, [R8], R12, 0x1, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "94c3f31885845a77180579a411d86ff629c62c198d529f3a36bac0c1db4b7edd"
+    },
+    {
+      "case": "SUATOM-54-15",
+      "word": "000fc400001e000663c0580c08047593",
+      "sass": "SUATOM.D.2D.ADD.IGN R4, [R8], R12, 0xf, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "0bab8edee187560612478d783d8b4c187bae1800ac9c05c27003d53ac81d1913"
+    },
+    {
+      "case": "SUATOM-54-31",
+      "word": "000fc400001e000667c0580c08047593",
+      "sass": "SUATOM.D.2D.ADD.IGN R4, [R8], R12, 0x1f, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6f95f7111ef6ae8ab0ae1109cd81a097c3347391a65f877b84b9cc9c3bf8a595"
+    },
+    {
+      "case": "SUATOM-61-0",
+      "word": "000fc400001e00060000580c08047593",
+      "sass": "SUATOM.D.1D.ADD.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "9ef2858d3e994b936a0eb238be21095e2c3fe53be0d4a0448832f9a797275169"
+    },
+    {
+      "case": "SUATOM-61-2",
+      "word": "000fc400001e00064000580c08047593",
+      "sass": "SUATOM.D.1D_ARRAY.ADD.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "766dc350bc86db0ef5a2ce3b484de8b7a21340d46a3ebd9281e31d8d243c1d2c"
+    },
+    {
+      "case": "SUATOM-61-4",
+      "word": "000fc400001e00068000580c08047593",
+      "sass": "SUATOM.D.2D_ARRAY.ADD.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "d6cc49f9952da97f5fda112bdc2a0fcfbd0513e505e8992a2bf987d661625411"
+    },
+    {
+      "case": "SUATOM-61-5",
+      "word": "000fc400001e0006a000580c08047593",
+      "sass": "SUATOM.D.3D.ADD.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "251fefbee13312330c7aa857aa5e708699e20eae1cd5729d3e5b9980d2c9f957"
+    },
+    {
+      "case": "SUATOM-87-1",
+      "word": "000fc400009e00066000580c08047593",
+      "sass": "SUATOM.D.2D.MIN.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "5f0c69b74f645bca74163118dad7983d647d3581706bbff2e881d4a40f0228eb"
+    },
+    {
+      "case": "SUATOM-87-2",
+      "word": "000fc400011e00066000580c08047593",
+      "sass": "SUATOM.D.2D.MAX.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "3a45157a7a285f92f8a45b2354998de10dab1b82164ea0906bc701d89e163214"
+    },
+    {
+      "case": "SUATOM-87-5",
+      "word": "000fc400029e00066000580c08047593",
+      "sass": "SUATOM.D.2D.AND.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "5acc2177b29a83fa8ae8ab4a973ccdfc424977349bae1665df1a5d4493d6d74d"
+    },
+    {
+      "case": "SUATOM-87-6",
+      "word": "000fc400031e00066000580c08047593",
+      "sass": "SUATOM.D.2D.OR.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "98d879425272d77963b1eb2e6f4617583fb17613e0afe88b7dff5c8312466a23"
+    },
+    {
+      "case": "SUATOM-87-7",
+      "word": "000fc400039e00066000580c08047593",
+      "sass": "SUATOM.D.2D.XOR.IGN R4, [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "2888506c0eca57e7f8bc8bee1dcbfa1d7306130946fdfb0ed23bc4d7cc431785"
+    },
+    {
+      "case": "SUATOM-fault-predicate",
+      "word": "000fc400001000066000580c08047593",
+      "sass": "SUATOM.D.2D.ADD.IGN P0, R4, [R8], R12, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUATOM: consumer cannot produce texture fault predicates"
+    },
+    {
+      "case": "base-SURED",
+      "word": "000fc400001e00066000580c0804759f",
+      "sass": "SURED.D.2D.ADD.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "ff9f7e8472b37d250a28223e4a442459eefe31f7912799229784e0f02a1e8b8e"
+    },
+    {
+      "case": "SURED-12-0",
+      "word": "000fc400001e00066000580c0804059f",
+      "sass": "@P0 SURED.D.2D.ADD.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1c0493270a136a0aa13d00fb6ee386e401d8ef4d59fb613a79bc066919de5fc3"
+    },
+    {
+      "case": "SURED-12-1",
+      "word": "000fc400001e00066000580c0804159f",
+      "sass": "@P1 SURED.D.2D.ADD.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "7e9217ec3f9ded3d7818ec16e9542c20973481f5d12c33b26f418e0e9e7f30e3"
+    },
+    {
+      "case": "SURED-12-6",
+      "word": "000fc400001e00066000580c0804659f",
+      "sass": "@P6 SURED.D.2D.ADD.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "ded8cde629c5c692c8bc6045a929a93ce22b1a13318250e245f57963a85a15ca"
+    },
+    {
+      "case": "SURED-12-8",
+      "word": "000fc400001e00066000580c0804859f",
+      "sass": "@!P0 SURED.D.2D.ADD.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "053964f01b2a783d1afc26995cb2d66f933feec0d95ff3ae2fee065a67500b55"
+    },
+    {
+      "case": "SURED-12-9",
+      "word": "000fc400001e00066000580c0804959f",
+      "sass": "@!P1 SURED.D.2D.ADD.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "f7b08f30d0298ae8c6dae221850812b9c00223cd3abc630ba3f7be3cd936ea04"
+    },
+    {
+      "case": "SURED-12-14",
+      "word": "000fc400001e00066000580c0804e59f",
+      "sass": "@!P6 SURED.D.2D.ADD.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "a4564676b5480b6a3c30982094e277ff49a9a9545dee461bb28ffe7ba46f6966"
+    },
+    {
+      "case": "SURED-24-0",
+      "word": "000fc400001e00066000580c0004759f",
+      "sass": "SURED.D.2D.ADD.IGN [R0], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "46ce56c30342c82bef428e3478f4e1ab53a2e043238b548fa8375b0ea57a42b9"
+    },
+    {
+      "case": "SURED-24-16",
+      "word": "000fc400001e00066000580c1004759f",
+      "sass": "SURED.D.2D.ADD.IGN [R16], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "0e20b0e8d8a6a0e318eb4532bcd7395bf6e80ffeee2ed2c6a874da99b4ed1f68"
+    },
+    {
+      "case": "SURED-24-64",
+      "word": "000fc400001e00066000580c4004759f",
+      "sass": "SURED.D.2D.ADD.IGN [R64], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e89172ac2405713792a2b05ec3c4cb57b724681772ddc15f133d6b40ea0b58ea"
+    },
+    {
+      "case": "SURED-24-128",
+      "word": "000fc400001e00066000580c8004759f",
+      "sass": "SURED.D.2D.ADD.IGN [R128], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "b1df8390cdff898d14e17a912ccf84a04987d171753c3e9f6b648bbc63b6fe1b"
+    },
+    {
+      "case": "SURED-40-0",
+      "word": "000fc400001e00066000000c0804759f",
+      "sass": "SURED.D.2D.ADD.IGN [R8], R12, 0x0, 0x0",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "b73b15287ae0e93efdae32923080d57f8aad8a4d5ac3ae70d0d11b603154012d"
+    },
+    {
+      "case": "SURED-40-1",
+      "word": "000fc400001e00066000010c0804759f",
+      "sass": "SURED.D.2D.ADD.IGN [R8], R12, 0x0, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "3b6e63fc338b98bc564073fa810fa45685ac51572aa6cef3eadf2f4858d54c25"
+    },
+    {
+      "case": "SURED-40-16383",
+      "word": "000fc400001e0006603fff0c0804759f",
+      "sass": "SURED.D.2D.ADD.IGN [R8], R12, 0x0, 0x3fff",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "2175723d41e75fce8ed470dc119f927005e8d29035da7dc32a72ddbd825e3f87"
+    },
+    {
+      "case": "SURED-54-1",
+      "word": "000fc400001e00066040580c0804759f",
+      "sass": "SURED.D.2D.ADD.IGN [R8], R12, 0x1, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e8328e81c4222a68015ed839fd5db8a51e8796cf2e2bc2b35fc8e76f0ed7ec5f"
+    },
+    {
+      "case": "SURED-54-15",
+      "word": "000fc400001e000663c0580c0804759f",
+      "sass": "SURED.D.2D.ADD.IGN [R8], R12, 0xf, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "de2c043537b3aecee6584c08d73e7352a9fcba77acd4e5ab15078afe758d2e62"
+    },
+    {
+      "case": "SURED-54-31",
+      "word": "000fc400001e000667c0580c0804759f",
+      "sass": "SURED.D.2D.ADD.IGN [R8], R12, 0x1f, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "db4dd05e1097ab13db5d2907cad2daf0aca5b2a37ba467e6f18ebf896dc04772"
+    },
+    {
+      "case": "SURED-61-0",
+      "word": "000fc400001e00060000580c0804759f",
+      "sass": "SURED.D.1D.ADD.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "13cc142648c13b5148214ab381a3fcaa3cc67530482dffd79ef7af37fb202244"
+    },
+    {
+      "case": "SURED-61-2",
+      "word": "000fc400001e00064000580c0804759f",
+      "sass": "SURED.D.1D_ARRAY.ADD.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "5caba1e1b3639aaf5780dc07890107a5f338e8150212ad8f3c23127ad342c28a"
+    },
+    {
+      "case": "SURED-61-4",
+      "word": "000fc400001e00068000580c0804759f",
+      "sass": "SURED.D.2D_ARRAY.ADD.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "25048d6f0aad2314c30537f2125e81220ae0ce6381647e34441346409c44edb9"
+    },
+    {
+      "case": "SURED-61-5",
+      "word": "000fc400001e0006a000580c0804759f",
+      "sass": "SURED.D.3D.ADD.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "7e97a1888ddffb3be39c71c7a900231e3379b7574a1551dcbe49385a94db6071"
+    },
+    {
+      "case": "SURED-87-1",
+      "word": "000fc400009e00066000580c0804759f",
+      "sass": "SURED.D.2D.MIN.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "49493277cba5a682c5dd4aa2927eeb4ca70c7139a2af493ba510f11d8dc3b693"
+    },
+    {
+      "case": "SURED-87-2",
+      "word": "000fc400011e00066000580c0804759f",
+      "sass": "SURED.D.2D.MAX.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6975c1f956d1214a26dc2bff2d39c7c6d8b8467ff63fa26b3d60b7369df0bcca"
+    },
+    {
+      "case": "SURED-87-5",
+      "word": "000fc400029e00066000580c0804759f",
+      "sass": "SURED.D.2D.AND.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "5853a2296b50d2f4b216eec34bd3637671ab24cb3eada7e6b3d7ca1099bdd27f"
+    },
+    {
+      "case": "SURED-87-6",
+      "word": "000fc400031e00066000580c0804759f",
+      "sass": "SURED.D.2D.OR.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "ebdf3025f585620dfbac7820faa4ef37013806bc38ed2108a7e0ac6b1040a981"
+    },
+    {
+      "case": "SURED-87-7",
+      "word": "000fc400039e00066000580c0804759f",
+      "sass": "SURED.D.2D.XOR.IGN [R8], R12, 0x0, 0x58",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "926d976765c76a9b3bac2ce1773225c7b3038b6f11f1bc994b9b65b253c1f0e2"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L_II-0",
+      "word": "000fc400019e01ff3000620702007b60",
+      "sass": "TEX.SCR.LL RZ, R0, R2, R7, 0x0, 0x62, 2D, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "5b1949c3b243c40d48222a3ff5405355a4bc0fe94072f13e8380138a76bae020"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L_II-1",
+      "word": "000fc400019e01ff30005e0004057b60",
+      "sass": "TEX.SCR.LL RZ, R5, R4, R0, 0x0, 0x5e, 2D, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "86dd15f945b827bba9a42c4b3432a3f90e4d35ab4d60d3c957fea60df9003e1d"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L_II-2",
+      "word": "000fc400019e01ff70005c1c1a167b60",
+      "sass": "TEX.SCR.LL RZ, R22, R26, R28, 0x0, 0x5c, CUBE, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "f5dffa0d2e3aae722c06c52d11af0e7620c5b4e8b3b0f1acdf7e26b25cc114a2"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L_II-3",
+      "word": "000fc400019e01ff70005c1e24007b60",
+      "sass": "TEX.SCR.LL RZ, R0, R36, R30, 0x0, 0x5c, CUBE, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "197a332264c977a5878dc9bdb9d1135b458192dd338b321ae75b3e67d6d08e03"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L_II-4",
+      "word": "000fc400019e01ff70005c200c037b60",
+      "sass": "TEX.SCR.LL RZ, R3, R12, R32, 0x0, 0x5c, CUBE, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "86c9f7775ea77107b2ee7c6a71f8398a071f5cb443c4a6ec77dc99e5495e4fd9"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L_II-5",
+      "word": "000fc400019e01ff70005c1214047b60",
+      "sass": "TEX.SCR.LL RZ, R4, R20, R18, 0x0, 0x5c, CUBE, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "faad4eef4b671f62cadf24c0763a8da9e2464452637b2c5c130ad330258c8474"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L_II-6",
+      "word": "000fc400019e01ff3000641d0a0b9b60",
+      "sass": "@!P1 TEX.SCR.LL RZ, R11, R10, R29, 0x0, 0x64, 2D, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "787c57579bdc361d870563343189ffbfe0a26752adc7d10e2ad9e0b6e2e355f2"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L_II-7",
+      "word": "000fc400019e03ff30005a0006107b60",
+      "sass": "TEX.SCR.LL RZ, R16, R6, R0, 0x0, 0x5a, 2D, 0x3",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "41170dc5eb41ae2d032fd5068815c6cc539fd8724ce0b49c935a45bea096bab1"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L_II-8",
+      "word": "000fc400019e01ffb0005e0804047b60",
+      "sass": "TEX.SCR.LL RZ, R4, R4, R8, 0x0, 0x5e, ARRAY_2D, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e6aa570e63b904b672ee9d8bdf8b5d9545613e1e3f94a8832832774ae71865c9"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-0",
+      "word": "000fc4000010a90070005c0204007b9d",
+      "sass": "SUST.D.BA.2D.STRONG.SM.TRAP [R4], R2, 0x0, 0x5c",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-1",
+      "word": "000fc4000010a5004800580306007b9d",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM [R6], R3, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-2",
+      "word": "000fc4000010a50048005a0310007b9d",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM [R16], R3, 0x0, 0x5a",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-3",
+      "word": "000fc4000010a50048005c0304007b9d",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM [R4], R3, 0x0, 0x5c",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-4",
+      "word": "000fc4000010a50048c0000306007b9d",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM [R6], R3, 0x3, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-5",
+      "word": "000fc4000010a5005000580306007b9d",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM.TRAP [R6], R3, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-6",
+      "word": "000fc4000010a5004000580306007b9d",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM.IGN [R6], R3, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-7",
+      "word": "000fc4000010a9004800581e08007b9d",
+      "sass": "SUST.D.BA.1D_ARRAY.STRONG.SM [R8], R30, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-8",
+      "word": "000fc4000010ab004800581408007b9d",
+      "sass": "SUST.D.BA.1D_ARRAY.64.STRONG.SM [R8], R20, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-9",
+      "word": "000fc4000010a1004800580306007b9d",
+      "sass": "SUST.D.BA.1D_ARRAY.U8.STRONG.SM [R6], R3, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-10",
+      "word": "000fc4000010a900480058030c007b9d",
+      "sass": "SUST.D.BA.1D_ARRAY.STRONG.SM [R12], R3, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-11",
+      "word": "000fc4000010ad00480058201c007b9d",
+      "sass": "SUST.D.BA.1D_ARRAY.128.STRONG.SM [R28], R32, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-12",
+      "word": "000fc4000010a5000800580002007b9d",
+      "sass": "SUST.D.BA.1D.U16.STRONG.SM [R2], R0, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-13",
+      "word": "000fc4000010a5008800580b04007b9d",
+      "sass": "SUST.D.BA.2D_ARRAY.U16.STRONG.SM [R4], R11, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-14",
+      "word": "000fc4000010a500a800580b04007b9d",
+      "sass": "SUST.D.BA.3D.U16.STRONG.SM [R4], R11, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-15",
+      "word": "000fc4000010a1005000581e08007b9b",
+      "sass": "SUST.P.1D_ARRAY.STRONG.SM.R.TRAP [R8], R30, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer cannot reproduce TRAP bounds handling"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-16",
+      "word": "000fc4000010a3005000580a10007b9b",
+      "sass": "SUST.P.1D_ARRAY.STRONG.SM.RG.TRAP [R16], R10, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer cannot reproduce TRAP bounds handling"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_II_II-17",
+      "word": "000fc4000010af005000580c12007b9b",
+      "sass": "SUST.P.1D_ARRAY.STRONG.SM.TRAP [R18], R12, 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer cannot reproduce TRAP bounds handling"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_II_II_L_II-0",
+      "word": "000fc400009e03ff100064ff0f087b66",
+      "sass": "TLD.SCR.LZ RZ, R8, R15, 0x0, 0x64, 1D, 0x3",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "7136734ba1c9f8033c8592b54a1b1f2832919c4988cbc969242a6284e9e07dd7"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_II_II_L_II-1",
+      "word": "000fc400009e03ff100064ff100a7b66",
+      "sass": "TLD.SCR.LZ RZ, R10, R16, 0x0, 0x64, 1D, 0x3",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "07b723dd1d6c4c8a0c7eec7a1b5c02a4d227905feb635a3ba01c49a19fa81468"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_II_II_L_II-2",
+      "word": "000fc400009e03ff100066ff0f047b66",
+      "sass": "TLD.SCR.LZ RZ, R4, R15, 0x0, 0x66, 1D, 0x3",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8256eedfa8499b48e51a25dfd518baa80de8aabf9a58b3ed55770e3a5cc82c03"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_II_II_L_II-3",
+      "word": "000fc400009e03ff100066ff10027b66",
+      "sass": "TLD.SCR.LZ RZ, R2, R16, 0x0, 0x66, 1D, 0x3",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e5825c1fb8ba3454636168c0656cb271489039bdc79c5bf1283bcac0fda39a01"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_II_II_L_II-4",
+      "word": "000fc400009e03ff100062ff03048b66",
+      "sass": "@!P0 TLD.SCR.LZ RZ, R4, R3, 0x0, 0x62, 1D, 0x3",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "dd5d5a097a97eae92df49db273647c1e2b4c81b391957f5097b124653bd0ffc0"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_II_II_L_II-5",
+      "word": "000fc400009e01ff100064ff05057b66",
+      "sass": "TLD.SCR.LZ RZ, R5, R5, 0x0, 0x64, 1D, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "f15e906b7159ee1a1bb2408b87ef75f103647bbd2f9a0fd84455b2e693e5c2b7"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-0",
+      "word": "000fc400001ea51c48000000021c799a",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R28, [R2], R28",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-1",
+      "word": "000fc400001ea51d48000000041d799a",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R29, [R4], R29",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-2",
+      "word": "000fc400001ea51a480000000e20799a",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R32, [R14], R26",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-3",
+      "word": "000fc400001ea524480000000824799a",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R36, [R8], R36",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-4",
+      "word": "000fc400001ea51c50000000021c799a",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM.TRAP R28, [R2], R28",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-5",
+      "word": "000fc400001ea51c40000000021c799a",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM.IGN R28, [R2], R28",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-6",
+      "word": "000fc400001ea91c48000000021c799a",
+      "sass": "SULD.D.BA.1D_ARRAY.STRONG.SM R28, [R2], R28",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-7",
+      "word": "000fc400001eab0c480000000a0c799a",
+      "sass": "SULD.D.BA.1D_ARRAY.64.STRONG.SM R12, [R10], R12",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-8",
+      "word": "000fc400001ea100480000000e25799a",
+      "sass": "SULD.D.BA.1D_ARRAY.U8.STRONG.SM R37, [R14], R0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-9",
+      "word": "000fc400001ead08480000000a08799a",
+      "sass": "SULD.D.BA.1D_ARRAY.128.STRONG.SM R8, [R10], R8",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-10",
+      "word": "000fc400001ea513080000000413799a",
+      "sass": "SULD.D.BA.1D.U16.STRONG.SM R19, [R4], R19",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-11",
+      "word": "000fc400001ea513880000000426799a",
+      "sass": "SULD.D.BA.2D_ARRAY.U16.STRONG.SM R38, [R4], R19",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-12",
+      "word": "000fc400001ea51c68000000021c799a",
+      "sass": "SULD.D.BA.2D.U16.STRONG.SM R28, [R2], R28",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_R-13",
+      "word": "000fc400001ea525a80000001425799a",
+      "sass": "SULD.D.BA.3D.U16.STRONG.SM R37, [R20], R37",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-0",
+      "word": "000fc400081ea5004800060002067f99",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R6, [R2], UR6, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-1",
+      "word": "000fc400081ea5004800070002007f99",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R0, [R2], UR7, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-2",
+      "word": "000fc400081ea50048000400080b7f99",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R11, [R8], UR4, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-3",
+      "word": "000fc400081ea50048000500040c7f99",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R12, [R4], UR5, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-4",
+      "word": "000fc400081ea5005000060002067f99",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM.TRAP R6, [R2], UR6, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-5",
+      "word": "000fc400081ea5004000060002067f99",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM.IGN R6, [R2], UR6, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-6",
+      "word": "000fc400081ea9004800060002067f99",
+      "sass": "SULD.D.BA.1D_ARRAY.STRONG.SM R6, [R2], UR6, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-7",
+      "word": "000fc400081eab004800040018227f99",
+      "sass": "SULD.D.BA.1D_ARRAY.64.STRONG.SM R34, [R24], UR4, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-8",
+      "word": "000fc400081ea1004800040004167f99",
+      "sass": "SULD.D.BA.1D_ARRAY.U8.STRONG.SM R22, [R4], UR4, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-9",
+      "word": "000fc400081ead004800040004047f99",
+      "sass": "SULD.D.BA.1D_ARRAY.128.STRONG.SM R4, [R4], UR4, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-10",
+      "word": "000fc400081ea5000800130004087f99",
+      "sass": "SULD.D.BA.1D.U16.STRONG.SM R8, [R4], UR19, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-11",
+      "word": "000fc400081ea5008800040008237f99",
+      "sass": "SULD.D.BA.2D_ARRAY.U16.STRONG.SM R35, [R8], UR4, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-12",
+      "word": "000fc400081ea5006800060002067f99",
+      "sass": "SULD.D.BA.2D.U16.STRONG.SM R6, [R2], UR6, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_UR_II-13",
+      "word": "000fc400081ea500a800040008257f99",
+      "sass": "SULD.D.BA.3D.U16.STRONG.SM R37, [R8], UR4, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-0",
+      "word": "000fc400001ea5004800580004107b99",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R16, [R4], 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-1",
+      "word": "000fc400001ea50048005a0004087b99",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R8, [R4], 0x0, 0x5a",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-2",
+      "word": "000fc400001ea50048005c0006097b99",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R9, [R6], 0x0, 0x5c",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-3",
+      "word": "000fc400001ea50048005e0004127b99",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R18, [R4], 0x0, 0x5e",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-4",
+      "word": "000fc400001ea50048c00000041f7b99",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM R31, [R4], 0x3, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-5",
+      "word": "000fc400001ea5005000580004107b99",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM.TRAP R16, [R4], 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-6",
+      "word": "000fc400001ea5004000580004107b99",
+      "sass": "SULD.D.BA.1D_ARRAY.U16.STRONG.SM.IGN R16, [R4], 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-7",
+      "word": "000fc400001ea9004800580004107b99",
+      "sass": "SULD.D.BA.1D_ARRAY.STRONG.SM R16, [R4], 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-8",
+      "word": "000fc400001eab004800580024247b99",
+      "sass": "SULD.D.BA.1D_ARRAY.64.STRONG.SM R36, [R36], 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-9",
+      "word": "000fc400001ea10048005800040c7b99",
+      "sass": "SULD.D.BA.1D_ARRAY.U8.STRONG.SM R12, [R4], 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-10",
+      "word": "000fc400001ead0048005a000e147b99",
+      "sass": "SULD.D.BA.1D_ARRAY.128.STRONG.SM R20, [R14], 0x0, 0x5a",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-11",
+      "word": "000fc400001ea50008c0020004257b99",
+      "sass": "SULD.D.BA.1D.U16.STRONG.SM R37, [R4], 0x3, 0x2",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-12",
+      "word": "000fc400001ea50088005c0008297b99",
+      "sass": "SULD.D.BA.2D_ARRAY.U16.STRONG.SM R41, [R8], 0x0, 0x5c",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-13",
+      "word": "000fc400001ea5006800580004107b99",
+      "sass": "SULD.D.BA.2D.U16.STRONG.SM R16, [R4], 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SULD_R_ARI_II_II-14",
+      "word": "000fc400001ea500a80058000c237b99",
+      "sass": "SULD.D.BA.3D.U16.STRONG.SM R35, [R12], 0x0, 0x58",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SULD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_II-0",
+      "word": "000fc400000002ff080000000e0e7370",
+      "sass": "TXQ.B RZ, R14, R14, TEX_HEADER_DIMENSION, 0x2",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TXQ: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_II-1",
+      "word": "000fc400000002ff0800000002027370",
+      "sass": "TXQ.B RZ, R2, R2, TEX_HEADER_DIMENSION, 0x2",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TXQ: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_II-2",
+      "word": "000fc400000002ff080000000c217370",
+      "sass": "TXQ.B RZ, R33, R12, TEX_HEADER_DIMENSION, 0x2",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TXQ: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_II-3",
+      "word": "000fc400000001ff080000000e0e7370",
+      "sass": "TXQ.B RZ, R14, R14, TEX_HEADER_DIMENSION, 0x1",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TXQ: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_UR_II_II-0",
+      "word": "000fc400080002ff00000c0014237f6f",
+      "sass": "TXQ RZ, R35, R20, TEX_HEADER_DIMENSION, UR12, 0x0, 0x2",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TXQ: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_UR_II_II-1",
+      "word": "000fc400080002ff0000060013137f6f",
+      "sass": "TXQ RZ, R19, R19, TEX_HEADER_DIMENSION, UR6, 0x0, 0x2",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TXQ: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_UR_II_II-2",
+      "word": "000fc400080002ff0000080015157f6f",
+      "sass": "TXQ RZ, R21, R21, TEX_HEADER_DIMENSION, UR8, 0x0, 0x2",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TXQ: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_UR_II_II-3",
+      "word": "000fc400080002ff00000e00200f7f6f",
+      "sass": "TXQ RZ, R15, R32, TEX_HEADER_DIMENSION, UR14, 0x0, 0x2",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TXQ: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_UR_II_II-4",
+      "word": "000fc400080001ff00000c0014237f6f",
+      "sass": "TXQ RZ, R35, R20, TEX_HEADER_DIMENSION, UR12, 0x0, 0x1",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TXQ: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_II_II_II-0",
+      "word": "000fc400000002ff0000580010107b6f",
+      "sass": "TXQ RZ, R16, R16, TEX_HEADER_DIMENSION, 0x0, 0x58, 0x2",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8ad056c559e68946bb8e5ae34602d2ade1411b7bd241d44c36bc8c3a39a2ffe6"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_II_II_II-1",
+      "word": "000fc400000002ff00005a0014147b6f",
+      "sass": "TXQ RZ, R20, R20, TEX_HEADER_DIMENSION, 0x0, 0x5a, 0x2",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "2512612cee67bb57cde5c6d627342c90a504fed85d749be8f49ece81d1b5317e"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_II_II_II-2",
+      "word": "000fc400000002ff00005c0016167b6f",
+      "sass": "TXQ RZ, R22, R22, TEX_HEADER_DIMENSION, 0x0, 0x5c, 0x2",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "092740adf09717813a40e19a954dc49155a0c80760fdc3aa9c4c41b7e0e4e303"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_II_II_II-3",
+      "word": "000fc400000002ff00c000001a1a7b6f",
+      "sass": "TXQ RZ, R26, R26, TEX_HEADER_DIMENSION, 0x3, 0x0, 0x2",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "b9ec42235e68adc8dc1d5003338ea7edeb8e5b5d7cec0292c7401b1b8d18f742"
+    },
+    {
+      "case": "CuAssembler-TXQ_R_R_R_L_II_II_II-4",
+      "word": "000fc400000001ff0000580010107b6f",
+      "sass": "TXQ RZ, R16, R16, TEX_HEADER_DIMENSION, 0x0, 0x58, 0x1",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "d9db076cca6504c1ec1e14a7af4ffe479c28224558aaafc42c9c684ec0937109"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-0",
+      "word": "000fc4000010a500480000031400799e",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM [R20], R3, R0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-1",
+      "word": "000fc4000010a50e480000031a00799e",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM [R26], R3, R14",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-2",
+      "word": "000fc4000010a510480000031c00799e",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM [R28], R3, R16",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-3",
+      "word": "000fc4000010a500480000091600799e",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM [R22], R9, R0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-4",
+      "word": "000fc4000010a500500000031400799e",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM.TRAP [R20], R3, R0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-5",
+      "word": "000fc4000010a500400000031400799e",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM.IGN [R20], R3, R0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-6",
+      "word": "000fc4000010a9034800001e1200799e",
+      "sass": "SUST.D.BA.1D_ARRAY.STRONG.SM [R18], R30, R3",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-7",
+      "word": "000fc4000010ab14480000141800799e",
+      "sass": "SUST.D.BA.1D_ARRAY.64.STRONG.SM [R24], R20, R20",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-8",
+      "word": "000fc4000010a100480000031400799e",
+      "sass": "SUST.D.BA.1D_ARRAY.U8.STRONG.SM [R20], R3, R0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-9",
+      "word": "000fc4000010ad20480000201a00799e",
+      "sass": "SUST.D.BA.1D_ARRAY.128.STRONG.SM [R26], R32, R32",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-10",
+      "word": "000fc4000010a507080000000200799e",
+      "sass": "SUST.D.BA.1D.U16.STRONG.SM [R2], R0, R7",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-11",
+      "word": "000fc4000010a5078800000b2000799e",
+      "sass": "SUST.D.BA.2D_ARRAY.U16.STRONG.SM [R32], R11, R7",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-12",
+      "word": "000fc4000010a500680000191a00799e",
+      "sass": "SUST.D.BA.2D.U16.STRONG.SM [R26], R25, R0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-13",
+      "word": "000fc4000010a507a800000b1800799e",
+      "sass": "SUST.D.BA.3D.U16.STRONG.SM [R24], R11, R7",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-14",
+      "word": "000fc4000010a1035000001e1200799c",
+      "sass": "SUST.P.1D_ARRAY.STRONG.SM.R.TRAP [R18], R30, R3",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-15",
+      "word": "000fc4000010a3005000000e1000799c",
+      "sass": "SUST.P.1D_ARRAY.STRONG.SM.RG.TRAP [R16], R14, R0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_R-16",
+      "word": "000fc4000010af00500000041800799c",
+      "sass": "SUST.P.1D_ARRAY.STRONG.SM.TRAP [R24], R4, R0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-0",
+      "word": "000fc4000810a5004800090306007f9d",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM [R6], R3, UR9, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-1",
+      "word": "000fc4000810a50048000a030e007f9d",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM [R14], R3, UR10, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-2",
+      "word": "000fc4000810a50048000b0304007f9d",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM [R4], R3, UR11, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-3",
+      "word": "000fc4000810a5005000090306007f9d",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM.TRAP [R6], R3, UR9, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-4",
+      "word": "000fc4000810a5004000090306007f9d",
+      "sass": "SUST.D.BA.1D_ARRAY.U16.STRONG.SM.IGN [R6], R3, UR9, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-5",
+      "word": "000fc4000810a9004800091e08007f9d",
+      "sass": "SUST.D.BA.1D_ARRAY.STRONG.SM [R8], R30, UR9, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-6",
+      "word": "000fc4000810ab004800061408007f9d",
+      "sass": "SUST.D.BA.1D_ARRAY.64.STRONG.SM [R8], R20, UR6, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-7",
+      "word": "000fc4000810a1004800090306007f9d",
+      "sass": "SUST.D.BA.1D_ARRAY.U8.STRONG.SM [R6], R3, UR9, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-8",
+      "word": "000fc4000810a90048000c030c007f9d",
+      "sass": "SUST.D.BA.1D_ARRAY.STRONG.SM [R12], R3, UR12, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-9",
+      "word": "000fc4000810ad004800060c1a007f9d",
+      "sass": "SUST.D.BA.1D_ARRAY.128.STRONG.SM [R26], R12, UR6, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-10",
+      "word": "000fc4000810a5000800130002007f9d",
+      "sass": "SUST.D.BA.1D.U16.STRONG.SM [R2], R0, UR19, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-11",
+      "word": "000fc4000810a50088000c0b04007f9d",
+      "sass": "SUST.D.BA.2D_ARRAY.U16.STRONG.SM [R4], R11, UR12, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-12",
+      "word": "000fc4000810a5006800091908007f9d",
+      "sass": "SUST.D.BA.2D.U16.STRONG.SM [R8], R25, UR9, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-13",
+      "word": "000fc4000810a500a8000c0b04007f9d",
+      "sass": "SUST.D.BA.3D.U16.STRONG.SM [R4], R11, UR12, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-14",
+      "word": "000fc4000810a1005000091e08007f9b",
+      "sass": "SUST.P.1D_ARRAY.STRONG.SM.R.TRAP [R8], R30, UR9, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-15",
+      "word": "000fc4000810a30050000b0a0c007f9b",
+      "sass": "SUST.P.1D_ARRAY.STRONG.SM.RG.TRAP [R12], R10, UR11, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-SUST_ARI_R_UR_II-16",
+      "word": "000fc4000810af0050000b0812007f9b",
+      "sass": "SUST.P.1D_ARRAY.STRONG.SM.TRAP [R18], R8, UR11, 0x0",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "SUST: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-0",
+      "word": "000fc400099e4f083000040602227f60",
+      "sass": "TEX.SCR.LL.DC R8, R34, R2, R6, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-1",
+      "word": "000fc400099e4f183000041816167f60",
+      "sass": "TEX.SCR.LL.DC R24, R22, R22, R24, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-2",
+      "word": "000fc400099e4f143000041814187f60",
+      "sass": "TEX.SCR.LL.DC R20, R24, R20, R24, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-3",
+      "word": "000fc400099e4f323000042202347f60",
+      "sass": "TEX.SCR.LL.DC R50, R52, R2, R34, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-4",
+      "word": "000fc400099e4f1a300006241a2a7f60",
+      "sass": "TEX.SCR.LL.DC R26, R42, R26, R36, UR6, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-5",
+      "word": "000fc400099e4f2c3000062002307f60",
+      "sass": "TEX.SCR.LL.DC R44, R48, R2, R32, UR6, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-6",
+      "word": "000fc400099e1f2c3000042c26267f60",
+      "sass": "TEX.SCR.LL.AOFFI R44, R38, R38, R44, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-7",
+      "word": "000fc400099e1f204000043820387f60",
+      "sass": "TEX.LL.AOFFI R32, R56, R32, R56, UR4, 0x0, 3D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-8",
+      "word": "000fc400099e4f1660000a0630067f60",
+      "sass": "TEX.LL.DC R22, R6, R48, R6, UR10, 0x0, CUBE",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-9",
+      "word": "000fc400099e0f089000043606067f60",
+      "sass": "TEX.SCR.LL R8, R6, R6, R54, UR4, 0x0, ARRAY_1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-10",
+      "word": "000fc400099e0f0e300004300c0c7f60",
+      "sass": "TEX.SCR.LL R14, R12, R12, R48, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-11",
+      "word": "000fc400099e0f0eb000040a140c7f60",
+      "sass": "TEX.SCR.LL R14, R12, R20, R10, UR4, 0x0, ARRAY_2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-12",
+      "word": "000fc400099e0f065000040c06287f60",
+      "sass": "TEX.SCR.LL R6, R40, R6, R12, UR4, 0x0, 3D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_UR_II_L-13",
+      "word": "000fc400099e0f18e0000404082c7f60",
+      "sass": "TEX.LL R24, R44, R8, R4, UR4, 0x0, ARRAY_CUBE",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-0",
+      "word": "000fc400019e4f242800000c02267361",
+      "sass": "TEX.B.LL.DC R36, R38, R2, R12, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-1",
+      "word": "000fc400019e4f0a2800001c0a1a7361",
+      "sass": "TEX.B.LL.DC R10, R26, R10, R28, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-2",
+      "word": "000fc400019e4f0e2800000c12127361",
+      "sass": "TEX.B.LL.DC R14, R18, R18, R12, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-3",
+      "word": "000fc400019e4f322800003402347361",
+      "sass": "TEX.B.LL.DC R50, R52, R2, R52, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-4",
+      "word": "000fc400019e4f202800001c201c7361",
+      "sass": "TEX.B.LL.DC R32, R28, R32, R28, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-5",
+      "word": "000fc400019e1f0e2800003002107361",
+      "sass": "TEX.B.LL.AOFFI R14, R16, R2, R48, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-6",
+      "word": "000fc400001e3f244800000c14147361",
+      "sass": "TEX.B.AOFFI.NDV R36, R20, R20, R12, 3D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-7",
+      "word": "000fc400019e1f14480000140c0e7361",
+      "sass": "TEX.B.LL.AOFFI R20, R14, R12, R20, 3D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-8",
+      "word": "000fc400019e4f1e6800001c301c7361",
+      "sass": "TEX.B.LL.DC R30, R28, R48, R28, CUBE",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-9",
+      "word": "000fc400019e0f20980000200e0e7361",
+      "sass": "TEX.SCR.B.LL R32, R14, R14, R32, ARRAY_1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-10",
+      "word": "000fc400019e0f1a380000101a107361",
+      "sass": "TEX.SCR.B.LL R26, R16, R26, R16, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-11",
+      "word": "000fc400019e0f24a800002204227361",
+      "sass": "TEX.B.LL R36, R34, R4, R34, ARRAY_2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-12",
+      "word": "000fc400019e0f2c480000342c2e7361",
+      "sass": "TEX.B.LL R44, R46, R44, R52, 3D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_L-13",
+      "word": "000fc400019e0f46e800004630667361",
+      "sass": "TEX.B.LL R70, R102, R48, R70, ARRAY_CUBE",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-0",
+      "word": "000fc400019e4f1a3000581a021c7b60",
+      "sass": "TEX.SCR.LL.DC R26, R28, R2, R26, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "313c70c808eaa902d26f1ce700fb5992dd4f3e723258ade4770df51188700cad"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-1",
+      "word": "000fc400019e4f0e30005a1602167b60",
+      "sass": "TEX.SCR.LL.DC R14, R22, R2, R22, 0x0, 0x5a, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "4b7b67e5d326137db7d7088ea0f5265f9c8f1ccf35b02fdf79a6c30ccfa36adc"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-2",
+      "word": "000fc400019e4f0830005c22020a7b60",
+      "sass": "TEX.SCR.LL.DC R8, R10, R2, R34, 0x0, 0x5c, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "b7185ca5af7440b374026b2c1f0d4c94c8521ebdf964ad360bd67a9d8c49e04a"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-3",
+      "word": "000fc400019e4f1030005e1002187b60",
+      "sass": "TEX.SCR.LL.DC R16, R24, R2, R16, 0x0, 0x5e, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8e2ae992220d9cce54ac688f225b83c01c38b23f5f7ac28455e79fbad00dd8b2"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-4",
+      "word": "000fc400019e4f2e30c0003002147b60",
+      "sass": "TEX.SCR.LL.DC R46, R20, R2, R48, 0x3, 0x0, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1039813fce809e184eeeb81e84ca95dde845428b32e6a9f01f03c5cb06e13af8"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-5",
+      "word": "000fc400019e4f2830c00228022c7b60",
+      "sass": "TEX.SCR.LL.DC R40, R44, R2, R40, 0x3, 0x2, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1b6b15db2b8641f787f9d6c0d2a5bcd4736cac088e7471cbfdf3a127b1b404c9"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-6",
+      "word": "000fc400019e1f1630005816021a7b60",
+      "sass": "TEX.SCR.LL.AOFFI R22, R26, R2, R22, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8b2256db772c080070f2b313347e855ba3bf5587e79cd4b88424391e038debc1"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-7",
+      "word": "000fc400019e1f16300058202a207b60",
+      "sass": "TEX.SCR.LL.AOFFI R22, R32, R42, R32, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "94dd888d170489a8286664a9a18d4e2659425d3e433b90eb5b684e7d7a0a5385"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-8",
+      "word": "000fc400001e3f245000580c14147b60",
+      "sass": "TEX.SCR.AOFFI.NDV R36, R20, R20, R12, 0x0, 0x58, 3D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e1baa9ab37f1c46551289906441be4f7d87764a9bc900358fbabf4ea72f06f68"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-9",
+      "word": "000fc400019e1f36400058360c387b60",
+      "sass": "TEX.LL.AOFFI R54, R56, R12, R54, 0x0, 0x58, 3D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "66fd6d11af45ff1fb375738944b1a181114f2a7efa8322c0033c80d3013f65bc"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-10",
+      "word": "000fc400019e4f226000583020307b60",
+      "sass": "TEX.LL.DC R34, R48, R32, R48, 0x0, 0x58, CUBE",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6a59a3a991e4b8d0b0e7316f7f1529fb405cd1e4dcccce6ee365a34cee091d89"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-11",
+      "word": "000fc400019e0f289000583606067b60",
+      "sass": "TEX.SCR.LL R40, R6, R6, R54, 0x0, 0x58, ARRAY_1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "38db9280ffc3750ad26d193f6761a360421e6bfefdc16cd061945701c4313363"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-12",
+      "word": "000fc400019e0f0e300058300c0c7b60",
+      "sass": "TEX.SCR.LL R14, R12, R12, R48, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "77c80b22e49978b5112adbf449c60d3959e4f9f33be762e5bba61bbaaa7d4f99"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-13",
+      "word": "000fc400019e0f0ab000580830087b60",
+      "sass": "TEX.SCR.LL R10, R8, R48, R8, 0x0, 0x58, ARRAY_2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "728e5952a6d811ba32449273f38d67572ed1a45fd5dedcaa7b96aa1b7048acb3"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-14",
+      "word": "000fc400019e0f1a500058181a187b60",
+      "sass": "TEX.SCR.LL R26, R24, R26, R24, 0x0, 0x58, 3D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "d9e1335b4fe3ae9a896dcab064e8ce0393d85e66fb02623b497a6396c0747e33"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-15",
+      "word": "000fc400019e0f1ce0005804081e7b60",
+      "sass": "TEX.LL R28, R30, R8, R4, 0x0, 0x58, ARRAY_CUBE",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "fb9d42d803ae61434016311d1cbdcb97f4afa323b25b5621131ecf6f7126a376"
+    },
+    {
+      "case": "CuAssembler-TEX_R_R_R_R_II_II_L-16",
+      "word": "000fc400019e0f063000630a08082b60",
+      "sass": "@P2 TEX.SCR.LL R6, R8, R8, R10, 0x0, 0x63, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "67d0259c3d50fd722f5956a9422460d963c3e40ca2aa601c21a8c838959a7961"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_L-0",
+      "word": "000fc400009e1f0a1800000e04087367",
+      "sass": "TLD.SCR.B.LZ.AOFFI R10, R8, R4, R14, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_L-1",
+      "word": "000fc400009e1f121800000e0c0c7367",
+      "sass": "TLD.SCR.B.LZ.AOFFI R18, R12, R12, R14, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_L-2",
+      "word": "000fc400009e1f161800000e14147367",
+      "sass": "TLD.SCR.B.LZ.AOFFI R22, R20, R20, R14, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_L-3",
+      "word": "000fc400009e1f1c1800000e18187367",
+      "sass": "TLD.SCR.B.LZ.AOFFI R28, R24, R24, R14, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_L-4",
+      "word": "000fc400009e1f1e1800000f1c1c7367",
+      "sass": "TLD.SCR.B.LZ.AOFFI R30, R28, R28, R15, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_L-5",
+      "word": "000fc400009e1f1038000010300e7367",
+      "sass": "TLD.SCR.B.LZ.AOFFI R16, R14, R48, R16, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_L-6",
+      "word": "000fc400009e1f3c4800001e0c3e7367",
+      "sass": "TLD.B.LZ.AOFFI R60, R62, R12, R30, 3D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_L-7",
+      "word": "000fc400009e0f129800001002107367",
+      "sass": "TLD.SCR.B.LZ R18, R16, R2, R16, ARRAY_1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_L-8",
+      "word": "000fc400009e0f0c18000019040a7367",
+      "sass": "TLD.SCR.B.LZ R12, R10, R4, R25, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_L-9",
+      "word": "000fc400009e0f18b800001618167367",
+      "sass": "TLD.SCR.B.LZ R24, R22, R24, R22, ARRAY_2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_L-10",
+      "word": "000fc400009e0f1a5800001a18187367",
+      "sass": "TLD.SCR.B.LZ R26, R24, R24, R26, 3D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_UR_II_L-0",
+      "word": "000fc400089e1f1a1000060e04187f66",
+      "sass": "TLD.SCR.LZ.AOFFI R26, R24, R4, R14, UR6, 0x0, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_UR_II_L-1",
+      "word": "000fc400089e1f1e1000060e1d1c7f66",
+      "sass": "TLD.SCR.LZ.AOFFI R30, R28, R29, R14, UR6, 0x0, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_UR_II_L-2",
+      "word": "000fc400089e1f221000080e29207f66",
+      "sass": "TLD.SCR.LZ.AOFFI R34, R32, R41, R14, UR8, 0x0, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_UR_II_L-3",
+      "word": "000fc400089e1f261000080e04247f66",
+      "sass": "TLD.SCR.LZ.AOFFI R38, R36, R4, R14, UR8, 0x0, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_UR_II_L-4",
+      "word": "000fc400089e1f061000040e04027f66",
+      "sass": "TLD.SCR.LZ.AOFFI R6, R2, R4, R14, UR4, 0x0, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_UR_II_L-5",
+      "word": "000fc400089e1f1e3000040738087f66",
+      "sass": "TLD.SCR.LZ.AOFFI R30, R8, R56, R7, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_UR_II_L-6",
+      "word": "000fc400089e1f105000040e14087f66",
+      "sass": "TLD.SCR.LZ.AOFFI R16, R8, R20, R14, UR4, 0x0, 3D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_UR_II_L-7",
+      "word": "000fc400089e1f18500004180a0a7f66",
+      "sass": "TLD.SCR.LZ.AOFFI R24, R10, R10, R24, UR4, 0x0, 3D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_UR_II_L-8",
+      "word": "000fc400089e0f089000043e02067f66",
+      "sass": "TLD.SCR.LZ R8, R6, R2, R62, UR4, 0x0, ARRAY_1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_UR_II_L-9",
+      "word": "000fc400089e0f0eb000043e0c047f66",
+      "sass": "TLD.SCR.LZ R14, R4, R12, R62, UR4, 0x0, ARRAY_2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_UR_II_L-10",
+      "word": "000fc400089e0f0430000406060e7f66",
+      "sass": "TLD.SCR.LZ R4, R14, R6, R6, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_II_II_L-0",
+      "word": "000fc400009e1f241000580e04207b66",
+      "sass": "TLD.SCR.LZ.AOFFI R36, R32, R4, R14, 0x0, 0x58, 1D",
+      "outcome": "CONSUMER_REJECTED",
+      "diagnostic": "TLD 1D  AOFFI"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_II_II_L-1",
+      "word": "000fc400009e1f2810005a0e04267b66",
+      "sass": "TLD.SCR.LZ.AOFFI R40, R38, R4, R14, 0x0, 0x5a, 1D",
+      "outcome": "CONSUMER_REJECTED",
+      "diagnostic": "TLD 1D  AOFFI"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_II_II_L-2",
+      "word": "000fc400009e1f0a10005c0e04087b66",
+      "sass": "TLD.SCR.LZ.AOFFI R10, R8, R4, R14, 0x0, 0x5c, 1D",
+      "outcome": "CONSUMER_REJECTED",
+      "diagnostic": "TLD 1D  AOFFI"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_II_II_L-3",
+      "word": "000fc400009e1f1210005e0e04027b66",
+      "sass": "TLD.SCR.LZ.AOFFI R18, R2, R4, R14, 0x0, 0x5e, 1D",
+      "outcome": "CONSUMER_REJECTED",
+      "diagnostic": "TLD 1D  AOFFI"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_II_II_L-4",
+      "word": "000fc400009e1f1610c0000e04147b66",
+      "sass": "TLD.SCR.LZ.AOFFI R22, R20, R4, R14, 0x3, 0x0, 1D",
+      "outcome": "CONSUMER_REJECTED",
+      "diagnostic": "TLD 1D  AOFFI"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_II_II_L-5",
+      "word": "000fc400009e1f143000580738127b66",
+      "sass": "TLD.SCR.LZ.AOFFI R20, R18, R56, R7, 0x0, 0x58, 2D",
+      "outcome": "CONSUMER_REJECTED",
+      "diagnostic": "TLD 2D  AOFFI"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_II_II_L-6",
+      "word": "000fc400009e1f1a5000581814187b66",
+      "sass": "TLD.SCR.LZ.AOFFI R26, R24, R20, R24, 0x0, 0x58, 3D",
+      "outcome": "CONSUMER_REJECTED",
+      "diagnostic": "TLD 3D  AOFFI"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_II_II_L-7",
+      "word": "000fc400009e1f2050005a1e141e7b66",
+      "sass": "TLD.SCR.LZ.AOFFI R32, R30, R20, R30, 0x0, 0x5a, 3D",
+      "outcome": "CONSUMER_REJECTED",
+      "diagnostic": "TLD 3D  AOFFI"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_II_II_L-8",
+      "word": "000fc400009e0f309000583e02347b66",
+      "sass": "TLD.SCR.LZ R48, R52, R2, R62, 0x0, 0x58, ARRAY_1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "8cc4d1cb13ee3ecd41aa740afa457ee7a024a0edc2955cfb14ec6d67ba7a08dd"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_II_II_L-9",
+      "word": "000fc400009e0f3ab000583e0c387b66",
+      "sass": "TLD.SCR.LZ R58, R56, R12, R62, 0x0, 0x58, ARRAY_2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "2048cec006e0b4391ab3a88b764b92cfb865662941bec03c21b203fa5559ab66"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_II_II_L-10",
+      "word": "000fc400009e0f06b0005a3e04047b66",
+      "sass": "TLD.SCR.LZ R6, R4, R4, R62, 0x0, 0x5a, ARRAY_2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "1fa88a0c16f02221154e3d4c6a8bd6cd9b965033ee5c138913cc8fba8603697c"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_R_II_II_L-11",
+      "word": "000fc400009e0f1e30005806061c7b66",
+      "sass": "TLD.SCR.LZ R30, R28, R6, R6, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "48532cd35c5aa6d3fb9fb7496ff0c5b93d24b47ffeb9a30af540421ae4efb724"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_UR_II_L-0",
+      "word": "000fc400089e0f08100006ff04147f66",
+      "sass": "TLD.SCR.LZ R8, R20, R4, UR6, 0x0, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_UR_II_L-1",
+      "word": "000fc400089e0f0c100008ff040a7f66",
+      "sass": "TLD.SCR.LZ R12, R10, R4, UR8, 0x0, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_UR_II_L-2",
+      "word": "000fc400089e0f12100006ff04107f66",
+      "sass": "TLD.SCR.LZ R18, R16, R4, UR6, 0x0, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_UR_II_L-3",
+      "word": "000fc400089e0f16100008ff04147f66",
+      "sass": "TLD.SCR.LZ R22, R20, R4, UR8, 0x0, 1D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_II_II_L-0",
+      "word": "000fc400009e0f12100058ff04107b66",
+      "sass": "TLD.SCR.LZ R18, R16, R4, 0x0, 0x58, 1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "9ae3e9bba4d94d1bd49b5718610dccae85635f2c5f80a6891e4afaf45b683411"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_II_II_L-1",
+      "word": "000fc400009e0f1610005aff04147b66",
+      "sass": "TLD.SCR.LZ R22, R20, R4, 0x0, 0x5a, 1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "ee33fd2094dcb8d4cda8d558891e1179cf06333963a3734b9ef32945ffe81b51"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_II_II_L-2",
+      "word": "000fc400009e0f1810005cff041e7b66",
+      "sass": "TLD.SCR.LZ R24, R30, R4, 0x0, 0x5c, 1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6c0dd877a555d08f8ec94c95e155cd97e22b3c559c4cfa88f2a8c1492edb496b"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_II_II_L-3",
+      "word": "000fc400009e0f0c10005eff040a7b66",
+      "sass": "TLD.SCR.LZ R12, R10, R4, 0x0, 0x5e, 1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "3829fbb10fb70bb591fa26bd0a91d6ee926812113d1c89ca6aa742c51a1bbb48"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_II_II_L-4",
+      "word": "000fc400009e0f1c10c000ff040e7b66",
+      "sass": "TLD.SCR.LZ R28, R14, R4, 0x3, 0x0, 1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "cc935d0e69ec8230a4620820cf9f654fa9ce7e10ca8101fa26ac35df547c406d"
+    },
+    {
+      "case": "CuAssembler-TLD_R_R_R_II_II_L-5",
+      "word": "000fc400009e0f92100076ff92987b66",
+      "sass": "TLD.SCR.LZ R146, R152, R146, 0x0, 0x76, 1D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "42ae9b7c4143967fabbcf98c5d8493f2570ec3361479edb07467a17a3f829ef9"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_UR_II_L-0",
+      "word": "000fc400099e1f0a3000040738087f63",
+      "sass": "TLD4.SCR.A.AOFFI R10, R8, R56, R7, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_UR_II_L-1",
+      "word": "000fc400099e1f12300004070e0e7f63",
+      "sass": "TLD4.SCR.A.AOFFI R18, R14, R14, R7, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_UR_II_L-2",
+      "word": "000fc400099e1f163000060738147f63",
+      "sass": "TLD4.SCR.A.AOFFI R22, R20, R56, R7, UR6, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_UR_II_L-3",
+      "word": "000fc400099e1f26300006071c1c7f63",
+      "sass": "TLD4.SCR.A.AOFFI R38, R28, R28, R7, UR6, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_UR_II_L-4",
+      "word": "000fc400099e1f1230000407380e7f63",
+      "sass": "TLD4.SCR.A.AOFFI R18, R14, R56, R7, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_UR_II_L-5",
+      "word": "000fc400091e1f0a3000040738087f63",
+      "sass": "TLD4.SCR.B.AOFFI R10, R8, R56, R7, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_UR_II_L-6",
+      "word": "000fc400089e1f0a3000040738087f63",
+      "sass": "TLD4.SCR.G.AOFFI R10, R8, R56, R7, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_UR_II_L-7",
+      "word": "000fc400081e1f0a3000040738087f63",
+      "sass": "TLD4.SCR.R.AOFFI R10, R8, R56, R7, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_UR_II_L-8",
+      "word": "000fc400099e0f103000043030027f63",
+      "sass": "TLD4.SCR.A R16, R2, R48, R48, UR4, 0x0, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_L-0",
+      "word": "000fc400019e1f1c3800001838187364",
+      "sass": "TLD4.SCR.A.B.AOFFI R28, R24, R56, R24, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_L-1",
+      "word": "000fc400019e1f20380000201e1e7364",
+      "sass": "TLD4.SCR.A.B.AOFFI R32, R30, R30, R32, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_L-2",
+      "word": "000fc400019e1f283800002438247364",
+      "sass": "TLD4.SCR.A.B.AOFFI R40, R36, R56, R36, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_L-3",
+      "word": "000fc400019e1f2c3800002c2a2a7364",
+      "sass": "TLD4.SCR.A.B.AOFFI R44, R42, R42, R44, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_L-4",
+      "word": "000fc400019e1f0a3800000c38087364",
+      "sass": "TLD4.SCR.A.B.AOFFI R10, R8, R56, R12, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_L-5",
+      "word": "000fc400011e1f1c3800001838187364",
+      "sass": "TLD4.SCR.B.B.AOFFI R28, R24, R56, R24, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_L-6",
+      "word": "000fc400009e1f1c3800001838187364",
+      "sass": "TLD4.SCR.G.B.AOFFI R28, R24, R56, R24, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_L-7",
+      "word": "000fc400001e1f1c3800001838187364",
+      "sass": "TLD4.SCR.R.B.AOFFI R28, R24, R56, R24, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_L-8",
+      "word": "000fc400019e0f103800000e260e7364",
+      "sass": "TLD4.SCR.A.B R16, R14, R38, R14, 2D",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TLD4: consumer requires a constant-buffer handle form"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_II_II_L-0",
+      "word": "000fc400019e1f143000580738127b63",
+      "sass": "TLD4.SCR.A.AOFFI R20, R18, R56, R7, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "4f6828043d7759186bee441def1c43e7bbe921255c03a021b0786c105c12bac8"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_II_II_L-1",
+      "word": "000fc400019e1f1830005a0738167b63",
+      "sass": "TLD4.SCR.A.AOFFI R24, R22, R56, R7, 0x0, 0x5a, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "c8b7472ad1c1f99d0ad76501f88e7a873df5d9db71ff684b909dd6c60d99cd1a"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_II_II_L-2",
+      "word": "000fc400019e1f2c30c00007382a7b63",
+      "sass": "TLD4.SCR.A.AOFFI R44, R42, R56, R7, 0x3, 0x0, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "e5fa637adeb3523f2a4d499de5ea78754bdc561afb45103e997ae2108e540275"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_II_II_L-3",
+      "word": "000fc400019e1f0c30c0020738087b63",
+      "sass": "TLD4.SCR.A.AOFFI R12, R8, R56, R7, 0x3, 0x2, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "72c78cfa1cc7a8bbb2c7f3d5620e46af54cb8b33086e9b3cd6ce77379a18a4a2"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_II_II_L-4",
+      "word": "000fc400019e1f1230c00407380e7b63",
+      "sass": "TLD4.SCR.A.AOFFI R18, R14, R56, R7, 0x3, 0x4, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "2bde68ff4101afd5fdd74ba49aaf9e9565f12869cfbaef4c80d5f470e0dccd2d"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_II_II_L-5",
+      "word": "000fc400011e1f143000580738127b63",
+      "sass": "TLD4.SCR.B.AOFFI R20, R18, R56, R7, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "07b24bd03146d5617647e56870bf91f813d6f51697cbeef65b29cbd5d37727f9"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_II_II_L-6",
+      "word": "000fc400009e1f143000580738127b63",
+      "sass": "TLD4.SCR.G.AOFFI R20, R18, R56, R7, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "df51a66c172d771c6a6b925a956b0e7d98e771ff15e56f15e5820d3492dc33e7"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_II_II_L-7",
+      "word": "000fc400001e1f143000580738127b63",
+      "sass": "TLD4.SCR.R.AOFFI R20, R18, R56, R7, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "6a225a84de2d2bed6732385978faf7a2e48908a81952131f7545993783d369e0"
+    },
+    {
+      "case": "CuAssembler-TLD4_R_R_R_R_II_II_L-8",
+      "word": "000fc400019e0f183000583030167b63",
+      "sass": "TLD4.SCR.A R24, R22, R48, R48, 0x0, 0x58, 2D",
+      "outcome": "GLSL_GENERATED",
+      "glsl_sha256": "555641faeae4458a827afc0978e80ddaf3db788d80ae7a8df0a58574743b741e"
+    },
+    {
+      "case": "unknown-modifier",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: unhandled modifiers ['UNKNOWN_MODE']"
+    },
+    {
+      "case": "unknown-operand-modifier",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: modified texture register"
+    },
+    {
+      "case": "wrong-opcode",
+      "outcome": "ADAPTER_REJECTED",
+      "diagnostic": "TEX: consumer requires a constant-buffer handle form"
+    }
+  ]
+}

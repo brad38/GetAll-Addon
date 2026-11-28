@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-11-28T00:49:45.835108+00:00",
+  "desktop_commit": "921295de12349e726f7ca21a5edd8a8ecee123d8",
+  "desktop_assembly": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127\\bin\\Release\\net8.0-windows\\win-x64\\AllFix.dll",
+  "desktop_assembly_sha256": "3c6ad7c8909888c13452777db37a6ddea940281f533b8588ba0852984ca2c44d",
+  "candidate_manifest_sha256": "aa85bbe915f2a8d975a8fa0139dea79d145d8c0a0107464941505a7f528a01e3",
+  "candidate_executable_sha256": "b558afccf6fa50ec9a3899b66055009f04f8ce71cfc4dbcc6ab3886bd0433fcd",
+  "source_files": [
+    {
+      "path": "global.json",
+      "bytes": 74,
+      "sha256": "0a73555a23740b38c70e1275c3a3dfe11ab358ff23aba3dd1e13f8b83d4ece07"
+    },
+    {
+      "path": "NuGet.Config",
+      "bytes": 113,
+      "sha256": "2142cfb2dfa2c7feefbe40fabcc68b0dfecadafa99a1db9b70239d977cf2a7ef"
+    },
+    {
+      "path": "Program.cs",
+      "bytes": 10080,
+      "sha256": "a45fd15a6bb93b2c5439e81e630e3a4a44c94a3afa2eb83d81a953f006e892ea"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2011,
+      "sha256": "c82412022b9809e9b2486df9db17e306f0fd019481c6934c7c42e1ac00b33851"
+    },
+    {
+      "path": "run-proof.py",
+      "bytes": 6026,
+      "sha256": "78816a83b5833c99e5bfcad8607bb28b1bc05da4990396cd4e4da64bdd3d1227"
+    },
+    {
+      "path": "StoreAssemblyProof.csproj",
+      "bytes": 237,
+      "sha256": "ec0fa27df452a818213bfeb9c3d8797e014198c3f5a4f911f66ee70223b90758"
+    }
+  ],
+  "host": "Runner framework-dependent runtimeconfig; real Desktop AssemblyDependencyResolver",
+  "commands": [
+    {
+      "label": "dotnet-version",
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.093,
+      "log": "dotnet-version.log",
+      "bytes": 9,
+      "sha256": "edd0ad505c4a86b69a22139ead7657ff889802887824385e6334d544555dbbb7"
+    },
+    {
+      "label": "build",
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.exe",
+        "build",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\store-assembly-proof-sdk169\\StoreAssemblyProof.csproj",
+        "-c",
+        "Release",
+        "--nologo",
+        "--configfile",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\store-assembly-proof-sdk169\\NuGet.Config",
+        "-p:UseAppHost=false",
+        "-o",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\store-assembly-proof-sdk169-result\\bin"
+      ],
+      "exit_code": 0,
+      "seconds": 0.985,
+      "log": "build.log",
+      "bytes": 456,
+      "sha256": "6e3eb938c13334569cc46efbd58f37aabbc153cebc7bfc73f5de64ed3132c1ea"
+    },
+    {
+      "label": "store-services",
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.exe",
+        "exec",
+        "--runtimeconfig",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\store-assembly-proof-sdk169-result\\bin\\StoreAssemblyProof.runtimeconfig.json",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\store-assembly-proof-sdk169-result\\bin\\StoreAssemblyProof.dll",
+        "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127\\bin\\Release\\net8.0-windows\\win-x64\\AllFix.dll"
+      ],
+      "exit_code": 0,
+      "seconds": 0.25,
+      "log": "store-services.log",
+      "bytes": 2763,
+      "sha256": "8ed2c023d757572c0c519fcd0b61200dbdf17ddf54c21e7d6b899aac4eda790c"
+    }
+  ],
+  "errors": [],
+  "checks": 20,
+  "git_state_unchanged": true,
+  "desktop_assembly_unchanged": true,
+  "candidate_unchanged": true,
+  "finished_utc": "2026-11-28T00:49:47.402908+00:00"
+}

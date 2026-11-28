@@ -1,0 +1,13 @@
+{
+  "schema_version": 5,
+  "project_id": "drmario64-recomp",
+  "tag": "build-7892264",
+  "source_url": "https://github.com/AngheloAlf/drmario64_recomp/commit/7892264252fd662c140625ad35cab62825ab473b",
+  "operations": [],
+  "required_files": [
+    "source.zip",
+    "README.md"
+  ],
+  "inputs": [],
+  "manual_steps": "Selecione sua ROM original americana de Dr. Mario 64 em formato .z64. O AllFix verifica a midia, prepara Python e os compiladores privados, gera o codigo e compila o jogo automaticamente."
+}

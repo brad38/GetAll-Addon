@@ -1,0 +1,260 @@
+{
+  "schema": 1,
+  "scope": "Local consolidation of completed cleanup receipts; no new deletion or Windows inspection",
+  "baseline": {
+    "batches": 5,
+    "removed_files": 11727,
+    "logical_bytes_removed": 5332203105,
+    "evidence_report": "../metaforce-de8fc69/CLEANUP-OBJECTS.md",
+    "evidence_report_bytes": 3497,
+    "evidence_report_sha256": "fcbb49b881b18bbb3f718a54e1c5ea19fec222908f26e44f576319afd33cd959",
+    "evidence_basis": "Aggregate recorded by the existing local report; original Windows receipts were not re-read during this consolidation",
+    "previous_storage_log_sha256": "74ba0ff7de8a3bebeb9dd7e95f494bb5c46d8dca0863390b2c47718efe70df29",
+    "included_metaforce_receipts": [
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\cleanup-objects-20261127T214812Z-cf5340d4\\result.json",
+        "removed_files": 1293,
+        "logical_bytes_removed": 34448295,
+        "sha256": "f5058db262118f26a6db82b68ca4ff823a9bed9bba9250c157f331123b604adc"
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\cleanup-policy-source-20261127T215117Z-bd512aae\\result.json",
+        "removed_files": 1,
+        "logical_bytes_removed": 21536851,
+        "sha256": "c2d046385107afe903474e03d304ab6da7223d8e89dcee80cb6e5d7a52eeeb48"
+      }
+    ]
+  },
+  "added_mkw_batch": {
+    "batches": 1,
+    "receipt": "cleanup-native-attempts-20261127.receipt.json",
+    "receipt_bytes": 27752,
+    "receipt_sha256": "dff865fecdd027c2483bf173583b331d01b5e06892ca93257254c0542d4be980",
+    "original_receipt": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\mkw-independent-20261127\\cleanup-native-attempts-20261127.receipt.json",
+    "status": "PASS",
+    "started_utc": "2026-11-27T22:03:04.3774770Z",
+    "finished_utc": "2026-11-27T22:03:06.1184116Z",
+    "plan_sha256": "6a2827055f01fd200f30295fb812c6e3d28ca6715f371152431896e8397fdddc",
+    "removed_files": 68,
+    "logical_bytes_removed": 35699285,
+    "groups": [
+      {
+        "kind": "verified-tool-copy",
+        "files": 6,
+        "logical_bytes": 35684352
+      },
+      {
+        "kind": "authored-fixture",
+        "files": 62,
+        "logical_bytes": 14933
+      }
+    ],
+    "preserved_records_identical": true,
+    "preserved": {
+      "old_attempt_sources_logs_notices": {
+        "files": 829,
+        "bytes": 10518851,
+        "manifest_sha256": "97574e6b2524d4bec0994dd5cd9dc8a6f85f047d302f2756ef4be7783f42443c"
+      },
+      "native8": {
+        "files": 220,
+        "bytes": 8296116,
+        "manifest_sha256": "23ed715c3d63962e0eb3fb464a0b6c48791e070ad932d1d1898c86db3135b603"
+      },
+      "outer_scripts_logs_receipts": {
+        "files": 44,
+        "bytes": 298704,
+        "manifest_sha256": "6107ba05d11a96582dc2c9ef7385aa6b906a6fde9b551839bb5ce27dd0efcda4"
+      },
+      "shared_nvdisasm_cache_sha256": "a348209c803fa67b7bc216a5b4d7a6f9a117ccc60a8c567eb94cf25ba737ec47"
+    },
+    "excluded_roots": [
+      "backend-native-8",
+      "Desktop worktree",
+      "Git documentation",
+      "shared caches",
+      "original media"
+    ]
+  },
+  "total": {
+    "batches": 8,
+    "removed_files": 11890,
+    "logical_bytes_removed": 5571039928,
+    "decimal_gigabytes": 5.571039928,
+    "environment": "Windows Bradsson"
+  },
+  "consolidation_checks": {
+    "mkw_receipt_sha256": "PASS",
+    "mkw_unique_paths": true,
+    "mkw_path_roots": "backend-native-2..7 only",
+    "mkw_group_and_total_sums": "PASS",
+    "mkw_preserved_records_before_after": "IDENTICAL",
+    "combined_totals": "PASS",
+    "policy31d_receipt_sha256": "PASS",
+    "policy31d_unique_paths": true,
+    "policy31d_removed_sums": "PASS",
+    "policy31d_source_copy_matches_preserved_cache": "PASS",
+    "final_sdk169_receipt_sha256": "PASS",
+    "final_sdk169_unique_group_paths": true,
+    "final_sdk169_group_and_total_sums": "PASS",
+    "final_sdk169_plan_and_script_sha256": "PASS",
+    "final_sdk169_three_archived_receipts": "PASS",
+    "final_sdk169_preserved_roots": "5 roots, 253 files, all unchanged"
+  },
+  "limitations": [
+    "Logical removed bytes are not current free disk space.",
+    "The MKW receipt does not contain a before/after free-space measurement.",
+    "The five earlier Windows cleanup receipts were not re-opened in this local task.",
+    "Policy31d records an observed free-space delta; it is distinct from logical removed bytes and is not a current disk measurement.",
+    "Final SDK169 cleanup records an observed free-space delta; it is distinct from logical removed bytes and is not a current disk measurement."
+  ],
+  "new_deletions_executed": false,
+  "windows_reinspection": false,
+  "added_policy31d_batch": {
+    "batches": 1,
+    "receipt": "cleanup-policy31d-result.json",
+    "receipt_bytes": 1861,
+    "receipt_sha256": "ca41a8380b6e2966c5498b6420944d27cc7150188ae9f948fe18bfd694bb5509",
+    "status": "PASS",
+    "completed_utc": "2026-11-28T00:42:27.956012+00:00",
+    "removed_files": 2,
+    "logical_bytes_removed": 21658683,
+    "removed": [
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\three-upstreams-20261127\\metaforce-policy-build31d\\games á\\Metroid Prime - Metaforce build-de8fc69\\source.zip",
+        "bytes": 21536851,
+        "sha256": "e130131a1a41e8599541d8ab3dd2f31c6d8abaa9af03411f8bba25c3f5b63f21"
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\evidence-transfer31d.zip.b64",
+        "bytes": 121832,
+        "sha256": "3bd29638620fc9b048c321a99c9d455a28ca30aeb72d26458780e5e06983d768"
+      }
+    ],
+    "policy_preserved_files": 145,
+    "policy_preserved_bytes": 1605553,
+    "source_cache_preserved": {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\console-cache\\metaforce-de8fc69-source.zip",
+      "bytes": 21536851,
+      "sha256": "e130131a1a41e8599541d8ab3dd2f31c6d8abaa9af03411f8bba25c3f5b63f21"
+    },
+    "integrated_gate_preserved": {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\build31d-result.json",
+      "bytes": 6687,
+      "sha256": "51f98c91d7a0ff2a925ac0a5043217e795ece487fa5478347acfa0f3277229a9"
+    },
+    "before_manifest": {
+      "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\cleanup-policy31d\\before.json",
+      "bytes": 47987,
+      "sha256": "c70a7bb0408e44b3f4ffb1dac0946fdfb7ae818b54483d11b63203443b4c1dc1"
+    },
+    "free_before": 103018151936,
+    "free_after": 103039766528,
+    "observed_free_space_delta": 21614592,
+    "limits": "Only a task-owned source ZIP duplicate and base64 transport copy were removed. The old fixture kit is now intentionally incomplete; reproduce in a new work path. No original media, personal data, active build, harness, toolchain or shared dependency was removed."
+  },
+  "added_final_sdk169_batch": {
+    "batches": 1,
+    "receipt": "final-cleanup/result.json",
+    "receipt_bytes": 25640,
+    "receipt_sha256": "fa2215792b510614036a44b1297d11b23b908d7d806215b1145b58e8fcae4ef3",
+    "status": "PASS",
+    "started_utc": "2026-11-28T00:55:27.287876+00:00",
+    "completed_utc": "2026-11-28T00:55:27.864523+00:00",
+    "removed_files": 93,
+    "logical_bytes_removed": 181478855,
+    "groups": [
+      {
+        "group": "desktop-candidate-duplicate",
+        "files": 80,
+        "logical_bytes": 165754040
+      },
+      {
+        "group": "failed-build31",
+        "files": 0,
+        "logical_bytes": 0
+      },
+      {
+        "group": "failed-build31b",
+        "files": 3,
+        "logical_bytes": 116109
+      },
+      {
+        "group": "failed-build31c",
+        "files": 10,
+        "logical_bytes": 15608706
+      }
+    ],
+    "plan_sha256": "7e9298276b3c2fdfdda238e5e33f3862c24c2e36079691cbb95ab62bfa3ecfcb",
+    "script_sha256": "ae62a7c0fa2cc0f027262b0cfd0573a49c6293fcf7774b237ac186109188f72b",
+    "candidate_receipts_archived": [
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\cleanup-final-sdk169\\candidate-receipts\\ARTIFACT-MANIFEST.json",
+        "bytes": 15175,
+        "sha256": "aa85bbe915f2a8d975a8fa0139dea79d145d8c0a0107464941505a7f528a01e3"
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\cleanup-final-sdk169\\candidate-receipts\\SHA256SUMS.txt",
+        "bytes": 8670,
+        "sha256": "34b27a36e0e7a8090b6f3681086e99fca4a9e09c1dbe49f8a95bce9f04a87275"
+      },
+      {
+        "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\cleanup-final-sdk169\\candidate-receipts\\RESOURCE-AUDIT.json",
+        "bytes": 6430,
+        "sha256": "127cfc144b14b9a784c56901b1346872d5013d71d68e20e67519a6046e60dd59"
+      }
+    ],
+    "preserved_roots": [
+      {
+        "root": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-complete-flows-20261127",
+        "files": 76,
+        "bytes": 165612604,
+        "inventory_sha256": "d297dbd0d6f9cf6b058c95134260273b075ab78a830270774a2c605c35f22cab",
+        "unchanged": true
+      },
+      {
+        "root": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk168-20261127",
+        "files": 76,
+        "bytes": 165648734,
+        "inventory_sha256": "70f55fefeb170546ce7cf23b23928f08719bbdf85343f46b88b9720a50d77126",
+        "unchanged": true
+      },
+      {
+        "root": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\publish-getall-sdk169-20261127",
+        "files": 81,
+        "bytes": 165755111,
+        "inventory_sha256": "954268730f8f2601df32fedb78bd5beb6f8d7cda0bf4491efda5a9b187412775",
+        "unchanged": true
+      },
+      {
+        "root": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build30",
+        "files": 10,
+        "bytes": 15356522,
+        "inventory_sha256": "a018be43fedaa9e8e510d20f2cb67e406435c8f4b5e88e3585653275325d4138",
+        "unchanged": true
+      },
+      {
+        "root": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\harness-build31d",
+        "files": 10,
+        "bytes": 15608714,
+        "inventory_sha256": "01a3c87ecdfe7602a28e59e366d967b7f58fa2b5971d1f6e25922af24011b18a",
+        "unchanged": true
+      }
+    ],
+    "preserved_root_count": 5,
+    "preserved_file_count": 253,
+    "failed_gate_receipts_preserved": true,
+    "complete_preview_manifest_sha256": "18cbb75144560fbacbe20708b0b3a63a95577d85490a814cc4dece4d770d9590",
+    "free_before": 102123524096,
+    "free_after": 102305079296,
+    "observed_free_space_delta": 181555200,
+    "limits": "Only the duplicate Desktop candidate and failed harness31/31b/31c output trees were removed. Complete previews167/168/169 and harness30/31d were verified unchanged. Repository bin/obj, source, caches, shared tools, originals and personal files are outside all deletion roots."
+  },
+  "excluded_from_windows_total": [
+    {
+      "environment": "scratch",
+      "reported_logical_bytes_removed": 17080,
+      "reason": "Separate environment; excluded from all Windows batches and totals"
+    }
+  ]
+}

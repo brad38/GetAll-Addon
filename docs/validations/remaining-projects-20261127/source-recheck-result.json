@@ -1,0 +1,70 @@
+{
+  "verified_utc": "2026-11-27T21:04:28.796258+00:00",
+  "passed": true,
+  "binary_bytes_downloaded": 0,
+  "sources": [
+    {
+      "project_id": "project-2099",
+      "path": "NO_GAME_DATA.md",
+      "url": "https://raw.githubusercontent.com/GenryTheFox0/Project-2099/1830cb5ed02c13290ddd8f53d2adc103decc2514/NO_GAME_DATA.md",
+      "http_status": 200,
+      "bytes": 789,
+      "sha256": "8ef267c0101edcb0ba6c0b0557047964f840616fda459be170a01bdbf16539df",
+      "passed": true
+    },
+    {
+      "project_id": "project-2099",
+      "path": "THIRD_PARTY_LICENSES.md",
+      "url": "https://raw.githubusercontent.com/GenryTheFox0/Project-2099/1830cb5ed02c13290ddd8f53d2adc103decc2514/THIRD_PARTY_LICENSES.md",
+      "http_status": 200,
+      "bytes": 4883,
+      "sha256": "eb0ababa0eae1a986666f90a069f4c752fd293df7a78709abf11b149f859523e",
+      "passed": true
+    },
+    {
+      "project_id": "project-2099",
+      "path": "prepare_payload.ps1",
+      "url": "https://raw.githubusercontent.com/GenryTheFox0/Project-2099/1830cb5ed02c13290ddd8f53d2adc103decc2514/prepare_payload.ps1",
+      "http_status": 200,
+      "bytes": 11718,
+      "sha256": "9a518381905ad63989d30a4dd374fdca19ffa21397db7c94d7da91eadd2fd925",
+      "passed": true
+    },
+    {
+      "project_id": "project-2099",
+      "path": "src/InstallerCore.cs",
+      "url": "https://raw.githubusercontent.com/GenryTheFox0/Project-2099/1830cb5ed02c13290ddd8f53d2adc103decc2514/src/InstallerCore.cs",
+      "http_status": 200,
+      "bytes": 52377,
+      "sha256": "9a7925028351ec10470f2caa7d6b4b2fb80e8764001dbaa0f7524bbc3dd1d7f0",
+      "passed": true
+    },
+    {
+      "project_id": "doldecomp-mkdd-decompilacao-base",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/doldecomp/mkdd/0c3baef1ba96867f4ebbcdde02f7a43624224a85/README.md",
+      "http_status": 200,
+      "bytes": 4557,
+      "sha256": "7c239caa557402e43c5fafe288eb522747d022c6f4c72f227f3540858ab1ef12",
+      "passed": true
+    },
+    {
+      "project_id": "tmc-decompilacao-base",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/zeldaret/tmc/beaf1ade00984b666fd625ba0c76686eae75cc69/README.md",
+      "http_status": 200,
+      "bytes": 2999,
+      "sha256": "6b5272cac4d7aa8bdd15bf717d7fc57d4efabf3433ffa312a6ff4854fd765134",
+      "passed": true
+    },
+    {
+      "project_id": "mml1-megaman-legends-decomp",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/ChrisNonyminus/mml1/964bad3096a2d7a4a3d6cc65678d8440b2ea9cb1/README.md",
+      "http_status": 200,
+      "bytes": 1123,
+      "sha256": "94d74f292a34806fd0ef9abf8cc353ed40c7c9d841e31473f0748ebfbd0905d0",
+      "passed": true
+    }
+  ]
+}

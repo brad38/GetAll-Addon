@@ -9,5 +9,5 @@
     "README.md"
   ],
   "inputs": [],
-  "manual_steps": "Compilacao experimental local de MKDD-Recomp (LeftInWalmart / CISO + Rust). Use Retomar e selecione sua ISO ou CISO GameCube USA (GM4E01) com main.dol SHA-1 oficial. Requer toolchain Rust instalada localmente. Nenhum jogo incluido."
+  "manual_steps": "Compilacao experimental local de Mario Kart: Double Dash!! (Rust/Bevy). Use Retomar e selecione sua imagem GameCube USA GM4E01 original (ISO ou CISO). O AllFix prepara as ferramentas privadas verificadas, extrai os dados, gera o codigo e compila automaticamente. Nenhum jogo incluido."
 }

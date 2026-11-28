@@ -1,0 +1,1281 @@
+{
+  "status": "ALL_CONSUMER_MNEMONICS_HAVE_POSITIVE_PROOFS",
+  "consumer_commit": "006d48de08849495e01e151602690d0ec322af82",
+  "mnemonics": 99,
+  "literal_fields": 98,
+  "dynamic_field_expressions": 31,
+  "normal_cli_program_gate": "backend-native-8",
+  "support": {
+    "path": "mkw-sm86-cli-support-v1.zip",
+    "bytes": 63227,
+    "sha256": "1c79d30594951495f210a349da05aabe0e240f0189dba87c95a78da73a4500ce",
+    "files": 26,
+    "source_modules": 13,
+    "overlays": [
+      {
+        "path": "sm86/translate/frontend/program.py",
+        "before_sha256": "4e96445c14206a44ce4531ab5688c035de651981fa896b0441507d57db8e6a36",
+        "after_sha256": "93050ad0c4eee1908eca71cae5f586133f29ab9e0ced6bf4937a2c2246ec74a2"
+      },
+      {
+        "path": "tools/prepare/shaderstep.py",
+        "before_sha256": "1b5e8a528ff37163ed43381ff223108d0e91471c92c9698e988702572e9df788",
+        "after_sha256": "4ffba8c1d68599ca841fb128e1d02b55cd4f8d987858da7c5a16d278112a6d66"
+      },
+      {
+        "path": "tools/shaders/extract.py",
+        "before_sha256": "aed28f031c1af522d2c212c0119d844ad912a32803fce454601ced30ebcbc7e0",
+        "after_sha256": "855b4b9e4a8d1301ebfca7ccd86378131f4910eb9dfbbfe523f6a520d14d331f"
+      },
+      {
+        "path": "tools/shaders/translate.py",
+        "before_sha256": "f4a58cf8751925e8eb756e479c952bd3134c7ebdf29bc6ea0a7cc0eba415708b",
+        "after_sha256": "dcb01d55d36ba0cf2dae4cfab57976eb9739723a70b1c5ff3938a19af3c0434c"
+      }
+    ]
+  },
+  "qualification": "Positive encodings for every opcode consumed by the pinned frontend, not every ISA encoding or commercial shader. Unknown/unsupported forms fail explicitly. No game boot or GPU execution is claimed.",
+  "rows": [
+    {
+      "opcode": "ALD",
+      "proofs": [
+        {
+          "kind": "authored-whole-program",
+          "name": "attributes",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "AST",
+      "proofs": [
+        {
+          "kind": "authored-whole-program",
+          "name": "attributes",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "ATOMG",
+      "proofs": [
+        {
+          "kind": "authored-whole-program",
+          "name": "atomics",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "negative-global-offset",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "BAR",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 3,
+          "representative": "BAR.SYNC 0x0"
+        }
+      ]
+    },
+    {
+      "opcode": "BRA",
+      "proofs": [
+        {
+          "kind": "authored-whole-program",
+          "name": "branch",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "BREAK",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 8,
+          "representative": null
+        }
+      ]
+    },
+    {
+      "opcode": "BRX",
+      "proofs": [
+        {
+          "kind": "authored-whole-program",
+          "name": "branch-register",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "BRXU",
+      "proofs": [
+        {
+          "kind": "authored-whole-program",
+          "name": "branch-uniform",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "BSSY",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 3,
+          "representative": null
+        }
+      ]
+    },
+    {
+      "opcode": "BSYNC",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 2,
+          "representative": null
+        }
+      ]
+    },
+    {
+      "opcode": "CALL",
+      "proofs": [
+        {
+          "kind": "authored-whole-program",
+          "name": "call-return",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "CS2R",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 3,
+          "representative": "CS2R R8, SRZ"
+        }
+      ]
+    },
+    {
+      "opcode": "DEPBAR",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 6,
+          "representative": null
+        }
+      ]
+    },
+    {
+      "opcode": "ERRBAR",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 1,
+          "representative": null
+        }
+      ]
+    },
+    {
+      "opcode": "EXIT",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 5,
+          "representative": "@P0 EXIT"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "branch",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "branch-register",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "branch-uniform",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "call-return",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "return-dispatch",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "atomics",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "negative-global-offset",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "task",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "mesh",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "kill",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "attributes",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "interpolation",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "F2FP",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 16,
+          "representative": "F2FP.BF16.PACK_AB R0, RZ, R0"
+        }
+      ]
+    },
+    {
+      "opcode": "F2I",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 18,
+          "representative": "F2I.FTZ.U32.TRUNC.NTZ R19, R18"
+        }
+      ]
+    },
+    {
+      "opcode": "FADD",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 49,
+          "representative": "FADD R7, -R2, -RZ"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "interpolation",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "FFMA",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 100,
+          "representative": "FFMA R7, -R3, R6, 1"
+        }
+      ]
+    },
+    {
+      "opcode": "FLO",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 14,
+          "representative": "FLO.U32 R57, R16"
+        }
+      ]
+    },
+    {
+      "opcode": "FMNMX",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 33,
+          "representative": "FMNMX R3, |R7|, 1, !PT"
+        }
+      ]
+    },
+    {
+      "opcode": "FMUL",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 47,
+          "representative": "@!P0 FMUL R19, R13, R5"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "attributes",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "FRND",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 11,
+          "representative": "FRND.FLOOR R19, R2"
+        }
+      ]
+    },
+    {
+      "opcode": "FSEL",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 44,
+          "representative": "FSEL R6, R4, R2, !P0"
+        }
+      ]
+    },
+    {
+      "opcode": "FSET",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 14,
+          "representative": "FSET.BF.EQ.AND R5, R5, RZ, PT"
+        }
+      ]
+    },
+    {
+      "opcode": "FSETP",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 80,
+          "representative": "FSETP.GTU.FTZ.AND P0, PT, |R0|, +INF , PT"
+        }
+      ]
+    },
+    {
+      "opcode": "FSWZADD",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 8,
+          "representative": "FSWZADD.NDV R20, R21, R20, ZPPPZPPP"
+        }
+      ]
+    },
+    {
+      "opcode": "HADD2",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 43,
+          "representative": "HADD2.F32 R12, -RZ, R28.H0_H0"
+        }
+      ]
+    },
+    {
+      "opcode": "HMMA",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 7,
+          "representative": "HMMA.16816.F16 R2, R20, R24, R2"
+        }
+      ]
+    },
+    {
+      "opcode": "HMNMX2",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 4,
+          "representative": "HMNMX2 R9, R16, R5.H0_H0, !PT"
+        }
+      ]
+    },
+    {
+      "opcode": "HSETP2",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 37,
+          "representative": "HSETP2.NEU.AND P1, PT, RZ.H0_H0, c[0x0] [0x178].H1_H1, PT"
+        }
+      ]
+    },
+    {
+      "opcode": "I2F",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 28,
+          "representative": "I2F.U32.RP R0, UR4"
+        }
+      ]
+    },
+    {
+      "opcode": "I2FP",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 15,
+          "representative": "I2FP.F32.U32 R2, c[0x0][0x0]"
+        }
+      ]
+    },
+    {
+      "opcode": "IABS",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 12,
+          "representative": "IABS R6, R5"
+        }
+      ]
+    },
+    {
+      "opcode": "IADD3",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 236,
+          "representative": "IADD3 R10, R5, -0x1, RZ"
+        }
+      ]
+    },
+    {
+      "opcode": "IMAD",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 126,
+          "representative": "IMAD.MOV.U32 R1, RZ, RZ, c[0x0][0x28]"
+        }
+      ]
+    },
+    {
+      "opcode": "IMNMX",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 35,
+          "representative": "IMNMX R7, R4, 0x1, !PT"
+        }
+      ]
+    },
+    {
+      "opcode": "IPA",
+      "proofs": [
+        {
+          "kind": "authored-whole-program",
+          "name": "interpolation",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "ISBERD",
+      "proofs": [
+        {
+          "kind": "authored-whole-program",
+          "name": "task",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "mesh",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "ISBEWR",
+      "proofs": [
+        {
+          "kind": "authored-whole-program",
+          "name": "task",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "mesh",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "ISETP",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 135,
+          "representative": "ISETP.NE.AND P0, PT, R0, UR4, PT"
+        }
+      ]
+    },
+    {
+      "opcode": "KILL",
+      "proofs": [
+        {
+          "kind": "authored-whole-program",
+          "name": "kill",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "LDC",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 17,
+          "representative": "LDC.U8 R4, c[0x0][0x180]"
+        }
+      ]
+    },
+    {
+      "opcode": "LDG",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 8,
+          "representative": "LDG.E R6, [R4]"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "negative-global-offset",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "LDL",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 9,
+          "representative": "LDL.LU R29, [R1]"
+        }
+      ]
+    },
+    {
+      "opcode": "LDS",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 48,
+          "representative": "@!P1 LDS.128 R12, [R2]"
+        }
+      ]
+    },
+    {
+      "opcode": "LDSM",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 6,
+          "representative": "LDSM.16.M88.4 R68, [R2]"
+        }
+      ]
+    },
+    {
+      "opcode": "LEA",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 189,
+          "representative": "LEA R0, R5, 0xc0800000, 0x17"
+        }
+      ]
+    },
+    {
+      "opcode": "LOP3",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 81,
+          "representative": "LOP3.LUT R5, R5, 0xff, RZ, 0xc0, !PT"
+        }
+      ]
+    },
+    {
+      "opcode": "MATCH",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 4,
+          "representative": "MATCH.ANY R5, R9"
+        }
+      ]
+    },
+    {
+      "opcode": "MEMBAR",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 2,
+          "representative": "MEMBAR.SC.CTA"
+        }
+      ]
+    },
+    {
+      "opcode": "MOV",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 18,
+          "representative": "MOV R2, c[0x0][0x160]"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "branch-register",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "call-return",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "return-dispatch",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "negative-global-offset",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "MOVM",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 3,
+          "representative": "MOVM.16.MT88 R21, R14"
+        }
+      ]
+    },
+    {
+      "opcode": "MUFU",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 24,
+          "representative": "MUFU.RCP R6, R3"
+        }
+      ]
+    },
+    {
+      "opcode": "NOP",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 2,
+          "representative": null
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "branch",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "branch-register",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "branch-uniform",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "return-dispatch",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "P2R",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 4,
+          "representative": "P2R R49, PR, RZ, 0x1"
+        }
+      ]
+    },
+    {
+      "opcode": "PLOP3",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 14,
+          "representative": "PLOP3.LUT P0, PT, P0, P1, PT, 0xa8, 0x0"
+        }
+      ]
+    },
+    {
+      "opcode": "POPC",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 11,
+          "representative": "POPC R7, UR4"
+        }
+      ]
+    },
+    {
+      "opcode": "PRMT",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 23,
+          "representative": "PRMT R28, RZ, 0x5410, R28"
+        }
+      ]
+    },
+    {
+      "opcode": "R2P",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 8,
+          "representative": "R2P PR, R0, 0x6"
+        }
+      ]
+    },
+    {
+      "opcode": "R2UR",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 4,
+          "representative": "R2UR UR7, R29"
+        }
+      ]
+    },
+    {
+      "opcode": "RED",
+      "proofs": [
+        {
+          "kind": "authored-whole-program",
+          "name": "atomics",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "REDUX",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 8,
+          "representative": "REDUX.SUM.S32 UR6, R14"
+        }
+      ]
+    },
+    {
+      "opcode": "RET",
+      "proofs": [
+        {
+          "kind": "authored-whole-program",
+          "name": "call-return",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "return-dispatch",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "S2R",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 14,
+          "representative": "S2R R0, SR_TID.X"
+        }
+      ]
+    },
+    {
+      "opcode": "S2UR",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 4,
+          "representative": "S2UR UR4, SR_CTAID.X"
+        }
+      ]
+    },
+    {
+      "opcode": "SEL",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 34,
+          "representative": "SEL R5, R6, RZ, P2"
+        }
+      ]
+    },
+    {
+      "opcode": "SGXT",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 17,
+          "representative": "SGXT R7, R7, 0x8"
+        }
+      ]
+    },
+    {
+      "opcode": "SHF",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 89,
+          "representative": "SHF.R.U32.HI R5, RZ, 0x17, R3"
+        }
+      ]
+    },
+    {
+      "opcode": "SHFL",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 36,
+          "representative": "SHFL.DOWN P0, R2, R17, 0x1, 0x1e01"
+        }
+      ]
+    },
+    {
+      "opcode": "STG",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 7,
+          "representative": "@!P0 STG.E.128 [R60], R40"
+        }
+      ]
+    },
+    {
+      "opcode": "STL",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 7,
+          "representative": "STL.64 [R1], R10"
+        }
+      ]
+    },
+    {
+      "opcode": "STS",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 37,
+          "representative": "STS.128 [R4.X16], R8"
+        }
+      ]
+    },
+    {
+      "opcode": "SUATOM",
+      "proofs": [
+        {
+          "kind": "authored-public-texture-fields-and-glsl",
+          "report": "proof/texture-adapter-result.json",
+          "decoded_cases": 26
+        }
+      ]
+    },
+    {
+      "opcode": "SULD",
+      "proofs": [
+        {
+          "kind": "authored-public-texture-fields-and-glsl",
+          "report": "proof/texture-adapter-result.json",
+          "decoded_cases": 23
+        }
+      ]
+    },
+    {
+      "opcode": "SURED",
+      "proofs": [
+        {
+          "kind": "authored-public-texture-fields-and-glsl",
+          "report": "proof/texture-adapter-result.json",
+          "decoded_cases": 26
+        }
+      ]
+    },
+    {
+      "opcode": "SUST",
+      "proofs": [
+        {
+          "kind": "authored-public-texture-fields-and-glsl",
+          "report": "proof/texture-adapter-result.json",
+          "decoded_cases": 23
+        }
+      ]
+    },
+    {
+      "opcode": "TEX",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 26,
+          "representative": "TEX.SCR.LL RZ, R0, R2, R7, 0x0, 0x62, 2D, 0x1"
+        },
+        {
+          "kind": "authored-public-texture-fields-and-glsl",
+          "report": "proof/texture-adapter-result.json",
+          "decoded_cases": 57
+        }
+      ]
+    },
+    {
+      "opcode": "TLD",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 16,
+          "representative": "TLD.SCR.LZ RZ, R8, R15, 0x0, 0x64, 1D, 0x3"
+        },
+        {
+          "kind": "authored-public-texture-fields-and-glsl",
+          "report": "proof/texture-adapter-result.json",
+          "decoded_cases": 52
+        }
+      ]
+    },
+    {
+      "opcode": "TLD4",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 9,
+          "representative": "TLD4.SCR.A.AOFFI R20, R18, R56, R7, 0x0, 0x58, 2D"
+        },
+        {
+          "kind": "authored-public-texture-fields-and-glsl",
+          "report": "proof/texture-adapter-result.json",
+          "decoded_cases": 38
+        }
+      ]
+    },
+    {
+      "opcode": "TMML",
+      "proofs": [
+        {
+          "kind": "authored-public-texture-fields-and-glsl",
+          "report": "proof/texture-adapter-result.json",
+          "decoded_cases": 26
+        }
+      ]
+    },
+    {
+      "opcode": "TXQ",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 5,
+          "representative": "TXQ RZ, R16, R16, TEX_HEADER_DIMENSION, 0x0, 0x58, 0x2"
+        },
+        {
+          "kind": "authored-public-texture-fields-and-glsl",
+          "report": "proof/texture-adapter-result.json",
+          "decoded_cases": 22
+        }
+      ]
+    },
+    {
+      "opcode": "UBREV",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 3,
+          "representative": "UBREV UR4, UR6"
+        }
+      ]
+    },
+    {
+      "opcode": "UFLO",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 4,
+          "representative": "UFLO.U32 UR4, UR4"
+        }
+      ]
+    },
+    {
+      "opcode": "UIADD3",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 66,
+          "representative": "UIADD3 UR8, -UR8, 0x1, URZ"
+        }
+      ]
+    },
+    {
+      "opcode": "UIMAD",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 25,
+          "representative": "UIMAD UR4, UR4, UR5, URZ"
+        }
+      ]
+    },
+    {
+      "opcode": "UISETP",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 39,
+          "representative": "UISETP.LE.AND UP0, UPT, URZ, UR6, UPT"
+        }
+      ]
+    },
+    {
+      "opcode": "ULDC",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 13,
+          "representative": "ULDC UR5, c[0x0][0x0]"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "atomics",
+          "report": "proof/program-chain-result.json"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "negative-global-offset",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "ULEA",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 68,
+          "representative": "ULEA UR5, UP0, UR4, UR8, 0x3"
+        }
+      ]
+    },
+    {
+      "opcode": "ULOP3",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 23,
+          "representative": "ULOP3.LUT UR5, UR8, 0x1, URZ, 0xc0, !UPT"
+        }
+      ]
+    },
+    {
+      "opcode": "UMOV",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 8,
+          "representative": "UMOV UR5, URZ"
+        },
+        {
+          "kind": "authored-whole-program",
+          "name": "branch-uniform",
+          "report": "proof/program-chain-result.json"
+        }
+      ]
+    },
+    {
+      "opcode": "UP2UR",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 3,
+          "representative": "UP2UR UR29, UPR, URZ, 0x1"
+        }
+      ]
+    },
+    {
+      "opcode": "UPLOP3",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 4,
+          "representative": "@!UP1 UPLOP3.LUT UP0, UPT, UPT, UPT, UP2, 0x80, 0x0"
+        }
+      ]
+    },
+    {
+      "opcode": "UPOPC",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 3,
+          "representative": "UPOPC UR5, UR4"
+        }
+      ]
+    },
+    {
+      "opcode": "USEL",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 14,
+          "representative": "USEL UR15, UR6, URZ, !UP0"
+        }
+      ]
+    },
+    {
+      "opcode": "USHF",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 26,
+          "representative": "USHF.R.S32.HI UR4, URZ, 0x1f, UR4"
+        }
+      ]
+    },
+    {
+      "opcode": "VOTE",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 11,
+          "representative": "VOTE.ANY R6, PT, P2"
+        }
+      ]
+    },
+    {
+      "opcode": "VOTEU",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 10,
+          "representative": "VOTEU.ALL UR4, UPT, PT"
+        }
+      ]
+    },
+    {
+      "opcode": "WARPSYNC",
+      "proofs": [
+        {
+          "kind": "normal-cli-public-to-original-glsl",
+          "report": "proof/adapter-corpus-result.json",
+          "accepted_cases": 4,
+          "representative": null
+        }
+      ]
+    }
+  ]
+}

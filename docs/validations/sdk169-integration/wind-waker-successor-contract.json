@@ -1,0 +1,26 @@
+{
+  "project_id": "wind-waker-recomp",
+  "current_catalog_status": "superseded",
+  "successor_project_id": "bluewake",
+  "count_as_new_implementation": false,
+  "original_repository": "https://github.com/elliotttate/Wind-Waker-Recomp",
+  "official_migration_revision": "adac1e616376ab0d7d57eda51d82acf4dc607079",
+  "official_migration_date": "2026-10-04T03:07:44Z",
+  "successor_migration_revision": "368d351d9d14183378d3dceb8f4eff4722bdb1ae",
+  "successor_migration_date": "2026-11-22T23:47:56Z",
+  "navigation_contract": [
+    "Preserve retired ID and original repository in catalog.",
+    "Offer an explicit successor navigation action to the existing BlueWake project.",
+    "Resolve the target and show its own title, source, version and installation consent.",
+    "Any resulting installation and receipt use the BlueWake ID.",
+    "Do not add an alias recipe or increment coverage for the retired ID.",
+    "Do not silently migrate or overwrite an existing installation or save folder."
+  ],
+  "evidence_files": [
+    "windwaker-pinned-readme.txt",
+    "bluewake-pinned-migration.txt",
+    "initial-http-probes.json",
+    "pinned-http-probes.json"
+  ],
+  "state": "proposal_only_no_shared_code_edits"
+}

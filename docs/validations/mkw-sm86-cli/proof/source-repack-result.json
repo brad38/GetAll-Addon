@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "command": "python build_support.py",
+  "exit": 0,
+  "bytes": 63227,
+  "sha256": "1c79d30594951495f210a349da05aabe0e240f0189dba87c95a78da73a4500ce",
+  "temporary_source_copy_removed": true,
+  "binary_retained_in_documentation": false
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "path": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\desktop-continuation-20261127\\Tests\\AddonInfrastructure\\MkwCliReleaseIntegration.cs",
+  "before_sha256": "ff7c928dec2e9e7a8c814fb35164a19545e7a83354240c41194e4c2039a0e2db",
+  "after_sha256": "bf5e5a626f7ed84ba3eaa03dbadb072caaf0a22abbbb07140d87da735c08f1a2",
+  "bytes": 10339,
+  "backup": "C:\\Users\\bradg\\Downloads\\GetAll-R18\\evidence-r18\\flow-completion-20261127\\mkw-release-test31d.before.cs",
+  "change": "Test only: preserve exact CLI media and original legacy wire contract, with legacy resume's extra local table input distinguished",
+  "production_changed": false,
+  "completed_utc": "2026-11-28T00:39:16.752968+00:00"
+}
