@@ -15,7 +15,7 @@
 ## Etapas e estado de integração
 
 A pesquisa e os registros de catálogo foram concluídos: 108 jogos, 137 projetos
-ativos e 11 excluídos, commit `91bd560fab30f7411b5350abe0ad7103d370a7ce`.
+ativos e 11 excluídos, commit `3d86836676e9c7fa7359c32987c13fefc0a2ff8b`.
 O GetAll tem 145 receitas preservadas, 123 ativas e 22 desativadas, com matriz
 em [seis dimensões](INSTALLATION-COVERAGE.md). O commit final de receitas e o catálogo são fixados no recibo do complemento
 de prévia depois da última revisão de código e evidências. A integração Windows, o push e o CI

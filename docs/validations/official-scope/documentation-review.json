@@ -21,14 +21,14 @@
     "no_execution_inference": true
   },
   "catalog": {
-    "commit": "91bd560fab30f7411b5350abe0ad7103d370a7ce",
+    "commit": "3d86836676e9c7fa7359c32987c13fefc0a2ff8b",
     "read": [
       "README.md",
       "docs/audits/eligibility-20261127/README.md",
       "docs/ELIGIBILITY-POLICY.md",
       "AGENTS.md"
     ],
-    "observed": "Reviewed137/108 active scope is explicit. The148 figure describes the original research population; no fixed quota is retained. Dates and review-only discovery are distinguished.",
+    "observed": "Reviewed137/108 active scope is explicit. The148 figure describes the original research population; no fixed quota is retained. Dates and review-only discovery are distinguished. Final catalog pin includes the additional Project2099 provenance evidence; active counts and dates are unchanged.",
     "edited": false
   },
   "desktop": {

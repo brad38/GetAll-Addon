@@ -9,7 +9,7 @@ catálogo revisado. Seus dois arquivos JSON não contêm binários nem mídia.
 | Versão do complemento | `1.5.75` |
 | SDK mínimo | `1.5.70` |
 | Commit GetAll | SHA completo do commit final desta branch, registrado no recibo do pacote |
-| Commit do catálogo | `91bd560fab30f7411b5350abe0ad7103d370a7ce` |
+| Commit do catálogo | `3d86836676e9c7fa7359c32987c13fefc0a2ff8b` |
 | Entrada | `responses.json` |
 | Capacidade | `installation.recipe.remote` |
 
@@ -20,7 +20,7 @@ saída deve ainda não existir; o empacotador não sobrescreve uma prévia anter
 
 ```bash
 getall_preview_revision=$(git rev-parse HEAD)
-python scripts/package_preview.py "$getall_preview_revision" 91bd560fab30f7411b5350abe0ad7103d370a7ce 1.5.75 GetAll-Addon-preview-1.5.75.zip --min-sdk 1.5.70
+python scripts/package_preview.py "$getall_preview_revision" 3d86836676e9c7fa7359c32987c13fefc0a2ff8b 1.5.75 GetAll-Addon-preview-1.5.75.zip --min-sdk 1.5.70
 ```
 
 Em PowerShell, atribua `$getallPreviewRevision = git rev-parse HEAD` e passe

@@ -98,7 +98,7 @@ python -m unittest discover -s tests -v
 ```
 
 O CI usa `scripts/validate_ci.py` com o catálogo fixado em
-`91bd560fab30f7411b5350abe0ad7103d370a7ce` e seus registros
+`3d86836676e9c7fa7359c32987c13fefc0a2ff8b` e seus registros
 companheiros. A seleção do canal é testada separadamente. Os testes cobrem
 reativação indevida, candidato/excluído, conservação de datas, igualdade de
 identidade, hashes de provas e a separação das seis dimensões.

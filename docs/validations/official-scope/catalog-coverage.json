@@ -60,23 +60,24 @@
     },
     {
       "index": "development",
-      "game_id": "goemon-s-great-adventure",
-      "project_id": "gga64recomp",
+      "game_id": "metroid-prime",
+      "project_id": "metaforce",
       "recipes": [
         {
-          "game_id": "goemon-s-great-adventure",
-          "project_id": "gga64recomp",
-          "repository": "StopSine/GGA64Recomp",
-          "tag": "v0.1.0",
-          "schema_version": 3,
-          "path": "recipes/goemon-s-great-adventure/gga64recomp/v0.1.0.json",
-          "sha256": "39c796049722921d010dc41e852bcf1f23f573bd843bdcf344960c6ead9139bc",
+          "game_id": "metroid-prime",
+          "project_id": "metaforce",
+          "repository": "AxioDL/metaforce",
+          "tag": "build-de8fc69",
+          "schema_version": 5,
+          "path": "recipes/metroid-prime/metaforce/build-de8fc69.json",
+          "sha256": "8d293603daaded40f3c17cf4574438f55aa9da56970f7a47638b88ecdc0f7df0",
           "status": "disabled",
           "has_inputs": false,
           "has_manual_steps": true,
-          "disabled_reason": "Fora do catálogo ativo após revisão de elegibilidade: Documentação e release sugerem execução, mas a investigação não encontrou evidência específica verificável além dessas declarações. Isso significa prova insuficiente, não conclusão de que o port esteja quebrado.",
+          "min_sdk_version": "1.5.69",
+          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
           "disabled_at": "2026-11-27",
-          "audit_reference": "AllFix-Repo/excluded-projects.json#gga64recomp"
+          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-META"
         }
       ]
     },
@@ -105,24 +106,23 @@
     },
     {
       "index": "development",
-      "game_id": "metroid-prime",
-      "project_id": "metaforce",
+      "game_id": "goemon-s-great-adventure",
+      "project_id": "gga64recomp",
       "recipes": [
         {
-          "game_id": "metroid-prime",
-          "project_id": "metaforce",
-          "repository": "AxioDL/metaforce",
-          "tag": "build-de8fc69",
-          "schema_version": 5,
-          "path": "recipes/metroid-prime/metaforce/build-de8fc69.json",
-          "sha256": "8d293603daaded40f3c17cf4574438f55aa9da56970f7a47638b88ecdc0f7df0",
+          "game_id": "goemon-s-great-adventure",
+          "project_id": "gga64recomp",
+          "repository": "StopSine/GGA64Recomp",
+          "tag": "v0.1.0",
+          "schema_version": 3,
+          "path": "recipes/goemon-s-great-adventure/gga64recomp/v0.1.0.json",
+          "sha256": "39c796049722921d010dc41e852bcf1f23f573bd843bdcf344960c6ead9139bc",
           "status": "disabled",
           "has_inputs": false,
           "has_manual_steps": true,
-          "min_sdk_version": "1.5.69",
-          "disabled_reason": "Fluxo retirado: modifica fontes, runtime, opções ou build do upstream além do procedimento oficial. Usar o método oficial enquanto a integração é corrigida.",
+          "disabled_reason": "Fora do catálogo ativo após revisão de elegibilidade: Documentação e release sugerem execução, mas a investigação não encontrou evidência específica verificável além dessas declarações. Isso significa prova insuficiente, não conclusão de que o port esteja quebrado.",
           "disabled_at": "2026-11-27",
-          "audit_reference": "docs/audits/source-integrity-20261127/root-review.json#SRC-META"
+          "audit_reference": "AllFix-Repo/excluded-projects.json#gga64recomp"
         }
       ]
     },

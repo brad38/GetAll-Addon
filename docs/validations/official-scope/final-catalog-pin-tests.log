@@ -1,0 +1,18 @@
+test_ci_runs_strict_validation_and_propagates_failure (tests.test_ci_validation.CiValidationTests.test_ci_runs_strict_validation_and_propagates_failure) ... ok
+test_invalid_indexes_do_not_select_a_catalog (tests.test_ci_validation.CiValidationTests.test_invalid_indexes_do_not_select_a_catalog) ... ok
+test_main_gate_stops_before_running_validator (tests.test_ci_validation.CiValidationTests.test_main_gate_stops_before_running_validator) ... ok
+test_preview_is_rejected_for_main_without_source_exceptions (tests.test_ci_validation.CiValidationTests.test_preview_is_rejected_for_main_without_source_exceptions) ... ok
+test_preview_uses_pinned_catalog_for_development_events (tests.test_ci_validation.CiValidationTests.test_preview_uses_pinned_catalog_for_development_events) ... ok
+test_preview_watcher_never_targets_main_or_an_unrelated_review_branch (tests.test_ci_validation.CiValidationTests.test_preview_watcher_never_targets_main_or_an_unrelated_review_branch) ... ok
+test_public_and_legacy_indexes_use_public_catalog (tests.test_ci_validation.CiValidationTests.test_public_and_legacy_indexes_use_public_catalog) ... ok
+test_successful_ci_also_validates_multidimensional_evidence (tests.test_ci_validation.CiValidationTests.test_successful_ci_also_validates_multidimensional_evidence) ... ok
+test_official_scope_package_requires_sdk_with_fidelity_gates (tests.test_preview_package.PreviewPackageTests.test_official_scope_package_requires_sdk_with_fidelity_gates) ... ok
+test_package_pins_both_repositories (tests.test_preview_package.PreviewPackageTests.test_package_pins_both_repositories) ... ok
+test_rejects_mutable_refs_and_public_index (tests.test_preview_package.PreviewPackageTests.test_rejects_mutable_refs_and_public_index) ... ok
+test_rejects_noncanonical_versions_before_reading_git_or_creating_zip (tests.test_preview_package.PreviewPackageTests.test_rejects_noncanonical_versions_before_reading_git_or_creating_zip) ... ok
+test_version_boundaries_generate_schema_valid_manifests (tests.test_preview_package.PreviewPackageTests.test_version_boundaries_generate_schema_valid_manifests) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.008s
+
+OK

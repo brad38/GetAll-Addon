@@ -14,7 +14,7 @@ leitura. Os gatilhos incluem PR, execução manual e push em main e nas branches
 de desenvolvimento declaradas, incluindo `work/official-install-scope-20261127`.
 
 O canal `preview` usa o catálogo fixado em
-`91bd560fab30f7411b5350abe0ad7103d370a7ce`, com `eligibility.json` e
+`3d86836676e9c7fa7359c32987c13fefc0a2ff8b`, com `eligibility.json` e
 `excluded-projects.json` desse mesmo commit. O canal público/legado mantém a
 origem pública. Índice preview é recusado em push, execução manual ou PR com
 destino main, antes de executar os validadores.
